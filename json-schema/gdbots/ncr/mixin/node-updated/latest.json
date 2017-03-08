@@ -1,0 +1,82 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/node-updated/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "node_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
+    "new_etag": {
+      "type": "string",
+      "pattern": "^[\\w\\.:-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "old_etag": {
+      "type": "string",
+      "pattern": "^[\\w\\.:-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "new_node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/node"
+        }
+      ],
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
+    },
+    "old_node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/node"
+        }
+      ],
+      "description": "The entire node, as it appeared before it was modified.",
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
+    }
+  },
+  "required": [
+    "node_ref",
+    "new_node"
+  ],
+  "definitions": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

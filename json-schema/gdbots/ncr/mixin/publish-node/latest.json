@@ -1,0 +1,27 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/publish-node/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "node_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "publish_at": {
+      "type": "string",
+      "format": "date-time",
+      "pbj": {
+        "type": "date-time",
+        "rule": "single"
+      }
+    }
+  },
+  "required": [
+    "node_ref"
+  ],
+  "additionalProperties": true
+}

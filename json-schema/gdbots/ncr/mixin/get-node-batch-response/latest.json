@@ -1,0 +1,52 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/get-node-batch-response/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "nodes": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "object",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/node"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "pbj": {
+        "type": "message",
+        "rule": "map"
+      }
+    },
+    "missing_node_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "The \"missing_node_refs\" field contains a set of node_refs that the batch request failed to retrieve.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "set"
+      }
+    }
+  },
+  "definitions": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,45 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/get-node-request/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "consistent_read": {
+      "type": "boolean",
+      "description": "If true, a strongly consistent read is used; if false (the default), an eventually consistent read is used.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "node_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "When \"node_ref\" is supplied it SHOULD be used to perform the request. The \"node_ref\" and \"slug\" are analogous to protobuf unions in that only one of these should exist and the priority of selection is as ordered in this schema.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "qname": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+:[a-z0-9-]+$",
+      "description": "The \"qname\" field should be populated when the request is not using \"node_ref\", e.g. \"acme:article\"",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    }
+  },
+  "additionalProperties": true
+}
