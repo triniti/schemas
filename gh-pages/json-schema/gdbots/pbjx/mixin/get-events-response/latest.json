@@ -1,0 +1,48 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/get-events-response/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "has_more": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "last_occurred_at": {
+      "type": "string",
+      "pattern": "^[1-9]{1}[0-9]{12,15}$",
+      "description": "The last \"occurred_at\" value from the last event in the \"events\" list. This can be used as \"since\" when requesting the next set of events if \"has_more\" is true.",
+      "pbj": {
+        "type": "microtime",
+        "rule": "single",
+        "useTypeDefault": false
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/event"
+        }
+      ],
+      "additionalProperties": false,
+      "pbj": {
+        "type": "message",
+        "rule": "list"
+      }
+    }
+  },
+  "definitions": {
+    "event": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/event/1-0-0.json#"
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

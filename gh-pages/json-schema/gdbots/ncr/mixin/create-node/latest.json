@@ -1,0 +1,33 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/create-node/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/node"
+        }
+      ],
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
+    }
+  },
+  "required": [
+    "node"
+  ],
+  "definitions": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

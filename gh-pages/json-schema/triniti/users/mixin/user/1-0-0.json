@@ -1,0 +1,105 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/triniti/users/mixin/user/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "last_name": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "email"
+      }
+    },
+    "email_domain": {
+      "type": "string",
+      "format": "hostname",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "hostname"
+      }
+    },
+    "phone": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "pattern": "^\\+?[1-9]\\d{1,14}$"
+        }
+      },
+      "additionalProperties": false,
+      "description": "A general format for international telephone numbers. @link https://en.wikipedia.org/wiki/E.164",
+      "pbj": {
+        "type": "string",
+        "rule": "map"
+      }
+    },
+    "networks": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "pattern": "^[\\w\\.-]+$"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Networks is a map that contains handles/usernames on a social network. E.g. facebook:homer, twitter:stackoverflow, youtube:coltrane78.",
+      "pbj": {
+        "type": "string",
+        "rule": "map"
+      }
+    },
+    "is_blocked": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "is_staff": {
+      "type": "boolean",
+      "description": "Indicates that the user is a staff member and has access to the cms, dashboard, etc.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "roles": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w_]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "A user's roles determine what permissions they'll have when using the system.",
+      "pbj": {
+        "type": "string",
+        "rule": "set"
+      }
+    }
+  },
+  "additionalProperties": true
+}

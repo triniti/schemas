@@ -1,0 +1,13 @@
+domain: http://schemas.triniti.io
+
+namespaces:
+  - triniti:users
+
+languages:
+  php:
+    output: ./src/php
+    manifest: ./pbj-schemas.php
+
+  json-schema:
+    include_all: true
+    output: ./gh-pages/json-schema

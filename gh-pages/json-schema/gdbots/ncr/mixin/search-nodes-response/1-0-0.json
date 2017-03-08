@@ -1,0 +1,69 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/search-nodes-response/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "description": "The total number of nodes matching the search.",
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "has_more": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "time_taken": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 16777215,
+      "description": "How long in milliseconds it took to run the query.",
+      "pbj": {
+        "type": "medium-int",
+        "rule": "single"
+      }
+    },
+    "max_score": {
+      "type": "number",
+      "default": 0,
+      "description": "The maximum score of a matching node from the entire search.",
+      "pbj": {
+        "type": "float",
+        "rule": "single"
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/node"
+        }
+      ],
+      "additionalProperties": false,
+      "pbj": {
+        "type": "message",
+        "rule": "list"
+      }
+    }
+  },
+  "definitions": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

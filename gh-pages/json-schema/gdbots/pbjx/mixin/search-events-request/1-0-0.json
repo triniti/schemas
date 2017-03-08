@@ -1,0 +1,93 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/search-events-request/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "q": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "count": {
+      "type": "integer",
+      "default": 25,
+      "minimum": 0,
+      "maximum": 255,
+      "description": "The number of results to return.",
+      "pbj": {
+        "type": "tiny-int",
+        "rule": "single"
+      }
+    },
+    "page": {
+      "type": "integer",
+      "default": 1,
+      "minimum": 1,
+      "maximum": 255,
+      "pbj": {
+        "type": "tiny-int",
+        "rule": "single"
+      }
+    },
+    "sort": {
+      "type": "string",
+      "default": "relevance",
+      "enum": [
+        "unknown",
+        "relevance",
+        "date-desc",
+        "date-asc"
+      ],
+      "pbj": {
+        "type": "string-enum",
+        "rule": "single"
+      }
+    },
+    "occurred_after": {
+      "type": "string",
+      "format": "date-time",
+      "pbj": {
+        "type": "date-time",
+        "rule": "single"
+      }
+    },
+    "occurred_before": {
+      "type": "string",
+      "format": "date-time",
+      "pbj": {
+        "type": "date-time",
+        "rule": "single"
+      }
+    },
+    "fields_used": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\.-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "The fields that are being queried as determined by parsing the \"q\" field.",
+      "pbj": {
+        "type": "string",
+        "rule": "set"
+      }
+    },
+    "parsed_query_json": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    }
+  },
+  "additionalProperties": true
+}

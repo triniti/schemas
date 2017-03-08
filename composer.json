@@ -1,0 +1,44 @@
+{
+  "name": "triniti/schemas",
+  "homepage": "https://github.com/triniti/schemas",
+  "description": "Schemas for common Triniti apps and components.",
+  "type": "pbj-schema-store",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=7.1",
+    "gdbots/pbj": "~1.1",
+    "gdbots/schemas": "dev-es as 1.0.0"
+  },
+  "require-dev": {
+    "composer/composer": "1.0.*@dev",
+    "phpunit/phpunit": "~4.3",
+    "gdbots/pbjc": "~0.2"
+  },
+  "autoload": {
+    "psr-0": {
+      "": "src/php"
+    }
+  },
+  "autoload-dev": {
+    "files": ["pbj-schemas.php", "pbj-schema-stores.php"],
+    "psr-0": {
+      "": "tests/php"
+    }
+  },
+  "scripts": {
+    "pbjc": [
+      "vendor/bin/pbjc",
+      "@test"
+    ],
+    "post-package-install": [
+      "Gdbots\\Pbjc\\Composer\\ScriptHandler::writePbjSchemaStoresFile"
+    ],
+    "post-package-uninstall": [
+      "Gdbots\\Pbjc\\Composer\\ScriptHandler::writePbjSchemaStoresFile"
+    ],
+    "post-package-update": [
+      "Gdbots\\Pbjc\\Composer\\ScriptHandler::writePbjSchemaStoresFile"
+    ],
+    "test": "vendor/bin/phpunit"
+  }
+}
