@@ -174,14 +174,14 @@
       "items": [
         {
           "type": "string",
-          "pattern": "^[\\w_]+$"
+          "pattern": "^[\\w\\/\\.:-]+$"
         }
       ],
       "uniqueItems": true,
       "additionalProperties": false,
       "description": "The roles revoked from the user.",
       "pbj": {
-        "type": "string",
+        "type": "identifier",
         "rule": "set"
       }
     }

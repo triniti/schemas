@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\UserUpdated;
 
-use Gdbots\Schemas\Ncr\Mixin\NodeUpdated\NodeUpdatedV1;
+use Gdbots\Schemas\Iam\Mixin\UserUpdated\UserUpdatedV1;
 
-interface UserUpdated extends NodeUpdatedV1
+interface UserUpdated extends UserUpdatedV1
 {
 }

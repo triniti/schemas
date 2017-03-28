@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\GetUserResponse;
 
-use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1;
+use Gdbots\Schemas\Iam\Mixin\GetUserResponse\GetUserResponseV1;
 
-interface GetUserResponse extends GetNodeResponseV1
+interface GetUserResponse extends GetUserResponseV1
 {
 }

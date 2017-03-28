@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\SearchUsersResponse;
 
-use Gdbots\Schemas\Ncr\Mixin\SearchNodesResponse\SearchNodesResponseV1;
+use Gdbots\Schemas\Iam\Mixin\SearchUsersResponse\SearchUsersResponseV1;
 
-interface SearchUsersResponse extends SearchNodesResponseV1
+interface SearchUsersResponse extends SearchUsersResponseV1
 {
 }

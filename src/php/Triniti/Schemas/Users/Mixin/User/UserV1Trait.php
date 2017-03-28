@@ -10,11 +10,4 @@ use Gdbots\Pbj\Schema;
  */
 trait UserV1Trait
 {
-    /**
-     * @return array
-     */
-    public function getUriTemplateVars()
-    {
-        return ['user_id' => (string)$this->get('_id')];
-    }
 }

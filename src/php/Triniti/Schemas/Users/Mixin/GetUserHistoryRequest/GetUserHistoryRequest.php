@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\GetUserHistoryRequest;
 
-use Gdbots\Schemas\Pbjx\Mixin\GetEventsRequest\GetEventsRequestV1;
+use Gdbots\Schemas\Iam\Mixin\GetUserHistoryRequest\GetUserHistoryRequestV1;
 
-interface GetUserHistoryRequest extends GetEventsRequestV1
+interface GetUserHistoryRequest extends GetUserHistoryRequestV1
 {
 }

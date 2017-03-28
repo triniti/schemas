@@ -248,14 +248,14 @@
       "items": [
         {
           "type": "string",
-          "pattern": "^[\\w_]+$"
+          "pattern": "^[\\w\\/\\.:-]+$"
         }
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "A user's roles determine what permissions they'll have when using the system.",
+      "description": "A user's roles determine what permissions they'll have when using the system. The role itself is a node which has a set of \"allow\" and \"deny\" rules.",
       "pbj": {
-        "type": "string",
+        "type": "identifier",
         "rule": "set"
       }
     }

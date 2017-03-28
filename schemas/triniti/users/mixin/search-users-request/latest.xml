@@ -3,31 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:users:mixin:search-users-request:1-0-0" mixin="true" extends="gdbots:ncr:mixin:search-nodes-request:v1">
-    <fields>
-      <field name="sort" type="string-enum">
-        <default>relevance</default>
-        <enum id="triniti:users:search-sort"/>
-        <php-options>
-          <default>SearchSort::RELEVANCE()</default>
-        </php-options>
-      </field>
-      <field name="is_staff" type="trinary"/>
-      <field name="is_blocked" type="trinary">
-        <default>2</default>
-      </field>
-    </fields>
-
+  <schema id="pbj:triniti:users:mixin:search-users-request:1-0-0" mixin="true" extends="gdbots:iam:mixin:search-users-request:v1">
     <php-options>
       <namespace>Triniti\Schemas\Users\Mixin\SearchUsersRequest</namespace>
-      <insertion-points>
-        <imports>
-          <![CDATA[
-use Triniti\Schemas\Users\Enum\SearchSort;
-            ]]>
-        </imports>
-        <methods/>
-      </insertion-points>
     </php-options>
   </schema>
 </pbj-schema>

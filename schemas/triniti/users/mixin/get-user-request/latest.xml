@@ -3,11 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:users:mixin:get-user-request:1-0-0" mixin="true" extends="gdbots:ncr:mixin:get-node-request:v1">
-    <fields>
-      <field name="email" type="string" format="email"/>
-    </fields>
-
+  <schema id="pbj:triniti:users:mixin:get-user-request:1-0-0" mixin="true" extends="gdbots:iam:mixin:get-user-request:v1">
     <php-options>
       <namespace>Triniti\Schemas\Users\Mixin\GetUserRequest</namespace>
     </php-options>

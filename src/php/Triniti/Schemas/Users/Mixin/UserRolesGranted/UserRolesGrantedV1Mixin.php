@@ -6,7 +6,6 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
 
 final class UserRolesGrantedV1Mixin extends AbstractMixin
 {
@@ -23,18 +22,6 @@ final class UserRolesGrantedV1Mixin extends AbstractMixin
      */
     public function getFields()
     {
-        return [
-            Fb::create('node_ref', T\IdentifierType::create())
-                ->required()
-                ->className('Gdbots\Schemas\Ncr\NodeRef')
-                ->build(),
-            /*
-             * The roles granted to the user.
-             */
-            Fb::create('roles', T\StringType::create())
-                ->asASet()
-                ->pattern('^[\w_]+$')
-                ->build()
-        ];
+        return [];
     }
 }

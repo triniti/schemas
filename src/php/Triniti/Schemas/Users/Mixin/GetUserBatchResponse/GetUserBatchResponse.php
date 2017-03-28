@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\GetUserBatchResponse;
 
-use Gdbots\Schemas\Ncr\Mixin\GetNodeBatchResponse\GetNodeBatchResponseV1;
+use Gdbots\Schemas\Iam\Mixin\GetUserBatchResponse\GetUserBatchResponseV1;
 
-interface GetUserBatchResponse extends GetNodeBatchResponseV1
+interface GetUserBatchResponse extends GetUserBatchResponseV1
 {
 }

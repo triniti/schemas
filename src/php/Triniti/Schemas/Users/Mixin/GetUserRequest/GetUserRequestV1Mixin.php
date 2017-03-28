@@ -3,7 +3,6 @@
 namespace Triniti\Schemas\Users\Mixin\GetUserRequest;
 
 use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -23,10 +22,6 @@ final class GetUserRequestV1Mixin extends AbstractMixin
      */
     public function getFields()
     {
-        return [
-            Fb::create('email', T\StringType::create())
-                ->format(Format::EMAIL())
-                ->build()
-        ];
+        return [];
     }
 }

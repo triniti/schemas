@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\RevokeRolesFromUser;
 
-use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1;
+use Gdbots\Schemas\Iam\Mixin\RevokeRolesFromUser\RevokeRolesFromUserV1;
 
-interface RevokeRolesFromUser extends CommandV1
+interface RevokeRolesFromUser extends RevokeRolesFromUserV1
 {
 }

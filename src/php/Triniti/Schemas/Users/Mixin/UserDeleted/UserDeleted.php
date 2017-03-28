@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\UserDeleted;
 
-use Gdbots\Schemas\Ncr\Mixin\NodeDeleted\NodeDeletedV1;
+use Gdbots\Schemas\Iam\Mixin\UserDeleted\UserDeletedV1;
 
-interface UserDeleted extends NodeDeletedV1
+interface UserDeleted extends UserDeletedV1
 {
 }

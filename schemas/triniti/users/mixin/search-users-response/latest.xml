@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:users:mixin:search-users-response:1-0-0" mixin="true" extends="gdbots:ncr:mixin:search-nodes-response:v1">
+  <schema id="pbj:triniti:users:mixin:search-users-response:1-0-0" mixin="true" extends="gdbots:iam:mixin:search-users-response:v1">
     <php-options>
       <namespace>Triniti\Schemas\Users\Mixin\SearchUsersResponse</namespace>
     </php-options>

@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\CreateUser;
 
-use Gdbots\Schemas\Ncr\Mixin\CreateNode\CreateNodeV1;
+use Gdbots\Schemas\Iam\Mixin\CreateUser\CreateUserV1;
 
-interface CreateUser extends CreateNodeV1
+interface CreateUser extends CreateUserV1
 {
 }

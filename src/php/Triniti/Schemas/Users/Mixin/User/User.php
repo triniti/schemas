@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\User;
 
-use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1;
+use Gdbots\Schemas\Iam\Mixin\User\UserV1;
 
-interface User extends NodeV1
+interface User extends UserV1
 {
 }

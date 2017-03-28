@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\GetUserBatchRequest;
 
-use Gdbots\Schemas\Ncr\Mixin\GetNodeBatchRequest\GetNodeBatchRequestV1;
+use Gdbots\Schemas\Iam\Mixin\GetUserBatchRequest\GetUserBatchRequestV1;
 
-interface GetUserBatchRequest extends GetNodeBatchRequestV1
+interface GetUserBatchRequest extends GetUserBatchRequestV1
 {
 }

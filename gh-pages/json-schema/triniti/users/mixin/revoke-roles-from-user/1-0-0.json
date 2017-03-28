@@ -194,14 +194,14 @@
       "items": [
         {
           "type": "string",
-          "pattern": "^[\\w_]+$"
+          "pattern": "^[\\w\\/\\.:-]+$"
         }
       ],
       "uniqueItems": true,
       "additionalProperties": false,
       "description": "The roles to revoke from the user.",
       "pbj": {
-        "type": "string",
+        "type": "identifier",
         "rule": "set"
       }
     }

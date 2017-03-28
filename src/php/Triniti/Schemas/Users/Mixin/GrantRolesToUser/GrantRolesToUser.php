@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\GrantRolesToUser;
 
-use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1;
+use Gdbots\Schemas\Iam\Mixin\GrantRolesToUser\GrantRolesToUserV1;
 
-interface GrantRolesToUser extends CommandV1
+interface GrantRolesToUser extends GrantRolesToUserV1
 {
 }

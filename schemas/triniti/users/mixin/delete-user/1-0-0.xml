@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:users:mixin:delete-user:1-0-0" mixin="true" extends="gdbots:ncr:mixin:delete-node:v1">
+  <schema id="pbj:triniti:users:mixin:delete-user:1-0-0" mixin="true" extends="gdbots:iam:mixin:delete-user:v1">
     <php-options>
       <namespace>Triniti\Schemas\Users\Mixin\DeleteUser</namespace>
     </php-options>

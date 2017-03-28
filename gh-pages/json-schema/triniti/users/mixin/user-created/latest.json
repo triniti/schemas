@@ -165,13 +165,12 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "#/definitions/node"
+          "$ref": "#/definitions/user"
         }
       ],
       "pbj": {
         "type": "message",
-        "rule": "single",
-        "overridable": true
+        "rule": "single"
       }
     }
   },
@@ -196,11 +195,11 @@
         }
       ]
     },
-    "node": {
+    "user": {
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/user/1-0-0.json#"
         }
       ]
     }

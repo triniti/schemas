@@ -2,8 +2,8 @@
 
 namespace Triniti\Schemas\Users\Mixin\GetUserRequest;
 
-use Gdbots\Schemas\Ncr\Mixin\GetNodeRequest\GetNodeRequestV1;
+use Gdbots\Schemas\Iam\Mixin\GetUserRequest\GetUserRequestV1;
 
-interface GetUserRequest extends GetNodeRequestV1
+interface GetUserRequest extends GetUserRequestV1
 {
 }
