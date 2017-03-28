@@ -1,7 +1,7 @@
 domain: http://schemas.triniti.io
 
 namespaces:
-  - triniti:users
+  - triniti:iam
 
 languages:
   php:
