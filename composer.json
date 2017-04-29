@@ -10,7 +10,7 @@
   },
   "require-dev": {
     "composer/composer": "1.0.*@dev",
-    "phpunit/phpunit": "~4.3",
+    "phpunit/phpunit": "~6.0",
     "gdbots/pbjc": "~0.2"
   },
   "autoload": {
