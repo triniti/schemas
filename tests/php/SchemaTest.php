@@ -3,8 +3,9 @@
 namespace Triniti\Tests\Schemas;
 
 use Gdbots\Pbj\MessageResolver;
+use PHPUnit\Framework\TestCase;
 
-class SchemaTest extends \PHPUnit_Framework_TestCase
+class SchemaTest extends TestCase
 {
     public function testCanCreateAllMessages()
     {
