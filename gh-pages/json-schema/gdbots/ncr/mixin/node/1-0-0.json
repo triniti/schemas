@@ -114,7 +114,7 @@
         "id"
       ],
       "additionalProperties": false,
-      "description": "A fully qualified reference to what updated this node. This is intentionally a message-ref and not a user id because it is often a program that updates nodes, not a user. E.g. \"acme:apps:node:app:cli-scheduler\" or \"acme:users:node:user:60c71df0-fda8-11e5-bfb9-30342d363854\"",
+      "description": "A fully qualified reference to what updated this node. This is intentionally a message-ref and not a user id because it is often a program that updates nodes, not a user. E.g. \"acme:iam:node:app:cli-scheduler\" or \"acme:iam:node:user:60c71df0-fda8-11e5-bfb9-30342d363854\"",
       "pbj": {
         "type": "message-ref",
         "rule": "single"
