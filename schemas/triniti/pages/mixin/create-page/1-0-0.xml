@@ -7,7 +7,7 @@
     <fields>
       <field name="node" type="message" required="true">
         <any-of>
-          <curie>gdbots:pages:mixin:page</curie>
+          <curie>triniti:pages:mixin:page</curie>
         </any-of>
       </field>
     </fields>

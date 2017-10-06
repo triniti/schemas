@@ -134,6 +134,22 @@
         "rule": "single"
       }
     },
+    "cursors": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      },
+      "additionalProperties": false,
+      "description": "Cursors are optionally provided by the underlying search system to allow for efficient pagination. In the absense of cursors, paging is done using count and page number.",
+      "pbj": {
+        "type": "string",
+        "rule": "map"
+      }
+    },
     "nodes": {
       "type": "array",
       "items": [
