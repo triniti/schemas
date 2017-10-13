@@ -3,13 +3,5 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:pages:mixin:page-deleted:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node-deleted:v1">
-    <fields>
-      <field name="node" type="message" required="true">
-        <any-of>
-          <curie>triniti:pages:mixin:page</curie>
-        </any-of>
-      </field>
-    </fields>
-  </schema>
+  <schema id="pbj:triniti:pages:mixin:page-deleted:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node-deleted:v1"/>
 </pbj-schema>
