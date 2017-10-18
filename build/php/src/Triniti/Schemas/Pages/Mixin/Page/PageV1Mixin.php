@@ -29,8 +29,8 @@ final class PageV1Mixin extends AbstractMixin
             /*
              * The URL to use for the page
              */
-            Fb::create('vanity_url', T\StringType::create())
-                ->format(Format::URL())
+            Fb::create('slug', T\StringType::create())
+                ->format(Format::SLUG())
                 ->build(),
         ];
     }

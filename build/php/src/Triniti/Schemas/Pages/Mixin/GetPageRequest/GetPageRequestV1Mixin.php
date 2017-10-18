@@ -24,8 +24,8 @@ final class GetPageRequestV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('vanity_url', T\StringType::create())
-                ->format(Format::URL())
+            Fb::create('slug', T\StringType::create())
+                ->format(Format::SLUG())
                 ->build(),
         ];
     }

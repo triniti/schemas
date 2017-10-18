@@ -162,14 +162,16 @@
         "rule": "single"
       }
     },
-    "vanity_url": {
+    "slug": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
       "description": "The URL to use for the page",
       "pbj": {
         "type": "string",
         "rule": "single",
-        "format": "url"
+        "format": "slug"
       }
     }
   },

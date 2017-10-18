@@ -24,11 +24,16 @@ final class PageUpdatedV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('new_node', T\MessageType::create())
+                ->required()
+                ->anyOfClassNames([
+                    TrinitiPagesPage::class,
+                ])
+                ->build(),
             /*
              * The entire node, as it appeared before it was modified.
              */
-            Fb::create('node', T\MessageType::create())
-                ->required()
+            Fb::create('old_node', T\MessageType::create())
                 ->anyOfClassNames([
                     TrinitiPagesPage::class,
                 ])
