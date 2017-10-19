@@ -24,8 +24,6 @@ final class PageV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('title', T\StringType::create())
-                ->build(),
             /*
              * The URL to use for the page
              */
