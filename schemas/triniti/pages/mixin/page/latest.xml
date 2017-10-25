@@ -37,7 +37,7 @@ public function getUriTemplateVars()
  * @returns {Object}
  */
 getUriTemplateVars() {
-  return { user_id: `${this.get('_id', '')}` };
+  return { page_id: `${this.get('_id', '')}` };
 }
           ]]>
         </methods>
