@@ -187,22 +187,6 @@
         "type": "date-time",
         "rule": "single"
       }
-    },
-    "status": {
-      "type": "string",
-      "default": "scheduled",
-      "enum": [
-        "unknown",
-        "published",
-        "scheduled",
-        "draft",
-        "expired",
-        "deleted"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
     }
   },
   "required": [
