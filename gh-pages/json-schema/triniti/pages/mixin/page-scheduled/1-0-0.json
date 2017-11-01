@@ -190,7 +190,7 @@
     },
     "status": {
       "type": "string",
-      "default": "draft",
+      "default": "scheduled",
       "enum": [
         "unknown",
         "published",

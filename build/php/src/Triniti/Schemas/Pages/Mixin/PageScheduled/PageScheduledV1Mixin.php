@@ -25,7 +25,7 @@ final class PageScheduledV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('status', T\StringEnumType::create())
-                ->withDefault(NodeStatus::DRAFT())
+                ->withDefault(NodeStatus::SCHEDULED())
                 ->className(NodeStatus::class)
                 ->build(),
         ];

@@ -6,7 +6,7 @@
   <schema id="pbj:triniti:pages:mixin:page-scheduled:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node-scheduled:v1">
     <fields>
       <field name="status" type="string-enum">
-        <default>draft</default>
+        <default>scheduled</default>
         <enum id="gdbots:ncr:node-status"/>
       </field>
     </fields>
