@@ -179,22 +179,6 @@
         "rule": "single",
         "format": "slug"
       }
-    },
-    "status": {
-      "type": "string",
-      "default": "draft",
-      "enum": [
-        "unknown",
-        "published",
-        "scheduled",
-        "draft",
-        "expired",
-        "deleted"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
     }
   },
   "required": [
