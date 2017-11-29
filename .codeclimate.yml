@@ -1,7 +1,10 @@
 exclude_paths:
+  - '/node_modules/*'
   - '/vendor/*'
 
 engines:
+  eslint:
+    enabled: true
   phpcodesniffer:
     enabled: true
     config:
@@ -15,4 +18,5 @@ engines:
 
 ratings:
   paths:
-    - '**.php'
+    - 'build/**.js'
+    - 'build/**.php'

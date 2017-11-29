@@ -175,9 +175,9 @@
     "q": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
+      "maxLength": 2000,
       "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "single"
       }
     },
@@ -199,6 +199,16 @@
       "maximum": 255,
       "pbj": {
         "type": "tiny-int",
+        "rule": "single"
+      }
+    },
+    "cursor": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "A cursor is a string (normally base64 encoded) which marks a specific item in a list of data. When cursor is present it should be used instead of \"page\".",
+      "pbj": {
+        "type": "string",
         "rule": "single"
       }
     },
