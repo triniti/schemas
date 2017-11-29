@@ -2,6 +2,7 @@ domain: http://schemas.triniti.io
 
 namespaces:
   - triniti:pages
+  - triniti:videos
 
 languages:
   php:
