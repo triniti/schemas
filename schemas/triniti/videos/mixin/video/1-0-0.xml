@@ -6,11 +6,6 @@
   <schema id="pbj:triniti:videos:mixin:video:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
 
     <fields>
-      <field name="slug" type="string" format="slug">
-        <description>
-          The URL to use for the page
-        </description>
-      </field>
     </fields>
 
     <mixins>

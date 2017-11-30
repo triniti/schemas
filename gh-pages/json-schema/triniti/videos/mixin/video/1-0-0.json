@@ -194,18 +194,6 @@
         "type": "string",
         "rule": "map"
       }
-    },
-    "slug": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "The URL to use for the page",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
     }
   },
   "required": [
