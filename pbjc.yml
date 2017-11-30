@@ -10,7 +10,7 @@ languages:
     manifest: ./pbj-schemas.php
 
   js:
-    output: ../build/js/src
+    output: ./build/js/src
 
   json-schema:
     include_all: true
