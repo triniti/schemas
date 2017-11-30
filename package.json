@@ -19,11 +19,11 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^1.4.0"
+    "@gdbots/schemas": "^1.4.1"
   },
   "peerDependencies": {
     "@gdbots/common": "^0.1.0",
-    "@gdbots/pbj": "^0.1.1",
+    "@gdbots/pbj": "~0.1",
     "lodash": "^4.17.4",
     "lodash-es": "^4.17.4",
     "md5": "^2.2.1",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@gdbots/common": "^0.1.0",
-    "@gdbots/pbj": "^0.1.1",
+    "@gdbots/pbj": "^0.2.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-plugin-lodash": "^3.2.11",
@@ -50,8 +50,10 @@
     "lodash": "^4.17.4",
     "lodash-es": "^4.17.4",
     "md5": "^2.2.1",
+    "moment": "^2.19.3",
     "rimraf": "^2.6.1",
     "tape": "^4.7.0",
+    "utf8": "^2.1.2",
     "uuid": "^3.1.0"
   }
 }

@@ -22,7 +22,7 @@
               "./build/js/src"
             ],
             "alias": {
-              "@tmz/schemas": "./build/js/src"
+              "@triniti/schemas": "./build/js/src"
             }
           }
         ]
@@ -51,7 +51,7 @@
               "./build/js/src"
             ],
             "alias": {
-              "@tmz/schemas": "./build/js/src"
+              "@triniti/schemas": "./build/js/src"
             }
           }
         ]

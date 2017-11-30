@@ -6,11 +6,10 @@
   "license": "Apache-2.0",
   "require": {
     "php": ">=7.1",
-    "gdbots/schemas": "~1.4"
+    "gdbots/schemas": "^1.4"
   },
   "require-dev": {
-    "composer/composer": "1.0.*@dev",
-    "phpunit/phpunit": "~6.0",
+    "phpunit/phpunit": "^6.4",
     "gdbots/pbjc": "~0.3"
   },
   "autoload": {
@@ -20,7 +19,7 @@
   },
   "autoload-dev": {
     "files": [
-      "pbj-schemas.php",
+      "build/php/src/pbj-schemas.php",
       "pbj-schema-stores.php"
     ],
     "psr-0": {
