@@ -12,6 +12,7 @@
       <curie-major>gdbots:ncr:mixin:expirable:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:indexed:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:publishable:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:sluggable:v1</curie-major>
       <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
     </mixins>
 
@@ -25,7 +26,10 @@
  */
 public function getUriTemplateVars()
 {
-  return ['video_id' => (string)$this->get('_id')];
+  return [
+    'video_id' => (string)$this->get('_id'),
+    'slug' => $this->get('slug')
+  ];
 }
           ]]>
         </methods>
@@ -40,7 +44,10 @@ public function getUriTemplateVars()
  * @returns {Object}
  */
 getUriTemplateVars() {
-  return { video_id: `${this.get('_id', '')}` };
+  return {
+      video_id: `${this.get('_id', '')}`,
+      slug: this.get('slug'),
+    };
 }
           ]]>
         </methods>

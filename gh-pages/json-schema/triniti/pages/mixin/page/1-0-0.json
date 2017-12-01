@@ -180,6 +180,18 @@
         "rule": "single"
       }
     },
+    "slug": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The \"slug\" is a secondary identifier, typically used in a url: - MUST be url friendly - SHOULD NOT be case sensitive - SHOULD be unique within the message curie namespace - CAN be changed, but in practice once nodes are published you should avoid it if possible",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
     "tags": {
       "type": "object",
       "patternProperties": {
@@ -193,18 +205,6 @@
       "pbj": {
         "type": "string",
         "rule": "map"
-      }
-    },
-    "slug": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "The URL to use for the page",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
       }
     }
   },

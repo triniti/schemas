@@ -15,6 +15,9 @@ trait VideoV1Trait
      */
     public function getUriTemplateVars()
     {
-      return ['video_id' => (string)$this->get('_id')];
+      return [
+        'video_id' => (string)$this->get('_id'),
+        'slug' => $this->get('slug')
+      ];
     }
 }
