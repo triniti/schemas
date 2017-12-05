@@ -4,23 +4,23 @@
 ## v1.0.0
 * Initial version.
 * __Schemas:__
-  * `triniti:pages:mixin:create-page`
-  * `triniti:pages:mixin:delete-page`
-  * `triniti:pages:mixin:get-page-batch-request`
-  * `triniti:pages:mixin:get-page-batch-response`
-  * `triniti:pages:mixin:get-page-history-request`
-  * `triniti:pages:mixin:get-page-history-response`
-  * `triniti:pages:mixin:get-page-request`
-  * `triniti:pages:mixin:get-page-response`
-  * `triniti:pages:mixin:page`
-  * `triniti:pages:mixin:page-created`
-  * `triniti:pages:mixin:page-deleted`
-  * `triniti:pages:mixin:page-published`
-  * `triniti:pages:mixin:page-unpublished`
-  * `triniti:pages:mixin:page-updated`
-  * `triniti:pages:mixin:publish-page`
-  * `triniti:pages:mixin:search-pages-request`
-  * `triniti:pages:mixin:search-pages-response`
-  * `triniti:pages:mixin:unpublish-page`
-  * `triniti:pages:mixin:update-page`
+  * `triniti:canvas:mixin:create-page`
+  * `triniti:canvas:mixin:delete-page`
+  * `triniti:canvas:mixin:get-page-batch-request`
+  * `triniti:canvas:mixin:get-page-batch-response`
+  * `triniti:canvas:mixin:get-page-history-request`
+  * `triniti:canvas:mixin:get-page-history-response`
+  * `triniti:canvas:mixin:get-page-request`
+  * `triniti:canvas:mixin:get-page-response`
+  * `triniti:canvas:mixin:page`
+  * `triniti:canvas:mixin:page-created`
+  * `triniti:canvas:mixin:page-deleted`
+  * `triniti:canvas:mixin:page-published`
+  * `triniti:canvas:mixin:page-unpublished`
+  * `triniti:canvas:mixin:page-updated`
+  * `triniti:canvas:mixin:publish-page`
+  * `triniti:canvas:mixin:search-pages-request`
+  * `triniti:canvas:mixin:search-pages-response`
+  * `triniti:canvas:mixin:unpublish-page`
+  * `triniti:canvas:mixin:update-page`
   
