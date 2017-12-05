@@ -9,6 +9,7 @@
     "gdbots/schemas": "^1.4"
   },
   "require-dev": {
+    "composer/composer": "1.0.*@dev",
     "phpunit/phpunit": "^6.4",
     "gdbots/pbjc": "~0.3"
   },
