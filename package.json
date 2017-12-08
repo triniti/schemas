@@ -1,0 +1,59 @@
+{
+  "name": "@triniti/schemas",
+  "version": "0.1.0",
+  "description": "Schemas for common Triniti apps and components.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/triniti/schemas.git"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "npm run clean && npm run lint && npm run test && npm run build:babel && npm run build:prepub",
+    "build:babel": "BABEL_ENV=es6 babel ./build/js/src --out-dir ./build/js/dist",
+    "build:prepub": "cp -rf ./{*.md,package.json} ./build/js/dist",
+    "clean": "rimraf ./build/js/dist",
+    "lint": "BABEL_ENV=cjs eslint ./build/js/src ./build/js/tests",
+    "pub": "npm run build && cd ./build/js/dist && npm publish --access public",
+    "test": "BABEL_ENV=cjs tape -r ./build/js/tests/babel-register.js './build/js/tests/**/*.test.js' | faucet"
+  },
+  "module": "./index.js",
+  "jsnext:main": "./index.js",
+  "dependencies": {
+    "@gdbots/schemas": "^1.4.1"
+  },
+  "peerDependencies": {
+    "@gdbots/common": "~0.1 || ^1.0",
+    "@gdbots/pbj": "~0.2 || ^1.0",
+    "lodash": "^4.17.4",
+    "lodash-es": "^4.17.4",
+    "md5": "^2.2.1",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "@gdbots/common": "^0.1.0",
+    "@gdbots/pbj": "^0.2.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-import-resolver-babel-module": "^3.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "faucet": "^0.0.1",
+    "lodash": "^4.17.4",
+    "lodash-es": "^4.17.4",
+    "md5": "^2.2.1",
+    "moment": "^2.19.3",
+    "rimraf": "^2.6.2",
+    "tape": "^4.8.0",
+    "utf8": "^2.1.2",
+    "uuid": "^3.1.0"
+  }
+}

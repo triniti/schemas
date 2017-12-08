@@ -1,0 +1,61 @@
+{
+  "env": {
+    "cjs": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "node": "current"
+            },
+            "modules": "commonjs",
+            "useBuiltIns": true
+          }
+        ]
+      ],
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        [
+          "module-resolver",
+          {
+            "root": [
+              "./build/js/src"
+            ],
+            "alias": {
+              "@triniti/schemas": "./build/js/src"
+            }
+          }
+        ]
+      ]
+    },
+    "es6": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "node": "current"
+            },
+            "modules": false,
+            "useBuiltIns": true
+          }
+        ]
+      ],
+      "plugins": [
+        "lodash",
+        "./build/js/use-lodash-es",
+        [
+          "module-resolver",
+          {
+            "root": [
+              "./build/js/src"
+            ],
+            "alias": {
+              "@triniti/schemas": "./build/js/src"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

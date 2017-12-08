@@ -18,8 +18,10 @@
         "unknown",
         "published",
         "scheduled",
+        "pending",
         "draft",
         "expired",
+        "archived",
         "deleted"
       ],
       "pbj": {

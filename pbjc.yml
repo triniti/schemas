@@ -1,12 +1,16 @@
 domain: http://schemas.triniti.io
 
 namespaces:
-  - triniti:curator
+  - triniti:canvas
+  - triniti:news
+  - triniti:ovp
 
 languages:
   php:
-    output: ./src/php
-    manifest: ./pbj-schemas.php
+    output: ./build/php/src
+
+  js:
+    output: ./build/js/src
 
   json-schema:
     include_all: true
