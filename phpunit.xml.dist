@@ -3,7 +3,7 @@
 
   <testsuites>
     <testsuite name="schemas">
-      <directory>./build/php/tests/</directory>
+      <directory>build/php/tests</directory>
     </testsuite>
   </testsuites>
 

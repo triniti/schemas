@@ -2,6 +2,7 @@ domain: http://schemas.triniti.io
 
 namespaces:
   - triniti:canvas
+  - triniti:news
   - triniti:ovp
 
 languages:
@@ -14,4 +15,3 @@ languages:
   json-schema:
     include_all: true
     output: ./gh-pages/json-schema
-

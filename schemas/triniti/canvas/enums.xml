@@ -11,6 +11,8 @@
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
       <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
+      <option key="TITLE_ASC" value="title-asc"/>
     </enum>
   </enums>
 </pbj-enums>

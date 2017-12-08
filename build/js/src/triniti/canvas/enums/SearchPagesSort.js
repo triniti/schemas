@@ -10,4 +10,6 @@ SearchPagesSort.configure({
   CREATED_AT_ASC: 'created-at-asc',
   UPDATED_AT_DESC: 'updated-at-desc',
   UPDATED_AT_ASC: 'updated-at-asc',
+  TITLE_DESC: 'title-desc',
+  TITLE_ASC: 'title-asc',
 }, 'triniti:canvas:search-pages-sort');

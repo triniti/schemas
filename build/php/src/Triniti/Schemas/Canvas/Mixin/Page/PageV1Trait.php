@@ -15,9 +15,9 @@ trait PageV1Trait
      */
     public function getUriTemplateVars()
     {
-      return [
-        'page_id' => (string)$this->get('_id'),
-        'slug' => $this->get('slug')
-      ];
+        return [
+            '_id' => (string)$this->get('_id'),
+            'slug' => $this->get('slug'),
+        ];
     }
 }

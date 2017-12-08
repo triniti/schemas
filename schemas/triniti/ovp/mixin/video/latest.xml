@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:ovp:mixin:video:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
-
-    <fields>
-    </fields>
-
     <php-options>
       <insertion-points>
         <imports/>
@@ -18,10 +14,10 @@
  */
 public function getUriTemplateVars()
 {
-  return [
-    'video_id' => (string)$this->get('_id'),
-    'slug' => $this->get('slug')
-  ];
+    return [
+        '_id' => (string)$this->get('_id'),
+        'slug' => $this->get('slug'),
+    ];
 }
           ]]>
         </methods>
@@ -37,9 +33,9 @@ public function getUriTemplateVars()
  */
 getUriTemplateVars() {
   return {
-      video_id: `${this.get('_id', '')}`,
-      slug: this.get('slug'),
-    };
+    _id: `${this.get('_id', '')}`,
+    slug: this.get('slug'),
+  };
 }
           ]]>
         </methods>

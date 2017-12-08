@@ -295,7 +295,9 @@
         "created-at-desc",
         "created-at-asc",
         "updated-at-desc",
-        "updated-at-asc"
+        "updated-at-asc",
+        "title-desc",
+        "title-asc"
       ],
       "pbj": {
         "type": "string-enum",
