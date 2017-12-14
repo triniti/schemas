@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.1.1
+* __Add Schemas:__
+  * `triniti:canvas:mixin:page-renamed`
+  * `triniti:canvas:mixin:rename-page`
+  * `triniti:news:mixin:article-renamed`
+  * `triniti:news:mixin:rename-article`
+  * `triniti:ovp:mixin:rename-video`
+  * `triniti:ovp:mixin:video-renamed`
+
+
 ## v0.1.0
 * __Add Schemas:__
   * `triniti:canvas:mixin:create-page`
