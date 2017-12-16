@@ -5,9 +5,9 @@
 * __Add Schemas:__
   * `triniti:canvas:block:render-context`
   * `triniti:canvas:mixin:block`
-  * `triniti:canvas:mixin:code`
-  * `triniti:canvas:mixin:iframe`
-  * `triniti:canvas:mixin:youtube-video`
+  * `triniti:canvas:mixin:code-block`
+  * `triniti:canvas:mixin:iframe-block`
+  * `triniti:canvas:mixin:youtube-video-block`
 
 
 ## v0.1.1
