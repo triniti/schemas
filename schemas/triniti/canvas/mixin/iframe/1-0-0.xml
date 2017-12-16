@@ -3,15 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:canvas:block:youtube-video:1-0-0">
+  <schema id="pbj:triniti:canvas:mixin:iframe:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="id" type="string" pattern="^[\w-]+$" required="true"/>
-      <field name="autoplay" type="boolean"/>
+      <field name="src" type="string" format="url" required="true"/>
+      <field name="width" type="string" pattern="^\d+%?$"/>
+      <field name="height" type="string" pattern="^\d+%?$"/>
+      <field name="align" type="string" pattern="^(center|right|left)$"/>
     </fields>
-
-    <mixins>
-      <curie-major>triniti:canvas:mixin:block:v1</curie-major>
-    </mixins>
 
     <php-options>
       <insertion-points>
@@ -25,8 +23,7 @@ public function getUriTemplateVars()
 {
     return [
         'etag' => $this->get('etag'),
-        'id' => $this->get('id'),
-        'autoplay' => $this->get('autoplay'),
+        'src' => $this->get('src'),
     ];
 }
           ]]>
@@ -44,8 +41,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     etag: this.get('etag'),
-    id: this.get('id'),
-    autoplay: this.get('autoplay'),
+    src: this.get('src'),
   };
 }
           ]]>

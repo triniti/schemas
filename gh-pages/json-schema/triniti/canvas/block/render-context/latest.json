@@ -1,0 +1,57 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/block/render-context/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "_schema": {
+      "type": "string",
+      "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
+      "default": "pbj:triniti:canvas:block:render-context:1-0-0"
+    },
+    "container": {
+      "type": "object",
+      "description": "The message (e.g. article) containing the blocks that are being rendered. This is used by some block renderers when it needs data from the container or to generate urls.",
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
+    },
+    "platform": {
+      "type": "string",
+      "default": "web",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The platform the blocks are being rendered into, e.g. web, amp, apple-news, facebook-instant-articles.",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
+    "device_view": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
+    "section": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "description": "Refers to the location on the screen or application that the blocks are being rendered into, e.g. \"article-detail\", \"blogroll\", \"modal\", \"jumbotron\". Renderers can use this to customize the output.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    }
+  },
+  "required": [
+    "_schema"
+  ],
+  "additionalProperties": false
+}

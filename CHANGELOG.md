@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v0.1.2
+* __Add Schemas:__
+  * `triniti:canvas:block:render-context`
+  * `triniti:canvas:mixin:block`
+  * `triniti:canvas:mixin:code`
+  * `triniti:canvas:mixin:iframe`
+  * `triniti:canvas:mixin:youtube-video`
+
+
 ## v0.1.1
 * __Add Schemas:__
   * `triniti:canvas:mixin:page-renamed`
