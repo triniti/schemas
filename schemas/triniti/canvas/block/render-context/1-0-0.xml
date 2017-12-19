@@ -28,6 +28,12 @@
           to customize the output.
         </description>
       </field>
+      <field name="tags" type="string" rule="map">
+        <description>
+          Tags is a map to store adhoc variables that can be used
+          when rendering blocks, e.g. ad_zone, sponsor, no_autoplay.
+        </description>
+      </field>
     </fields>
 
     <php-options>

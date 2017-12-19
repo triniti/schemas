@@ -47,6 +47,13 @@ final class RenderContextV1 extends AbstractMessage implements
                 Fb::create('section', T\StringType::create())
                     ->pattern('^[\w-]+$')
                     ->build(),
+                /*
+                 * Tags is a map to store adhoc variables that can be used
+                 * when rendering blocks, e.g. ad_zone, sponsor, no_autoplay.
+                 */
+                Fb::create('tags', T\StringType::create())
+                    ->asAMap()
+                    ->build(),
             ]
         );
     }
