@@ -4,6 +4,7 @@ namespaces:
   - triniti:canvas
   - triniti:news
   - triniti:ovp
+  - triniti:apollo
 
 languages:
   php:
