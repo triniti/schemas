@@ -31,7 +31,7 @@ public function getUriTemplateVars()
     </php-options>
 
     <js-options>
-      <insertion-options>
+      <insertion-points>
         <methods>
           <![CDATA[
 /**
@@ -46,7 +46,7 @@ getUriTemplateVars() {
 }
           ]]>
         </methods>
-      </insertion-options>
+      </insertion-points>
     </js-options>
   </schema>
 </pbj-schema>

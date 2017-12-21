@@ -24,7 +24,7 @@
         <description>
           Refers to the location on the screen or application that
           the blocks are being rendered into, e.g. "article-detail",
-          "blogroll", "modal", "jumbotron".  Renderers can use this
+          "blogroll", "modal", "jumbotron". Renderers can use this
           to customize the output.
         </description>
       </field>
@@ -37,7 +37,7 @@
       <field name="flags" type="boolean" rule="map">
         <description>
           A map to store flags (booleans) that can be used when
-          rendering blocks.  These are different from "config"
+          rendering blocks. These are different from "config"
           as they will always be booleans, e.g. disable_autoplay,
           allowfullscreen, dnt (do not track).
         </description>
@@ -75,12 +75,12 @@ public function getUriTemplateVars()
     </php-options>
 
     <js-options>
-      <imports>
-        <![CDATA[
+      <insertion-points>
+        <imports>
+          <![CDATA[
 import MessageRef from '@gdbots/pbj/MessageRef';
             ]]>
-      </imports>
-      <insertion-options>
+        </imports>
         <methods>
           <![CDATA[
 /**
@@ -99,7 +99,7 @@ getUriTemplateVars() {
 }
           ]]>
         </methods>
-      </insertion-options>
+      </insertion-points>
     </js-options>
   </schema>
 </pbj-schema>

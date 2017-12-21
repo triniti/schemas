@@ -2,6 +2,7 @@
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Message from '@gdbots/pbj/Message';
+import MessageRef from '@gdbots/pbj/MessageRef';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
@@ -60,6 +61,21 @@ export default class RenderContextV1 extends Message {
           .build(),
       ],
     );
+  }
+
+  /**
+   * @param {?string} tag
+   * @returns {MessageRef}
+   */
+  generateMessageRef(tag = null) {
+    return new MessageRef(this.schema().getCurie(), this.generateEtag(), tag);
+  }
+  
+  /**
+   * @returns {Object}
+   */
+  getUriTemplateVars() {
+    return {};
   }
 }
 

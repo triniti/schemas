@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.1.3
+* Fix invalid schema option `insertion-options` to be `insertion-points` and recompile.
+
+
 ## v0.1.2
 * __Add Schemas:__
   * `triniti:canvas:block:render-context`
