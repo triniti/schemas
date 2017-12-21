@@ -23,10 +23,10 @@ export default class IframeBlockV1Mixin extends Mixin {
         .format(Format.URL)
         .build(),
       Fb.create('width', T.StringType.create())
-        .pattern('^\\d+%?$')
+        .pattern('^\\d+(%|px)?$')
         .build(),
       Fb.create('height', T.StringType.create())
-        .pattern('^\\d+%?$')
+        .pattern('^\\d+(%|px)?$')
         .build(),
       Fb.create('align', T.StringType.create())
         .pattern('^(center|right|left)$')

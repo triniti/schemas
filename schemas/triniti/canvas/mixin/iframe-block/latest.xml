@@ -7,8 +7,8 @@
     <!-- todo: add sandboxing options to limit iframe abilities -->
     <fields>
       <field name="src" type="string" format="url" required="true"/>
-      <field name="width" type="string" pattern="^\d+%?$"/>
-      <field name="height" type="string" pattern="^\d+%?$"/>
+      <field name="width" type="string" pattern="^\d+(%|px)?$"/>
+      <field name="height" type="string" pattern="^\d+(%|px)?$"/>
       <field name="align" type="string" pattern="^(center|right|left)$"/>
     </fields>
 
@@ -25,6 +25,9 @@ public function getUriTemplateVars()
     return [
         'etag' => $this->get('etag'),
         'src' => $this->get('src'),
+        'width' => $this->get('width'),
+        'height' => $this->get('height'),
+        'align' => $this->get('align'),
     ];
 }
           ]]>
@@ -43,6 +46,9 @@ getUriTemplateVars() {
   return {
     etag: this.get('etag'),
     src: this.get('src'),
+    width: this.get('width'),
+    height: this.get('height'),
+    align: this.get('align'),
   };
 }
           ]]>

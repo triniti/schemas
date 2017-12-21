@@ -43,10 +43,19 @@ export default class RenderContextV1 extends Message {
           .pattern('^[\\w-]+$')
           .build(),
         /*
-         * Tags is a map to store adhoc variables that can be used
-         * when rendering blocks, e.g. ad_zone, sponsor, no_autoplay.
+         * A map to store config variables that can be used when
+         * rendering blocks, e.g. ad_zone, sponsor.
          */
-        Fb.create('tags', T.StringType.create())
+        Fb.create('config', T.StringType.create())
+          .asAMap()
+          .build(),
+        /*
+         * A map to store flags (booleans) that can be used when
+         * rendering blocks. These are different from "config"
+         * as they will always be booleans, e.g. disable_autoplay,
+         * allowfullscreen, dnt (do not track).
+         */
+        Fb.create('flags', T.BooleanType.create())
           .asAMap()
           .build(),
       ],

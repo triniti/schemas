@@ -49,7 +49,7 @@
         "rule": "single"
       }
     },
-    "tags": {
+    "config": {
       "type": "object",
       "patternProperties": {
         "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
@@ -59,9 +59,23 @@
         }
       },
       "additionalProperties": false,
-      "description": "Tags is a map to store adhoc variables that can be used when rendering blocks, e.g. ad_zone, sponsor, no_autoplay.",
+      "description": "A map to store config variables that can be used when rendering blocks, e.g. ad_zone, sponsor.",
       "pbj": {
         "type": "string",
+        "rule": "map"
+      }
+    },
+    "flags": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map to store flags (booleans) that can be used when rendering blocks. These are different from \"config\" as they will always be booleans, e.g. disable_autoplay, allowfullscreen, dnt (do not track).",
+      "pbj": {
+        "type": "boolean",
         "rule": "map"
       }
     }

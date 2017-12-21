@@ -31,7 +31,7 @@
     },
     "width": {
       "type": "string",
-      "pattern": "^\\d+%?$",
+      "pattern": "^\\d+(%|px)?$",
       "pbj": {
         "type": "string",
         "rule": "single"
@@ -39,7 +39,7 @@
     },
     "height": {
       "type": "string",
-      "pattern": "^\\d+%?$",
+      "pattern": "^\\d+(%|px)?$",
       "pbj": {
         "type": "string",
         "rule": "single"

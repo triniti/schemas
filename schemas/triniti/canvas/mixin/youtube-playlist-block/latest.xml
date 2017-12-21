@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:canvas:mixin:youtube-playlist-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
+    <fields>
+      <field name="playlist_id" type="string" pattern="^[\w-]+$" required="true"/>
+      <field name="video_id" type="string" pattern="^[\w-]+$" required="true"/>
+      <field name="autoplay" type="boolean"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        'etag' => $this->get('etag'),
+        'playlist_id' => $this->get('playlist_id'),
+        'video_id' => $this->get('video_id'),
+        'autoplay' => $this->get('autoplay'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-options>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    etag: this.get('etag'),
+    playlist_id: this.get('playlist_id'),
+    video_id: this.get('video_id'),
+    autoplay: this.get('autoplay'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-options>
+    </js-options>
+  </schema>
+</pbj-schema>

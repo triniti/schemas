@@ -28,10 +28,18 @@
           to customize the output.
         </description>
       </field>
-      <field name="tags" type="string" rule="map">
+      <field name="config" type="string" rule="map">
         <description>
-          Tags is a map to store adhoc variables that can be used
-          when rendering blocks, e.g. ad_zone, sponsor, no_autoplay.
+          A map to store config variables that can be used when
+          rendering blocks, e.g. ad_zone, sponsor.
+        </description>
+      </field>
+      <field name="flags" type="boolean" rule="map">
+        <description>
+          A map to store flags (booleans) that can be used when
+          rendering blocks.  These are different from "config"
+          as they will always be booleans, e.g. disable_autoplay,
+          allowfullscreen, dnt (do not track).
         </description>
       </field>
     </fields>

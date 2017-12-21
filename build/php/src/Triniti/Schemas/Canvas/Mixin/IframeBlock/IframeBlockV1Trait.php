@@ -18,6 +18,9 @@ trait IframeBlockV1Trait
         return [
             'etag' => $this->get('etag'),
             'src' => $this->get('src'),
+            'width' => $this->get('width'),
+            'height' => $this->get('height'),
+            'align' => $this->get('align'),
         ];
     }
 }
