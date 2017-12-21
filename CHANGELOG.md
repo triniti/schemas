@@ -1,6 +1,36 @@
 # CHANGELOG
 
 
+## v0.1.3
+* Fix invalid schema option `insertion-options` to be `insertion-points` and recompile.
+
+
+## v0.1.2
+* __Add Schemas:__
+  * `triniti:canvas:block:render-context`
+  * `triniti:canvas:mixin:block`
+  * `triniti:canvas:mixin:code-block`
+  * `triniti:canvas:mixin:facebook-post-block`
+  * `triniti:canvas:mixin:facebook-video-block`
+  * `triniti:canvas:mixin:iframe-block`
+  * `triniti:canvas:mixin:imgur-post-block`
+  * `triniti:canvas:mixin:instagram-media-block`
+  * `triniti:canvas:mixin:node-ref-block`
+  * `triniti:canvas:mixin:pinterest-board-block`
+  * `triniti:canvas:mixin:pinterest-pin-block`
+  * `triniti:canvas:mixin:pinterest-profile-block`
+  * `triniti:canvas:mixin:twitter-collection-timeline-block`
+  * `triniti:canvas:mixin:twitter-list-timeline-block`
+  * `triniti:canvas:mixin:twitter-moment-block`
+  * `triniti:canvas:mixin:twitter-search-timeline-block`
+  * `triniti:canvas:mixin:twitter-tweet-block`
+  * `triniti:canvas:mixin:twitter-user-timeline-block`
+  * `triniti:canvas:mixin:twitter-video-block`
+  * `triniti:canvas:mixin:vevo-video-block`
+  * `triniti:canvas:mixin:youtube-playlist-block`
+  * `triniti:canvas:mixin:youtube-video-block`
+
+
 ## v0.1.1
 * __Add Schemas:__
   * `triniti:canvas:mixin:page-renamed`

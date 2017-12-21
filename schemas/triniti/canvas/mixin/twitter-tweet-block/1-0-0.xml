@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <!--
+    @link https://dev.twitter.com/web/embedded-tweets/parameters
+  -->
+  <schema id="pbj:triniti:canvas:mixin:twitter-tweet-block:1-0-0" mixin="true"
+      extends="triniti:canvas:mixin:block:v1">
+    <fields>
+      <field name="screen_name" type="string" pattern="^[\w\.]+$" required="true"/>
+      <field name="tweet_id" type="string" pattern="^\d+$" required="true"/>
+      <field name="tweet_text" type="text"/>
+      <field name="hide_media" type="boolean"/>
+      <field name="hide_thread" type="boolean"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        'etag' => $this->get('etag'),
+        'screen_name' => $this->get('screen_name'),
+        'tweet_id' => $this->get('tweet_id'),
+        'hide_media' => $this->get('hide_media'),
+        'hide_thread' => $this->get('hide_thread'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    etag: this.get('etag'),
+    screen_name: this.get('screen_name'),
+    tweet_id: this.get('tweet_id'),
+    hide_media: this.get('hide_media'),
+    hide_thread: this.get('hide_thread'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>
