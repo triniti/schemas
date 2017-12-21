@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <!--
+    @link https://developers.facebook.com/docs/plugins/embedded-video-player
+  -->
+  <schema id="pbj:triniti:canvas:mixin:facebook-video-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
+    <fields>
+      <field name="href" type="string" format="url" required="true"/>
+      <field name="autoplay" type="boolean"/>
+      <field name="show_text" type="boolean"/>
+      <field name="show_captions" type="boolean"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        'etag' => $this->get('etag'),
+        'href' => $this->get('href'),
+        'autoplay' => $this->get('autoplay'),
+        'show_text' => $this->get('show_text'),
+        'show_captions' => $this->get('show_captions'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-options>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    etag: this.get('etag'),
+    href: this.get('href'),
+    autoplay: this.get('autoplay'),
+    show_text: this.get('show_text'),
+    show_captions: this.get('show_captions'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-options>
+    </js-options>
+  </schema>
+</pbj-schema>
