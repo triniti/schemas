@@ -16,8 +16,7 @@ trait PollV1Trait
     public function getUriTemplateVars()
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'slug' => $this->get('slug'),
+            '_id' => (string)$this->get('_id')
         ];
     }
 }
