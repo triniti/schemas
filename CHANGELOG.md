@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## v0.1.4
+* __Add Schemas:__
+  * `triniti:apollo:mixin:create-poll`
+  * `triniti:apollo:mixin:delete-poll`
+  * `triniti:apollo:mixin:expire-poll`
+  * `triniti:apollo:mixin:get-poll-batch-request`
+  * `triniti:apollo:mixin:get-poll-batch-response`
+  * `triniti:apollo:mixin:get-poll-history-request`
+  * `triniti:apollo:mixin:get-poll-history-response`
+  * `triniti:apollo:mixin:get-poll-request`
+  * `triniti:apollo:mixin:get-poll-response`
+  * `triniti:apollo:mixin:mark-poll-as-draft`
+  * `triniti:apollo:mixin:mark-poll-as-pending`
+  * `triniti:apollo:mixin:poll-created`
+  * `triniti:apollo:mixin:poll-deleted`
+  * `triniti:apollo:mixin:poll-expired`
+  * `triniti:apollo:mixin:poll-marked-as-draft`
+  * `triniti:apollo:mixin:poll-marked-as-pending`
+  * `triniti:apollo:mixin:poll-published`
+  * `triniti:apollo:mixin:poll-scheduled`
+  * `triniti:apollo:mixin:poll-unpublished`
+  * `triniti:apollo:mixin:poll-updated`
+  * `triniti:apollo:mixin:poll`
+  * `triniti:apollo:mixin:publish-poll`
+  * `triniti:apollo:mixin:search-polls-request`
+  * `triniti:apollo:mixin:search-polls-response`
+  * `triniti:apollo:mixin:unpublish-poll`
+  * `triniti:apollo:mixin:update-poll`
+
 
 ## v0.1.3
 * Fix invalid schema option `insertion-options` to be `insertion-points` and recompile.
