@@ -6,7 +6,8 @@
   <!--
     @link https://developers.pinterest.com/tools/widget-builder/?type=profile
   -->
-  <schema id="pbj:triniti:canvas:mixin:pinterest-profile-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
+  <schema id="pbj:triniti:canvas:mixin:pinterest-profile-block:1-0-0" mixin="true"
+      extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="href" type="string" format="url" required="true"/>
       <field name="size" type="string" pattern="^[\w-]+$">

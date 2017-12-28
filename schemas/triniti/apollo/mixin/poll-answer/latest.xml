@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <!--
+    A poll answer is not a node, it is fetched and stored only within the
+    context of a poll.  It has an _id only because casting a vote on a poll
+    requires that you tell us what answer you selected.
+
+    The title of the answer COULD be used, however, if we introduce title
+    variants for different devices or UI components or staff makes a spelling
+    error and later fixes it you'd lose vote counts and we don't want that.
+
+    We're aware of the infamous Google Wave bugs and we're fine with it.
+  -->
+  <schema id="pbj:triniti:apollo:mixin:poll-answer:1-0-0" mixin="true">
+    <fields>
+      <field name="_id" type="uuid" required="true"/>
+      <field name="title" type="string"/>
+      <field name="initial_votes" type="int"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+use Gdbots\Pbj\MessageRef;
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param string $tag
+ * @return MessageRef
+ */
+public function generateMessageRef($tag = null)
+{
+    return new MessageRef(static::schema()->getCurie(), $this->get('_id'), $tag);
+}
+
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return ['_id' => (string)$this->get('_id')];
+}
+            ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+import MessageRef from '@gdbots/pbj/MessageRef';
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param {?string} tag
+ * @returns {MessageRef}
+ */
+generateMessageRef(tag = null) {
+  return new MessageRef(this.schema().getCurie(), this.get('_id'), tag);
+},
+
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return { _id: `${this.get('_id')}` };
+}
+            ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>
