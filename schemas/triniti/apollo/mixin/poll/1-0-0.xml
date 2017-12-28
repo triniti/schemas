@@ -4,9 +4,17 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:apollo:mixin:poll:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+    <fields>
+      <field name="allow_multiple_responses" type="boolean"/>
+      <field name="answers" type="message" rule="list">
+        <any-of>
+          <curie>triniti:apollo:mixin:poll-answer</curie>
+        </any-of>
+      </field>
+    </fields>
+
     <php-options>
       <insertion-points>
-        <imports/>
         <methods>
           <![CDATA[
 /**
@@ -14,11 +22,9 @@
  */
 public function getUriTemplateVars()
 {
-    return [
-        '_id' => (string)$this->get('_id')
-    ];
+    return ['_id' => (string)$this->get('_id')];
 }
-          ]]>
+            ]]>
         </methods>
       </insertion-points>
     </php-options>
@@ -31,11 +37,9 @@ public function getUriTemplateVars()
  * @returns {Object}
  */
 getUriTemplateVars() {
-  return {
-    _id: `${this.get('_id', '')}`
-  };
+  return { _id: `${this.get('_id', '')}` };
 }
-          ]]>
+            ]]>
         </methods>
       </insertion-points>
     </js-options>

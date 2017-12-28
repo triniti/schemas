@@ -4,9 +4,7 @@ export default function PollV1Trait(m) {
      * @returns {Object}
      */
     getUriTemplateVars() {
-      return {
-        _id: `${this.get('_id', '')}`
-      };
+      return { _id: `${this.get('_id', '')}` };
     }
   });
 }

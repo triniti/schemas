@@ -163,10 +163,40 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "allow_multiple_responses": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "answers": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/poll-answer"
+        }
+      ],
+      "additionalProperties": false,
+      "pbj": {
+        "type": "message",
+        "rule": "list"
+      }
     }
   },
   "required": [
     "_id"
   ],
+  "definitions": {
+    "poll-answer": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/apollo/mixin/poll-answer/1-0-0.json#"
+        }
+      ]
+    }
+  },
   "additionalProperties": true
 }

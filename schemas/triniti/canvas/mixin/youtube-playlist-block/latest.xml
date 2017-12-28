@@ -3,7 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:canvas:mixin:youtube-playlist-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
+  <schema id="pbj:triniti:canvas:mixin:youtube-playlist-block:1-0-0" mixin="true"
+      extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="playlist_id" type="string" pattern="^[\w-]+$" required="true"/>
       <field name="video_id" type="string" pattern="^[\w-]+$" required="true"/>

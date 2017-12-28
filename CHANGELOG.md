@@ -1,7 +1,9 @@
 # CHANGELOG
 
+
 ## v0.1.4
 * __Add Schemas:__
+  * `triniti:apollo:mixin:cast-vote`
   * `triniti:apollo:mixin:create-poll`
   * `triniti:apollo:mixin:delete-poll`
   * `triniti:apollo:mixin:expire-poll`
@@ -13,6 +15,8 @@
   * `triniti:apollo:mixin:get-poll-response`
   * `triniti:apollo:mixin:mark-poll-as-draft`
   * `triniti:apollo:mixin:mark-poll-as-pending`
+  * `triniti:apollo:mixin:poll`
+  * `triniti:apollo:mixin:poll-answer`
   * `triniti:apollo:mixin:poll-created`
   * `triniti:apollo:mixin:poll-deleted`
   * `triniti:apollo:mixin:poll-expired`
@@ -22,12 +26,12 @@
   * `triniti:apollo:mixin:poll-scheduled`
   * `triniti:apollo:mixin:poll-unpublished`
   * `triniti:apollo:mixin:poll-updated`
-  * `triniti:apollo:mixin:poll`
   * `triniti:apollo:mixin:publish-poll`
   * `triniti:apollo:mixin:search-polls-request`
   * `triniti:apollo:mixin:search-polls-response`
   * `triniti:apollo:mixin:unpublish-poll`
   * `triniti:apollo:mixin:update-poll`
+  * `triniti:apollo:mixin:vote-casted`
 
 
 ## v0.1.3
