@@ -6,7 +6,8 @@
   <!--
     @link https://www.instagram.com/developer/embedding/
   -->
-  <schema id="pbj:triniti:canvas:mixin:instagram-media-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
+  <schema id="pbj:triniti:canvas:mixin:instagram-media-block:1-0-0" mixin="true"
+      extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="id" type="string" pattern="^[\w-]+$" required="true"/>
       <field name="hidecaption" type="boolean"/>

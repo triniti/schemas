@@ -1,6 +1,7 @@
 domain: http://schemas.triniti.io
 
 namespaces:
+  - triniti:apollo
   - triniti:canvas
   - triniti:news
   - triniti:ovp
