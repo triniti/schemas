@@ -171,6 +171,21 @@
         "rule": "single",
         "overridable": true
       }
+    },
+    "files": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      ],
+      "additionalProperties": false,
+      "pbj": {
+        "type": "string",
+        "rule": "list"
+      }
     }
   },
   "required": [

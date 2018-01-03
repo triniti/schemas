@@ -1,5 +1,4 @@
 // @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-0.json#
-import AssetMimeTypes from '@triniti/schemas/triniti/dam/enums/AssetMimeTypes';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -18,16 +17,14 @@ export default class AssetV1Mixin extends Mixin {
    */
   getFields() {
     return [
-      Fb.create('mime_type', T.StringEnumType.create())
+      Fb.create('mime_type', T.StringType.create())
         .required()
-        .withDefault(AssetMimeTypes.UNKNOWN)
-        .classProto(AssetMimeTypes)
+        .pattern('^[-\\w]+/[-\\w\\+\\.]+$')
         .build(),
       /*
-       * The file size of the uploaded asset in bytes. Using an int type, there's a max size of ~4095 MB.
+       * The file size of the uploaded asset in bytes.
        */
-      Fb.create('file_size', T.IntType.create())
-        .required()
+      Fb.create('file_size', T.BigIntType.create())
         .build(),
       /*
        * An etag created from the contents of the uploaded asset. The asset etag is different from the
@@ -36,7 +33,8 @@ export default class AssetV1Mixin extends Mixin {
        * of the asset regardless of its metadata.
        */
       Fb.create('asset_etag', T.StringType.create())
-        .required()
+        .maxLength(100)
+        .pattern('^[\\w\\.:-]+$')
         .build(),
     ];
   }

@@ -96,22 +96,35 @@
         "rule": "single"
       }
     },
-    "nodes": {
+    "asset_ids": {
       "type": "object",
       "patternProperties": {
         "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
-          "type": "object",
-          "anyOf": [
-            {
-              "$ref": "#/definitions/asset"
-            }
-          ]
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
         }
       },
       "additionalProperties": false,
+      "description": "A map of asset ids with the hash of the asset's url as the key and the asset id as the value",
       "pbj": {
-        "type": "message",
+        "type": "identifier",
         "rule": "map"
+      }
+    },
+    "urls": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map of asset urls with the hash of the asset's url as the key and the url as the value",
+      "pbj": {
+        "type": "string",
+        "rule": "map",
+        "format": "url"
       }
     }
   },
@@ -124,14 +137,6 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/request/1-0-0.json#"
-        }
-      ]
-    },
-    "asset": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-0.json#"
         }
       ]
     }

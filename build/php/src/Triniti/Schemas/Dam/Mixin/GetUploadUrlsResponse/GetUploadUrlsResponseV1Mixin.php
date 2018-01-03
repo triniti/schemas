@@ -3,10 +3,11 @@
 namespace Triniti\Schemas\Dam\Mixin\GetUploadUrlsResponse;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
-use Triniti\Schemas\Dam\Mixin\Asset\Asset as TrinitiDamAsset;
+use Triniti\Schemas\Dam\AssetId;
 
 final class GetUploadUrlsResponseV1Mixin extends AbstractMixin
 {
@@ -24,11 +25,19 @@ final class GetUploadUrlsResponseV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('nodes', T\MessageType::create())
+            /*
+             * A map of asset ids with the hash of the asset's url as the key and the asset id as the value
+             */
+            Fb::create('asset_ids', T\IdentifierType::create())
                 ->asAMap()
-                ->anyOfClassNames([
-                    TrinitiDamAsset::class,
-                ])
+                ->className(AssetId::class)
+                ->build(),
+            /*
+             * A map of asset urls with the hash of the asset's url as the key and the url as the value
+             */
+            Fb::create('urls', T\StringType::create())
+                ->asAMap()
+                ->format(Format::URL())
                 ->build(),
         ];
     }

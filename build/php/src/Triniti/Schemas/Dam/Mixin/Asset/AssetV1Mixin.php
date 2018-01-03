@@ -6,7 +6,6 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
-use Triniti\Schemas\Dam\Enum\AssetMimeTypes;
 
 final class AssetV1Mixin extends AbstractMixin
 {
@@ -24,16 +23,14 @@ final class AssetV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('mime_type', T\StringEnumType::create())
+            Fb::create('mime_type', T\StringType::create())
                 ->required()
-                ->withDefault(AssetMimeTypes::UNKNOWN())
-                ->className(AssetMimeTypes::class)
+                ->pattern('^[-\w]+/[-\w\+\.]+$')
                 ->build(),
             /*
-             * The file size of the uploaded asset in bytes. Using an int type, there's a max size of ~4095 MB.
+             * The file size of the uploaded asset in bytes.
              */
-            Fb::create('file_size', T\IntType::create())
-                ->required()
+            Fb::create('file_size', T\BigIntType::create())
                 ->build(),
             /*
              * An etag created from the contents of the uploaded asset. The asset etag is different from the
@@ -42,7 +39,8 @@ final class AssetV1Mixin extends AbstractMixin
              * of the asset regardless of its metadata.
              */
             Fb::create('asset_etag', T\StringType::create())
-                ->required()
+                ->maxLength(100)
+                ->pattern('^[\w\.:-]+$')
                 ->build(),
         ];
     }

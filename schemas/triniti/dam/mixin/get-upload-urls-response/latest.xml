@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:dam:mixin:get-upload-urls-response:1-0-0" mixin="true"
-      extends="gdbots:pbjx:mixin:response:v1">
+          extends="gdbots:pbjx:mixin:response:v1">
     <fields>
-      <field name="nodes" type="message" rule="map">
-        <any-of>
-          <curie>triniti:dam:mixin:asset</curie>
-        </any-of>
+      <field name="asset_ids" type="identifier" rule="map">
+        <description>
+          A map of asset ids with the hash of the asset's url as the key and the asset id as the value
+        </description>
+        <php-options>
+          <imports>use Triniti\Schemas\Dam\AssetId;</imports>
+          <class-name>AssetId::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId';</imports>
+          <class-proto>AssetId</class-proto>
+        </js-options>
+      </field>
+      <field name="urls" type="string" format="url" rule="map">
+      <description>
+        A map of asset urls with the hash of the asset's url as the key and the url as the value
+      </description>
       </field>
     </fields>
   </schema>

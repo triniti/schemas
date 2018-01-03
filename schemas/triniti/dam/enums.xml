@@ -15,13 +15,5 @@
       <option key="TITLE_DESC" value="title-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
     </enum>
-    <enum name="asset-mime-types" type="string">
-      <option key="AUDIO" value="audio"/>
-      <option key="DOCUMENT" value="document"/>
-      <option key="IMAGE" value="image"/>
-      <option key="TEXT" value="text"/>
-      <option key="UNKNOWN" value="unknown"/>
-      <option key="VIDEO" value="video"/>
-    </enum>
   </enums>
 </pbj-enums>

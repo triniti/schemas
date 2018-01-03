@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:dam:mixin:asset:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="mime_type" type="string-enum" required="true">
-        <default>unknown</default>
-        <enum id="triniti:dam:asset-mime-types"/>
-      </field>
-      <field name="file_size" type="int" required="true">
+      <field name="mime_type" type="string" pattern="^[-\w]+/[-\w\+\.]+$" required="true"/>
+      <field name="file_size" type="big-int">
         <description>
-          The file size of the uploaded asset in bytes.  Using an int type, there's a max size of ~4095 MB.
+          The file size of the uploaded asset in bytes.
         </description>
       </field>
-      <field name="asset_etag" type="string" required="true">
+      <field name="asset_etag" type="string" pattern="^[\w\.:-]+$" max="100">
         <description>
           An etag created from the contents of the uploaded asset.  The asset etag is different from the
           node's etag because the node tracks metadata, which can be updated without the asset being

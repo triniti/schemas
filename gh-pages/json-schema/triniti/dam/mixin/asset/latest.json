@@ -166,35 +166,26 @@
     },
     "mime_type": {
       "type": "string",
-      "default": "unknown",
-      "enum": [
-        "audio",
-        "document",
-        "image",
-        "text",
-        "unknown",
-        "video"
-      ],
+      "pattern": "^[-\\w]+/[-\\w\\+\\.]+$",
       "pbj": {
-        "type": "string-enum",
+        "type": "string",
         "rule": "single"
       }
     },
     "file_size": {
       "type": "integer",
       "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295,
-      "description": "The file size of the uploaded asset in bytes. Using an int type, there's a max size of ~4095 MB.",
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "description": "The file size of the uploaded asset in bytes.",
       "pbj": {
-        "type": "int",
+        "type": "big-int",
         "rule": "single"
       }
     },
     "asset_etag": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
+      "pattern": "^[\\w\\.:-]+$",
       "description": "An etag created from the contents of the uploaded asset. The asset etag is different from the node's etag because the node tracks metadata, which can be updated without the asset being changed. We should be able to determine whether the asset has changed based on the etag of the asset regardless of its metadata.",
       "pbj": {
         "type": "string",
@@ -204,9 +195,7 @@
   },
   "required": [
     "_id",
-    "mime_type",
-    "file_size",
-    "asset_etag"
+    "mime_type"
   ],
   "additionalProperties": true
 }
