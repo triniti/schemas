@@ -5,7 +5,7 @@
 
   <schema id="pbj:triniti:dam:mixin:asset:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="mime_type" type="string" pattern="^[-\w]+/[-\w\+\.]+$" required="true"/>
+      <field name="mime_type" type="string" pattern="^[-\w]+\/[-\w\+\.]+$" required="true"/>
       <field name="file_size" type="big-int">
         <description>
           The file size of the uploaded asset in bytes.

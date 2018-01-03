@@ -25,7 +25,7 @@ final class AssetV1Mixin extends AbstractMixin
         return [
             Fb::create('mime_type', T\StringType::create())
                 ->required()
-                ->pattern('^[-\w]+/[-\w\+\.]+$')
+                ->pattern('^[-\w]+\/[-\w\+\.]+$')
                 ->build(),
             /*
              * The file size of the uploaded asset in bytes.

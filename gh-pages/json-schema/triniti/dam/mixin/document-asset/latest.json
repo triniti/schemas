@@ -166,7 +166,7 @@
     },
     "mime_type": {
       "type": "string",
-      "pattern": "^[-\\w]+/[-\\w\\+\\.]+$",
+      "pattern": "^[-\\w]+\\/[-\\w\\+\\.]+$",
       "pbj": {
         "type": "string",
         "rule": "single"
