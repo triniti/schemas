@@ -28,6 +28,12 @@ final class SearchAssetsRequestV1Mixin extends AbstractMixin
                 ->withDefault(SearchAssetsSort::RELEVANCE())
                 ->className(SearchAssetsSort::class)
                 ->build(),
+            /*
+             * A set of asset types to search, such as image-asset or video-asset.
+             */
+            Fb::create('types', T\StringType::create())
+                ->asASet()
+                ->build(),
         ];
     }
 }

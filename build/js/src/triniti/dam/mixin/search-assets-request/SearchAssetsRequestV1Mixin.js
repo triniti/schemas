@@ -22,6 +22,12 @@ export default class SearchAssetsRequestV1Mixin extends Mixin {
         .withDefault(SearchAssetsSort.RELEVANCE)
         .classProto(SearchAssetsSort)
         .build(),
+      /*
+       * A set of asset types to search, such as image-asset or video-asset.
+       */
+      Fb.create('types', T.StringType.create())
+        .asASet()
+        .build(),
     ];
   }
 }

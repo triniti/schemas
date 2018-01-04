@@ -330,6 +330,23 @@
         "type": "string-enum",
         "rule": "single"
       }
+    },
+    "types": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "A set of asset types to search, such as image-asset or video-asset.",
+      "pbj": {
+        "type": "string",
+        "rule": "set"
+      }
     }
   },
   "required": [
