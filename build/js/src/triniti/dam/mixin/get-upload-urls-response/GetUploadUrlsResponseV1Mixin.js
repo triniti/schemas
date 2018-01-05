@@ -29,7 +29,7 @@ export default class GetUploadUrlsResponseV1Mixin extends Mixin {
       /*
        * A map of asset urls with the hash of the asset's url as the key and the url as the value
        */
-      Fb.create('urls', T.StringType.create())
+      Fb.create('s3_presigned_urls', T.StringType.create())
         .asAMap()
         .format(Format.URL)
         .build(),

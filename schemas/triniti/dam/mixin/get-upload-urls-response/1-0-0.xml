@@ -19,7 +19,7 @@
           <class-proto>AssetId</class-proto>
         </js-options>
       </field>
-      <field name="urls" type="string" format="url" rule="map">
+      <field name="s3_presigned_urls" type="string" format="url" rule="map">
       <description>
         A map of asset urls with the hash of the asset's url as the key and the url as the value
       </description>

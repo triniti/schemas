@@ -111,7 +111,7 @@
         "rule": "map"
       }
     },
-    "urls": {
+    "s3_presigned_urls": {
       "type": "object",
       "patternProperties": {
         "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
