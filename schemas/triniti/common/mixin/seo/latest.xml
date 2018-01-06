@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:common:mixin:seo:1-0-0" mixin="true">
+    <fields>
+      <field name="seo_title" type="string"/>
+      <field name="meta_description" type="text" max="500"/>
+      <field name="meta_keywords" type="string" rule="set"/>
+      <!--
+        fixme: add noindex option here?  robots configuration is almost never used.
+      -->
+    </fields>
+  </schema>
+</pbj-schema>

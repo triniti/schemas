@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.5
+* __Add Schemas:__
+  * `triniti:canvas:mixin:has-blocks`
+  * `triniti:canvas:mixin:quote-block`
+  * `triniti:canvas:mixin:text-block`
+  * `triniti:common:mixin:seo`
+
+
 ## v0.1.4
 * __Add Schemas:__
   * `triniti:apollo:mixin:cast-vote`
