@@ -4,9 +4,20 @@
 ## v0.1.5
 * __Add Schemas:__
   * `triniti:canvas:mixin:has-blocks`
+  * `triniti:canvas:mixin:headline-block`
   * `triniti:canvas:mixin:quote-block`
+  * `triniti:canvas:mixin:pull-quote-block`
   * `triniti:canvas:mixin:text-block`
+  * `triniti:common:mixin:custom-code`
   * `triniti:common:mixin:seo`
+  * `triniti:news:mixin:headline-fragments`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:page`
+    * Add `description` text field.
+  * `triniti:news:mixin:article`
+    * Add `description` text field.
+  * `triniti:ovp:mixin:video`
+    * Add `description` text field.
 
 
 ## v0.1.4

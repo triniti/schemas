@@ -6,7 +6,7 @@
   <schema id="pbj:triniti:common:mixin:seo:1-0-0" mixin="true">
     <fields>
       <field name="seo_title" type="string"/>
-      <field name="meta_description" type="text" max="500"/>
+      <field name="meta_description" type="text" max="5000"/>
       <field name="meta_keywords" type="string" rule="set"/>
       <!--
         fixme: add noindex option here?  robots configuration is almost never used.

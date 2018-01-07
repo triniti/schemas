@@ -3,14 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:canvas:mixin:page:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+  <schema id="pbj:triniti:canvas:mixin:pull-quote-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="description" type="text" max="5000">
-        <description>
-          A description of the page (usually a few sentences). It should typically
-          not have HTML as it is used in metadata, feeds, SERP and social.
-        </description>
-      </field>
+      <field name="text" type="text" max="5000"/>
     </fields>
 
     <php-options>
@@ -24,8 +19,7 @@
 public function getUriTemplateVars()
 {
     return [
-        '_id' => (string)$this->get('_id'),
-        'slug' => $this->get('slug'),
+        'etag' => $this->get('etag'),
     ];
 }
           ]]>
@@ -42,8 +36,7 @@ public function getUriTemplateVars()
  */
 getUriTemplateVars() {
   return {
-    _id: `${this.get('_id', '')}`,
-    slug: this.get('slug'),
+    etag: this.get('etag'),
   };
 }
           ]]>
