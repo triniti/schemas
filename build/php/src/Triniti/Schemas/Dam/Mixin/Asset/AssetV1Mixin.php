@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Triniti\Schemas\Dam\AssetId;
 
 final class AssetV1Mixin extends AbstractMixin
 {
@@ -23,6 +24,10 @@ final class AssetV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('_id', T\IdentifierType::create())
+                ->required()
+                ->className(AssetId::class)
+                ->build(),
             Fb::create('mime_type', T\StringType::create())
                 ->required()
                 ->pattern('^[-\w]+\/[-\w\+\.]+$')

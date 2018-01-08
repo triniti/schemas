@@ -1,4 +1,5 @@
 // @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-0.json#
+import AssetId from '@triniti/schemas/triniti/dam/AssetId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -17,6 +18,10 @@ export default class AssetV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('_id', T.IdentifierType.create())
+        .required()
+        .classProto(AssetId)
+        .build(),
       Fb.create('mime_type', T.StringType.create())
         .required()
         .pattern('^[-\\w]+\\/[-\\w\\+\\.]+$')
