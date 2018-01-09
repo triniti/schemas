@@ -224,35 +224,9 @@
         "archived",
         "deleted"
       ],
-      "description": "The status a node must be in to match the search request.",
       "pbj": {
         "type": "string-enum",
         "rule": "single"
-      }
-    },
-    "statuses": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "enum": [
-            "unknown",
-            "published",
-            "scheduled",
-            "pending",
-            "draft",
-            "expired",
-            "archived",
-            "deleted"
-          ]
-        }
-      ],
-      "uniqueItems": true,
-      "additionalProperties": false,
-      "description": "A set of statuses (node must match at least one) to include in the search results.",
-      "pbj": {
-        "type": "string-enum",
-        "rule": "set"
       }
     },
     "created_after": {
