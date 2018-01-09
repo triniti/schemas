@@ -8,11 +8,33 @@
   -->
   <schema id="pbj:triniti:ovp:mixin:video:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
+      <field name="duration" type="small-int">
+        <description>Duration of the video in seconds.</description>
+      </field>
+      <field name="is_private" type="boolean"/>
+      <field name="has_music" type="trinary"/>
+      <field name="allow_comments" type="boolean"/>
       <field name="description" type="text" max="5000">
         <description>
           A description of the video (usually a few sentences). It should typically
           not have HTML as it is used in metadata, feeds, SERP and social.
         </description>
+      </field>
+      <field name="swipe" type="string">
+        <description>
+          A swipe (aka banner/label/overlay) is a short string used in a visual treatment
+          on the video. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
+        </description>
+      </field>
+      <field name="related_videos" type="identifier" rule="list">
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
       </field>
     </fields>
 

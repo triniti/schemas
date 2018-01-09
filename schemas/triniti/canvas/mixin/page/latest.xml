@@ -11,6 +11,12 @@
           not have HTML as it is used in metadata, feeds, SERP and social.
         </description>
       </field>
+      <field name="amp_enabled" type="boolean">
+        <description>
+          Determines if AMP (Accelerated Mobile Pages) should be enabled for this page.
+        </description>
+        <default>true</default>
+      </field>
     </fields>
 
     <php-options>

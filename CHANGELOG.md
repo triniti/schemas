@@ -14,10 +14,28 @@
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:page`
     * Add `description` text field.
+    * Add `amp_enabled` boolean field.
+  * `triniti:canvas:mixin:search-pages-request`
+    * Add `is_unlisted` trinary field.
   * `triniti:news:mixin:article`
+    * Add `is_homepage_news` boolean field.
+    * Add `allow_comments` boolean field.
     * Add `description` text field.
+    * Add `swipe` string field.
+    * Add `amp_enabled` boolean field.
+    * Add `related_articles` identifier (NodeRef) list field.
+  * `triniti:news:mixin:search-articles-request`
+    * Add `is_unlisted` trinary field.
+  * `triniti:ovp:mixin:search-videos-request`
+    * Add `is_unlisted` trinary field.
   * `triniti:ovp:mixin:video`
+    * Add `duration` small-int field.
+    * Add `is_private` boolean field.
+    * Add `has_music` trinary field.
+    * Add `allow_comments` boolean field.
     * Add `description` text field.
+    * Add `swipe` string field.
+    * Add `related_videos` identifier (NodeRef) list field.
 
 
 ## v0.1.4

@@ -163,6 +163,25 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 5000,
+      "description": "A description of the page (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "amp_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Determines if AMP (Accelerated Mobile Pages) should be enabled for this page.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
     }
   },
   "required": [

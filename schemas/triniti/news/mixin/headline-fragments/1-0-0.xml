@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:news:mixin:headline-fragments:1-0-0" mixin="true">
+    <fields>
+      <field name="hf" type="string" rule="list">
+        <description>
+          The "hf" field is an array of strings, aka headline fragments, that
+          are written for dramatic effect. These are good for visual display
+          but don't generally read well and are not great for SEO. They're
+          basically microbroetry.
+        </description>
+      </field>
+      <field name="hf_styles" type="string" format="slug" rule="list">
+        <description>
+          This array corresponds to the "hf" field. Any visual treatments that
+          need to be applied would have a value in the same list position in
+          this field. hf and hf_styles fields should always be the same length.
+          E.g. "none", "upper", "blink", "strike".
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>
