@@ -11,9 +11,10 @@
       <field name="duration" type="small-int">
         <description>Duration of the video in seconds.</description>
       </field>
-      <field name="is_private" type="boolean"/>
       <field name="has_music" type="trinary"/>
-      <field name="allow_comments" type="boolean"/>
+      <field name="allow_comments" type="boolean">
+        <default>true</default>
+      </field>
       <field name="description" type="text" max="5000">
         <description>
           A description of the video (usually a few sentences). It should typically

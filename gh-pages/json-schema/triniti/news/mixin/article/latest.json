@@ -166,6 +166,7 @@
     },
     "is_homepage_news": {
       "type": "boolean",
+      "default": true,
       "pbj": {
         "type": "boolean",
         "rule": "single"
@@ -173,6 +174,7 @@
     },
     "allow_comments": {
       "type": "boolean",
+      "default": true,
       "pbj": {
         "type": "boolean",
         "rule": "single"

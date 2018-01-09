@@ -19,8 +19,10 @@ export default class ArticleV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('is_homepage_news', T.BooleanType.create())
+        .withDefault(true)
         .build(),
       Fb.create('allow_comments', T.BooleanType.create())
+        .withDefault(true)
         .build(),
       /*
        * A description of the article (usually a few sentences). It should typically

@@ -23,11 +23,10 @@ export default class VideoV1Mixin extends Mixin {
        */
       Fb.create('duration', T.SmallIntType.create())
         .build(),
-      Fb.create('is_private', T.BooleanType.create())
-        .build(),
       Fb.create('has_music', T.TrinaryType.create())
         .build(),
       Fb.create('allow_comments', T.BooleanType.create())
+        .withDefault(true)
         .build(),
       /*
        * A description of the video (usually a few sentences). It should typically

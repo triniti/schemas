@@ -25,8 +25,10 @@ final class ArticleV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('is_homepage_news', T\BooleanType::create())
+                ->withDefault(true)
                 ->build(),
             Fb::create('allow_comments', T\BooleanType::create())
+                ->withDefault(true)
                 ->build(),
             /*
              * A description of the article (usually a few sentences). It should typically

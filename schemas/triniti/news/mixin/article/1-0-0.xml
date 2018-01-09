@@ -5,8 +5,12 @@
 
   <schema id="pbj:triniti:news:mixin:article:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="is_homepage_news" type="boolean"/>
-      <field name="allow_comments" type="boolean"/>
+      <field name="is_homepage_news" type="boolean">
+        <default>true</default>
+      </field>
+      <field name="allow_comments" type="boolean">
+        <default>true</default>
+      </field>
       <field name="description" type="text" max="5000">
         <description>
           A description of the article (usually a few sentences). It should typically

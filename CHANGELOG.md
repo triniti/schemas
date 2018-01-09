@@ -35,7 +35,6 @@
     * Add `is_unlisted` trinary field.
   * `triniti:ovp:mixin:video`
     * Add `duration` small-int field.
-    * Add `is_private` boolean field.
     * Add `has_music` trinary field.
     * Add `allow_comments` boolean field.
     * Add `description` text field.

@@ -175,13 +175,6 @@
         "rule": "single"
       }
     },
-    "is_private": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
     "has_music": {
       "type": "integer",
       "default": 0,
@@ -194,6 +187,7 @@
     },
     "allow_comments": {
       "type": "boolean",
+      "default": true,
       "pbj": {
         "type": "boolean",
         "rule": "single"
