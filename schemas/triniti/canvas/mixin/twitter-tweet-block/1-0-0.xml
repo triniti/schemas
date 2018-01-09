@@ -11,7 +11,7 @@
     <fields>
       <field name="screen_name" type="string" pattern="^[\w\.]+$" required="true"/>
       <field name="tweet_id" type="string" pattern="^\d+$" required="true"/>
-      <field name="tweet_text" type="text"/>
+      <field name="tweet_text" type="text" max="5000"/>
       <field name="hide_media" type="boolean"/>
       <field name="hide_thread" type="boolean"/>
     </fields>

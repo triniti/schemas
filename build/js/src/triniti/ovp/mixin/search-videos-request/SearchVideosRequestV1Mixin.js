@@ -18,6 +18,9 @@ export default class SearchVideosRequestV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('is_unlisted', T.TrinaryType.create())
+        .withDefault(2)
+        .build(),
       Fb.create('sort', T.StringEnumType.create())
         .withDefault(SearchVideosSort.RELEVANCE)
         .classProto(SearchVideosSort)

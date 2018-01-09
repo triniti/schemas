@@ -6,6 +6,9 @@
   <schema id="pbj:triniti:canvas:mixin:search-pages-request:1-0-0" mixin="true"
       extends="gdbots:ncr:mixin:search-nodes-request:v1">
     <fields>
+      <field name="is_unlisted" type="trinary">
+        <default>2</default>
+      </field>
       <field name="sort" type="string-enum">
         <default>relevance</default>
         <enum id="triniti:canvas:search-pages-sort"/>
