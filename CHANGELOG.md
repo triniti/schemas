@@ -5,8 +5,8 @@
 * __Add Schemas:__
   * `triniti:canvas:mixin:has-blocks`
   * `triniti:canvas:mixin:headline-block`
-  * `triniti:canvas:mixin:quote-block`
   * `triniti:canvas:mixin:pull-quote-block`
+  * `triniti:canvas:mixin:quote-block`
   * `triniti:canvas:mixin:text-block`
   * `triniti:common:mixin:custom-code`
   * `triniti:common:mixin:seo`
