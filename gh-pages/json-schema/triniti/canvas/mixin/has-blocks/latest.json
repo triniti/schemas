@@ -1,0 +1,31 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/has-blocks/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "blocks": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/block"
+        }
+      ],
+      "additionalProperties": false,
+      "pbj": {
+        "type": "message",
+        "rule": "list"
+      }
+    }
+  },
+  "definitions": {
+    "block": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/block/1-0-0.json#"
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

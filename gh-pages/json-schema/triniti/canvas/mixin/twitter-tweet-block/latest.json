@@ -39,7 +39,7 @@
     "tweet_text": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 65535,
+      "maxLength": 5000,
       "pbj": {
         "type": "text",
         "rule": "single"

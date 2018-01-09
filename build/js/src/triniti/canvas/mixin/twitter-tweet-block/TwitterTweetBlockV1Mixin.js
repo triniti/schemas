@@ -26,6 +26,7 @@ export default class TwitterTweetBlockV1Mixin extends Mixin {
         .pattern('^\\d+$')
         .build(),
       Fb.create('tweet_text', T.TextType.create())
+        .maxLength(5000)
         .build(),
       Fb.create('hide_media', T.BooleanType.create())
         .build(),

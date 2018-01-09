@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:common:mixin:custom-code:1-0-0" mixin="true">
+    <fields>
+      <field name="custom_code" type="text" rule="map">
+        <description>
+          A map containing (HTML, JavaScript, CSS, etc.) that is injected into
+          an application at a named insertion point, e.g. "html_head" or "footer".
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>
