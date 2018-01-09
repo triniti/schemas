@@ -11,6 +11,10 @@
   * `triniti:common:mixin:custom-code`
   * `triniti:common:mixin:seo`
   * `triniti:news:mixin:headline-fragments`
+  * `triniti:news:mixin:article-locked`
+  * `triniti:news:mixin:article-unlocked`
+  * `triniti:news:mixin:lock-article`
+  * `triniti:news:mixin:unlock-article`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:page`
     * Add `description` text field.
