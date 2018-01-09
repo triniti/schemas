@@ -47,6 +47,8 @@ final class ArticleV1Mixin extends AbstractMixin
             Fb::create('amp_enabled', T\BooleanType::create())
                 ->withDefault(true)
                 ->build(),
+            Fb::create('related_articles_heading', T\StringType::create())
+                ->build(),
             Fb::create('related_articles', T\IdentifierType::create())
                 ->asAList()
                 ->className(NodeRef::class)

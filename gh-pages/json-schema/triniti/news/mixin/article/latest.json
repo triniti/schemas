@@ -207,6 +207,15 @@
         "rule": "single"
       }
     },
+    "related_articles_heading": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "related_articles": {
       "type": "array",
       "items": [

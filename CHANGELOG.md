@@ -23,6 +23,7 @@
     * Add `description` text field.
     * Add `swipe` string field.
     * Add `amp_enabled` boolean field.
+    * Add `related_articles_heading` string field.
     * Add `related_articles` identifier (NodeRef) list field.
   * `triniti:news:mixin:search-articles-request`
     * Add `is_unlisted` trinary field.

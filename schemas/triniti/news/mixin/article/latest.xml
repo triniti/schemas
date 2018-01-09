@@ -25,6 +25,7 @@
         </description>
         <default>true</default>
       </field>
+      <field name="related_articles_heading" type="string"/>
       <field name="related_articles" type="identifier" rule="list">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
