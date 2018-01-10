@@ -1,10 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.6
+* Add missing namespace `triniti:common` to `pbjc.yml` and recompile.
+
+
 ## v0.1.5
 * __Add Schemas:__
   * `triniti:canvas:mixin:has-blocks`
-  * `triniti:canvas:mixin:headline-block`
+  * `triniti:canvas:mixin:heading-block`
   * `triniti:canvas:mixin:pull-quote-block`
   * `triniti:canvas:mixin:quote-block`
   * `triniti:canvas:mixin:text-block`
