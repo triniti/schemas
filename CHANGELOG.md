@@ -10,6 +10,29 @@
   * `triniti:canvas:mixin:text-block`
   * `triniti:common:mixin:custom-code`
   * `triniti:common:mixin:seo`
+  * `triniti:dam:mixin:asset`
+  * `triniti:dam:mixin:asset-created`
+  * `triniti:dam:mixin:asset-deleted`
+  * `triniti:dam:mixin:asset-expired`
+  * `triniti:dam:mixin:asset-updated`
+  * `triniti:dam:mixin:audio-asset`
+  * `triniti:dam:mixin:create-asset`
+  * `triniti:dam:mixin:delete-asset`
+  * `triniti:dam:mixin:document-asset`
+  * `triniti:dam:mixin:expire-asset`
+  * `triniti:dam:mixin:get-asset-batch-request`
+  * `triniti:dam:mixin:get-asset-batch-response`
+  * `triniti:dam:mixin:get-asset-history-request`
+  * `triniti:dam:mixin:get-asset-history-response`
+  * `triniti:dam:mixin:get-asset-request`
+  * `triniti:dam:mixin:get-asset-response`
+  * `triniti:dam:mixin:get-upload-urls-request`
+  * `triniti:dam:mixin:get-upload-urls-response`
+  * `triniti:dam:mixin:image-asset`
+  * `triniti:dam:mixin:search-assets-request`
+  * `triniti:dam:mixin:search-assets-response`
+  * `triniti:dam:mixin:update-asset`
+  * `triniti:dam:mixin:video-asset`
   * `triniti:news:mixin:headline-fragments`
   * `triniti:news:mixin:article-locked`
   * `triniti:news:mixin:article-unlocked`

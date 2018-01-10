@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:dam:mixin:get-upload-urls-response:1-0-0" mixin="true"
+      extends="gdbots:pbjx:mixin:response:v1">
+    <fields>
+      <field name="asset_ids" type="identifier" rule="map">
+        <description>
+          A map of asset ids with an md5 hash of the client file name as the
+          key and the generated asset id as the value.
+        </description>
+        <php-options>
+          <imports>use Triniti\Schemas\Dam\AssetId;</imports>
+          <class-name>AssetId::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId';</imports>
+          <class-proto>AssetId</class-proto>
+        </js-options>
+      </field>
+      <field name="s3_presigned_urls" type="string" format="url" rule="map">
+        <description>
+          A map of URLs with an md5 hash of the client file name as the key
+          and the S3 presigned URL as the value.
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

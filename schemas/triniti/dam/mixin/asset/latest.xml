@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:dam:mixin:asset:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+    <fields>
+      <field name="_id" type="identifier" required="true">
+        <php-options>
+          <imports>use Triniti\Schemas\Dam\AssetId;</imports>
+          <class-name>AssetId::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId';</imports>
+          <class-proto>AssetId</class-proto>
+        </js-options>
+      </field>
+      <field name="mime_type" type="string" pattern="^[\w-]+\/[\w\+\.-]+$" required="true"/>
+      <field name="file_size" type="big-int">
+        <description>The file size in bytes.</description>
+      </field>
+      <field name="file_etag" type="string" pattern="^[\w\.:-]+$" max="100">
+        <description>
+          An etag created from the file itself. The file etag is different from the
+          node's etag because the node tracks metadata, which can be updated without
+          the file being changed.
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>
