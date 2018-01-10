@@ -9,7 +9,7 @@ import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier';
 export const VALID_PATTERN = /^([a-z0-9]{1,12})_([a-z0-9]{1,10})_([0-9]{8})_([a-f0-9]{32})$/;
 
 /**
- * A asset id is a composite id that contains enough data to easily
+ * An asset id is a composite id that contains enough data to easily
  * generate asset paths, urls and distribute assets in storage.
  *
  * AssetId Format:
@@ -124,7 +124,7 @@ export default class AssetId extends Identifier {
    * video, etc. and the quality would clarify it further.
    *
    * For example, for the asset id 'image_jpg_20151201_27ca03c7b490460992a78692aca42b10'
-   *  assetId.toAssetPath('250x', 'n')
+   *  assetId.toFilePath('250x', 'n')
    * would return:
    *  'image/27/250x/2015/12/01/27ca03c7b490460992a78692aca42b10_n.jpg'
    *

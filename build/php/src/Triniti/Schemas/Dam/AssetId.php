@@ -9,7 +9,7 @@ use Gdbots\Pbj\WellKnown\Identifier;
 use Gdbots\Pbj\WellKnown\UuidIdentifier;
 
 /**
- * A asset id is a composite id that contains enough data to easily
+ * An asset id is a composite id that contains enough data to easily
  * generate asset paths, urls and distribute assets in storage.
  *
  * AssetId Format:
