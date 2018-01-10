@@ -45,7 +45,7 @@ export default class AssetId extends Identifier {
 
     if (!VALID_PATTERN.test(this.value)) {
       throw new AssertionFailed(
-          `AssetId [${this.value}] is invalid. It must match the pattern [${VALID_PATTERN}].`,
+        `AssetId [${this.value}] is invalid. It must match the pattern [${VALID_PATTERN}].`,
       );
     }
 
@@ -133,7 +133,7 @@ export default class AssetId extends Identifier {
    *
    * @returns {string}
    */
-  toAssetPath(version = null, quality = null) {
+  toFilePath(version = null, quality = null) {
     const p = [this.type, this.uuid.substr(0, 2)];
 
     if (version) {

@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Dam\Mixin\SearchAssetsRequest;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -29,10 +30,12 @@ final class SearchAssetsRequestV1Mixin extends AbstractMixin
                 ->className(SearchAssetsSort::class)
                 ->build(),
             /*
-             * A set of asset types to search, such as image-asset or video-asset.
+             * A set of asset types (node must match at least one) to include in
+             * the search results, such as image-asset or video-asset.
              */
             Fb::create('types', T\StringType::create())
                 ->asASet()
+                ->format(Format::SLUG())
                 ->build(),
         ];
     }

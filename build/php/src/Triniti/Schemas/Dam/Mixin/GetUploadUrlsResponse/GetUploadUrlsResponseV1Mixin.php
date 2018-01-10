@@ -26,14 +26,16 @@ final class GetUploadUrlsResponseV1Mixin extends AbstractMixin
     {
         return [
             /*
-             * A map of asset ids with the hash of the asset's url as the key and the asset id as the value
+             * A map of asset ids with an md5 hash of the client file name as the
+             * key and the generated asset id as the value.
              */
             Fb::create('asset_ids', T\IdentifierType::create())
                 ->asAMap()
                 ->className(AssetId::class)
                 ->build(),
             /*
-             * A map of asset urls with the hash of the asset's url as the key and the url as the value
+             * A map of URLs with an md5 hash of the client file name as the key
+             * and the S3 presigned URL as the value.
              */
             Fb::create('s3_presigned_urls', T\StringType::create())
                 ->asAMap()

@@ -105,7 +105,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "A map of asset ids with the hash of the asset's url as the key and the asset id as the value",
+      "description": "A map of asset ids with an md5 hash of the client file name as the key and the generated asset id as the value.",
       "pbj": {
         "type": "identifier",
         "rule": "map"
@@ -120,7 +120,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "A map of asset urls with the hash of the asset's url as the key and the url as the value",
+      "description": "A map of URLs with an md5 hash of the client file name as the key and the S3 presigned URL as the value.",
       "pbj": {
         "type": "string",
         "rule": "map",

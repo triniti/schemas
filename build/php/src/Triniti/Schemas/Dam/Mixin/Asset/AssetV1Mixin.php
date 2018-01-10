@@ -30,20 +30,19 @@ final class AssetV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('mime_type', T\StringType::create())
                 ->required()
-                ->pattern('^[-\w]+\/[-\w\+\.]+$')
+                ->pattern('^[\w-]+\/[\w\+\.-]+$')
                 ->build(),
             /*
-             * The file size of the uploaded asset in bytes.
+             * The file size in bytes.
              */
             Fb::create('file_size', T\BigIntType::create())
                 ->build(),
             /*
-             * An etag created from the contents of the uploaded asset. The asset etag is different from the
-             * node's etag because the node tracks metadata, which can be updated without the asset being
-             * changed. We should be able to determine whether the asset has changed based on the etag
-             * of the asset regardless of its metadata.
+             * An etag created from the file itself. The file etag is different from the
+             * node's etag because the node tracks metadata, which can be updated without
+             * the file being changed.
              */
-            Fb::create('asset_etag', T\StringType::create())
+            Fb::create('file_etag', T\StringType::create())
                 ->maxLength(100)
                 ->pattern('^[\w\.:-]+$')
                 ->build(),

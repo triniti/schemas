@@ -7,7 +7,6 @@
     <enum name="search-assets-sort" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="RELEVANCE" value="relevance"/>
-      <option key="POPULARITY" value="popularity"/>
       <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
       <option key="UPDATED_AT_DESC" value="updated-at-desc"/>

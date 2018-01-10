@@ -6,7 +6,6 @@ export default class SearchAssetsSort extends Enum {
 SearchAssetsSort.configure({
   UNKNOWN: 'unknown',
   RELEVANCE: 'relevance',
-  POPULARITY: 'popularity',
   CREATED_AT_DESC: 'created-at-desc',
   CREATED_AT_ASC: 'created-at-asc',
   UPDATED_AT_DESC: 'updated-at-desc',

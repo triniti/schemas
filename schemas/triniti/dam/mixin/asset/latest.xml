@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:dam:mixin:asset:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
@@ -15,55 +15,17 @@
           <class-proto>AssetId</class-proto>
         </js-options>
       </field>
-      <field name="mime_type" type="string" pattern="^[-\w]+\/[-\w\+\.]+$" required="true"/>
+      <field name="mime_type" type="string" pattern="^[\w-]+\/[\w\+\.-]+$" required="true"/>
       <field name="file_size" type="big-int">
-        <description>
-          The file size of the uploaded asset in bytes.
-        </description>
+        <description>The file size in bytes.</description>
       </field>
-      <field name="asset_etag" type="string" pattern="^[\w\.:-]+$" max="100">
+      <field name="file_etag" type="string" pattern="^[\w\.:-]+$" max="100">
         <description>
-          An etag created from the contents of the uploaded asset. The asset etag is different from the
-          node's etag because the node tracks metadata, which can be updated without the asset being
-          changed. We should be able to determine whether the asset has changed based on the etag
-          of the asset regardless of its metadata.
+          An etag created from the file itself. The file etag is different from the
+          node's etag because the node tracks metadata, which can be updated without
+          the file being changed.
         </description>
       </field>
     </fields>
-    <php-options>
-      <insertion-points>
-        <imports/>
-        <methods>
-          <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
-{
-    return [
-        '_id' => (string)$this->get('_id')
-    ];
-}
-          ]]>
-        </methods>
-      </insertion-points>
-    </php-options>
-
-    <js-options>
-      <insertion-points>
-        <methods>
-          <![CDATA[
-/**
- * @returns {Object}
- */
-getUriTemplateVars() {
-  return {
-    _id: `${this.get('_id', '')}`
-  };
-}
-          ]]>
-        </methods>
-      </insertion-points>
-    </js-options>
   </schema>
 </pbj-schema>

@@ -10,9 +10,10 @@
         <default>relevance</default>
         <enum id="triniti:dam:search-assets-sort"/>
       </field>
-      <field name="types" type="string" rule="set">
+      <field name="types" type="string" format="slug" rule="set">
         <description>
-          A set of asset types to search, such as image-asset or video-asset.
+          A set of asset types (node must match at least one) to include in
+          the search results, such as image-asset or video-asset.
         </description>
       </field>
     </fields>

@@ -16,7 +16,9 @@ trait ImageAssetV1Trait
     public function getUriTemplateVars()
     {
         return [
-            '_id' => (string)$this->get('_id')
+            '_id' => (string)$this->get('_id'),
+            'width' => $this->get('width'),
+            'height' => $this->get('height'),
         ];
     }
 }

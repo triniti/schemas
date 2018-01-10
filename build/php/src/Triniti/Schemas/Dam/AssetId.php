@@ -31,6 +31,7 @@ final class AssetId implements Identifier
 {
     /**
      * Regular expression pattern for matching a valid AssetId string.
+     *
      * @constant string
      */
     const VALID_PATTERN = '/^([a-z0-9]{1,12})_([a-z0-9]{1,10})_([0-9]{8})_([a-f0-9]{32})$/';

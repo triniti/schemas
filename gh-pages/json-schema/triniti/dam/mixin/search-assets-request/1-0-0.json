@@ -318,7 +318,6 @@
       "enum": [
         "unknown",
         "relevance",
-        "popularity",
         "created-at-desc",
         "created-at-asc",
         "updated-at-desc",
@@ -336,16 +335,18 @@
       "items": [
         {
           "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
           "minLength": 0,
           "maxLength": 255
         }
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "A set of asset types to search, such as image-asset or video-asset.",
+      "description": "A set of asset types (node must match at least one) to include in the search results, such as image-asset or video-asset.",
       "pbj": {
         "type": "string",
-        "rule": "set"
+        "rule": "set",
+        "format": "slug"
       }
     }
   },

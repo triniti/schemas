@@ -164,7 +164,7 @@
     },
     "mime_type": {
       "type": "string",
-      "pattern": "^[-\\w]+\\/[-\\w\\+\\.]+$",
+      "pattern": "^[\\w-]+\\/[\\w\\+\\.-]+$",
       "pbj": {
         "type": "string",
         "rule": "single"
@@ -175,16 +175,16 @@
       "default": 0,
       "minimum": -2147483648,
       "maximum": 2147483647,
-      "description": "The file size of the uploaded asset in bytes.",
+      "description": "The file size in bytes.",
       "pbj": {
         "type": "big-int",
         "rule": "single"
       }
     },
-    "asset_etag": {
+    "file_etag": {
       "type": "string",
       "pattern": "^[\\w\\.:-]+$",
-      "description": "An etag created from the contents of the uploaded asset. The asset etag is different from the node's etag because the node tracks metadata, which can be updated without the asset being changed. We should be able to determine whether the asset has changed based on the etag of the asset regardless of its metadata.",
+      "description": "An etag created from the file itself. The file etag is different from the node's etag because the node tracks metadata, which can be updated without the file being changed.",
       "pbj": {
         "type": "string",
         "rule": "single"
@@ -194,10 +194,10 @@
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 16777215,
-      "description": "The image width in pixels",
+      "maximum": 65535,
+      "description": "The image width in pixels.",
       "pbj": {
-        "type": "medium-int",
+        "type": "small-int",
         "rule": "single"
       }
     },
@@ -205,10 +205,10 @@
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 16777215,
-      "description": "The image height in pixels",
+      "maximum": 65535,
+      "description": "The image height in pixels.",
       "pbj": {
-        "type": "medium-int",
+        "type": "small-int",
         "rule": "single"
       }
     }

@@ -18,14 +18,14 @@ export default class ImageAssetV1Mixin extends Mixin {
   getFields() {
     return [
       /*
-       * The image width in pixels
+       * The image width in pixels.
        */
-      Fb.create('width', T.MediumIntType.create())
+      Fb.create('width', T.SmallIntType.create())
         .build(),
       /*
-       * The image height in pixels
+       * The image height in pixels.
        */
-      Fb.create('height', T.MediumIntType.create())
+      Fb.create('height', T.SmallIntType.create())
         .build(),
     ];
   }
