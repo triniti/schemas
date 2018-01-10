@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 use Gdbots\Common\Util\ArrayUtils;
 use Gdbots\Pbj\Message;
@@ -6,9 +7,9 @@ use Gdbots\Pbj\MessageRef;
 use Gdbots\Pbj\MessageResolver;
 use PHPUnit\Framework\TestCase;
 
-class SchemaTest extends TestCase
+final class SchemaTest extends TestCase
 {
-    public function testCanCreateAllMessages()
+    public function testCanCreateAllMessages(): void
     {
         /** @var Message $className */
         foreach (MessageResolver::all() as $curie => $className) {

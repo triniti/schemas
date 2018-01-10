@@ -57,8 +57,8 @@ test('AssetId generate tests', (t) => {
   t.same(id.getDate(), date.toISOString().replace(/-/g, '').substr(0, 8));
   t.true(id.getUuid(true) instanceof UuidIdentifier);
   t.same(
-      id.toFilePath(),
-      `image/${uuid.toString().substr(0, 2)}/${date.toISOString().replace(/-/g, '/').substr(0, 10)}/${uuid}.jpg`
+    id.toFilePath(),
+    `image/${uuid.toString().substr(0, 2)}/${date.toISOString().replace(/-/g, '/').substr(0, 10)}/${uuid}.jpg`
   );
 
   t.end();

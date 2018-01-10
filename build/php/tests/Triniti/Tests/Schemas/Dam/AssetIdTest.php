@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Triniti\Tests\Schemas\Assets;
+namespace Triniti\Tests\Schemas\Dam;
 
 use Gdbots\Pbj\WellKnown\UuidIdentifier;
-use Triniti\Schemas\Dam\AssetId;
 use PHPUnit\Framework\TestCase;
+use Triniti\Schemas\Dam\AssetId;
 
-class AssetIdTest extends TestCase
+final class AssetIdTest extends TestCase
 {
-    public function testFromString()
+    public function testFromString(): void
     {
         $id = AssetId::fromString('image_jpg_20151201_cb9c3c8c5c88453b960933a59ede6505');
 
@@ -23,7 +23,7 @@ class AssetIdTest extends TestCase
         $this->assertSame('image/cb/o/2015/12/01/cb9c3c8c5c88453b960933a59ede6505.jpg', $id->toFilePath('o'));
     }
 
-    public function testCreate()
+    public function testCreate(): void
     {
         $id = AssetId::create('image', 'jpg', \DateTime::createFromFormat('Ymd', '20151201'), UuidIdentifier::fromString('cb9c3c8c-5c88-453b-9609-33a59ede6505'));
 
@@ -37,7 +37,7 @@ class AssetIdTest extends TestCase
         $this->assertSame('image/cb/250x/2015/12/01/cb9c3c8c5c88453b960933a59ede6505_n.jpg', $id->toFilePath('250x', 'n'));
     }
 
-    public function testGenerate()
+    public function testGenerate(): void
     {
         $date = new \DateTime();
         $id = AssetId::create('image', 'jpg');
@@ -63,7 +63,7 @@ class AssetIdTest extends TestCase
      *
      * @param string $string
      */
-    public function testInvalid($string)
+    public function testInvalid(string $string): void
     {
         AssetId::fromString($string);
     }
@@ -71,7 +71,7 @@ class AssetIdTest extends TestCase
     /**
      * @return array
      */
-    public function getInvalidIds()
+    public function getInvalidIds(): array
     {
         return [
             ['test::what'],
