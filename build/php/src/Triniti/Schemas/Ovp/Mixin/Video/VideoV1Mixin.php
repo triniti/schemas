@@ -3,10 +3,13 @@
 namespace Triniti\Schemas\Ovp\Mixin\Video;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Triniti\Schemas\Dam\AssetId;
+use Triniti\Schemas\Ovp\Enum\TvpgRating;
 
 final class VideoV1Mixin extends AbstractMixin
 {
@@ -42,6 +45,12 @@ final class VideoV1Mixin extends AbstractMixin
                 ->maxLength(5000)
                 ->build(),
             /*
+             * A credit is a short string used to publicly acknowledge the source/creator
+             * of the video. e.g. "Fox News", "CNN".
+             */
+            Fb::create('credit', T\StringType::create())
+                ->build(),
+            /*
              * A swipe (aka banner/label/overlay) is a short string used in a visual treatment
              * on the video. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
              */
@@ -50,6 +59,29 @@ final class VideoV1Mixin extends AbstractMixin
             Fb::create('related_videos', T\IdentifierType::create())
                 ->asAList()
                 ->className(NodeRef::class)
+                ->build(),
+            /*
+             * URL to the caption file keyed by the language code e.g. "en", "fr".
+             */
+            Fb::create('caption_urls', T\StringType::create())
+                ->asAMap()
+                ->format(Format::URL())
+                ->build(),
+            Fb::create('tvpg_rating', T\StringEnumType::create())
+                ->className(TvpgRating::class)
+                ->build(),
+            /*
+             * Mezzanine URL of video asset.
+             */
+            Fb::create('mezzanine_url', T\StringType::create())
+                ->format(Format::URL())
+                ->build(),
+            /*
+             * A map of asset ids with an md5 hash of the client file name as the
+             * key and the generated asset id as the value.
+             */
+            Fb::create('mezzanine_id', T\IdentifierType::create())
+                ->className(AssetId::class)
                 ->build(),
         ];
     }

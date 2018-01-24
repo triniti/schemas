@@ -7,6 +7,7 @@ namespaces:
   - triniti:dam
   - triniti:news
   - triniti:ovp
+  - triniti:ovp.kaltura
 
 languages:
   php:

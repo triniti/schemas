@@ -1,0 +1,72 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/triniti/ovp.kaltura/mixin/media-entry/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "kaltura_entry_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "kaltura_partner_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "kaltura_updated_at": {
+      "type": "integer",
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "description": "Updated at info from Kaltura",
+      "pbj": {
+        "type": "timestamp",
+        "rule": "single"
+      }
+    },
+    "kaltura_mp4_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "MP4 URL from Kaltura",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "kaltura_metadata": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "Metadata from Kaltura",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "kaltura_flavors": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "JSON with all Kaltura flavors",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "kaltura_sync_enabled": {
+      "type": "boolean",
+      "description": "Disable Kaltura sync on entry",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    }
+  },
+  "additionalProperties": true
+}

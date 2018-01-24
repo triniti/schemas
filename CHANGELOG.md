@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v0.1.7
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:ovp:mixin:video`
+    * Add `credit` string field.
+    * Add `caption_urls` string field.
+    * Add `tvpg_rating` string enum field.
+    * Add `mezzanine_url` string field.
+    * Add `mezzanine_id` identifier field.
+
+* __Add Schemas:__
+  * `triniti:ovp.kaltura:mixin:media-entry`
+
+
 ## v0.1.6
 * Add missing namespace `triniti:common` to `pbjc.yml` and recompile.
 
