@@ -31,7 +31,7 @@ export default class GetUploadUrlsResponseV1Mixin extends Mixin {
        * A map of URLs with an md5 hash of the client file name as the key
        * and the S3 presigned URL as the value.
        */
-      Fb.create('s3_presigned_urls', T.StringType.create())
+      Fb.create('s3_presigned_urls', T.TextType.create())
         .asAMap()
         .format(Format.URL)
         .build(),
