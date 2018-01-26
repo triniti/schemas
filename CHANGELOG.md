@@ -9,6 +9,8 @@
     * Add `tvpg_rating` string enum field.
     * Add `mezzanine_url` string field.
     * Add `mezzanine_id` identifier field.
+  * `triniti:dam:mixin:get-upload-urls-response`
+    * Update "s3_presigned_urls" field type from "string" to "text"
 
 * __Add Schemas:__
   * `triniti:ovp.kaltura:mixin:media-entry`
