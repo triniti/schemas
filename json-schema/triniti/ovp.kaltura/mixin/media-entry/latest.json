@@ -1,0 +1,71 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/triniti/ovp.kaltura/mixin/media-entry/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "kaltura_entry_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "kaltura_partner_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "kaltura_sync_enabled": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "kaltura_synced_at": {
+      "type": "integer",
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "description": "Timestamp when the entry was last synced with Kaltura.",
+      "pbj": {
+        "type": "timestamp",
+        "rule": "single"
+      }
+    },
+    "kaltura_mp4_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "URL to the source mp4 (generally a high-res/mezzanine file).",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "kaltura_metadata": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "An XML string containing the metadata profile(s) for the entry.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "kaltura_flavors": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "A JSON object with all of the Kaltura flavors for the entry.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    }
+  },
+  "additionalProperties": true
+}
