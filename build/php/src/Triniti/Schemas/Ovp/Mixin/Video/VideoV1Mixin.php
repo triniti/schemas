@@ -61,7 +61,7 @@ final class VideoV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             /*
-             * URL to the caption file keyed by the language code e.g. "en", "fr".
+             * URL to the caption file keyed by the language code, e.g. "en", "fr".
              */
             Fb::create('caption_urls', T\StringType::create())
                 ->asAMap()
@@ -71,14 +71,13 @@ final class VideoV1Mixin extends AbstractMixin
                 ->className(TvpgRating::class)
                 ->build(),
             /*
-             * Mezzanine URL of video asset.
+             * URL to the mezzanine video asset.
              */
             Fb::create('mezzanine_url', T\StringType::create())
                 ->format(Format::URL())
                 ->build(),
             /*
-             * A map of asset ids with an md5 hash of the client file name as the
-             * key and the generated asset id as the value.
+             * A reference to the mezzanine asset in DAM for this video.
              */
             Fb::create('mezzanine_id', T\IdentifierType::create())
                 ->className(AssetId::class)

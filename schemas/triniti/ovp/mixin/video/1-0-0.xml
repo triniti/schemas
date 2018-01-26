@@ -42,21 +42,18 @@
       </field>
       <field name="caption_urls" type="string" format="url" rule="map">
         <description>
-          URL to the caption file keyed by the language code e.g. "en", "fr".
+          URL to the caption file keyed by the language code, e.g. "en", "fr".
         </description>
       </field>
       <field name="tvpg_rating" type="string-enum">
         <enum id="triniti:ovp:tvpg-rating"/>
       </field>
       <field name="mezzanine_url" type="string" format="url">
-        <description>
-          Mezzanine URL of video asset.
-        </description>
+        <description>URL to the mezzanine video asset.</description>
       </field>
       <field name="mezzanine_id" type="identifier">
         <description>
-          A map of asset ids with an md5 hash of the client file name as the
-          key and the generated asset id as the value.
+          A reference to the mezzanine asset in DAM for this video.
         </description>
         <php-options>
           <imports>use Triniti\Schemas\Dam\AssetId;</imports>

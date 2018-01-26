@@ -246,7 +246,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "URL to the caption file keyed by the language code e.g. \"en\", \"fr\".",
+      "description": "URL to the caption file keyed by the language code, e.g. \"en\", \"fr\".",
       "pbj": {
         "type": "string",
         "rule": "map",
@@ -273,7 +273,7 @@
     "mezzanine_url": {
       "type": "string",
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "description": "Mezzanine URL of video asset.",
+      "description": "URL to the mezzanine video asset.",
       "pbj": {
         "type": "string",
         "rule": "single",
@@ -283,7 +283,7 @@
     "mezzanine_id": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A map of asset ids with an md5 hash of the client file name as the key and the generated asset id as the value.",
+      "description": "A reference to the mezzanine asset in DAM for this video.",
       "pbj": {
         "type": "identifier",
         "rule": "single"

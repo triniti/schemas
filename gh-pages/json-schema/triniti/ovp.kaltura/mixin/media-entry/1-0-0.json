@@ -19,11 +19,18 @@
         "rule": "single"
       }
     },
-    "kaltura_updated_at": {
+    "kaltura_sync_enabled": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "kaltura_synced_at": {
       "type": "integer",
       "minimum": -2147483648,
       "maximum": 2147483647,
-      "description": "Updated at info from Kaltura",
+      "description": "Timestamp when the entry was last synced with Kaltura.",
       "pbj": {
         "type": "timestamp",
         "rule": "single"
@@ -32,7 +39,7 @@
     "kaltura_mp4_url": {
       "type": "string",
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "description": "MP4 URL from Kaltura",
+      "description": "URL to the source mp4 (generally a high-res/mezzanine file).",
       "pbj": {
         "type": "string",
         "rule": "single",
@@ -43,7 +50,7 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 65535,
-      "description": "Metadata from Kaltura",
+      "description": "An XML string containing the metadata profile(s) for the entry.",
       "pbj": {
         "type": "text",
         "rule": "single"
@@ -53,17 +60,9 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 65535,
-      "description": "JSON with all Kaltura flavors",
+      "description": "A JSON object with all of the Kaltura flavors for the entry.",
       "pbj": {
         "type": "text",
-        "rule": "single"
-      }
-    },
-    "kaltura_sync_enabled": {
-      "type": "boolean",
-      "description": "Disable Kaltura sync on entry",
-      "pbj": {
-        "type": "boolean",
         "rule": "single"
       }
     }

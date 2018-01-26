@@ -30,31 +30,28 @@ final class MediaEntryV1Mixin extends AbstractMixin
             Fb::create('kaltura_partner_id', T\StringType::create())
                 ->pattern('^[\w-]+$')
                 ->build(),
-            /*
-             * Updated at info from Kaltura
-             */
-            Fb::create('kaltura_updated_at', T\TimestampType::create())
+            Fb::create('kaltura_sync_enabled', T\BooleanType::create())
                 ->build(),
             /*
-             * MP4 URL from Kaltura
+             * Timestamp when the entry was last synced with Kaltura.
+             */
+            Fb::create('kaltura_synced_at', T\TimestampType::create())
+                ->build(),
+            /*
+             * URL to the source mp4 (generally a high-res/mezzanine file).
              */
             Fb::create('kaltura_mp4_url', T\StringType::create())
                 ->format(Format::URL())
                 ->build(),
             /*
-             * Metadata from Kaltura
+             * An XML string containing the metadata profile(s) for the entry.
              */
             Fb::create('kaltura_metadata', T\TextType::create())
                 ->build(),
             /*
-             * JSON with all Kaltura flavors
+             * A JSON object with all of the Kaltura flavors for the entry.
              */
             Fb::create('kaltura_flavors', T\TextType::create())
-                ->build(),
-            /*
-             * Disable Kaltura sync on entry
-             */
-            Fb::create('kaltura_sync_enabled', T\BooleanType::create())
                 ->build(),
         ];
     }
