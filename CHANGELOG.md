@@ -2,6 +2,8 @@
 
 
 ## v0.1.7
+* __Add Schemas:__
+  * `triniti:ovp.kaltura:mixin:media-entry`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:ovp:mixin:video`
     * Add `credit` string field.
@@ -11,9 +13,6 @@
     * Add `mezzanine_id` identifier field.
   * `triniti:dam:mixin:get-upload-urls-response`
     * Update "s3_presigned_urls" field type from "string" to "text"
-
-* __Add Schemas:__
-  * `triniti:ovp.kaltura:mixin:media-entry`
 
 
 ## v0.1.6
