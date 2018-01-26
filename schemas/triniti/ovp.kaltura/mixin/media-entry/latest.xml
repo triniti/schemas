@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:ovp.kaltura:mixin:media-entry:1-0-0" mixin="true">
+    <fields>
+      <field name="kaltura_entry_id" type="string" pattern="^[\w-]+$"/>
+      <field name="kaltura_partner_id" type="string" pattern="^[\w-]+$"/>
+      <field name="kaltura_sync_enabled" type="boolean"/>
+      <field name="kaltura_synced_at" type="timestamp">
+        <description>Timestamp when the entry was last synced with Kaltura.</description>
+      </field>
+      <field name="kaltura_mp4_url" type="string" format="url">
+        <description>
+          URL to the source mp4 (generally a high-res/mezzanine file).
+        </description>
+      </field>
+      <field name="kaltura_metadata" type="text">
+        <description>
+          An XML string containing the metadata profile(s) for the entry.
+        </description>
+      </field>
+      <field name="kaltura_flavors" type="text">
+        <description>
+          A JSON object with all of the Kaltura flavors for the entry.
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

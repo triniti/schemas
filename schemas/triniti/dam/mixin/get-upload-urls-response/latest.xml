@@ -20,7 +20,7 @@
           <class-proto>AssetId</class-proto>
         </js-options>
       </field>
-      <field name="s3_presigned_urls" type="string" format="url" rule="map">
+      <field name="s3_presigned_urls" type="text" format="url" rule="map">
         <description>
           A map of URLs with an md5 hash of the client file name as the key
           and the S3 presigned URL as the value.

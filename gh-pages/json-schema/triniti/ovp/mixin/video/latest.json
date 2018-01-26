@@ -203,6 +203,16 @@
         "rule": "single"
       }
     },
+    "credit": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "A credit is a short string used to publicly acknowledge the source/creator of the video. e.g. \"Fox News\", \"CNN\".",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "swipe": {
       "type": "string",
       "minLength": 0,
@@ -225,6 +235,58 @@
       "pbj": {
         "type": "identifier",
         "rule": "list"
+      }
+    },
+    "caption_urls": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+        }
+      },
+      "additionalProperties": false,
+      "description": "URL to the caption file keyed by the language code, e.g. \"en\", \"fr\".",
+      "pbj": {
+        "type": "string",
+        "rule": "map",
+        "format": "url"
+      }
+    },
+    "tvpg_rating": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "TV-G",
+        "TV-MA",
+        "TV-PG",
+        "TV-Y",
+        "TV-Y7",
+        "TV-Y7-FV",
+        "TV-14"
+      ],
+      "pbj": {
+        "type": "string-enum",
+        "rule": "single"
+      }
+    },
+    "mezzanine_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "URL to the mezzanine video asset.",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "mezzanine_id": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the mezzanine asset in DAM for this video.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
       }
     }
   },

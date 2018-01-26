@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <!--
+    @link https://developers.google.com/maps/documentation/embed/guide#optional_parameters
+  -->
+  <schema id="pbj:triniti:canvas:mixin:google-map-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
+    <fields>
+      <field name="q" type="string"/>
+      <field name="center" type="geo-point"/>
+      <field name="zoom" type="tiny-int" max="21"/>
+      <field name="maptype" type="string" pattern="^(roadmap|satellite)$">
+        <default>roadmap</default>
+      </field>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        'etag' => $this->get('etag'),
+        'q' => $this->get('q'),
+        'center' => (string)$this->get('center'),
+        'zoom' => $this->get('zoom'),
+        'maptype' => $this->get('maptype'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    etag: this.get('etag'),
+    q: this.get('q'),
+    center: `${this.get('center', '')}`,
+    zoom: this.get('zoom'),
+    maptype: this.get('maptype'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>

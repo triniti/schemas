@@ -15,5 +15,20 @@
       <option key="TITLE_DESC" value="title-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
     </enum>
+
+    <!--
+      @link https://en.wikipedia.org/wiki/TV_parental_guidelines_(US)
+      @link https://developers.google.com/youtube/v3/docs/videos#contentDetails.contentRating.tvpgRating
+    -->
+    <enum name="tvpg-rating" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="TV_G" value="TV-G"/>
+      <option key="TV_MA" value="TV-MA"/>
+      <option key="TV_PG" value="TV-PG"/>
+      <option key="TV_Y" value="TV-Y"/>
+      <option key="TV_Y7" value="TV-Y7"/>
+      <option key="TV_Y7_FV" value="TV-Y7-FV"/>
+      <option key="TV_14" value="TV-14"/>
+    </enum>
   </enums>
 </pbj-enums>

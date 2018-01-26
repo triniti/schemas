@@ -122,7 +122,7 @@
       "additionalProperties": false,
       "description": "A map of URLs with an md5 hash of the client file name as the key and the S3 presigned URL as the value.",
       "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "map",
         "format": "url"
       }
