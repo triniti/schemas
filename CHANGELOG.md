@@ -1,6 +1,5 @@
 # CHANGELOG
 
-
 ## v0.1.7
 * __Add Schemas:__
   * `triniti:canvas:mixin:google-map-block`
@@ -13,9 +12,10 @@
     * Add `tvpg_rating` string-enum field using enum `triniti:ovp:tvpg-rating`.
     * Add `mezzanine_url` string field with format url.
     * Add `mezzanine_id` identifier (AssetId) field.
+  * `triniti:dam:mixin:asset`
+    * Add `associated_refs` set of identifiers (node_refs) field.
   * `triniti:dam:mixin:get-upload-urls-response`
     * Update `s3_presigned_urls` field type from string to text to allow for the long.
-
 
 ## v0.1.6
 * Add missing namespace `triniti:common` to `pbjc.yml` and recompile.
