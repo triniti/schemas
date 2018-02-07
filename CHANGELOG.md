@@ -14,6 +14,8 @@
     * Add `mezzanine_id` identifier (AssetId) field.
   * `triniti:dam:mixin:asset`
     * Add `associated_refs` set of identifiers (node_refs) field.
+  * `triniti:dam:mixin:search-assets-request`
+    * Add `associated_ref` identifier field.
   * `triniti:dam:mixin:get-upload-urls-response`
     * Update `s3_presigned_urls` field type from string to text to allow for the long.
 

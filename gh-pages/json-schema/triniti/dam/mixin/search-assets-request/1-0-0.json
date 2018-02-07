@@ -348,6 +348,15 @@
         "rule": "set",
         "format": "slug"
       }
+    },
+    "associated_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to an entity to search for its associated assets.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
     }
   },
   "required": [
