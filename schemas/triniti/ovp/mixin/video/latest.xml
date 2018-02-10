@@ -64,6 +64,7 @@
           <class-proto>AssetId</class-proto>
         </js-options>
       </field>
+      <field name="mpm" type="string"/>
     </fields>
 
     <php-options>

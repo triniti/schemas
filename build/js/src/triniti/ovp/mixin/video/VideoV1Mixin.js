@@ -76,6 +76,8 @@ export default class VideoV1Mixin extends Mixin {
       Fb.create('mezzanine_id', T.IdentifierType.create())
         .classProto(AssetId)
         .build(),
+      Fb.create('mpm', T.StringType.create())
+        .build(),
     ];
   }
 }

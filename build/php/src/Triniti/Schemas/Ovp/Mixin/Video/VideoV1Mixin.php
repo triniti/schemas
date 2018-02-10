@@ -82,6 +82,8 @@ final class VideoV1Mixin extends AbstractMixin
             Fb::create('mezzanine_id', T\IdentifierType::create())
                 ->className(AssetId::class)
                 ->build(),
+            Fb::create('mpm', T\StringType::create())
+                ->build(),
         ];
     }
 }

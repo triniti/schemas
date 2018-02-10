@@ -12,6 +12,7 @@
     * Add `tvpg_rating` string-enum field using enum `triniti:ovp:tvpg-rating`.
     * Add `mezzanine_url` string field with format url.
     * Add `mezzanine_id` identifier (AssetId) field.
+    * Add `mpm` string field.
   * `triniti:dam:mixin:asset`
     * Add `associated_refs` set of identifiers (node_refs) field.
   * `triniti:dam:mixin:search-assets-request`
