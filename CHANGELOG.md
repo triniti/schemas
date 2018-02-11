@@ -6,6 +6,39 @@
   * `triniti:dam:mixin:archive-asset`
   * `triniti:dam:mixin:code-asset`
   * `triniti:dam:mixin:unknown-asset`
+  * `triniti:taxonomy:mixin:categorizable`
+  * `triniti:taxonomy:mixin:category`
+  * `triniti:taxonomy:mixin:category-created`
+  * `triniti:taxonomy:mixin:category-deleted`
+  * `triniti:taxonomy:mixin:category-renamed`
+  * `triniti:taxonomy:mixin:category-updated`
+  * `triniti:taxonomy:mixin:channel`
+  * `triniti:taxonomy:mixin:channel-created`
+  * `triniti:taxonomy:mixin:channel-deleted`
+  * `triniti:taxonomy:mixin:channel-renamed`
+  * `triniti:taxonomy:mixin:channel-updated`
+  * `triniti:taxonomy:mixin:create-category`
+  * `triniti:taxonomy:mixin:create-channel`
+  * `triniti:taxonomy:mixin:delete-category`
+  * `triniti:taxonomy:mixin:delete-channel`
+  * `triniti:taxonomy:mixin:get-all-channels-request`
+  * `triniti:taxonomy:mixin:get-all-channels-response`
+  * `triniti:taxonomy:mixin:get-category-history-request`
+  * `triniti:taxonomy:mixin:get-category-history-response`
+  * `triniti:taxonomy:mixin:get-category-request`
+  * `triniti:taxonomy:mixin:get-category-response`
+  * `triniti:taxonomy:mixin:get-channel-history-request`
+  * `triniti:taxonomy:mixin:get-channel-history-response`
+  * `triniti:taxonomy:mixin:get-channel-request`
+  * `triniti:taxonomy:mixin:get-channel-response`
+  * `triniti:taxonomy:mixin:has-channel`
+  * `triniti:taxonomy:mixin:hashtaggable`
+  * `triniti:taxonomy:mixin:rename-category`
+  * `triniti:taxonomy:mixin:rename-channel`
+  * `triniti:taxonomy:mixin:search-categories-request`
+  * `triniti:taxonomy:mixin:search-categories-response`
+  * `triniti:taxonomy:mixin:update-category`
+  * `triniti:taxonomy:mixin:update-channel`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:apollo:mixin:poll`
     * Add `image_ref` identifier (NodeRef) field.
@@ -24,6 +57,17 @@
     * Add `mpm` string field.
     * Add `image_ref` identifier (NodeRef) field.
     * Add `poster_image_ref` identifier (NodeRef) field.
+* __Remove Schemas:__ _(not used and probably won't be needed due to lazy loading and derefs)_
+  * `triniti:apollo:mixin:get-poll-batch-request`
+  * `triniti:apollo:mixin:get-poll-batch-response`
+  * `triniti:canvas:mixin:get-page-batch-request`
+  * `triniti:canvas:mixin:get-page-batch-response`
+  * `triniti:dam:mixin:get-asset-batch-request`
+  * `triniti:dam:mixin:get-asset-batch-response`
+  * `triniti:news:mixin:get-article-batch-request`
+  * `triniti:news:mixin:get-article-batch-response`
+  * `triniti:ovp:mixin:get-video-batch-request`
+  * `triniti:ovp:mixin:get-video-batch-response`
 
 
 ## v0.1.7
