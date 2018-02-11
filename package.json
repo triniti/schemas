@@ -19,7 +19,7 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^1.4.3"
+    "@gdbots/schemas": "^1.4.4"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
@@ -39,15 +39,15 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
-    "eslint": "^4.16.0",
+    "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.6.0",
+    "eslint-plugin-react": "^7.6.1",
     "faucet": "^0.0.1",
-    "lodash": "^4.17.4",
-    "lodash-es": "^4.17.4",
+    "lodash": "^4.17.5",
+    "lodash-es": "^4.17.5",
     "md5": "^2.2.1",
     "moment": "^2.20.1",
     "rimraf": "^2.6.2",

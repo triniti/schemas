@@ -33,7 +33,7 @@ export default class SearchAssetsRequestV1Mixin extends Mixin {
         .format(Format.SLUG)
         .build(),
       /*
-       * A reference to an entity to search for its associated assets.
+       * A node ref that an asset must be associated with to match the search request.
        */
       Fb.create('associated_ref', T.IdentifierType.create())
         .classProto(NodeRef)

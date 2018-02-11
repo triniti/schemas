@@ -200,7 +200,7 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "A set of noderefs that identify entities which have been associated with this asset.",
+      "description": "A set of node refs which have been associated with this asset.",
       "pbj": {
         "type": "identifier",
         "rule": "set"

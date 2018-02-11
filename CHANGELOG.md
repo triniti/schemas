@@ -1,5 +1,31 @@
 # CHANGELOG
 
+
+## v0.1.8
+* __Add Schemas:__
+  * `triniti:dam:mixin:archive-asset`
+  * `triniti:dam:mixin:code-asset`
+  * `triniti:dam:mixin:unknown-asset`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:apollo:mixin:poll`
+    * Add `image_ref` identifier (NodeRef) field.
+  * `triniti:canvas:mixin:page`
+    * Add `image_ref` identifier (NodeRef) field.
+  * `triniti:common:mixin:seo`
+    * Add `seo_image_ref` identifier (NodeRef) field.
+  * `triniti:dam:mixin:asset`
+    * Add `associated_refs` identifier (NodeRef) set field. 
+  * `triniti:dam:mixin:search-assets-request`
+    * Add `associated_ref` identifier (NodeRef) field.
+  * `triniti:news:mixin:article`
+    * Add `image_ref` identifier (NodeRef) field.
+  * `triniti:ovp:mixin:video`
+    * Rename `mezzanine_id` field to `mezzanine_ref` and use NodeRef instead of AssetId.
+    * Add `mpm` string field.
+    * Add `image_ref` identifier (NodeRef) field.
+    * Add `poster_image_ref` identifier (NodeRef) field.
+
+
 ## v0.1.7
 * __Add Schemas:__
   * `triniti:canvas:mixin:google-map-block`
@@ -12,13 +38,9 @@
     * Add `tvpg_rating` string-enum field using enum `triniti:ovp:tvpg-rating`.
     * Add `mezzanine_url` string field with format url.
     * Add `mezzanine_id` identifier (AssetId) field.
-    * Add `mpm` string field.
-  * `triniti:dam:mixin:asset`
-    * Add `associated_refs` set of identifiers (node_refs) field.
-  * `triniti:dam:mixin:search-assets-request`
-    * Add `associated_ref` identifier field.
   * `triniti:dam:mixin:get-upload-urls-response`
     * Update `s3_presigned_urls` field type from string to text to allow for the long.
+
 
 ## v0.1.6
 * Add missing namespace `triniti:common` to `pbjc.yml` and recompile.

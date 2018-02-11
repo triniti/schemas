@@ -323,6 +323,10 @@
         "created-at-asc",
         "updated-at-desc",
         "updated-at-asc",
+        "published-at-desc",
+        "published-at-asc",
+        "order-date-desc",
+        "order-date-asc",
         "title-desc",
         "title-asc"
       ],

@@ -352,7 +352,7 @@
     "associated_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to an entity to search for its associated assets.",
+      "description": "A node ref that an asset must be associated with to match the search request.",
       "pbj": {
         "type": "identifier",
         "rule": "single"

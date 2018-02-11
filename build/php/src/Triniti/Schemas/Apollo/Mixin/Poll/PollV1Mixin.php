@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Apollo\Mixin\PollAnswer\PollAnswer as TrinitiApolloPollAnswer;
 
 final class PollV1Mixin extends AbstractMixin
@@ -24,6 +25,12 @@ final class PollV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            /*
+             * A reference to the image asset to use for widgets, sharing, seo.
+             */
+            Fb::create('image_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
             Fb::create('allow_multiple_responses', T\BooleanType::create())
                 ->build(),
             Fb::create('answers', T\MessageType::create())

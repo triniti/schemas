@@ -8,7 +8,7 @@
       <field name="kaltura_entry_id" type="string" pattern="^[\w-]+$"/>
       <field name="kaltura_partner_id" type="string" pattern="^[\w-]+$"/>
       <field name="kaltura_sync_enabled" type="boolean"/>
-      <field name="kaltura_synced_at" type="timestamp">
+      <field name="kaltura_synced_at" type="timestamp" use-type-default="false">
         <description>Timestamp when the entry was last synced with Kaltura.</description>
       </field>
       <field name="kaltura_mp4_url" type="string" format="url">

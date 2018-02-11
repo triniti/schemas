@@ -1,5 +1,4 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-0.json#
-import AssetId from '@triniti/schemas/triniti/dam/AssetId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -21,6 +20,18 @@ export default class VideoV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      /*
+       * A reference to the image asset to use for widgets, sharing, seo.
+       */
+      Fb.create('image_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      /*
+       * A reference to the image asset to use as the poster.
+       */
+      Fb.create('poster_image_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
       /*
        * Duration of the video in seconds.
        */
@@ -73,10 +84,15 @@ export default class VideoV1Mixin extends Mixin {
       /*
        * A reference to the mezzanine asset in DAM for this video.
        */
-      Fb.create('mezzanine_id', T.IdentifierType.create())
-        .classProto(AssetId)
+      Fb.create('mezzanine_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
         .build(),
+      /*
+       * A tracking code for video clips that is used to correlate
+       * various metrics with payouts to talent in the clip.
+       */
       Fb.create('mpm', T.StringType.create())
+        .pattern('^[\\w\\.-]+$')
         .build(),
     ];
   }

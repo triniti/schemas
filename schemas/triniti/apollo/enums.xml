@@ -12,6 +12,10 @@
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
       <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
+      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
+      <option key="PUBLISHED_AT_ASC" value="published-at-asc"/>
+      <option key="ORDER_DATE_DESC" value="order-date-desc"/>
+      <option key="ORDER_DATE_ASC" value="order-date-asc"/>
       <option key="TITLE_DESC" value="title-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
     </enum>

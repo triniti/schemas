@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 
 final class PageV1Mixin extends AbstractMixin
 {
@@ -23,6 +24,12 @@ final class PageV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            /*
+             * A reference to the image asset to use for widgets, sharing, seo.
+             */
+            Fb::create('image_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
             /*
              * A description of the page (usually a few sentences). It should typically
              * not have HTML as it is used in metadata, feeds, SERP and social.

@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 
 final class SeoV1Mixin extends AbstractMixin
 {
@@ -24,6 +25,13 @@ final class SeoV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('seo_title', T\StringType::create())
+                ->build(),
+            /*
+             * A reference to the image asset to use for SEO instead of
+             * the usual image_ref.
+             */
+            Fb::create('seo_image_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
                 ->build(),
             Fb::create('meta_description', T\TextType::create())
                 ->maxLength(5000)

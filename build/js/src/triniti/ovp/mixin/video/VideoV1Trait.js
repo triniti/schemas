@@ -7,6 +7,7 @@ export default function VideoV1Trait(m) {
       return {
         _id: `${this.get('_id', '')}`,
         slug: this.get('slug'),
+        mpm: this.get('mpm'),
       };
     }
   });

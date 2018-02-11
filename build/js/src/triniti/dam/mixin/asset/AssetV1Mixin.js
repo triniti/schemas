@@ -42,8 +42,7 @@ export default class AssetV1Mixin extends Mixin {
         .pattern('^[\\w\\.:-]+$')
         .build(),
       /*
-       * A set of noderefs that identify entities which have been associated with
-       * this asset.
+       * A set of node refs which have been associated with this asset.
        */
       Fb.create('associated_refs', T.IdentifierType.create())
         .asASet()

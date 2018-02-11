@@ -18,7 +18,7 @@
       </field>
       <field name="associated_ref" type="identifier">
         <description>
-          A reference to an entity to search for its associated assets.
+          A node ref that an asset must be associated with to match the search request.
         </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>

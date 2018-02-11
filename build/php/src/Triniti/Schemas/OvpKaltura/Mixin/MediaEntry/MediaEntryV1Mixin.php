@@ -36,6 +36,7 @@ final class MediaEntryV1Mixin extends AbstractMixin
              * Timestamp when the entry was last synced with Kaltura.
              */
             Fb::create('kaltura_synced_at', T\TimestampType::create())
+                ->useTypeDefault(false)
                 ->build(),
             /*
              * URL to the source mp4 (generally a high-res/mezzanine file).
