@@ -348,6 +348,15 @@
         "rule": "set",
         "format": "slug"
       }
+    },
+    "associated_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A node ref that an asset must be associated with to match the search request.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
     }
   },
   "required": [

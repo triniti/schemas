@@ -33,7 +33,8 @@
       "description": "Timestamp when the entry was last synced with Kaltura.",
       "pbj": {
         "type": "timestamp",
-        "rule": "single"
+        "rule": "single",
+        "useTypeDefault": false
       }
     },
     "kaltura_mp4_url": {

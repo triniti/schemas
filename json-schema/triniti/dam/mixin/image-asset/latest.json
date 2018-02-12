@@ -190,6 +190,22 @@
         "rule": "single"
       }
     },
+    "associated_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "A set of node refs which have been associated with this asset.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "set"
+      }
+    },
     "width": {
       "type": "integer",
       "default": 0,
