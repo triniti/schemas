@@ -8,7 +8,6 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
-use Triniti\Schemas\Dam\AssetId;
 use Triniti\Schemas\Ovp\Enum\TvpgRating;
 
 final class VideoV1Mixin extends AbstractMixin
@@ -27,6 +26,18 @@ final class VideoV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            /*
+             * A reference to the image asset to use for widgets, sharing, seo.
+             */
+            Fb::create('image_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+            /*
+             * A reference to the image asset to use as the poster.
+             */
+            Fb::create('poster_image_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
             /*
              * Duration of the video in seconds.
              */
@@ -79,8 +90,15 @@ final class VideoV1Mixin extends AbstractMixin
             /*
              * A reference to the mezzanine asset in DAM for this video.
              */
-            Fb::create('mezzanine_id', T\IdentifierType::create())
-                ->className(AssetId::class)
+            Fb::create('mezzanine_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+            /*
+             * A tracking code for video clips that is used to correlate
+             * various metrics with payouts to talent in the clip.
+             */
+            Fb::create('mpm', T\StringType::create())
+                ->pattern('^[\w\.-]+$')
                 ->build(),
         ];
     }

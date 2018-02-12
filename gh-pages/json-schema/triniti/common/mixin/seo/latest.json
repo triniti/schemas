@@ -12,6 +12,15 @@
         "rule": "single"
       }
     },
+    "seo_image_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the image asset to use for SEO instead of the usual image_ref.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "meta_description": {
       "type": "string",
       "minLength": 0,

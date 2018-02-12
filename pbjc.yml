@@ -8,6 +8,8 @@ namespaces:
   - triniti:news
   - triniti:ovp
   - triniti:ovp.kaltura
+  - triniti:people
+  - triniti:taxonomy
 
 languages:
   php:

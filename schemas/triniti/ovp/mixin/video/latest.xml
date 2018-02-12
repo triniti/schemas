@@ -5,6 +5,30 @@
 
   <schema id="pbj:triniti:ovp:mixin:video:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
+      <field name="image_ref" type="identifier">
+        <description>
+          A reference to the image asset to use for widgets, sharing, seo.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="poster_image_ref" type="identifier">
+        <description>A reference to the image asset to use as the poster.</description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
       <field name="duration" type="small-int">
         <description>Duration of the video in seconds.</description>
       </field>
@@ -51,18 +75,24 @@
       <field name="mezzanine_url" type="string" format="url">
         <description>URL to the mezzanine video asset.</description>
       </field>
-      <field name="mezzanine_id" type="identifier">
+      <field name="mezzanine_ref" type="identifier">
         <description>
           A reference to the mezzanine asset in DAM for this video.
         </description>
         <php-options>
-          <imports>use Triniti\Schemas\Dam\AssetId;</imports>
-          <class-name>AssetId::class</class-name>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
         </php-options>
         <js-options>
-          <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId';</imports>
-          <class-proto>AssetId</class-proto>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
         </js-options>
+      </field>
+      <field name="mpm" type="string" pattern="^[\w\.-]+$">
+        <description>
+          A tracking code for video clips that is used to correlate
+          various metrics with payouts to talent in the clip.
+        </description>
       </field>
     </fields>
 
@@ -79,6 +109,7 @@ public function getUriTemplateVars()
     return [
         '_id' => (string)$this->get('_id'),
         'slug' => $this->get('slug'),
+        'mpm' => $this->get('mpm'),
     ];
 }
           ]]>
@@ -97,6 +128,7 @@ getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
     slug: this.get('slug'),
+    mpm: this.get('mpm'),
   };
 }
           ]]>

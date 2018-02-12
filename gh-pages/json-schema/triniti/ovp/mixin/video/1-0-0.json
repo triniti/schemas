@@ -164,6 +164,24 @@
         "rule": "single"
       }
     },
+    "image_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the image asset to use for widgets, sharing, seo.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "poster_image_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the image asset to use as the poster.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "duration": {
       "type": "integer",
       "default": 0,
@@ -280,12 +298,21 @@
         "format": "url"
       }
     },
-    "mezzanine_id": {
+    "mezzanine_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
       "description": "A reference to the mezzanine asset in DAM for this video.",
       "pbj": {
         "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "mpm": {
+      "type": "string",
+      "pattern": "^[\\w\\.-]+$",
+      "description": "A tracking code for video clips that is used to correlate various metrics with payouts to talent in the clip.",
+      "pbj": {
+        "type": "string",
         "rule": "single"
       }
     }

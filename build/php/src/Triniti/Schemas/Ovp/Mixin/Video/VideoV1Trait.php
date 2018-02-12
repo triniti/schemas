@@ -18,6 +18,7 @@ trait VideoV1Trait
         return [
             '_id' => (string)$this->get('_id'),
             'slug' => $this->get('slug'),
+            'mpm' => $this->get('mpm'),
         ];
     }
 }

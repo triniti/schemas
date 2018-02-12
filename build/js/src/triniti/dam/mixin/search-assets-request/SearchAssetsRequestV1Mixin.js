@@ -2,6 +2,7 @@
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
+import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import SearchAssetsSort from '@triniti/schemas/triniti/dam/enums/SearchAssetsSort';
 import T from '@gdbots/pbj/types';
@@ -30,6 +31,12 @@ export default class SearchAssetsRequestV1Mixin extends Mixin {
       Fb.create('types', T.StringType.create())
         .asASet()
         .format(Format.SLUG)
+        .build(),
+      /*
+       * A node ref that an asset must be associated with to match the search request.
+       */
+      Fb.create('associated_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
         .build(),
     ];
   }

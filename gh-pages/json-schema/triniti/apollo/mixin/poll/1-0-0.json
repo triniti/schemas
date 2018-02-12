@@ -164,6 +164,15 @@
         "rule": "single"
       }
     },
+    "image_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the image asset to use for widgets, sharing, seo.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "allow_multiple_responses": {
       "type": "boolean",
       "pbj": {

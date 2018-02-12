@@ -7,6 +7,7 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Dam\Enum\SearchAssetsSort;
 
 final class SearchAssetsRequestV1Mixin extends AbstractMixin
@@ -36,6 +37,12 @@ final class SearchAssetsRequestV1Mixin extends AbstractMixin
             Fb::create('types', T\StringType::create())
                 ->asASet()
                 ->format(Format::SLUG())
+                ->build(),
+            /*
+             * A node ref that an asset must be associated with to match the search request.
+             */
+            Fb::create('associated_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
                 ->build(),
         ];
     }

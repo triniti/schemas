@@ -16,6 +16,19 @@
           the search results, such as image-asset or video-asset.
         </description>
       </field>
+      <field name="associated_ref" type="identifier">
+        <description>
+          A node ref that an asset must be associated with to match the search request.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

@@ -26,6 +26,19 @@
           the file being changed.
         </description>
       </field>
+      <field name="associated_refs" type="identifier" rule="set">
+        <description>
+          A set of node refs which have been associated with this asset.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

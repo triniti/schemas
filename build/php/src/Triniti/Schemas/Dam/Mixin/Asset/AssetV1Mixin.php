@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Dam\AssetId;
 
 final class AssetV1Mixin extends AbstractMixin
@@ -45,6 +46,13 @@ final class AssetV1Mixin extends AbstractMixin
             Fb::create('file_etag', T\StringType::create())
                 ->maxLength(100)
                 ->pattern('^[\w\.:-]+$')
+                ->build(),
+            /*
+             * A set of node refs which have been associated with this asset.
+             */
+            Fb::create('associated_refs', T\IdentifierType::create())
+                ->asASet()
+                ->className(NodeRef::class)
                 ->build(),
         ];
     }

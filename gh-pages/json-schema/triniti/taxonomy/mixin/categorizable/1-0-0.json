@@ -1,0 +1,23 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/triniti/taxonomy/mixin/categorizable/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "category_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "pbj": {
+        "type": "identifier",
+        "rule": "set"
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -25,6 +25,12 @@ export default class ArticleV1Mixin extends Mixin {
         .withDefault(true)
         .build(),
       /*
+       * A reference to the image asset to use for widgets, sharing, seo.
+       */
+      Fb.create('image_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      /*
        * A description of the article (usually a few sentences). It should typically
        * not have HTML as it is used in metadata, feeds, SERP and social.
        */
