@@ -6,6 +6,21 @@
   * `triniti:dam:mixin:archive-asset`
   * `triniti:dam:mixin:code-asset`
   * `triniti:dam:mixin:unknown-asset`
+  * `triniti:people:mixin:create-person`
+  * `triniti:people:mixin:delete-person`
+  * `triniti:people:mixin:get-person-history-request`
+  * `triniti:people:mixin:get-person-history-response`
+  * `triniti:people:mixin:get-person-request`
+  * `triniti:people:mixin:get-person-response`
+  * `triniti:people:mixin:person`
+  * `triniti:people:mixin:person-created`
+  * `triniti:people:mixin:person-deleted`
+  * `triniti:people:mixin:person-renamed`
+  * `triniti:people:mixin:person-updated`
+  * `triniti:people:mixin:rename-person`
+  * `triniti:people:mixin:search-people-request`
+  * `triniti:people:mixin:search-people-response`
+  * `triniti:people:mixin:update-person`
   * `triniti:taxonomy:mixin:categorizable`
   * `triniti:taxonomy:mixin:category`
   * `triniti:taxonomy:mixin:category-created`
