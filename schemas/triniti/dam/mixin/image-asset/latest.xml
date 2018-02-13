@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:dam:mixin:image-asset:1-0-0" mixin="true" extends="pbj:triniti:dam:mixin:asset:1-0-0">
+  <schema id="pbj:triniti:dam:mixin:image-asset:1-0-0" mixin="true" extends="triniti:dam:mixin:asset:v1">
     <fields>
       <field name="width" type="small-int">
         <description>The image width in pixels.</description>

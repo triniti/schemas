@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.1.9
+* Fix invalid schema definition on the dam schemas where `extends="pbj:triniti:dam:mixin:asset:1-0-0"` should be `extends="triniti:dam:mixin:asset:v1"`. 
+
+
 ## v0.1.8
 * __Add Schemas:__
   * `triniti:dam:mixin:archive-asset`
