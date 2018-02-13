@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.10
+* __Add Schemas:__
+  * `triniti:people:mixin:has-people`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:ovp:mixin:video`
+    * Add `max="50"` to `mpm` string field.
+
+
 ## v0.1.9
 * Fix invalid schema definition on the dam schemas where `extends="pbj:triniti:dam:mixin:asset:1-0-0"` should be `extends="triniti:dam:mixin:asset:v1"`. 
 

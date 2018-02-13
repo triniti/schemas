@@ -88,7 +88,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="mpm" type="string" pattern="^[\w\.-]+$">
+      <field name="mpm" type="string" pattern="^[\w\.-]+$" max="50">
         <description>
           A tracking code for video clips that is used to correlate
           various metrics with payouts to talent in the clip.
