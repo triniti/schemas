@@ -98,6 +98,7 @@ final class VideoV1Mixin extends AbstractMixin
              * various metrics with payouts to talent in the clip.
              */
             Fb::create('mpm', T\StringType::create())
+                ->maxLength(50)
                 ->pattern('^[\w\.-]+$')
                 ->build(),
         ];
