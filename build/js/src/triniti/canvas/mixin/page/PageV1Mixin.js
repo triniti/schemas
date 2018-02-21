@@ -1,5 +1,6 @@
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/page/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -41,6 +42,7 @@ export default class PageV1Mixin extends Mixin {
        * Type of layout for static pages. e.g. Two column
        */
       Fb.create('layout', T.StringType.create())
+        .format(Format.SLUG)
         .build(),
     ];
   }

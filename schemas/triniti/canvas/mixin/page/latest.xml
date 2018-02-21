@@ -30,7 +30,7 @@
         </description>
         <default>true</default>
       </field>
-      <field name="layout" type="string">
+      <field name="layout" type="string" format="slug">
         <description>
           Type of layout for static pages. e.g. Two column
         </description>
