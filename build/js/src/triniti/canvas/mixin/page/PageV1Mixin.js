@@ -37,6 +37,11 @@ export default class PageV1Mixin extends Mixin {
       Fb.create('amp_enabled', T.BooleanType.create())
         .withDefault(true)
         .build(),
+      /*
+       * Type of layout for static pages. e.g. Two column
+       */
+      Fb.create('layout', T.StringType.create())
+        .build(),
     ];
   }
 }
