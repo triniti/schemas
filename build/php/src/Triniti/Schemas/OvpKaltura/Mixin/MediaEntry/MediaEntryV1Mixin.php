@@ -31,6 +31,7 @@ final class MediaEntryV1Mixin extends AbstractMixin
                 ->pattern('^[\w-]+$')
                 ->build(),
             Fb::create('kaltura_sync_enabled', T\BooleanType::create())
+                ->withDefault(true)
                 ->build(),
             /*
              * Timestamp when the entry was last synced with Kaltura.

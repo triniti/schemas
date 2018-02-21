@@ -21,6 +21,7 @@
     },
     "kaltura_sync_enabled": {
       "type": "boolean",
+      "default": true,
       "pbj": {
         "type": "boolean",
         "rule": "single"
