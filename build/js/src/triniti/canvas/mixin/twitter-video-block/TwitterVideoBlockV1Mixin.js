@@ -25,8 +25,6 @@ export default class TwitterVideoBlockV1Mixin extends Mixin {
         .required()
         .pattern('^\\d+$')
         .build(),
-      Fb.create('hide_tweet', T.BooleanType.create())
-        .build(),
     ];
   }
 }

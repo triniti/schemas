@@ -27,12 +27,12 @@ export default class TwitterCollectionTimelineBlockV1Mixin extends Mixin {
         .build(),
       Fb.create('collection_title', T.StringType.create())
         .build(),
-      Fb.create('show_replies', T.BooleanType.create())
-        .build(),
       Fb.create('tweet_limit', T.TinyIntType.create())
         .min(1)
         .max(20)
         .withDefault(1)
+        .build(),
+      Fb.create('grid_view', T.BooleanType.create())
         .build(),
     ];
   }

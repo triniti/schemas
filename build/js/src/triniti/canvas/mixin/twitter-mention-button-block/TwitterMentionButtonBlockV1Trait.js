@@ -1,4 +1,4 @@
-export default function TwitterListTimelineBlockV1Trait(m) {
+export default function TwitterMentionButtonBlockV1Trait(m) {
   Object.assign(m.prototype, {
     /**
      * @returns {Object}
@@ -7,8 +7,8 @@ export default function TwitterListTimelineBlockV1Trait(m) {
       return {
         etag: this.get('etag'),
         screen_name: this.get('screen_name'),
-        list_slug: this.get('list_slug'),
-        tweet_limit: this.get('tweet_limit'),
+        prefill_text: this.get('prefill_text'),
+        recommended_accounts: this.get('recommended_accounts'),
       };
     }
   });

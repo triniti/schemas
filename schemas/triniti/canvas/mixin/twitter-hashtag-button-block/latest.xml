@@ -4,13 +4,15 @@
             xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <!--
-    @link https://dev.twitter.com/web/embedded-video
+    @link https://dev.twitter.com/web/tweet-button/hashtag-button
   -->
-  <schema id="pbj:triniti:canvas:mixin:twitter-video-block:1-0-0" mixin="true"
+  <schema id="pbj:triniti:canvas:mixin:twitter-hashtag-button-block:1-0-0" mixin="true"
           extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="screen_name" type="string" pattern="^[\w\.]+$" required="true"/>
-      <field name="tweet_id" type="string" pattern="^\d+$" required="true"/>
+      <field name="hashtag" type="string" format="hashtag" required="true"/>
+      <field name="secondary_hashtags" type="string" format="hashtag" rule="set"/>
+      <field name="prefill_text" type="text" max="5000"/>
+      <field name="recommended_accounts" type="string" pattern="^[\w\.]+$" rule="set"/>
     </fields>
 
     <php-options>
@@ -25,8 +27,10 @@ public function getUriTemplateVars()
 {
     return [
         'etag' => $this->get('etag'),
-        'screen_name' => $this->get('screen_name'),
-        'tweet_id' => $this->get('tweet_id'),
+        'hashtag' => $this->get('hashtag'),
+        'secondary_hashtags' => $this->get('secondary_hashtags'),
+        'prefill_text' => $this->get('prefill_text'),
+        'recommended_accounts' => $this->get('recommended_accounts'),
     ];
 }
           ]]>
@@ -44,8 +48,10 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     etag: this.get('etag'),
-    screen_name: this.get('screen_name'),
-    tweet_id: this.get('tweet_id'),
+    hashtag: this.get('hashtag'),
+    secondary_hashtags: this.get('secondary_hashtags'),
+    prefill_text: this.get('prefill_text'),
+    recommended_accounts: this.get('recommended_accounts'),
   };
 }
           ]]>

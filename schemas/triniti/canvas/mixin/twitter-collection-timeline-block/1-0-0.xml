@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <!--
     @link https://dev.twitter.com/web/embedded-timelines/collection
   -->
   <schema id="pbj:triniti:canvas:mixin:twitter-collection-timeline-block:1-0-0" mixin="true"
-      extends="triniti:canvas:mixin:block:v1">
+          extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="screen_name" type="string" pattern="^[\w\.]+$" required="true"/>
       <field name="collection_id" type="string" pattern="^\d+$" required="true"/>
       <field name="collection_title" type="string"/>
-      <field name="show_replies" type="boolean"/>
       <field name="tweet_limit" type="tiny-int" min="1" max="20">
         <default>1</default>
       </field>
+      <field name="grid_view" type="boolean"/>
     </fields>
 
     <php-options>
@@ -33,8 +33,8 @@ public function getUriTemplateVars()
         'screen_name' => $this->get('screen_name'),
         'collection_id' => $this->get('collection_id'),
         'collection_title' => $this->get('collection_title'),
-        'show_replies' => $this->get('show_replies'),
         'tweet_limit' => $this->get('tweet_limit'),
+        'grid_view' => $this->get('grid_view'),
     ];
 }
           ]]>
@@ -55,8 +55,8 @@ getUriTemplateVars() {
     screen_name: this.get('screen_name'),
     collection_id: this.get('collection_id'),
     collection_title: this.get('collection_title'),
-    show_replies: this.get('show_replies'),
     tweet_limit: this.get('tweet_limit'),
+    grid_view: this.get('grid_view'),
   };
 }
           ]]>
