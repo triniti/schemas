@@ -191,6 +191,18 @@
         "type": "boolean",
         "rule": "single"
       }
+    },
+    "layout": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Visual layout for the page. e.g. \"two-column\", \"one-column\".",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
     }
   },
   "required": [
