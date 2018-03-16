@@ -19,7 +19,6 @@ trait TwitterVideoBlockV1Trait
             'etag' => $this->get('etag'),
             'screen_name' => $this->get('screen_name'),
             'tweet_id' => $this->get('tweet_id'),
-            'hide_tweet' => $this->get('hide_tweet'),
         ];
     }
 }

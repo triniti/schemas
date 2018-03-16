@@ -197,7 +197,7 @@
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
       "maxLength": 255,
-      "description": "Type of layout for static pages. e.g. Two column",
+      "description": "Visual layout for the page. e.g. \"two-column\", \"one-column\".",
       "pbj": {
         "type": "string",
         "rule": "single",

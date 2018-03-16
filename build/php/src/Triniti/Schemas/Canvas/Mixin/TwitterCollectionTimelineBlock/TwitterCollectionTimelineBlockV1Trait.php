@@ -20,8 +20,8 @@ trait TwitterCollectionTimelineBlockV1Trait
             'screen_name' => $this->get('screen_name'),
             'collection_id' => $this->get('collection_id'),
             'collection_title' => $this->get('collection_title'),
-            'show_replies' => $this->get('show_replies'),
             'tweet_limit' => $this->get('tweet_limit'),
+            'grid_view' => $this->get('grid_view'),
         ];
     }
 }

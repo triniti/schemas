@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <!--
     @link https://dev.twitter.com/web/follow-button
   -->
   <schema id="pbj:triniti:canvas:mixin:twitter-follow-button-block:1-0-0" mixin="true"
-          extends="triniti:canvas:mixin:block:v1">
+      extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="screen_name" type="string" pattern="^[\w\.]+$" required="true"/>
       <field name="show_screen_name" type="boolean"/>

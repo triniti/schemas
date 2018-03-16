@@ -29,6 +29,7 @@ import '@gdbots/schemas/gdbots/forms/field/PhoneFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/PhotoFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/PinterestUserFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/SelectFieldV1';
+import '@gdbots/schemas/gdbots/forms/field/SexualOrientationFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/ShortTextFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/SnapchatUserFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/StatementFieldV1';

@@ -39,13 +39,6 @@
         "format": "slug"
       }
     },
-    "show_replies": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
     "tweet_limit": {
       "type": "integer",
       "default": 1,

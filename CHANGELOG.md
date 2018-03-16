@@ -1,6 +1,30 @@
 # CHANGELOG
 
 
+## v0.1.11
+* __Add Schemas:__
+  * `triniti:canvas:mixin:twitter-follow-button-block`
+  * `triniti:canvas:mixin:twitter-hashtag-button-block`
+  * `triniti:canvas:mixin:twitter-likes-timeline-block`
+  * `triniti:canvas:mixin:twitter-mention-button-block`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:page`
+    * Add `layout` string field with format slug.
+  * `triniti:canvas:mixin:twitter-collection-timeline-block`
+    * Remove `show_replies` field.
+    * Add `grid_view` boolean field.
+  * `triniti:canvas:mixin:twitter-list-timeline-block`
+    * Remove `show_replies` field.
+  * `triniti:canvas:mixin:twitter-search-timeline-block`
+    * Remove `show_replies` field.
+  * `triniti:canvas:mixin:twitter-user-timeline-block`
+    * Remove `show_replies` field.
+  * `triniti:canvas:mixin:twitter-video-block`
+    * Remove `hide_tweet` field.
+  * `triniti:ovp.kaltura:mixin:media-entry`
+    * Change `kaltura_sync_enabled` field default to true.
+
+
 ## v0.1.10
 * __Add Schemas:__
   * `triniti:people:mixin:has-people`

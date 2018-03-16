@@ -32,7 +32,7 @@
       </field>
       <field name="layout" type="string" format="slug">
         <description>
-          Type of layout for static pages. e.g. Two column
+          Visual layout for the page. e.g. "two-column", "one-column".
         </description>
       </field>
     </fields>

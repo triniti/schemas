@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <!--
     @link https://dev.twitter.com/web/tweet-button/hashtag-button
   -->
   <schema id="pbj:triniti:canvas:mixin:twitter-hashtag-button-block:1-0-0" mixin="true"
-          extends="triniti:canvas:mixin:block:v1">
+      extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="hashtag" type="string" format="hashtag" required="true"/>
       <field name="secondary_hashtags" type="string" format="hashtag" rule="set"/>
@@ -29,7 +29,6 @@ public function getUriTemplateVars()
         'etag' => $this->get('etag'),
         'hashtag' => $this->get('hashtag'),
         'secondary_hashtags' => $this->get('secondary_hashtags'),
-        'prefill_text' => $this->get('prefill_text'),
         'recommended_accounts' => $this->get('recommended_accounts'),
     ];
 }
@@ -50,7 +49,6 @@ getUriTemplateVars() {
     etag: this.get('etag'),
     hashtag: this.get('hashtag'),
     secondary_hashtags: this.get('secondary_hashtags'),
-    prefill_text: this.get('prefill_text'),
     recommended_accounts: this.get('recommended_accounts'),
   };
 }

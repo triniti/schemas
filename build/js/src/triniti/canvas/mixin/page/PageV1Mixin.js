@@ -39,7 +39,7 @@ export default class PageV1Mixin extends Mixin {
         .withDefault(true)
         .build(),
       /*
-       * Type of layout for static pages. e.g. Two column
+       * Visual layout for the page. e.g. "two-column", "one-column".
        */
       Fb.create('layout', T.StringType.create())
         .format(Format.SLUG)

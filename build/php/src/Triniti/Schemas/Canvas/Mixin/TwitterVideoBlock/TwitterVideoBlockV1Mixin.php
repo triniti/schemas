@@ -31,8 +31,6 @@ final class TwitterVideoBlockV1Mixin extends AbstractMixin
                 ->required()
                 ->pattern('^\d+$')
                 ->build(),
-            Fb::create('hide_tweet', T\BooleanType::create())
-                ->build(),
         ];
     }
 }
