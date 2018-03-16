@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <!--
+    @link https://dev.twitter.com/web/tweet-button/hashtag-button
+  -->
+  <schema id="pbj:triniti:canvas:mixin:twitter-hashtag-button-block:1-0-0" mixin="true"
+      extends="triniti:canvas:mixin:block:v1">
+    <fields>
+      <field name="hashtag" type="string" format="hashtag" required="true"/>
+      <field name="secondary_hashtags" type="string" format="hashtag" rule="set"/>
+      <field name="prefill_text" type="text" max="5000"/>
+      <field name="recommended_accounts" type="string" pattern="^[\w\.]+$" rule="set"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        'etag' => $this->get('etag'),
+        'hashtag' => $this->get('hashtag'),
+        'secondary_hashtags' => $this->get('secondary_hashtags'),
+        'recommended_accounts' => $this->get('recommended_accounts'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    etag: this.get('etag'),
+    hashtag: this.get('hashtag'),
+    secondary_hashtags: this.get('secondary_hashtags'),
+    recommended_accounts: this.get('recommended_accounts'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>

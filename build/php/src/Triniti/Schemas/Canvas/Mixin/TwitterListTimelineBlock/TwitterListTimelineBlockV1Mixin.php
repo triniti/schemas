@@ -32,8 +32,6 @@ final class TwitterListTimelineBlockV1Mixin extends AbstractMixin
                 ->required()
                 ->format(Format::SLUG())
                 ->build(),
-            Fb::create('show_replies', T\BooleanType::create())
-                ->build(),
             Fb::create('tweet_limit', T\TinyIntType::create())
                 ->min(1)
                 ->max(20)

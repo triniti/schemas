@@ -21,8 +21,6 @@ export default class TwitterUserTimelineBlockV1Mixin extends Mixin {
         .required()
         .pattern('^[\\w\\.]+$')
         .build(),
-      Fb.create('show_replies', T.BooleanType.create())
-        .build(),
       Fb.create('tweet_limit', T.TinyIntType.create())
         .min(1)
         .max(20)

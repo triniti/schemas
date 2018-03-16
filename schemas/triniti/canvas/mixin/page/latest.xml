@@ -30,6 +30,11 @@
         </description>
         <default>true</default>
       </field>
+      <field name="layout" type="string" format="slug">
+        <description>
+          Visual layout for the page. e.g. "two-column", "one-column".
+        </description>
+      </field>
     </fields>
 
     <php-options>

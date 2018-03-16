@@ -35,13 +35,6 @@
         "type": "string",
         "rule": "single"
       }
-    },
-    "hide_tweet": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
     }
   },
   "required": [

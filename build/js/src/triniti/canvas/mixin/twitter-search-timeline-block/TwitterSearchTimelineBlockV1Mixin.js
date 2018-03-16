@@ -21,8 +21,6 @@ export default class TwitterSearchTimelineBlockV1Mixin extends Mixin {
         .required()
         .pattern('^\\d+$')
         .build(),
-      Fb.create('show_replies', T.BooleanType.create())
-        .build(),
       Fb.create('tweet_limit', T.TinyIntType.create())
         .min(1)
         .max(20)

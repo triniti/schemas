@@ -11,7 +11,6 @@
     <fields>
       <field name="screen_name" type="string" pattern="^[\w\.]+$" required="true"/>
       <field name="tweet_id" type="string" pattern="^\d+$" required="true"/>
-      <field name="hide_tweet" type="boolean"/>
     </fields>
 
     <php-options>
@@ -28,7 +27,6 @@ public function getUriTemplateVars()
         'etag' => $this->get('etag'),
         'screen_name' => $this->get('screen_name'),
         'tweet_id' => $this->get('tweet_id'),
-        'hide_tweet' => $this->get('hide_tweet'),
     ];
 }
           ]]>
@@ -48,7 +46,6 @@ getUriTemplateVars() {
     etag: this.get('etag'),
     screen_name: this.get('screen_name'),
     tweet_id: this.get('tweet_id'),
-    hide_tweet: this.get('hide_tweet'),
   };
 }
           ]]>

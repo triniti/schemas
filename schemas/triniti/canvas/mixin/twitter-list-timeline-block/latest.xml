@@ -11,7 +11,6 @@
     <fields>
       <field name="screen_name" type="string" pattern="^[\w\.]+$" required="true"/>
       <field name="list_slug" type="string" format="slug" required="true"/>
-      <field name="show_replies" type="boolean"/>
       <field name="tweet_limit" type="tiny-int" min="1" max="20">
         <default>1</default>
       </field>
@@ -31,7 +30,6 @@ public function getUriTemplateVars()
         'etag' => $this->get('etag'),
         'screen_name' => $this->get('screen_name'),
         'list_slug' => $this->get('list_slug'),
-        'show_replies' => $this->get('show_replies'),
         'tweet_limit' => $this->get('tweet_limit'),
     ];
 }
@@ -52,7 +50,6 @@ getUriTemplateVars() {
     etag: this.get('etag'),
     screen_name: this.get('screen_name'),
     list_slug: this.get('list_slug'),
-    show_replies: this.get('show_replies'),
     tweet_limit: this.get('tweet_limit'),
   };
 }

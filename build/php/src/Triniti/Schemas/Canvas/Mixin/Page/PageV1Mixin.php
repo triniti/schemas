@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Canvas\Mixin\Page;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -42,6 +43,12 @@ final class PageV1Mixin extends AbstractMixin
              */
             Fb::create('amp_enabled', T\BooleanType::create())
                 ->withDefault(true)
+                ->build(),
+            /*
+             * Visual layout for the page. e.g. "two-column", "one-column".
+             */
+            Fb::create('layout', T\StringType::create())
+                ->format(Format::SLUG())
                 ->build(),
         ];
     }
