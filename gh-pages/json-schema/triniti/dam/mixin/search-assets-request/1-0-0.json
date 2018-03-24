@@ -323,7 +323,9 @@
         "updated-at-desc",
         "updated-at-asc",
         "title-desc",
-        "title-asc"
+        "title-asc",
+        "mime-type-desc",
+        "mime-type-asc"
       ],
       "pbj": {
         "type": "string-enum",
