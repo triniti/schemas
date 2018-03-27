@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v0.1.12
+* __Add Schemas:__
+  * `triniti:dam:mixin:assets-associated`
+  * `triniti:dam:mixin:assets-disassociated`
+  * `triniti:dam:mixin:associate-assets`
+  * `triniti:dam:mixin:disassociate-assets`
+
 
 ## v0.1.11
 * __Add Schemas:__
