@@ -1,6 +1,52 @@
 # CHANGELOG
 
 
+## v0.1.12
+* Add `toNodeRef` method to `AssetId` in php and javascript.
+* __Add Schemas:__
+  * `triniti:curator:mixin:create-gallery`
+  * `triniti:curator:mixin:delete-gallery`
+  * `triniti:curator:mixin:expire-gallery`
+  * `triniti:curator:mixin:gallery`
+  * `triniti:curator:mixin:gallery-created`
+  * `triniti:curator:mixin:gallery-deleted`
+  * `triniti:curator:mixin:gallery-expired`
+  * `triniti:curator:mixin:gallery-marked-as-draft`
+  * `triniti:curator:mixin:gallery-marked-as-pending`
+  * `triniti:curator:mixin:gallery-published`
+  * `triniti:curator:mixin:gallery-renamed`
+  * `triniti:curator:mixin:gallery-scheduled`
+  * `triniti:curator:mixin:gallery-unpublished`
+  * `triniti:curator:mixin:gallery-updated`
+  * `triniti:curator:mixin:get-gallery-history-request`
+  * `triniti:curator:mixin:get-gallery-history-response`
+  * `triniti:curator:mixin:get-gallery-request`
+  * `triniti:curator:mixin:get-gallery-response`
+  * `triniti:curator:mixin:mark-gallery-as-draft`
+  * `triniti:curator:mixin:mark-gallery-as-pending`
+  * `triniti:curator:mixin:publish-gallery`
+  * `triniti:curator:mixin:rename-gallery`
+  * `triniti:curator:mixin:search-galleries-request`
+  * `triniti:curator:mixin:search-galleries-response`
+  * `triniti:curator:mixin:unpublish-gallery`
+  * `triniti:curator:mixin:update-gallery`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:has-blocks`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:ovp.kaltura:mixin:media-entry`
+    * Extend `triniti:ovp:mixin:video:v1` to force concrete message to also be a video.
+  * `triniti:people:mixin:has-people`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:taxonomy:mixin:categorizable`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:taxonomy:mixin:has-channel`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:taxonomy:mixin:hashtaggable`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:taxonomy:mixin:search-categories-request`
+    * Add `sort` string-enum field using enum `triniti:taxonomy:search-categories-sort`.
+
+
 ## v0.1.11
 * __Add Schemas:__
   * `triniti:canvas:mixin:twitter-follow-button-block`
