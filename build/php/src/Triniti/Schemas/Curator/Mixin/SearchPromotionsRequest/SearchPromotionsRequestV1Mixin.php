@@ -24,9 +24,6 @@ final class SearchPromotionsRequestV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('is_unlisted', T\TrinaryType::create())
-                ->withDefault(2)
-                ->build(),
             Fb::create('sort', T\StringEnumType::create())
                 ->withDefault(SearchPromotionsSort::RELEVANCE())
                 ->className(SearchPromotionsSort::class)

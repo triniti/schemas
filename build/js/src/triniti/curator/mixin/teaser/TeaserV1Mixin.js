@@ -41,7 +41,7 @@ export default class TeaserV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       /*
-       * A reference to the target teaserable node.
+       * A reference to a target teaserable node.
        */
       Fb.create('target_ref', T.IdentifierType.create())
         .classProto(NodeRef)

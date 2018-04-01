@@ -46,7 +46,7 @@
       </field>
       <field name="target_ref" type="identifier">
         <description>
-          A reference to the target teaserable node.
+          A reference to a target teaserable node.
         </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>

@@ -198,7 +198,7 @@
     "target_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the target teaserable node.",
+      "description": "A reference to a target teaserable node.",
       "pbj": {
         "type": "identifier",
         "rule": "single"

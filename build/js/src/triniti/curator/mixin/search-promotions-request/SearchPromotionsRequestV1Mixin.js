@@ -18,9 +18,6 @@ export default class SearchPromotionsRequestV1Mixin extends Mixin {
    */
   getFields() {
     return [
-      Fb.create('is_unlisted', T.TrinaryType.create())
-        .withDefault(2)
-        .build(),
       Fb.create('sort', T.StringEnumType.create())
         .withDefault(SearchPromotionsSort.RELEVANCE)
         .classProto(SearchPromotionsSort)
