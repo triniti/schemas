@@ -3,7 +3,7 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:dam:mixin:assets-associated:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:event:v1">
+  <schema id="pbj:triniti:dam:mixin:asset-associated:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:event:v1">
     <fields>
       <field name="node_ref" type="identifier" required="true">
         <php-options>
@@ -15,9 +15,9 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="asset_refs" type="identifier" rule="set">
+      <field name="asset_ref" type="identifier">
         <description>
-          The asset refs associated with this node ref.
+          The asset ref associated with this node ref.
         </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
