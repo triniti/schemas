@@ -1,16 +1,16 @@
-// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/assets-associated/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset-associated/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/types';
 
-export default class AssetsAssociatedV1Mixin extends Mixin {
+export default class AssetAssociatedV1Mixin extends Mixin {
   /**
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:dam:mixin:assets-associated:1-0-0');
+    return SchemaId.fromString('pbj:triniti:dam:mixin:asset-associated:1-0-0');
   }
 
   /**
@@ -23,10 +23,9 @@ export default class AssetsAssociatedV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       /*
-       * The asset refs associated with this node ref.
+       * The asset ref associated with this node ref.
        */
-      Fb.create('asset_refs', T.IdentifierType.create())
-        .asASet()
+      Fb.create('asset_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
     ];
