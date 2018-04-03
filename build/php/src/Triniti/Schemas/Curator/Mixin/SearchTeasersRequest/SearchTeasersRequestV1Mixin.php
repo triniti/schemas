@@ -48,9 +48,9 @@ final class SearchTeasersRequestV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             /*
-             * A node ref of a list that a teaser must be associated with to match the search request.
+             * A node ref of a timeline that a teaser must be associated with to match the search request.
              */
-            Fb::create('list_ref', T\IdentifierType::create())
+            Fb::create('timeline_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
         ];

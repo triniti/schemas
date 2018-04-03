@@ -32,9 +32,9 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="list_ref" type="identifier">
+      <field name="timeline_ref" type="identifier">
         <description>
-          A node ref of a list that a teaser must be associated with to match the search request.
+          A node ref of a timeline that a teaser must be associated with to match the search request.
         </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>

@@ -373,10 +373,10 @@
         "rule": "single"
       }
     },
-    "list_ref": {
+    "timeline_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A node ref of a list that a teaser must be associated with to match the search request.",
+      "description": "A node ref of a timeline that a teaser must be associated with to match the search request.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
