@@ -5,6 +5,18 @@
 
   <schema id="pbj:triniti:curator:mixin:promotion:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
+      <field name="_id" type="identifier" required="true" overridable="true">
+        <php-options>
+          <imports>use Triniti\Schemas\Curator\PromotionId;</imports>
+          <class-name>PromotionId::class</class-name>
+          <default>function() { return PromotionId::generate(); }</default>
+        </php-options>
+        <js-options>
+          <imports>import PromotionId from '@triniti/schemas/triniti/curator/PromotionId';</imports>
+          <class-proto>PromotionId</class-proto>
+          <default>() => PromotionId.generate()</default>
+        </js-options>
+      </field>
       <field name="slot" type="string" format="slug">
         <description>
           The name of the location where the promotion should render,

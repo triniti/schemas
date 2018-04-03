@@ -26,6 +26,12 @@
           the file being changed.
         </description>
       </field>
+      <field name="description" type="text" max="5000">
+        <description>
+          A description of the asset (usually a few sentences). It should typically
+          not have HTML as it is used in metadata, feeds, SERP and social.
+        </description>
+      </field>
       <field name="associated_refs" type="identifier" rule="set">
         <description>
           A set of node refs which have been associated with this asset.

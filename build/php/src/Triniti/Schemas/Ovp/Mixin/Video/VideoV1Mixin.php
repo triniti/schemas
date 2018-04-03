@@ -9,6 +9,7 @@ use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Ovp\Enum\TvpgRating;
+use Triniti\Schemas\Ovp\VideoId;
 
 final class VideoV1Mixin extends AbstractMixin
 {
@@ -26,6 +27,12 @@ final class VideoV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('_id', T\IdentifierType::create())
+                ->required()
+                ->withDefault(function() { return VideoId::generate(); })
+                ->className(VideoId::class)
+                ->overridable(true)
+                ->build(),
             /*
              * A reference to the image asset to use for widgets, sharing, seo.
              */

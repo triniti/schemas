@@ -1,130 +1,190 @@
 # CHANGELOG
 
 
-## v0.1.12
+## v0.2.0
+__BREAKING CHANGES__
+
+* __Delete Schemas:__ all Ncr crud (and expire, mark-as-X, publish, etc.) mixins, resolve schemas by convention instead to eliminate extra code (primarily in javascript apps where bundle size is critical).  It is still possible to define a custom mixin and use it but it's optional now.
+  * `triniti:apollo:mixin:create-poll`
+  * `triniti:apollo:mixin:delete-poll`
+  * `triniti:apollo:mixin:expire-poll`
+  * `triniti:apollo:mixin:get-poll-batch-request`
+  * `triniti:apollo:mixin:get-poll-batch-response`
+  * `triniti:apollo:mixin:get-poll-history-request`
+  * `triniti:apollo:mixin:get-poll-history-response`
+  * `triniti:apollo:mixin:get-poll-request`
+  * `triniti:apollo:mixin:get-poll-response`
+  * `triniti:apollo:mixin:mark-poll-as-draft`
+  * `triniti:apollo:mixin:mark-poll-as-pending`
+  * `triniti:apollo:mixin:poll-created`
+  * `triniti:apollo:mixin:poll-deleted`
+  * `triniti:apollo:mixin:poll-expired`
+  * `triniti:apollo:mixin:poll-marked-as-draft`
+  * `triniti:apollo:mixin:poll-marked-as-pending`
+  * `triniti:apollo:mixin:poll-published`
+  * `triniti:apollo:mixin:poll-scheduled`
+  * `triniti:apollo:mixin:poll-unpublished`
+  * `triniti:apollo:mixin:poll-updated`
+  * `triniti:apollo:mixin:publish-poll`
+  * `triniti:apollo:mixin:unpublish-poll`
+  * `triniti:apollo:mixin:update-poll`
+  * `triniti:canvas:mixin:create-page`
+  * `triniti:canvas:mixin:delete-page`
+  * `triniti:canvas:mixin:expire-page`
+  * `triniti:canvas:mixin:get-page-batch-request`
+  * `triniti:canvas:mixin:get-page-batch-response`
+  * `triniti:canvas:mixin:get-page-history-request`
+  * `triniti:canvas:mixin:get-page-history-response`
+  * `triniti:canvas:mixin:get-page-request`
+  * `triniti:canvas:mixin:get-page-response`
+  * `triniti:canvas:mixin:mark-page-as-draft`
+  * `triniti:canvas:mixin:mark-page-as-pending`
+  * `triniti:canvas:mixin:page-created`
+  * `triniti:canvas:mixin:page-deleted`
+  * `triniti:canvas:mixin:page-expired`
+  * `triniti:canvas:mixin:page-marked-as-draft`
+  * `triniti:canvas:mixin:page-marked-as-pending`
+  * `triniti:canvas:mixin:page-published`
+  * `triniti:canvas:mixin:page-renamed`
+  * `triniti:canvas:mixin:page-scheduled`
+  * `triniti:canvas:mixin:page-unpublished`
+  * `triniti:canvas:mixin:page-updated`
+  * `triniti:canvas:mixin:page`
+  * `triniti:canvas:mixin:publish-page`
+  * `triniti:canvas:mixin:rename-page`
+  * `triniti:canvas:mixin:search-pages-request`
+  * `triniti:canvas:mixin:search-pages-response`
+  * `triniti:canvas:mixin:unpublish-page`
+  * `triniti:canvas:mixin:update-page`
+  * `triniti:dam:mixin:asset-created`
+  * `triniti:dam:mixin:asset-deleted`
+  * `triniti:dam:mixin:asset-expired`
+  * `triniti:dam:mixin:asset-updated`
+  * `triniti:dam:mixin:create-asset`
+  * `triniti:dam:mixin:delete-asset`
+  * `triniti:dam:mixin:expire-asset`
+  * `triniti:dam:mixin:get-asset-batch-request`
+  * `triniti:dam:mixin:get-asset-batch-response`
+  * `triniti:dam:mixin:get-asset-history-request`
+  * `triniti:dam:mixin:get-asset-history-response`
+  * `triniti:dam:mixin:get-asset-request`
+  * `triniti:dam:mixin:get-asset-response`
+  * `triniti:dam:mixin:update-asset`
+  * `triniti:news:mixin:article-created`
+  * `triniti:news:mixin:article-deleted`
+  * `triniti:news:mixin:article-expired`
+  * `triniti:news:mixin:article-locked`
+  * `triniti:news:mixin:article-marked-as-draft`
+  * `triniti:news:mixin:article-marked-as-pending`
+  * `triniti:news:mixin:article-published`
+  * `triniti:news:mixin:article-renamed`
+  * `triniti:news:mixin:article-scheduled`
+  * `triniti:news:mixin:article-unlocked`
+  * `triniti:news:mixin:article-unpublished`
+  * `triniti:news:mixin:article-updated`
+  * `triniti:news:mixin:create-article`
+  * `triniti:news:mixin:delete-article`
+  * `triniti:news:mixin:expire-article`
+  * `triniti:news:mixin:get-article-batch-request`
+  * `triniti:news:mixin:get-article-batch-response`
+  * `triniti:news:mixin:get-article-history-request`
+  * `triniti:news:mixin:get-article-history-response`
+  * `triniti:news:mixin:get-article-request`
+  * `triniti:news:mixin:get-article-response`
+  * `triniti:news:mixin:lock-article`
+  * `triniti:news:mixin:mark-article-as-draft`
+  * `triniti:news:mixin:mark-article-as-pending`
+  * `triniti:news:mixin:publish-article`
+  * `triniti:news:mixin:rename-article`
+  * `triniti:news:mixin:unlock-article`
+  * `triniti:news:mixin:unpublish-article`
+  * `triniti:news:mixin:update-article`
+  * `triniti:ovp:mixin:create-video`
+  * `triniti:ovp:mixin:delete-video`
+  * `triniti:ovp:mixin:expire-video`
+  * `triniti:ovp:mixin:get-video-batch-request`
+  * `triniti:ovp:mixin:get-video-batch-response`
+  * `triniti:ovp:mixin:get-video-history-request`
+  * `triniti:ovp:mixin:get-video-history-response`
+  * `triniti:ovp:mixin:get-video-request`
+  * `triniti:ovp:mixin:get-video-response`
+  * `triniti:ovp:mixin:mark-video-as-draft`
+  * `triniti:ovp:mixin:mark-video-as-pending`
+  * `triniti:ovp:mixin:publish-video`
+  * `triniti:ovp:mixin:rename-video`
+  * `triniti:ovp:mixin:unpublish-video`
+  * `triniti:ovp:mixin:update-video`
+  * `triniti:ovp:mixin:video-created`
+  * `triniti:ovp:mixin:video-deleted`
+  * `triniti:ovp:mixin:video-expired`
+  * `triniti:ovp:mixin:video-marked-as-draft`
+  * `triniti:ovp:mixin:video-marked-as-pending`
+  * `triniti:ovp:mixin:video-published`
+  * `triniti:ovp:mixin:video-renamed`
+  * `triniti:ovp:mixin:video-scheduled`
+  * `triniti:ovp:mixin:video-unpublished`
+  * `triniti:ovp:mixin:video-updated`
+  * `triniti:people:mixin:create-person`
+  * `triniti:people:mixin:delete-person`
+  * `triniti:people:mixin:get-person-history-request`
+  * `triniti:people:mixin:get-person-history-response`
+  * `triniti:people:mixin:get-person-request`
+  * `triniti:people:mixin:get-person-response`
+  * `triniti:people:mixin:person-created`
+  * `triniti:people:mixin:person-deleted`
+  * `triniti:people:mixin:person-renamed`
+  * `triniti:people:mixin:person-updated`
+  * `triniti:people:mixin:rename-person`
+  * `triniti:taxonomy:mixin:category-created`
+  * `triniti:taxonomy:mixin:category-deleted`
+  * `triniti:taxonomy:mixin:category-renamed`
+  * `triniti:taxonomy:mixin:category-updated`
+  * `triniti:taxonomy:mixin:channel-created`
+  * `triniti:taxonomy:mixin:channel-deleted`
+  * `triniti:taxonomy:mixin:channel-renamed`
+  * `triniti:taxonomy:mixin:channel-updated`
+  * `triniti:taxonomy:mixin:create-category`
+  * `triniti:taxonomy:mixin:create-channel`
+  * `triniti:taxonomy:mixin:delete-category`
+  * `triniti:taxonomy:mixin:delete-channel`
+  * `triniti:taxonomy:mixin:get-category-history-request`
+  * `triniti:taxonomy:mixin:get-category-history-response`
+  * `triniti:taxonomy:mixin:get-category-request`
+  * `triniti:taxonomy:mixin:get-category-response`
+  * `triniti:taxonomy:mixin:get-channel-history-request`
+  * `triniti:taxonomy:mixin:get-channel-history-response`
+  * `triniti:taxonomy:mixin:get-channel-request`
+  * `triniti:taxonomy:mixin:get-channel-response`
+  * `triniti:taxonomy:mixin:rename-category`
+  * `triniti:taxonomy:mixin:rename-channel`
+  * `triniti:taxonomy:mixin:update-category`
+  * `triniti:taxonomy:mixin:update-channel`
 * Add `toNodeRef` method to `AssetId` in php and javascript.
+* Add identifier for all node `_id` fields in this repo so site level doesn't require a custom id.  Still overridable if desired.
 * __Add Schemas:__
   * `triniti:canvas:mixin:image-block`
   * `triniti:canvas:mixin:video-block`
   * `triniti:curator:mixin:article-teaser`
-  * `triniti:curator:mixin:create-gallery`
-  * `triniti:curator:mixin:create-list`
-  * `triniti:curator:mixin:create-promotion`
-  * `triniti:curator:mixin:create-teaser`
-  * `triniti:curator:mixin:create-widget`
-  * `triniti:curator:mixin:delete-gallery`
-  * `triniti:curator:mixin:delete-list`
-  * `triniti:curator:mixin:delete-promotion`
-  * `triniti:curator:mixin:delete-teaser`
-  * `triniti:curator:mixin:delete-widget`
-  * `triniti:curator:mixin:expire-gallery`
-  * `triniti:curator:mixin:expire-list`
-  * `triniti:curator:mixin:expire-promotion`
-  * `triniti:curator:mixin:expire-teaser`
   * `triniti:curator:mixin:gallery`
-  * `triniti:curator:mixin:gallery-created`
-  * `triniti:curator:mixin:gallery-deleted`
-  * `triniti:curator:mixin:gallery-expired`
-  * `triniti:curator:mixin:gallery-marked-as-draft`
-  * `triniti:curator:mixin:gallery-marked-as-pending`
-  * `triniti:curator:mixin:gallery-published`
-  * `triniti:curator:mixin:gallery-renamed`
-  * `triniti:curator:mixin:gallery-scheduled`
   * `triniti:curator:mixin:gallery-teaser`
-  * `triniti:curator:mixin:gallery-unpublished`
-  * `triniti:curator:mixin:gallery-updated`
-  * `triniti:curator:mixin:get-gallery-history-request`
-  * `triniti:curator:mixin:get-gallery-history-response`
-  * `triniti:curator:mixin:get-gallery-request`
-  * `triniti:curator:mixin:get-gallery-response`
-  * `triniti:curator:mixin:get-list-history-request`
-  * `triniti:curator:mixin:get-list-history-response`
-  * `triniti:curator:mixin:get-list-request`
-  * `triniti:curator:mixin:get-list-response`
-  * `triniti:curator:mixin:get-promotion-history-request`
-  * `triniti:curator:mixin:get-promotion-history-response`
-  * `triniti:curator:mixin:get-promotion-request`
-  * `triniti:curator:mixin:get-promotion-response`
-  * `triniti:curator:mixin:get-teaser-history-request`
-  * `triniti:curator:mixin:get-teaser-history-response`
-  * `triniti:curator:mixin:get-teaser-request`
-  * `triniti:curator:mixin:get-teaser-response`
-  * `triniti:curator:mixin:get-widget-history-request`
-  * `triniti:curator:mixin:get-widget-history-response`
-  * `triniti:curator:mixin:get-widget-request`
-  * `triniti:curator:mixin:get-widget-response`
-  * `triniti:curator:mixin:list`
-  * `triniti:curator:mixin:list-created`
-  * `triniti:curator:mixin:list-deleted`
-  * `triniti:curator:mixin:list-expired`
-  * `triniti:curator:mixin:list-marked-as-draft`
-  * `triniti:curator:mixin:list-marked-as-pending`
-  * `triniti:curator:mixin:list-published`
-  * `triniti:curator:mixin:list-renamed`
-  * `triniti:curator:mixin:list-scheduled`
-  * `triniti:curator:mixin:list-teaser`
-  * `triniti:curator:mixin:list-unpublished`
-  * `triniti:curator:mixin:list-updated`
-  * `triniti:curator:mixin:mark-gallery-as-draft`
-  * `triniti:curator:mixin:mark-gallery-as-pending`
-  * `triniti:curator:mixin:mark-list-as-draft`
-  * `triniti:curator:mixin:mark-list-as-pending`
-  * `triniti:curator:mixin:mark-promotion-as-draft`
-  * `triniti:curator:mixin:mark-promotion-as-pending`
-  * `triniti:curator:mixin:mark-teaser-as-draft`
-  * `triniti:curator:mixin:mark-teaser-as-pending`
   * `triniti:curator:mixin:promotion`
-  * `triniti:curator:mixin:promotion-created`
-  * `triniti:curator:mixin:promotion-deleted`
-  * `triniti:curator:mixin:promotion-expired`
-  * `triniti:curator:mixin:promotion-marked-as-draft`
-  * `triniti:curator:mixin:promotion-marked-as-pending`
-  * `triniti:curator:mixin:promotion-published`
-  * `triniti:curator:mixin:promotion-scheduled`
-  * `triniti:curator:mixin:promotion-unpublished`
-  * `triniti:curator:mixin:promotion-updated`
-  * `triniti:curator:mixin:publish-gallery`
-  * `triniti:curator:mixin:publish-list`
-  * `triniti:curator:mixin:publish-promotion`
-  * `triniti:curator:mixin:publish-teaser`
-  * `triniti:curator:mixin:rename-gallery`
-  * `triniti:curator:mixin:rename-list`
   * `triniti:curator:mixin:search-galleries-request`
   * `triniti:curator:mixin:search-galleries-response`
-  * `triniti:curator:mixin:search-lists-request`
-  * `triniti:curator:mixin:search-lists-response`
   * `triniti:curator:mixin:search-promotions-request`
   * `triniti:curator:mixin:search-promotions-response`
   * `triniti:curator:mixin:search-teasers-request`
   * `triniti:curator:mixin:search-teasers-response`
+  * `triniti:curator:mixin:search-timelines-request`
+  * `triniti:curator:mixin:search-timelines-response`
   * `triniti:curator:mixin:search-widgets-request`
   * `triniti:curator:mixin:search-widgets-response`
   * `triniti:curator:mixin:teaser`
-  * `triniti:curator:mixin:teaser-created`
-  * `triniti:curator:mixin:teaser-deleted`
-  * `triniti:curator:mixin:teaser-expired`
   * `triniti:curator:mixin:teaser-has-target`
-  * `triniti:curator:mixin:teaser-marked-as-draft`
-  * `triniti:curator:mixin:teaser-marked-as-pending`
-  * `triniti:curator:mixin:teaser-published`
-  * `triniti:curator:mixin:teaser-scheduled`
-  * `triniti:curator:mixin:teaser-unpublished`
-  * `triniti:curator:mixin:teaser-updated`
   * `triniti:curator:mixin:teaserable`
-  * `triniti:curator:mixin:unpublish-gallery`
-  * `triniti:curator:mixin:unpublish-list`
-  * `triniti:curator:mixin:unpublish-promotion`
-  * `triniti:curator:mixin:unpublish-teaser`
-  * `triniti:curator:mixin:update-gallery`
-  * `triniti:curator:mixin:update-list`
-  * `triniti:curator:mixin:update-promotion`
-  * `triniti:curator:mixin:update-teaser`
-  * `triniti:curator:mixin:update-widget`
+  * `triniti:curator:mixin:timeline`
+  * `triniti:curator:mixin:timeline-teaser`
   * `triniti:curator:mixin:video-teaser`
   * `triniti:curator:mixin:widget`
-  * `triniti:curator:mixin:widget-created`
-  * `triniti:curator:mixin:widget-deleted`
-  * `triniti:curator:mixin:widget-updated`
   * `triniti:curator:mixin:youtube-video-teaser`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:has-blocks`
@@ -250,7 +310,7 @@
     * Add `mpm` string field.
     * Add `image_ref` identifier (NodeRef) field.
     * Add `poster_image_ref` identifier (NodeRef) field.
-* __Remove Schemas:__ _(not used and probably won't be needed due to lazy loading and derefs)_
+* __Delete Schemas:__ _(not used and probably won't be needed due to lazy loading and derefs)_
   * `triniti:apollo:mixin:get-poll-batch-request`
   * `triniti:apollo:mixin:get-poll-batch-response`
   * `triniti:canvas:mixin:get-page-batch-request`

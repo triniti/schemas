@@ -27,7 +27,9 @@ final class TeaserV1Mixin extends AbstractMixin
         return [
             Fb::create('_id', T\IdentifierType::create())
                 ->required()
+                ->withDefault(function() { return TeaserId::generate(); })
                 ->className(TeaserId::class)
+                ->overridable(true)
                 ->build(),
             /*
              * A reference to the image asset to use for widgets, sharing, seo.

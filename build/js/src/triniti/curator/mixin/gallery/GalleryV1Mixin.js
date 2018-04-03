@@ -1,5 +1,6 @@
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import GalleryId from '@triniti/schemas/triniti/curator/GalleryId';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -18,6 +19,12 @@ export default class GalleryV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('_id', T.IdentifierType.create())
+        .required()
+        .withDefault(() => GalleryId.generate())
+        .classProto(GalleryId)
+        .overridable(true)
+        .build(),
       /*
        * A reference to the image asset to use as the cover/primary.
        */

@@ -3,6 +3,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
+import PageId from '@triniti/schemas/triniti/canvas/PageId';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/types';
 
@@ -19,6 +20,12 @@ export default class PageV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('_id', T.IdentifierType.create())
+        .required()
+        .withDefault(() => PageId.generate())
+        .classProto(PageId)
+        .overridable(true)
+        .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.
        */

@@ -8,14 +8,16 @@
   -->
   <schema id="pbj:triniti:curator:mixin:teaser:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true">
+      <field name="_id" type="identifier" required="true" overridable="true">
         <php-options>
           <imports>use Triniti\Schemas\Curator\TeaserId;</imports>
           <class-name>TeaserId::class</class-name>
+          <default>function() { return TeaserId::generate(); }</default>
         </php-options>
         <js-options>
           <imports>import TeaserId from '@triniti/schemas/triniti/curator/TeaserId';</imports>
           <class-proto>TeaserId</class-proto>
+          <default>() => TeaserId.generate()</default>
         </js-options>
       </field>
       <field name="image_ref" type="identifier">

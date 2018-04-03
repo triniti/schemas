@@ -3,6 +3,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
+import PromotionId from '@triniti/schemas/triniti/curator/PromotionId';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/types';
 
@@ -19,6 +20,12 @@ export default class PromotionV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('_id', T.IdentifierType.create())
+        .required()
+        .withDefault(() => PromotionId.generate())
+        .classProto(PromotionId)
+        .overridable(true)
+        .build(),
       /*
        * The name of the location where the promotion should render,
        * e.g. "desktop-home-sidebar" or "smartphone-global-html-head".

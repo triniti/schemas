@@ -26,7 +26,9 @@ final class WidgetV1Mixin extends AbstractMixin
         return [
             Fb::create('_id', T\IdentifierType::create())
                 ->required()
+                ->withDefault(function() { return WidgetId::generate(); })
                 ->className(WidgetId::class)
+                ->overridable(true)
                 ->build(),
         ];
     }

@@ -21,7 +21,9 @@ export default class TeaserV1Mixin extends Mixin {
     return [
       Fb.create('_id', T.IdentifierType.create())
         .required()
+        .withDefault(() => TeaserId.generate())
         .classProto(TeaserId)
+        .overridable(true)
         .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.

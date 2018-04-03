@@ -20,7 +20,9 @@ export default class WidgetV1Mixin extends Mixin {
     return [
       Fb.create('_id', T.IdentifierType.create())
         .required()
+        .withDefault(() => WidgetId.generate())
         .classProto(WidgetId)
+        .overridable(true)
         .build(),
     ];
   }

@@ -190,6 +190,16 @@
         "rule": "single"
       }
     },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 5000,
+      "description": "A description of the asset (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
     "associated_refs": {
       "type": "array",
       "items": [

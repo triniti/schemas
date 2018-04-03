@@ -8,6 +8,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Triniti\Schemas\Curator\PromotionId;
 
 final class PromotionV1Mixin extends AbstractMixin
 {
@@ -25,6 +26,12 @@ final class PromotionV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('_id', T\IdentifierType::create())
+                ->required()
+                ->withDefault(function() { return PromotionId::generate(); })
+                ->className(PromotionId::class)
+                ->overridable(true)
+                ->build(),
             /*
              * The name of the location where the promotion should render,
              * e.g. "desktop-home-sidebar" or "smartphone-global-html-head".
