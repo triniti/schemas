@@ -189,6 +189,8 @@ __BREAKING CHANGES__
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:has-blocks`
     * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:dam:mixin:asset`
+    * Add `description` text field with with 5000 limit.
   * `triniti:ovp.kaltura:mixin:media-entry`
     * Extend `triniti:ovp:mixin:video:v1` to force concrete message to also be a video.
   * `triniti:people:mixin:has-people`
