@@ -23,9 +23,9 @@ export default class AssetDisassociatedV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       /*
-       * The asset ref disassociated from this node ref.
+       * The node_ref to disassociate from the asset's node_ref.
        */
-      Fb.create('asset_ref', T.IdentifierType.create())
+      Fb.create('associated_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
     ];

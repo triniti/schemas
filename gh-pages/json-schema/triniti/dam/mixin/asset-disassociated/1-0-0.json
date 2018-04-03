@@ -169,10 +169,10 @@
         "rule": "single"
       }
     },
-    "asset_ref": {
+    "associated_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "The asset ref disassociated from this node ref.",
+      "description": "The node_ref to disassociate from the asset's node_ref.",
       "pbj": {
         "type": "identifier",
         "rule": "single"

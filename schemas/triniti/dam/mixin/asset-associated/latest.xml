@@ -15,9 +15,9 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="asset_ref" type="identifier">
+      <field name="associated_ref" type="identifier">
         <description>
-          The asset ref associated with this node ref.
+          The node_ref to associate with the asset's node_ref.
         </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>

@@ -23,9 +23,9 @@ export default class AssetAssociatedV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       /*
-       * The asset ref associated with this node ref.
+       * The node_ref to associate with the asset's node_ref.
        */
-      Fb.create('asset_ref', T.IdentifierType.create())
+      Fb.create('associated_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
     ];

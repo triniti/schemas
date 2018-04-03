@@ -29,9 +29,9 @@ final class AssetDisassociatedV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             /*
-             * The asset ref disassociated from this node ref.
+             * The node_ref to disassociate from the asset's node_ref.
              */
-            Fb::create('asset_ref', T\IdentifierType::create())
+            Fb::create('associated_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
         ];

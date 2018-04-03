@@ -29,9 +29,9 @@ final class AssetAssociatedV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             /*
-             * The asset ref associated with this node ref.
+             * The node_ref to associate with the asset's node_ref.
              */
-            Fb::create('asset_ref', T\IdentifierType::create())
+            Fb::create('associated_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
         ];
