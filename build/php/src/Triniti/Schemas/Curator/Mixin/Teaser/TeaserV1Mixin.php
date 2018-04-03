@@ -46,12 +46,6 @@ final class TeaserV1Mixin extends AbstractMixin
                 ->asAList()
                 ->className(NodeRef::class)
                 ->build(),
-            /*
-             * A reference to a target teaserable node.
-             */
-            Fb::create('target_ref', T\IdentifierType::create())
-                ->className(NodeRef::class)
-                ->build(),
         ];
     }
 }

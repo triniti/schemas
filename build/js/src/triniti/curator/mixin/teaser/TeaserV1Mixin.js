@@ -40,12 +40,6 @@ export default class TeaserV1Mixin extends Mixin {
         .asAList()
         .classProto(NodeRef)
         .build(),
-      /*
-       * A reference to a target teaserable node.
-       */
-      Fb.create('target_ref', T.IdentifierType.create())
-        .classProto(NodeRef)
-        .build(),
     ];
   }
 }

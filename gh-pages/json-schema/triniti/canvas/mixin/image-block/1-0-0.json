@@ -1,0 +1,36 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/image-block/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "etag": {
+      "type": "string",
+      "pattern": "^[\\w\\.:-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "css_class": {
+      "type": "string",
+      "pattern": "^[\\w\\s-]+$",
+      "description": "In rendering environments that support HTML the css_class can be appended to the dom elements' class attribute.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "node_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    }
+  },
+  "required": [
+    "node_ref"
+  ],
+  "additionalProperties": true
+}

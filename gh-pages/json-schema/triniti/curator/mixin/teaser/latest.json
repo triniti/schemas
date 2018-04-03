@@ -194,15 +194,6 @@
         "type": "identifier",
         "rule": "list"
       }
-    },
-    "target_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to a target teaserable node.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
     }
   },
   "required": [

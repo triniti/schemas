@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaser/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/youtube-video-teaser/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -194,10 +194,19 @@
         "type": "identifier",
         "rule": "list"
       }
+    },
+    "youtube_video_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
     }
   },
   "required": [
-    "_id"
+    "_id",
+    "youtube_video_id"
   ],
   "additionalProperties": true
 }
