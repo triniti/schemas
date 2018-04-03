@@ -27,6 +27,13 @@
         "type": "identifier",
         "rule": "single"
       }
+    },
+    "autoplay": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
     }
   },
   "required": [

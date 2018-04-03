@@ -18,6 +18,7 @@ trait VideoBlockV1Trait
         return [
             'etag' => $this->get('etag'),
             'node_ref' => (string)$this->get('node_ref'),
+            'autoplay' => $this->get('autoplay'),
         ];
     }
 }

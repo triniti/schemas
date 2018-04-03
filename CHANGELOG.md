@@ -6,9 +6,21 @@
 * __Add Schemas:__
   * `triniti:canvas:mixin:image-block`
   * `triniti:canvas:mixin:video-block`
+  * `triniti:curator:mixin:article-teaser`
   * `triniti:curator:mixin:create-gallery`
+  * `triniti:curator:mixin:create-list`
+  * `triniti:curator:mixin:create-promotion`
+  * `triniti:curator:mixin:create-teaser`
+  * `triniti:curator:mixin:create-widget`
   * `triniti:curator:mixin:delete-gallery`
+  * `triniti:curator:mixin:delete-list`
+  * `triniti:curator:mixin:delete-promotion`
+  * `triniti:curator:mixin:delete-teaser`
+  * `triniti:curator:mixin:delete-widget`
   * `triniti:curator:mixin:expire-gallery`
+  * `triniti:curator:mixin:expire-list`
+  * `triniti:curator:mixin:expire-promotion`
+  * `triniti:curator:mixin:expire-teaser`
   * `triniti:curator:mixin:gallery`
   * `triniti:curator:mixin:gallery-created`
   * `triniti:curator:mixin:gallery-deleted`
@@ -18,20 +30,102 @@
   * `triniti:curator:mixin:gallery-published`
   * `triniti:curator:mixin:gallery-renamed`
   * `triniti:curator:mixin:gallery-scheduled`
+  * `triniti:curator:mixin:gallery-teaser`
   * `triniti:curator:mixin:gallery-unpublished`
   * `triniti:curator:mixin:gallery-updated`
   * `triniti:curator:mixin:get-gallery-history-request`
   * `triniti:curator:mixin:get-gallery-history-response`
   * `triniti:curator:mixin:get-gallery-request`
   * `triniti:curator:mixin:get-gallery-response`
+  * `triniti:curator:mixin:get-list-history-request`
+  * `triniti:curator:mixin:get-list-history-response`
+  * `triniti:curator:mixin:get-list-request`
+  * `triniti:curator:mixin:get-list-response`
+  * `triniti:curator:mixin:get-promotion-history-request`
+  * `triniti:curator:mixin:get-promotion-history-response`
+  * `triniti:curator:mixin:get-promotion-request`
+  * `triniti:curator:mixin:get-promotion-response`
+  * `triniti:curator:mixin:get-teaser-history-request`
+  * `triniti:curator:mixin:get-teaser-history-response`
+  * `triniti:curator:mixin:get-teaser-request`
+  * `triniti:curator:mixin:get-teaser-response`
+  * `triniti:curator:mixin:get-widget-history-request`
+  * `triniti:curator:mixin:get-widget-history-response`
+  * `triniti:curator:mixin:get-widget-request`
+  * `triniti:curator:mixin:get-widget-response`
+  * `triniti:curator:mixin:list`
+  * `triniti:curator:mixin:list-created`
+  * `triniti:curator:mixin:list-deleted`
+  * `triniti:curator:mixin:list-expired`
+  * `triniti:curator:mixin:list-marked-as-draft`
+  * `triniti:curator:mixin:list-marked-as-pending`
+  * `triniti:curator:mixin:list-published`
+  * `triniti:curator:mixin:list-renamed`
+  * `triniti:curator:mixin:list-scheduled`
+  * `triniti:curator:mixin:list-teaser`
+  * `triniti:curator:mixin:list-unpublished`
+  * `triniti:curator:mixin:list-updated`
   * `triniti:curator:mixin:mark-gallery-as-draft`
   * `triniti:curator:mixin:mark-gallery-as-pending`
+  * `triniti:curator:mixin:mark-list-as-draft`
+  * `triniti:curator:mixin:mark-list-as-pending`
+  * `triniti:curator:mixin:mark-promotion-as-draft`
+  * `triniti:curator:mixin:mark-promotion-as-pending`
+  * `triniti:curator:mixin:mark-teaser-as-draft`
+  * `triniti:curator:mixin:mark-teaser-as-pending`
+  * `triniti:curator:mixin:promotion`
+  * `triniti:curator:mixin:promotion-created`
+  * `triniti:curator:mixin:promotion-deleted`
+  * `triniti:curator:mixin:promotion-expired`
+  * `triniti:curator:mixin:promotion-marked-as-draft`
+  * `triniti:curator:mixin:promotion-marked-as-pending`
+  * `triniti:curator:mixin:promotion-published`
+  * `triniti:curator:mixin:promotion-scheduled`
+  * `triniti:curator:mixin:promotion-unpublished`
+  * `triniti:curator:mixin:promotion-updated`
   * `triniti:curator:mixin:publish-gallery`
+  * `triniti:curator:mixin:publish-list`
+  * `triniti:curator:mixin:publish-promotion`
+  * `triniti:curator:mixin:publish-teaser`
   * `triniti:curator:mixin:rename-gallery`
+  * `triniti:curator:mixin:rename-list`
   * `triniti:curator:mixin:search-galleries-request`
   * `triniti:curator:mixin:search-galleries-response`
+  * `triniti:curator:mixin:search-lists-request`
+  * `triniti:curator:mixin:search-lists-response`
+  * `triniti:curator:mixin:search-promotions-request`
+  * `triniti:curator:mixin:search-promotions-response`
+  * `triniti:curator:mixin:search-teasers-request`
+  * `triniti:curator:mixin:search-teasers-response`
+  * `triniti:curator:mixin:search-widgets-request`
+  * `triniti:curator:mixin:search-widgets-response`
+  * `triniti:curator:mixin:teaser`
+  * `triniti:curator:mixin:teaser-created`
+  * `triniti:curator:mixin:teaser-deleted`
+  * `triniti:curator:mixin:teaser-expired`
+  * `triniti:curator:mixin:teaser-has-target`
+  * `triniti:curator:mixin:teaser-marked-as-draft`
+  * `triniti:curator:mixin:teaser-marked-as-pending`
+  * `triniti:curator:mixin:teaser-published`
+  * `triniti:curator:mixin:teaser-scheduled`
+  * `triniti:curator:mixin:teaser-unpublished`
+  * `triniti:curator:mixin:teaser-updated`
+  * `triniti:curator:mixin:teaserable`
   * `triniti:curator:mixin:unpublish-gallery`
+  * `triniti:curator:mixin:unpublish-list`
+  * `triniti:curator:mixin:unpublish-promotion`
+  * `triniti:curator:mixin:unpublish-teaser`
   * `triniti:curator:mixin:update-gallery`
+  * `triniti:curator:mixin:update-list`
+  * `triniti:curator:mixin:update-promotion`
+  * `triniti:curator:mixin:update-teaser`
+  * `triniti:curator:mixin:update-widget`
+  * `triniti:curator:mixin:video-teaser`
+  * `triniti:curator:mixin:widget`
+  * `triniti:curator:mixin:widget-created`
+  * `triniti:curator:mixin:widget-deleted`
+  * `triniti:curator:mixin:widget-updated`
+  * `triniti:curator:mixin:youtube-video-teaser`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:has-blocks`
     * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.

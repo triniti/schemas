@@ -8,6 +8,7 @@
     <fields>
       <field name="is_nsfw" type="boolean"/>
     </fields>
+
     <php-options>
       <insertion-points>
         <imports/>

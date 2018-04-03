@@ -13,6 +13,38 @@
         <default>order-date-desc</default>
         <enum id="triniti:curator:search-teasers-sort"/>
       </field>
+      <field name="types" type="string" format="slug" rule="set">
+        <description>
+          A set of teaser types (node must match at least one) to include in
+          the search results, such as image-teaser or video-teaser.
+        </description>
+      </field>
+      <field name="gallery_ref" type="identifier">
+        <description>
+          A node ref of a gallery that a teaser must be associated with to match the search request.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="list_ref" type="identifier">
+        <description>
+          A node ref of a list that a teaser must be associated with to match the search request.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

@@ -17,6 +17,7 @@ trait PromotionV1Trait
     {
         return [
             '_id' => (string)$this->get('_id'),
+            'slot' => (string)$this->get('slot'),
         ];
     }
 }

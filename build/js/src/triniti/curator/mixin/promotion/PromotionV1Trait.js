@@ -6,6 +6,7 @@ export default function PromotionV1Trait(m) {
     getUriTemplateVars() {
       return {
         _id: `${this.get('_id', '')}`,
+        slot: this.get('slot'),
       };
     }
   });

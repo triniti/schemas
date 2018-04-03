@@ -344,6 +344,43 @@
         "type": "string-enum",
         "rule": "single"
       }
+    },
+    "types": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "A set of teaser types (node must match at least one) to include in the search results, such as image-teaser or video-teaser.",
+      "pbj": {
+        "type": "string",
+        "rule": "set",
+        "format": "slug"
+      }
+    },
+    "gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A node ref of a gallery that a teaser must be associated with to match the search request.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "list_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A node ref of a list that a teaser must be associated with to match the search request.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
     }
   },
   "required": [

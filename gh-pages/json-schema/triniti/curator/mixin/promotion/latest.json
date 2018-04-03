@@ -163,6 +163,53 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "slot": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The name of the location where the promotion should render, e.g. \"desktop-home-sidebar\" or \"smartphone-global-html-head\".",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
+    "pre_render_code": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "A string containing (HTML, JavaScript, CSS, etc.) that is injected into the application before the widgets render.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "post_render_code": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "A string containing (HTML, JavaScript, CSS, etc.) that is injected into the application after the widgets render.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "widget_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      ],
+      "additionalProperties": false,
+      "description": "A list of widget node refs that this promotion will render.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "list"
+      }
     }
   },
   "required": [

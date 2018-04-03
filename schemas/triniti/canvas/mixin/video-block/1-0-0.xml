@@ -8,6 +8,7 @@
     <fields>
       <field name="autoplay" type="boolean"/>
     </fields>
+
     <php-options>
       <insertion-points>
         <imports/>

@@ -7,6 +7,7 @@ export default function VideoBlockV1Trait(m) {
       return {
         etag: this.get('etag'),
         node_ref: `${this.get('node_ref', '')}`,
+        autoplay: this.get('autoplay'),
       };
     }
   });

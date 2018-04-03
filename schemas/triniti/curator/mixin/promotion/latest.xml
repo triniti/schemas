@@ -5,6 +5,37 @@
 
   <schema id="pbj:triniti:curator:mixin:promotion:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
+      <field name="slot" type="string" format="slug">
+        <description>
+          The name of the location where the promotion should render,
+          e.g. "desktop-home-sidebar" or "smartphone-global-html-head".
+        </description>
+      </field>
+      <field name="pre_render_code" type="text">
+        <description>
+          A string containing (HTML, JavaScript, CSS, etc.) that is injected into
+          the application before the widgets render.
+        </description>
+      </field>
+      <field name="post_render_code" type="text">
+        <description>
+          A string containing (HTML, JavaScript, CSS, etc.) that is injected into
+          the application after the widgets render.
+        </description>
+      </field>
+      <field name="widget_refs" type="identifier" rule="list">
+        <description>
+          A list of widget node refs that this promotion will render.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
     </fields>
 
     <php-options>
@@ -19,6 +50,7 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
+        'slot' => (string)$this->get('slot'),
     ];
 }
           ]]>
@@ -36,6 +68,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
+    slot: this.get('slot'),
   };
 }
           ]]>
