@@ -4,6 +4,8 @@
 ## v0.1.12
 * Add `toNodeRef` method to `AssetId` in php and javascript.
 * __Add Schemas:__
+  * `triniti:canvas:mixin:image-block`
+  * `triniti:canvas:mixin:video-block`
   * `triniti:curator:mixin:create-gallery`
   * `triniti:curator:mixin:delete-gallery`
   * `triniti:curator:mixin:expire-gallery`

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:canvas:mixin:video-block:1-0-0" mixin="true"
-      extends="triniti:canvas:mixin:node-ref-block:v1">
+          extends="triniti:canvas:mixin:node-ref-block:v1">
+    <fields>
+      <field name="autoplay" type="boolean"/>
+    </fields>
     <php-options>
       <insertion-points>
         <imports/>
@@ -18,6 +21,7 @@ public function getUriTemplateVars()
     return [
         'etag' => $this->get('etag'),
         'node_ref' => (string)$this->get('node_ref'),
+        'autoplay' => $this->get('autoplay'),
     ];
 }
           ]]>
@@ -36,6 +40,7 @@ getUriTemplateVars() {
   return {
     etag: this.get('etag'),
     node_ref: `${this.get('node_ref', '')}`,
+    autoplay: this.get('autoplay'),
   };
 }
           ]]>
