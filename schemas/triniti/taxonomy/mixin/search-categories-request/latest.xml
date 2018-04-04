@@ -4,5 +4,12 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:taxonomy:mixin:search-categories-request:1-0-0" mixin="true"
-      extends="gdbots:ncr:mixin:search-nodes-request:v1"/>
+      extends="gdbots:ncr:mixin:search-nodes-request:v1">
+    <fields>
+      <field name="sort" type="string-enum">
+        <default>relevance</default>
+        <enum id="triniti:taxonomy:search-categories-sort"/>
+      </field>
+    </fields>
+  </schema>
 </pbj-schema>

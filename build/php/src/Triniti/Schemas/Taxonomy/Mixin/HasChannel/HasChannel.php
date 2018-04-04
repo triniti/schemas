@@ -2,8 +2,8 @@
 // @link http://schemas.triniti.io/json-schema/triniti/taxonomy/mixin/has-channel/latest.json#
 namespace Triniti\Schemas\Taxonomy\Mixin\HasChannel;
 
-use Gdbots\Pbj\Message;
+use Gdbots\Schemas\Ncr\Mixin\Node\Node;
 
-interface HasChannel extends Message
+interface HasChannel extends Node
 {
 }

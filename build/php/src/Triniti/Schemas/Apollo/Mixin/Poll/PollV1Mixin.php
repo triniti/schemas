@@ -8,6 +8,7 @@ use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Apollo\Mixin\PollAnswer\PollAnswer as TrinitiApolloPollAnswer;
+use Triniti\Schemas\Apollo\PollId;
 
 final class PollV1Mixin extends AbstractMixin
 {
@@ -25,6 +26,12 @@ final class PollV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('_id', T\IdentifierType::create())
+                ->required()
+                ->withDefault(function() { return PollId::generate(); })
+                ->className(PollId::class)
+                ->overridable(true)
+                ->build(),
             /*
              * A reference to the image asset to use for widgets, sharing, seo.
              */

@@ -2,6 +2,7 @@
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
+import PersonId from '@triniti/schemas/triniti/people/PersonId';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/types';
 
@@ -18,6 +19,12 @@ export default class PersonV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('_id', T.IdentifierType.create())
+        .required()
+        .withDefault(() => PersonId.generate())
+        .classProto(PersonId)
+        .overridable(true)
+        .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.
        */

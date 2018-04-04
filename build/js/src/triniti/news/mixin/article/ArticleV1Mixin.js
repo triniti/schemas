@@ -1,4 +1,5 @@
 // @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-0.json#
+import ArticleId from '@triniti/schemas/triniti/news/ArticleId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -18,6 +19,12 @@ export default class ArticleV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('_id', T.IdentifierType.create())
+        .required()
+        .withDefault(() => ArticleId.generate())
+        .classProto(ArticleId)
+        .overridable(true)
+        .build(),
       Fb.create('is_homepage_news', T.BooleanType.create())
         .withDefault(true)
         .build(),

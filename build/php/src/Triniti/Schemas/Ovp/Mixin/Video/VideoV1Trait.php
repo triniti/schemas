@@ -19,6 +19,8 @@ trait VideoV1Trait
             '_id' => (string)$this->get('_id'),
             'slug' => $this->get('slug'),
             'mpm' => $this->get('mpm'),
+            'kaltura_entry_id' => $this->get('kaltura_entry_id'),
+            'kaltura_partner_id' => $this->get('kaltura_partner_id'),
         ];
     }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:mixin:search-timelines-response:1-0-0" mixin="true"
+      extends="gdbots:ncr:mixin:search-nodes-response:v1">
+    <fields>
+      <field name="nodes" type="message" rule="list">
+        <any-of>
+          <curie>triniti:curator:mixin:timeline</curie>
+        </any-of>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

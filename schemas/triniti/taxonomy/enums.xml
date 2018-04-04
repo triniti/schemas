@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-enums xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/enums.xsd">
+
+  <enums namespace="triniti:taxonomy">
+    <enum name="search-categories-sort" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="RELEVANCE" value="relevance"/>
+      <option key="POPULARITY" value="popularity"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
+      <option key="CREATED_AT_ASC" value="created-at-asc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
+      <option key="TITLE_ASC" value="title-asc"/>
+    </enum>
+  </enums>
+</pbj-enums>

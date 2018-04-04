@@ -2,8 +2,8 @@
 // @link http://schemas.triniti.io/json-schema/triniti/taxonomy/mixin/categorizable/latest.json#
 namespace Triniti\Schemas\Taxonomy\Mixin\Categorizable;
 
-use Gdbots\Pbj\Message;
+use Gdbots\Schemas\Ncr\Mixin\Node\Node;
 
-interface Categorizable extends Message
+interface Categorizable extends Node
 {
 }

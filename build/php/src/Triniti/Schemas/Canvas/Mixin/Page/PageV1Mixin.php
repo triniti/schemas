@@ -8,6 +8,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Triniti\Schemas\Canvas\PageId;
 
 final class PageV1Mixin extends AbstractMixin
 {
@@ -25,6 +26,12 @@ final class PageV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('_id', T\IdentifierType::create())
+                ->required()
+                ->withDefault(function() { return PageId::generate(); })
+                ->className(PageId::class)
+                ->overridable(true)
+                ->build(),
             /*
              * A reference to the image asset to use for widgets, sharing, seo.
              */

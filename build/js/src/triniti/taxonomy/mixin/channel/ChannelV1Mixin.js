@@ -1,4 +1,5 @@
 // @link http://schemas.triniti.io/json-schema/triniti/taxonomy/mixin/channel/1-0-0.json#
+import ChannelId from '@triniti/schemas/triniti/taxonomy/ChannelId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -18,6 +19,12 @@ export default class ChannelV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('_id', T.IdentifierType.create())
+        .required()
+        .withDefault(() => ChannelId.generate())
+        .classProto(ChannelId)
+        .overridable(true)
+        .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.
        */

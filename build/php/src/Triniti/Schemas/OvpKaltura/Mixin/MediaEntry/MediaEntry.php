@@ -2,8 +2,8 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.kaltura/mixin/media-entry/latest.json#
 namespace Triniti\Schemas\OvpKaltura\Mixin\MediaEntry;
 
-use Gdbots\Pbj\Message;
+use Triniti\Schemas\Ovp\Mixin\Video\Video;
 
-interface MediaEntry extends Message
+interface MediaEntry extends Video
 {
 }

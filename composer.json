@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "require": {
     "php": ">=7.1",
-    "gdbots/schemas": "^1.4.4"
+    "gdbots/schemas": "^1.5.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.4",

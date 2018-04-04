@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <!--
+  fixme: add content type? for generalized classification
+  -->
+  <schema id="pbj:triniti:curator:mixin:teaser:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+    <fields>
+      <field name="_id" type="identifier" required="true" overridable="true">
+        <php-options>
+          <imports>use Triniti\Schemas\Curator\TeaserId;</imports>
+          <class-name>TeaserId::class</class-name>
+          <default>function() { return TeaserId::generate(); }</default>
+        </php-options>
+        <js-options>
+          <imports>import TeaserId from '@triniti/schemas/triniti/curator/TeaserId';</imports>
+          <class-proto>TeaserId</class-proto>
+          <default>() => TeaserId.generate()</default>
+        </js-options>
+      </field>
+      <field name="image_ref" type="identifier">
+        <description>
+          A reference to the image asset to use for widgets, sharing, seo.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="description" type="text" max="5000">
+        <description>
+          A description of the teaser (usually a few sentences). It should typically
+          not have HTML as it is used in metadata, feeds, SERP and social.
+        </description>
+      </field>
+      <field name="related_teasers" type="identifier" rule="list">
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>
