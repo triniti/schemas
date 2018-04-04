@@ -126,6 +126,9 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/user/1-0-0.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/user/1-0-1.json#"
         }
       ]
     }
