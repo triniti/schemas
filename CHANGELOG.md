@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.2.1
+* __Add Schemas:__
+  * `triniti:curator:mixin:gallery-teaser`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:video-block`
+    * Add `start_at` small-int field.
+  * `triniti:canvas:mixin:youtube-video-block`
+    * Add `start_at` small-int field.
+
+
 ## v0.2.0
 __BREAKING CHANGES__
 
@@ -166,7 +176,6 @@ __BREAKING CHANGES__
   * `triniti:canvas:mixin:video-block`
   * `triniti:curator:mixin:article-teaser`
   * `triniti:curator:mixin:gallery`
-  * `triniti:curator:mixin:gallery-teaser`
   * `triniti:curator:mixin:promotion`
   * `triniti:curator:mixin:search-galleries-request`
   * `triniti:curator:mixin:search-galleries-response`

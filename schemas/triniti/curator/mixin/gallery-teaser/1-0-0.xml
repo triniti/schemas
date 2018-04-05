@@ -3,13 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:canvas:mixin:youtube-video-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
-    <fields>
-      <field name="id" type="string" pattern="^[\w-]+$" required="true"/>
-      <field name="autoplay" type="boolean"/>
-      <field name="start_at" type="small-int"/>
-    </fields>
-
+  <schema id="pbj:triniti:curator:mixin:gallery-teaser:1-0-0" mixin="true"
+      extends="triniti:curator:mixin:teaser-has-target:v1">
     <php-options>
       <insertion-points>
         <imports/>
@@ -21,10 +16,8 @@
 public function getUriTemplateVars()
 {
     return [
-        'etag' => $this->get('etag'),
-        'id' => $this->get('id'),
-        'autoplay' => $this->get('autoplay'),
-        'start_at' => $this->get('start_at'),
+        '_id' => (string)$this->get('_id'),
+        'target_ref' => (string)$this->get('target_ref'),
     ];
 }
           ]]>
@@ -41,10 +34,8 @@ public function getUriTemplateVars()
  */
 getUriTemplateVars() {
   return {
-    etag: this.get('etag'),
-    id: this.get('id'),
-    autoplay: this.get('autoplay'),
-    start_at: this.get('start_at'),
+    _id: `${this.get('_id', '')}`,
+    target_ref: `${this.get('target_ref', '')}`,
   };
 }
           ]]>

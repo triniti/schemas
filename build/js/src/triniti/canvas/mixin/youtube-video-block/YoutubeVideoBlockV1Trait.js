@@ -8,6 +8,7 @@ export default function YoutubeVideoBlockV1Trait(m) {
         etag: this.get('etag'),
         id: this.get('id'),
         autoplay: this.get('autoplay'),
+        start_at: this.get('start_at'),
       };
     }
   });

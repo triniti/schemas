@@ -19,6 +19,7 @@ trait YoutubeVideoBlockV1Trait
             'etag' => $this->get('etag'),
             'id' => $this->get('id'),
             'autoplay' => $this->get('autoplay'),
+            'start_at' => $this->get('start_at'),
         ];
     }
 }
