@@ -29,6 +29,8 @@ final class YoutubeVideoBlockV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('autoplay', T\BooleanType::create())
                 ->build(),
+            Fb::create('start_at', T\SmallIntType::create())
+                ->build(),
         ];
     }
 }
