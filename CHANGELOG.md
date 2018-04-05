@@ -1,13 +1,15 @@
 # CHANGELOG
 
+
 ## v0.2.1
-* __Modify Schemas:__ _(no version changes as there is no production use yet)_
-  * `triniti:canvas:mixin:video-block`
-      * Add `start_at` small-int field
-  * `triniti:canvas:mixin:youtube-video-block`
-      * Add `start_at` small-int field
 * __Add Schemas:__
   * `triniti:curator:mixin:gallery-teaser`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:video-block`
+    * Add `start_at` small-int field.
+  * `triniti:canvas:mixin:youtube-video-block`
+    * Add `start_at` small-int field.
+
 
 ## v0.2.0
 __BREAKING CHANGES__
