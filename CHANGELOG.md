@@ -2,10 +2,10 @@
 
 ## v0.2.2
 * __Add Schemas:__
-  * `triniti:dam:mixin:assets-associated`
-  * `triniti:dam:mixin:assets-disassociated`
-  * `triniti:dam:mixin:associate-assets`
-  * `triniti:dam:mixin:disassociate-assets`
+  * `triniti:dam:mixin:asset-linked`
+  * `triniti:dam:mixin:asset-unlinked`
+  * `triniti:dam:mixin:link-assets`
+  * `triniti:dam:mixin:unlink-assets`
 
 
 ## v0.2.1
