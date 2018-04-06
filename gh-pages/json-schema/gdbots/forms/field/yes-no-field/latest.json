@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/field/yes-no-field/1-0-1.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/field/yes-no-field/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:gdbots:forms:field:yes-no-field:1-0-1"
+      "default": "pbj:gdbots:forms:field:yes-no-field:1-0-0"
     },
     "name": {
       "type": "string",
@@ -78,14 +78,6 @@
       "maxLength": 255,
       "pbj": {
         "type": "string",
-        "rule": "single"
-      }
-    },
-    "is_consent": {
-      "type": "boolean",
-      "description": "If this field relates to acquiring a user's consent, e.g. subscribing to a newsletter, then this field can be used to ensure that consent is tracked.",
-      "pbj": {
-        "type": "boolean",
         "rule": "single"
       }
     }
