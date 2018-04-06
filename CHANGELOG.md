@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v0.1.12
+## v0.2.2
 * __Add Schemas:__
   * `triniti:dam:mixin:assets-associated`
   * `triniti:dam:mixin:assets-disassociated`
