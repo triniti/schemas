@@ -311,6 +311,25 @@
         "type": "text",
         "rule": "single"
       }
+    },
+    "sort": {
+      "type": "string",
+      "default": "relevance",
+      "enum": [
+        "unknown",
+        "relevance",
+        "popularity",
+        "created-at-desc",
+        "created-at-asc",
+        "updated-at-desc",
+        "updated-at-asc",
+        "title-desc",
+        "title-asc"
+      ],
+      "pbj": {
+        "type": "string-enum",
+        "rule": "single"
+      }
     }
   },
   "required": [

@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:ovp.kaltura:mixin:media-entry:1-0-0" mixin="true">
+  <schema id="pbj:triniti:ovp.kaltura:mixin:media-entry:1-0-0" mixin="true" extends="triniti:ovp:mixin:video:v1">
     <fields>
       <field name="kaltura_entry_id" type="string" pattern="^[\w-]+$"/>
       <field name="kaltura_partner_id" type="string" pattern="^[\w-]+$"/>

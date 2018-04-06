@@ -7,6 +7,14 @@ use Gdbots\Pbj\Assertion;
 use Gdbots\Pbj\Exception\AssertionFailed;
 use Gdbots\Pbj\WellKnown\Identifier;
 use Gdbots\Pbj\WellKnown\UuidIdentifier;
+use Gdbots\Schemas\Ncr\NodeRef;
+use Triniti\Schemas\Dam\Mixin\ArchiveAsset\ArchiveAssetV1Mixin;
+use Triniti\Schemas\Dam\Mixin\AudioAsset\AudioAssetV1Mixin;
+use Triniti\Schemas\Dam\Mixin\CodeAsset\CodeAssetV1Mixin;
+use Triniti\Schemas\Dam\Mixin\DocumentAsset\DocumentAssetV1Mixin;
+use Triniti\Schemas\Dam\Mixin\ImageAsset\ImageAssetV1Mixin;
+use Triniti\Schemas\Dam\Mixin\UnknownAsset\UnknownAssetV1Mixin;
+use Triniti\Schemas\Dam\Mixin\VideoAsset\VideoAssetV1Mixin;
 
 /**
  * An asset id is a composite id that contains enough data to easily
@@ -230,5 +238,34 @@ final class AssetId implements Identifier
             null === $quality ? '' : '_' . $quality,
             $this->ext
         );
+    }
+
+    /**
+     * @return NodeRef
+     */
+    public function toNodeRef(): NodeRef
+    {
+        switch ($this->type) {
+            case 'archive':
+                return new NodeRef(ArchiveAssetV1Mixin::findOne()->getQName(), $this->id);
+
+            case 'audio':
+                return new NodeRef(AudioAssetV1Mixin::findOne()->getQName(), $this->id);
+
+            case 'code':
+                return new NodeRef(CodeAssetV1Mixin::findOne()->getQName(), $this->id);
+
+            case 'document':
+                return new NodeRef(DocumentAssetV1Mixin::findOne()->getQName(), $this->id);
+
+            case 'image':
+                return new NodeRef(ImageAssetV1Mixin::findOne()->getQName(), $this->id);
+
+            case 'video':
+                return new NodeRef(VideoAssetV1Mixin::findOne()->getQName(), $this->id);
+
+            default:
+                return new NodeRef(UnknownAssetV1Mixin::findOne()->getQName(), $this->id);
+        }
     }
 }

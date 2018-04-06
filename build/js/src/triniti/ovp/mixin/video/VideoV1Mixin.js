@@ -6,6 +6,7 @@ import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/types';
 import TvpgRating from '@triniti/schemas/triniti/ovp/enums/TvpgRating';
+import VideoId from '@triniti/schemas/triniti/ovp/VideoId';
 
 export default class VideoV1Mixin extends Mixin {
   /**
@@ -20,6 +21,12 @@ export default class VideoV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('_id', T.IdentifierType.create())
+        .required()
+        .withDefault(() => VideoId.generate())
+        .classProto(VideoId)
+        .overridable(true)
+        .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.
        */

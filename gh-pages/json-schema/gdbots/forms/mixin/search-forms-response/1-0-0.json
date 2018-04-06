@@ -184,6 +184,9 @@
         },
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-1.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-2.json#"
         }
       ]
     }

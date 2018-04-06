@@ -4,6 +4,7 @@ namespaces:
   - triniti:apollo
   - triniti:canvas
   - triniti:common
+  - triniti:curator
   - triniti:dam
   - triniti:news
   - triniti:ovp

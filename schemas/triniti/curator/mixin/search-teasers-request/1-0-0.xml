@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:mixin:search-teasers-request:1-0-0" mixin="true"
+      extends="gdbots:ncr:mixin:search-nodes-request:v1">
+    <fields>
+      <field name="is_unlisted" type="trinary">
+        <default>2</default>
+      </field>
+      <field name="sort" type="string-enum">
+        <default>order-date-desc</default>
+        <enum id="triniti:curator:search-teasers-sort"/>
+      </field>
+      <field name="types" type="string" format="slug" rule="set">
+        <description>
+          A set of teaser types (node must match at least one) to include in
+          the search results, such as image-teaser or video-teaser.
+        </description>
+      </field>
+      <field name="gallery_ref" type="identifier">
+        <description>
+          A node ref of a gallery that a teaser must be associated with to match the search request.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="timeline_ref" type="identifier">
+        <description>
+          A node ref of a timeline that a teaser must be associated with to match the search request.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

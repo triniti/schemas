@@ -8,6 +8,219 @@
   * `triniti:dam:mixin:disassociate-assets`
 
 
+## v0.2.1
+* __Add Schemas:__
+  * `triniti:curator:mixin:gallery-teaser`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:video-block`
+    * Add `start_at` small-int field.
+  * `triniti:canvas:mixin:youtube-video-block`
+    * Add `start_at` small-int field.
+
+
+## v0.2.0
+__BREAKING CHANGES__
+
+* __Delete Schemas:__ all Ncr crud (and expire, mark-as-X, publish, etc.) mixins, resolve schemas by convention instead to eliminate extra code (primarily in javascript apps where bundle size is critical).  It is still possible to define a custom mixin and use it but it's optional now.
+  * `triniti:apollo:mixin:create-poll`
+  * `triniti:apollo:mixin:delete-poll`
+  * `triniti:apollo:mixin:expire-poll`
+  * `triniti:apollo:mixin:get-poll-batch-request`
+  * `triniti:apollo:mixin:get-poll-batch-response`
+  * `triniti:apollo:mixin:get-poll-history-request`
+  * `triniti:apollo:mixin:get-poll-history-response`
+  * `triniti:apollo:mixin:get-poll-request`
+  * `triniti:apollo:mixin:get-poll-response`
+  * `triniti:apollo:mixin:mark-poll-as-draft`
+  * `triniti:apollo:mixin:mark-poll-as-pending`
+  * `triniti:apollo:mixin:poll-created`
+  * `triniti:apollo:mixin:poll-deleted`
+  * `triniti:apollo:mixin:poll-expired`
+  * `triniti:apollo:mixin:poll-marked-as-draft`
+  * `triniti:apollo:mixin:poll-marked-as-pending`
+  * `triniti:apollo:mixin:poll-published`
+  * `triniti:apollo:mixin:poll-scheduled`
+  * `triniti:apollo:mixin:poll-unpublished`
+  * `triniti:apollo:mixin:poll-updated`
+  * `triniti:apollo:mixin:publish-poll`
+  * `triniti:apollo:mixin:unpublish-poll`
+  * `triniti:apollo:mixin:update-poll`
+  * `triniti:canvas:mixin:create-page`
+  * `triniti:canvas:mixin:delete-page`
+  * `triniti:canvas:mixin:expire-page`
+  * `triniti:canvas:mixin:get-page-batch-request`
+  * `triniti:canvas:mixin:get-page-batch-response`
+  * `triniti:canvas:mixin:get-page-history-request`
+  * `triniti:canvas:mixin:get-page-history-response`
+  * `triniti:canvas:mixin:get-page-request`
+  * `triniti:canvas:mixin:get-page-response`
+  * `triniti:canvas:mixin:mark-page-as-draft`
+  * `triniti:canvas:mixin:mark-page-as-pending`
+  * `triniti:canvas:mixin:page-created`
+  * `triniti:canvas:mixin:page-deleted`
+  * `triniti:canvas:mixin:page-expired`
+  * `triniti:canvas:mixin:page-marked-as-draft`
+  * `triniti:canvas:mixin:page-marked-as-pending`
+  * `triniti:canvas:mixin:page-published`
+  * `triniti:canvas:mixin:page-renamed`
+  * `triniti:canvas:mixin:page-scheduled`
+  * `triniti:canvas:mixin:page-unpublished`
+  * `triniti:canvas:mixin:page-updated`
+  * `triniti:canvas:mixin:page`
+  * `triniti:canvas:mixin:publish-page`
+  * `triniti:canvas:mixin:rename-page`
+  * `triniti:canvas:mixin:search-pages-request`
+  * `triniti:canvas:mixin:search-pages-response`
+  * `triniti:canvas:mixin:unpublish-page`
+  * `triniti:canvas:mixin:update-page`
+  * `triniti:dam:mixin:asset-created`
+  * `triniti:dam:mixin:asset-deleted`
+  * `triniti:dam:mixin:asset-expired`
+  * `triniti:dam:mixin:asset-updated`
+  * `triniti:dam:mixin:create-asset`
+  * `triniti:dam:mixin:delete-asset`
+  * `triniti:dam:mixin:expire-asset`
+  * `triniti:dam:mixin:get-asset-batch-request`
+  * `triniti:dam:mixin:get-asset-batch-response`
+  * `triniti:dam:mixin:get-asset-history-request`
+  * `triniti:dam:mixin:get-asset-history-response`
+  * `triniti:dam:mixin:get-asset-request`
+  * `triniti:dam:mixin:get-asset-response`
+  * `triniti:dam:mixin:update-asset`
+  * `triniti:news:mixin:article-created`
+  * `triniti:news:mixin:article-deleted`
+  * `triniti:news:mixin:article-expired`
+  * `triniti:news:mixin:article-locked`
+  * `triniti:news:mixin:article-marked-as-draft`
+  * `triniti:news:mixin:article-marked-as-pending`
+  * `triniti:news:mixin:article-published`
+  * `triniti:news:mixin:article-renamed`
+  * `triniti:news:mixin:article-scheduled`
+  * `triniti:news:mixin:article-unlocked`
+  * `triniti:news:mixin:article-unpublished`
+  * `triniti:news:mixin:article-updated`
+  * `triniti:news:mixin:create-article`
+  * `triniti:news:mixin:delete-article`
+  * `triniti:news:mixin:expire-article`
+  * `triniti:news:mixin:get-article-batch-request`
+  * `triniti:news:mixin:get-article-batch-response`
+  * `triniti:news:mixin:get-article-history-request`
+  * `triniti:news:mixin:get-article-history-response`
+  * `triniti:news:mixin:get-article-request`
+  * `triniti:news:mixin:get-article-response`
+  * `triniti:news:mixin:lock-article`
+  * `triniti:news:mixin:mark-article-as-draft`
+  * `triniti:news:mixin:mark-article-as-pending`
+  * `triniti:news:mixin:publish-article`
+  * `triniti:news:mixin:rename-article`
+  * `triniti:news:mixin:unlock-article`
+  * `triniti:news:mixin:unpublish-article`
+  * `triniti:news:mixin:update-article`
+  * `triniti:ovp:mixin:create-video`
+  * `triniti:ovp:mixin:delete-video`
+  * `triniti:ovp:mixin:expire-video`
+  * `triniti:ovp:mixin:get-video-batch-request`
+  * `triniti:ovp:mixin:get-video-batch-response`
+  * `triniti:ovp:mixin:get-video-history-request`
+  * `triniti:ovp:mixin:get-video-history-response`
+  * `triniti:ovp:mixin:get-video-request`
+  * `triniti:ovp:mixin:get-video-response`
+  * `triniti:ovp:mixin:mark-video-as-draft`
+  * `triniti:ovp:mixin:mark-video-as-pending`
+  * `triniti:ovp:mixin:publish-video`
+  * `triniti:ovp:mixin:rename-video`
+  * `triniti:ovp:mixin:unpublish-video`
+  * `triniti:ovp:mixin:update-video`
+  * `triniti:ovp:mixin:video-created`
+  * `triniti:ovp:mixin:video-deleted`
+  * `triniti:ovp:mixin:video-expired`
+  * `triniti:ovp:mixin:video-marked-as-draft`
+  * `triniti:ovp:mixin:video-marked-as-pending`
+  * `triniti:ovp:mixin:video-published`
+  * `triniti:ovp:mixin:video-renamed`
+  * `triniti:ovp:mixin:video-scheduled`
+  * `triniti:ovp:mixin:video-unpublished`
+  * `triniti:ovp:mixin:video-updated`
+  * `triniti:people:mixin:create-person`
+  * `triniti:people:mixin:delete-person`
+  * `triniti:people:mixin:get-person-history-request`
+  * `triniti:people:mixin:get-person-history-response`
+  * `triniti:people:mixin:get-person-request`
+  * `triniti:people:mixin:get-person-response`
+  * `triniti:people:mixin:person-created`
+  * `triniti:people:mixin:person-deleted`
+  * `triniti:people:mixin:person-renamed`
+  * `triniti:people:mixin:person-updated`
+  * `triniti:people:mixin:rename-person`
+  * `triniti:taxonomy:mixin:category-created`
+  * `triniti:taxonomy:mixin:category-deleted`
+  * `triniti:taxonomy:mixin:category-renamed`
+  * `triniti:taxonomy:mixin:category-updated`
+  * `triniti:taxonomy:mixin:channel-created`
+  * `triniti:taxonomy:mixin:channel-deleted`
+  * `triniti:taxonomy:mixin:channel-renamed`
+  * `triniti:taxonomy:mixin:channel-updated`
+  * `triniti:taxonomy:mixin:create-category`
+  * `triniti:taxonomy:mixin:create-channel`
+  * `triniti:taxonomy:mixin:delete-category`
+  * `triniti:taxonomy:mixin:delete-channel`
+  * `triniti:taxonomy:mixin:get-category-history-request`
+  * `triniti:taxonomy:mixin:get-category-history-response`
+  * `triniti:taxonomy:mixin:get-category-request`
+  * `triniti:taxonomy:mixin:get-category-response`
+  * `triniti:taxonomy:mixin:get-channel-history-request`
+  * `triniti:taxonomy:mixin:get-channel-history-response`
+  * `triniti:taxonomy:mixin:get-channel-request`
+  * `triniti:taxonomy:mixin:get-channel-response`
+  * `triniti:taxonomy:mixin:rename-category`
+  * `triniti:taxonomy:mixin:rename-channel`
+  * `triniti:taxonomy:mixin:update-category`
+  * `triniti:taxonomy:mixin:update-channel`
+* Add `toNodeRef` method to `AssetId` in php and javascript.
+* Add identifier for all node `_id` fields in this repo so site level doesn't require a custom id.  Still overridable if desired.
+* __Add Schemas:__
+  * `triniti:canvas:mixin:image-block`
+  * `triniti:canvas:mixin:video-block`
+  * `triniti:curator:mixin:article-teaser`
+  * `triniti:curator:mixin:gallery`
+  * `triniti:curator:mixin:promotion`
+  * `triniti:curator:mixin:search-galleries-request`
+  * `triniti:curator:mixin:search-galleries-response`
+  * `triniti:curator:mixin:search-promotions-request`
+  * `triniti:curator:mixin:search-promotions-response`
+  * `triniti:curator:mixin:search-teasers-request`
+  * `triniti:curator:mixin:search-teasers-response`
+  * `triniti:curator:mixin:search-timelines-request`
+  * `triniti:curator:mixin:search-timelines-response`
+  * `triniti:curator:mixin:search-widgets-request`
+  * `triniti:curator:mixin:search-widgets-response`
+  * `triniti:curator:mixin:teaser`
+  * `triniti:curator:mixin:teaser-has-target`
+  * `triniti:curator:mixin:teaserable`
+  * `triniti:curator:mixin:timeline`
+  * `triniti:curator:mixin:timeline-teaser`
+  * `triniti:curator:mixin:video-teaser`
+  * `triniti:curator:mixin:widget`
+  * `triniti:curator:mixin:youtube-video-teaser`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:has-blocks`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:dam:mixin:asset`
+    * Add `description` text field with with 5000 limit.
+  * `triniti:ovp.kaltura:mixin:media-entry`
+    * Extend `triniti:ovp:mixin:video:v1` to force concrete message to also be a video.
+  * `triniti:people:mixin:has-people`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:taxonomy:mixin:categorizable`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:taxonomy:mixin:has-channel`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:taxonomy:mixin:hashtaggable`
+    * Extend `gdbots:ncr:mixin:node:v1` to force concrete message to also be a node.
+  * `triniti:taxonomy:mixin:search-categories-request`
+    * Add `sort` string-enum field using enum `triniti:taxonomy:search-categories-sort`.
+
+
 ## v0.1.11
 * __Add Schemas:__
   * `triniti:canvas:mixin:twitter-follow-button-block`
@@ -115,7 +328,7 @@
     * Add `mpm` string field.
     * Add `image_ref` identifier (NodeRef) field.
     * Add `poster_image_ref` identifier (NodeRef) field.
-* __Remove Schemas:__ _(not used and probably won't be needed due to lazy loading and derefs)_
+* __Delete Schemas:__ _(not used and probably won't be needed due to lazy loading and derefs)_
   * `triniti:apollo:mixin:get-poll-batch-request`
   * `triniti:apollo:mixin:get-poll-batch-response`
   * `triniti:canvas:mixin:get-page-batch-request`

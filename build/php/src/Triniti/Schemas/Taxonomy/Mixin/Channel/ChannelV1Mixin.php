@@ -7,6 +7,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Triniti\Schemas\Taxonomy\ChannelId;
 
 final class ChannelV1Mixin extends AbstractMixin
 {
@@ -24,6 +25,12 @@ final class ChannelV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('_id', T\IdentifierType::create())
+                ->required()
+                ->withDefault(function() { return ChannelId::generate(); })
+                ->className(ChannelId::class)
+                ->overridable(true)
+                ->build(),
             /*
              * A reference to the image asset to use for widgets, sharing, seo.
              */

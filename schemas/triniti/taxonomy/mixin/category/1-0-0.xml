@@ -5,6 +5,18 @@
 
   <schema id="pbj:triniti:taxonomy:mixin:category:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
+      <field name="_id" type="identifier" required="true" overridable="true">
+        <php-options>
+          <imports>use Triniti\Schemas\Taxonomy\CategoryId;</imports>
+          <class-name>CategoryId::class</class-name>
+          <default>function() { return CategoryId::generate(); }</default>
+        </php-options>
+        <js-options>
+          <imports>import CategoryId from '@triniti/schemas/triniti/taxonomy/CategoryId';</imports>
+          <class-proto>CategoryId</class-proto>
+          <default>() => CategoryId.generate()</default>
+        </js-options>
+      </field>
       <field name="image_ref" type="identifier">
         <description>
           A reference to the image asset to use for widgets, sharing, seo.

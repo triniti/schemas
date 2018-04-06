@@ -42,6 +42,13 @@ export default class AssetV1Mixin extends Mixin {
         .pattern('^[\\w\\.:-]+$')
         .build(),
       /*
+       * A description of the asset (usually a few sentences). It should typically
+       * not have HTML as it is used in metadata, feeds, SERP and social.
+       */
+      Fb.create('description', T.TextType.create())
+        .maxLength(5000)
+        .build(),
+      /*
        * A set of node refs which have been associated with this asset.
        */
       Fb.create('associated_refs', T.IdentifierType.create())

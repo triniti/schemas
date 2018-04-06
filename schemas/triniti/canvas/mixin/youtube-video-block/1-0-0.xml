@@ -7,6 +7,7 @@
     <fields>
       <field name="id" type="string" pattern="^[\w-]+$" required="true"/>
       <field name="autoplay" type="boolean"/>
+      <field name="start_at" type="small-int"/>
     </fields>
 
     <php-options>
@@ -23,6 +24,7 @@ public function getUriTemplateVars()
         'etag' => $this->get('etag'),
         'id' => $this->get('id'),
         'autoplay' => $this->get('autoplay'),
+        'start_at' => $this->get('start_at'),
     ];
 }
           ]]>
@@ -42,6 +44,7 @@ getUriTemplateVars() {
     etag: this.get('etag'),
     id: this.get('id'),
     autoplay: this.get('autoplay'),
+    start_at: this.get('start_at'),
   };
 }
           ]]>
