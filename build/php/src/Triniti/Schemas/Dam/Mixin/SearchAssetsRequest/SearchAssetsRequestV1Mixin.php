@@ -39,9 +39,9 @@ final class SearchAssetsRequestV1Mixin extends AbstractMixin
                 ->format(Format::SLUG())
                 ->build(),
             /*
-             * A node ref that an asset must be associated with to match the search request.
+             * A node ref that an asset must be linked with to match the search request.
              */
-            Fb::create('associated_ref', T\IdentifierType::create())
+            Fb::create('linked_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
         ];

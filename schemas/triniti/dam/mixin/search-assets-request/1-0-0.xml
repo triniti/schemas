@@ -16,9 +16,9 @@
           the search results, such as image-asset or video-asset.
         </description>
       </field>
-      <field name="associated_ref" type="identifier">
+      <field name="linked_ref" type="identifier">
         <description>
-          A node ref that an asset must be associated with to match the search request.
+          A node ref that an asset must be linked with to match the search request.
         </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>

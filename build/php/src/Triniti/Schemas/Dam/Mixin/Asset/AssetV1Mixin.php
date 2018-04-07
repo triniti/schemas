@@ -55,9 +55,9 @@ final class AssetV1Mixin extends AbstractMixin
                 ->maxLength(5000)
                 ->build(),
             /*
-             * A set of node refs which have been associated with this asset.
+             * A set of node refs which have been linked to this asset.
              */
-            Fb::create('associated_refs', T\IdentifierType::create())
+            Fb::create('linked_refs', T\IdentifierType::create())
                 ->asASet()
                 ->className(NodeRef::class)
                 ->build(),
