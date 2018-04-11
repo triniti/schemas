@@ -13,6 +13,8 @@
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
       <option key="TITLE_DESC" value="title-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
+      <option key="MIME_TYPE_DESC" value="mime-type-desc"/>
+      <option key="MIME_TYPE_ASC" value="mime-type-asc"/>
     </enum>
   </enums>
 </pbj-enums>

@@ -12,4 +12,6 @@ SearchAssetsSort.configure({
   UPDATED_AT_ASC: 'updated-at-asc',
   TITLE_DESC: 'title-desc',
   TITLE_ASC: 'title-asc',
+  MIME_TYPE_DESC: 'mime-type-desc',
+  MIME_TYPE_ASC: 'mime-type-asc',
 }, 'triniti:dam:search-assets-sort');

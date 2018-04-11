@@ -32,9 +32,9 @@
           not have HTML as it is used in metadata, feeds, SERP and social.
         </description>
       </field>
-      <field name="associated_refs" type="identifier" rule="set">
+      <field name="linked_refs" type="identifier" rule="set">
         <description>
-          A set of node refs which have been associated with this asset.
+          A set of node refs which have been linked to this asset.
         </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>

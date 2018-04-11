@@ -1,6 +1,28 @@
 # CHANGELOG
 
 
+## v0.2.2
+* __Add Schemas:__
+  * `triniti:curator:mixin:carousel-widget`
+  * `triniti:curator:mixin:category-teaser`
+  * `triniti:curator:mixin:channel-teaser`
+  * `triniti:curator:mixin:link-teaser`
+  * `triniti:curator:mixin:page-teaser`
+  * `triniti:curator:mixin:person-teaser`
+  * `triniti:curator:mixin:poll-teaser`
+  * `triniti:dam:mixin:asset-linked`
+  * `triniti:dam:mixin:asset-unlinked`
+  * `triniti:dam:mixin:link-assets`
+  * `triniti:dam:mixin:unlink-assets`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:dam:search-assets-sort`
+    * Add sort by `mime-type-desc` and `mime-type-asc`.
+  * `triniti:dam:mixin:asset`
+    * Rename `associated_refs` field to `linked_refs`.
+  * `triniti:dam:mixin:search-assets-request`
+    * Rename `associated_ref` field to `linked_ref`.
+
+
 ## v0.2.1
 * __Add Schemas:__
   * `triniti:curator:mixin:gallery-teaser`
