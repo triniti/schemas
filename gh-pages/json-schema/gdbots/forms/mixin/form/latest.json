@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-1.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-2.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -172,6 +172,34 @@
       "pbj": {
         "type": "text",
         "rule": "single"
+      }
+    },
+    "thank_you_header": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "thank_you_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "A short thank you message (a few sentences) a user will see after they submit this form. This field should have little to no html as it can be used in various contexts.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "thank_you_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
       }
     },
     "fields": {
