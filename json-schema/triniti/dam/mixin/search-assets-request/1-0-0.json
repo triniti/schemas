@@ -323,7 +323,9 @@
         "updated-at-desc",
         "updated-at-asc",
         "title-desc",
-        "title-asc"
+        "title-asc",
+        "mime-type-desc",
+        "mime-type-asc"
       ],
       "pbj": {
         "type": "string-enum",
@@ -349,10 +351,10 @@
         "format": "slug"
       }
     },
-    "associated_ref": {
+    "linked_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A node ref that an asset must be associated with to match the search request.",
+      "description": "A node ref that an asset must be linked with to match the search request.",
       "pbj": {
         "type": "identifier",
         "rule": "single"

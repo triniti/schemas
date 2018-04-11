@@ -200,7 +200,7 @@
         "rule": "single"
       }
     },
-    "associated_refs": {
+    "linked_refs": {
       "type": "array",
       "items": [
         {
@@ -210,7 +210,7 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "A set of node refs which have been associated with this asset.",
+      "description": "A set of node refs which have been linked to this asset.",
       "pbj": {
         "type": "identifier",
         "rule": "set"
