@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.2.3
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:ovp:mixin:video`
+    * Add `muted` boolean field.
+    * Add `is_live` boolean field.
+
 ## v0.2.2
 * __Add Schemas:__
   * `triniti:curator:mixin:carousel-widget`

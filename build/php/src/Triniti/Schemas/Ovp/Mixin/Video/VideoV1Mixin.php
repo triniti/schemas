@@ -108,6 +108,10 @@ final class VideoV1Mixin extends AbstractMixin
                 ->maxLength(50)
                 ->pattern('^[\w\.-]+$')
                 ->build(),
+            Fb::create('muted', T\BooleanType::create())
+                ->build(),
+            Fb::create('is_live', T\BooleanType::create())
+                ->build(),
         ];
     }
 }

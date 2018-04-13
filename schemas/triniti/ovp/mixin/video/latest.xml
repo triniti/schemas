@@ -106,6 +106,8 @@
           various metrics with payouts to talent in the clip.
         </description>
       </field>
+      <field name="muted" type="boolean" />
+      <field name="is_live" type="boolean" />
     </fields>
 
     <php-options>
@@ -124,6 +126,8 @@ public function getUriTemplateVars()
         'mpm' => $this->get('mpm'),
         'kaltura_entry_id' => $this->get('kaltura_entry_id'),
         'kaltura_partner_id' => $this->get('kaltura_partner_id'),
+        'muted' => $this->get('muted'),
+        'is_live' => $this->get('is_live'),
     ];
 }
           ]]>
@@ -145,6 +149,8 @@ getUriTemplateVars() {
     mpm: this.get('mpm'),
     kaltura_entry_id: this.get('kaltura_entry_id'),
     kaltura_partner_id: this.get('kaltura_partner_id'),
+    muted: this.get('muted'),
+    is_live: this.get('is_live'),
   };
 }
           ]]>

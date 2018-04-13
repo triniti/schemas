@@ -315,6 +315,20 @@
         "rule": "single"
       }
     },
+    "muted": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "is_live": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "kaltura_entry_id": {
       "type": "string",
       "pattern": "^[\\w-]+$",

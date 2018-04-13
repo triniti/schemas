@@ -10,6 +10,8 @@ export default function VideoV1Trait(m) {
         mpm: this.get('mpm'),
         kaltura_entry_id: this.get('kaltura_entry_id'),
         kaltura_partner_id: this.get('kaltura_partner_id'),
+        muted: this.get('muted'),
+        is_live: this.get('is_live'),
       };
     }
   });
