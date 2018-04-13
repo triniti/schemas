@@ -42,6 +42,15 @@
         "type": "boolean",
         "rule": "single"
       }
+    },
+    "poster_image_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to an image asset to use as the poster that will override what is provided by youtube.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
     }
   },
   "required": [

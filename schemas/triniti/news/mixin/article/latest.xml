@@ -48,11 +48,24 @@
           on the article. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
         </description>
       </field>
+      <field name="classification" type="string" format="slug">
+        <description>
+          An arbitrary classification that can be used to establish importance/rank/weight/etc.
+          with a human friendly label.  e.g. "super-hero", "hero", "chud".
+        </description>
+      </field>
       <field name="amp_enabled" type="boolean">
         <description>
           Determines if AMP (Accelerated Mobile Pages) should be enabled for this article.
         </description>
         <default>true</default>
+      </field>
+      <field name="show_related_articles" type="boolean">
+        <description>
+          Determines if the related articles should render. This is intended as a flag
+          on blogroll/lists, not the permalink of an article where you'd always expect
+          to see the related articles.
+        </description>
       </field>
       <field name="related_articles_heading" type="string"/>
       <field name="related_articles" type="identifier" rule="list">

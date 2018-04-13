@@ -1,6 +1,35 @@
 # CHANGELOG
 
 
+## v0.2.3
+* __Add Schemas:__
+  * `triniti:canvas:mixin:article-block`
+  * `triniti:canvas:mixin:audio-block`
+  * `triniti:canvas:mixin:poll-block`
+  * `triniti:canvas:mixin:update-block`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:facebook-video-block`
+    * Add `poster_image_ref` identifier (NodeRef) field.
+  * `triniti:canvas:mixin:twitter-video-block`
+    * Add `poster_image_ref` identifier (NodeRef) field.
+  * `triniti:canvas:mixin:vevo-video-block`
+    * Add `poster_image_ref` identifier (NodeRef) field.
+  * `triniti:canvas:mixin:video-block`
+    * Add `muted` boolean field.
+    * Add `show_more_videos` boolean field.
+    * Add `poster_image_ref` identifier (NodeRef) field.
+  * `triniti:canvas:mixin:youtube-playlist-block`
+    * Add `poster_image_ref` identifier (NodeRef) field.
+  * `triniti:canvas:mixin:youtube-video-block`
+    * Add `poster_image_ref` identifier (NodeRef) field.
+  * `triniti:news:mixin:article`
+    * Add `classification` string field with format slug.
+    * Add `show_related_articles` boolean field.
+  * `triniti:ovp:mixin:video`
+    * Add `is_live` boolean field.
+    * Add `original_air_date` date-time field.
+
+
 ## v0.2.2
 * __Add Schemas:__
   * `triniti:curator:mixin:carousel-widget`

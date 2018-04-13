@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 
 final class YoutubePlaylistBlockV1Mixin extends AbstractMixin
 {
@@ -32,6 +33,13 @@ final class YoutubePlaylistBlockV1Mixin extends AbstractMixin
                 ->pattern('^[\w-]+$')
                 ->build(),
             Fb::create('autoplay', T\BooleanType::create())
+                ->build(),
+            /*
+             * A reference to an image asset to use as the poster that will
+             * override what is provided by youtube.
+             */
+            Fb::create('poster_image_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
                 ->build(),
         ];
     }

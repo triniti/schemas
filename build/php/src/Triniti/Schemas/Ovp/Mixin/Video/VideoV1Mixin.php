@@ -45,6 +45,8 @@ final class VideoV1Mixin extends AbstractMixin
             Fb::create('poster_image_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
+            Fb::create('is_live', T\BooleanType::create())
+                ->build(),
             /*
              * Duration of the video in seconds.
              */
@@ -107,6 +109,8 @@ final class VideoV1Mixin extends AbstractMixin
             Fb::create('mpm', T\StringType::create())
                 ->maxLength(50)
                 ->pattern('^[\w\.-]+$')
+                ->build(),
+            Fb::create('original_air_date', T\DateTimeType::create())
                 ->build(),
         ];
     }

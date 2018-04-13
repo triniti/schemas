@@ -7,7 +7,23 @@
       extends="triniti:canvas:mixin:node-ref-block:v1">
     <fields>
       <field name="autoplay" type="boolean"/>
+      <field name="muted" type="boolean"/>
       <field name="start_at" type="small-int"/>
+      <field name="show_more_videos" type="boolean"/>
+      <field name="poster_image_ref" type="identifier">
+        <description>
+          A reference to an image asset to use as the poster that will
+          override what is provided by the target video.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
     </fields>
 
     <php-options>
@@ -24,7 +40,9 @@ public function getUriTemplateVars()
         'etag' => $this->get('etag'),
         'node_ref' => (string)$this->get('node_ref'),
         'autoplay' => $this->get('autoplay'),
+        'muted' => $this->get('muted'),
         'start_at' => $this->get('start_at'),
+        'show_more_videos' => $this->get('show_more_videos'),
     ];
 }
           ]]>
@@ -44,7 +62,9 @@ getUriTemplateVars() {
     etag: this.get('etag'),
     node_ref: `${this.get('node_ref', '')}`,
     autoplay: this.get('autoplay'),
+    muted: this.get('muted'),
     start_at: this.get('start_at'),
+    show_more_videos: this.get('show_more_videos'),
   };
 }
           ]]>
