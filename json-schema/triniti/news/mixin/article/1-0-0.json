@@ -208,10 +208,30 @@
         "rule": "single"
       }
     },
+    "classification": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "An arbitrary classification that can be used to establish importance/rank/weight/etc. with a human friendly label. e.g. \"super-hero\", \"hero\", \"chud\".",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
     "amp_enabled": {
       "type": "boolean",
       "default": true,
       "description": "Determines if AMP (Accelerated Mobile Pages) should be enabled for this article.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "show_related_articles": {
+      "type": "boolean",
+      "description": "Determines if the related articles should render. This is intended as a flag on blogroll/lists, not the permalink of an article where you'd always expect to see the related articles.",
       "pbj": {
         "type": "boolean",
         "rule": "single"

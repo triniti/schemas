@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/vevo-video-block/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/audio-block/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -20,25 +20,9 @@
         "rule": "single"
       }
     },
-    "isrc": {
-      "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "autoplay": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "poster_image_ref": {
+    "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to an image asset to use as the poster that will override what is provided by vevo.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
@@ -46,7 +30,7 @@
     }
   },
   "required": [
-    "isrc"
+    "node_ref"
   ],
   "additionalProperties": true
 }
