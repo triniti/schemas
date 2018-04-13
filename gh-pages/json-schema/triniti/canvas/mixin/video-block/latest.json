@@ -35,6 +35,13 @@
         "rule": "single"
       }
     },
+    "muted": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "start_at": {
       "type": "integer",
       "default": 0,
@@ -42,6 +49,22 @@
       "maximum": 65535,
       "pbj": {
         "type": "small-int",
+        "rule": "single"
+      }
+    },
+    "show_more_videos": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "poster_image_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to an image asset to use as the poster that will override what is provided by the target video.",
+      "pbj": {
+        "type": "identifier",
         "rule": "single"
       }
     }

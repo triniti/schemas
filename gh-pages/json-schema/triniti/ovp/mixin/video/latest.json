@@ -181,6 +181,13 @@
         "rule": "single"
       }
     },
+    "is_live": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "duration": {
       "type": "integer",
       "default": 0,
@@ -315,17 +322,11 @@
         "rule": "single"
       }
     },
-    "muted": {
-      "type": "boolean",
+    "original_air_date": {
+      "type": "string",
+      "format": "date-time",
       "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "is_live": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
+        "type": "date-time",
         "rule": "single"
       }
     }

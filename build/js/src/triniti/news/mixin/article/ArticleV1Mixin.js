@@ -1,6 +1,7 @@
 // @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-0.json#
 import ArticleId from '@triniti/schemas/triniti/news/ArticleId';
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -51,10 +52,24 @@ export default class ArticleV1Mixin extends Mixin {
       Fb.create('swipe', T.StringType.create())
         .build(),
       /*
+       * An arbitrary classification that can be used to establish importance/rank/weight/etc.
+       * with a human friendly label. e.g. "super-hero", "hero", "chud".
+       */
+      Fb.create('classification', T.StringType.create())
+        .format(Format.SLUG)
+        .build(),
+      /*
        * Determines if AMP (Accelerated Mobile Pages) should be enabled for this article.
        */
       Fb.create('amp_enabled', T.BooleanType.create())
         .withDefault(true)
+        .build(),
+      /*
+       * Determines if the related articles should render. This is intended as a flag
+       * on blogroll/lists, not the permalink of an article where you'd always expect
+       * to see the related articles.
+       */
+      Fb.create('show_related_articles', T.BooleanType.create())
         .build(),
       Fb.create('related_articles_heading', T.StringType.create())
         .build(),

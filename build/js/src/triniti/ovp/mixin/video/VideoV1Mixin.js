@@ -39,6 +39,8 @@ export default class VideoV1Mixin extends Mixin {
       Fb.create('poster_image_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
+      Fb.create('is_live', T.BooleanType.create())
+        .build(),
       /*
        * Duration of the video in seconds.
        */
@@ -102,9 +104,7 @@ export default class VideoV1Mixin extends Mixin {
         .maxLength(50)
         .pattern('^[\\w\\.-]+$')
         .build(),
-      Fb.create('muted', T.BooleanType.create())
-        .build(),
-      Fb.create('is_live', T.BooleanType.create())
+      Fb.create('original_air_date', T.DateTimeType.create())
         .build(),
     ];
   }
