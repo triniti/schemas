@@ -19,7 +19,6 @@ trait TwitterTweetBlockV1Trait
             'etag' => $this->get('etag'),
             'screen_name' => $this->get('screen_name'),
             'tweet_id' => $this->get('tweet_id'),
-            'tweet_text' => $this->get('tweet_text'),
             'hide_media' => $this->get('hide_media'),
             'hide_thread' => $this->get('hide_thread'),
         ];

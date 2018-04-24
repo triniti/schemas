@@ -26,10 +26,25 @@ export default class VimeoVideoBlockV1Mixin extends Mixin {
         .build(),
       Fb.create('loop', T.BooleanType.create())
         .build(),
-      Fb.create('description', T.TextType.create())
+      /*
+       * Whether or not to show the byline (eg "from Dick Tracy") in the thumbnail.
+       */
+      Fb.create('byline', T.BooleanType.create())
+        .build(),
+      /*
+       * Whether or not to show the portrait (profile image) in the thumbnail.
+       */
+      Fb.create('portrait', T.BooleanType.create())
+        .build(),
+      /*
+       * Whether or not to show the video title in the thumbnail.
+       */
+      Fb.create('title', T.BooleanType.create())
+        .build(),
+      Fb.create('description_text', T.TextType.create())
         .maxLength(5000)
         .build(),
-      Fb.create('title', T.TextType.create())
+      Fb.create('title_text', T.TextType.create())
         .maxLength(500)
         .build(),
       Fb.create('user_name', T.TextType.create())

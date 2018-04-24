@@ -20,9 +20,9 @@ trait VimeoVideoBlockV1Trait
             'video_id' => $this->get('video_id'),
             'autoplay' => $this->get('autoplay'),
             'loop' => $this->get('autoplay'),
-            'description' => $this->get('description'),
+            'byline' => $this->get('byline'),
+            'portrait' => $this->get('portrait'),
             'title' => $this->get('title'),
-            'user_name' => $this->get('user_name'),
             'poster_image_ref' => $this->get('poster_image_ref'),
         ];
     }

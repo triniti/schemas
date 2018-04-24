@@ -6,10 +6,10 @@
   <schema id="pbj:triniti:canvas:mixin:soundcloud-audio-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="track_id" type="string" pattern="^\d+$" required="true"/>
-      <field name="autoplay" type="boolean"/>
+      <field name="auto_play" type="boolean"/>
       <field name="show_comments" type="boolean"/>
-      <field name="show_recommendations" type="text" max="5000"/>
-      <field name="show_overlay" type="text" max="500"/>
+      <field name="hide_related" type="boolean"/>
+      <field name="visual" type="boolean"/>
       <field name="poster_image_ref" type="identifier">
         <description>
           A reference to an image asset to use as the poster that will
@@ -39,10 +39,10 @@ public function getUriTemplateVars()
     return [
         'etag' => $this->get('etag'),
         'track_id' => $this->get('track_id'),
-        'autoplay' => $this->get('autoplay'),
+        'auto_play' => $this->get('autoplay'),
         'show_comments' => $this->get('show_comments'),
-        'show_recommendations' => $this->get('show_recommendations'),
-        'show_overlay' => $this->get('show_overlay'),
+        'hide_related' => $this->get('show_recommendations'),
+        'visual' => $this->get('show_overlay'),
         'poster_image_ref' => $this->get('poster_image_ref'),
     ];
 }
@@ -62,10 +62,10 @@ getUriTemplateVars() {
   return {
     etag: this.get('etag'),
     track_id: this.get('track_id'),
-    autoplay: this.get('autoplay'),
+    auto_play: this.get('autoplay'),
     show_comments: this.get('show_comments'),
-    show_recommendations: this.get('show_recommendations'),
-    show_overlay: this.get('show_overlay'),
+    hide_related: this.get('show_recommendations'),
+    visual: this.get('show_overlay'),
     poster_image_ref: this.get('poster_image_ref'),
   };
 }

@@ -42,7 +42,31 @@
         "rule": "single"
       }
     },
-    "description": {
+    "byline": {
+      "type": "boolean",
+      "description": "Whether or not to show the byline (eg \"from Dick Tracy\") in the thumbnail.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "portrait": {
+      "type": "boolean",
+      "description": "Whether or not to show the portrait (profile image) in the thumbnail.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "title": {
+      "type": "boolean",
+      "description": "Whether or not to show the video title in the thumbnail.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "description_text": {
       "type": "string",
       "minLength": 0,
       "maxLength": 5000,
@@ -51,7 +75,7 @@
         "rule": "single"
       }
     },
-    "title": {
+    "title_text": {
       "type": "string",
       "minLength": 0,
       "maxLength": 500,

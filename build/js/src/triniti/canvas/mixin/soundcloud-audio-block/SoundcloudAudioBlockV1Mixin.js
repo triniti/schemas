@@ -22,15 +22,13 @@ export default class SoundcloudAudioBlockV1Mixin extends Mixin {
         .required()
         .pattern('^\\d+$')
         .build(),
-      Fb.create('autoplay', T.BooleanType.create())
+      Fb.create('auto_play', T.BooleanType.create())
         .build(),
       Fb.create('show_comments', T.BooleanType.create())
         .build(),
-      Fb.create('show_recommendations', T.TextType.create())
-        .maxLength(5000)
+      Fb.create('hide_related', T.BooleanType.create())
         .build(),
-      Fb.create('show_overlay', T.TextType.create())
-        .maxLength(500)
+      Fb.create('visual', T.BooleanType.create())
         .build(),
       /*
        * A reference to an image asset to use as the poster that will
