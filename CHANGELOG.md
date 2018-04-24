@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.2.4
+* __Add Schemas:__
+  * `triniti:canvas:mixin:soundcloud-video-block`
+  * `triniti:canvas:mixin:vimeo-video-block`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:twitter-tweet-block`
+    * Add js/php support for `tweet_text` text field.
+
 ## v0.2.3
 * __Add Schemas:__
   * `triniti:canvas:mixin:article-block`
