@@ -51,6 +51,7 @@
     },
     "visual": {
       "type": "boolean",
+      "description": "Whether or not to use the thumbnail as a poster image.",
       "pbj": {
         "type": "boolean",
         "rule": "single"

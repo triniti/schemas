@@ -9,7 +9,11 @@
       <field name="auto_play" type="boolean"/>
       <field name="show_comments" type="boolean"/>
       <field name="hide_related" type="boolean"/>
-      <field name="visual" type="boolean"/>
+      <field name="visual" type="boolean">
+        <description>
+          Whether or not to use the thumbnail as a poster image.
+        </description>
+      </field>
       <field name="poster_image_ref" type="identifier">
         <description>
           A reference to an image asset to use as the poster that will

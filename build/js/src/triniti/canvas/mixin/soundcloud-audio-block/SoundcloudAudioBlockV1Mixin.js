@@ -28,6 +28,9 @@ export default class SoundcloudAudioBlockV1Mixin extends Mixin {
         .build(),
       Fb.create('hide_related', T.BooleanType.create())
         .build(),
+      /*
+       * Whether or not to use the thumbnail as a poster image.
+       */
       Fb.create('visual', T.BooleanType.create())
         .build(),
       /*
