@@ -18,6 +18,7 @@
     <fields>
       <field name="_id" type="uuid" required="true"/>
       <field name="title" type="string"/>
+      <field name="url" type="string" format="url"/>
       <field name="initial_votes" type="int"/>
     </fields>
 
@@ -44,7 +45,10 @@ public function generateMessageRef($tag = null)
  */
 public function getUriTemplateVars()
 {
-    return ['_id' => (string)$this->get('_id')];
+    return [
+        '_id' => (string)$this->get('_id'),
+        'url' => $this->get('url'),
+    ];
 }
             ]]>
         </methods>
@@ -72,7 +76,10 @@ generateMessageRef(tag = null) {
  * @returns {Object}
  */
 getUriTemplateVars() {
-  return { _id: `${this.get('_id')}` };
+  return {
+    _id: `${this.get('_id')}`,
+    url: this.get('url'),
+  };
 }
             ]]>
         </methods>

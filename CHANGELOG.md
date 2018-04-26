@@ -9,6 +9,8 @@
   * `triniti:apollo:mixin:poll`
     * Add `question` string field.
     * Add `question_url` string field with format url.
+  * `triniti:apollo:mixin:poll-answer`
+    * Add `url` string field with format url.
 
 
 ## v0.2.3
