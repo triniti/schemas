@@ -11,6 +11,9 @@
     * Add `question_url` string field with format url.
   * `triniti:apollo:mixin:poll-answer`
     * Add `url` string field with format url.
+  * `triniti:dam:mixin:asset`
+    * Add `expires_at` date field.
+    * Add `publisher_credit` identifier field.
 
 
 ## v0.2.3

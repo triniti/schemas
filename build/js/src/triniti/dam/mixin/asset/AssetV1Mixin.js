@@ -49,6 +49,17 @@ export default class AssetV1Mixin extends Mixin {
         .maxLength(5000)
         .build(),
       /*
+       * Date when the asset should no longer be available on site.
+       */
+      Fb.create('expires_at', T.DateType.create())
+        .build(),
+      /*
+       * Credit to publisher of asset.
+       */
+      Fb.create('publisher_credit', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      /*
        * A set of node refs which have been linked to this asset.
        */
       Fb.create('linked_refs', T.IdentifierType.create())

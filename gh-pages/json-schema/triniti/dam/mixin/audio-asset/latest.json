@@ -200,6 +200,24 @@
         "rule": "single"
       }
     },
+    "expires_at": {
+      "type": "object",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Date when the asset should no longer be available on site.",
+      "pbj": {
+        "type": "date",
+        "rule": "single"
+      }
+    },
+    "publisher_credit": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "Credit to publisher of asset.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "linked_refs": {
       "type": "array",
       "items": [
