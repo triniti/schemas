@@ -19,7 +19,7 @@ trait VimeoVideoBlockV1Trait
             'etag' => $this->get('etag'),
             'video_id' => $this->get('video_id'),
             'autoplay' => $this->get('autoplay'),
-            'loop' => $this->get('autoplay'),
+            'loop' => $this->get('loop'),
             'byline' => $this->get('byline'),
             'portrait' => $this->get('portrait'),
             'title' => $this->get('title'),
