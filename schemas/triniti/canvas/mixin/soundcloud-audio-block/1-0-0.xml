@@ -3,7 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:canvas:mixin:soundcloud-audio-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
+  <schema id="pbj:triniti:canvas:mixin:soundcloud-audio-block:1-0-0" mixin="true"
+      extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="track_id" type="string" pattern="^\d+$" required="true"/>
       <field name="auto_play" type="boolean"/>
