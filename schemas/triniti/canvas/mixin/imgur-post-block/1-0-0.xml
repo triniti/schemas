@@ -6,7 +6,7 @@
   <schema id="pbj:triniti:canvas:mixin:imgur-post-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="id" type="string" pattern="^[\w\/-]+$" required="true"/>
-      <field name="context" type="boolean">
+      <field name="show_context" type="boolean">
         <description>When true, shows the post details.</description>
         <default>true</default>
       </field>
@@ -25,7 +25,7 @@ public function getUriTemplateVars()
     return [
         'etag' => $this->get('etag'),
         'id' => $this->get('id'),
-        'context' => $this->get('context'),
+        'show_context' => $this->get('show_context'),
     ];
 }
           ]]>
@@ -44,7 +44,7 @@ getUriTemplateVars() {
   return {
     etag: this.get('etag'),
     id: this.get('id'),
-    context: this.get('context'),
+    show_context: this.get('show_context'),
   };
 }
           ]]>

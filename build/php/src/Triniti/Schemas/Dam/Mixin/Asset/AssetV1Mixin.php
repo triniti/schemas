@@ -55,15 +55,10 @@ final class AssetV1Mixin extends AbstractMixin
                 ->maxLength(5000)
                 ->build(),
             /*
-             * Date when the asset should no longer be available on site.
+             * A credit is a short string used to publicly acknowledge the source/creator
+             * of the asset. e.g. "Fox News", "CNN".
              */
-            Fb::create('expires_at', T\DateType::create())
-                ->build(),
-            /*
-             * Credit to publisher of asset.
-             */
-            Fb::create('publisher_credit', T\IdentifierType::create())
-                ->className(NodeRef::class)
+            Fb::create('credit', T\StringType::create())
                 ->build(),
             /*
              * A set of node refs which have been linked to this asset.

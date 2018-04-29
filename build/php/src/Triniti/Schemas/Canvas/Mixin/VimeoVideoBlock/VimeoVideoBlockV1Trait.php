@@ -17,13 +17,13 @@ trait VimeoVideoBlockV1Trait
     {
         return [
             'etag' => $this->get('etag'),
-            'video_id' => $this->get('video_id'),
+            'id' => $this->get('id'),
             'autoplay' => $this->get('autoplay'),
             'loop' => $this->get('loop'),
-            'byline' => $this->get('byline'),
-            'portrait' => $this->get('portrait'),
-            'title' => $this->get('title'),
-            'poster_image_ref' => $this->get('poster_image_ref'),
+            'show_byline' => $this->get('show_byline'),
+            'show_portrait' => $this->get('show_portrait'),
+            'show_title' => $this->get('show_title'),
+            'poster_image_ref' => (string)$this->get('poster_image_ref'),
         ];
     }
 }

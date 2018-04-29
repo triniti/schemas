@@ -18,6 +18,7 @@ trait PageV1Trait
         return [
             '_id' => (string)$this->get('_id'),
             'slug' => $this->get('slug'),
+            'layout' => $this->get('layout'),
         ];
     }
 }

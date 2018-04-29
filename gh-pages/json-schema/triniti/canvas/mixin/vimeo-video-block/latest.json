@@ -20,7 +20,7 @@
         "rule": "single"
       }
     },
-    "video_id": {
+    "id": {
       "type": "string",
       "pattern": "^\\d+$",
       "pbj": {
@@ -42,7 +42,7 @@
         "rule": "single"
       }
     },
-    "byline": {
+    "show_byline": {
       "type": "boolean",
       "description": "Whether or not to show the byline (eg \"from Dick Tracy\") in the thumbnail.",
       "pbj": {
@@ -50,7 +50,7 @@
         "rule": "single"
       }
     },
-    "portrait": {
+    "show_portrait": {
       "type": "boolean",
       "description": "Whether or not to show the portrait (profile image) in the thumbnail.",
       "pbj": {
@@ -58,7 +58,7 @@
         "rule": "single"
       }
     },
-    "title": {
+    "show_title": {
       "type": "boolean",
       "description": "Whether or not to show the video title in the thumbnail.",
       "pbj": {
@@ -66,7 +66,7 @@
         "rule": "single"
       }
     },
-    "description_text": {
+    "description": {
       "type": "string",
       "minLength": 0,
       "maxLength": 5000,
@@ -75,21 +75,20 @@
         "rule": "single"
       }
     },
-    "title_text": {
+    "title": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 500,
+      "maxLength": 255,
       "pbj": {
-        "type": "text",
+        "type": "string",
         "rule": "single"
       }
     },
     "user_name": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 50,
+      "pattern": "^[\\w\\.-]+$",
       "pbj": {
-        "type": "text",
+        "type": "string",
         "rule": "single"
       }
     },
@@ -104,7 +103,7 @@
     }
   },
   "required": [
-    "video_id"
+    "id"
   ],
   "additionalProperties": true
 }

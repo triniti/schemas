@@ -17,7 +17,7 @@
       <field name="poster_image_ref" type="identifier">
         <description>
           A reference to an image asset to use as the poster that will
-          override what is provided by vimeo.
+          override what is provided by soundcloud.
         </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
@@ -47,7 +47,7 @@ public function getUriTemplateVars()
         'show_comments' => $this->get('show_comments'),
         'hide_related' => $this->get('hide_related'),
         'visual' => $this->get('visual'),
-        'poster_image_ref' => $this->get('poster_image_ref'),
+        'poster_image_ref' => (string)$this->get('poster_image_ref'),
     ];
 }
           ]]>
@@ -70,7 +70,7 @@ getUriTemplateVars() {
     show_comments: this.get('show_comments'),
     hide_related: this.get('hide_related'),
     visual: this.get('visual'),
-    poster_image_ref: this.get('poster_image_ref'),
+    poster_image_ref: `${this.get('poster_image_ref', '')}`,
   };
 }
           ]]>

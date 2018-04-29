@@ -35,7 +35,7 @@ export default class SoundcloudAudioBlockV1Mixin extends Mixin {
         .build(),
       /*
        * A reference to an image asset to use as the poster that will
-       * override what is provided by vimeo.
+       * override what is provided by soundcloud.
        */
       Fb.create('poster_image_ref', T.IdentifierType.create())
         .classProto(NodeRef)

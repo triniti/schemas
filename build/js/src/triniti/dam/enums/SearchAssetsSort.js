@@ -6,12 +6,12 @@ export default class SearchAssetsSort extends Enum {
 SearchAssetsSort.configure({
   UNKNOWN: 'unknown',
   RELEVANCE: 'relevance',
-  CREATED_AT_DESC: 'created-at-desc',
   CREATED_AT_ASC: 'created-at-asc',
-  UPDATED_AT_DESC: 'updated-at-desc',
+  CREATED_AT_DESC: 'created-at-desc',
   UPDATED_AT_ASC: 'updated-at-asc',
-  TITLE_DESC: 'title-desc',
+  UPDATED_AT_DESC: 'updated-at-desc',
   TITLE_ASC: 'title-asc',
-  MIME_TYPE_DESC: 'mime-type-desc',
+  TITLE_DESC: 'title-desc',
   MIME_TYPE_ASC: 'mime-type-asc',
+  MIME_TYPE_DESC: 'mime-type-desc',
 }, 'triniti:dam:search-assets-sort');

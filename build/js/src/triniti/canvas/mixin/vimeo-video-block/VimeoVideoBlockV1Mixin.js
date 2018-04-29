@@ -18,7 +18,7 @@ export default class VimeoVideoBlockV1Mixin extends Mixin {
    */
   getFields() {
     return [
-      Fb.create('video_id', T.StringType.create())
+      Fb.create('id', T.StringType.create())
         .required()
         .pattern('^\\d+$')
         .build(),
@@ -29,26 +29,25 @@ export default class VimeoVideoBlockV1Mixin extends Mixin {
       /*
        * Whether or not to show the byline (eg "from Dick Tracy") in the thumbnail.
        */
-      Fb.create('byline', T.BooleanType.create())
+      Fb.create('show_byline', T.BooleanType.create())
         .build(),
       /*
        * Whether or not to show the portrait (profile image) in the thumbnail.
        */
-      Fb.create('portrait', T.BooleanType.create())
+      Fb.create('show_portrait', T.BooleanType.create())
         .build(),
       /*
        * Whether or not to show the video title in the thumbnail.
        */
-      Fb.create('title', T.BooleanType.create())
+      Fb.create('show_title', T.BooleanType.create())
         .build(),
-      Fb.create('description_text', T.TextType.create())
+      Fb.create('description', T.TextType.create())
         .maxLength(5000)
         .build(),
-      Fb.create('title_text', T.TextType.create())
-        .maxLength(500)
+      Fb.create('title', T.StringType.create())
         .build(),
-      Fb.create('user_name', T.TextType.create())
-        .maxLength(50)
+      Fb.create('user_name', T.StringType.create())
+        .pattern('^[\\w\\.-]+$')
         .build(),
       /*
        * A reference to an image asset to use as the poster that will

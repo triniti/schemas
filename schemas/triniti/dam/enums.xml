@@ -7,14 +7,14 @@
     <enum name="search-assets-sort" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="RELEVANCE" value="relevance"/>
-      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
-      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
-      <option key="TITLE_DESC" value="title-desc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
-      <option key="MIME_TYPE_DESC" value="mime-type-desc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
       <option key="MIME_TYPE_ASC" value="mime-type-asc"/>
+      <option key="MIME_TYPE_DESC" value="mime-type-desc"/>
     </enum>
   </enums>
 </pbj-enums>

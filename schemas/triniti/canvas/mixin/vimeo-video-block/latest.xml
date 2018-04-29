@@ -5,27 +5,27 @@
 
   <schema id="pbj:triniti:canvas:mixin:vimeo-video-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="video_id" type="string" pattern="^\d+$" required="true"/>
+      <field name="id" type="string" pattern="^\d+$" required="true"/>
       <field name="autoplay" type="boolean"/>
       <field name="loop" type="boolean"/>
-      <field name="byline" type="boolean">
+      <field name="show_byline" type="boolean">
         <description>
           Whether or not to show the byline (eg "from Dick Tracy") in the thumbnail.
         </description>
       </field>
-      <field name="portrait" type="boolean">
+      <field name="show_portrait" type="boolean">
         <description>
           Whether or not to show the portrait (profile image) in the thumbnail.
         </description>
       </field>
-      <field name="title" type="boolean">
+      <field name="show_title" type="boolean">
         <description>
           Whether or not to show the video title in the thumbnail.
         </description>
       </field>
-      <field name="description_text" type="text" max="5000"/>
-      <field name="title_text" type="text" max="500"/>
-      <field name="user_name" type="text" max="50"/>
+      <field name="description" type="text" max="5000"/>
+      <field name="title" type="string"/>
+      <field name="user_name" type="string" pattern="^[\w\.-]+$"/>
       <field name="poster_image_ref" type="identifier">
         <description>
           A reference to an image asset to use as the poster that will
@@ -54,13 +54,13 @@ public function getUriTemplateVars()
 {
     return [
         'etag' => $this->get('etag'),
-        'video_id' => $this->get('video_id'),
+        'id' => $this->get('id'),
         'autoplay' => $this->get('autoplay'),
         'loop' => $this->get('loop'),
-        'byline' => $this->get('byline'),
-        'portrait' => $this->get('portrait'),
-        'title' => $this->get('title'),
-        'poster_image_ref' => $this->get('poster_image_ref'),
+        'show_byline' => $this->get('show_byline'),
+        'show_portrait' => $this->get('show_portrait'),
+        'show_title' => $this->get('show_title'),
+        'poster_image_ref' => (string)$this->get('poster_image_ref'),
     ];
 }
           ]]>
@@ -81,10 +81,10 @@ getUriTemplateVars() {
     video_id: this.get('video_id'),
     autoplay: this.get('autoplay'),
     loop: this.get('loop'),
-    byline: this.get('byline'),
-    portrait: this.get('portrait'),
-    title: this.get('title'),
-    poster_image_ref: this.get('poster_image_ref'),
+    show_byline: this.get('show_byline'),
+    show_portrait: this.get('show_portrait'),
+    show_title: this.get('show_title'),
+    poster_image_ref: `${this.get('poster_image_ref', '')}`,
   };
 }
           ]]>

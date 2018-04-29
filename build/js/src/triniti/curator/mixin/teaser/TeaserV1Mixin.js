@@ -1,4 +1,5 @@
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaser/1-0-0.json#
+import ContentType from '@triniti/schemas/triniti/curator/enums/ContentType';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -24,6 +25,17 @@ export default class TeaserV1Mixin extends Mixin {
         .withDefault(() => TeaserId.generate())
         .classProto(TeaserId)
         .overridable(true)
+        .build(),
+      /*
+       * Determines the sequence that this teaser node will be rendered
+       * in lists, search results, etc. It DOES NOT control visibility or
+       * publishing. A date was used over an integer (e.g. seq_no) for
+       * blog-like, reverse chronological, clarity in sorting.
+       */
+      Fb.create('order_date', T.DateTimeType.create())
+        .build(),
+      Fb.create('content_type', T.StringEnumType.create())
+        .classProto(ContentType)
         .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.

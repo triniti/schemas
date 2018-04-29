@@ -17,6 +17,9 @@ export default class ImageBlockV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('caption', T.TextType.create())
+        .maxLength(2000)
+        .build(),
       Fb.create('is_nsfw', T.BooleanType.create())
         .build(),
     ];

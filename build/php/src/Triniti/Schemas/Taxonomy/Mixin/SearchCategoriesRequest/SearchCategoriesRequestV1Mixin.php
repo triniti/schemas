@@ -25,7 +25,7 @@ final class SearchCategoriesRequestV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('sort', T\StringEnumType::create())
-                ->withDefault(SearchCategoriesSort::RELEVANCE())
+                ->withDefault(SearchCategoriesSort::TITLE_ASC())
                 ->className(SearchCategoriesSort::class)
                 ->build(),
         ];

@@ -11,7 +11,7 @@ export default function SoundcloudAudioBlockV1Trait(m) {
         show_comments: this.get('show_comments'),
         hide_related: this.get('hide_related'),
         visual: this.get('visual'),
-        poster_image_ref: this.get('poster_image_ref'),
+        poster_image_ref: `${this.get('poster_image_ref', '')}`,
       };
     }
   });

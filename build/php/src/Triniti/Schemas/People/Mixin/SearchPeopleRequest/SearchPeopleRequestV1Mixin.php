@@ -28,7 +28,7 @@ final class SearchPeopleRequestV1Mixin extends AbstractMixin
                 ->withDefault(2)
                 ->build(),
             Fb::create('sort', T\StringEnumType::create())
-                ->withDefault(SearchPeopleSort::RELEVANCE())
+                ->withDefault(SearchPeopleSort::TITLE_ASC())
                 ->className(SearchPeopleSort::class)
                 ->build(),
         ];

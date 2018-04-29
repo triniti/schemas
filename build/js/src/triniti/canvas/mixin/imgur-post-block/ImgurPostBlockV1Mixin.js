@@ -24,7 +24,7 @@ export default class ImgurPostBlockV1Mixin extends Mixin {
       /*
        * When true, shows the post details.
        */
-      Fb.create('context', T.BooleanType.create())
+      Fb.create('show_context', T.BooleanType.create())
         .withDefault(true)
         .build(),
     ];
