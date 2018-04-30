@@ -8,9 +8,10 @@
       <option key="UNKNOWN" value="unknown"/>
       <option key="ARTICLE" value="article"/>
       <option key="AUDIO" value="audio"/>
+      <option key="CATEGORY" value="category"/>
       <option key="GALLERY" value="gallery"/>
+      <option key="IMAGE" value="image"/>
       <option key="LINK" value="link"/>
-      <option key="PHOTO" value="photo"/>
       <option key="POLL" value="poll"/>
       <option key="PROFILE" value="profile"/>
       <option key="QUOTE" value="quote"/>

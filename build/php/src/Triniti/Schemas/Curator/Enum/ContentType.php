@@ -8,9 +8,10 @@ use Gdbots\Common\Enum;
  * @method static ContentType UNKNOWN()
  * @method static ContentType ARTICLE()
  * @method static ContentType AUDIO()
+ * @method static ContentType CATEGORY()
  * @method static ContentType GALLERY()
+ * @method static ContentType IMAGE()
  * @method static ContentType LINK()
- * @method static ContentType PHOTO()
  * @method static ContentType POLL()
  * @method static ContentType PROFILE()
  * @method static ContentType QUOTE()
@@ -23,9 +24,10 @@ final class ContentType extends Enum
     const UNKNOWN = 'unknown';
     const ARTICLE = 'article';
     const AUDIO = 'audio';
+    const CATEGORY = 'category';
     const GALLERY = 'gallery';
+    const IMAGE = 'image';
     const LINK = 'link';
-    const PHOTO = 'photo';
     const POLL = 'poll';
     const PROFILE = 'profile';
     const QUOTE = 'quote';
