@@ -318,16 +318,35 @@
       "enum": [
         "unknown",
         "relevance",
-        "created-at-desc",
         "created-at-asc",
-        "updated-at-desc",
+        "created-at-desc",
         "updated-at-asc",
-        "title-desc",
-        "title-asc"
+        "updated-at-desc",
+        "title-asc",
+        "title-desc"
       ],
       "pbj": {
         "type": "string-enum",
         "rule": "single"
+      }
+    },
+    "types": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "A set of widget types (node must match at least one) to include in the search results, such as carousel-widget.",
+      "pbj": {
+        "type": "string",
+        "rule": "set",
+        "format": "slug"
       }
     }
   },

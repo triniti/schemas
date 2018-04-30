@@ -328,16 +328,16 @@
       "enum": [
         "unknown",
         "relevance",
-        "created-at-desc",
         "created-at-asc",
-        "updated-at-desc",
+        "created-at-desc",
         "updated-at-asc",
-        "published-at-desc",
+        "updated-at-desc",
         "published-at-asc",
-        "order-date-desc",
+        "published-at-desc",
         "order-date-asc",
-        "title-desc",
-        "title-asc"
+        "order-date-desc",
+        "title-asc",
+        "title-desc"
       ],
       "pbj": {
         "type": "string-enum",

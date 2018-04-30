@@ -318,14 +318,14 @@
       "enum": [
         "unknown",
         "relevance",
-        "created-at-desc",
         "created-at-asc",
-        "updated-at-desc",
+        "created-at-desc",
         "updated-at-asc",
-        "published-at-desc",
+        "updated-at-desc",
         "published-at-asc",
-        "title-desc",
-        "title-asc"
+        "published-at-desc",
+        "title-asc",
+        "title-desc"
       ],
       "pbj": {
         "type": "string-enum",

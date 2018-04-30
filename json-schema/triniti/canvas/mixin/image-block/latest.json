@@ -28,6 +28,15 @@
         "rule": "single"
       }
     },
+    "caption": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
     "is_nsfw": {
       "type": "boolean",
       "pbj": {
