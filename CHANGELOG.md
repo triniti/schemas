@@ -1,6 +1,41 @@
 # CHANGELOG
 
 
+## v0.2.4
+* __Add Schemas:__
+  * `triniti:canvas:mixin:soundcloud-video-block`
+  * `triniti:canvas:mixin:vimeo-video-block`
+  * `triniti:curator:content-type`
+  * `triniti:taxonomy:mixin:suggest-hashtags-request`
+  * `triniti:taxonomy:mixin:suggest-hashtags-response`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:apollo:mixin:poll`
+    * Add `question` string field.
+    * Add `question_url` string field with format url.
+  * `triniti:apollo:mixin:poll-answer`
+    * Add `url` string field with format url.
+  * `triniti:canvas:mixin:imgur-post-block`
+    * Rename `context` boolean field to `show_context`.
+  * `triniti:canvas:mixin:image-block`
+    * Add `caption` text field.
+  * `triniti:curator:mixin:promotion`
+    * Add `priority` small-int field.
+    * Add `%dow%_start_at` and `%dow%_end_at` date-time fields, e.g. `mon_[start|end]_at`.
+  * `triniti:curator:mixin:search-teasers-request`
+    * Add `content_types` string-enum set field with id `triniti:curator:content-type`.
+  * `triniti:curator:mixin:search-widgets-request`
+    * Add `types` string set field with format slug.
+  * `triniti:curator:mixin:teaser`
+    * Add `order_date` date-time field.
+    * Add `content_type` string-enum with id `triniti:curator:content-type`.
+  * `triniti:dam:mixin:asset`
+    * Add `credit` string field.
+  * `triniti:people:mixin:search-people-request`
+    * Change default on `sort` field to `title-asc`.
+  * `triniti:taxonomy:mixin:search-categories-request`
+    * Change default on `sort` field to `title-asc`.
+
+
 ## v0.2.3
 * __Add Schemas:__
   * `triniti:canvas:mixin:article-block`

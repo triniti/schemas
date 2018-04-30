@@ -32,6 +32,12 @@
           not have HTML as it is used in metadata, feeds, SERP and social.
         </description>
       </field>
+      <field name="credit" type="string">
+        <description>
+          A credit is a short string used to publicly acknowledge the source/creator
+          of the asset. e.g. "Fox News", "CNN".
+        </description>
+      </field>
       <field name="linked_refs" type="identifier" rule="set">
         <description>
           A set of node refs which have been linked to this asset.

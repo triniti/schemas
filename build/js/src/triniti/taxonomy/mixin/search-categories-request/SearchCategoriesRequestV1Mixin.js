@@ -19,7 +19,7 @@ export default class SearchCategoriesRequestV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('sort', T.StringEnumType.create())
-        .withDefault(SearchCategoriesSort.RELEVANCE)
+        .withDefault(SearchCategoriesSort.TITLE_ASC)
         .classProto(SearchCategoriesSort)
         .build(),
     ];

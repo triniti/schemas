@@ -4,76 +4,92 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/enums.xsd">
 
   <enums namespace="triniti:curator">
+    <enum name="content-type" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="ARTICLE" value="article"/>
+      <option key="AUDIO" value="audio"/>
+      <option key="CATEGORY" value="category"/>
+      <option key="GALLERY" value="gallery"/>
+      <option key="IMAGE" value="image"/>
+      <option key="LINK" value="link"/>
+      <option key="POLL" value="poll"/>
+      <option key="PROFILE" value="profile"/>
+      <option key="QUOTE" value="quote"/>
+      <option key="SOLICIT" value="solicit"/>
+      <option key="TEXT" value="text"/>
+      <option key="VIDEO" value="video"/>
+    </enum>
+
     <enum name="search-galleries-sort" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="RELEVANCE" value="relevance"/>
       <option key="POPULARITY" value="popularity"/>
-      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
-      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
-      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
       <option key="PUBLISHED_AT_ASC" value="published-at-asc"/>
-      <option key="ORDER_DATE_DESC" value="order-date-desc"/>
+      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
       <option key="ORDER_DATE_ASC" value="order-date-asc"/>
-      <option key="TITLE_DESC" value="title-desc"/>
+      <option key="ORDER_DATE_DESC" value="order-date-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
     </enum>
 
     <enum name="search-promotions-sort" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="RELEVANCE" value="relevance"/>
-      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
-      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
-      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
       <option key="PUBLISHED_AT_ASC" value="published-at-asc"/>
-      <option key="TITLE_DESC" value="title-desc"/>
+      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
     </enum>
 
     <enum name="search-teasers-sort" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="RELEVANCE" value="relevance"/>
       <option key="POPULARITY" value="popularity"/>
-      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
-      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
-      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
       <option key="PUBLISHED_AT_ASC" value="published-at-asc"/>
-      <option key="ORDER_DATE_DESC" value="order-date-desc"/>
+      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
       <option key="ORDER_DATE_ASC" value="order-date-asc"/>
-      <option key="TITLE_DESC" value="title-desc"/>
+      <option key="ORDER_DATE_DESC" value="order-date-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
     </enum>
 
     <enum name="search-timelines-sort" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="RELEVANCE" value="relevance"/>
       <option key="POPULARITY" value="popularity"/>
-      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
-      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
-      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
       <option key="PUBLISHED_AT_ASC" value="published-at-asc"/>
-      <option key="ORDER_DATE_DESC" value="order-date-desc"/>
+      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
       <option key="ORDER_DATE_ASC" value="order-date-asc"/>
-      <option key="TITLE_DESC" value="title-desc"/>
+      <option key="ORDER_DATE_DESC" value="order-date-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
     </enum>
 
     <enum name="search-widgets-sort" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="RELEVANCE" value="relevance"/>
-      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
-      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
-      <option key="TITLE_DESC" value="title-desc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
     </enum>
   </enums>
 </pbj-enums>

@@ -23,6 +23,9 @@ final class ImageBlockV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('caption', T\TextType::create())
+                ->maxLength(2000)
+                ->build(),
             Fb::create('is_nsfw', T\BooleanType::create())
                 ->build(),
         ];

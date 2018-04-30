@@ -22,7 +22,7 @@ export default class SearchPeopleRequestV1Mixin extends Mixin {
         .withDefault(2)
         .build(),
       Fb.create('sort', T.StringEnumType.create())
-        .withDefault(SearchPeopleSort.RELEVANCE)
+        .withDefault(SearchPeopleSort.TITLE_ASC)
         .classProto(SearchPeopleSort)
         .build(),
     ];

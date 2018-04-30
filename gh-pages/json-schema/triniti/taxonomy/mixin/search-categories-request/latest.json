@@ -314,17 +314,17 @@
     },
     "sort": {
       "type": "string",
-      "default": "relevance",
+      "default": "title-asc",
       "enum": [
         "unknown",
         "relevance",
         "popularity",
-        "created-at-desc",
         "created-at-asc",
-        "updated-at-desc",
+        "created-at-desc",
         "updated-at-asc",
-        "title-desc",
-        "title-asc"
+        "updated-at-desc",
+        "title-asc",
+        "title-desc"
       ],
       "pbj": {
         "type": "string-enum",

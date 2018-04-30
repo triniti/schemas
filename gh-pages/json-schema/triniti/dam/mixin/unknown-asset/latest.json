@@ -200,6 +200,16 @@
         "rule": "single"
       }
     },
+    "credit": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "A credit is a short string used to publicly acknowledge the source/creator of the asset. e.g. \"Fox News\", \"CNN\".",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "linked_refs": {
       "type": "array",
       "items": [

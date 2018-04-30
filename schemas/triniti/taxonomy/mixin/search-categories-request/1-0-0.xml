@@ -7,7 +7,7 @@
       extends="gdbots:ncr:mixin:search-nodes-request:v1">
     <fields>
       <field name="sort" type="string-enum">
-        <default>relevance</default>
+        <default>title-asc</default>
         <enum id="triniti:taxonomy:search-categories-sort"/>
       </field>
     </fields>

@@ -10,7 +10,7 @@
         <default>2</default>
       </field>
       <field name="sort" type="string-enum">
-        <default>relevance</default>
+        <default>title-asc</default>
         <enum id="triniti:people:search-people-sort"/>
       </field>
     </fields>

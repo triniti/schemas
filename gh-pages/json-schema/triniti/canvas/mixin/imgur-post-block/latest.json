@@ -28,7 +28,7 @@
         "rule": "single"
       }
     },
-    "context": {
+    "show_context": {
       "type": "boolean",
       "default": true,
       "description": "When true, shows the post details.",

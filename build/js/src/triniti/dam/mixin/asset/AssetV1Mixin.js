@@ -49,6 +49,12 @@ export default class AssetV1Mixin extends Mixin {
         .maxLength(5000)
         .build(),
       /*
+       * A credit is a short string used to publicly acknowledge the source/creator
+       * of the asset. e.g. "Fox News", "CNN".
+       */
+      Fb.create('credit', T.StringType.create())
+        .build(),
+      /*
        * A set of node refs which have been linked to this asset.
        */
       Fb.create('linked_refs', T.IdentifierType.create())

@@ -34,6 +34,40 @@ export default class PromotionV1Mixin extends Mixin {
         .format(Format.SLUG)
         .build(),
       /*
+       * If multiple promotions can render in a given slot at the same
+       * time then the one with the higher priority takes precedence.
+       */
+      Fb.create('priority', T.SmallIntType.create())
+        .build(),
+      Fb.create('mon_start_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('mon_end_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('tue_start_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('tue_end_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('wed_start_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('wed_end_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('thu_start_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('thu_end_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('fri_start_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('fri_end_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('sat_start_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('sat_end_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('sun_start_at', T.DateTimeType.create())
+        .build(),
+      Fb.create('sun_end_at', T.DateTimeType.create())
+        .build(),
+      /*
        * A string containing (HTML, JavaScript, CSS, etc.) that is injected into
        * the application before the widgets render.
        */

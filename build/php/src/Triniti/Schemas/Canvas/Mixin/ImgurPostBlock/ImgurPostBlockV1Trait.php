@@ -18,7 +18,7 @@ trait ImgurPostBlockV1Trait
         return [
             'etag' => $this->get('etag'),
             'id' => $this->get('id'),
-            'context' => $this->get('context'),
+            'show_context' => $this->get('show_context'),
         ];
     }
 }

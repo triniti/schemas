@@ -23,6 +23,26 @@
           e.g. "desktop-home-sidebar" or "smartphone-global-html-head".
         </description>
       </field>
+      <field name="priority" type="small-int">
+        <description>
+          If multiple promotions can render in a given slot at the same
+          time then the one with the higher priority takes precedence.
+        </description>
+      </field>
+      <field name="mon_start_at" type="date-time"/>
+      <field name="mon_end_at" type="date-time"/>
+      <field name="tue_start_at" type="date-time"/>
+      <field name="tue_end_at" type="date-time"/>
+      <field name="wed_start_at" type="date-time"/>
+      <field name="wed_end_at" type="date-time"/>
+      <field name="thu_start_at" type="date-time"/>
+      <field name="thu_end_at" type="date-time"/>
+      <field name="fri_start_at" type="date-time"/>
+      <field name="fri_end_at" type="date-time"/>
+      <field name="sat_start_at" type="date-time"/>
+      <field name="sat_end_at" type="date-time"/>
+      <field name="sun_start_at" type="date-time"/>
+      <field name="sun_end_at" type="date-time"/>
       <field name="pre_render_code" type="text">
         <description>
           A string containing (HTML, JavaScript, CSS, etc.) that is injected into

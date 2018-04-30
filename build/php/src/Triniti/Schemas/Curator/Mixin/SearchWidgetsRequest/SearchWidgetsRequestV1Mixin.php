@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Curator\Mixin\SearchWidgetsRequest;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -27,6 +28,14 @@ final class SearchWidgetsRequestV1Mixin extends AbstractMixin
             Fb::create('sort', T\StringEnumType::create())
                 ->withDefault(SearchWidgetsSort::RELEVANCE())
                 ->className(SearchWidgetsSort::class)
+                ->build(),
+            /*
+             * A set of widget types (node must match at least one) to include in
+             * the search results, such as carousel-widget.
+             */
+            Fb::create('types', T\StringType::create())
+                ->asASet()
+                ->format(Format::SLUG())
                 ->build(),
         ];
     }

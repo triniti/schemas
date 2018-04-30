@@ -8,6 +8,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Triniti\Schemas\Curator\Enum\ContentType;
 use Triniti\Schemas\Curator\Enum\SearchTeasersSort;
 
 final class SearchTeasersRequestV1Mixin extends AbstractMixin
@@ -40,6 +41,10 @@ final class SearchTeasersRequestV1Mixin extends AbstractMixin
             Fb::create('types', T\StringType::create())
                 ->asASet()
                 ->format(Format::SLUG())
+                ->build(),
+            Fb::create('content_types', T\StringEnumType::create())
+                ->asASet()
+                ->className(ContentType::class)
                 ->build(),
             /*
              * A node ref of a gallery that a teaser must be associated with to match the search request.

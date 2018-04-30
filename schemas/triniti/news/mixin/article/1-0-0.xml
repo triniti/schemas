@@ -51,7 +51,7 @@
       <field name="classification" type="string" format="slug">
         <description>
           An arbitrary classification that can be used to establish importance/rank/weight/etc.
-          with a human friendly label.  e.g. "super-hero", "hero", "chud".
+          with a human friendly label. e.g. "super-hero", "hero", "chud".
         </description>
       </field>
       <field name="amp_enabled" type="boolean">

@@ -19,6 +19,9 @@
           the search results, such as image-teaser or video-teaser.
         </description>
       </field>
+      <field name="content_types" type="string-enum" rule="set">
+        <enum id="triniti:curator:content-type"/>
+      </field>
       <field name="gallery_ref" type="identifier">
         <description>
           A node ref of a gallery that a teaser must be associated with to match the search request.

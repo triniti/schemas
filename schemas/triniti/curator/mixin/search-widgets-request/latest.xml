@@ -10,6 +10,12 @@
         <default>relevance</default>
         <enum id="triniti:curator:search-widgets-sort"/>
       </field>
+      <field name="types" type="string" format="slug" rule="set">
+        <description>
+          A set of widget types (node must match at least one) to include in
+          the search results, such as carousel-widget.
+        </description>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

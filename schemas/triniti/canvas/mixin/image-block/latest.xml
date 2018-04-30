@@ -6,6 +6,7 @@
   <schema id="pbj:triniti:canvas:mixin:image-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:node-ref-block:v1">
     <fields>
+      <field name="caption" type="text" max="2000"/>
       <field name="is_nsfw" type="boolean"/>
     </fields>
 
