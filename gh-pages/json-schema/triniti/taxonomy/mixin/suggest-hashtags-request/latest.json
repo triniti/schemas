@@ -178,7 +178,8 @@
       "maxLength": 255,
       "pbj": {
         "type": "string",
-        "rule": "single"
+        "rule": "single",
+        "format": "hashtag"
       }
     },
     "count": {

@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Taxonomy\Mixin\SuggestHashtagsRequest;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -24,6 +25,7 @@ final class SuggestHashtagsRequestV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('prefix', T\StringType::create())
+                ->format(Format::HASHTAG())
                 ->build(),
             /*
              * The number of results to return.
