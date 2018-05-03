@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## v0.2.4
+## v0.2.5
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:vimeo-video-block`
     * Add `user_id` string field.
