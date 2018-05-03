@@ -25,7 +25,8 @@
       </field>
       <field name="description" type="text" max="5000"/>
       <field name="title" type="string"/>
-      <field name="user_name" type="string" pattern="^[\w\.-]+$"/>
+      <field name="user_id" type="string" pattern="^[\w\.-]+$"/>
+      <field name="user_name" type="string" pattern="^[\s\w\.-]+$"/>
       <field name="poster_image_ref" type="identifier">
         <description>
           A reference to an image asset to use as the poster that will
