@@ -10,7 +10,7 @@
 
 ## v0.2.4
 * __Add Schemas:__
-  * `triniti:canvas:mixin:soundcloud-video-block`
+  * `triniti:canvas:mixin:soundcloud-audio-block`
   * `triniti:canvas:mixin:vimeo-video-block`
   * `triniti:curator:content-type`
   * `triniti:taxonomy:mixin:suggest-hashtags-request`
