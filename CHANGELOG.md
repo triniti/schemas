@@ -2,6 +2,8 @@
 
 
 ## v0.2.5
+* __Add Schemas:__
+  * `triniti:canvas:mixin:document-block`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:vimeo-video-block`
     * Add `user_id` string field.
