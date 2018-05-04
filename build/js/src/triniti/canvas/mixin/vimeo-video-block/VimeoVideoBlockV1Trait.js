@@ -12,7 +12,6 @@ export default function VimeoVideoBlockV1Trait(m) {
         show_byline: this.get('show_byline'),
         show_portrait: this.get('show_portrait'),
         show_title: this.get('show_title'),
-        poster_image_ref: `${this.get('poster_image_ref', '')}`,
       };
     }
   });

@@ -1,6 +1,6 @@
 <?php
 
-namespace Triniti\Schemas\Canvas\Mixin\VevoVideoBlock;
+namespace Triniti\Schemas\Canvas\Mixin\DocumentBlock;
 
 use Gdbots\Pbj\Schema;
 
@@ -8,7 +8,7 @@ use Gdbots\Pbj\Schema;
  * @method static Schema schema
  * @method mixed get($fieldName, $default = null)
  */
-trait VevoVideoBlockV1Trait
+trait DocumentBlockV1Trait
 {
     /**
      * @return array
@@ -17,8 +17,7 @@ trait VevoVideoBlockV1Trait
     {
         return [
             'etag' => $this->get('etag'),
-            'isrc' => $this->get('isrc'),
-            'autoplay' => $this->get('autoplay'),
+            'node_ref' => (string)$this->get('node_ref'),
         ];
     }
 }
