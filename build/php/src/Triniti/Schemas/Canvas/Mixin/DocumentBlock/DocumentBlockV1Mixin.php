@@ -24,13 +24,12 @@ final class DocumentBlockV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('launch_text', T\TextType::create())
-                ->maxLength(500)
+            Fb::create('launch_text', T\StringType::create())
                 ->build(),
             /*
              * An optional reference to an image asset to use as the poster.
              */
-            Fb::create('poster_image_ref', T\IdentifierType::create())
+            Fb::create('image_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
         ];

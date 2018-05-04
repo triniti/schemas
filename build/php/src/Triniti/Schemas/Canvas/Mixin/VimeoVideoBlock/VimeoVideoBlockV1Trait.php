@@ -23,6 +23,7 @@ trait VimeoVideoBlockV1Trait
             'show_byline' => $this->get('show_byline'),
             'show_portrait' => $this->get('show_portrait'),
             'show_title' => $this->get('show_title'),
+            'user_id' => $this->get('user_id'),
         ];
     }
 }

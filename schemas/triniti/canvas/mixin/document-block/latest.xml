@@ -6,8 +6,8 @@
   <schema id="pbj:triniti:canvas:mixin:document-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:node-ref-block:v1">
     <fields>
-      <field name="launch_text" type="text" max="500"/>
-      <field name="poster_image_ref" type="identifier">
+      <field name="launch_text" type="string"/>
+      <field name="image_ref" type="identifier">
         <description>
           An optional reference to an image asset to use as the poster.
         </description>

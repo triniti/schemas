@@ -1,5 +1,6 @@
 // @link http://schemas.triniti.io/json-schema/triniti/people/mixin/person/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import PersonId from '@triniti/schemas/triniti/people/PersonId';
@@ -30,6 +31,22 @@ export default class PersonV1Mixin extends Mixin {
        */
       Fb.create('image_ref', T.IdentifierType.create())
         .classProto(NodeRef)
+        .build(),
+      /*
+       * A short bio of the person. It should typically not have HTML as it is
+       * used in metadata, feeds, SERP and social.
+       */
+      Fb.create('bio', T.TextType.create())
+        .maxLength(5000)
+        .build(),
+      /*
+       * Indicates where the bio data originated from, e.g. imdb, freebase, custom.
+       */
+      Fb.create('bio_source', T.StringType.create())
+        .format(Format.SLUG)
+        .build(),
+      Fb.create('imdb_url', T.StringType.create())
+        .format(Format.URL)
         .build(),
     ];
   }
