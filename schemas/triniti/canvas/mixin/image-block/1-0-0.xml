@@ -8,6 +8,7 @@
     <fields>
       <field name="caption" type="text" max="2000"/>
       <field name="is_nsfw" type="boolean"/>
+      <field name="url" type="string" format="url" />
     </fields>
 
     <php-options>

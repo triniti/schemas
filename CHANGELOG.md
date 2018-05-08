@@ -10,6 +10,8 @@
   * `triniti:sys:mixin:list-all-picklists-response`
   * `triniti:sys:mixin:picklist`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:image-block`
+    * Add `url` string field.
   * `triniti:canvas:mixin:vimeo-video-block`
     * Add `user_id` string field.
     * Change pattern on `user_name` field to allow spaces.
