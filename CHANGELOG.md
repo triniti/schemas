@@ -4,6 +4,8 @@
 ## v0.2.5
 * __Add Schemas:__
   * `triniti:canvas:mixin:document-block`
+  * `triniti:dam:mixin:asset-patched`
+  * `triniti:dam:mixin:patch-assets`
   * `triniti:sys:mixin:list-all-picklists-request`
   * `triniti:sys:mixin:list-all-picklists-response`
   * `triniti:sys:mixin:picklist`
