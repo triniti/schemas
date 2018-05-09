@@ -1,211 +1,232 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/people/mixin/person/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/patch-node/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "_id": {
+    "command_id": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
       "pbj": {
-        "type": "identifier",
+        "type": "time-uuid",
+        "rule": "single"
+      }
+    },
+    "occurred_at": {
+      "type": "string",
+      "pattern": "^[1-9]{1}[0-9]{12,15}$",
+      "pbj": {
+        "type": "microtime",
+        "rule": "single"
+      }
+    },
+    "expected_etag": {
+      "type": "string",
+      "pattern": "^[\\w\\.:-]+$",
+      "description": "Used to perform optimistic concurrency control. @link https://en.wikipedia.org/wiki/HTTP_ETag",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "ctx_retries": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 255,
+      "description": "The \"ctx_retries\" field is used to keep track of how many attempts were made to process this command. In some cases, the service or transport that handles the command may be down or an optimistic check has failed and is being retried.",
+      "pbj": {
+        "type": "tiny-int",
+        "rule": "single"
+      }
+    },
+    "ctx_causator_ref": {
+      "type": "object",
+      "properties": {
+        "curie": {
+          "type": "string",
+          "pattern": "^([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+)$",
+          "minLength": 0,
+          "maxLength": 146
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9:_\\-]+$",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "tag": {
+          "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      },
+      "required": [
+        "curie",
+        "id"
+      ],
+      "additionalProperties": false,
+      "pbj": {
+        "type": "message-ref",
+        "rule": "single"
+      }
+    },
+    "ctx_correlator_ref": {
+      "type": "object",
+      "properties": {
+        "curie": {
+          "type": "string",
+          "pattern": "^([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+)$",
+          "minLength": 0,
+          "maxLength": 146
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9:_\\-]+$",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "tag": {
+          "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      },
+      "required": [
+        "curie",
+        "id"
+      ],
+      "additionalProperties": false,
+      "pbj": {
+        "type": "message-ref",
+        "rule": "single"
+      }
+    },
+    "ctx_user_ref": {
+      "type": "object",
+      "properties": {
+        "curie": {
+          "type": "string",
+          "pattern": "^([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+)$",
+          "minLength": 0,
+          "maxLength": 146
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9:_\\-]+$",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "tag": {
+          "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      },
+      "required": [
+        "curie",
+        "id"
+      ],
+      "additionalProperties": false,
+      "pbj": {
+        "type": "message-ref",
+        "rule": "single"
+      }
+    },
+    "ctx_app": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/app"
+        }
+      ],
+      "description": "The \"ctx_app\" refers to the application used to send the command. This is different from ctx_ua (user_agent) because the agent used (Safari, Firefox) is not necessarily the app used (cms, iOS app, website)",
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
+    },
+    "ctx_cloud": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/cloud"
+        }
+      ],
+      "description": "The \"ctx_cloud\" is set by the server receiving the command and is generally only used internally for tracking and performance monitoring.",
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
+    },
+    "ctx_ip": {
+      "type": "string",
+      "format": "ipv4",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "ipv4",
+        "overridable": true
+      }
+    },
+    "ctx_ua": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "pbj": {
+        "type": "text",
         "rule": "single",
         "overridable": true
       }
     },
-    "status": {
-      "type": "string",
-      "default": "draft",
-      "enum": [
-        "unknown",
-        "published",
-        "scheduled",
-        "pending",
-        "draft",
-        "expired",
-        "archived",
-        "deleted"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
-    },
-    "etag": {
-      "type": "string",
-      "pattern": "^[\\w\\.:-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "created_at": {
-      "type": "string",
-      "pattern": "^[1-9]{1}[0-9]{12,15}$",
-      "pbj": {
-        "type": "microtime",
-        "rule": "single"
-      }
-    },
-    "creator_ref": {
-      "type": "object",
-      "properties": {
-        "curie": {
-          "type": "string",
-          "pattern": "^([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+)$",
-          "minLength": 0,
-          "maxLength": 146
-        },
-        "id": {
-          "type": "string",
-          "pattern": "^[A-Za-z0-9:_\\-]+$",
-          "minLength": 0,
-          "maxLength": 255
-        },
-        "tag": {
-          "type": "string",
-          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-          "minLength": 0,
-          "maxLength": 255
-        }
-      },
-      "required": [
-        "curie",
-        "id"
-      ],
-      "additionalProperties": false,
-      "description": "A fully qualified reference to what created this node. This is intentionally a message-ref and not a user id because it is often a program that creates nodes, not a user.",
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
-    },
-    "updated_at": {
-      "type": "string",
-      "pattern": "^[1-9]{1}[0-9]{12,15}$",
-      "pbj": {
-        "type": "microtime",
-        "rule": "single",
-        "useTypeDefault": false
-      }
-    },
-    "updater_ref": {
-      "type": "object",
-      "properties": {
-        "curie": {
-          "type": "string",
-          "pattern": "^([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+)$",
-          "minLength": 0,
-          "maxLength": 146
-        },
-        "id": {
-          "type": "string",
-          "pattern": "^[A-Za-z0-9:_\\-]+$",
-          "minLength": 0,
-          "maxLength": 255
-        },
-        "tag": {
-          "type": "string",
-          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-          "minLength": 0,
-          "maxLength": 255
-        }
-      },
-      "required": [
-        "curie",
-        "id"
-      ],
-      "additionalProperties": false,
-      "description": "A fully qualified reference to what updated this node. This is intentionally a message-ref and not a user id because it is often a program that updates nodes, not a user. E.g. \"acme:iam:node:app:cli-scheduler\" or \"acme:iam:node:user:60c71df0-fda8-11e5-bfb9-30342d363854\"",
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
-    },
-    "last_event_ref": {
-      "type": "object",
-      "properties": {
-        "curie": {
-          "type": "string",
-          "pattern": "^([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+)$",
-          "minLength": 0,
-          "maxLength": 146
-        },
-        "id": {
-          "type": "string",
-          "pattern": "^[A-Za-z0-9:_\\-]+$",
-          "minLength": 0,
-          "maxLength": 255
-        },
-        "tag": {
-          "type": "string",
-          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-          "minLength": 0,
-          "maxLength": 255
-        }
-      },
-      "required": [
-        "curie",
-        "id"
-      ],
-      "additionalProperties": false,
-      "description": "A reference to the last event that changed the state of this node. E.g. \"acme:blog:event:article-published:60c71df0-fda8-11e5-bfb9-30342d363854\"",
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
-    },
-    "title": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "image_ref": {
+    "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the image asset to use for widgets, sharing, seo.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
       }
     },
-    "bio": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 5000,
-      "description": "A short bio of the person. It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
-    },
-    "bio_source": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "Indicates where the bio data originated from, e.g. imdb, freebase, custom.",
+    "paths": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[a-zA-Z_]{1}[\\w\\.]*$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "The names of the fields this patch command should apply changes to. Nested paths can be referenced using dot notation.",
       "pbj": {
         "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
-    },
-    "imdb_url": {
-      "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "url"
+        "rule": "set"
       }
     }
   },
   "required": [
-    "_id"
+    "command_id",
+    "node_ref"
   ],
+  "definitions": {
+    "app": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/contexts/app/1-0-0.json#"
+        }
+      ]
+    },
+    "cloud": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/contexts/cloud/1-0-0.json#"
+        }
+      ]
+    }
+  },
   "additionalProperties": true
 }

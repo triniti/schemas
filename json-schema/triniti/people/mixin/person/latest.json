@@ -171,6 +171,37 @@
         "type": "identifier",
         "rule": "single"
       }
+    },
+    "bio": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 5000,
+      "description": "A short bio of the person. It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "bio_source": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Indicates where the bio data originated from, e.g. imdb, freebase, custom.",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
+    "imdb_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
     }
   },
   "required": [

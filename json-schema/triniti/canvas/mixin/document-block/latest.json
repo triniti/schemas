@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/image-block/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/document-block/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -28,29 +28,22 @@
         "rule": "single"
       }
     },
-    "caption": {
+    "launch_text": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 2000,
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
-    },
-    "is_nsfw": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "url": {
-      "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "maxLength": 255,
       "pbj": {
         "type": "string",
-        "rule": "single",
-        "format": "url"
+        "rule": "single"
+      }
+    },
+    "image_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "An optional reference to an image asset to use as the poster.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
       }
     }
   },
