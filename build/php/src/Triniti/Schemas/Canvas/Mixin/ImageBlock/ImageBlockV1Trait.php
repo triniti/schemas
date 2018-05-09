@@ -19,6 +19,7 @@ trait ImageBlockV1Trait
             'etag' => $this->get('etag'),
             'node_ref' => (string)$this->get('node_ref'),
             'is_nswf' => $this->get('is_nswf'),
+            'url' => $this->get('url'),
         ];
     }
 }
