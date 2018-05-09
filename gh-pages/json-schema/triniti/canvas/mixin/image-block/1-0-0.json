@@ -43,6 +43,15 @@
         "type": "boolean",
         "rule": "single"
       }
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
     }
   },
   "required": [

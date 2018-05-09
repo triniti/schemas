@@ -52,8 +52,11 @@ final class VimeoVideoBlockV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('title', T\StringType::create())
                 ->build(),
-            Fb::create('user_name', T\StringType::create())
+            Fb::create('user_id', T\StringType::create())
                 ->pattern('^[\w\.-]+$')
+                ->build(),
+            Fb::create('user_name', T\StringType::create())
+                ->pattern('^[\s\w\.-]+$')
                 ->build(),
             /*
              * A reference to an image asset to use as the poster that will

@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\People\Mixin\Person;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -36,6 +37,22 @@ final class PersonV1Mixin extends AbstractMixin
              */
             Fb::create('image_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
+                ->build(),
+            /*
+             * A short bio of the person. It should typically not have HTML as it is
+             * used in metadata, feeds, SERP and social.
+             */
+            Fb::create('bio', T\TextType::create())
+                ->maxLength(5000)
+                ->build(),
+            /*
+             * Indicates where the bio data originated from, e.g. imdb, freebase, custom.
+             */
+            Fb::create('bio_source', T\StringType::create())
+                ->format(Format::SLUG())
+                ->build(),
+            Fb::create('imdb_url', T\StringType::create())
+                ->format(Format::URL())
                 ->build(),
         ];
     }

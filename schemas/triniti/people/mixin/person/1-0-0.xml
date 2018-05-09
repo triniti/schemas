@@ -30,6 +30,18 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="bio" type="text" max="5000">
+        <description>
+          A short bio of the person. It should typically not have HTML as it is
+          used in metadata, feeds, SERP and social.
+        </description>
+      </field>
+      <field name="bio_source" type="string" format="slug">
+        <description>
+          Indicates where the bio data originated from, e.g. imdb, freebase, custom.
+        </description>
+      </field>
+      <field name="imdb_url" type="string" format="url"/>
     </fields>
 
     <php-options>

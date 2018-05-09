@@ -84,9 +84,17 @@
         "rule": "single"
       }
     },
-    "user_name": {
+    "user_id": {
       "type": "string",
       "pattern": "^[\\w\\.-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "user_name": {
+      "type": "string",
+      "pattern": "^[\\s\\w\\.-]+$",
       "pbj": {
         "type": "string",
         "rule": "single"

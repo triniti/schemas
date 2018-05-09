@@ -25,7 +25,8 @@
       </field>
       <field name="description" type="text" max="5000"/>
       <field name="title" type="string"/>
-      <field name="user_name" type="string" pattern="^[\w\.-]+$"/>
+      <field name="user_id" type="string" pattern="^[\w\.-]+$"/>
+      <field name="user_name" type="string" pattern="^[\s\w\.-]+$"/>
       <field name="poster_image_ref" type="identifier">
         <description>
           A reference to an image asset to use as the poster that will
@@ -60,7 +61,7 @@ public function getUriTemplateVars()
         'show_byline' => $this->get('show_byline'),
         'show_portrait' => $this->get('show_portrait'),
         'show_title' => $this->get('show_title'),
-        'poster_image_ref' => (string)$this->get('poster_image_ref'),
+        'user_id' => $this->get('user_id'),
     ];
 }
           ]]>
@@ -84,7 +85,7 @@ getUriTemplateVars() {
     show_byline: this.get('show_byline'),
     show_portrait: this.get('show_portrait'),
     show_title: this.get('show_title'),
-    poster_image_ref: `${this.get('poster_image_ref', '')}`,
+    user_id: this.get('user_id'),
   };
 }
           ]]>

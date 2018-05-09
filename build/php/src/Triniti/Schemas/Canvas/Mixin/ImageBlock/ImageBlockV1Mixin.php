@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Canvas\Mixin\ImageBlock;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -27,6 +28,9 @@ final class ImageBlockV1Mixin extends AbstractMixin
                 ->maxLength(2000)
                 ->build(),
             Fb::create('is_nsfw', T\BooleanType::create())
+                ->build(),
+            Fb::create('url', T\StringType::create())
+                ->format(Format::URL())
                 ->build(),
         ];
     }

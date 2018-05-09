@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:sys:mixin:picklist:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+    <fields>
+      <field name="_id" type="identifier" required="true" overridable="true">
+        <php-options>
+          <imports>use Triniti\Schemas\Sys\PicklistId;</imports>
+          <class-name>PicklistId::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import PicklistId from '@triniti/schemas/triniti/sys/PicklistId';</imports>
+          <class-proto>PicklistId</class-proto>
+        </js-options>
+      </field>
+      <field name="options" type="string" rule="list"/>
+      <field name="alpha_sort" type="boolean"/>
+      <field name="allow_other" type="boolean"/>
+      <field name="default_value" type="string"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        '_id' => (string)$this->get('_id'),
+        'alpha_sort' => $this->get('alpha_sort'),
+        'allow_other' => $this->get('allow_other'),
+        'default_value' => $this->get('default_value'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    _id: `${this.get('_id', '')}`,
+    alpha_sort: this.get('alpha_sort'),
+    allow_other: this.get('allow_other'),
+    default_value: this.get('default_value'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>

@@ -1,9 +1,29 @@
 # CHANGELOG
 
 
+## v0.2.5
+* __Add Schemas:__
+  * `triniti:canvas:mixin:document-block`
+  * `triniti:dam:mixin:asset-patched`
+  * `triniti:dam:mixin:patch-assets`
+  * `triniti:sys:mixin:list-all-picklists-request`
+  * `triniti:sys:mixin:list-all-picklists-response`
+  * `triniti:sys:mixin:picklist`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:image-block`
+    * Add `url` string field with format url.
+  * `triniti:canvas:mixin:vimeo-video-block`
+    * Add `user_id` string field.
+    * Change pattern on `user_name` field to allow spaces.
+  * `triniti:people:mixin:person`
+    * Add `bio` text field.
+    * Add `bio_source` string field with format slug.
+    * Add `imdb_url` string field with format url.
+
+
 ## v0.2.4
 * __Add Schemas:__
-  * `triniti:canvas:mixin:soundcloud-video-block`
+  * `triniti:canvas:mixin:soundcloud-audio-block`
   * `triniti:canvas:mixin:vimeo-video-block`
   * `triniti:curator:content-type`
   * `triniti:taxonomy:mixin:suggest-hashtags-request`
