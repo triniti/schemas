@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:dam:mixin:patch-assets:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:command:v1">
+  <schema id="pbj:triniti:dam:mixin:patch-assets:1-0-0" mixin="true" extends="gdbots:ncr:mixin:patch-nodes:v1">
     <fields>
-      <field name="node_refs" type="identifier" rule="set">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
-      <field name="fields" type="string" pattern="^[a-zA-Z_]{1}[a-zA-Z0-9_]*$" rule="set">
+      <field name="paths" type="string" pattern="^[a-zA-Z_]{1}[a-zA-Z0-9_\.]*$" rule="set">
         <description>
-          The names of the fields this patch event should apply changes to.
+          The names of the fields this patch event should apply changes to. Sub paths can be pointed to
+          using dot notation.
         </description>
       </field>
       <field name="expires_at" type="date-time"/>

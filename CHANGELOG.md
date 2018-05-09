@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v0.2.6
+* __Add Schemas:__
+  * `triniti:dam:mixin:patch-assets`
 
 ## v0.2.5
 * __Add Schemas:__
