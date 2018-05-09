@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/field/age-field/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/field/skype-user-field/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:gdbots:forms:field:age-field:1-0-0"
+      "default": "pbj:gdbots:forms:field:skype-user-field:1-0-0"
     },
     "name": {
       "type": "string",
@@ -93,26 +93,6 @@
       ],
       "pbj": {
         "type": "string-enum",
-        "rule": "single"
-      }
-    },
-    "min_age": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 255,
-      "pbj": {
-        "type": "tiny-int",
-        "rule": "single"
-      }
-    },
-    "max_age": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 255,
-      "pbj": {
-        "type": "tiny-int",
         "rule": "single"
       }
     }

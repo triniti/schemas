@@ -1,8 +1,5 @@
 # CHANGELOG
 
-## v0.2.6
-* __Add Schemas:__
-  * `triniti:dam:mixin:patch-assets`
 
 ## v0.2.5
 * __Add Schemas:__
@@ -14,7 +11,7 @@
   * `triniti:sys:mixin:picklist`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:image-block`
-    * Add `url` string field.
+    * Add `url` string field with format url.
   * `triniti:canvas:mixin:vimeo-video-block`
     * Add `user_id` string field.
     * Change pattern on `user_name` field to allow spaces.

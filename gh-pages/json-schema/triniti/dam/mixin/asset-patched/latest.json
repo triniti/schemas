@@ -169,17 +169,17 @@
         "rule": "single"
       }
     },
-    "fields": {
+    "paths": {
       "type": "array",
       "items": [
         {
           "type": "string",
-          "pattern": "^[a-zA-Z_]{1}[a-zA-Z0-9_]*$"
+          "pattern": "^[a-zA-Z_]{1}[\\w\\.]*$"
         }
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "The names of the fields this patch event should apply changes to.",
+      "description": "The names of the fields this patch event should apply changes to. Nested paths can be referenced using dot notation.",
       "pbj": {
         "type": "string",
         "rule": "set"

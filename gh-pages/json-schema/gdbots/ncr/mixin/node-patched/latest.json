@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset-patched/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/node-patched/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -183,23 +183,6 @@
       "pbj": {
         "type": "string",
         "rule": "set"
-      }
-    },
-    "expires_at": {
-      "type": "string",
-      "format": "date-time",
-      "pbj": {
-        "type": "date-time",
-        "rule": "single"
-      }
-    },
-    "credit": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
       }
     }
   },

@@ -1,13 +1,13 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/search-users-request/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/patch-node/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "request_id": {
+    "command_id": {
       "type": "string",
       "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
       "pbj": {
-        "type": "uuid",
+        "type": "time-uuid",
         "rule": "single"
       }
     },
@@ -19,12 +19,21 @@
         "rule": "single"
       }
     },
+    "expected_etag": {
+      "type": "string",
+      "pattern": "^[\\w\\.:-]+$",
+      "description": "Used to perform optimistic concurrency control. @link https://en.wikipedia.org/wiki/HTTP_ETag",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "ctx_retries": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
       "maximum": 255,
-      "description": "The \"ctx_retries\" field is used to keep track of how many attempts were made to handle this request. In some cases, the service or transport that handles the request may be down or over capacity and is being retried.",
+      "description": "The \"ctx_retries\" field is used to keep track of how many attempts were made to process this command. In some cases, the service or transport that handles the command may be down or an optimistic check has failed and is being retried.",
       "pbj": {
         "type": "tiny-int",
         "rule": "single"
@@ -133,7 +142,7 @@
           "$ref": "#/definitions/app"
         }
       ],
-      "description": "The \"ctx_app\" refers to the application used to make the request. This is different from ctx_ua (user_agent) because the agent used (Safari, Firefox) is not necessarily the app used (cms, iOS app, website)",
+      "description": "The \"ctx_app\" refers to the application used to send the command. This is different from ctx_ua (user_agent) because the agent used (Safari, Firefox) is not necessarily the app used (cms, iOS app, website)",
       "pbj": {
         "type": "message",
         "rule": "single"
@@ -146,7 +155,7 @@
           "$ref": "#/definitions/cloud"
         }
       ],
-      "description": "The \"ctx_cloud\" is set by the server making the request and is generally only used internally for tracking and performance monitoring.",
+      "description": "The \"ctx_cloud\" is set by the server receiving the command and is generally only used internally for tracking and performance monitoring.",
       "pbj": {
         "type": "message",
         "rule": "single"
@@ -172,189 +181,34 @@
         "overridable": true
       }
     },
-    "q": {
+    "node_ref": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 2000,
+      "pattern": "^[\\w\\/\\.:-]+$",
       "pbj": {
-        "type": "text",
+        "type": "identifier",
         "rule": "single"
       }
     },
-    "count": {
-      "type": "integer",
-      "default": 25,
-      "minimum": 0,
-      "maximum": 255,
-      "description": "The number of results to return.",
-      "pbj": {
-        "type": "tiny-int",
-        "rule": "single"
-      }
-    },
-    "page": {
-      "type": "integer",
-      "default": 1,
-      "minimum": 1,
-      "maximum": 255,
-      "pbj": {
-        "type": "tiny-int",
-        "rule": "single"
-      }
-    },
-    "cursor": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "A cursor is a string (normally base64 encoded) which marks a specific item in a list of data. When cursor is present it should be used instead of \"page\".",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "unknown",
-        "published",
-        "scheduled",
-        "pending",
-        "draft",
-        "expired",
-        "archived",
-        "deleted"
-      ],
-      "description": "The status a node must be in to match the search request.",
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
-    },
-    "statuses": {
+    "paths": {
       "type": "array",
       "items": [
         {
           "type": "string",
-          "enum": [
-            "unknown",
-            "published",
-            "scheduled",
-            "pending",
-            "draft",
-            "expired",
-            "archived",
-            "deleted"
-          ]
+          "pattern": "^[a-zA-Z_]{1}[\\w\\.]*$"
         }
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "A set of statuses (node must match at least one) to include in the search results.",
-      "pbj": {
-        "type": "string-enum",
-        "rule": "set"
-      }
-    },
-    "created_after": {
-      "type": "string",
-      "format": "date-time",
-      "pbj": {
-        "type": "date-time",
-        "rule": "single"
-      }
-    },
-    "created_before": {
-      "type": "string",
-      "format": "date-time",
-      "pbj": {
-        "type": "date-time",
-        "rule": "single"
-      }
-    },
-    "updated_after": {
-      "type": "string",
-      "format": "date-time",
-      "pbj": {
-        "type": "date-time",
-        "rule": "single"
-      }
-    },
-    "updated_before": {
-      "type": "string",
-      "format": "date-time",
-      "pbj": {
-        "type": "date-time",
-        "rule": "single"
-      }
-    },
-    "fields_used": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[\\w\\.-]+$"
-        }
-      ],
-      "uniqueItems": true,
-      "additionalProperties": false,
-      "description": "The fields that are being queried as determined by parsing the \"q\" field.",
+      "description": "The names of the fields this patch command should apply changes to. Nested paths can be referenced using dot notation.",
       "pbj": {
         "type": "string",
         "rule": "set"
-      }
-    },
-    "parsed_query_json": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 65535,
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
-    },
-    "sort": {
-      "type": "string",
-      "default": "relevance",
-      "enum": [
-        "unknown",
-        "relevance",
-        "created-at-desc",
-        "created-at-asc",
-        "updated-at-desc",
-        "updated-at-asc",
-        "first-name-desc",
-        "first-name-asc",
-        "last-name-desc",
-        "last-name-asc"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
-    },
-    "is_staff": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 2,
-      "pbj": {
-        "type": "trinary",
-        "rule": "single"
-      }
-    },
-    "is_blocked": {
-      "type": "integer",
-      "default": 2,
-      "minimum": 0,
-      "maximum": 2,
-      "pbj": {
-        "type": "trinary",
-        "rule": "single"
       }
     }
   },
   "required": [
-    "request_id"
+    "command_id",
+    "node_ref"
   ],
   "definitions": {
     "app": {

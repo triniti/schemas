@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:dam:mixin:patch-assets:1-0-0" mixin="true" extends="gdbots:ncr:mixin:patch-nodes:v1">
     <fields>
-      <field name="paths" type="string" pattern="^[a-zA-Z_]{1}[a-zA-Z0-9_\.]*$" rule="set">
-        <description>
-          The names of the fields this patch event should apply changes to. Sub paths can be pointed to
-          using dot notation.
-        </description>
-      </field>
       <field name="expires_at" type="date-time"/>
       <field name="credit" type="string"/>
     </fields>
