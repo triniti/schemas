@@ -8,7 +8,7 @@
     <fields>
       <field name="caption" type="text" max="2000"/>
       <field name="is_nsfw" type="boolean"/>
-      <field name="url" type="string" format="url" />
+      <field name="url" type="string" format="url"/>
     </fields>
 
     <php-options>
@@ -25,6 +25,7 @@ public function getUriTemplateVars()
         'etag' => $this->get('etag'),
         'node_ref' => (string)$this->get('node_ref'),
         'is_nswf' => $this->get('is_nswf'),
+        'url' => $this->get('url'),
     ];
 }
           ]]>
@@ -44,6 +45,7 @@ getUriTemplateVars() {
     etag: this.get('etag'),
     node_ref: `${this.get('node_ref', '')}`,
     is_nswf: this.get('is_nswf'),
+    url: this.get('url'),
   };
 }
           ]]>
