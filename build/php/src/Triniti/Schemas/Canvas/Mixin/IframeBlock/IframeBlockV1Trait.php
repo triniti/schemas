@@ -21,6 +21,7 @@ trait IframeBlockV1Trait
             'width' => $this->get('width'),
             'height' => $this->get('height'),
             'align' => $this->get('align'),
+            'data' => $this->get('data'),
         ];
     }
 }

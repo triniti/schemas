@@ -37,6 +37,12 @@ final class IframeBlockV1Mixin extends AbstractMixin
             Fb::create('align', T\StringType::create())
                 ->pattern('^(center|right|left)$')
                 ->build(),
+            /*
+             * A map containing values for the data-* attributes
+             */
+            Fb::create('data', T\TextType::create())
+                ->asAMap()
+                ->build(),
         ];
     }
 }

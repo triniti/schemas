@@ -8,7 +8,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
-use Triniti\Schemas\News\NotificationId;
+use Triniti\Schemas\News\ArticleId;
 
 final class ArticleV1Mixin extends AbstractMixin
 {
@@ -28,8 +28,8 @@ final class ArticleV1Mixin extends AbstractMixin
         return [
             Fb::create('_id', T\IdentifierType::create())
                 ->required()
-                ->withDefault(function() { return NotificationId::generate(); })
-                ->className(NotificationId::class)
+                ->withDefault(function() { return ArticleId::generate(); })
+                ->className(ArticleId::class)
                 ->overridable(true)
                 ->build(),
             Fb::create('is_homepage_news', T\BooleanType::create())
