@@ -7,6 +7,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Triniti\Schemas\Notify\Enum\MessageType;
 use Triniti\Schemas\Notify\NotificationId;
 
 final class NotificationV1Mixin extends AbstractMixin
@@ -39,10 +40,20 @@ final class NotificationV1Mixin extends AbstractMixin
                 ->build(),
             /*
              * A customize alert text of the notification. It should typically
-             * not have HTML as it is used in metadata, feeds, SERP and social.
+             * not have HTML.
              */
             Fb::create('customize_alert_text', T\TextType::create())
                 ->maxLength(5000)
+                ->build(),
+            Fb::create('message_type', T\StringEnumType::create())
+                ->withDefault(MessageType::UNKNOWN())
+                ->className(MessageType::class)
+                ->build(),
+            /*
+             * A reference to the target message for the notification.
+             */
+            Fb::create('target_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
                 ->build(),
         ];
     }

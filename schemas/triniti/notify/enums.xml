@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-enums xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/enums.xsd">
+
+  <enums namespace="triniti:notify">
+    <enum name="message-type" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="ARTICLE" value="article"/>
+      <option key="VIDEO" value="video"/>
+      <option key="GALLERY" value="gallery"/>
+      <option key="GENERAL" value="general"/>
+    </enum>
+  </enums>
+</pbj-enums>

@@ -33,8 +33,25 @@
       <field name="customize_alert_text" type="text" max="5000">
         <description>
           A customize alert text of the notification. It should typically
-          not have HTML as it is used in metadata, feeds, SERP and social.
+          not have HTML.
         </description>
+      </field>
+      <field name="message_type" type="string-enum">
+        <default>unknown</default>
+        <enum id="triniti:notify:message-type"/>
+      </field>
+      <field name="target_ref" type="identifier">
+        <description>
+          A reference to the target message for the notification.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
       </field>
     </fields>
   </schema>

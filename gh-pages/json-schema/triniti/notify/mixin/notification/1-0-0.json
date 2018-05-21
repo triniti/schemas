@@ -176,9 +176,33 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 5000,
-      "description": "A customize alert text of the notification. It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
+      "description": "A customize alert text of the notification. It should typically not have HTML.",
       "pbj": {
         "type": "text",
+        "rule": "single"
+      }
+    },
+    "message_type": {
+      "type": "string",
+      "default": "unknown",
+      "enum": [
+        "unknown",
+        "article",
+        "video",
+        "gallery",
+        "general"
+      ],
+      "pbj": {
+        "type": "string-enum",
+        "rule": "single"
+      }
+    },
+    "target_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the target message for the notification.",
+      "pbj": {
+        "type": "identifier",
         "rule": "single"
       }
     }
