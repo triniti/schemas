@@ -205,6 +205,20 @@
         "type": "identifier",
         "rule": "single"
       }
+    },
+    "notification_status": {
+      "type": "string",
+      "default": "unknown",
+      "enum": [
+        "unknown",
+        "sent",
+        "cancelled",
+        "scheduled"
+      ],
+      "pbj": {
+        "type": "string-enum",
+        "rule": "single"
+      }
     }
   },
   "required": [

@@ -11,5 +11,23 @@
       <option key="GALLERY" value="gallery"/>
       <option key="GENERAL" value="general"/>
     </enum>
+    <enum name="notification-status" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="SENT" value="sent"/>
+      <option key="CANCELLED" value="cancelled"/>
+      <option key="SCHEDULED" value="scheduled"/>
+    </enum>
+    <enum name="search-notifications-sort" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="RELEVANCE" value="relevance"/>
+      <option key="CREATED_AT_ASC" value="created-at-asc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
+      <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="SENT_AT_ASC" value="sent-at-asc"/>
+      <option key="SENT_AT_DESC" value="sent-at-desc"/>
+      <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
+    </enum>
   </enums>
 </pbj-enums>

@@ -4,6 +4,7 @@ import MessageType from '@triniti/schemas/triniti/notify/enums/MessageType';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import NotificationId from '@triniti/schemas/triniti/notify/NotificationId';
+import NotificationStatus from '@triniti/schemas/triniti/notify/enums/NotificationStatus';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/types';
 
@@ -48,6 +49,10 @@ export default class NotificationV1Mixin extends Mixin {
        */
       Fb.create('target_ref', T.IdentifierType.create())
         .classProto(NodeRef)
+        .build(),
+      Fb.create('notification_status', T.StringEnumType.create())
+        .withDefault(NotificationStatus.UNKNOWN)
+        .classProto(NotificationStatus)
         .build(),
     ];
   }

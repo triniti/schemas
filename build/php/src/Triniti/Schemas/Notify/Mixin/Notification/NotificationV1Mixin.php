@@ -8,6 +8,7 @@ use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Notify\Enum\MessageType;
+use Triniti\Schemas\Notify\Enum\NotificationStatus;
 use Triniti\Schemas\Notify\NotificationId;
 
 final class NotificationV1Mixin extends AbstractMixin
@@ -54,6 +55,10 @@ final class NotificationV1Mixin extends AbstractMixin
              */
             Fb::create('target_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
+                ->build(),
+            Fb::create('notification_status', T\StringEnumType::create())
+                ->withDefault(NotificationStatus::UNKNOWN())
+                ->className(NotificationStatus::class)
                 ->build(),
         ];
     }

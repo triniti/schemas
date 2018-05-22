@@ -53,6 +53,10 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="notification_status" type="string-enum">
+        <default>unknown</default>
+        <enum id="triniti:notify:notification-status"/>
+      </field>
     </fields>
   </schema>
 </pbj-schema>
