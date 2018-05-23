@@ -188,14 +188,6 @@
         "type": "identifier",
         "rule": "single"
       }
-    },
-    "send_at": {
-      "type": "string",
-      "format": "date-time",
-      "pbj": {
-        "type": "date-time",
-        "rule": "single"
-      }
     }
   },
   "required": [

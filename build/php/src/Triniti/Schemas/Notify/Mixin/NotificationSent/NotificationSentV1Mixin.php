@@ -28,8 +28,6 @@ final class NotificationSentV1Mixin extends AbstractMixin
                 ->required()
                 ->className(NodeRef::class)
                 ->build(),
-            Fb::create('sent_at', T\DateTimeType::create())
-                ->build(),
         ];
     }
 }

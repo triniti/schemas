@@ -7,8 +7,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
-use Triniti\Schemas\Notify\Enum\MessageType;
-use Triniti\Schemas\Notify\Enum\NotificationStatus;
+use Triniti\Schemas\Notify\Enum\SendStatus;
 use Triniti\Schemas\Notify\NotificationId;
 
 final class NotificationV1Mixin extends AbstractMixin
@@ -40,25 +39,23 @@ final class NotificationV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             /*
-             * A customize alert text of the notification. It should typically
+             * A body text of the notification. It should typically
              * not have HTML.
              */
-            Fb::create('customize_alert_text', T\TextType::create())
+            Fb::create('body', T\TextType::create())
                 ->maxLength(5000)
-                ->build(),
-            Fb::create('message_type', T\StringEnumType::create())
-                ->withDefault(MessageType::UNKNOWN())
-                ->className(MessageType::class)
                 ->build(),
             /*
              * A reference to the target message for the notification.
              */
-            Fb::create('target_ref', T\IdentifierType::create())
+            Fb::create('content_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
-            Fb::create('notification_status', T\StringEnumType::create())
-                ->withDefault(NotificationStatus::UNKNOWN())
-                ->className(NotificationStatus::class)
+            Fb::create('send_status', T\StringEnumType::create())
+                ->withDefault(SendStatus::UNKNOWN())
+                ->className(SendStatus::class)
+                ->build(),
+            Fb::create('send_at', T\DateTimeType::create())
                 ->build(),
         ];
     }

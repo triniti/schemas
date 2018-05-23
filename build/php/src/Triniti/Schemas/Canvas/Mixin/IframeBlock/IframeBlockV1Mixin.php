@@ -40,7 +40,7 @@ final class IframeBlockV1Mixin extends AbstractMixin
             /*
              * A map containing values for the data-* attributes
              */
-            Fb::create('data', T\TextType::create())
+            Fb::create('data', T\StringType::create())
                 ->asAMap()
                 ->build(),
         ];

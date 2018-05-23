@@ -312,30 +312,17 @@
         "rule": "single"
       }
     },
-    "is_unlisted": {
-      "type": "integer",
-      "default": 2,
-      "minimum": 0,
-      "maximum": 2,
-      "pbj": {
-        "type": "trinary",
-        "rule": "single"
-      }
-    },
     "sort": {
       "type": "string",
-      "default": "relevance",
+      "default": "sent-at-desc",
       "enum": [
         "unknown",
-        "relevance",
         "created-at-asc",
         "created-at-desc",
         "updated-at-asc",
         "updated-at-desc",
         "sent-at-asc",
-        "sent-at-desc",
-        "title-asc",
-        "title-desc"
+        "sent-at-desc"
       ],
       "pbj": {
         "type": "string-enum",

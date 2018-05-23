@@ -168,14 +168,6 @@
         "type": "identifier",
         "rule": "single"
       }
-    },
-    "sent_at": {
-      "type": "string",
-      "format": "date-time",
-      "pbj": {
-        "type": "date-time",
-        "rule": "single"
-      }
     }
   },
   "required": [

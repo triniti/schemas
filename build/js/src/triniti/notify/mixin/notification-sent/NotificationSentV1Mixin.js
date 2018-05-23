@@ -22,8 +22,6 @@ export default class NotificationSentV1Mixin extends Mixin {
         .required()
         .classProto(NodeRef)
         .build(),
-      Fb.create('sent_at', T.DateTimeType.create())
-        .build(),
     ];
   }
 }

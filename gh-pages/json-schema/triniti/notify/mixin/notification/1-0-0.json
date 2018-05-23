@@ -172,32 +172,17 @@
         "rule": "single"
       }
     },
-    "customize_alert_text": {
+    "body": {
       "type": "string",
       "minLength": 0,
       "maxLength": 5000,
-      "description": "A customize alert text of the notification. It should typically not have HTML.",
+      "description": "A body text of the notification. It should typically not have HTML.",
       "pbj": {
         "type": "text",
         "rule": "single"
       }
     },
-    "message_type": {
-      "type": "string",
-      "default": "unknown",
-      "enum": [
-        "unknown",
-        "article",
-        "video",
-        "gallery",
-        "general"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
-    },
-    "target_ref": {
+    "content_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
       "description": "A reference to the target message for the notification.",
@@ -206,17 +191,26 @@
         "rule": "single"
       }
     },
-    "notification_status": {
+    "send_status": {
       "type": "string",
       "default": "unknown",
       "enum": [
         "unknown",
         "sent",
-        "cancelled",
-        "scheduled"
+        "canceled",
+        "scheduled",
+        "failed"
       ],
       "pbj": {
         "type": "string-enum",
+        "rule": "single"
+      }
+    },
+    "send_at": {
+      "type": "string",
+      "format": "date-time",
+      "pbj": {
+        "type": "date-time",
         "rule": "single"
       }
     }

@@ -24,11 +24,8 @@ final class SearchNotificationsRequestV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('is_unlisted', T\TrinaryType::create())
-                ->withDefault(2)
-                ->build(),
             Fb::create('sort', T\StringEnumType::create())
-                ->withDefault(SearchNotificationsSort::RELEVANCE())
+                ->withDefault(SearchNotificationsSort::SENT_AT_DESC())
                 ->className(SearchNotificationsSort::class)
                 ->build(),
         ];

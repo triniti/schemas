@@ -30,17 +30,13 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="customize_alert_text" type="text" max="5000">
+      <field name="body" type="text" max="5000">
         <description>
-          A customize alert text of the notification. It should typically
+          A body text of the notification. It should typically
           not have HTML.
         </description>
       </field>
-      <field name="message_type" type="string-enum">
-        <default>unknown</default>
-        <enum id="triniti:notify:message-type"/>
-      </field>
-      <field name="target_ref" type="identifier">
+      <field name="content_ref" type="identifier">
         <description>
           A reference to the target message for the notification.
         </description>
@@ -53,10 +49,11 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="notification_status" type="string-enum">
+      <field name="send_status" type="string-enum">
         <default>unknown</default>
-        <enum id="triniti:notify:notification-status"/>
+        <enum id="triniti:notify:send-status"/>
       </field>
+      <field name="send_at" type="date-time"/>
     </fields>
   </schema>
 </pbj-schema>

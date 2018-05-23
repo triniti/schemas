@@ -1,11 +1,10 @@
 // @link http://schemas.triniti.io/json-schema/triniti/notify/mixin/notification/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
-import MessageType from '@triniti/schemas/triniti/notify/enums/MessageType';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import NotificationId from '@triniti/schemas/triniti/notify/NotificationId';
-import NotificationStatus from '@triniti/schemas/triniti/notify/enums/NotificationStatus';
 import SchemaId from '@gdbots/pbj/SchemaId';
+import SendStatus from '@triniti/schemas/triniti/notify/enums/SendStatus';
 import T from '@gdbots/pbj/types';
 
 export default class NotificationV1Mixin extends Mixin {
@@ -34,25 +33,23 @@ export default class NotificationV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       /*
-       * A customize alert text of the notification. It should typically
+       * A body text of the notification. It should typically
        * not have HTML.
        */
-      Fb.create('customize_alert_text', T.TextType.create())
+      Fb.create('body', T.TextType.create())
         .maxLength(5000)
-        .build(),
-      Fb.create('message_type', T.StringEnumType.create())
-        .withDefault(MessageType.UNKNOWN)
-        .classProto(MessageType)
         .build(),
       /*
        * A reference to the target message for the notification.
        */
-      Fb.create('target_ref', T.IdentifierType.create())
+      Fb.create('content_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
-      Fb.create('notification_status', T.StringEnumType.create())
-        .withDefault(NotificationStatus.UNKNOWN)
-        .classProto(NotificationStatus)
+      Fb.create('send_status', T.StringEnumType.create())
+        .withDefault(SendStatus.UNKNOWN)
+        .classProto(SendStatus)
+        .build(),
+      Fb.create('send_at', T.DateTimeType.create())
         .build(),
     ];
   }

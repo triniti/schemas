@@ -15,7 +15,6 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="sent_at" type="date-time"/>
     </fields>
   </schema>
 </pbj-schema>
