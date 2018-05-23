@@ -1,10 +1,11 @@
 # CHANGELOG
 
 
-## v0.2.6
+## v0.3.0
 __BREAKING CHANGES__
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * Change `pbj:triniti:ovp.kaltura:mixin:media-entry:1-0-0` to `pbj:triniti:ovp.kaltura:mixin:has-entry:1-0-0`
-  
+
 * __Add Schemas:__
   * `pbj:triniti:ovp.kaltura::caption:1-0-0`
   * `pbj:triniti:ovp.kaltura::entry:1-0-0`
