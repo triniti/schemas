@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:ovp.kaltura:command:sync-entry:1-0-0">
+    <fields>
+      <field name="entry" type="message">
+        <any-of>
+          <curie>triniti:ovp.kaltura::entry</curie>
+        </any-of>
+      </field>
+      <field name="flavors" type="message" rule="list">
+        <any-of>
+          <curie>triniti:ovp.kaltura::flavor</curie>
+        </any-of>
+      </field>
+      <field name="captions" type="message" rule="list">
+        <any-of>
+          <curie>triniti:ovp.kaltura::caption</curie>
+        </any-of>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

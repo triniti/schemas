@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.2.6
+__BREAKING CHANGES__
+  * Change `pbj:triniti:ovp.kaltura:mixin:media-entry:1-0-0` to `pbj:triniti:ovp.kaltura:mixin:has-entry:1-0-0`
+  
+* __Add Schemas:__
+  * `pbj:triniti:ovp.kaltura::caption:1-0-0`
+  * `pbj:triniti:ovp.kaltura::entry:1-0-0`
+  * `pbj:triniti:ovp.kaltura::flavor:1-0-0`
+  * `pbj:triniti:ovp.kaltura:command:sync-entry:1-0-0`
+
+
 ## v0.2.5
 * __Add Schemas:__
   * `triniti:canvas:mixin:document-block`

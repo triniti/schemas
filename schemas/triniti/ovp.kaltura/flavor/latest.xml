@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:ovp.kaltura::flavor:1-0-0">
+    <fields>
+      <field name="flavor_params_id" type="int"/>
+      <field name="id" type="string" pattern="^[\w-]+$"/>
+      <field name="width" type="small-int"/>
+      <field name="height" type="small-int"/>
+      <field name="bitrate" type="small-int"/>
+      <field name="frame_rate" type="float"/>
+      <field name="is_original" type="boolean"/>
+      <field name="is_web" type="boolean"/>
+      <field name="container_format" type="string"/>
+      <field name="video_codec_id" type="string"/>
+      <field name="status" type="string-enum">
+        <enum id="triniti:ovp.kaltura:flavor-asset-status"/>
+      </field>
+      <field name="language" type="string"/>
+      <field name="is_default" type="boolean"/>
+      <field name="version" type="tiny-int"/>
+      <field name="tags" type="string" rule="set"/>
+      <field name="created_at" type="timestamp" use-type-default="false"/>
+      <field name="updated_at" type="timestamp" use-type-default="false"/>
+      <field name="size" type="int"/>
+      <field name="file_ext" type="string"/>
+      <field name="description" type="text"/>
+      <field name="url" type="text" format="url"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+use Gdbots\Pbj\MessageRef;
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param string $tag
+ * @return MessageRef
+ */
+public function generateMessageRef($tag = null)
+{
+    return new MessageRef(static::schema()->getCurie(), $this->get('id'), $tag);
+}
+
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        'id' => $this->get('id'),
+        'entry_id' => $this->get('entry_id'),
+    ];
+}
+            ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+import MessageRef from '@gdbots/pbj/MessageRef';
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param {?string} tag
+ * @returns {MessageRef}
+ */
+generateMessageRef(tag = null) {
+  return new MessageRef(this.schema().getCurie(), this.get('id'), tag);
+},
+
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    id: this.get('id'),
+    entry_id: this.get('entry_id'),
+  };
+}
+            ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>
