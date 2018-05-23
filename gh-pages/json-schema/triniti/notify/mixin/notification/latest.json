@@ -206,7 +206,7 @@
         "rule": "single"
       }
     },
-    "send_at": {
+    "sent_at": {
       "type": "string",
       "format": "date-time",
       "pbj": {

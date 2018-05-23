@@ -55,7 +55,7 @@ final class NotificationV1Mixin extends AbstractMixin
                 ->withDefault(SendStatus::UNKNOWN())
                 ->className(SendStatus::class)
                 ->build(),
-            Fb::create('send_at', T\DateTimeType::create())
+            Fb::create('sent_at', T\DateTimeType::create())
                 ->build(),
         ];
     }

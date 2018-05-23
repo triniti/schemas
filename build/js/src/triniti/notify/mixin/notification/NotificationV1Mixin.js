@@ -49,7 +49,7 @@ export default class NotificationV1Mixin extends Mixin {
         .withDefault(SendStatus.UNKNOWN)
         .classProto(SendStatus)
         .build(),
-      Fb.create('send_at', T.DateTimeType.create())
+      Fb.create('sent_at', T.DateTimeType.create())
         .build(),
     ];
   }

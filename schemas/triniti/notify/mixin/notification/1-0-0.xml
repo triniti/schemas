@@ -53,7 +53,7 @@
         <default>unknown</default>
         <enum id="triniti:notify:send-status"/>
       </field>
-      <field name="send_at" type="date-time"/>
+      <field name="sent_at" type="date-time"/>
     </fields>
   </schema>
 </pbj-schema>
