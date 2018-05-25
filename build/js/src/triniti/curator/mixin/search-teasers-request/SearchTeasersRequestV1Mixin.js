@@ -1,5 +1,4 @@
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/search-teasers-request/1-0-0.json#
-import ContentType from '@triniti/schemas/triniti/curator/enums/ContentType';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -35,10 +34,6 @@ export default class SearchTeasersRequestV1Mixin extends Mixin {
       Fb.create('types', T.StringType.create())
         .asASet()
         .format(Format.SLUG)
-        .build(),
-      Fb.create('content_types', T.StringEnumType.create())
-        .asASet()
-        .classProto(ContentType)
         .build(),
       /*
        * A node ref of a gallery that a teaser must be associated with to match the search request.

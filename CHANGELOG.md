@@ -1,6 +1,32 @@
 # CHANGELOG
 
 
+## v0.2.6
+* __Add Schemas:__
+  * `triniti:notify:mixin:alexa-notification`
+  * `triniti:notify:mixin:android-notification`
+  * `triniti:notify:mixin:apple-news-notification`
+  * `triniti:notify:mixin:browser-notification`
+  * `triniti:notify:mixin:ios-notification`
+  * `triniti:notify:mixin:notification`
+  * `triniti:notify:mixin:notification-failed`
+  * `triniti:notify:mixin:notification-sent`
+  * `triniti:notify:mixin:search-notifications-request`
+  * `triniti:notify:mixin:search-notifications-response`
+  * `triniti:notify:mixin:send-notification`
+  * `triniti:notify:mixin:slack-notification`
+  * `triniti:notify:mixin:sms-notification`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:promotion`
+    * Change type on `%dow%_start_at` and `%dow%_end_at` fields to string with pattern `^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$`.
+  * `triniti:curator:mixin:search-promotions-request`
+    * Add `slot` string field with format slug.
+  * `triniti:curator:mixin:teaser`
+    * Remove `content_type` field.
+* __Delete Schemas:__
+  * `triniti:curator:content-type`
+
+
 ## v0.2.5
 * __Add Schemas:__
   * `triniti:canvas:mixin:document-block`

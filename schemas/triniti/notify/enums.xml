@@ -4,19 +4,22 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/enums.xsd">
 
   <enums namespace="triniti:notify">
-    <enum name="send-status" type="string">
+    <enum name="notification-send-status" type="string">
       <option key="UNKNOWN" value="unknown"/>
+      <option key="SCHEDULED" value="scheduled"/>
       <option key="SENT" value="sent"/>
       <option key="CANCELED" value="canceled"/>
-      <option key="SCHEDULED" value="scheduled"/>
       <option key="FAILED" value="failed"/>
     </enum>
+
     <enum name="search-notifications-sort" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="CREATED_AT_ASC" value="created-at-asc"/>
       <option key="CREATED_AT_DESC" value="created-at-desc"/>
       <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
       <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="SEND_AT_ASC" value="send-at-asc"/>
+      <option key="SEND_AT_DESC" value="send-at-desc"/>
       <option key="SENT_AT_ASC" value="sent-at-asc"/>
       <option key="SENT_AT_DESC" value="sent-at-desc"/>
     </enum>

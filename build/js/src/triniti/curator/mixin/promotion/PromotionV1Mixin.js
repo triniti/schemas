@@ -39,33 +39,47 @@ export default class PromotionV1Mixin extends Mixin {
        */
       Fb.create('priority', T.SmallIntType.create())
         .build(),
-      Fb.create('mon_start_at', T.DateTimeType.create())
+      Fb.create('mon_start_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('mon_end_at', T.DateTimeType.create())
+      Fb.create('mon_end_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('tue_start_at', T.DateTimeType.create())
+      Fb.create('tue_start_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('tue_end_at', T.DateTimeType.create())
+      Fb.create('tue_end_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('wed_start_at', T.DateTimeType.create())
+      Fb.create('wed_start_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('wed_end_at', T.DateTimeType.create())
+      Fb.create('wed_end_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('thu_start_at', T.DateTimeType.create())
+      Fb.create('thu_start_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('thu_end_at', T.DateTimeType.create())
+      Fb.create('thu_end_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('fri_start_at', T.DateTimeType.create())
+      Fb.create('fri_start_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('fri_end_at', T.DateTimeType.create())
+      Fb.create('fri_end_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('sat_start_at', T.DateTimeType.create())
+      Fb.create('sat_start_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('sat_end_at', T.DateTimeType.create())
+      Fb.create('sat_end_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('sun_start_at', T.DateTimeType.create())
+      Fb.create('sun_start_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
-      Fb.create('sun_end_at', T.DateTimeType.create())
+      Fb.create('sun_end_at', T.StringType.create())
+        .pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
         .build(),
       /*
        * A string containing (HTML, JavaScript, CSS, etc.) that is injected into

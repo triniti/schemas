@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:notify:mixin:notification-sent:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:event:v1">
     <fields>
@@ -14,6 +14,14 @@
           <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
           <class-proto>NodeRef</class-proto>
         </js-options>
+      </field>
+      <field name="response" type="text">
+        <description>
+          When a notification is sent the platform/vendor often responds with a payload
+          that may be needed to update our system, e.g. Apple News return an id and revision
+          that will be needed on future updates to the same content.  This field
+          should contain a (de)serializable string, JSON is preferred.
+        </description>
       </field>
     </fields>
   </schema>

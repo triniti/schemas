@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:notify:mixin:search-notifications-request:1-0-0" mixin="true"
-          extends="gdbots:ncr:mixin:search-nodes-request:v1">
+      extends="gdbots:ncr:mixin:search-nodes-request:v1">
     <fields>
       <field name="sort" type="string-enum">
         <default>sent-at-desc</default>
         <enum id="triniti:notify:search-notifications-sort"/>
+      </field>
+      <field name="types" type="string" format="slug" rule="set">
+        <description>
+          A set of notification types (node must match at least one) to include in
+          the search results, such as android-notification or ios-notification.
+        </description>
+      </field>
+      <field name="send_status" type="string-enum">
+        <enum id="triniti:notify:notification-send-status"/>
+      </field>
+      <field name="app_ref" type="identifier">
+        <description>
+          An app node ref that a notification must be linked with to match the search request.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="content_ref" type="identifier">
+        <description>
+          A content node ref that a notification must be linked with to match the search request.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
       </field>
     </fields>
   </schema>

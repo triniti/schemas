@@ -321,11 +321,64 @@
         "created-at-desc",
         "updated-at-asc",
         "updated-at-desc",
+        "send-at-asc",
+        "send-at-desc",
         "sent-at-asc",
         "sent-at-desc"
       ],
       "pbj": {
         "type": "string-enum",
+        "rule": "single"
+      }
+    },
+    "types": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "A set of notification types (node must match at least one) to include in the search results, such as android-notification or ios-notification.",
+      "pbj": {
+        "type": "string",
+        "rule": "set",
+        "format": "slug"
+      }
+    },
+    "send_status": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "scheduled",
+        "sent",
+        "canceled",
+        "failed"
+      ],
+      "pbj": {
+        "type": "string-enum",
+        "rule": "single"
+      }
+    },
+    "app_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "An app node ref that a notification must be linked with to match the search request.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "content_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A content node ref that a notification must be linked with to match the search request.",
+      "pbj": {
+        "type": "identifier",
         "rule": "single"
       }
     }

@@ -3,8 +3,8 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import NotificationId from '@triniti/schemas/triniti/notify/NotificationId';
+import NotificationSendStatus from '@triniti/schemas/triniti/notify/enums/NotificationSendStatus';
 import SchemaId from '@gdbots/pbj/SchemaId';
-import SendStatus from '@triniti/schemas/triniti/notify/enums/SendStatus';
 import T from '@gdbots/pbj/types';
 
 export default class NotificationV1Mixin extends Mixin {
@@ -27,29 +27,32 @@ export default class NotificationV1Mixin extends Mixin {
         .overridable(true)
         .build(),
       /*
-       * A reference to the app to send the notification.
+       * A reference to the app this notification is being sent to.
        */
       Fb.create('app_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
       /*
-       * A body text of the notification. It should typically
-       * not have HTML.
-       */
-      Fb.create('body', T.TextType.create())
-        .maxLength(5000)
-        .build(),
-      /*
-       * A reference to the target message for the notification.
+       * A reference to the content this notification will include.
        */
       Fb.create('content_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
       Fb.create('send_status', T.StringEnumType.create())
-        .withDefault(SendStatus.UNKNOWN)
-        .classProto(SendStatus)
+        .classProto(NotificationSendStatus)
+        .build(),
+      Fb.create('send_on_publish', T.BooleanType.create())
+        .build(),
+      Fb.create('send_at', T.DateTimeType.create())
         .build(),
       Fb.create('sent_at', T.DateTimeType.create())
+        .build(),
+      /*
+       * The body of the notification to use (format depends on app/platform). If present
+       * this value should take precedence over the body derived from content_ref.
+       */
+      Fb.create('body', T.TextType.create())
+        .maxLength(2000)
         .build(),
     ];
   }

@@ -7,7 +7,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
-use Triniti\Schemas\Notify\Enum\SendStatus;
+use Triniti\Schemas\Notify\Enum\NotificationSendStatus;
 use Triniti\Schemas\Notify\NotificationId;
 
 final class NotificationV1Mixin extends AbstractMixin
@@ -33,29 +33,32 @@ final class NotificationV1Mixin extends AbstractMixin
                 ->overridable(true)
                 ->build(),
             /*
-             * A reference to the app to send the notification.
+             * A reference to the app this notification is being sent to.
              */
             Fb::create('app_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
             /*
-             * A body text of the notification. It should typically
-             * not have HTML.
-             */
-            Fb::create('body', T\TextType::create())
-                ->maxLength(5000)
-                ->build(),
-            /*
-             * A reference to the target message for the notification.
+             * A reference to the content this notification will include.
              */
             Fb::create('content_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
             Fb::create('send_status', T\StringEnumType::create())
-                ->withDefault(SendStatus::UNKNOWN())
-                ->className(SendStatus::class)
+                ->className(NotificationSendStatus::class)
+                ->build(),
+            Fb::create('send_on_publish', T\BooleanType::create())
+                ->build(),
+            Fb::create('send_at', T\DateTimeType::create())
                 ->build(),
             Fb::create('sent_at', T\DateTimeType::create())
+                ->build(),
+            /*
+             * The body of the notification to use (format depends on app/platform). If present
+             * this value should take precedence over the body derived from content_ref.
+             */
+            Fb::create('body', T\TextType::create())
+                ->maxLength(2000)
                 ->build(),
         ];
     }

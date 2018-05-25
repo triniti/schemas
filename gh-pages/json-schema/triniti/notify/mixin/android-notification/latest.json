@@ -166,26 +166,16 @@
     "app_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the app to send the notification.",
+      "description": "A reference to the app this notification is being sent to.",
       "pbj": {
         "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "body": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 5000,
-      "description": "A body text of the notification. It should typically not have HTML.",
-      "pbj": {
-        "type": "text",
         "rule": "single"
       }
     },
     "content_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the target message for the notification.",
+      "description": "A reference to the content this notification will include.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
@@ -193,16 +183,30 @@
     },
     "send_status": {
       "type": "string",
-      "default": "unknown",
       "enum": [
         "unknown",
+        "scheduled",
         "sent",
         "canceled",
-        "scheduled",
         "failed"
       ],
       "pbj": {
         "type": "string-enum",
+        "rule": "single"
+      }
+    },
+    "send_on_publish": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "send_at": {
+      "type": "string",
+      "format": "date-time",
+      "pbj": {
+        "type": "date-time",
         "rule": "single"
       }
     },
@@ -211,6 +215,16 @@
       "format": "date-time",
       "pbj": {
         "type": "date-time",
+        "rule": "single"
+      }
+    },
+    "body": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "description": "The body of the notification to use (format depends on app/platform). If present this value should take precedence over the body derived from content_ref.",
+      "pbj": {
+        "type": "text",
         "rule": "single"
       }
     }
