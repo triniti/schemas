@@ -37,6 +37,12 @@ final class GalleryV1Mixin extends AbstractMixin
             Fb::create('image_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
+            /*
+             * A credit is a short string used to publicly acknowledge the source/creator
+             * of the photo.
+             */
+            Fb::create('credit', T\StringType::create())
+                ->build(),
             Fb::create('allow_comments', T\BooleanType::create())
                 ->withDefault(true)
                 ->build(),

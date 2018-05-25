@@ -172,6 +172,16 @@
         "rule": "single"
       }
     },
+    "credit": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "A credit is a short string used to publicly acknowledge the source/creator of the photo.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "allow_comments": {
       "type": "boolean",
       "default": true,
