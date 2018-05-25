@@ -3,18 +3,6 @@
 
 ## v0.3.0
 __BREAKING CHANGES__
-* __Modify Schemas:__ _(no version changes as there is no production use yet)_
-  * Change `pbj:triniti:ovp.kaltura:mixin:media-entry:1-0-0` to `pbj:triniti:ovp.kaltura:mixin:has-entry:1-0-0`
-
-* __Add Schemas:__
-  * `pbj:triniti:ovp.kaltura::caption:1-0-0`
-  * `pbj:triniti:ovp.kaltura::entry:1-0-0`
-  * `pbj:triniti:ovp.kaltura::flavor:1-0-0`
-  * `pbj:triniti:ovp.kaltura:command:sync-entry:1-0-0`
-
-
-## v0.3.0
-__BREAKING CHANGES__
 
 * __Add Schemas:__
   * `triniti:notify:mixin:alexa-notification`
@@ -60,6 +48,9 @@ __BREAKING CHANGES__
     * Add `url` string field with format url.
   * `triniti:canvas:mixin:vimeo-video-block`
     * Add `user_id` string field.
+    * Change pattern on `user_name` field to allow spaces.
+  * `triniti:curator:mixin:gallery`
+    * Add `credit` string field.
     * Change pattern on `user_name` field to allow spaces.
   * `triniti:people:mixin:person`
     * Add `bio` text field.
