@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:ovp.kaltura::entry:1-0-0">
+    <fields>
+      <field name="entry_id" type="string" pattern="^[\w-]+$"/>
+      <field name="title" type="string" pattern="^[\w-]+$"/>
+      <field name="description" type="text"/>
+      <field name="partner_id" type="string" pattern="^[\w-]+$"/>
+      <field name="user_id" type="string" pattern="^[\w-]+$"/>
+      <field name="creator_id" type="string" pattern="^[\w-]+$"/>
+      <field name="tags" type="string" rule="set"/>
+      <field name="categories" type="string" rule="set"/>
+      <field name="categories_ids" type="string" pattern="^[\w-]+$" rule="set"/>
+      <field name="categories_normalized" type="string" rule="set"/>
+      <field name="status" type="string-enum">
+        <enum id="triniti:ovp.kaltura:entry-status"/>
+      </field>
+      <field name="moderation_status" type="int-enum">
+        <enum id="triniti:ovp.kaltura:moderation-status"/>
+      </field>
+      <field name="type" type="string-enum">
+        <enum id="triniti:ovp.kaltura:entry-type"/>
+      </field>
+      <field name="created_at" type="timestamp" use-type-default="false"/>
+      <field name="updated_at" type="timestamp" use-type-default="false"/>
+      <field name="rank" type="float"/>
+      <field name="flavor_params_id" type="string" pattern="^[\w\.:,\/-]+$"/>
+      <field name="data_url" type="text" format="url"/>
+      <field name="download_url" type="text" format="url"/>
+      <field name="version" type="small-int"/>
+      <field name="thumbnail_url" type="text" format="url"/>
+      <field name="start_date" type="timestamp" use-type-default="false"/>
+      <field name="end_date" type="timestamp" use-type-default="false"/>
+      <field name="reference_id" type="string" pattern="^[\w\.:,\/-]+$"/>
+      <field name="replacing_entry_id" type="string" pattern="^[\w-]+$"/>
+      <field name="replaced_entry_id" type="string" pattern="^[\w-]+$"/>
+      <field name="redirect_entry_id" type="string" pattern="^[\w-]+$"/>
+      <field name="root_entry_id" type="string" pattern="^[\w-]+$"/>
+      <field name="parent_entry_id" type="string" pattern="^[\w-]+$"/>
+      <field name="display_in_search" type="int-enum">
+        <enum id="triniti:ovp.kaltura:display-in-search-type"/>
+      </field>
+      <field name="plays" type="int"/>
+      <field name="views" type="int"/>
+      <field name="last_played_at" type="timestamp" use-type-default="false"/>
+      <field name="width" type="small-int"/>
+      <field name="height" type="small-int"/>
+      <field name="duration" type="small-int"/>
+      <field name="duration_ms" type="medium-int"/>
+      <field name="media_type" type="int-enum">
+        <enum id="triniti:ovp.kaltura:media-type"/>
+      </field>
+      <field name="source_type" type="int-enum">
+        <enum id="triniti:ovp.kaltura:source-type"/>
+      </field>
+      <field name="metadata" type="text" rule="map"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+use Gdbots\Pbj\MessageRef;
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param string $tag
+ * @return MessageRef
+ */
+public function generateMessageRef($tag = null)
+{
+    return new MessageRef(static::schema()->getCurie(), $this->get('entry_id'), $tag);
+}
+
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        'entry_id' => $this->get('entry_id'),
+        'partner_id' => $this->get('partner_id'),
+    ];
+}
+            ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+import MessageRef from '@gdbots/pbj/MessageRef';
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param {?string} tag
+ * @returns {MessageRef}
+ */
+generateMessageRef(tag = null) {
+  return new MessageRef(this.schema().getCurie(), this.get('entry_id'), tag);
+},
+
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    entry_id: this.get('entry_id'),
+    partner_id: this.get('partner_id'),
+  };
+}
+            ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>

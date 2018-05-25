@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:ovp.kaltura::caption:1-0-0">
+    <fields>
+      <field name="id" type="string" pattern="^[\w-]+$"/>
+      <field name="version" type="small-int"/>
+      <field name="size" type="medium-int"/>
+      <field name="file_ext" type="string"/>
+      <field name="created_at" type="timestamp" use-type-default="false"/>
+      <field name="updated_at" type="timestamp" use-type-default="false"/>
+      <field name="deleted_at" type="timestamp" use-type-default="false"/>
+      <field name="description" type="string"/>
+      <field name="language" type="string"/>
+      <field name="language_code" type="string"/>
+      <field name="is_default" type="boolean"/>
+      <field name="accuracy" type="small-int"/>
+      <field name="url" type="text" format="url"/>
+      <field name="status" type="int-enum">
+        <enum id="triniti:ovp.kaltura:caption-asset-status"/>
+      </field>
+      <field name="format" type="int-enum">
+        <enum id="triniti:ovp.kaltura:caption-type"/>
+      </field>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+use Gdbots\Pbj\MessageRef;
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param string $tag
+ * @return MessageRef
+ */
+public function generateMessageRef($tag = null)
+{
+    return new MessageRef(static::schema()->getCurie(), $this->get('id'), $tag);
+}
+
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        'id' => $this->get('id'),
+        'entry_id' => $this->get('entry_id'),
+    ];
+}
+            ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+import MessageRef from '@gdbots/pbj/MessageRef';
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param {?string} tag
+ * @returns {MessageRef}
+ */
+generateMessageRef(tag = null) {
+  return new MessageRef(this.schema().getCurie(), this.get('id'), tag);
+},
+
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    id: this.get('id'),
+    entry_id: this.get('entry_id'),
+  };
+}
+            ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>
