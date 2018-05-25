@@ -1,7 +1,21 @@
 # CHANGELOG
 
 
-## v0.2.6
+## v0.3.0
+__BREAKING CHANGES__
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * Change `pbj:triniti:ovp.kaltura:mixin:media-entry:1-0-0` to `pbj:triniti:ovp.kaltura:mixin:has-entry:1-0-0`
+
+* __Add Schemas:__
+  * `pbj:triniti:ovp.kaltura::caption:1-0-0`
+  * `pbj:triniti:ovp.kaltura::entry:1-0-0`
+  * `pbj:triniti:ovp.kaltura::flavor:1-0-0`
+  * `pbj:triniti:ovp.kaltura:command:sync-entry:1-0-0`
+
+
+## v0.3.0
+__BREAKING CHANGES__
+
 * __Add Schemas:__
   * `triniti:notify:mixin:alexa-notification`
   * `triniti:notify:mixin:android-notification`
@@ -16,6 +30,11 @@
   * `triniti:notify:mixin:send-notification`
   * `triniti:notify:mixin:slack-notification`
   * `triniti:notify:mixin:sms-notification`
+  * `triniti:ovp.kaltura::caption`
+  * `triniti:ovp.kaltura::entry`
+  * `triniti:ovp.kaltura::flavor`
+  * `triniti:ovp.kaltura:command:sync-entry`
+  * `triniti:ovp.kaltura:mixin:has-entry`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:curator:mixin:promotion`
     * Change type on `%dow%_start_at` and `%dow%_end_at` fields to string with pattern `^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$`.
@@ -25,6 +44,7 @@
     * Remove `content_type` field.
 * __Delete Schemas:__
   * `triniti:curator:content-type`
+  * `triniti:ovp.kaltura:mixin:media-entry`
 
 
 ## v0.2.5
