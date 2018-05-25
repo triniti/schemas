@@ -56,4 +56,8 @@
     'gdbots:pbjx:request:echo-response' => 'Gdbots\Schemas\Pbjx\Request\EchoResponseV1',
     'gdbots:pbjx:request:request-failed-response' => 'Gdbots\Schemas\Pbjx\Request\RequestFailedResponseV1',
     'triniti:canvas:block:render-context' => 'Triniti\Schemas\Canvas\Block\RenderContextV1',
+    'triniti:ovp.kaltura::caption' => 'Triniti\Schemas\OvpKaltura\CaptionV1',
+    'triniti:ovp.kaltura::entry' => 'Triniti\Schemas\OvpKaltura\EntryV1',
+    'triniti:ovp.kaltura::flavor' => 'Triniti\Schemas\OvpKaltura\FlavorV1',
+    'triniti:ovp.kaltura:command:sync-entry' => 'Triniti\Schemas\OvpKaltura\Command\SyncEntryV1',
 ]);

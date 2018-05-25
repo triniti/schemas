@@ -51,7 +51,7 @@
       <field name="sent_at" type="date-time"/>
       <field name="body" type="text" max="2000">
         <description>
-          The body of the notification to use (format depends on app/platform).  If present
+          The body of the notification to use (format depends on app/platform). If present
           this value should take precedence over the body derived from content_ref.
         </description>
       </field>

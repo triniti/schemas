@@ -33,7 +33,7 @@ export default class GalleryV1Mixin extends Mixin {
         .build(),
       /*
        * A credit is a short string used to publicly acknowledge the source/creator
-       * of the photo.
+       * of the contents of this gallery. e.g. "Fox News", "CNN".
        */
       Fb.create('credit', T.StringType.create())
         .build(),
