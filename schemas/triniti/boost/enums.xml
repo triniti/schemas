@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-enums xmlns="http://gdbots.io/pbj/xsd"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/enums.xsd">
+
+  <enums namespace="triniti:boost">
+    <enum name="search-sponsors-sort" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="RELEVANCE" value="relevance"/>
+      <option key="POPULARITY" value="popularity"/>
+      <option key="CREATED_AT_ASC" value="created-at-asc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
+      <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="PUBLISHED_AT_ASC" value="published-at-asc"/>
+      <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
+      <option key="ORDER_DATE_ASC" value="order-date-asc"/>
+      <option key="ORDER_DATE_DESC" value="order-date-desc"/>
+      <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
+    </enum>
+  </enums>
+</pbj-enums>
