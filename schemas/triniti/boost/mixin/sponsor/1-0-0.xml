@@ -17,24 +17,22 @@
           <default>() => SponsorId.generate()</default>
         </js-options>
       </field>
-      <field name="title" type="string">
+      <field name="permalink_html_head" type="text">
         <description>
-          The title (name) of the sponsor.
+          A string containing code that is injected into the application's html head tag.
         </description>
       </field>
-      <field name="append_to_html_head_tag" type="text" max="5000">
+      <field name="permalink_badge" type="text">
         <description>
-          This will be appended to the HTML HEAD tag.
+          A string containing code that is injected into the application typically
+          next to/near the title of the content. It will be wrapped in a div with
+          the id and slug of the sponsor.
         </description>
       </field>
-      <field name="permalink_badge" type="text" max="5000">
+      <field name="timeline_badge" type="text">
         <description>
-          Permalink badge.
-        </description>
-      </field>
-      <field name="timeline_badge" type="text" max="5000">
-        <description>
-          Timeline badge.
+          See description for "permalink_badge". This is very similar but in this
+          case the page is rendering many pieces of content, e.g. blogroll.
         </description>
       </field>
     </fields>

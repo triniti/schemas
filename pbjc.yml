@@ -2,6 +2,7 @@ domain: http://schemas.triniti.io
 
 namespaces:
   - triniti:apollo
+  - triniti:boost
   - triniti:canvas
   - triniti:common
   - triniti:curator

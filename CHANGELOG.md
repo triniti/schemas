@@ -5,6 +5,9 @@
 __BREAKING CHANGES__
 
 * __Add Schemas:__
+  * `triniti:boost:mixin:search-sponsors-request`
+  * `triniti:boost:mixin:search-sponsors-response`
+  * `triniti:boost:mixin:sponsor`
   * `triniti:notify:mixin:alexa-notification`
   * `triniti:notify:mixin:android-notification`
   * `triniti:notify:mixin:apple-news-notification`
