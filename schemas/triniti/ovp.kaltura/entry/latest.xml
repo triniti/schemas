@@ -6,11 +6,11 @@
   <schema id="pbj:triniti:ovp.kaltura::entry:1-0-0">
     <fields>
       <field name="entry_id" type="string" pattern="^[\w-]+$"/>
-      <field name="title" type="string" pattern="^[\w-]+$"/>
+      <field name="title" type="string"/>
       <field name="description" type="text"/>
       <field name="partner_id" type="string" pattern="^[\w-]+$"/>
-      <field name="user_id" type="string" pattern="^[\w-]+$"/>
-      <field name="creator_id" type="string" pattern="^[\w-]+$"/>
+      <field name="user_id" type="string"/>
+      <field name="creator_id" type="string"/>
       <field name="tags" type="string" rule="set"/>
       <field name="categories" type="string" rule="set"/>
       <field name="categories_ids" type="string" pattern="^[\w-]+$" rule="set"/>
@@ -27,7 +27,7 @@
       <field name="created_at" type="timestamp" use-type-default="false"/>
       <field name="updated_at" type="timestamp" use-type-default="false"/>
       <field name="rank" type="float"/>
-      <field name="flavor_params_id" type="string" pattern="^[\w\.:,\/-]+$"/>
+      <field name="flavor_params_id" type="string" pattern="^[\w-]+$" rule="set"/>
       <field name="data_url" type="text" format="url"/>
       <field name="download_url" type="text" format="url"/>
       <field name="version" type="small-int"/>
