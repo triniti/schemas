@@ -3,10 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
+  <!--
+    @link http://www.kaltura.com/api_v3/testmeDoc/objects/KalturaFlavorAsset.html
+  -->
   <schema id="pbj:triniti:ovp.kaltura::flavor:1-0-0">
-    <!--
-      @link http://www.kaltura.com/api_v3/testmeDoc/objects/KalturaFlavorAsset.html
-    -->
     <fields>
       <field name="flavor_params_id" type="int"/>
       <field name="id" type="string" pattern="^[\w-]+$"/>
