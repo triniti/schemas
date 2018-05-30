@@ -30,7 +30,6 @@ final class EntryV1 extends AbstractMessage implements
                     ->pattern('^[\w-]+$')
                     ->build(),
                 Fb::create('title', T\StringType::create())
-                    ->pattern('^[\w-]+$')
                     ->build(),
                 Fb::create('description', T\TextType::create())
                     ->build(),
@@ -38,10 +37,8 @@ final class EntryV1 extends AbstractMessage implements
                     ->pattern('^[\w-]+$')
                     ->build(),
                 Fb::create('user_id', T\StringType::create())
-                    ->pattern('^[\w-]+$')
                     ->build(),
                 Fb::create('creator_id', T\StringType::create())
-                    ->pattern('^[\w-]+$')
                     ->build(),
                 Fb::create('tags', T\StringType::create())
                     ->asASet()
@@ -74,7 +71,8 @@ final class EntryV1 extends AbstractMessage implements
                 Fb::create('rank', T\FloatType::create())
                     ->build(),
                 Fb::create('flavor_params_id', T\StringType::create())
-                    ->pattern('^[\w\.:,\/-]+$')
+                    ->asASet()
+                    ->pattern('^[\w-]+$')
                     ->build(),
                 Fb::create('data_url', T\TextType::create())
                     ->format(Format::URL())
