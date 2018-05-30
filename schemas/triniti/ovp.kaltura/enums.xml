@@ -4,6 +4,9 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/enums.xsd">
 
   <enums namespace="triniti:ovp.kaltura">
+    <!--
+      @link http://www.kaltura.com/api_v3/testmeDoc/
+    -->
     <enum name="caption-asset-status" type="string">
       <option key="UNKNOWN" value="0"/>
       <option key="ERROR" value="-1"/>

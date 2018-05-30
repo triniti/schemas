@@ -4,6 +4,9 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:ovp.kaltura::entry:1-0-0">
+    <!--
+      @link http://www.kaltura.com/api_v3/testmeDoc/objects/KalturaMediaEntry.html
+    -->
     <fields>
       <field name="entry_id" type="string" pattern="^[\w-]+$"/>
       <field name="title" type="string"/>
