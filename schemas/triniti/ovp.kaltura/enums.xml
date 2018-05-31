@@ -7,14 +7,14 @@
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaCaptionAssetStatus.html
     -->
-    <enum name="caption-asset-status" type="string">
+    <enum name="caption-asset-status" type="int">
       <option key="UNKNOWN" value="0"/>
       <option key="ERROR" value="-1"/>
       <option key="QUEUED" value="0"/>
-      <option key="READY" value="1"/>
-      <option key="DELETED" value="2"/>
-      <option key="IMPORTING" value="3"/>
-      <option key="EXPORTING" value="4"/>
+      <option key="READY" value="2"/>
+      <option key="DELETED" value="3"/>
+      <option key="IMPORTING" value="7"/>
+      <option key="EXPORTING" value="9"/>
     </enum>
 
     <!--
@@ -31,7 +31,7 @@
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaEntryDisplayInSearchType.html
     -->
-    <enum name="display-in-search-type" type="string">
+    <enum name="display-in-search-type" type="int">
       <option key="UNKNOWN" value="0"/>
       <option key="SYSTEM" value="-1"/>
       <option key="NONE" value="0"/>
@@ -91,7 +91,7 @@
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaFlavorAssetStatus.html
     -->
-    <enum name="flavor-asset-status" type="string">
+    <enum name="flavor-asset-status" type="int">
       <option key="UNKNOWN" value="0"/>
       <option key="ERROR" value="-1"/>
       <option key="QUEUED" value="0"/>

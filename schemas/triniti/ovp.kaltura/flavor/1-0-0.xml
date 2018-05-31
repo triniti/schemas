@@ -8,6 +8,7 @@
   -->
   <schema id="pbj:triniti:ovp.kaltura::flavor:1-0-0">
     <fields>
+      <field name="entry_id" type="string" pattern="^[\w-]+$"/>
       <field name="flavor_params_id" type="int"/>
       <field name="id" type="string" pattern="^[\w-]+$"/>
       <field name="width" type="small-int"/>

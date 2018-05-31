@@ -9,6 +9,7 @@
   <schema id="pbj:triniti:ovp.kaltura::caption:1-0-0">
     <fields>
       <field name="id" type="string" pattern="^[\w-]+$"/>
+      <field name="entry_id" type="string" pattern="^[\w-]+$"/>
       <field name="version" type="small-int"/>
       <field name="size" type="medium-int"/>
       <field name="file_ext" type="string"/>
