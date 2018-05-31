@@ -16,6 +16,7 @@
       <option key="IMPORTING" value="3"/>
       <option key="EXPORTING" value="4"/>
     </enum>
+
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaCaptionType.html
     -->
@@ -26,6 +27,7 @@
       <option key="WEBVTT" value="3"/>
       <option key="CAP" value="4"/>
     </enum>
+
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaEntryDisplayInSearchType.html
     -->
@@ -36,6 +38,7 @@
       <option key="PARTNER_ONLY" value="1"/>
       <option key="KALTURA_NETWORK" value="2"/>
     </enum>
+
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaEntryModerationStatus.html
     -->
@@ -48,6 +51,7 @@
       <option key="FLAGGED_FOR_REVIEW" value="5"/>
       <option key="AUTO_APPROVED" value="6"/>
     </enum>
+
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaEntryStatus.html
     -->
@@ -66,6 +70,7 @@
       <option key="BLOCKED" value="6"/>
       <option key="NO_CONTENT" value="7"/>
     </enum>
+
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaEntryType.html
     -->
@@ -82,6 +87,7 @@
       <option key="LIVE_CHANNEL" value="8"/>
       <option key="DOCUMENT" value="10"/>
     </enum>
+
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaFlavorAssetStatus.html
     -->
@@ -99,6 +105,7 @@
       <option key="VALIDATING" value="8"/>
       <option key="EXPORTING" value="9"/>
     </enum>
+
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaMediaType.html
     -->
@@ -112,6 +119,7 @@
       <option key="LIVE_STREAM_REAL_MEDIA" value="203"/>
       <option key="LIVE_STREAM_QUICKTIME" value="204"/>
     </enum>
+
     <!--
       @link http://www.kaltura.com/api_v3/testmeDoc/enums/KalturaSourceType.html
     -->

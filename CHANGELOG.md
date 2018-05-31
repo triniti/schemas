@@ -8,10 +8,13 @@ __BREAKING CHANGES__
   * `triniti:boost:mixin:search-sponsors-request`
   * `triniti:boost:mixin:search-sponsors-response`
   * `triniti:boost:mixin:sponsor`
+  * `triniti:canvas:mixin:poll-grid-block`
+  * `triniti:common:mixin:themeable`
   * `triniti:notify:mixin:alexa-notification`
   * `triniti:notify:mixin:android-notification`
   * `triniti:notify:mixin:apple-news-notification`
   * `triniti:notify:mixin:browser-notification`
+  * `triniti:notify:mixin:has-notifications`
   * `triniti:notify:mixin:ios-notification`
   * `triniti:notify:mixin:notification`
   * `triniti:notify:mixin:notification-failed`
