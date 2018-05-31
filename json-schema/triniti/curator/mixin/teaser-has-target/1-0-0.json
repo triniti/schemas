@@ -172,28 +172,6 @@
         "rule": "single"
       }
     },
-    "content_type": {
-      "type": "string",
-      "enum": [
-        "unknown",
-        "article",
-        "audio",
-        "category",
-        "gallery",
-        "image",
-        "link",
-        "poll",
-        "profile",
-        "quote",
-        "solicit",
-        "text",
-        "video"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
-    },
     "image_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
