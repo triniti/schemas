@@ -18,7 +18,7 @@
       <field name="deleted_at" type="timestamp" use-type-default="false"/>
       <field name="description" type="string"/>
       <field name="language" type="string"/>
-      <field name="language_code" type="string"/>
+      <field name="language_code" type="string" pattern="^\w+$"/>
       <field name="is_default" type="boolean"/>
       <field name="accuracy" type="small-int"/>
       <field name="url" type="text" format="url"/>

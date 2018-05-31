@@ -30,7 +30,7 @@
       <field name="created_at" type="timestamp" use-type-default="false"/>
       <field name="updated_at" type="timestamp" use-type-default="false"/>
       <field name="rank" type="float"/>
-      <field name="flavor_params_id" type="string" pattern="^[\w-]+$" rule="set"/>
+      <field name="flavor_params_ids" type="int" rule="set"/>
       <field name="data_url" type="text" format="url"/>
       <field name="download_url" type="text" format="url"/>
       <field name="version" type="small-int"/>
