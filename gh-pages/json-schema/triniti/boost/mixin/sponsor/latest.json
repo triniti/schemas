@@ -163,6 +163,20 @@
         "rule": "single"
       }
     },
+    "type": {
+      "type": "string",
+      "default": "external",
+      "enum": [
+        "unknown",
+        "external",
+        "internal",
+        "advertorial"
+      ],
+      "pbj": {
+        "type": "string-enum",
+        "rule": "single"
+      }
+    },
     "permalink_html_head": {
       "type": "string",
       "minLength": 0,

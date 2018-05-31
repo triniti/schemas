@@ -16,5 +16,12 @@
       <option key="TITLE_ASC" value="title-asc"/>
       <option key="TITLE_DESC" value="title-desc"/>
     </enum>
+
+    <enum name="sponsor-type" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="EXTERNAL" value="external"/>
+      <option key="INTERNAL" value="internal"/>
+      <option key="ADVERTORIAL" value="advertorial"/>
+    </enum>
   </enums>
 </pbj-enums>

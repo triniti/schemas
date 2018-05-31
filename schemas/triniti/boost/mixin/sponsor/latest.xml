@@ -17,6 +17,10 @@
           <default>() => SponsorId.generate()</default>
         </js-options>
       </field>
+      <field name="type" type="string-enum">
+        <default>external</default>
+        <enum id="triniti:boost:sponsor-type"/>
+      </field>
       <field name="permalink_html_head" type="text">
         <description>
           A string containing code that is injected into the application's html head tag.

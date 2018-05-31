@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Triniti\Schemas\Boost\Enum\SponsorType;
 use Triniti\Schemas\Boost\SponsorId;
 
 final class SponsorV1Mixin extends AbstractMixin
@@ -29,6 +30,10 @@ final class SponsorV1Mixin extends AbstractMixin
                 ->withDefault(function() { return SponsorId::generate(); })
                 ->className(SponsorId::class)
                 ->overridable(true)
+                ->build(),
+            Fb::create('type', T\StringEnumType::create())
+                ->withDefault(SponsorType::EXTERNAL())
+                ->className(SponsorType::class)
                 ->build(),
             /*
              * A string containing code that is injected into the application's html head tag.

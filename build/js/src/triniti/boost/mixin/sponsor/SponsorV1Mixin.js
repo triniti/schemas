@@ -3,6 +3,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import SponsorId from '@triniti/schemas/triniti/boost/SponsorId';
+import SponsorType from '@triniti/schemas/triniti/boost/enums/SponsorType';
 import T from '@gdbots/pbj/types';
 
 export default class SponsorV1Mixin extends Mixin {
@@ -23,6 +24,10 @@ export default class SponsorV1Mixin extends Mixin {
         .withDefault(() => SponsorId.generate())
         .classProto(SponsorId)
         .overridable(true)
+        .build(),
+      Fb.create('type', T.StringEnumType.create())
+        .withDefault(SponsorType.EXTERNAL)
+        .classProto(SponsorType)
         .build(),
       /*
        * A string containing code that is injected into the application's html head tag.

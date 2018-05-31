@@ -24,7 +24,7 @@
       </field>
       <field name="language" type="string"/>
       <field name="is_default" type="boolean"/>
-      <field name="version" type="tiny-int"/>
+      <field name="version" type="small-int"/>
       <field name="tags" type="string" rule="set"/>
       <field name="created_at" type="timestamp" use-type-default="false"/>
       <field name="updated_at" type="timestamp" use-type-default="false"/>

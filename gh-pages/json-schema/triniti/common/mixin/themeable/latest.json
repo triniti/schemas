@@ -8,7 +8,7 @@
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
       "maxLength": 255,
-      "description": "A string used to provide a visual treatment to a piece of content, e.g. \"christmas\" or \"taco\".",
+      "description": "A string used to indicate that a visual treatment should be applied to a piece of content, e.g. \"christmas\" or \"taco\".",
       "pbj": {
         "type": "string",
         "rule": "single",

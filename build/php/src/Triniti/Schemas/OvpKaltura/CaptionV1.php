@@ -48,6 +48,7 @@ final class CaptionV1 extends AbstractMessage implements
                 Fb::create('language', T\StringType::create())
                     ->build(),
                 Fb::create('language_code', T\StringType::create())
+                    ->pattern('^\w+$')
                     ->build(),
                 Fb::create('is_default', T\BooleanType::create())
                     ->build(),

@@ -48,7 +48,7 @@ export default class FlavorV1 extends Message {
           .build(),
         Fb.create('is_default', T.BooleanType.create())
           .build(),
-        Fb.create('version', T.TinyIntType.create())
+        Fb.create('version', T.SmallIntType.create())
           .build(),
         Fb.create('tags', T.StringType.create())
           .asASet()

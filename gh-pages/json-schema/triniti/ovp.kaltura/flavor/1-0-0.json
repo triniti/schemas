@@ -145,9 +145,9 @@
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 255,
+      "maximum": 65535,
       "pbj": {
-        "type": "tiny-int",
+        "type": "small-int",
         "rule": "single"
       }
     },

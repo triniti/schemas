@@ -19,8 +19,8 @@ export default class ThemeableV1Mixin extends Mixin {
   getFields() {
     return [
       /*
-       * A string used to provide a visual treatment to
-       * a piece of content, e.g. "christmas" or "taco".
+       * A string used to indicate that a visual treatment should be
+       * applied to a piece of content, e.g. "christmas" or "taco".
        */
       Fb.create('theme', T.StringType.create())
         .format(Format.SLUG)

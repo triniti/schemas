@@ -52,7 +52,7 @@ final class FlavorV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('is_default', T\BooleanType::create())
                     ->build(),
-                Fb::create('version', T\TinyIntType::create())
+                Fb::create('version', T\SmallIntType::create())
                     ->build(),
                 Fb::create('tags', T\StringType::create())
                     ->asASet()

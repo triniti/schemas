@@ -209,18 +209,20 @@
         "rule": "single"
       }
     },
-    "flavor_params_id": {
+    "flavor_params_ids": {
       "type": "array",
       "items": [
         {
-          "type": "string",
-          "pattern": "^[\\w-]+$"
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 4294967295
         }
       ],
       "uniqueItems": true,
       "additionalProperties": false,
       "pbj": {
-        "type": "string",
+        "type": "int",
         "rule": "set"
       }
     },

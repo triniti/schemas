@@ -44,6 +44,7 @@ export default class CaptionV1 extends Message {
         Fb.create('language', T.StringType.create())
           .build(),
         Fb.create('language_code', T.StringType.create())
+          .pattern('^\\w+$')
           .build(),
         Fb.create('is_default', T.BooleanType.create())
           .build(),

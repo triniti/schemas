@@ -70,9 +70,8 @@ final class EntryV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('rank', T\FloatType::create())
                     ->build(),
-                Fb::create('flavor_params_id', T\StringType::create())
+                Fb::create('flavor_params_ids', T\IntType::create())
                     ->asASet()
-                    ->pattern('^[\w-]+$')
                     ->build(),
                 Fb::create('data_url', T\TextType::create())
                     ->format(Format::URL())

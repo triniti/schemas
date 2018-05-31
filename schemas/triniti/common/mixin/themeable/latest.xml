@@ -7,8 +7,8 @@
     <fields>
       <field name="theme" type="string" format="slug">
         <description>
-          A string used to provide a visual treatment to
-          a piece of content, e.g. "christmas" or "taco".
+          A string used to indicate that a visual treatment should be
+          applied to a piece of content, e.g. "christmas" or "taco".
         </description>
       </field>
     </fields>
