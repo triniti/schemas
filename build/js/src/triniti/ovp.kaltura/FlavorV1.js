@@ -17,6 +17,9 @@ export default class FlavorV1 extends Message {
   static defineSchema() {
     return new Schema('pbj:triniti:ovp.kaltura::flavor:1-0-0', FlavorV1,
       [
+        Fb.create('entry_id', T.StringType.create())
+          .pattern('^[\\w-]+$')
+          .build(),
         Fb.create('flavor_params_id', T.IntType.create())
           .build(),
         Fb.create('id', T.StringType.create())

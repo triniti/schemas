@@ -15,11 +15,11 @@ use Gdbots\Common\Enum;
  */
 final class CaptionAssetStatus extends Enum
 {
-    const UNKNOWN = '0';
+    const UNKNOWN = 'unknown';
     const ERROR = '-1';
     const QUEUED = '0';
-    const READY = '1';
-    const DELETED = '2';
-    const IMPORTING = '3';
-    const EXPORTING = '4';
+    const READY = '2';
+    const DELETED = '3';
+    const IMPORTING = '7';
+    const EXPORTING = '9';
 }

@@ -8,6 +8,14 @@
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
       "default": "pbj:triniti:ovp.kaltura::flavor:1-0-0"
     },
+    "entry_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "flavor_params_id": {
       "type": "integer",
       "default": 0,
@@ -99,8 +107,9 @@
     "status": {
       "type": "string",
       "enum": [
-        0,
+        "unknown",
         -1,
+        0,
         1,
         2,
         3,

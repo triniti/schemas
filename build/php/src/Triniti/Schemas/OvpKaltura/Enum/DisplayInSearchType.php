@@ -13,7 +13,7 @@ use Gdbots\Common\Enum;
  */
 final class DisplayInSearchType extends Enum
 {
-    const UNKNOWN = '0';
+    const UNKNOWN = 'unknown';
     const SYSTEM = '-1';
     const NONE = '0';
     const PARTNER_ONLY = '1';

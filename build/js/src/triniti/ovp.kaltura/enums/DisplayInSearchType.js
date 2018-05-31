@@ -4,7 +4,7 @@ export default class DisplayInSearchType extends Enum {
 }
 
 DisplayInSearchType.configure({
-  UNKNOWN: '0',
+  UNKNOWN: 'unknown',
   SYSTEM: '-1',
   NONE: '0',
   PARTNER_ONLY: '1',

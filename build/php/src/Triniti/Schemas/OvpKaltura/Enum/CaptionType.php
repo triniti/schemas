@@ -13,9 +13,9 @@ use Gdbots\Common\Enum;
  */
 final class CaptionType extends Enum
 {
-    const UNKNOWN = 0;
-    const SRT = 1;
-    const DFXP = 2;
-    const WEBVTT = 3;
-    const CAP = 4;
+    const UNKNOWN = 'unknown';
+    const SRT = '1';
+    const DFXP = '2';
+    const WEBVTT = '3';
+    const CAP = '4';
 }

@@ -21,6 +21,9 @@ final class FlavorV1 extends AbstractMessage implements
     {
         return new Schema('pbj:triniti:ovp.kaltura::flavor:1-0-0', __CLASS__,
             [
+                Fb::create('entry_id', T\StringType::create())
+                    ->pattern('^[\w-]+$')
+                    ->build(),
                 Fb::create('flavor_params_id', T\IntType::create())
                     ->build(),
                 Fb::create('id', T\StringType::create())

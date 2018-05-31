@@ -4,7 +4,7 @@ export default class FlavorAssetStatus extends Enum {
 }
 
 FlavorAssetStatus.configure({
-  UNKNOWN: '0',
+  UNKNOWN: 'unknown',
   ERROR: '-1',
   QUEUED: '0',
   CONVERTING: '1',

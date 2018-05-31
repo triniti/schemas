@@ -16,6 +16,14 @@
         "rule": "single"
       }
     },
+    "entry_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "version": {
       "type": "integer",
       "default": 0,
@@ -131,12 +139,13 @@
     "status": {
       "type": "string",
       "enum": [
-        0,
+        "unknown",
         -1,
-        1,
+        0,
         2,
         3,
-        4
+        7,
+        9
       ],
       "pbj": {
         "type": "string-enum",
@@ -144,16 +153,16 @@
       }
     },
     "format": {
-      "type": "integer",
+      "type": "string",
       "enum": [
-        0,
+        "unknown",
         1,
         2,
         3,
         4
       ],
       "pbj": {
-        "type": "int-enum",
+        "type": "string-enum",
         "rule": "single"
       }
     }

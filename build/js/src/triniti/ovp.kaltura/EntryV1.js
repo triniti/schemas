@@ -52,7 +52,7 @@ export default class EntryV1 extends Message {
         Fb.create('status', T.StringEnumType.create())
           .classProto(EntryStatus)
           .build(),
-        Fb.create('moderation_status', T.IntEnumType.create())
+        Fb.create('moderation_status', T.StringEnumType.create())
           .classProto(EntryModerationStatus)
           .build(),
         Fb.create('type', T.StringEnumType.create())
@@ -123,7 +123,7 @@ export default class EntryV1 extends Message {
           .build(),
         Fb.create('duration_ms', T.MediumIntType.create())
           .build(),
-        Fb.create('media_type', T.IntEnumType.create())
+        Fb.create('media_type', T.StringEnumType.create())
           .classProto(MediaType)
           .build(),
         Fb.create('source_type', T.StringEnumType.create())

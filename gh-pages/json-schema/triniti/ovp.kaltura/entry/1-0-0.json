@@ -146,9 +146,9 @@
       }
     },
     "moderation_status": {
-      "type": "integer",
+      "type": "string",
       "enum": [
-        0,
+        "unknown",
         1,
         2,
         3,
@@ -157,7 +157,7 @@
         6
       ],
       "pbj": {
-        "type": "int-enum",
+        "type": "string-enum",
         "rule": "single"
       }
     },
@@ -332,8 +332,9 @@
     "display_in_search": {
       "type": "string",
       "enum": [
-        0,
+        "unknown",
         -1,
+        0,
         1,
         2
       ],
@@ -413,9 +414,9 @@
       }
     },
     "media_type": {
-      "type": "integer",
+      "type": "string",
       "enum": [
-        0,
+        "unknown",
         1,
         2,
         5,
@@ -425,7 +426,7 @@
         204
       ],
       "pbj": {
-        "type": "int-enum",
+        "type": "string-enum",
         "rule": "single"
       }
     },

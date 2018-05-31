@@ -25,6 +25,9 @@ final class CaptionV1 extends AbstractMessage implements
                 Fb::create('id', T\StringType::create())
                     ->pattern('^[\w-]+$')
                     ->build(),
+                Fb::create('entry_id', T\StringType::create())
+                    ->pattern('^[\w-]+$')
+                    ->build(),
                 Fb::create('version', T\SmallIntType::create())
                     ->build(),
                 Fb::create('size', T\MediumIntType::create())
@@ -56,7 +59,7 @@ final class CaptionV1 extends AbstractMessage implements
                 Fb::create('status', T\StringEnumType::create())
                     ->className(CaptionAssetStatus::class)
                     ->build(),
-                Fb::create('format', T\IntEnumType::create())
+                Fb::create('format', T\StringEnumType::create())
                     ->className(CaptionType::class)
                     ->build(),
             ]

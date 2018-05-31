@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Triniti\Schemas\News;
+namespace Triniti\Schemas\Notify;
 
 use Gdbots\Pbj\WellKnown\UuidIdentifier;
 use Gdbots\Schemas\Ncr\NodeRef;

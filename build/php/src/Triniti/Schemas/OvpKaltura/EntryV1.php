@@ -56,7 +56,7 @@ final class EntryV1 extends AbstractMessage implements
                 Fb::create('status', T\StringEnumType::create())
                     ->className(EntryStatus::class)
                     ->build(),
-                Fb::create('moderation_status', T\IntEnumType::create())
+                Fb::create('moderation_status', T\StringEnumType::create())
                     ->className(EntryModerationStatus::class)
                     ->build(),
                 Fb::create('type', T\StringEnumType::create())
@@ -127,7 +127,7 @@ final class EntryV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('duration_ms', T\MediumIntType::create())
                     ->build(),
-                Fb::create('media_type', T\IntEnumType::create())
+                Fb::create('media_type', T\StringEnumType::create())
                     ->className(MediaType::class)
                     ->build(),
                 Fb::create('source_type', T\StringEnumType::create())

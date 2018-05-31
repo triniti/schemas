@@ -21,7 +21,7 @@
       <field name="status" type="string-enum">
         <enum id="triniti:ovp.kaltura:entry-status"/>
       </field>
-      <field name="moderation_status" type="int-enum">
+      <field name="moderation_status" type="string-enum">
         <enum id="triniti:ovp.kaltura:entry-moderation-status"/>
       </field>
       <field name="type" type="string-enum">
@@ -53,7 +53,7 @@
       <field name="height" type="small-int"/>
       <field name="duration" type="small-int"/>
       <field name="duration_ms" type="medium-int"/>
-      <field name="media_type" type="int-enum">
+      <field name="media_type" type="string-enum">
         <enum id="triniti:ovp.kaltura:media-type"/>
       </field>
       <field name="source_type" type="string-enum">

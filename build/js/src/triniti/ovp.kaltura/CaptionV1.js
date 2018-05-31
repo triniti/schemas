@@ -21,6 +21,9 @@ export default class CaptionV1 extends Message {
         Fb.create('id', T.StringType.create())
           .pattern('^[\\w-]+$')
           .build(),
+        Fb.create('entry_id', T.StringType.create())
+          .pattern('^[\\w-]+$')
+          .build(),
         Fb.create('version', T.SmallIntType.create())
           .build(),
         Fb.create('size', T.MediumIntType.create())
@@ -52,7 +55,7 @@ export default class CaptionV1 extends Message {
         Fb.create('status', T.StringEnumType.create())
           .classProto(CaptionAssetStatus)
           .build(),
-        Fb.create('format', T.IntEnumType.create())
+        Fb.create('format', T.StringEnumType.create())
           .classProto(CaptionType)
           .build(),
       ],

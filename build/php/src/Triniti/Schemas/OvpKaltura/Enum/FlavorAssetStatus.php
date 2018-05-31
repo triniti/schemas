@@ -20,7 +20,7 @@ use Gdbots\Common\Enum;
  */
 final class FlavorAssetStatus extends Enum
 {
-    const UNKNOWN = '0';
+    const UNKNOWN = 'unknown';
     const ERROR = '-1';
     const QUEUED = '0';
     const CONVERTING = '1';
