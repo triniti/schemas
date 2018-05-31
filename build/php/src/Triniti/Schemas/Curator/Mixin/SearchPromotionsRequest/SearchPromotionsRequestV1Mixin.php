@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Curator\Mixin\SearchPromotionsRequest;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -24,6 +25,9 @@ final class SearchPromotionsRequestV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('slot', T\StringType::create())
+                ->format(Format::SLUG())
+                ->build(),
             Fb::create('sort', T\StringEnumType::create())
                 ->withDefault(SearchPromotionsSort::RELEVANCE())
                 ->className(SearchPromotionsSort::class)

@@ -2,11 +2,13 @@ domain: http://schemas.triniti.io
 
 namespaces:
   - triniti:apollo
+  - triniti:boost
   - triniti:canvas
   - triniti:common
   - triniti:curator
   - triniti:dam
   - triniti:news
+  - triniti:notify
   - triniti:ovp
   - triniti:ovp.kaltura
   - triniti:people

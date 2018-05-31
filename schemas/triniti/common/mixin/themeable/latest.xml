@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:common:mixin:themeable:1-0-0" mixin="true">
+    <fields>
+      <field name="theme" type="string" format="slug">
+        <description>
+          A string used to indicate that a visual treatment should be
+          applied to a piece of content, e.g. "christmas" or "taco".
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

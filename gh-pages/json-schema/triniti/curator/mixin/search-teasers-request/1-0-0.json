@@ -364,35 +364,6 @@
         "format": "slug"
       }
     },
-    "content_types": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "enum": [
-            "unknown",
-            "article",
-            "audio",
-            "category",
-            "gallery",
-            "image",
-            "link",
-            "poll",
-            "profile",
-            "quote",
-            "solicit",
-            "text",
-            "video"
-          ]
-        }
-      ],
-      "uniqueItems": true,
-      "additionalProperties": false,
-      "pbj": {
-        "type": "string-enum",
-        "rule": "set"
-      }
-    },
     "gallery_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",

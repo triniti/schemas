@@ -7,7 +7,6 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
-use Triniti\Schemas\Curator\Enum\ContentType;
 use Triniti\Schemas\Curator\TeaserId;
 
 final class TeaserV1Mixin extends AbstractMixin
@@ -39,9 +38,6 @@ final class TeaserV1Mixin extends AbstractMixin
              * blog-like, reverse chronological, clarity in sorting.
              */
             Fb::create('order_date', T\DateTimeType::create())
-                ->build(),
-            Fb::create('content_type', T\StringEnumType::create())
-                ->className(ContentType::class)
                 ->build(),
             /*
              * A reference to the image asset to use for widgets, sharing, seo.

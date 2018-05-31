@@ -31,7 +31,7 @@
       <field name="credit" type="string">
         <description>
           A credit is a short string used to publicly acknowledge the source/creator
-          of the photo.
+          of the contents of this gallery. e.g. "Fox News", "CNN".
         </description>
       </field>
       <field name="allow_comments" type="boolean">

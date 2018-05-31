@@ -1,5 +1,4 @@
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaser/1-0-0.json#
-import ContentType from '@triniti/schemas/triniti/curator/enums/ContentType';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -33,9 +32,6 @@ export default class TeaserV1Mixin extends Mixin {
        * blog-like, reverse chronological, clarity in sorting.
        */
       Fb.create('order_date', T.DateTimeType.create())
-        .build(),
-      Fb.create('content_type', T.StringEnumType.create())
-        .classProto(ContentType)
         .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.

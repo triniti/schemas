@@ -52,6 +52,22 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "data": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map containing values for the data-* attributes",
+      "pbj": {
+        "type": "string",
+        "rule": "map"
+      }
     }
   },
   "required": [

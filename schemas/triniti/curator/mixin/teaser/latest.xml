@@ -25,9 +25,6 @@
           blog-like, reverse chronological, clarity in sorting.
         </description>
       </field>
-      <field name="content_type" type="string-enum">
-        <enum id="triniti:curator:content-type"/>
-      </field>
       <field name="image_ref" type="identifier">
         <description>
           A reference to the image asset to use for widgets, sharing, seo.

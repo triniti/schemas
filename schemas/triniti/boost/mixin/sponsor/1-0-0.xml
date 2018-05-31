@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:boost:mixin:sponsor:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+    <fields>
+      <field name="_id" type="identifier" required="true" overridable="true">
+        <php-options>
+          <imports>use Triniti\Schemas\Boost\SponsorId;</imports>
+          <class-name>SponsorId::class</class-name>
+          <default>function() { return SponsorId::generate(); }</default>
+        </php-options>
+        <js-options>
+          <imports>import SponsorId from '@triniti/schemas/triniti/boost/SponsorId';</imports>
+          <class-proto>SponsorId</class-proto>
+          <default>() => SponsorId.generate()</default>
+        </js-options>
+      </field>
+      <field name="type" type="string-enum">
+        <default>external</default>
+        <enum id="triniti:boost:sponsor-type"/>
+      </field>
+      <field name="permalink_html_head" type="text">
+        <description>
+          A string containing code that is injected into the application's html head tag.
+        </description>
+      </field>
+      <field name="permalink_badge" type="text">
+        <description>
+          A string containing code that is injected into the application typically
+          next to/near the title of the content. It will be wrapped in a div with
+          the id and slug of the sponsor.
+        </description>
+      </field>
+      <field name="timeline_badge" type="text">
+        <description>
+          See description for "permalink_badge". This is very similar but in this
+          case the page is rendering many pieces of content, e.g. blogroll.
+        </description>
+      </field>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        '_id' => (string)$this->get('_id'),
+        'slug' => $this->get('slug'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    _id: `${this.get('_id', '')}`,
+    slug: this.get('slug'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>

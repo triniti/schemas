@@ -6,6 +6,7 @@
   <schema id="pbj:triniti:curator:mixin:search-promotions-request:1-0-0" mixin="true"
       extends="gdbots:ncr:mixin:search-nodes-request:v1">
     <fields>
+      <field name="slot" type="string" format="slug"/>
       <field name="sort" type="string-enum">
         <default>relevance</default>
         <enum id="triniti:curator:search-promotions-sort"/>
