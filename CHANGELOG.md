@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.3.1
+* __Add Schemas:__
+  * `triniti:boost:mixin:sponsorable`
+
+
 ## v0.3.0
 __BREAKING CHANGES__
 
