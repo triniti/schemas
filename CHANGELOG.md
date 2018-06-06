@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.3.2
+* __Add Schemas:__
+  * `triniti:common:mixin:advertising`
+
+
 ## v0.3.1
 * __Add Schemas:__
   * `triniti:boost:mixin:sponsorable`

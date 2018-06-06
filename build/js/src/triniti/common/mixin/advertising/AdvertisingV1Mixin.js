@@ -18,6 +18,7 @@ export default class AdvertisingV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('ads_enabled', T.BooleanType.create())
+        .withDefault(true)
         .build(),
       Fb.create('dfp_cust_params', T.StringType.create())
         .asAMap()

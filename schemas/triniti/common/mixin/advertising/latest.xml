@@ -5,7 +5,9 @@
 
   <schema id="pbj:triniti:common:mixin:advertising:1-0-0" mixin="true">
     <fields>
-      <field name="ads_enabled" type="boolean"/>
+      <field name="ads_enabled" type="boolean">
+        <default>true</default>
+      </field>
       <field name="dfp_cust_params" type="string" rule="map"/>
     </fields>
   </schema>

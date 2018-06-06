@@ -5,6 +5,7 @@
   "properties": {
     "ads_enabled": {
       "type": "boolean",
+      "default": true,
       "pbj": {
         "type": "boolean",
         "rule": "single"

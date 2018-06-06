@@ -24,6 +24,7 @@ final class AdvertisingV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('ads_enabled', T\BooleanType::create())
+                ->withDefault(true)
                 ->build(),
             Fb::create('dfp_cust_params', T\StringType::create())
                 ->asAMap()
