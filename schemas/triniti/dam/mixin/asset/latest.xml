@@ -51,6 +51,24 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="gallery_ref" type="identifier">
+        <description>
+          A node ref referencing the gallery where the asset is used.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="gallery_seq_number" type="int">
+        <description>
+          An integer value representing the order in which this asset will appear in a gallery.
+        </description>
+      </field>
     </fields>
   </schema>
 </pbj-schema>
