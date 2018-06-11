@@ -15,6 +15,8 @@ use Gdbots\Common\Enum;
  * @method static SearchAssetsSort TITLE_DESC()
  * @method static SearchAssetsSort MIME_TYPE_ASC()
  * @method static SearchAssetsSort MIME_TYPE_DESC()
+ * @method static SearchAssetsSort GALLERY_SEQ_ASC()
+ * @method static SearchAssetsSort GALLERY_SEQ_DESC()
  */
 final class SearchAssetsSort extends Enum
 {
@@ -28,4 +30,6 @@ final class SearchAssetsSort extends Enum
     const TITLE_DESC = 'title-desc';
     const MIME_TYPE_ASC = 'mime-type-asc';
     const MIME_TYPE_DESC = 'mime-type-desc';
+    const GALLERY_SEQ_ASC = 'gallery-seq-asc';
+    const GALLERY_SEQ_DESC = 'gallery-seq-desc';
 }
