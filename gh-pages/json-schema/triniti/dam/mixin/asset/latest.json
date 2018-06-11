@@ -225,6 +225,26 @@
         "type": "identifier",
         "rule": "set"
       }
+    },
+    "gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A node ref referencing the gallery where the asset is used.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "gallery_seq_number": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "description": "An integer value representing the order in which this asset will appear in a gallery.",
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
     }
   },
   "required": [

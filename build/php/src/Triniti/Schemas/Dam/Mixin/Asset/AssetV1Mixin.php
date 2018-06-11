@@ -67,6 +67,17 @@ final class AssetV1Mixin extends AbstractMixin
                 ->asASet()
                 ->className(NodeRef::class)
                 ->build(),
+            /*
+             * A node ref referencing the gallery where the asset is used.
+             */
+            Fb::create('gallery_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+            /*
+             * An integer value representing the order in which this asset will appear in a gallery.
+             */
+            Fb::create('gallery_seq_number', T\IntType::create())
+                ->build(),
         ];
     }
 }

@@ -61,6 +61,17 @@ export default class AssetV1Mixin extends Mixin {
         .asASet()
         .classProto(NodeRef)
         .build(),
+      /*
+       * A node ref referencing the gallery where the asset is used.
+       */
+      Fb.create('gallery_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      /*
+       * An integer value representing the order in which this asset will appear in a gallery.
+       */
+      Fb.create('gallery_seq_number', T.IntType.create())
+        .build(),
     ];
   }
 }
