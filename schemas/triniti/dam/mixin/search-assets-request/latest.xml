@@ -29,6 +29,18 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="gallery_seq_number_min" type="big-int">
+          <description>
+            Each asset in a gallery has a sequence number.  This number is the
+            lowest sequence number to find when searching for assets in a gallery.
+          </description>
+      </field>
+      <field name="gallery_seq_number_max" type="big-int">
+        <description>
+          Each asset in a gallery has a sequence number.  This number is the
+          highest sequence number to find when searching for assets in a gallery.
+        </description>
+      </field>
     </fields>
   </schema>
 </pbj-schema>
