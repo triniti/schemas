@@ -34,8 +34,7 @@ final class GalleryAssetReorderedV1Mixin extends AbstractMixin
             /*
              * An integer value representing the order in which this asset will appear in a gallery.
              */
-            Fb::create('gallery_seq_number', T\IntType::create())
-                ->required()
+            Fb::create('gallery_seq', T\IntType::create())
                 ->build(),
             /*
              * The node ref for the gallery where the asset is used.

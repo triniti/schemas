@@ -48,13 +48,13 @@ final class SearchAssetsRequestV1Mixin extends AbstractMixin
              * Each asset in a gallery has a sequence number. This number is the
              * lowest sequence number to find when searching for assets in a gallery.
              */
-            Fb::create('gallery_seq_number_min', T\BigIntType::create())
+            Fb::create('gallery_seq_min', T\IntType::create())
                 ->build(),
             /*
              * Each asset in a gallery has a sequence number. This number is the
              * highest sequence number to find when searching for assets in a gallery.
              */
-            Fb::create('gallery_seq_number_max', T\BigIntType::create())
+            Fb::create('gallery_seq_max', T\IntType::create())
                 ->build(),
         ];
     }

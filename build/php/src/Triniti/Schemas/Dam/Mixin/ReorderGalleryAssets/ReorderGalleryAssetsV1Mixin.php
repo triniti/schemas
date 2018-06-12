@@ -27,9 +27,8 @@ final class ReorderGalleryAssetsV1Mixin extends AbstractMixin
             /*
              * A map of asset ids to gallery sequence numbers.
              */
-            Fb::create('gallery_seq_numbers', T\IntType::create())
+            Fb::create('gallery_seqs', T\IntType::create())
                 ->asAMap()
-                ->required()
                 ->build(),
             /*
              * The node ref for the gallery containing the assets being reordered.

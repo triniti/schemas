@@ -70,7 +70,7 @@ export default class AssetV1Mixin extends Mixin {
       /*
        * An integer value representing the order in which this asset will appear in a gallery.
        */
-      Fb.create('gallery_seq_number', T.IntType.create())
+      Fb.create('gallery_seq', T.IntType.create())
         .build(),
     ];
   }

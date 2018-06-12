@@ -362,25 +362,25 @@
         "rule": "single"
       }
     },
-    "gallery_seq_number_min": {
+    "gallery_seq_min": {
       "type": "integer",
       "default": 0,
-      "minimum": -2147483648,
-      "maximum": 2147483647,
+      "minimum": 0,
+      "maximum": 4294967295,
       "description": "Each asset in a gallery has a sequence number. This number is the lowest sequence number to find when searching for assets in a gallery.",
       "pbj": {
-        "type": "big-int",
+        "type": "int",
         "rule": "single"
       }
     },
-    "gallery_seq_number_max": {
+    "gallery_seq_max": {
       "type": "integer",
       "default": 0,
-      "minimum": -2147483648,
-      "maximum": 2147483647,
+      "minimum": 0,
+      "maximum": 4294967295,
       "description": "Each asset in a gallery has a sequence number. This number is the highest sequence number to find when searching for assets in a gallery.",
       "pbj": {
-        "type": "big-int",
+        "type": "int",
         "rule": "single"
       }
     }
