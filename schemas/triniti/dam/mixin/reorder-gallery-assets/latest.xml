@@ -5,7 +5,7 @@
 
   <schema id="pbj:triniti:dam:mixin:reorder-gallery-assets:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:command:v1">
     <fields>
-      <field name="gallery_seq_numbers" type="int" rule="map" required="true">
+      <field name="gallery_seqs" type="int" rule="map">
         <description>
           A map of asset ids to gallery sequence numbers.
         </description>

@@ -18,7 +18,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="gallery_seq_number" type="int" required="true">
+      <field name="gallery_seq" type="int">
         <description>
           An integer value representing the order in which this asset will appear in a gallery.
         </description>

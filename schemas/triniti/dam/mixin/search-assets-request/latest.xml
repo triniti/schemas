@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:dam:mixin:search-assets-request:1-0-0" mixin="true"
-      extends="gdbots:ncr:mixin:search-nodes-request:v1">
+          extends="gdbots:ncr:mixin:search-nodes-request:v1">
     <fields>
       <field name="sort" type="string-enum">
         <default>relevance</default>
@@ -29,13 +29,13 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="gallery_seq_number_min" type="big-int">
-          <description>
-            Each asset in a gallery has a sequence number.  This number is the
-            lowest sequence number to find when searching for assets in a gallery.
-          </description>
+      <field name="gallery_seq_min" type="int">
+        <description>
+          Each asset in a gallery has a sequence number.  This number is the
+          lowest sequence number to find when searching for assets in a gallery.
+        </description>
       </field>
-      <field name="gallery_seq_number_max" type="big-int">
+      <field name="gallery_seq_max" type="int">
         <description>
           Each asset in a gallery has a sequence number.  This number is the
           highest sequence number to find when searching for assets in a gallery.
