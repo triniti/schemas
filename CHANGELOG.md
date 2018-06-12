@@ -1,6 +1,22 @@
 # CHANGELOG
 
 
+## v0.3.2
+* __Add Schemas:__
+  * `triniti:dam:mixin:gallery-asset-reordered`
+  * `triniti:dam:mixin:reorder-gallery-assets`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:dam:enums`
+    * Add `GALLERY_SEQ_ASC` sort type.
+    * Add `GALLERY_SEQ_DESC` sort type.
+  * `triniti:dam:mixin:asset`
+    * Add `gallery_ref` identifier field.
+    * Add `gallery_seq` int field.
+  * `triniti:dam:mixin:search-assets-request`
+    * Add `gallery_seq_min` int field.
+    * Add `gallery_seq_max` int field.
+
+
 ## v0.3.1
 * __Add Schemas:__
   * `triniti:boost:mixin:sponsorable`
