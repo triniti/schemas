@@ -24,23 +24,20 @@ final class GalleryAssetReorderedV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            /*
-             * The asset's node ref.
-             */
             Fb::create('node_ref', T\IdentifierType::create())
                 ->required()
                 ->className(NodeRef::class)
-                ->build(),
-            /*
-             * An integer value representing the order in which this asset will appear in a gallery.
-             */
-            Fb::create('gallery_seq', T\IntType::create())
                 ->build(),
             /*
              * The node ref for the gallery where the asset is used.
              */
             Fb::create('gallery_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
+                ->build(),
+            /*
+             * An integer value representing the order in which this asset will appear in a gallery.
+             */
+            Fb::create('gallery_seq', T\IntType::create())
                 ->build(),
         ];
     }

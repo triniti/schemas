@@ -39,6 +39,12 @@ export default class SearchAssetsRequestV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       /*
+       * A node ref to a gallery that an asset must be in to match the search request.
+       */
+      Fb.create('gallery_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      /*
        * Each asset in a gallery has a sequence number. This number is the
        * lowest sequence number to find when searching for assets in a gallery.
        */

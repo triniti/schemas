@@ -181,6 +181,15 @@
         "overridable": true
       }
     },
+    "gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "The node ref for the gallery containing the assets being reordered.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "gallery_seqs": {
       "type": "object",
       "patternProperties": {
@@ -196,15 +205,6 @@
       "pbj": {
         "type": "int",
         "rule": "map"
-      }
-    },
-    "gallery_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "The node ref for the gallery containing the assets being reordered.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
       }
     }
   },

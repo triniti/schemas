@@ -3,18 +3,23 @@
 
 ## v0.3.2
 * __Add Schemas:__
+  * `triniti:common:mixin:advertising`
+  * `triniti:curator:mixin:blogroll-widget`
   * `triniti:dam:mixin:gallery-asset-reordered`
   * `triniti:dam:mixin:reorder-gallery-assets`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
-  * `triniti:dam:enums`
-    * Add `GALLERY_SEQ_ASC` sort type.
-    * Add `GALLERY_SEQ_DESC` sort type.
+  * `triniti:curator:mixin:widget`
+    * Add `search_request` message field with `any-of` to `gdbots:ncr:mixin:search-nodes-request:v1`.
   * `triniti:dam:mixin:asset`
-    * Add `gallery_ref` identifier field.
+    * Add `gallery_ref` identifier (NodeRef) field.
     * Add `gallery_seq` int field.
   * `triniti:dam:mixin:search-assets-request`
+    * Add `gallery_ref` identifier (NodeRef) field.
     * Add `gallery_seq_min` int field.
     * Add `gallery_seq_max` int field.
+  * `triniti:dam:search-assets-sort`
+    * Add `GALLERY_SEQ_ASC`
+    * Add `GALLERY_SEQ_DESC`
 
 
 ## v0.3.1
