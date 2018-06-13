@@ -14,4 +14,6 @@ SearchAssetsSort.configure({
   TITLE_DESC: 'title-desc',
   MIME_TYPE_ASC: 'mime-type-asc',
   MIME_TYPE_DESC: 'mime-type-desc',
+  GALLERY_SEQ_ASC: 'gallery-seq-asc',
+  GALLERY_SEQ_DESC: 'gallery-seq-desc',
 }, 'triniti:dam:search-assets-sort');

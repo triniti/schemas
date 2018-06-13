@@ -3,8 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:curator:mixin:carousel-widget:1-0-0" mixin="true"
-      extends="triniti:curator:mixin:widget:v1">
+  <schema id="pbj:triniti:curator:mixin:carousel-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
     <php-options>
       <insertion-points>
         <imports/>

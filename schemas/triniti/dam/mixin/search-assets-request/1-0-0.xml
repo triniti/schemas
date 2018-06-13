@@ -29,6 +29,31 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="gallery_ref" type="identifier">
+        <description>
+          A node ref to a gallery that an asset must be in to match the search request.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="gallery_seq_min" type="int">
+        <description>
+          Each asset in a gallery has a sequence number. This number is the
+          lowest sequence number to find when searching for assets in a gallery.
+        </description>
+      </field>
+      <field name="gallery_seq_max" type="int">
+        <description>
+          Each asset in a gallery has a sequence number. This number is the
+          highest sequence number to find when searching for assets in a gallery.
+        </description>
+      </field>
     </fields>
   </schema>
 </pbj-schema>
