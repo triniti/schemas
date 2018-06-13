@@ -20,6 +20,8 @@
   * `triniti:dam:search-assets-sort`
     * Add `GALLERY_SEQ_ASC`
     * Add `GALLERY_SEQ_DESC`
+  * `triniti:ovp:mixin:video`
+    * Add `is_full_episode` boolean field.
 
 
 ## v0.3.1
