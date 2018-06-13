@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/dam/mixin/unknown-asset/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/blogroll-widget/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -8,7 +8,8 @@
       "pattern": "^[\\w\\/\\.:-]+$",
       "pbj": {
         "type": "identifier",
-        "rule": "single"
+        "rule": "single",
+        "overridable": true
       }
     },
     "status": {
@@ -162,94 +163,46 @@
         "rule": "single"
       }
     },
-    "mime_type": {
-      "type": "string",
-      "pattern": "^[\\w-]+\\/[\\w\\+\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "file_size": {
-      "type": "integer",
-      "default": 0,
-      "minimum": -2147483648,
-      "maximum": 2147483647,
-      "description": "The file size in bytes.",
-      "pbj": {
-        "type": "big-int",
-        "rule": "single"
-      }
-    },
-    "file_etag": {
-      "type": "string",
-      "pattern": "^[\\w\\.:-]+$",
-      "description": "An etag created from the file itself. The file etag is different from the node's etag because the node tracks metadata, which can be updated without the file being changed.",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "description": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 5000,
-      "description": "A description of the asset (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
-    },
-    "credit": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "A credit is a short string used to publicly acknowledge the source/creator of the asset. e.g. \"Fox News\", \"CNN\".",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "linked_refs": {
-      "type": "array",
-      "items": [
+    "search_request": {
+      "type": "object",
+      "anyOf": [
         {
-          "type": "string",
-          "pattern": "^[\\w\\/\\.:-]+$"
+          "$ref": "#/definitions/search-nodes-request"
         }
       ],
-      "uniqueItems": true,
-      "additionalProperties": false,
-      "description": "A set of node refs which have been linked to this asset.",
       "pbj": {
-        "type": "identifier",
-        "rule": "set"
+        "type": "message",
+        "rule": "single"
       }
     },
-    "gallery_ref": {
+    "promotion_slot": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A node ref referencing the gallery where the asset is used.",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The name of the slot that will contain a promotion with the widgets that will be used for the \"in-between\" aka \"separators\" in the blogroll.",
       "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "gallery_seq": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295,
-      "description": "An integer value representing the order in which this asset will appear in a gallery.",
-      "pbj": {
-        "type": "int",
-        "rule": "single"
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
       }
     }
   },
   "required": [
-    "_id",
-    "mime_type"
+    "_id"
   ],
+  "definitions": {
+    "search-nodes-request": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/search-nodes-request/1-0-0.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/search-nodes-request/1-0-1.json#"
+        }
+      ]
+    }
+  },
   "additionalProperties": true
 }

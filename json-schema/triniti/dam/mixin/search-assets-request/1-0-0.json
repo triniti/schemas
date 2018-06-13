@@ -325,7 +325,9 @@
         "title-asc",
         "title-desc",
         "mime-type-asc",
-        "mime-type-desc"
+        "mime-type-desc",
+        "gallery-seq-asc",
+        "gallery-seq-desc"
       ],
       "pbj": {
         "type": "string-enum",
@@ -357,6 +359,37 @@
       "description": "A node ref that an asset must be linked with to match the search request.",
       "pbj": {
         "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A node ref to a gallery that an asset must be in to match the search request.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "gallery_seq_min": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "description": "Each asset in a gallery has a sequence number. This number is the lowest sequence number to find when searching for assets in a gallery.",
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "gallery_seq_max": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "description": "Each asset in a gallery has a sequence number. This number is the highest sequence number to find when searching for assets in a gallery.",
+      "pbj": {
+        "type": "int",
         "rule": "single"
       }
     }

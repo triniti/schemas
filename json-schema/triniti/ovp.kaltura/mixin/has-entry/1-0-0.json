@@ -188,6 +188,13 @@
         "rule": "single"
       }
     },
+    "is_full_episode": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "duration": {
       "type": "integer",
       "default": 0,
