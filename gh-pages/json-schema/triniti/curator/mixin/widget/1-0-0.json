@@ -162,10 +162,35 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "search_request": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/search-nodes-request"
+        }
+      ],
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
     }
   },
   "required": [
     "_id"
   ],
+  "definitions": {
+    "search-nodes-request": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/search-nodes-request/1-0-0.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/search-nodes-request/1-0-1.json#"
+        }
+      ]
+    }
+  },
   "additionalProperties": true
 }
