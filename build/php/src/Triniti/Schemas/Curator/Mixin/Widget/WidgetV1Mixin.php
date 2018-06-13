@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\Mixin\SearchNodesRequest\SearchNodesRequest as GdbotsNcrSearchNodesRequest;
 use Triniti\Schemas\Curator\WidgetId;
 
 final class WidgetV1Mixin extends AbstractMixin
@@ -29,6 +30,11 @@ final class WidgetV1Mixin extends AbstractMixin
                 ->withDefault(function() { return WidgetId::generate(); })
                 ->className(WidgetId::class)
                 ->overridable(true)
+                ->build(),
+            Fb::create('search_request', T\MessageType::create())
+                ->anyOfClassNames([
+                    GdbotsNcrSearchNodesRequest::class,
+                ])
                 ->build(),
         ];
     }

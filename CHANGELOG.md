@@ -4,6 +4,9 @@
 ## v0.3.2
 * __Add Schemas:__
   * `triniti:common:mixin:advertising`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:widget`
+    * Add `search_request` message field with `any-of` to `gdbots:ncr:mixin:search-nodes-request:v1`.
 
 
 ## v0.3.1

@@ -24,6 +24,11 @@ export default class WidgetV1Mixin extends Mixin {
         .classProto(WidgetId)
         .overridable(true)
         .build(),
+      Fb.create('search_request', T.MessageType.create())
+        .anyOfCuries([
+          'gdbots:ncr:mixin:search-nodes-request',
+        ])
+        .build(),
     ];
   }
 }

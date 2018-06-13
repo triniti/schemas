@@ -17,6 +17,11 @@
           <default>() => WidgetId.generate()</default>
         </js-options>
       </field>
+      <field name="search_request" type="message">
+        <any-of>
+          <curie>gdbots:ncr:mixin:search-nodes-request:v1</curie>
+        </any-of>
+      </field>
     </fields>
   </schema>
 </pbj-schema>
