@@ -12,6 +12,25 @@
           aka "separators" in the blogroll.
         </description>
       </field>
+      <field name="load_more_enabled" type="boolean">
+        <description>
+          Whether or not the widget should render with an option
+          to load more content.
+        </description>
+        <default>true</default>
+      </field>
+      <field name="load_more_text" type="string">
+        <description>
+          Whether or not the widget should render with an option
+          to load more content.
+        </description>
+      </field>
+      <field name="load_more_infinite" type="boolean">
+        <description>
+          Whether or not the widget should load more content
+          infinitely.
+        </description>
+      </field>
     </fields>
 
     <php-options>
