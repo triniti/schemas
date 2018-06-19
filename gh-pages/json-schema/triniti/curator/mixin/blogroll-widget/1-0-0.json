@@ -175,6 +175,102 @@
         "rule": "single"
       }
     },
+    "view_all_link_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "The href/url for the view all option.",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "view_all_link_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The label for the view all option.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "header_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The text to be rendered in the header.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "header_button_link_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "The href/url for the header button.",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "header_button_link_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The label to be rendered in the header button.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "show_header": {
+      "type": "boolean",
+      "description": "Whether or not to render the header.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "footer_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The text to be rendered in the footer.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "footer_button_link_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "The href/url for the footer button.",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "footer_button_link_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The label to be rendered in the footer button.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "show_footer": {
+      "type": "boolean",
+      "description": "Whether or not to render the footer.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "promotion_slot": {
       "type": "string",
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
@@ -185,6 +281,33 @@
         "type": "string",
         "rule": "single",
         "format": "slug"
+      }
+    },
+    "load_more_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether or not the widget should render with an option to load more content.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "load_more_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Whether or not the widget should render with an option to load more content.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "load_more_infinite": {
+      "type": "boolean",
+      "description": "Whether or not the widget should load more content infinitely.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
       }
     }
   },

@@ -26,6 +26,25 @@ export default class BlogrollWidgetV1Mixin extends Mixin {
       Fb.create('promotion_slot', T.StringType.create())
         .format(Format.SLUG)
         .build(),
+      /*
+       * Whether or not the widget should render with an option
+       * to load more content.
+       */
+      Fb.create('load_more_enabled', T.BooleanType.create())
+        .withDefault(true)
+        .build(),
+      /*
+       * Whether or not the widget should render with an option
+       * to load more content.
+       */
+      Fb.create('load_more_text', T.StringType.create())
+        .build(),
+      /*
+       * Whether or not the widget should load more content
+       * infinitely.
+       */
+      Fb.create('load_more_infinite', T.BooleanType.create())
+        .build(),
     ];
   }
 }
