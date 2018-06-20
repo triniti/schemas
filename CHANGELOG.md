@@ -3,6 +3,7 @@
 
 ## v0.4.0
 __BREAKING CHANGES__
+* Use `gdbots/schemas` v1.5.4.
 * __Add Schemas:__
   * `triniti:curator::widget-render-context`
   * `triniti:curator:mixin:card-deck-widget`

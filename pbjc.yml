@@ -12,8 +12,8 @@ namespaces:
   - triniti:ovp
   - triniti:ovp.kaltura
   - triniti:people
-  - triniti:taxonomy
   - triniti:sys
+  - triniti:taxonomy
 
 languages:
   php:
