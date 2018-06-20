@@ -12,7 +12,7 @@
           can be appended to the dom elements' class attribute.
         </description>
       </field>
-      <field name="updated_at" type="date-time">
+      <field name="updated_date" type="date-time">
         <description>
           Used to visually represent an update that occurred on this block
           that is NOT when this block was literally last modified.

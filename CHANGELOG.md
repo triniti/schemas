@@ -10,7 +10,7 @@ __BREAKING CHANGES__
   * `triniti:notify:mixin:email-notification`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:block`
-    * Add `updated_at` date-time field.
+    * Add `updated_date` date-time field.
   * `triniti:curator:mixin:carousel-widget`
     * Add `show_captions` boolean field.
     * Add `show_controls` boolean field.
