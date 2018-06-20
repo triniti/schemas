@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/blogroll-widget/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/card-deck-widget/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -266,36 +266,6 @@
     "show_footer": {
       "type": "boolean",
       "description": "Whether or not to render the footer.",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "promotion_slot": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "The name of the slot that will contain a promotion with the widgets that will be used for the \"in-between\" aka \"separators\" in the blogroll.",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
-    },
-    "load_more_text": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "The text to render inside the load more option.",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "load_more_infinite": {
-      "type": "boolean",
-      "description": "Whether or not the widget should load more content infinitely (only have to click the load_more_text once).",
       "pbj": {
         "type": "boolean",
         "rule": "single"

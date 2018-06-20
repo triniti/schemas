@@ -26,7 +26,6 @@
         <default>true</default>
       </field>
     </fields>
-
     <php-options>
       <insertion-points>
         <imports/>

@@ -12,23 +12,16 @@
           aka "separators" in the blogroll.
         </description>
       </field>
-      <field name="load_more_enabled" type="boolean">
-        <description>
-          Whether or not the widget should render with an option
-          to load more content.
-        </description>
-        <default>true</default>
-      </field>
       <field name="load_more_text" type="string">
         <description>
-          Whether or not the widget should render with an option
-          to load more content.
+          The text to render inside the load more option.
         </description>
       </field>
       <field name="load_more_infinite" type="boolean">
         <description>
           Whether or not the widget should load more content
-          infinitely.
+          infinitely (only have to click the load_more_text
+          once).
         </description>
       </field>
     </fields>

@@ -33,21 +33,14 @@ final class BlogrollWidgetV1Mixin extends AbstractMixin
                 ->format(Format::SLUG())
                 ->build(),
             /*
-             * Whether or not the widget should render with an option
-             * to load more content.
-             */
-            Fb::create('load_more_enabled', T\BooleanType::create())
-                ->withDefault(true)
-                ->build(),
-            /*
-             * Whether or not the widget should render with an option
-             * to load more content.
+             * The text to render inside the load more option.
              */
             Fb::create('load_more_text', T\StringType::create())
                 ->build(),
             /*
              * Whether or not the widget should load more content
-             * infinitely.
+             * infinitely (only have to click the load_more_text
+             * once).
              */
             Fb::create('load_more_infinite', T\BooleanType::create())
                 ->build(),
