@@ -183,6 +183,7 @@
     },
     "send_status": {
       "type": "string",
+      "default": "unknown",
       "enum": [
         "unknown",
         "scheduled",
@@ -227,10 +228,32 @@
         "type": "text",
         "rule": "single"
       }
+    },
+    "notifier_result": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/notifier-result"
+        }
+      ],
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
     }
   },
   "required": [
     "_id"
   ],
+  "definitions": {
+    "notifier-result": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/notify/notifier-result/1-0-0.json#"
+        }
+      ]
+    }
+  },
   "additionalProperties": true
 }

@@ -169,20 +169,23 @@
         "rule": "single"
       }
     },
-    "response": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 65535,
-      "description": "When a notification is sent the platform/vendor often responds with a payload that may be needed to update our system, e.g. Apple News return an id and revision that will be needed on future updates to the same content. This field should contain a (de)serializable string, JSON is preferred.",
+    "notifier_result": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/notifier-result"
+        }
+      ],
       "pbj": {
-        "type": "text",
+        "type": "message",
         "rule": "single"
       }
     }
   },
   "required": [
     "event_id",
-    "node_ref"
+    "node_ref",
+    "notifier_result"
   ],
   "definitions": {
     "app": {
@@ -198,6 +201,14 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/contexts/cloud/1-0-0.json#"
+        }
+      ]
+    },
+    "notifier-result": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/notify/notifier-result/1-0-0.json#"
         }
       ]
     }
