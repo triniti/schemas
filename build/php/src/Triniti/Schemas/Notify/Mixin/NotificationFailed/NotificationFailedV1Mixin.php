@@ -7,6 +7,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Triniti\Schemas\Notify\NotifierResult as TrinitiNotifyNotifierResult;
 
 final class NotificationFailedV1Mixin extends AbstractMixin
 {
@@ -28,12 +29,11 @@ final class NotificationFailedV1Mixin extends AbstractMixin
                 ->required()
                 ->className(NodeRef::class)
                 ->build(),
-            /*
-             * When a notification fails the platform/vendor often responds with a payload
-             * that describes the error(s). This field should contain a (de)serializable
-             * string, JSON is preferred.
-             */
-            Fb::create('response', T\TextType::create())
+            Fb::create('notifier_result', T\MessageType::create())
+                ->required()
+                ->anyOfClassNames([
+                    TrinitiNotifyNotifierResult::class,
+                ])
                 ->build(),
         ];
     }

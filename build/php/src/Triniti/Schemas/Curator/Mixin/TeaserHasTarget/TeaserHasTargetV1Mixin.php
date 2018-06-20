@@ -31,6 +31,12 @@ final class TeaserHasTargetV1Mixin extends AbstractMixin
                 ->required()
                 ->className(NodeRef::class)
                 ->build(),
+            /*
+             * When true this teaser will automatically be updated to match the
+             * target it is bound to whenever the target is modified.
+             */
+            Fb::create('sync_with_target', T\BooleanType::create())
+                ->build(),
         ];
     }
 }

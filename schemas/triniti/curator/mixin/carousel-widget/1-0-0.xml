@@ -4,6 +4,18 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:curator:mixin:carousel-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
+    <fields>
+      <field name="show_captions" type="boolean">
+        <default>true</default>
+      </field>
+      <field name="show_controls" type="boolean">
+        <default>true</default>
+      </field>
+      <field name="show_position_indicators" type="boolean">
+        <default>true</default>
+      </field>
+    </fields>
+
     <php-options>
       <insertion-points>
         <imports/>
@@ -16,6 +28,9 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
+        'show_captions' => $this->get('show_captions'),
+        'show_controls' => $this->get('show_controls'),
+        'show_position_indicators' => $this->get('show_position_indicators'),
     ];
 }
           ]]>
@@ -33,6 +48,9 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
+    show_captions: this.get('show_captions'),
+    show_controls: this.get('show_controls'),
+    show_position_indicators: this.get('show_position_indicators'),
   };
 }
           ]]>

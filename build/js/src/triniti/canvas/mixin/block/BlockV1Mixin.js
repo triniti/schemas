@@ -28,6 +28,12 @@ export default class BlockV1Mixin extends Mixin {
       Fb.create('css_class', T.StringType.create())
         .pattern('^[\\w\\s-]+$')
         .build(),
+      /*
+       * Used to visually represent an update that occurred on this block
+       * that is NOT when this block was literally last modified.
+       */
+      Fb.create('updated_date', T.DateTimeType.create())
+        .build(),
     ];
   }
 }

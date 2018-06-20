@@ -39,6 +39,7 @@ export default class NotificationV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       Fb.create('send_status', T.StringEnumType.create())
+        .withDefault(NotificationSendStatus.UNKNOWN)
         .classProto(NotificationSendStatus)
         .build(),
       Fb.create('send_on_publish', T.BooleanType.create())
@@ -53,6 +54,11 @@ export default class NotificationV1Mixin extends Mixin {
        */
       Fb.create('body', T.TextType.create())
         .maxLength(2000)
+        .build(),
+      Fb.create('notifier_result', T.MessageType.create())
+        .anyOfCuries([
+          'triniti:notify::notifier-result',
+        ])
         .build(),
     ];
   }

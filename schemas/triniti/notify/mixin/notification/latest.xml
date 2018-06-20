@@ -44,6 +44,7 @@
         </js-options>
       </field>
       <field name="send_status" type="string-enum">
+        <default>unknown</default>
         <enum id="triniti:notify:notification-send-status"/>
       </field>
       <field name="send_on_publish" type="boolean"/>
@@ -54,6 +55,11 @@
           The body of the notification to use (format depends on app/platform). If present
           this value should take precedence over the body derived from content_ref.
         </description>
+      </field>
+      <field name="notifier_result" type="message">
+        <any-of>
+          <curie>triniti:notify::notifier-result</curie>
+        </any-of>
       </field>
     </fields>
   </schema>

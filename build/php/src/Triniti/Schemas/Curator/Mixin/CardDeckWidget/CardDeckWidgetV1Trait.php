@@ -1,6 +1,6 @@
 <?php
 
-namespace Triniti\Schemas\Canvas\Mixin\UpdateBlock;
+namespace Triniti\Schemas\Curator\Mixin\CardDeckWidget;
 
 use Gdbots\Pbj\Schema;
 
@@ -8,7 +8,7 @@ use Gdbots\Pbj\Schema;
  * @method static Schema schema
  * @method mixed get($fieldName, $default = null)
  */
-trait UpdateBlockV1Trait
+trait CardDeckWidgetV1Trait
 {
     /**
      * @return array
@@ -16,7 +16,7 @@ trait UpdateBlockV1Trait
     public function getUriTemplateVars()
     {
         return [
-            'etag' => $this->get('etag'),
+            '_id' => (string)$this->get('_id'),
         ];
     }
 }

@@ -19,9 +19,15 @@
       </field>
       <field name="search_request" type="message">
         <any-of>
-          <curie>gdbots:ncr:mixin:search-nodes-request:v1</curie>
+          <curie>gdbots:ncr:mixin:search-nodes-request</curie>
         </any-of>
       </field>
+      <field name="show_header" type="boolean">
+        <default>true</default>
+      </field>
+      <field name="header_text" type="string"/>
+      <field name="view_all_url" type="string" format="url"/>
+      <field name="view_all_text" type="string"/>
     </fields>
   </schema>
 </pbj-schema>

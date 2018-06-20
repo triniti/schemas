@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Curator\Mixin\Widget;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -35,6 +36,16 @@ final class WidgetV1Mixin extends AbstractMixin
                 ->anyOfClassNames([
                     GdbotsNcrSearchNodesRequest::class,
                 ])
+                ->build(),
+            Fb::create('show_header', T\BooleanType::create())
+                ->withDefault(true)
+                ->build(),
+            Fb::create('header_text', T\StringType::create())
+                ->build(),
+            Fb::create('view_all_url', T\StringType::create())
+                ->format(Format::URL())
+                ->build(),
+            Fb::create('view_all_text', T\StringType::create())
                 ->build(),
         ];
     }

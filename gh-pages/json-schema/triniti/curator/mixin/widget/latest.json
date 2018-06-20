@@ -174,6 +174,41 @@
         "type": "message",
         "rule": "single"
       }
+    },
+    "show_header": {
+      "type": "boolean",
+      "default": true,
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "header_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "view_all_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "view_all_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
     }
   },
   "required": [

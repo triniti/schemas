@@ -22,12 +22,11 @@ export default class NotificationFailedV1Mixin extends Mixin {
         .required()
         .classProto(NodeRef)
         .build(),
-      /*
-       * When a notification fails the platform/vendor often responds with a payload
-       * that describes the error(s). This field should contain a (de)serializable
-       * string, JSON is preferred.
-       */
-      Fb.create('response', T.TextType.create())
+      Fb.create('notifier_result', T.MessageType.create())
+        .required()
+        .anyOfCuries([
+          'triniti:notify::notifier-result',
+        ])
         .build(),
     ];
   }

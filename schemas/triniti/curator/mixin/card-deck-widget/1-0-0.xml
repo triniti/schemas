@@ -3,12 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:canvas:mixin:update-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
-    <fields>
-      <field name="text" type="text"/>
-      <field name="date" type="date-time"/>
-    </fields>
-
+  <schema id="pbj:triniti:curator:mixin:card-deck-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
     <php-options>
       <insertion-points>
         <imports/>
@@ -20,7 +15,7 @@
 public function getUriTemplateVars()
 {
     return [
-        'etag' => $this->get('etag'),
+        '_id' => (string)$this->get('_id'),
     ];
 }
           ]]>
@@ -37,7 +32,7 @@ public function getUriTemplateVars()
  */
 getUriTemplateVars() {
   return {
-    etag: this.get('etag'),
+    _id: `${this.get('_id', '')}`,
   };
 }
           ]]>
