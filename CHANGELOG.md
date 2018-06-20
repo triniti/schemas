@@ -1,6 +1,30 @@
 # CHANGELOG
 
 
+## v0.3.3
+* __Add Schemas:__
+  * `triniti:curator:mixin:card-deck-widget`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:blogroll-widget`
+    * Add `load_more_text` string field.
+    * Add `load_more_infinite` boolean field.
+  * `triniti:curator:mixin:carousel-widget`
+    * Add `show_captions` boolean field.
+    * Add `show_controls` boolean field.
+    * Add `show_position_indicators` boolean field.
+  * `triniti:curator:mixin:widget`
+    * Add `view_all_link_url` string field with format url.
+    * Add `view_all_link_text` string field.
+    * Add `header_text` string field.
+    * Add `header_button_link_url` string field with format url.
+    * Add `header_button_link_text` string field.
+    * Add `show_header` boolean field.
+    * Add `footer_text` string field.
+    * Add `footer_button_link_url` string field with format url.
+    * Add `footer_button_link_text` string field.
+    * Add `show_header` boolean field.
+
+
 ## v0.3.2
 * __Add Schemas:__
   * `triniti:common:mixin:advertising`
@@ -424,7 +448,7 @@ __BREAKING CHANGES__
 
 
 ## v0.1.9
-* Fix invalid schema definition on the dam schemas where `extends="pbj:triniti:dam:mixin:asset:1-0-0"` should be `extends="triniti:dam:mixin:asset:v1"`. 
+* Fix invalid schema definition on the dam schemas where `extends="pbj:triniti:dam:mixin:asset:1-0-0"` should be `extends="triniti:dam:mixin:asset:v1"`.
 
 
 ## v0.1.8
@@ -488,7 +512,7 @@ __BREAKING CHANGES__
   * `triniti:common:mixin:seo`
     * Add `seo_image_ref` identifier (NodeRef) field.
   * `triniti:dam:mixin:asset`
-    * Add `associated_refs` identifier (NodeRef) set field. 
+    * Add `associated_refs` identifier (NodeRef) set field.
   * `triniti:dam:mixin:search-assets-request`
     * Add `associated_ref` identifier (NodeRef) field.
   * `triniti:news:mixin:article`

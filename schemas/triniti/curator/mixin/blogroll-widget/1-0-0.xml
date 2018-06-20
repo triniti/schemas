@@ -12,6 +12,18 @@
           aka "separators" in the blogroll.
         </description>
       </field>
+      <field name="load_more_text" type="string">
+        <description>
+          The text to render inside the load more option.
+        </description>
+      </field>
+      <field name="load_more_infinite" type="boolean">
+        <description>
+          Whether or not the widget should load more content
+          infinitely (only have to click the load_more_text
+          once).
+        </description>
+      </field>
     </fields>
 
     <php-options>
