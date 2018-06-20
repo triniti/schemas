@@ -22,13 +22,11 @@ export default class NotificationSentV1Mixin extends Mixin {
         .required()
         .classProto(NodeRef)
         .build(),
-      /*
-       * When a notification is sent the platform/vendor often responds with a payload
-       * that may be needed to update our system, e.g. Apple News return an id and revision
-       * that will be needed on future updates to the same content. This field
-       * should contain a (de)serializable string, JSON is preferred.
-       */
-      Fb.create('response', T.TextType.create())
+      Fb.create('notifier_result', T.MessageType.create())
+        .required()
+        .anyOfCuries([
+          'triniti:notify::notifier-result',
+        ])
         .build(),
     ];
   }

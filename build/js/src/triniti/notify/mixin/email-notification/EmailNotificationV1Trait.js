@@ -1,11 +1,12 @@
-export default function UpdateBlockV1Trait(m) {
+export default function EmailNotificationV1Trait(m) {
   Object.assign(m.prototype, {
     /**
      * @returns {Object}
      */
     getUriTemplateVars() {
       return {
-        etag: this.get('etag'),
+        _id: `${this.get('_id', '')}`,
+        template: this.get('template'),
       };
     }
   });

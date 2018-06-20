@@ -213,6 +213,14 @@
         "type": "identifier",
         "rule": "single"
       }
+    },
+    "sync_with_target": {
+      "type": "boolean",
+      "description": "When true this teaser will automatically be updated to match the target it is bound to whenever the target is modified.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
     }
   },
   "required": [

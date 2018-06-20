@@ -30,58 +30,15 @@ export default class WidgetV1Mixin extends Mixin {
           'gdbots:ncr:mixin:search-nodes-request',
         ])
         .build(),
-      /*
-       * The href/url for the view all option.
-       */
-      Fb.create('view_all_link_url', T.StringType.create())
-        .format(Format.URL)
+      Fb.create('show_header', T.BooleanType.create())
+        .withDefault(true)
         .build(),
-      /*
-       * The label for the view all option.
-       */
-      Fb.create('view_all_link_text', T.StringType.create())
-        .build(),
-      /*
-       * The text to be rendered in the header.
-       */
       Fb.create('header_text', T.StringType.create())
         .build(),
-      /*
-       * The href/url for the header button.
-       */
-      Fb.create('header_button_link_url', T.StringType.create())
+      Fb.create('view_all_url', T.StringType.create())
         .format(Format.URL)
         .build(),
-      /*
-       * The label to be rendered in the header button.
-       */
-      Fb.create('header_button_link_text', T.StringType.create())
-        .build(),
-      /*
-       * Whether or not to render the header.
-       */
-      Fb.create('show_header', T.BooleanType.create())
-        .build(),
-      /*
-       * The text to be rendered in the footer.
-       */
-      Fb.create('footer_text', T.StringType.create())
-        .build(),
-      /*
-       * The href/url for the footer button.
-       */
-      Fb.create('footer_button_link_url', T.StringType.create())
-        .format(Format.URL)
-        .build(),
-      /*
-       * The label to be rendered in the footer button.
-       */
-      Fb.create('footer_button_link_text', T.StringType.create())
-        .build(),
-      /*
-       * Whether or not to render the footer.
-       */
-      Fb.create('show_footer', T.BooleanType.create())
+      Fb.create('view_all_text', T.StringType.create())
         .build(),
     ];
   }

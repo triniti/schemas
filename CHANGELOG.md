@@ -4,35 +4,33 @@
 ## v0.4.0
 __BREAKING CHANGES__
 * __Add Schemas:__
+  * `triniti:curator::widget-render-context`
   * `triniti:curator:mixin:card-deck-widget`
   * `triniti:notify:mixin:email-notification`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
-  * `triniti:curator:mixin:blogroll-widget`
-    * Add `load_more_text` string field.
-    * Add `load_more_infinite` boolean field.
+  * `triniti:canvas:mixin:block`
+    * Add `updated_at` date-time field.
   * `triniti:curator:mixin:carousel-widget`
     * Add `show_captions` boolean field.
     * Add `show_controls` boolean field.
     * Add `show_position_indicators` boolean field.
   * `triniti:curator:mixin:widget`
-    * Add `view_all_link_url` string field with format url.
-    * Add `view_all_link_text` string field.
+    * Add `show_header` boolean field.
     * Add `header_text` string field.
-    * Add `header_button_link_url` string field with format url.
-    * Add `header_button_link_text` string field.
-    * Add `show_header` boolean field.
-    * Add `footer_text` string field.
-    * Add `footer_button_link_url` string field with format url.
-    * Add `footer_button_link_text` string field.
-    * Add `show_header` boolean field.
+    * Add `view_all_url` string field with format url.
+    * Add `view_all_text` string field.
+  * `triniti:news:mixin:article`
+    * Remove `description` field.
   * `triniti:notify:mixin:notification`
     * Set default to `unknown` for `send_status` field.
   * `triniti:notify:mixin:notification-failed`
     * Remove `response` field.
-    * Add ``
+    * Add `notifier_result` message field with `any-of` to `triniti:notify::notifier-result`.
+  * `triniti:notify:mixin:notification-sent`
+    * Remove `response` field.
+    * Add `notifier_result` message field with `any-of` to `triniti:notify::notifier-result`.
 * __Delete Schemas:__
-  * `triniti:curator:content-type`
-  * `triniti:ovp.kaltura:mixin:media-entry`
+  * `triniti:canvas:mixin:update-block`
 
 
 ## v0.3.2
@@ -43,7 +41,7 @@ __BREAKING CHANGES__
   * `triniti:dam:mixin:reorder-gallery-assets`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:curator:mixin:widget`
-    * Add `search_request` message field with `any-of` to `gdbots:ncr:mixin:search-nodes-request:v1`.
+    * Add `search_request` message field with `any-of` to `gdbots:ncr:mixin:search-nodes-request`.
   * `triniti:dam:mixin:asset`
     * Add `gallery_ref` identifier (NodeRef) field.
     * Add `gallery_seq` int field.

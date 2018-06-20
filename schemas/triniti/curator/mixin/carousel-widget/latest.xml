@@ -6,23 +6,12 @@
   <schema id="pbj:triniti:curator:mixin:carousel-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
     <fields>
       <field name="show_captions" type="boolean">
-        <description>
-          Whether or not the widget should render with captions.
-        </description>
         <default>true</default>
       </field>
       <field name="show_controls" type="boolean">
-        <description>
-          Whether or not the widget should render with controls
-          (e.g. arrows).
-        </description>
         <default>true</default>
       </field>
       <field name="show_position_indicators" type="boolean">
-        <description>
-          Whether or not the widget should render with position
-          indicators (e.g. dots).
-        </description>
         <default>true</default>
       </field>
     </fields>
@@ -39,6 +28,9 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
+        'show_captions' => $this->get('show_captions'),
+        'show_controls' => $this->get('show_controls'),
+        'show_position_indicators' => $this->get('show_position_indicators'),
     ];
 }
           ]]>
@@ -56,6 +48,9 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
+    show_captions: this.get('show_captions'),
+    show_controls: this.get('show_controls'),
+    show_position_indicators: this.get('show_position_indicators'),
   };
 }
           ]]>

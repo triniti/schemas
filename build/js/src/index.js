@@ -55,6 +55,8 @@ import '@gdbots/schemas/gdbots/pbjx/request/EchoRequestV1';
 import '@gdbots/schemas/gdbots/pbjx/request/EchoResponseV1';
 import '@gdbots/schemas/gdbots/pbjx/request/RequestFailedResponseV1';
 import '@triniti/schemas/triniti/canvas/block/RenderContextV1';
+import '@triniti/schemas/triniti/curator/WidgetRenderContextV1';
+import '@triniti/schemas/triniti/notify/NotifierResultV1';
 import '@triniti/schemas/triniti/ovp.kaltura/CaptionV1';
 import '@triniti/schemas/triniti/ovp.kaltura/EntryV1';
 import '@triniti/schemas/triniti/ovp.kaltura/FlavorV1';

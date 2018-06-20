@@ -45,13 +45,6 @@ final class ArticleV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             /*
-             * A description of the article (usually a few sentences). It should typically
-             * not have HTML as it is used in metadata, feeds, SERP and social.
-             */
-            Fb::create('description', T\TextType::create())
-                ->maxLength(5000)
-                ->build(),
-            /*
              * A swipe (aka banner/label/overlay) is a short string used in a visual treatment
              * on the article. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
              */

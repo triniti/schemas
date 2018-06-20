@@ -15,7 +15,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="result" type="message" required="true">
+      <field name="notifier_result" type="message" required="true">
         <any-of>
           <curie>triniti:notify::notifier-result</curie>
         </any-of>

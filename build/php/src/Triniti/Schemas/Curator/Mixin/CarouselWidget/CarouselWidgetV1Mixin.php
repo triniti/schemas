@@ -23,23 +23,12 @@ final class CarouselWidgetV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            /*
-             * Whether or not the widget should render with captions.
-             */
             Fb::create('show_captions', T\BooleanType::create())
                 ->withDefault(true)
                 ->build(),
-            /*
-             * Whether or not the widget should render with controls
-             * (e.g. arrows).
-             */
             Fb::create('show_controls', T\BooleanType::create())
                 ->withDefault(true)
                 ->build(),
-            /*
-             * Whether or not the widget should render with position
-             * indicators (e.g. dots).
-             */
             Fb::create('show_position_indicators', T\BooleanType::create())
                 ->withDefault(true)
                 ->build(),
