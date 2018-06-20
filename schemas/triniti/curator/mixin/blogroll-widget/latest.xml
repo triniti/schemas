@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:mixin:blogroll-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
+    <fields>
+      <field name="promotion_slot" type="string" format="slug">
+        <description>
+          The name of the slot that will contain a promotion
+          with the widgets that will be used for the "in-between"
+          aka "separators" in the blogroll.
+        </description>
+      </field>
+      <field name="load_more_text" type="string">
+        <description>
+          The text to render inside the load more option.
+        </description>
+      </field>
+      <field name="load_more_infinite" type="boolean">
+        <description>
+          Whether or not the widget should load more content
+          infinitely (only have to click the load_more_text
+          once).
+        </description>
+      </field>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        '_id' => (string)$this->get('_id'),
+        'promotion_slot' => $this->get('promotion_slot'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    _id: `${this.get('_id', '')}`,
+    promotion_slot: this.get('promotion_slot'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>

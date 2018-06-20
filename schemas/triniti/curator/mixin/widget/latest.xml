@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:mixin:widget:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+    <fields>
+      <field name="_id" type="identifier" required="true" overridable="true">
+        <php-options>
+          <imports>use Triniti\Schemas\Curator\WidgetId;</imports>
+          <class-name>WidgetId::class</class-name>
+          <default>function() { return WidgetId::generate(); }</default>
+        </php-options>
+        <js-options>
+          <imports>import WidgetId from '@triniti/schemas/triniti/curator/WidgetId';</imports>
+          <class-proto>WidgetId</class-proto>
+          <default>() => WidgetId.generate()</default>
+        </js-options>
+      </field>
+      <field name="search_request" type="message">
+        <any-of>
+          <curie>gdbots:ncr:mixin:search-nodes-request:v1</curie>
+        </any-of>
+      </field>
+      <field name="view_all_link_url" type="string" format="url">
+        <description>
+          The href/url for the view all option.
+        </description>
+      </field>
+      <field name="view_all_link_text" type="string">
+        <description>
+          The label for the view all option.
+        </description>
+      </field>
+      <field name="header_text" type="string">
+        <description>
+          The text to be rendered in the header.
+        </description>
+      </field>
+      <field name="header_button_link_url" type="string" format="url">
+        <description>
+          The href/url for the header button.
+        </description>
+      </field>
+      <field name="header_button_link_text" type="string">
+        <description>
+          The label to be rendered in the header button.
+        </description>
+      </field>
+      <field name="show_header" type="boolean">
+        <description>
+          Whether or not to render the header.
+        </description>
+      </field>
+      <field name="footer_text" type="string">
+        <description>
+          The text to be rendered in the footer.
+        </description>
+      </field>
+      <field name="footer_button_link_url" type="string" format="url">
+        <description>
+          The href/url for the footer button.
+        </description>
+      </field>
+      <field name="footer_button_link_text" type="string">
+        <description>
+          The label to be rendered in the footer button.
+        </description>
+      </field>
+      <field name="show_footer" type="boolean">
+        <description>
+          Whether or not to render the footer.
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

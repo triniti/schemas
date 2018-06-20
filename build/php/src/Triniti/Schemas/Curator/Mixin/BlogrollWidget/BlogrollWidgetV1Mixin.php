@@ -32,6 +32,18 @@ final class BlogrollWidgetV1Mixin extends AbstractMixin
             Fb::create('promotion_slot', T\StringType::create())
                 ->format(Format::SLUG())
                 ->build(),
+            /*
+             * The text to render inside the load more option.
+             */
+            Fb::create('load_more_text', T\StringType::create())
+                ->build(),
+            /*
+             * Whether or not the widget should load more content
+             * infinitely (only have to click the load_more_text
+             * once).
+             */
+            Fb::create('load_more_infinite', T\BooleanType::create())
+                ->build(),
         ];
     }
 }
