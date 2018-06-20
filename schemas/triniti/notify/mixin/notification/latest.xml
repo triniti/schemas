@@ -44,6 +44,7 @@
         </js-options>
       </field>
       <field name="send_status" type="string-enum">
+        <default>unknown</default>
         <enum id="triniti:notify:notification-send-status"/>
       </field>
       <field name="send_on_publish" type="boolean"/>

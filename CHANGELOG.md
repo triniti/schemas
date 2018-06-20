@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v0.4.0
+__BREAKING CHANGES__
+* __Add Schemas:__
+  * `triniti:notify:mixin:email-notification`
+* __Modify Schemas:__
+  * `triniti:notify:mixin:notification`
+    * Set default to `unknown` for `send_status` field.
+  * `triniti:notify:mixin:notification-failed`
+    * Remove `response` field.
+    * Add ``
+* __Delete Schemas:__
+  * `triniti:curator:content-type`
+  * `triniti:ovp.kaltura:mixin:media-entry`
+
+
 ## v0.3.2
 * __Add Schemas:__
   * `triniti:common:mixin:advertising`
