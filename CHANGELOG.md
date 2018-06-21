@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v0.5.0
+__BREAKING CHANGES__
+* __Add Schemas:__
+  * `triniti:canvas:mixin:page-break-block`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:quote-block`
+    * Add `is_pull_quote` boolean field.
+  * `triniti:curator:mixin:teaser`
+    * Add `gallery_ref` identifier (NodeRef) field.
+    * Add `timeline_ref` identifier (NodeRef) field.
+    * Add `show_only_in_timeline` boolean field.
+* __Delete Schemas:__
+  * `triniti:canvas:mixin:pull-quote-block`
+
+
 ## v0.4.0
 __BREAKING CHANGES__
 * Use `gdbots/schemas` v1.5.4.

@@ -8,6 +8,7 @@
       <field name="text" type="text" max="5000"/>
       <field name="source" type="string"/>
       <field name="source_url" type="string" format="url"/>
+      <field name="is_pull_quote" type="boolean"/>
     </fields>
 
     <php-options>

@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/pull-quote-block/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/page-break-block/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -29,12 +29,12 @@
         "rule": "single"
       }
     },
-    "text": {
+    "read_more_text": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 5000,
+      "maxLength": 255,
       "pbj": {
-        "type": "text",
+        "type": "string",
         "rule": "single"
       }
     }

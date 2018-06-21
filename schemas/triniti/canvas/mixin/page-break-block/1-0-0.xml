@@ -3,9 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:canvas:mixin:pull-quote-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
+  <schema id="pbj:triniti:canvas:mixin:page-break-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="text" type="text" max="5000"/>
+      <field name="read_more_text" type="string"/>
     </fields>
 
     <php-options>
