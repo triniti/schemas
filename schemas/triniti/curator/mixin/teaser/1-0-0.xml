@@ -54,6 +54,33 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="gallery_ref" type="identifier">
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="timeline_ref" type="identifier">
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="show_only_in_timeline" type="boolean">
+        <description>
+          When true this means the teaser should ONLY appear when viewing
+          the timeline it's associated with. This is to ensure the teaser doesn't
+          show up in other uses cases like "top teasers by #hashtag".
+        </description>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

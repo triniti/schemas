@@ -8,6 +8,10 @@ __BREAKING CHANGES__
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:quote-block`
     * Add `is_pull_quote` boolean field.
+  * `triniti:curator:mixin:teaser`
+    * Add `gallery_ref` identifier (NodeRef) field.
+    * Add `timeline_ref` identifier (NodeRef) field.
+    * Add `show_only_in_timeline` boolean field.
 * __Delete Schemas:__
   * `triniti:canvas:mixin:pull-quote-block`
 

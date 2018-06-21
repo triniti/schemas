@@ -56,6 +56,19 @@ final class TeaserV1Mixin extends AbstractMixin
                 ->asAList()
                 ->className(NodeRef::class)
                 ->build(),
+            Fb::create('gallery_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+            Fb::create('timeline_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+            /*
+             * When true this means the teaser should ONLY appear when viewing
+             * the timeline it's associated with. This is to ensure the teaser doesn't
+             * show up in other uses cases like "top teasers by #hashtag".
+             */
+            Fb::create('show_only_in_timeline', T\BooleanType::create())
+                ->build(),
         ];
     }
 }

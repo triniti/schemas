@@ -205,6 +205,30 @@
         "rule": "list"
       }
     },
+    "gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "timeline_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "show_only_in_timeline": {
+      "type": "boolean",
+      "description": "When true this means the teaser should ONLY appear when viewing the timeline it's associated with. This is to ensure the teaser doesn't show up in other uses cases like \"top teasers by #hashtag\".",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "link_url": {
       "type": "string",
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
