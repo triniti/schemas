@@ -1,6 +1,6 @@
 <?php
 
-namespace Triniti\Schemas\Canvas\Mixin\PullQuoteBlock;
+namespace Triniti\Schemas\Canvas\Mixin\PageBreakBlock;
 
 use Gdbots\Pbj\Schema;
 
@@ -8,7 +8,7 @@ use Gdbots\Pbj\Schema;
  * @method static Schema schema
  * @method mixed get($fieldName, $default = null)
  */
-trait PullQuoteBlockV1Trait
+trait PageBreakBlockV1Trait
 {
     /**
      * @return array

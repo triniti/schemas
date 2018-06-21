@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.5.0
+__BREAKING CHANGES__
+* __Add Schemas:__
+  * `triniti:canvas:mixin:page-break-block`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:quote-block`
+    * Add `is_pull_quote` boolean field.
+* __Delete Schemas:__
+  * `triniti:canvas:mixin:pull-quote-block`
+
+
 ## v0.4.0
 __BREAKING CHANGES__
 * Use `gdbots/schemas` v1.5.4.

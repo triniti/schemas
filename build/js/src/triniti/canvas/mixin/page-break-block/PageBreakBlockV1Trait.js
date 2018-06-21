@@ -1,4 +1,4 @@
-export default function PullQuoteBlockV1Trait(m) {
+export default function PageBreakBlockV1Trait(m) {
   Object.assign(m.prototype, {
     /**
      * @returns {Object}
