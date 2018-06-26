@@ -44,16 +44,6 @@
           not have HTML as it is used in metadata, feeds, SERP and social.
         </description>
       </field>
-      <field name="related_teasers" type="identifier" rule="list">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
       <field name="gallery_ref" type="identifier">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
@@ -74,11 +64,9 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="show_only_in_timeline" type="boolean">
+      <field name="cta_text" type="string">
         <description>
-          When true this means the teaser should ONLY appear when viewing
-          the timeline it's associated with. This is to ensure the teaser doesn't
-          show up in other uses cases like "top teasers by #hashtag".
+          Text to be used for the call to action.
         </description>
       </field>
     </fields>

@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.5.1
+* __Add Schemas:__
+  * `triniti:common:mixin:swipeable`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:teaser`
+    * Add `cta_text` string field.
+    * Remove `related_teasers` identifier list field.
+    * Remove `show_only_in_timeline` boolean field.
+
+
 ## v0.5.0
 __BREAKING CHANGES__
 * __Add Schemas:__
