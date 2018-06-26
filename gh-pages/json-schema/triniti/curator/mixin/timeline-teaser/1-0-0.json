@@ -191,20 +191,6 @@
         "rule": "single"
       }
     },
-    "related_teasers": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[\\w\\/\\.:-]+$"
-        }
-      ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "identifier",
-        "rule": "list"
-      }
-    },
     "gallery_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
@@ -221,11 +207,13 @@
         "rule": "single"
       }
     },
-    "show_only_in_timeline": {
-      "type": "boolean",
-      "description": "When true this means the teaser should ONLY appear when viewing the timeline it's associated with. This is to ensure the teaser doesn't show up in other uses cases like \"top teasers by #hashtag\".",
+    "cta_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used for the call to action.",
       "pbj": {
-        "type": "boolean",
+        "type": "string",
         "rule": "single"
       }
     },

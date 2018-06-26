@@ -46,10 +46,6 @@ export default class TeaserV1Mixin extends Mixin {
       Fb.create('description', T.TextType.create())
         .maxLength(5000)
         .build(),
-      Fb.create('related_teasers', T.IdentifierType.create())
-        .asAList()
-        .classProto(NodeRef)
-        .build(),
       Fb.create('gallery_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
@@ -57,11 +53,9 @@ export default class TeaserV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       /*
-       * When true this means the teaser should ONLY appear when viewing
-       * the timeline it's associated with. This is to ensure the teaser doesn't
-       * show up in other uses cases like "top teasers by #hashtag".
+       * Text to be used for the call to action.
        */
-      Fb.create('show_only_in_timeline', T.BooleanType.create())
+      Fb.create('cta_text', T.StringType.create())
         .build(),
     ];
   }

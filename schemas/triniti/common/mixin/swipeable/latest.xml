@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:common:mixin:swipeable:1-0-0" mixin="true">
+    <fields>
+      <field name="swipe" type="string">
+        <description>
+          A string to be used as a swipe decoration.
+        </description>
+      </field>
+      <field name="soft_swipe" type="string">
+        <description>
+          A string to be used as a soft swipe decoration.
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>
