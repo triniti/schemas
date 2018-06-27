@@ -183,9 +183,10 @@
     },
     "send_status": {
       "type": "string",
-      "default": "unknown",
+      "default": "draft",
       "enum": [
         "unknown",
+        "draft",
         "scheduled",
         "sent",
         "canceled",

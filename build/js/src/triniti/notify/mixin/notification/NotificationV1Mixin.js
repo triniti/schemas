@@ -39,7 +39,7 @@ export default class NotificationV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       Fb.create('send_status', T.StringEnumType.create())
-        .withDefault(NotificationSendStatus.UNKNOWN)
+        .withDefault(NotificationSendStatus.DRAFT)
         .classProto(NotificationSendStatus)
         .build(),
       Fb.create('send_on_publish', T.BooleanType.create())

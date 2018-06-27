@@ -5,6 +5,7 @@ export default class NotificationSendStatus extends Enum {
 
 NotificationSendStatus.configure({
   UNKNOWN: 'unknown',
+  DRAFT: 'draft',
   SCHEDULED: 'scheduled',
   SENT: 'sent',
   CANCELED: 'canceled',

@@ -6,6 +6,7 @@
   <enums namespace="triniti:notify">
     <enum name="notification-send-status" type="string">
       <option key="UNKNOWN" value="unknown"/>
+      <option key="DRAFT" value="draft"/>
       <option key="SCHEDULED" value="scheduled"/>
       <option key="SENT" value="sent"/>
       <option key="CANCELED" value="canceled"/>
