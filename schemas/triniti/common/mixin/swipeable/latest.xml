@@ -7,12 +7,13 @@
     <fields>
       <field name="swipe" type="string">
         <description>
-          A string to be used as a swipe decoration.
+          A swipe (aka banner/label/overlay) is a short string used in a visual treatment
+          on the node. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
         </description>
       </field>
       <field name="soft_swipe" type="string">
         <description>
-          A string to be used as a soft swipe decoration.
+          Same idea as swipe but you know, softer.
         </description>
       </field>
     </fields>

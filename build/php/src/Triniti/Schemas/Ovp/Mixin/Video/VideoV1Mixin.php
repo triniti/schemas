@@ -72,12 +72,6 @@ final class VideoV1Mixin extends AbstractMixin
              */
             Fb::create('credit', T\StringType::create())
                 ->build(),
-            /*
-             * A swipe (aka banner/label/overlay) is a short string used in a visual treatment
-             * on the video. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
-             */
-            Fb::create('swipe', T\StringType::create())
-                ->build(),
             Fb::create('related_videos', T\IdentifierType::create())
                 ->asAList()
                 ->className(NodeRef::class)

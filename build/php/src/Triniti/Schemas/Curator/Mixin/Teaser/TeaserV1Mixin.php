@@ -52,16 +52,16 @@ final class TeaserV1Mixin extends AbstractMixin
             Fb::create('description', T\TextType::create())
                 ->maxLength(5000)
                 ->build(),
+            /*
+             * Text to be used for the call to action.
+             */
+            Fb::create('cta_text', T\StringType::create())
+                ->build(),
             Fb::create('gallery_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
             Fb::create('timeline_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
-                ->build(),
-            /*
-             * Text to be used for the call to action.
-             */
-            Fb::create('cta_text', T\StringType::create())
                 ->build(),
         ];
     }

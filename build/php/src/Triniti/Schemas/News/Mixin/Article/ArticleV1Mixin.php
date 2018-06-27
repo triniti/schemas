@@ -45,12 +45,6 @@ final class ArticleV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             /*
-             * A swipe (aka banner/label/overlay) is a short string used in a visual treatment
-             * on the article. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
-             */
-            Fb::create('swipe', T\StringType::create())
-                ->build(),
-            /*
              * An arbitrary classification that can be used to establish importance/rank/weight/etc.
              * with a human friendly label. e.g. "super-hero", "hero", "chud".
              */

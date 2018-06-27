@@ -46,16 +46,16 @@ export default class TeaserV1Mixin extends Mixin {
       Fb.create('description', T.TextType.create())
         .maxLength(5000)
         .build(),
+      /*
+       * Text to be used for the call to action.
+       */
+      Fb.create('cta_text', T.StringType.create())
+        .build(),
       Fb.create('gallery_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
       Fb.create('timeline_ref', T.IdentifierType.create())
         .classProto(NodeRef)
-        .build(),
-      /*
-       * Text to be used for the call to action.
-       */
-      Fb.create('cta_text', T.StringType.create())
         .build(),
     ];
   }

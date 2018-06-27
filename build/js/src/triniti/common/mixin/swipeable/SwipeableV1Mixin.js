@@ -18,12 +18,13 @@ export default class SwipeableV1Mixin extends Mixin {
   getFields() {
     return [
       /*
-       * A string to be used as a swipe decoration.
+       * A swipe (aka banner/label/overlay) is a short string used in a visual treatment
+       * on the node. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
        */
       Fb.create('swipe', T.StringType.create())
         .build(),
       /*
-       * A string to be used as a soft swipe decoration.
+       * Same idea as swipe but you know, softer.
        */
       Fb.create('soft_swipe', T.StringType.create())
         .build(),

@@ -44,6 +44,11 @@
           not have HTML as it is used in metadata, feeds, SERP and social.
         </description>
       </field>
+      <field name="cta_text" type="string">
+        <description>
+          Text to be used for the call to action.
+        </description>
+      </field>
       <field name="gallery_ref" type="identifier">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
@@ -63,11 +68,6 @@
           <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
           <class-proto>NodeRef</class-proto>
         </js-options>
-      </field>
-      <field name="cta_text" type="string">
-        <description>
-          Text to be used for the call to action.
-        </description>
       </field>
     </fields>
   </schema>

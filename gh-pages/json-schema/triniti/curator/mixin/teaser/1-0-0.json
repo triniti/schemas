@@ -191,6 +191,16 @@
         "rule": "single"
       }
     },
+    "cta_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used for the call to action.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "gallery_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
@@ -204,16 +214,6 @@
       "pattern": "^[\\w\\/\\.:-]+$",
       "pbj": {
         "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "cta_text": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "Text to be used for the call to action.",
-      "pbj": {
-        "type": "string",
         "rule": "single"
       }
     }

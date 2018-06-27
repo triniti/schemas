@@ -1,7 +1,9 @@
 # CHANGELOG
 
 
-## v0.5.1
+## v0.6.0
+__BREAKING CHANGES__
+
 * __Add Schemas:__
   * `triniti:common:mixin:swipeable`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
@@ -9,10 +11,15 @@
     * Add `cta_text` string field.
     * Remove `related_teasers` identifier list field.
     * Remove `show_only_in_timeline` boolean field.
+  * `triniti:news:mixin:article`
+    * Remove `swipe` string field.
+  * `triniti:ovp:mixin:video`
+    * Remove `swipe` string field.
 
 
 ## v0.5.0
 __BREAKING CHANGES__
+
 * __Add Schemas:__
   * `triniti:canvas:mixin:page-break-block`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
@@ -28,6 +35,7 @@ __BREAKING CHANGES__
 
 ## v0.4.0
 __BREAKING CHANGES__
+
 * Use `gdbots/schemas` v1.5.4.
 * __Add Schemas:__
   * `triniti:curator::widget-render-context`
