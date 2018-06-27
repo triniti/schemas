@@ -62,12 +62,6 @@
           of the video. e.g. "Fox News", "CNN".
         </description>
       </field>
-      <field name="swipe" type="string">
-        <description>
-          A swipe (aka banner/label/overlay) is a short string used in a visual treatment
-          on the video. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
-        </description>
-      </field>
       <field name="related_videos" type="identifier" rule="list">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>

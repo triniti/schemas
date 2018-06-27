@@ -46,7 +46,7 @@ final class NotificationV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             Fb::create('send_status', T\StringEnumType::create())
-                ->withDefault(NotificationSendStatus::UNKNOWN())
+                ->withDefault(NotificationSendStatus::DRAFT())
                 ->className(NotificationSendStatus::class)
                 ->build(),
             Fb::create('send_on_publish', T\BooleanType::create())
