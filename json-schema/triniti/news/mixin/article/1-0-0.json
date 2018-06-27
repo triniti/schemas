@@ -188,16 +188,6 @@
         "rule": "single"
       }
     },
-    "swipe": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "A swipe (aka banner/label/overlay) is a short string used in a visual treatment on the article. e.g. \"Exclusive\", \"NSFW\", \"Breaking Bad Mojo\".",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
     "classification": {
       "type": "string",
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
