@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v0.7.0
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:sys:mixin:redirect`
+  * `triniti:sys:mixin:search-redirects-request`
+  * `triniti:sys:mixin:search-response-request`
 
 ## v0.6.0
 __BREAKING CHANGES__
