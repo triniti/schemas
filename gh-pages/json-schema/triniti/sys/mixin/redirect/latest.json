@@ -182,6 +182,14 @@
         "rule": "single",
         "format": "url"
       }
+    },
+    "is_vanity": {
+      "type": "boolean",
+      "description": "Is Vanity field determines if a redirect is a vanity url or not.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
     }
   },
   "required": [

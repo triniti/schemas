@@ -36,6 +36,11 @@ export default class RedirectV1Mixin extends Mixin {
       Fb.create('request_uri', T.StringType.create())
         .format(Format.URL)
         .build(),
+      /*
+       * Is Vanity field determines if a redirect is a vanity url or not.
+       */
+      Fb.create('is_vanity', T.BooleanType.create())
+        .build(),
     ];
   }
 }

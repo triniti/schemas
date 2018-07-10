@@ -42,6 +42,11 @@ final class RedirectV1Mixin extends AbstractMixin
             Fb::create('request_uri', T\StringType::create())
                 ->format(Format::URL())
                 ->build(),
+            /*
+             * Is Vanity field determines if a redirect is a vanity url or not.
+             */
+            Fb::create('is_vanity', T\BooleanType::create())
+                ->build(),
         ];
     }
 }

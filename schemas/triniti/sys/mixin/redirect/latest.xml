@@ -25,6 +25,12 @@
           Request URI field is a string in url format that represents the request uri.
         </description>
       </field>
+      <field name="is_vanity" type="boolean">
+        <description>
+          Is Vanity field determines if a redirect is a vanity url or not.
+        </description>
+        <default>false</default>
+      </field>
     </fields>
 
     <php-options>
@@ -41,6 +47,7 @@ public function getUriTemplateVars()
         '_id' => (string)$this->get('_id'),
         'redirect_uri' => $this->get('redirect_uri'),
         'request_uri' => $this->get('request_uri'),
+        'is_vanity' => $this->get('is_vanity'),
     ];
 }
           ]]>
@@ -60,6 +67,7 @@ getUriTemplateVars() {
     _id: `${this.get('_id', '')}`,
     redirect_uri: this.get('redirect_uri'),
     request_uri: this.get('request_uri'),
+    is_vanity: this.get('is_vanity'),
   };
 }
           ]]>

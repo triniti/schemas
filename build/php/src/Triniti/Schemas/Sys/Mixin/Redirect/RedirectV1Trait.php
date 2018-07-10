@@ -19,6 +19,7 @@ trait RedirectV1Trait
             '_id' => (string)$this->get('_id'),
             'redirect_uri' => $this->get('redirect_uri'),
             'request_uri' => $this->get('request_uri'),
+            'is_vanity' => $this->get('is_vanity'),
         ];
     }
 }
