@@ -9,12 +9,10 @@
         <php-options>
           <imports>use Triniti\Schemas\Sys\RedirectId;</imports>
           <class-name>RedirectId::class</class-name>
-          <default>function() { return RedirectId::generate(); }</default>
         </php-options>
         <js-options>
           <imports>import RedirectId from '@triniti/schemas/triniti/sys/RedirectId';</imports>
           <class-proto>RedirectId</class-proto>
-          <default>() => RedirectId.generate()</default>
         </js-options>
       </field>
       <field name="redirect_uri" type="string" format="url">
