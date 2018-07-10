@@ -27,7 +27,6 @@ final class RedirectV1Mixin extends AbstractMixin
         return [
             Fb::create('_id', T\IdentifierType::create())
                 ->required()
-                ->withDefault(function() { return RedirectId::generate(); })
                 ->className(RedirectId::class)
                 ->overridable(true)
                 ->build(),

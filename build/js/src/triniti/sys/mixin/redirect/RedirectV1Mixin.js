@@ -21,7 +21,6 @@ export default class RedirectV1Mixin extends Mixin {
     return [
       Fb.create('_id', T.IdentifierType.create())
         .required()
-        .withDefault(() => RedirectId.generate())
         .classProto(RedirectId)
         .overridable(true)
         .build(),
