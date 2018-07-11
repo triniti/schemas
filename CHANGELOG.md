@@ -1,12 +1,15 @@
 # CHANGELOG
 
-## v0.7.0
-__BREAKING CHANGES__
-
+## v0.6.1
 * __Add Schemas:__
   * `triniti:sys:mixin:redirect`
   * `triniti:sys:mixin:search-redirects-request`
   * `triniti:sys:mixin:search-response-request`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:dam:mixin:get-upload-urls-request`
+    * Add `quality` string field with pattern `^[\w\.-]+$`.
+    * Add `version` string field with pattern `^[\w\.-]+$`.
+
 
 ## v0.6.0
 __BREAKING CHANGES__

@@ -7,6 +7,8 @@
       extends="gdbots:pbjx:mixin:request:v1">
     <fields>
       <field name="files" type="string" rule="list"/>
+      <field name="quality" type="string" pattern="^[\w\.-]+$"/>
+      <field name="version" type="string" pattern="^[\w\.-]+$"/>
     </fields>
   </schema>
 </pbj-schema>
