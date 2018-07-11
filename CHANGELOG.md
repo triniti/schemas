@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.6.1
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:dam:mixin:get-upload-urls-request`
+    * Add `quality` string field with pattern `^[\w\.-]+$`.
+    * Add `version` string field with pattern `^[\w\.-]+$`.
+
 
 ## v0.6.0
 __BREAKING CHANGES__
