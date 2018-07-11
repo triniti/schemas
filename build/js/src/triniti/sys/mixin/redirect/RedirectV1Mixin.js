@@ -28,13 +28,13 @@ export default class RedirectV1Mixin extends Mixin {
        * Redirect URI field is a string in url format that represents the redirect uri.
        */
       Fb.create('redirect_uri', T.StringType.create())
-        .format(Format.URL)
+        .format(Format.URI)
         .build(),
       /*
        * Request URI field is a string in url format that represents the request uri.
        */
       Fb.create('request_uri', T.StringType.create())
-        .format(Format.URL)
+        .format(Format.URI)
         .build(),
       /*
        * Is Vanity field determines if a redirect is a vanity url or not.

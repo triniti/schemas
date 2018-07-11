@@ -15,12 +15,12 @@
           <class-proto>RedirectId</class-proto>
         </js-options>
       </field>
-      <field name="redirect_uri" type="string" format="url">
+      <field name="redirect_uri" type="string" format="uri">
         <description>
           Redirect URI field is a string in url format that represents the redirect uri.
         </description>
       </field>
-      <field name="request_uri" type="string" format="url">
+      <field name="request_uri" type="string" format="uri">
         <description>
           Request URI field is a string in url format that represents the request uri.
         </description>

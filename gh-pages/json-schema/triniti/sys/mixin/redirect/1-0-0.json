@@ -165,22 +165,22 @@
     },
     "redirect_uri": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "format": "uri",
       "description": "Redirect URI field is a string in url format that represents the redirect uri.",
       "pbj": {
         "type": "string",
         "rule": "single",
-        "format": "url"
+        "format": "uri"
       }
     },
     "request_uri": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "format": "uri",
       "description": "Request URI field is a string in url format that represents the request uri.",
       "pbj": {
         "type": "string",
         "rule": "single",
-        "format": "url"
+        "format": "uri"
       }
     },
     "is_vanity": {
