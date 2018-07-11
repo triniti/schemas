@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v0.6.1
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:dam:mixin:get-upload-urls-request`
+    * Add `qualities` string field.
+    * Add `versions` string field.
 
 ## v0.6.0
 __BREAKING CHANGES__
