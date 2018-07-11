@@ -21,10 +21,10 @@ export default class GetUploadUrlsRequestV1Mixin extends Mixin {
         .asAList()
         .build(),
       Fb.create('quality', T.StringType.create())
-        .pattern('^[\\w-]+\\/[\\w\\+\\.-]+$')
+        .pattern('^[\\w\\.-]+$')
         .build(),
       Fb.create('version', T.StringType.create())
-        .pattern('^[\\w-]+\\/[\\w\\+\\.-]+$')
+        .pattern('^[\\w\\.-]+$')
         .build(),
     ];
   }

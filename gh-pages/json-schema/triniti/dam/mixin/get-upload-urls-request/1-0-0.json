@@ -189,7 +189,7 @@
     },
     "quality": {
       "type": "string",
-      "pattern": "^[\\w-]+\\/[\\w\\+\\.-]+$",
+      "pattern": "^[\\w\\.-]+$",
       "pbj": {
         "type": "string",
         "rule": "single"
@@ -197,7 +197,7 @@
     },
     "version": {
       "type": "string",
-      "pattern": "^[\\w-]+\\/[\\w\\+\\.-]+$",
+      "pattern": "^[\\w\\.-]+$",
       "pbj": {
         "type": "string",
         "rule": "single"
