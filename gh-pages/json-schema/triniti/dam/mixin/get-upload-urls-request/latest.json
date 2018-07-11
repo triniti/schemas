@@ -187,34 +187,20 @@
         "rule": "list"
       }
     },
-    "qualities": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "minLength": 0,
-          "maxLength": 255
-        }
-      ],
-      "additionalProperties": false,
+    "quality": {
+      "type": "string",
+      "pattern": "^[\\w-]+\\/[\\w\\+\\.-]+$",
       "pbj": {
         "type": "string",
-        "rule": "list"
+        "rule": "single"
       }
     },
-    "versions": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "minLength": 0,
-          "maxLength": 255
-        }
-      ],
-      "additionalProperties": false,
+    "version": {
+      "type": "string",
+      "pattern": "^[\\w-]+\\/[\\w\\+\\.-]+$",
       "pbj": {
         "type": "string",
-        "rule": "list"
+        "rule": "single"
       }
     }
   },

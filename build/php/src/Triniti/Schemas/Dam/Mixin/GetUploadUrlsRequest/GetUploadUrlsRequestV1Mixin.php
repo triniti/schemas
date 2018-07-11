@@ -26,11 +26,11 @@ final class GetUploadUrlsRequestV1Mixin extends AbstractMixin
             Fb::create('files', T\StringType::create())
                 ->asAList()
                 ->build(),
-            Fb::create('qualities', T\StringType::create())
-                ->asAList()
+            Fb::create('quality', T\StringType::create())
+                ->pattern('^[\w-]+\/[\w\+\.-]+$')
                 ->build(),
-            Fb::create('versions', T\StringType::create())
-                ->asAList()
+            Fb::create('version', T\StringType::create())
+                ->pattern('^[\w-]+\/[\w\+\.-]+$')
                 ->build(),
         ];
     }
