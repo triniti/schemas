@@ -20,6 +20,12 @@ export default class GetUploadUrlsRequestV1Mixin extends Mixin {
       Fb.create('files', T.StringType.create())
         .asAList()
         .build(),
+      Fb.create('qualities', T.StringType.create())
+        .asAList()
+        .build(),
+      Fb.create('versions', T.StringType.create())
+        .asAList()
+        .build(),
     ];
   }
 }
