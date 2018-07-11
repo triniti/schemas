@@ -186,6 +186,22 @@
         "type": "string",
         "rule": "list"
       }
+    },
+    "quality": {
+      "type": "string",
+      "pattern": "^[\\w\\.-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[\\w\\.-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
     }
   },
   "required": [
