@@ -1,5 +1,13 @@
 # CHANGELOG
 
+
+## v0.6.2
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:audio-block`
+    * Add `launch_text` string field.
+    * Add `image_ref` identifier field.
+
+
 ## v0.6.1
 * __Add Schemas:__
   * `triniti:sys:mixin:redirect`
