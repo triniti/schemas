@@ -14,7 +14,7 @@
     "clean": "rimraf ./build/js/dist",
     "lint": "BABEL_ENV=cjs eslint ./build/js/src ./build/js/tests",
     "pub": "npm run build && cd ./build/js/dist && npm publish --access public",
-    "test": "BABEL_ENV=cjs tape -r ./build/js/tests/babel-register.js './build/js/tests/**/*.test.js' | faucet"
+    "test": "BABEL_ENV=cjs tape -r ./build/js/tests/babel-register.js './build/js/tests/**/*.test.js'"
   },
   "module": "./index.js",
   "jsnext:main": "./index.js",
@@ -27,7 +27,8 @@
     "lodash": "^4.17.4",
     "lodash-es": "^4.17.4",
     "md5": "^2.2.1",
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "js-base64": "^2.4.6"
   },
   "devDependencies": {
     "@gdbots/common": "^0.1.0",
@@ -53,6 +54,7 @@
     "rimraf": "^2.6.2",
     "tape": "^4.9.1",
     "utf8": "^3.0.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "js-base64": "^2.4.6"
   }
 }
