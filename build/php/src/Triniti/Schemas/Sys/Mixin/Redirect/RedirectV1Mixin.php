@@ -31,19 +31,20 @@ final class RedirectV1Mixin extends AbstractMixin
                 ->overridable(true)
                 ->build(),
             /*
-             * Redirect URI field is a string in url format that represents the redirect uri.
+             * The URL (absolute or relative on the current domain) that the incoming URI
+             * should be redirected to.
              */
-            Fb::create('redirect_uri', T\StringType::create())
+            Fb::create('redirect_to', T\StringType::create())
                 ->format(Format::URI())
                 ->build(),
             /*
-             * Request URI field is a string in url format that represents the request uri.
+             * When permanent, the HTTP status code should be a 301 and 302 otherwise.
              */
-            Fb::create('request_uri', T\StringType::create())
-                ->format(Format::URI())
+            Fb::create('is_permanent', T\BooleanType::create())
                 ->build(),
             /*
-             * Is Vanity field determines if a redirect is a vanity url or not.
+             * Vanity URLs are used for on-air or promotional purposes and are generally
+             * off the root and very short, e.g. /tour or /christmas
              */
             Fb::create('is_vanity', T\BooleanType::create())
                 ->build(),

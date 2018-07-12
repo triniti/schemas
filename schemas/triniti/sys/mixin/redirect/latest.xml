@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:sys:mixin:redirect:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
@@ -15,21 +15,22 @@
           <class-proto>RedirectId</class-proto>
         </js-options>
       </field>
-      <field name="redirect_uri" type="string" format="uri">
+      <field name="redirect_to" type="string" format="uri">
         <description>
-          Redirect URI field is a string in url format that represents the redirect uri.
+          The URL (absolute or relative on the current domain) that the incoming URI
+          should be redirected to.
         </description>
       </field>
-      <field name="request_uri" type="string" format="uri">
+      <field name="is_permanent" type="boolean">
         <description>
-          Request URI field is a string in url format that represents the request uri.
+          When permanent, the HTTP status code should be a 301 and 302 otherwise.
         </description>
       </field>
       <field name="is_vanity" type="boolean">
         <description>
-          Is Vanity field determines if a redirect is a vanity url or not.
+          Vanity URLs are used for on-air or promotional purposes and are generally
+          off the root and very short, e.g. /tour or /christmas
         </description>
-        <default>false</default>
       </field>
     </fields>
 
@@ -45,8 +46,9 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
-        'redirect_uri' => $this->get('redirect_uri'),
-        'request_uri' => $this->get('request_uri'),
+        'uri' => $this->get('title'),
+        'redirect_to' => $this->get('redirect_to'),
+        'is_permanent' => $this->get('is_permanent'),
         'is_vanity' => $this->get('is_vanity'),
     ];
 }
@@ -65,8 +67,9 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
-    redirect_uri: this.get('redirect_uri'),
-    request_uri: this.get('request_uri'),
+    uri: this.get('title'),
+    redirect_to: this.get('redirect_to'),
+    is_permanent: this.get('is_permanent'),
     is_vanity: this.get('is_vanity'),
   };
 }

@@ -163,29 +163,27 @@
         "rule": "single"
       }
     },
-    "redirect_uri": {
+    "redirect_to": {
       "type": "string",
       "format": "uri",
-      "description": "Redirect URI field is a string in url format that represents the redirect uri.",
+      "description": "The URL (absolute or relative on the current domain) that the incoming URI should be redirected to.",
       "pbj": {
         "type": "string",
         "rule": "single",
         "format": "uri"
       }
     },
-    "request_uri": {
-      "type": "string",
-      "format": "uri",
-      "description": "Request URI field is a string in url format that represents the request uri.",
+    "is_permanent": {
+      "type": "boolean",
+      "description": "When permanent, the HTTP status code should be a 301 and 302 otherwise.",
       "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "uri"
+        "type": "boolean",
+        "rule": "single"
       }
     },
     "is_vanity": {
       "type": "boolean",
-      "description": "Is Vanity field determines if a redirect is a vanity url or not.",
+      "description": "Vanity URLs are used for on-air or promotional purposes and are generally off the root and very short, e.g. /tour or /christmas",
       "pbj": {
         "type": "boolean",
         "rule": "single"

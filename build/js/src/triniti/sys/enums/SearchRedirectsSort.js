@@ -5,8 +5,6 @@ export default class SearchRedirectsSort extends Enum {
 
 SearchRedirectsSort.configure({
   UNKNOWN: 'unknown',
-  RELEVANCE: 'relevance',
-  POPULARITY: 'popularity',
   CREATED_AT_ASC: 'created-at-asc',
   CREATED_AT_DESC: 'created-at-desc',
   UPDATED_AT_ASC: 'updated-at-asc',

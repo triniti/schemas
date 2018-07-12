@@ -312,9 +312,19 @@
         "rule": "single"
       }
     },
-    "is_unlisted": {
+    "is_permanent": {
       "type": "integer",
-      "default": 2,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 2,
+      "pbj": {
+        "type": "trinary",
+        "rule": "single"
+      }
+    },
+    "is_vanity": {
+      "type": "integer",
+      "default": 0,
       "minimum": 0,
       "maximum": 2,
       "pbj": {
@@ -324,11 +334,9 @@
     },
     "sort": {
       "type": "string",
-      "default": "relevance",
+      "default": "title-asc",
       "enum": [
         "unknown",
-        "relevance",
-        "popularity",
         "created-at-asc",
         "created-at-desc",
         "updated-at-asc",

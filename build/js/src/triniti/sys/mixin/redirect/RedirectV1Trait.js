@@ -6,8 +6,9 @@ export default function RedirectV1Trait(m) {
     getUriTemplateVars() {
       return {
         _id: `${this.get('_id', '')}`,
-        redirect_uri: this.get('redirect_uri'),
-        request_uri: this.get('request_uri'),
+        uri: this.get('title'),
+        redirect_to: this.get('redirect_to'),
+        is_permanent: this.get('is_permanent'),
         is_vanity: this.get('is_vanity'),
       };
     }

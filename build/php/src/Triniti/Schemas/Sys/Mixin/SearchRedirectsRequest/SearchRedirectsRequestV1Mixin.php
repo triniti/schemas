@@ -24,11 +24,12 @@ final class SearchRedirectsRequestV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('is_unlisted', T\TrinaryType::create())
-                ->withDefault(2)
+            Fb::create('is_permanent', T\TrinaryType::create())
+                ->build(),
+            Fb::create('is_vanity', T\TrinaryType::create())
                 ->build(),
             Fb::create('sort', T\StringEnumType::create())
-                ->withDefault(SearchRedirectsSort::RELEVANCE())
+                ->withDefault(SearchRedirectsSort::TITLE_ASC())
                 ->className(SearchRedirectsSort::class)
                 ->build(),
         ];
