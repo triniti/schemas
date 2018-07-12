@@ -7,6 +7,19 @@ import RedirectV1Mixin from './mixin/redirect/RedirectV1Mixin';
 /** @type {SchemaQName} */
 let qname;
 
+
+const urlsafeB64Encode = input => Base64.encode(input)
+  .replace(/\+/g, '-')
+  .replace(/\//g, '_')
+  .replace(/=+$/, '');
+
+/* eslint-disable no-mixed-operators */
+/* eslint-disable no-useless-escape */
+const urlsafeB64Decode = input => Base64.decode(
+  input + Array(5 - input.length % 4).join('=')
+    .replace(/\-/g, '+')
+    .replace(/\_/g, '/'));
+
 /**
  * A redirect id is a friendly identifier.
  *
@@ -36,21 +49,3 @@ export default class RedirectId extends Identifier {
     return urlsafeB64Decode(str);
   }
 }
-
-
-const urlsafeB64Encode = (input) => {
-  return Base64.encode(input)
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')
-    .replace(/=+$/, '');
-};
-
-const urlsafeB64Decode = (input) => {
-  input += Array(5 - input.length % 4).join('=');
-  const filteredInput = input
-    .replace(/\-/g, '+')
-    .replace(/\_/g, '/');
-
-  return Base64.decode(filteredInput);
-};
-

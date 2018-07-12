@@ -2,7 +2,7 @@ import test from 'tape';
 import RedirectId from '@triniti/schemas/triniti/sys/RedirectId';
 
 test('RedirectId tests[empty character will throw an error]', (t) => {
-  t.throws(function () {
+  t.throws(() => {
     const url = '';
     RedirectId.fromUri(url);
   });
@@ -84,4 +84,3 @@ test('RedirectId tests[special chars]', (t) => {
 
   t.end();
 });
-
