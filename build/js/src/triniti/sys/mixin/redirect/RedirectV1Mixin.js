@@ -1,6 +1,5 @@
 // @link http://schemas.triniti.io/json-schema/triniti/sys/mixin/redirect/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import RedirectId from '@triniti/schemas/triniti/sys/RedirectId';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -29,7 +28,6 @@ export default class RedirectV1Mixin extends Mixin {
        * should be redirected to.
        */
       Fb.create('redirect_to', T.StringType.create())
-        .format(Format.URI)
         .build(),
       /*
        * When permanent, the HTTP status code should be a 301 and 302 otherwise.

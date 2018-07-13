@@ -3,7 +3,6 @@
 namespace Triniti\Schemas\Sys\Mixin\Redirect;
 
 use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -35,7 +34,6 @@ final class RedirectV1Mixin extends AbstractMixin
              * should be redirected to.
              */
             Fb::create('redirect_to', T\StringType::create())
-                ->format(Format::URI())
                 ->build(),
             /*
              * When permanent, the HTTP status code should be a 301 and 302 otherwise.

@@ -165,12 +165,12 @@
     },
     "redirect_to": {
       "type": "string",
-      "format": "uri",
+      "minLength": 0,
+      "maxLength": 255,
       "description": "The URL (absolute or relative on the current domain) that the incoming URI should be redirected to.",
       "pbj": {
         "type": "string",
-        "rule": "single",
-        "format": "uri"
+        "rule": "single"
       }
     },
     "is_permanent": {
