@@ -2,85 +2,23 @@ import test from 'tape';
 import RedirectId from '@triniti/schemas/triniti/sys/RedirectId';
 
 test('RedirectId tests[empty character will throw an error]', (t) => {
-  t.throws(() => {
-    const url = '';
-    RedirectId.fromUri(url);
+  t.throws(() => RedirectId.fromUri(''));
+  t.end();
+});
+
+test('RedirectId tests', (t) => {
+  const urls = ['/unicode/fake/partial/url', 'https://test.com/unicode/characters', '5/2/3',
+    'http://test.com/test/url/here', 'test', 'https://test.com/ABCDERT!@#$%^/',
+    'https://test.com/AaBcdC123fg23GRr/', 'https://test.com/abcdefghyuoi/hkfhdfds',
+    '&&&&&*******//////^^^^^^^^',
+    '/page/1/2/'];
+
+  urls.forEach((url) => {
+    const id = RedirectId.fromUri(url);
+    const decodedUrl = id.toUri();
+    t.true(id instanceof RedirectId);
+    t.same(url, decodedUrl, 'same value after decode');
   });
-
-  t.end();
-});
-
-test('RedirectId tests[partial urls]', (t) => {
-  const url = '/unicode/fake/partial/url';
-  const id = RedirectId.fromUri(url);
-  const decodedUrl = RedirectId.toUri(id.toString());
-
-  t.true(id instanceof RedirectId);
-  t.same(url, decodedUrl, 'same value after decode');
-
-  t.end();
-});
-
-test('RedirectId tests[contains unicode characters]', (t) => {
-  let url = 'https://test.com/unicode/characters/✓ à la mode';
-  let id = RedirectId.fromUri(url);
-  let decodedUrl = RedirectId.toUri(id.toString());
-
-  t.true(id instanceof RedirectId);
-  t.same(url, decodedUrl, 'same value after decode');
-
-  url = '台北/Táiběi';
-  id = RedirectId.fromUri(url);
-  decodedUrl = RedirectId.toUri(id.toString());
-
-  t.true(id instanceof RedirectId);
-  t.same(url, decodedUrl, 'same value after decode');
-
-  t.end();
-});
-
-
-test('RedirectId tests[complete url]', (t) => {
-  const url = 'http://test.com/test/url/here';
-  const id = RedirectId.fromUri(url);
-  const decodedUrl = RedirectId.toUri(id.toString());
-
-  t.true(id instanceof RedirectId);
-  t.same(url, decodedUrl, 'same value after decode');
-
-  t.end();
-});
-
-test('RedirectId tests[non url]', (t) => {
-  const url = 'test';
-  const id = RedirectId.fromUri(url);
-  const decodedUrl = RedirectId.toUri(id.toString());
-
-  t.true(id instanceof RedirectId);
-  t.same(url, decodedUrl, 'same value after decode');
-
-  t.end();
-});
-
-test('RedirectId tests[on different letter case]', (t) => {
-  const url = 'https://test.com/AaBcdC123fg23GRr/';
-  const id = RedirectId.fromUri(url);
-  const decodedUrl = RedirectId.toUri(id.toString());
-
-  t.true(id instanceof RedirectId);
-  t.same(url, decodedUrl, 'same value after decode');
-
-  t.end();
-});
-
-
-test('RedirectId tests[special chars]', (t) => {
-  const url = '&&&&&*******//////^^^^^^^^';
-  const id = RedirectId.fromUri(url);
-  const decodedUrl = RedirectId.toUri(id.toString());
-
-  t.true(id instanceof RedirectId);
-  t.same(url, decodedUrl, 'same value after decode');
 
   t.end();
 });

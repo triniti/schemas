@@ -5,76 +5,36 @@ namespace Triniti\Tests\Schemas\Sys;
 
 use PHPUnit\Framework\TestCase;
 use Triniti\Schemas\Sys\RedirectId;
-use Gdbots\Pbj\Exception\InvalidArgumentException;
 
 final class RedirectIdTest extends TestCase
 {
+    /**
+     * @expectedException \Gdbots\Pbj\Exception\InvalidArgumentException
+     *
+     * @param string $string
+     */
     public function testEmptyUri(): void
     {
-        $this->expectException(InvalidArgumentException::class);
-
-        $uri = '';
-        RedirectId::fromUri($uri);
+        RedirectId::fromUri('');
     }
 
-    public function testFromUri(): void
+    public function test(): void
     {
-        $uri = '/unicode/fake/partial/url';
-        $id = RedirectId::fromUri($uri);
-        $this->assertInstanceOf('Triniti\Schemas\Sys\RedirectId', $id);
-        $this->assertSame(true, $this->isValid($id->toString()));
+        $uris = ['/unicode/fake/partial/url', 'https://test.com/unicode/characters', '5/2/3',
+            'http://test.com/test/url/here', 'test', 'https://test.com/ABCDERT!@#$%^/',
+            'https://test.com/AaBcdC123fg23GRr/', 'https://test.com/abcdefghyuoi/hkfhdfds',
+            '&&&&&*******//////^^^^^^^^',
+            '/page/1/2/'];
 
-        $uri = 'https://test.com/unicode/characters/✓ à la mode';
-        $id = RedirectId::fromUri($uri);
-        $this->assertInstanceOf('Triniti\Schemas\Sys\RedirectId', $id);
-        $this->assertSame(true, $this->isValid($id->toString()));
+        foreach ($uris as $uri) {
+            $id = RedirectId::fromUri($uri);
+            $this->assertInstanceOf('Triniti\Schemas\Sys\RedirectId', $id);
+            $this->assertSame(true, $this->isValid($id->toString()));
+            $this->assertSame($uri, $id->toUri());
+            $this->assertNotSame($id->toString() ,$id->toUri());
+        }
 
-        $uri = '/\n';
-        $id = RedirectId::fromUri($uri);
-        $this->assertInstanceOf('Triniti\Schemas\Sys\RedirectId', $id);
-        $this->assertSame(true, $this->isValid($id->toString()));
-
-        $uri = 'http:/test.com/test/url/here';
-        $id = RedirectId::fromUri($uri);
-        $this->assertInstanceOf('Triniti\Schemas\Sys\RedirectId', $id);
-        $this->assertSame(true, $this->isValid($id->toString()));
-
-        $uri = 'https:/test.com/test/url/safe';
-        $id = RedirectId::fromUri($uri);
-        $this->assertInstanceOf('Triniti\Schemas\Sys\RedirectId', $id);
-        $this->assertSame(true, $this->isValid($id->toString()));
     }
-
-
-    public function testToUri(): void
-    {
-        $uri = '/test/url/here';
-        $id = RedirectId::fromUri($uri);
-        $this->assertSame(true, $this->isValid($id->toString()));
-        $this->assertSame($uri, $id->toUri());
-
-        $uri = 'https://test.com/unicode/characters/✓ à la mode';
-        $id = RedirectId::fromUri($uri);
-        $this->assertSame(true, $this->isValid($id->toString()));
-        $this->assertSame($uri, $id->toUri());
-
-        $uri = '台北';
-        $id = RedirectId::fromUri($uri);
-        $this->assertSame(true, $this->isValid($id->toString()));
-        $this->assertSame($uri, $id->toUri());
-
-        $uri = 'http:/test.com/test/url/here';
-        $id = RedirectId::fromUri($uri);
-        $this->assertSame(true, $this->isValid($id->toString()));
-        $this->assertSame($uri, $id->toUri());
-
-        $uri = 'https://test.com/AaBcdC123fg23GRr';
-        $id = RedirectId::fromUri($uri);
-        $this->assertSame(true, $this->isValid($id->toString()));
-        $this->assertSame($uri, $id->toUri());
-    }
-
-
 
     private function isValid($input): bool
     {
