@@ -10,8 +10,6 @@ final class RedirectIdTest extends TestCase
 {
     /**
      * @expectedException \Gdbots\Pbj\Exception\InvalidArgumentException
-     *
-     * @param string $string
      */
     public function testEmptyUri(): void
     {
