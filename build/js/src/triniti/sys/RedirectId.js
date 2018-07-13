@@ -47,6 +47,10 @@ export default class RedirectId extends Identifier {
   }
 
   toUri() {
-    return urlsafeB64Decode(this.toString());
+    try {
+      return urlsafeB64Decode(this.toString());
+    } catch (e) {
+      return this.toString();
+    }
   }
 }
