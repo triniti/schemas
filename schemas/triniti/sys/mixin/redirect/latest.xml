@@ -15,7 +15,7 @@
           <class-proto>RedirectId</class-proto>
         </js-options>
       </field>
-      <field name="redirect_to" type="string" format="uri">
+      <field name="redirect_to" type="string">
         <description>
           The URL (absolute or relative on the current domain) that the incoming URI
           should be redirected to.
