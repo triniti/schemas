@@ -18,11 +18,11 @@ final class RedirectIdTest extends TestCase
 
     public function test(): void
     {
-        $uris = ['/unicode/fake/partial/url', 'https://test.com/unicode/characters', '5/2/3',
+        $uris = ['post/reindex/#/$$%!', '/unicode/fake/partial/url', 'https://test.com/unicode/characters', '5/2/3',
             'http://test.com/test/url/here', 'test', 'https://test.com/ABCDERT!@#$%^/',
             'https://test.com/AaBcdC123fg23GRr/', 'https://test.com/abcdefghyuoi/hkfhdfds',
             '&&&&&*******//////^^^^^^^^',
-            '/page/1/2/'];
+            '/page/1/2/', 'post/123/!=aBcdEfG?'];
 
         foreach ($uris as $uri) {
             $id = RedirectId::fromUri($uri);

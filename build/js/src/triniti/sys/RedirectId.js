@@ -1,4 +1,5 @@
 import Base64 from 'base-64';
+import utf8 from 'utf8';
 
 import Identifier from '@gdbots/pbj/well-known/Identifier';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -7,17 +8,17 @@ import RedirectV1Mixin from './mixin/redirect/RedirectV1Mixin';
 /** @type {SchemaQName} */
 let qname;
 
-const urlsafeB64Encode = input => Base64.encode(input)
+const urlsafeB64Encode = input => Base64.encode(utf8.encode(input))
   .replace(/\+/g, '-')
   .replace(/\//g, '_')
   .replace(/=+$/, '');
 
 /* eslint-disable no-mixed-operators */
 /* eslint-disable no-useless-escape */
-const urlsafeB64Decode = input => Base64.decode(
+const urlsafeB64Decode = input => utf8.decode(Base64.decode(
   input + Array(5 - input.length % 4).join('=')
     .replace(/\-/g, '+')
-    .replace(/\_/g, '/'));
+    .replace(/\_/g, '/')));
 
 /**
  * A redirect id is a URL safe base64 encoded string.
