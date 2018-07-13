@@ -6,7 +6,7 @@
   * `triniti:canvas:mixin:audio-block`
     * Add `launch_text` string field.
     * Add `image_ref` identifier field.
-  * `triniti:canvas:mixin:audio-block`
+  * `triniti:canvas:mixin:article-block`
     * Add `image_ref` identifier field.
     * Add `link_text` string field.
     * Add `show_image` boolean field.
