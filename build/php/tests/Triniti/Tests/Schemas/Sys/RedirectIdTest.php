@@ -18,18 +18,26 @@ final class RedirectIdTest extends TestCase
 
     public function test(): void
     {
-        $uris = ['post/reindex/#/$$%!', '/unicode/fake/partial/url', 'https://test.com/unicode/characters', '5/2/3',
-            'http://test.com/test/url/here', 'test', 'https://test.com/ABCDERT!@#$%^/',
-            'https://test.com/AaBcdC123fg23GRr/', 'https://test.com/abcdefghyuoi/hkfhdfds',
+        $uris = [
+            'post/reindex/#/$$%!',
+            '/unicode/fake/partial/url',
+            'https://test.com/unicode/characters',
+            '5/2/3',
+            'http://test.com/test/url/here',
+            'test',
+            'https://test.com/ABCDERT!@#$%^/',
+            'https://test.com/AaBcdC123fg23GRr/',
+            'https://test.com/abcdefghyuoi/hkfhdfds',
             '&&&&&*******//////^^^^^^^^',
-            '/page/1/2/', 'post/123/!=aBcdEfG?'];
+            '/page/1/2/', 'post/123/!=aBcdEfG?',
+        ];
 
         foreach ($uris as $uri) {
             $id = RedirectId::fromUri($uri);
             $this->assertInstanceOf('Triniti\Schemas\Sys\RedirectId', $id);
             $this->assertSame(true, $this->isValid($id->toString()));
             $this->assertSame($uri, $id->toUri());
-            $this->assertNotSame($id->toString() ,$id->toUri());
+            $this->assertNotSame($id->toString(), $id->toUri());
         }
 
     }
@@ -45,7 +53,7 @@ final class RedirectIdTest extends TestCase
         $decoded = base64_decode(strtr($str_input, '-_', '+/'));
 
         $encoded = str_replace('=', '', strtr(base64_encode($decoded), '+/', '-_'));
-        if ( $encoded === $input ) {
+        if ($encoded === $input) {
             return true;
         }
         return false;

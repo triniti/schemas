@@ -12,16 +12,6 @@
         "type": "string",
         "rule": "single"
       }
-    },
-    "soft_swipe": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "Same idea as swipe but you know, softer.",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
     }
   },
   "additionalProperties": true

@@ -10,7 +10,6 @@ use Triniti\Schemas\Sys\Mixin\Redirect\RedirectV1Mixin;
 /**
  * A redirect id is a URL safe base64 encoded string.
  * The string is case sensitive.
- *
  */
 final class RedirectId extends StringIdentifier
 {

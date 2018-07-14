@@ -23,11 +23,6 @@ export default class SwipeableV1Mixin extends Mixin {
        */
       Fb.create('swipe', T.StringType.create())
         .build(),
-      /*
-       * Same idea as swipe but you know, softer.
-       */
-      Fb.create('soft_swipe', T.StringType.create())
-        .build(),
     ];
   }
 }

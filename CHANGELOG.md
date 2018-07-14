@@ -1,23 +1,21 @@
 # CHANGELOG
 
 
-## v0.6.2
-* __Modify Schemas:__ _(no version changes as there is no production use yet)_
-  * `triniti:canvas:mixin:audio-block`
-    * Add `launch_text` string field.
-    * Add `image_ref` identifier field.
-  * `triniti:canvas:mixin:article-block`
-    * Add `image_ref` identifier field.
-    * Add `link_text` string field.
-    * Add `show_image` boolean field.
-
-
 ## v0.6.1
 * __Add Schemas:__
   * `triniti:sys:mixin:redirect`
   * `triniti:sys:mixin:search-redirects-request`
   * `triniti:sys:mixin:search-response-request`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:article-block`
+    * Add `image_ref` identifier (NodeRef) field.
+    * Add `link_text` string field.
+    * Add `show_image` boolean field.
+  * `triniti:canvas:mixin:audio-block`
+    * Add `image_ref` identifier (NodeRef) field.
+    * Add `launch_text` string field.
+  * `triniti:common:mixin:swipeable`
+    * Remove `soft_swipe` string field.
   * `triniti:dam:mixin:get-upload-urls-request`
     * Add `quality` string field with pattern `^[\w\.-]+$`.
     * Add `version` string field with pattern `^[\w\.-]+$`.
