@@ -20,7 +20,8 @@ test('RedirectId tests', (t) => {
     'https://test.com/AaBcdC123fg23GRr/',
     'https://test.com/abcdefghyuoi/hkfhdfds',
     '&&&&&*******//////^^^^^^^^',
-    '/page/1/2/', 'post/123/!=aBcdEfG?',
+    '/page/1/2/',
+    'post/123/!=aBcdEfG?',
   ];
 
   urls.forEach((url) => {
