@@ -10,25 +10,20 @@ test('RedirectId tests[empty character will throw an error]', (t) => {
 
 test('RedirectId tests', (t) => {
   const urls = [
-    'post/reindex/#/$$%!',
-    '/unicode/fake/partial/url',
-    'https://test.com/unicode/characters',
-    '5/2/3',
-    'http://test.com/test/url/here',
-    'test',
-    'https://test.com/ABCDERT!@#$%^/',
-    'https://test.com/AaBcdC123fg23GRr/',
-    'https://test.com/abcdefghyuoi/hkfhdfds',
-    '&&&&&*******//////^^^^^^^^',
-    '/page/1/2/',
-    'post/123/!=aBcdEfG?',
+    { output: 'cG9zdC9yZWluZGV4LyMvJCQlIQ', input: 'post/reindex/#/$$%!' },
+    { output: 'L3VuaWNvZGUvZmFrZS9wYXJ0aWFsL3VybA', input: '/unicode/fake/partial/url' },
+    { output: 'RVJUIUAjJCVeLw', input: 'ERT!@#$%^/' },
+    { output: 'aHR0cHM6Ly90ZXN0LmNvbS9BYUJjZEMxMjNmZzIzR1JyLw', input: 'https://test.com/AaBcdC123fg23GRr/' },
+    { output: 'aHR0cHM6Ly90ZXN0LmNvbS9hYmNkZWZnaHl1b2kvaGtmaGRmZHM', input: 'https://test.com/abcdefghyuoi/hkfhdfds' },
+    { output: 'JiYmJiYqKioqKioqLy8vLy8vXl5eXl5eXl4', input: '&&&&&*******//////^^^^^^^^' },
+    { output: 'L3BhZ2UvMS8yLw', input: '/page/1/2/' },
+    { output: 'cG9zdC8xMjMvIT1hQmNkRWZHPw', input: 'post/123/!=aBcdEfG?' },
   ];
 
   urls.forEach((url) => {
-    const id = RedirectId.fromUri(url);
-    const decodedUrl = id.toUri();
+    const id = RedirectId.fromUri(url.input);
     t.true(id instanceof RedirectId);
-    t.same(url, decodedUrl, 'same value after decode');
+    t.same(url.output, id.toString(), 'same value');
   });
 
   t.end();
