@@ -5,6 +5,24 @@
 
   <schema id="pbj:triniti:canvas:mixin:article-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:node-ref-block:v1">
+    <fields>
+      <field name="link_text" type="string"/>
+      <field name="show_image" type="boolean"/>
+      <field name="image_ref" type="identifier">
+        <description>
+          An optional reference to an image asset to use as the poster.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+    </fields>
+
     <php-options>
       <insertion-points>
         <imports/>
@@ -18,6 +36,7 @@ public function getUriTemplateVars()
     return [
         'etag' => $this->get('etag'),
         'node_ref' => (string)$this->get('node_ref'),
+        'show_image' => $this->get('show_image'),
     ];
 }
           ]]>
@@ -36,6 +55,7 @@ getUriTemplateVars() {
   return {
     etag: this.get('etag'),
     node_ref: `${this.get('node_ref', '')}`,
+    show_image: this.get('show_image'),
   };
 }
           ]]>

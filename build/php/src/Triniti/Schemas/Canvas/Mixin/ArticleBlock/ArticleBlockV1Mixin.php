@@ -3,7 +3,10 @@
 namespace Triniti\Schemas\Canvas\Mixin\ArticleBlock;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
+use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 
 final class ArticleBlockV1Mixin extends AbstractMixin
 {
@@ -13,5 +16,24 @@ final class ArticleBlockV1Mixin extends AbstractMixin
     public function getId()
     {
         return SchemaId::fromString('pbj:triniti:canvas:mixin:article-block:1-0-0');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getFields()
+    {
+        return [
+            Fb::create('link_text', T\StringType::create())
+                ->build(),
+            Fb::create('show_image', T\BooleanType::create())
+                ->build(),
+            /*
+             * An optional reference to an image asset to use as the poster.
+             */
+            Fb::create('image_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+        ];
     }
 }

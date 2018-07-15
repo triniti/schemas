@@ -18,6 +18,7 @@ trait ArticleBlockV1Trait
         return [
             'etag' => $this->get('etag'),
             'node_ref' => (string)$this->get('node_ref'),
+            'show_image' => $this->get('show_image'),
         ];
     }
 }

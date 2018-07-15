@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:sys:mixin:redirect:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+    <fields>
+      <field name="_id" type="identifier" required="true" overridable="true">
+        <php-options>
+          <imports>use Triniti\Schemas\Sys\RedirectId;</imports>
+          <class-name>RedirectId::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import RedirectId from '@triniti/schemas/triniti/sys/RedirectId';</imports>
+          <class-proto>RedirectId</class-proto>
+        </js-options>
+      </field>
+      <field name="redirect_to" type="string">
+        <description>
+          The URL (absolute or relative on the current domain) that the incoming URI
+          should be redirected to.
+        </description>
+      </field>
+      <field name="is_permanent" type="boolean">
+        <description>
+          When permanent, the HTTP status code should be a 301 and 302 otherwise.
+        </description>
+      </field>
+      <field name="is_vanity" type="boolean">
+        <description>
+          Vanity URLs are used for on-air or promotional purposes and are generally
+          off the root and very short, e.g. /tour or /christmas
+        </description>
+      </field>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        '_id' => (string)$this->get('_id'),
+        'uri' => $this->get('title'),
+        'redirect_to' => $this->get('redirect_to'),
+        'is_permanent' => $this->get('is_permanent'),
+        'is_vanity' => $this->get('is_vanity'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    _id: `${this.get('_id', '')}`,
+    uri: this.get('title'),
+    redirect_to: this.get('redirect_to'),
+    is_permanent: this.get('is_permanent'),
+    is_vanity: this.get('is_vanity'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>
