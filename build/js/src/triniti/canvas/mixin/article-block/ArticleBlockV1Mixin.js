@@ -21,6 +21,7 @@ export default class ArticleBlockV1Mixin extends Mixin {
       Fb.create('link_text', T.StringType.create())
         .build(),
       Fb.create('show_image', T.BooleanType.create())
+        .withDefault(true)
         .build(),
       /*
        * An optional reference to an image asset to use as the poster.
