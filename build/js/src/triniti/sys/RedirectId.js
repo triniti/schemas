@@ -9,8 +9,8 @@ import RedirectV1Mixin from './mixin/redirect/RedirectV1Mixin';
 let qname;
 
 /**
- * Encodes the url to base64-encoding.
- * @param {string} input
+ * Encodes the input string to URL safe base64 encoding
+ * @param {string} input the string to encode
  *
  * @returns {string}
  */
@@ -20,8 +20,8 @@ const urlsafeB64Encode = input => base64.encode(utf8.encode(input))
   .replace(/=+$/, '');
 
 /**
- * Decodes the base64-encoded string
- * @param {string} input the base64-encoded string
+ * Decodes the URL safe base64 encoded string or input
+ * @param {string} input the URL safe base64 encoded string
  *
  * @returns {string}
  */
