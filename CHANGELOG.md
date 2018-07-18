@@ -1,8 +1,9 @@
 # CHANGELOG
 
 ## v0.6.2
-* Update RedirectId's base64 decode JS class function.
-* Added more unit tests scenarios for RedirectId.
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:news:mixin:search-articles-request`
+      * Add `is_locked` trinary field.
 
 ## v0.6.1
 * __Add Schemas:__
