@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v0.6.2
+* Update RedirectId's base64 decode JS class function.
+* Added more unit tests scenarios for RedirectId.
 
 ## v0.6.1
 * __Add Schemas:__
