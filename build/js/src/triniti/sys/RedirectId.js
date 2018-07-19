@@ -26,7 +26,7 @@ const urlsafeB64Encode = input => base64.encode(utf8.encode(input))
  * @returns {string}
  */
 const urlsafeB64Decode = input => utf8.decode(base64.decode(
-  (!(input.length % 4) ? input : input + Array(5 - input.length % 4).join('='))
+  (!(input.length % 4) ? input : `${input}${Array(5 - input.length % 4).join('=')}`)
     .replace(/\-/g, '+')
     .replace(/\_/g, '/')
 ));

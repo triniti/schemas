@@ -22,7 +22,6 @@ export default class SearchArticlesRequestV1Mixin extends Mixin {
         .withDefault(2)
         .build(),
       Fb.create('is_locked', T.TrinaryType.create())
-        .withDefault(2)
         .build(),
       Fb.create('sort', T.StringEnumType.create())
         .withDefault(SearchArticlesSort.RELEVANCE)
