@@ -48,6 +48,7 @@
     },
     "show_image": {
       "type": "boolean",
+      "default": true,
       "pbj": {
         "type": "boolean",
         "rule": "single"
