@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v0.6.2
+## v0.6.3
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:news:mixin:search-articles-request`
       * Add `is_locked` trinary field.
