@@ -322,6 +322,16 @@
         "rule": "single"
       }
     },
+    "is_locked": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 2,
+      "pbj": {
+        "type": "trinary",
+        "rule": "single"
+      }
+    },
     "sort": {
       "type": "string",
       "default": "relevance",

@@ -27,6 +27,8 @@ final class SearchArticlesRequestV1Mixin extends AbstractMixin
             Fb::create('is_unlisted', T\TrinaryType::create())
                 ->withDefault(2)
                 ->build(),
+            Fb::create('is_locked', T\TrinaryType::create())
+                ->build(),
             Fb::create('sort', T\StringEnumType::create())
                 ->withDefault(SearchArticlesSort::RELEVANCE())
                 ->className(SearchArticlesSort::class)

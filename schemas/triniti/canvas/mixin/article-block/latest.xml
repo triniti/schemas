@@ -7,7 +7,9 @@
       extends="triniti:canvas:mixin:node-ref-block:v1">
     <fields>
       <field name="link_text" type="string"/>
-      <field name="show_image" type="boolean"/>
+      <field name="show_image" type="boolean">
+        <default>true</default>
+      </field>
       <field name="image_ref" type="identifier">
         <description>
           An optional reference to an image asset to use as the poster.
