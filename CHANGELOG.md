@@ -5,8 +5,8 @@
   * `triniti:canvas:mixin:article-block`
     * Set default to `true` for `show_image` field.
   * `triniti:news:mixin:search-articles-request`
-        * Add `is_locked` trinary field.
-
+    * Add `is_locked` trinary field.
+    
 
 ## v0.6.1
 * __Add Schemas:__
