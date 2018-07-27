@@ -1,6 +1,12 @@
 # CHANGELOG
 
 ## v0.6.2
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:sys:mixin:list-all-flagsets-request`
+  * `triniti:sys:mixin:list-all-flagsets-response`
+  * `triniti:sys:mixin:flagset`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:canvas:mixin:article-block`
     * Set default to `true` for `show_image` field.
