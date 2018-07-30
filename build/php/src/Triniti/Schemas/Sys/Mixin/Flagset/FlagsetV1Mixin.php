@@ -29,6 +29,8 @@ final class FlagsetV1Mixin extends AbstractMixin
                 ->className(FlagsetId::class)
                 ->overridable(true)
                 ->build(),
+            Fb::create('value', T\StringType::create())
+                ->build(),
         ];
     }
 }

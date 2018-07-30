@@ -6,6 +6,7 @@ export default function FlagsetV1Trait(m) {
     getUriTemplateVars() {
       return {
         _id: `${this.get('_id', '')}`,
+        value: this.get('value'),
       };
     }
   });

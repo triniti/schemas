@@ -17,6 +17,7 @@ trait FlagsetV1Trait
     {
         return [
             '_id' => (string)$this->get('_id'),
+            'value' => $this->get('value'),
         ];
     }
 }

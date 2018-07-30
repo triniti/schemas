@@ -15,6 +15,7 @@
           <class-proto>FlagsetId</class-proto>
         </js-options>
       </field>
+      <field name="value" type="string"/>
     </fields>
 
     <php-options>
@@ -29,6 +30,7 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
+        'value' => $this->get('value'),
     ];
 }
           ]]>
@@ -46,6 +48,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
+    value: this.get('value'),
   };
 }
           ]]>

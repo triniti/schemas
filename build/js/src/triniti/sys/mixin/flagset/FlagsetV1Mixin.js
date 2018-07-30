@@ -23,6 +23,8 @@ export default class FlagsetV1Mixin extends Mixin {
         .classProto(FlagsetId)
         .overridable(true)
         .build(),
+      Fb.create('value', T.StringType.create())
+        .build(),
     ];
   }
 }
