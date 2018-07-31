@@ -15,21 +15,9 @@
           <class-proto>FlagsetId</class-proto>
         </js-options>
       </field>
-      <field name="string_flags" type="string" rule="map">
-        <description>
-         A map that will hold values of "String" type.
-        </description>
-      </field>
-      <field name="int_flags" type="int" rule="map">
-        <description>
-          A map that will hold values with "Integer" type.
-        </description>
-      </field>
-      <field name="boolean_flags" type="boolean" rule="map">
-        <description>
-          A map that will hold values with "Boolean" type.
-        </description>
-      </field>
+      <field name="string_flags" type="string" rule="map"/>
+      <field name="int_flags" type="int" rule="map"/>
+      <field name="boolean_flags" type="boolean" rule="map"/>
     </fields>
 
     <php-options>

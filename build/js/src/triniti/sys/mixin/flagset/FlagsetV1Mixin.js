@@ -23,21 +23,12 @@ export default class FlagsetV1Mixin extends Mixin {
         .classProto(FlagsetId)
         .overridable(true)
         .build(),
-      /*
-       * A map that will hold values of "String" type.
-       */
       Fb.create('string_flags', T.StringType.create())
         .asAMap()
         .build(),
-      /*
-       * A map that will hold values with "Integer" type.
-       */
       Fb.create('int_flags', T.IntType.create())
         .asAMap()
         .build(),
-      /*
-       * A map that will hold values with "Boolean" type.
-       */
       Fb.create('boolean_flags', T.BooleanType.create())
         .asAMap()
         .build(),

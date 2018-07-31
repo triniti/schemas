@@ -173,7 +173,6 @@
         }
       },
       "additionalProperties": false,
-      "description": "A map that will hold values of \"String\" type.",
       "pbj": {
         "type": "string",
         "rule": "map"
@@ -190,7 +189,6 @@
         }
       },
       "additionalProperties": false,
-      "description": "A map that will hold values with \"Integer\" type.",
       "pbj": {
         "type": "int",
         "rule": "map"
@@ -204,7 +202,6 @@
         }
       },
       "additionalProperties": false,
-      "description": "A map that will hold values with \"Boolean\" type.",
       "pbj": {
         "type": "boolean",
         "rule": "map"
