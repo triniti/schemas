@@ -17,7 +17,9 @@ trait FlagsetV1Trait
     {
         return [
             '_id' => (string)$this->get('_id'),
-            'value' => $this->get('value'),
+            'string_flags' => $this->get('string_flags'),
+            'int_flags' => $this->get('int_flags'),
+            'boolean_flags' => $this->get('boolean_flags'),
         ];
     }
 }
