@@ -15,9 +15,11 @@
           <class-proto>FlagsetId</class-proto>
         </js-options>
       </field>
-      <field name="string_flags" type="string" rule="map"/>
-      <field name="int_flags" type="int" rule="map"/>
-      <field name="boolean_flags" type="boolean" rule="map"/>
+      <field name="booleans" type="boolean" rule="map"/>
+      <field name="floats" type="float" rule="map"/>
+      <field name="ints" type="int" rule="map"/>
+      <field name="strings" type="string" rule="map"/>
+      <field name="trinaries" type="trinary" rule="map"/>
     </fields>
 
     <php-options>
@@ -32,9 +34,6 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
-        'string_flags' => $this->get('string_flags'),
-        'int_flags' => $this->get('int_flags'),
-        'boolean_flags' => $this->get('boolean_flags'),
     ];
 }
           ]]>
@@ -52,9 +51,6 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
-    string_flags: this.get('string_flags'),
-    int_flags: this.get('int_flags'),
-    boolean_flags: this.get('boolean_flags'),
   };
 }
           ]]>

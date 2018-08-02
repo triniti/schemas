@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:sys:mixin:get-redirect-response:1-0-0" mixin="true"
+      extends="gdbots:ncr:mixin:get-node-response:v1">
+    <fields>
+      <field name="node" type="message">
+        <any-of>
+          <curie>triniti:sys:mixin:redirect</curie>
+        </any-of>
+      </field>
+      <field name="resolves_to" type="string">
+        <description>
+          The URL (absolute or relative on the current domain) that the redirect
+          resolves to which takes into account vanity url associations.
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

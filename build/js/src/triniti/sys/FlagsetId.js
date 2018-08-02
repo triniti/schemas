@@ -7,7 +7,7 @@ let qname;
 
 /**
  * A flagset id is just a friendly slug identifer.
- * e.g. "credits", "swipes", "countries-iso2"
+ * e.g. "prod-web", "prod-web-videos"
  */
 export default class FlagsetId extends SlugIdentifier {
   /**

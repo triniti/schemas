@@ -9,7 +9,7 @@ use Triniti\Schemas\Sys\Mixin\Flagset\FlagsetV1Mixin;
 
 /**
  * A flagset id is just a friendly slug identifer.
- * e.g. "credits", "swipes", "countries-iso2"
+ * e.g. "prod-web", "prod-web-videos"
  *
  */
 final class FlagsetId extends SlugIdentifier

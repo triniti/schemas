@@ -29,13 +29,19 @@ final class FlagsetV1Mixin extends AbstractMixin
                 ->className(FlagsetId::class)
                 ->overridable(true)
                 ->build(),
-            Fb::create('string_flags', T\StringType::create())
+            Fb::create('booleans', T\BooleanType::create())
                 ->asAMap()
                 ->build(),
-            Fb::create('int_flags', T\IntType::create())
+            Fb::create('floats', T\FloatType::create())
                 ->asAMap()
                 ->build(),
-            Fb::create('boolean_flags', T\BooleanType::create())
+            Fb::create('ints', T\IntType::create())
+                ->asAMap()
+                ->build(),
+            Fb::create('strings', T\StringType::create())
+                ->asAMap()
+                ->build(),
+            Fb::create('trinaries', T\TrinaryType::create())
                 ->asAMap()
                 ->build(),
         ];
