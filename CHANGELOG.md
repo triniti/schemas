@@ -1,6 +1,20 @@
 # CHANGELOG
 
 
+## v0.6.2
+* __Add Schemas:__
+  * `triniti:sys:mixin:flagset`
+  * `triniti:sys:mixin:get-redirect-response`
+  * `triniti:sys:mixin:list-all-flagsets-request`
+  * `triniti:sys:mixin:list-all-flagsets-response`
+  * `triniti:sys:mixin:vanity-urlable`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:article-block`
+    * Set default to `true` for `show_image` field.
+  * `triniti:news:mixin:search-articles-request`
+    * Add `is_locked` trinary field.
+
+
 ## v0.6.1
 * __Add Schemas:__
   * `triniti:sys:mixin:redirect`

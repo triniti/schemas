@@ -27,6 +27,13 @@ final class RedirectIdTest extends TestCase
             ['input' => '&&&&&*******//////^^^^^^^^', 'output' => 'JiYmJiYqKioqKioqLy8vLy8vXl5eXl5eXl4'],
             ['input' => '/page/1/2/', 'output' => 'L3BhZ2UvMS8yLw'],
             ['input' => 'post/123/!=aBcdEfG?', 'output' => 'cG9zdC8xMjMvIT1hQmNkRWZHPw'],
+            ['input' => '/2010/04/08/rimsho', 'output' => 'LzIwMTAvMDQvMDgvcmltc2hv'],
+            ['input' => '2010/04/08/rimsho/', 'output' => 'MjAxMC8wNC8wOC9yaW1zaG8v'],
+            ['input' => '/2010/04/08/rim', 'output' => 'LzIwMTAvMDQvMDgvcmlt'],
+            ['input' => '/blanche/brown/', 'output' => 'L2JsYW5jaGUvYnJvd24v'],
+            ['input' => '/blanche/brown/eee', 'output' => 'L2JsYW5jaGUvYnJvd24vZWVl'],
+            ['input' => '/blanc', 'output' => 'L2JsYW5j'],
+            ['input' => '/manila/blue?bl=ye', 'output' => 'L21hbmlsYS9ibHVlP2JsPXll'],
         ];
 
         foreach ($uris as $uri) {

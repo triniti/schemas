@@ -9,7 +9,8 @@ import RedirectV1Mixin from './mixin/redirect/RedirectV1Mixin';
 let qname;
 
 /**
- * @param {string} input
+ * Encodes the input string to URL safe base64 encoding
+ * @param {string} input the string to encode
  *
  * @returns {string}
  */
@@ -19,16 +20,17 @@ const urlsafeB64Encode = input => base64.encode(utf8.encode(input))
   .replace(/=+$/, '');
 
 /**
- * @param {string} input
+ * Decodes the URL safe base64 encoded string or input
+ * @param {string} input the URL safe base64 encoded string
  *
  * @returns {string}
  */
-const urlsafeB64Decode = input => utf8.decode(
-  base64.decode(input + Array(5 - input.length % 4)
-    .join('=')
+const urlsafeB64Decode = input => utf8.decode(base64.decode(
+  (!(input.length % 4) ? input : `${input}${Array(5 - input.length % 4).join('=')}`)
     .replace(/\-/g, '+')
-    .replace(/\_/g, '/'))
-);
+    .replace(/\_/g, '/')
+));
+
 
 /**
  * A redirect id is a URL safe base64 encoded string.
