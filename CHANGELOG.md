@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.6.3
+* __Add Schemas:__
+  * `triniti:curator:mixin:sync-teaser`
+
+
 ## v0.6.2
 * __Add Schemas:__
   * `triniti:sys:mixin:flagset`
