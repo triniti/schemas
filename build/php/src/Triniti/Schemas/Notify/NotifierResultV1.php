@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Notify;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\MessageRef;
 use Gdbots\Pbj\Schema;
@@ -32,6 +33,13 @@ final class NotifierResultV1 extends AbstractMessage implements
                     ->pattern('^[\w\/\.:-]+$')
                     ->build(),
                 Fb::create('error_message', T\TextType::create())
+                    ->build(),
+                Fb::create('apple_news_article_id', T\TextType::create())
+                    ->build(),
+                Fb::create('apple_news_share_url', T\TextType::create())
+                    ->format(Format::URL())
+                    ->build(),
+                Fb::create('apple_news_revision_token', T\TextType::create())
                     ->build(),
                 /*
                  * When a notification is sent the platform/vendor often responds with a payload
