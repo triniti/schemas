@@ -8,7 +8,6 @@
  */
 
 import MessageResolver from '@gdbots/pbj/MessageResolver';
-import '@triniti/schemas/triniti/notify/AppleNewsNotifierResultV1';
 import '@triniti/schemas/triniti/notify/NotifierResultV1';
 
 export default MessageResolver;

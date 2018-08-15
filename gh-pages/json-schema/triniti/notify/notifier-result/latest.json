@@ -58,6 +58,33 @@
         "rule": "single"
       }
     },
+    "apple_news_article_id": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "apple_news_share_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "apple_news_revision_token": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
     "raw_response": {
       "type": "string",
       "minLength": 0,
