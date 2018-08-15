@@ -3,17 +3,19 @@
 namespace Triniti\Schemas\Notify;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\MessageRef;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
+use Triniti\Schemas\Notify\Mixin\AppleNewsNotifierResult\AppleNewsNotifierResultV1 as TrinitiNotifyAppleNewsNotifierResultV1;
+use Triniti\Schemas\Notify\Mixin\AppleNewsNotifierResult\AppleNewsNotifierResultV1Mixin as TrinitiNotifyAppleNewsNotifierResultV1Mixin;
 
 final class NotifierResultV1 extends AbstractMessage implements
     NotifierResult,
-    GdbotsCommonTaggableV1
+    GdbotsCommonTaggableV1,
+    TrinitiNotifyAppleNewsNotifierResultV1
 {
 
     /**
@@ -34,13 +36,6 @@ final class NotifierResultV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('error_message', T\TextType::create())
                     ->build(),
-                Fb::create('apple_news_article_id', T\TextType::create())
-                    ->build(),
-                Fb::create('apple_news_share_url', T\TextType::create())
-                    ->format(Format::URL())
-                    ->build(),
-                Fb::create('apple_news_revision_token', T\TextType::create())
-                    ->build(),
                 /*
                  * When a notification is sent the platform/vendor often responds with a payload
                  * that describes the result. This field should contain a (de)serializable
@@ -51,6 +46,7 @@ final class NotifierResultV1 extends AbstractMessage implements
             ],
             [
                 GdbotsCommonTaggableV1Mixin::create(),
+                TrinitiNotifyAppleNewsNotifierResultV1Mixin::create(),
             ]
         );
     }

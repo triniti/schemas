@@ -14,9 +14,6 @@
       <field name="error_name" type="string" pattern="^[\w\/\.:-]+$"/>
       <field name="error_message" type="text"/>
       <field name="error_message" type="text"/>
-      <field name="apple_news_article_id" type="text"/>
-      <field name="apple_news_share_url" type="text" format="url"/>
-      <field name="apple_news_revision_token" type="text"/>
       <field name="raw_response" type="text">
         <description>
           When a notification is sent the platform/vendor often responds with a payload
@@ -28,6 +25,7 @@
 
     <mixins>
       <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
+      <curie-major>triniti:notify:mixin:apple-news-notifier-result:v1</curie-major>
     </mixins>
 
     <php-options>
