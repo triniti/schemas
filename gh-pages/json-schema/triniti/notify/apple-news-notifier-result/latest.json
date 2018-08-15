@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/notify/notifier-result/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/notify/apple-news-notifier-result/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:triniti:notify::notifier-result:1-0-0"
+      "default": "pbj:triniti:notify::apple-news-notifier-result:1-0-0"
     },
     "tags": {
       "type": "object",
@@ -63,6 +63,33 @@
       "minLength": 0,
       "maxLength": 65535,
       "description": "When a notification is sent the platform/vendor often responds with a payload that describes the result. This field should contain a (de)serializable string, JSON is preferred.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "apple_news_article_id": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "apple_news_share_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "apple_news_revision_token": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
       "pbj": {
         "type": "text",
         "rule": "single"

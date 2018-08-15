@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:notify::notifier-result:1-0-0">
-    <fields>
-      <field name="ok" type="boolean">
-        <default>true</default>
-      </field>
-      <field name="code" type="small-int">
-        <default>0</default>
-      </field>
-      <field name="error_name" type="string" pattern="^[\w\/\.:-]+$"/>
-      <field name="error_message" type="text"/>
-      <field name="error_message" type="text"/>
-      <field name="raw_response" type="text">
-        <description>
-          When a notification is sent the platform/vendor often responds with a payload
-          that describes the result. This field should contain a (de)serializable
-          string, JSON is preferred.
-        </description>
-      </field>
-    </fields>
-
+  <schema id="pbj:triniti:notify::apple-news-notifier-result:1-0-0" extends="triniti:notify::notifier-result:v1">
     <mixins>
       <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
+      <curie-major>triniti:notify:mixin:apple-news-notifier-result:v1</curie-major>
     </mixins>
 
     <php-options>

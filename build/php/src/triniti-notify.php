@@ -9,5 +9,6 @@
  */
 
 \Gdbots\Pbj\MessageResolver::registerMap([
+    'triniti:notify::apple-news-notifier-result' => 'Triniti\Schemas\Notify\AppleNewsNotifierResultV1',
     'triniti:notify::notifier-result' => 'Triniti\Schemas\Notify\NotifierResultV1',
 ]);

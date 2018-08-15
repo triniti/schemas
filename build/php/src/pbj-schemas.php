@@ -57,6 +57,7 @@
     'gdbots:pbjx:request:request-failed-response' => 'Gdbots\Schemas\Pbjx\Request\RequestFailedResponseV1',
     'triniti:canvas:block:render-context' => 'Triniti\Schemas\Canvas\Block\RenderContextV1',
     'triniti:curator::widget-render-context' => 'Triniti\Schemas\Curator\WidgetRenderContextV1',
+    'triniti:notify::apple-news-notifier-result' => 'Triniti\Schemas\Notify\AppleNewsNotifierResultV1',
     'triniti:notify::notifier-result' => 'Triniti\Schemas\Notify\NotifierResultV1',
     'triniti:ovp.kaltura::caption' => 'Triniti\Schemas\OvpKaltura\CaptionV1',
     'triniti:ovp.kaltura::entry' => 'Triniti\Schemas\OvpKaltura\EntryV1',

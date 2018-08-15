@@ -1,6 +1,5 @@
 // @link http://schemas.triniti.io/json-schema/triniti/notify/notifier-result/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import Message from '@gdbots/pbj/Message';
 import MessageRef from '@gdbots/pbj/MessageRef';
@@ -27,13 +26,6 @@ export default class NotifierResultV1 extends Message {
           .pattern('^[\\w\\/\\.:-]+$')
           .build(),
         Fb.create('error_message', T.TextType.create())
-          .build(),
-        Fb.create('apple_news_article_id', T.TextType.create())
-          .build(),
-        Fb.create('apple_news_share_url', T.TextType.create())
-          .format(Format.URL)
-          .build(),
-        Fb.create('apple_news_revision_token', T.TextType.create())
           .build(),
         /*
          * When a notification is sent the platform/vendor often responds with a payload
