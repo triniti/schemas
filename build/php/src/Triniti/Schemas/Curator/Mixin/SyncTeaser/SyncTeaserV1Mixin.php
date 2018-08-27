@@ -7,6 +7,7 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Triniti\Schemas\Curator\Mixin\Teaserable\Teaserable as TrinitiCuratorTeaserable;
 
 final class SyncTeaserV1Mixin extends AbstractMixin
 {
@@ -24,6 +25,15 @@ final class SyncTeaserV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            /*
+             * The target - every teaser that teases this target
+             * will be synced (if set to sync_with_target).
+             */
+            Fb::create('target', T\MessageType::create())
+                ->anyOfClassNames([
+                    TrinitiCuratorTeaserable::class,
+                ])
+                ->build(),
             /*
              * A reference to the target - every teaser that teases this target
              * will be synced (if set to sync_with_target).

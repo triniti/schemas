@@ -181,6 +181,19 @@
         "overridable": true
       }
     },
+    "target": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/teaserable"
+        }
+      ],
+      "description": "The target - every teaser that teases this target will be synced (if set to sync_with_target).",
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
+    },
     "target_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
@@ -217,6 +230,14 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/contexts/cloud/1-0-0.json#"
+        }
+      ]
+    },
+    "teaserable": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaserable/1-0-0.json#"
         }
       ]
     }

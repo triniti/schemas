@@ -40,6 +40,8 @@ export default class GalleryV1Mixin extends Mixin {
       Fb.create('allow_comments', T.BooleanType.create())
         .withDefault(true)
         .build(),
+      Fb.create('launch_text', T.StringType.create())
+        .build(),
       /*
        * A description of the gallery (usually a few sentences). It should typically
        * not have HTML as it is used in metadata, feeds, SERP and social.
