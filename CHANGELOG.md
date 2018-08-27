@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v0.6.4
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:video-block`
+    * Add `launch_text` string field.
+  * `triniti:canvas:mixin:gallery-block`
+    * Add `launch_text` string field.
+    * Add `poster_image_ref` identifier (NodeRef) field.
+  * `triniti:curator:mixin:sync-teaser`
+    * Add `target` teaserable message field.
+  * `triniti:curator:mixin:gallery`
+    * Add `launch_text` string field.
+  * `triniti:ovp:mixin:video`
+    * Add `launch_text` string field.
+
+
 ## v0.6.3
 * __Add Schemas:__
   * `triniti:curator:mixin:sync-teaser`
