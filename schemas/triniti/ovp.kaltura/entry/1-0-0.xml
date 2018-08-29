@@ -34,6 +34,9 @@
       <field name="data_url" type="text" format="url"/>
       <field name="download_url" type="text" format="url"/>
       <field name="version" type="small-int"/>
+      <field name="thumbnail_id" type="string" pattern="^[\w-]+$"/>
+      <field name="thumbnail_created" type="timestamp" use-type-default="false"/>
+      <field name="thumbnail_ext" type="string"/>
       <field name="thumbnail_url" type="text" format="url"/>
       <field name="start_date" type="timestamp" use-type-default="false"/>
       <field name="end_date" type="timestamp" use-type-default="false"/>
