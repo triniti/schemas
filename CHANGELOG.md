@@ -4,7 +4,9 @@
 ## v0.6.4
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:ovp.kaltura::entry`
-    * Add thumbnail info fields
+    * Add `thumbnail_id` string field with pattern `^[\w-]+$`
+    * Add `thumbnail_created` timestamp field
+    * Add `thumbnail_ext` string field
 
 ## v0.6.3
 * __Add Schemas:__
