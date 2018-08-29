@@ -6,6 +6,7 @@ import MessageRef from '@gdbots/pbj/MessageRef';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
+import TrinitiNotifyAppleNewsNotifierResultV1Mixin from '@triniti/schemas/triniti/notify/mixin/apple-news-notifier-result/AppleNewsNotifierResultV1Mixin';
 
 export default class NotifierResultV1 extends Message {
   /**
@@ -37,6 +38,7 @@ export default class NotifierResultV1 extends Message {
       ],
       [
         GdbotsCommonTaggableV1Mixin.create(),
+        TrinitiNotifyAppleNewsNotifierResultV1Mixin.create(),
       ],
     );
   }

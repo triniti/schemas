@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.6.4
+* __Add Schemas:__
+  * `triniti:notify:mixin:apple-news-notifier-result`
+  
+  
 ## v0.6.3
 * __Add Schemas:__
   * `triniti:curator:mixin:sync-teaser`

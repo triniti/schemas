@@ -9,10 +9,13 @@ use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
+use Triniti\Schemas\Notify\Mixin\AppleNewsNotifierResult\AppleNewsNotifierResultV1 as TrinitiNotifyAppleNewsNotifierResultV1;
+use Triniti\Schemas\Notify\Mixin\AppleNewsNotifierResult\AppleNewsNotifierResultV1Mixin as TrinitiNotifyAppleNewsNotifierResultV1Mixin;
 
 final class NotifierResultV1 extends AbstractMessage implements
     NotifierResult,
-    GdbotsCommonTaggableV1
+    GdbotsCommonTaggableV1,
+    TrinitiNotifyAppleNewsNotifierResultV1
 {
 
     /**
@@ -43,6 +46,7 @@ final class NotifierResultV1 extends AbstractMessage implements
             ],
             [
                 GdbotsCommonTaggableV1Mixin::create(),
+                TrinitiNotifyAppleNewsNotifierResultV1Mixin::create(),
             ]
         );
     }
