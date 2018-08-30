@@ -12,7 +12,7 @@
       <field name="entry_id" type="string" pattern="^[\w-]+$"/>
       <field name="version" type="small-int"/>
       <field name="size" type="medium-int"/>
-      <field name="file_ext" type="string"/>
+      <field name="file_ext" type="string" pattern="^[\w\.-]+$"/>
       <field name="created_at" type="timestamp" use-type-default="false"/>
       <field name="updated_at" type="timestamp" use-type-default="false"/>
       <field name="deleted_at" type="timestamp" use-type-default="false"/>

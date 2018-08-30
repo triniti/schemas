@@ -66,6 +66,7 @@ final class FlavorV1 extends AbstractMessage implements
                 Fb::create('size', T\IntType::create())
                     ->build(),
                 Fb::create('file_ext', T\StringType::create())
+                    ->pattern('^[\w\.-]+$')
                     ->build(),
                 Fb::create('description', T\TextType::create())
                     ->build(),

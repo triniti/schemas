@@ -29,7 +29,7 @@
       <field name="created_at" type="timestamp" use-type-default="false"/>
       <field name="updated_at" type="timestamp" use-type-default="false"/>
       <field name="size" type="int"/>
-      <field name="file_ext" type="string"/>
+      <field name="file_ext" type="string" pattern="^[\w\.-]+$"/>
       <field name="description" type="text"/>
       <field name="url" type="text" format="url"/>
     </fields>
