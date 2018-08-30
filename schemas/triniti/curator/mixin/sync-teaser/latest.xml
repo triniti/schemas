@@ -6,6 +6,15 @@
   <schema id="pbj:triniti:curator:mixin:sync-teaser:1-0-0" mixin="true"
       extends="gdbots:pbjx:mixin:command:v1">
     <fields>
+      <field name="target" type="message">
+        <description>
+          The target - every teaser that teases this target
+          will be synced (if set to sync_with_target).
+        </description>
+        <any-of>
+          <curie>triniti:curator:mixin:teaserable</curie>
+        </any-of>
+      </field>
       <field name="target_ref" type="identifier">
         <description>
           A reference to the target - every teaser that teases this target

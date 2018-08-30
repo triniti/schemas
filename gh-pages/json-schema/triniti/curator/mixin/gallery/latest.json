@@ -190,6 +190,15 @@
         "rule": "single"
       }
     },
+    "launch_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "description": {
       "type": "string",
       "minLength": 0,

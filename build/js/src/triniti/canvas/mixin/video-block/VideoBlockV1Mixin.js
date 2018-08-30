@@ -20,6 +20,8 @@ export default class VideoBlockV1Mixin extends Mixin {
     return [
       Fb.create('autoplay', T.BooleanType.create())
         .build(),
+      Fb.create('launch_text', T.StringType.create())
+        .build(),
       Fb.create('muted', T.BooleanType.create())
         .build(),
       Fb.create('start_at', T.SmallIntType.create())
