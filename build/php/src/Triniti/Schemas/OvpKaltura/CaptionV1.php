@@ -33,6 +33,7 @@ final class CaptionV1 extends AbstractMessage implements
                 Fb::create('size', T\MediumIntType::create())
                     ->build(),
                 Fb::create('file_ext', T\StringType::create())
+                    ->pattern('^[\w\.-]+$')
                     ->build(),
                 Fb::create('created_at', T\TimestampType::create())
                     ->useTypeDefault(false)
