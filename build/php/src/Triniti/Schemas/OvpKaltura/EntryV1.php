@@ -84,10 +84,11 @@ final class EntryV1 extends AbstractMessage implements
                 Fb::create('thumbnail_id', T\StringType::create())
                     ->pattern('^[\w-]+$')
                     ->build(),
-                Fb::create('thumbnail_created', T\TimestampType::create())
+                Fb::create('thumbnail_created_at', T\TimestampType::create())
                     ->useTypeDefault(false)
                     ->build(),
                 Fb::create('thumbnail_ext', T\StringType::create())
+                    ->pattern('^[\w\.-]+$')
                     ->build(),
                 Fb::create('thumbnail_url', T\TextType::create())
                     ->format(Format::URL())
