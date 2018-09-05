@@ -39,6 +39,14 @@
         "rule": "single"
       }
     },
+    "ctx_causator": {
+      "type": "object",
+      "description": "The \"ctx_causator\" is the actual causator object that \"ctx_causator_ref\" refers to. In some cases it's useful for command handlers to copy the causator into the command. For example, when a node is being updated we may want to know what the node will be after the update. We can derive this via the causator instead of requesting the node and engaging a race condition.",
+      "pbj": {
+        "type": "message",
+        "rule": "single"
+      }
+    },
     "ctx_causator_ref": {
       "type": "object",
       "properties": {
@@ -181,19 +189,6 @@
         "overridable": true
       }
     },
-    "target": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/teaserable"
-        }
-      ],
-      "description": "The target - every teaser that teases this target will be synced (if set to sync_with_target).",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
-    },
     "target_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
@@ -230,14 +225,6 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/contexts/cloud/1-0-0.json#"
-        }
-      ]
-    },
-    "teaserable": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaserable/1-0-0.json#"
         }
       ]
     }

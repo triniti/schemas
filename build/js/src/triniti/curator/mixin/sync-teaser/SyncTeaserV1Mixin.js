@@ -19,15 +19,6 @@ export default class SyncTeaserV1Mixin extends Mixin {
   getFields() {
     return [
       /*
-       * The target - every teaser that teases this target
-       * will be synced (if set to sync_with_target).
-       */
-      Fb.create('target', T.MessageType.create())
-        .anyOfCuries([
-          'triniti:curator:mixin:teaserable',
-        ])
-        .build(),
-      /*
        * A reference to the target - every teaser that teases this target
        * will be synced (if set to sync_with_target).
        */

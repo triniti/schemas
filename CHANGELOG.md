@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.6.5
+* Use `gdbots/schemas` v1.5.6.
+* __Add Schemas:__
+  * `triniti:curator:mixin:gridler-widget`
+  * `triniti:curator:mixin:tetris-widget`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:sync-teaser`
+    * Remove `target` message field, will use new `ctx_causator` field on commands instead.
+
+
 ## v0.6.4
 * Use `gdbots/schemas` v1.5.5.
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
