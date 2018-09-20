@@ -1,6 +1,11 @@
 # CHANGELOG
 
-
+## v0.6.3
+* __Modify Schemas:__
+  * `triniti:notify:mixin:email-notification`
+    * Add `sender` string field with email format.
+    
+    
 ## v0.6.2
 * __Add Schemas:__
   * `triniti:sys:mixin:flagset`
