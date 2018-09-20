@@ -49,6 +49,8 @@ final class VideoV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('is_full_episode', T\BooleanType::create())
                 ->build(),
+            Fb::create('launch_text', T\StringType::create())
+                ->build(),
             /*
              * Duration of the video in seconds.
              */

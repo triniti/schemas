@@ -254,6 +254,32 @@
         "rule": "single"
       }
     },
+    "thumbnail_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "thumbnail_created_at": {
+      "type": "integer",
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "pbj": {
+        "type": "timestamp",
+        "rule": "single",
+        "useTypeDefault": false
+      }
+    },
+    "thumbnail_ext": {
+      "type": "string",
+      "pattern": "^[\\w\\.-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "thumbnail_url": {
       "type": "string",
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",

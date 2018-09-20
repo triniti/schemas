@@ -35,8 +35,10 @@ final class BlockV1Mixin extends AbstractMixin
                 ->pattern('^[\w\s-]+$')
                 ->build(),
             /*
-             * Used to visually represent an update that occurred on this block
-             * that is NOT when this block was literally last modified.
+             * Represents an update that occurred on the node this block
+             * is attached to. DOES NOT indicate an update to the block itself.
+             * eg an article with a twitter block with updated_date means that
+             * the article was updated to include that twitter block.
              */
             Fb::create('updated_date', T\DateTimeType::create())
                 ->build(),

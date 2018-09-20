@@ -1,10 +1,45 @@
 # CHANGELOG
 
-## v0.6.3
+## v0.6.6
 * __Modify Schemas:__
   * `triniti:notify:mixin:email-notification`
     * Add `sender` string field with email format.
     
+
+## v0.6.5
+* Use `gdbots/schemas` v1.5.6.
+* __Add Schemas:__
+  * `triniti:curator:mixin:gridler-widget`
+  * `triniti:curator:mixin:tetris-widget`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:sync-teaser`
+    * Remove `target` message field, will use new `ctx_causator` field on commands instead.
+
+
+## v0.6.4
+* Use `gdbots/schemas` v1.5.5.
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:gallery-block`
+    * Add `launch_text` string field.
+    * Add `poster_image_ref` identifier (NodeRef) field.
+  * `triniti:canvas:mixin:video-block`
+    * Add `launch_text` string field.
+  * `triniti:curator:mixin:gallery`
+    * Add `launch_text` string field.
+  * `triniti:curator:mixin:sync-teaser`
+    * Add `target` message field with `any-of` to `triniti:curator:mixin:teaserable`.
+  * `triniti:ovp:mixin:video`
+    * Add `launch_text` string field.
+  * `triniti:ovp.kaltura::entry`
+    * Add `thumbnail_id` string field with pattern `^[\w-]+$`
+    * Add `thumbnail_created_at` timestamp field.
+    * Add `thumbnail_ext` string field with pattern `^[\w\.-]+$`.
+
+
+## v0.6.3
+* __Add Schemas:__
+  * `triniti:curator:mixin:sync-teaser`
+
     
 ## v0.6.2
 * __Add Schemas:__
