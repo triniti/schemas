@@ -38,6 +38,9 @@ final class EmailNotificationV1Mixin extends AbstractMixin
             Fb::create('template', T\StringType::create())
                 ->format(Format::SLUG())
                 ->build(),
+            Fb::create('sender', T\StringType::create())
+                ->format(Format::EMAIL())
+                ->build(),
         ];
     }
 }

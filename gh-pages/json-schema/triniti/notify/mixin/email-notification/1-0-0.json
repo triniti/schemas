@@ -272,6 +272,15 @@
         "rule": "single",
         "format": "slug"
       }
+    },
+    "sender": {
+      "type": "string",
+      "format": "email",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "email"
+      }
     }
   },
   "required": [
