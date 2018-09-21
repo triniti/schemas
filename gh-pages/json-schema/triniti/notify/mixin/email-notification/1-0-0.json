@@ -243,22 +243,20 @@
       }
     },
     "lists": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-          "minLength": 0,
-          "maxLength": 255
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 4294967295
         }
-      ],
-      "uniqueItems": true,
+      },
       "additionalProperties": false,
-      "description": "A set of list ids that this email notification should be sent to. e.g. \"sports-fans\", \"foodies\" or \"chud\".",
+      "description": "A set of list ids that this email notification should be sent to keys are list slugs e.g. \"sports-fans\", \"foodies\" or \"chud\".",
       "pbj": {
-        "type": "string",
-        "rule": "set",
-        "format": "slug"
+        "type": "int",
+        "rule": "map"
       }
     },
     "template": {

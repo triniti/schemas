@@ -6,10 +6,10 @@
   <schema id="pbj:triniti:notify:mixin:email-notification:1-0-0" mixin="true"
           extends="triniti:notify:mixin:notification:v1">
     <fields>
-      <field name="lists" type="string" format="slug" rule="set">
+      <field name="lists" type="int" rule="map">
         <description>
-          A set of list ids that this email notification should be sent to.
-          e.g. "sports-fans", "foodies" or "chud".
+          A set of list ids that this email notification should be sent to
+          keys are list slugs e.g. "sports-fans", "foodies" or "chud".
         </description>
       </field>
       <field name="template" type="string" format="slug">

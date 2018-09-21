@@ -19,12 +19,11 @@ export default class EmailNotificationV1Mixin extends Mixin {
   getFields() {
     return [
       /*
-       * A set of list ids that this email notification should be sent to.
-       * e.g. "sports-fans", "foodies" or "chud".
+       * A set of list ids that this email notification should be sent to
+       * keys are list slugs e.g. "sports-fans", "foodies" or "chud".
        */
-      Fb.create('lists', T.StringType.create())
-        .asASet()
-        .format(Format.SLUG)
+      Fb.create('lists', T.IntType.create())
+        .asAMap()
         .build(),
       /*
        * Visual layout for the email. e.g. "breaking-snooze", "exclusive-video".
