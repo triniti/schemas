@@ -8,16 +8,21 @@
     <fields>
       <field name="lists" type="int" rule="map">
         <description>
-          A set of list ids that this email notification should be sent to
-          keys are list slugs e.g. "sports-fans", "foodies" or "chud".
+          keys are list slugs, e.g. "newsletter-subscribers".
+          used to lookup the sendgrid list Ids needed when posting to their API.
         </description>
       </field>
       <field name="template" type="string" format="slug">
         <description>
-          Visual layout for the email. e.g. "breaking-snooze", "exclusive-video".
+          Visual layout for the email. e.g. "breaking-news", "exclusive-video".
         </description>
       </field>
-      <field name="sender" type="string" format="email"/>
+      <field name="sender" type="int"/>
+      <field name="suppression_group_id" type="int">
+        <description>
+          also called as unsubscribe list ID, sendgrid specifically calls this list as suppression list
+        </description>
+      </field>
     </fields>
     <php-options>
       <insertion-points>

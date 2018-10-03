@@ -253,7 +253,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "A set of list ids that this email notification should be sent to keys are list slugs e.g. \"sports-fans\", \"foodies\" or \"chud\".",
+      "description": "keys are list slugs, e.g. \"newsletter-subscribers\". used to lookup the sendgrid list Ids needed when posting to their API.",
       "pbj": {
         "type": "int",
         "rule": "map"
@@ -264,7 +264,7 @@
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
       "maxLength": 255,
-      "description": "Visual layout for the email. e.g. \"breaking-snooze\", \"exclusive-video\".",
+      "description": "Visual layout for the email. e.g. \"breaking-news\", \"exclusive-video\".",
       "pbj": {
         "type": "string",
         "rule": "single",
@@ -272,12 +272,24 @@
       }
     },
     "sender": {
-      "type": "string",
-      "format": "email",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
       "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "email"
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "suppression_group_id": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "description": "also called as unsubscribe list ID, sendgrid specifically calls this list as suppression list",
+      "pbj": {
+        "type": "int",
+        "rule": "single"
       }
     }
   },

@@ -19,20 +19,24 @@ export default class EmailNotificationV1Mixin extends Mixin {
   getFields() {
     return [
       /*
-       * A set of list ids that this email notification should be sent to
-       * keys are list slugs e.g. "sports-fans", "foodies" or "chud".
+       * keys are list slugs, e.g. "newsletter-subscribers".
+       * used to lookup the sendgrid list Ids needed when posting to their API.
        */
       Fb.create('lists', T.IntType.create())
         .asAMap()
         .build(),
       /*
-       * Visual layout for the email. e.g. "breaking-snooze", "exclusive-video".
+       * Visual layout for the email. e.g. "breaking-news", "exclusive-video".
        */
       Fb.create('template', T.StringType.create())
         .format(Format.SLUG)
         .build(),
-      Fb.create('sender', T.StringType.create())
-        .format(Format.EMAIL)
+      Fb.create('sender', T.IntType.create())
+        .build(),
+      /*
+       * also called as unsubscribe list ID, sendgrid specifically calls this list as suppression list
+       */
+      Fb.create('suppression_group_id', T.IntType.create())
         .build(),
     ];
   }
