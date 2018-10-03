@@ -4,8 +4,9 @@
 * __Modify Schemas:__
   * `triniti:notify:mixin:email-notification`
     * Update `lists` to map of ints.
-    * Add `sender` string field with email format.
-    
+    * Add `sender` int field.
+    * Add `suppression_group_id` int field.
+        
 
 ## v0.6.5
 * Use `gdbots/schemas` v1.5.6.
