@@ -1,11 +1,11 @@
 # CHANGELOG
 
 ## v0.6.6
-* __Modify Schemas:__
+* Use `gdbots/schemas` v1.5.7
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:notify:mixin:email-notification`
-    * Update `lists` to map of ints.
+    * Update `lists` to int map field.
     * Add `sender` int field.
-    * Add `suppression_group_id` int field.
         
 
 ## v0.6.5
