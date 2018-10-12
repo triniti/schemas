@@ -253,7 +253,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "keys are list slugs, e.g. \"newsletter-subscribers\". used to lookup the sendgrid list Ids needed when posting to their API.",
+      "description": "Keys are list slugs, e.g. \"newsletter-subscribers\" and values are sendgrid list ids. @link https://sendgrid.api-docs.io/v3.0/contacts-api-lists/create-a-list",
       "pbj": {
         "type": "int",
         "rule": "map"
@@ -276,17 +276,7 @@
       "default": 0,
       "minimum": 0,
       "maximum": 4294967295,
-      "pbj": {
-        "type": "int",
-        "rule": "single"
-      }
-    },
-    "suppression_group_id": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295,
-      "description": "also called as unsubscribe list ID, sendgrid specifically calls this list as suppression list",
+      "description": "Sendgrid sender id.",
       "pbj": {
         "type": "int",
         "rule": "single"

@@ -8,8 +8,8 @@
     <fields>
       <field name="lists" type="int" rule="map">
         <description>
-          keys are list slugs, e.g. "newsletter-subscribers".
-          used to lookup the sendgrid list Ids needed when posting to their API.
+          Keys are list slugs, e.g. "newsletter-subscribers" and values are sendgrid list ids.
+          @link https://sendgrid.api-docs.io/v3.0/contacts-api-lists/create-a-list
         </description>
       </field>
       <field name="template" type="string" format="slug">
@@ -17,10 +17,9 @@
           Visual layout for the email. e.g. "breaking-news", "exclusive-video".
         </description>
       </field>
-      <field name="sender" type="int"/>
-      <field name="suppression_group_id" type="int">
+      <field name="sender" type="int">
         <description>
-          also called as unsubscribe list ID, sendgrid specifically calls this list as suppression list
+          Sendgrid sender id.
         </description>
       </field>
     </fields>
