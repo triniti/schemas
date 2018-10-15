@@ -6,9 +6,6 @@
   * `triniti:notify:mixin:email-notification`
     * Update `lists` to int map field.
     * Add `sender` int field.
-        
-
-## v0.6.6
 * __Delete Schemas:__
   * `triniti:canvas:mixin:vevo-video-block`.
 
