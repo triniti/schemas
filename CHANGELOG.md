@@ -8,6 +8,10 @@
     * Add `sender` int field.
         
 
+## v0.6.6
+* __Delete Schemas:__
+  * `triniti:canvas:mixin:vevo-video-block`.
+
 ## v0.6.5
 * Use `gdbots/schemas` v1.5.6.
 * __Add Schemas:__
