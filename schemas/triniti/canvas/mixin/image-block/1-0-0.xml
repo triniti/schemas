@@ -9,6 +9,11 @@
       <field name="caption" type="text" max="2000"/>
       <field name="is_nsfw" type="boolean"/>
       <field name="url" type="string" format="url"/>
+      <field name="fallback_src_url" type="string" format="url">
+        <description>
+          For imported image blocks it may be necessary to store the old URL.
+        </description>
+      </field>
     </fields>
 
     <php-options>
@@ -26,6 +31,7 @@ public function getUriTemplateVars()
         'node_ref' => (string)$this->get('node_ref'),
         'is_nswf' => $this->get('is_nswf'),
         'url' => $this->get('url'),
+        'fallback_src_url' => $this->get('fallback_src_url'),
     ];
 }
           ]]>
@@ -46,6 +52,7 @@ getUriTemplateVars() {
     node_ref: `${this.get('node_ref', '')}`,
     is_nswf: this.get('is_nswf'),
     url: this.get('url'),
+    fallback_src_url: this.get('fallback_src_url'),
   };
 }
           ]]>

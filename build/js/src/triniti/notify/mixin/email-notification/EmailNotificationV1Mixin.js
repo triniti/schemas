@@ -19,22 +19,24 @@ export default class EmailNotificationV1Mixin extends Mixin {
   getFields() {
     return [
       /*
-       * Keys are list slugs, e.g. "newsletter-subscribers" and values are sendgrid list ids.
-       * @link https://sendgrid.api-docs.io/v3.0/contacts-api-lists/create-a-list
+       * The sender email for this notification.
        */
-      Fb.create('lists', T.IntType.create())
-        .asAMap()
+      Fb.create('sender', T.StringType.create())
+        .format(Format.EMAIL)
         .build(),
       /*
-       * Visual layout for the email. e.g. "breaking-news", "exclusive-video".
+       * A set of list ids that this email notification should be sent to.
+       * e.g. "sports-fans", "foodies" or "chud".
        */
-      Fb.create('template', T.StringType.create())
+      Fb.create('lists', T.StringType.create())
+        .asASet()
         .format(Format.SLUG)
         .build(),
       /*
-       * Sendgrid sender id.
+       * Visual layout for the email. e.g. "breaking-snooze", "exclusive-video".
        */
-      Fb.create('sender', T.IntType.create())
+      Fb.create('template', T.StringType.create())
+        .format(Format.SLUG)
         .build(),
     ];
   }

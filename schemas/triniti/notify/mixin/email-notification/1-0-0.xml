@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:notify:mixin:email-notification:1-0-0" mixin="true"
-          extends="triniti:notify:mixin:notification:v1">
+      extends="triniti:notify:mixin:notification:v1">
     <fields>
-      <field name="lists" type="int" rule="map">
+      <field name="sender" type="string" format="email">
         <description>
-          Keys are list slugs, e.g. "newsletter-subscribers" and values are sendgrid list ids.
-          @link https://sendgrid.api-docs.io/v3.0/contacts-api-lists/create-a-list
+          The sender email for this notification.
+        </description>
+      </field>
+      <field name="lists" type="string" format="slug" rule="set">
+        <description>
+          A set of list ids that this email notification should be sent to.
+          e.g. "sports-fans", "foodies" or "chud".
         </description>
       </field>
       <field name="template" type="string" format="slug">
         <description>
-          Visual layout for the email. e.g. "breaking-news", "exclusive-video".
-        </description>
-      </field>
-      <field name="sender" type="int">
-        <description>
-          Sendgrid sender id.
+          Visual layout for the email. e.g. "breaking-snooze", "exclusive-video".
         </description>
       </field>
     </fields>
@@ -35,6 +35,7 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
+        'sender' => $this->get('sender'),
         'template' => $this->get('template'),
     ];
 }
@@ -53,6 +54,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
+    sender: this.get('sender'),
     template: this.get('template'),
   };
 }

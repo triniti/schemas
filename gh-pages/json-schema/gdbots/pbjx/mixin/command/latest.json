@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/command/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/command/1-0-1.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -36,6 +36,14 @@
       "description": "The \"ctx_retries\" field is used to keep track of how many attempts were made to process this command. In some cases, the service or transport that handles the command may be down or an optimistic check has failed and is being retried.",
       "pbj": {
         "type": "tiny-int",
+        "rule": "single"
+      }
+    },
+    "ctx_causator": {
+      "type": "object",
+      "description": "The \"ctx_causator\" is the actual causator object that \"ctx_causator_ref\" refers to. In some cases it's useful for command handlers to copy the causator into the command. For example, when a node is being updated we may want to know what the node will be after the update. We can derive this via the causator instead of requesting the node and engaging a race condition.",
+      "pbj": {
+        "type": "message",
         "rule": "single"
       }
     },

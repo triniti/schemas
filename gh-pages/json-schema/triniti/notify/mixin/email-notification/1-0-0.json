@@ -242,21 +242,33 @@
         "rule": "single"
       }
     },
-    "lists": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
-          "type": "integer",
-          "default": 0,
-          "minimum": 0,
-          "maximum": 4294967295
-        }
-      },
-      "additionalProperties": false,
-      "description": "Keys are list slugs, e.g. \"newsletter-subscribers\" and values are sendgrid list ids. @link https://sendgrid.api-docs.io/v3.0/contacts-api-lists/create-a-list",
+    "sender": {
+      "type": "string",
+      "format": "email",
+      "description": "The sender email for this notification.",
       "pbj": {
-        "type": "int",
-        "rule": "map"
+        "type": "string",
+        "rule": "single",
+        "format": "email"
+      }
+    },
+    "lists": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "A set of list ids that this email notification should be sent to. e.g. \"sports-fans\", \"foodies\" or \"chud\".",
+      "pbj": {
+        "type": "string",
+        "rule": "set",
+        "format": "slug"
       }
     },
     "template": {
@@ -264,22 +276,11 @@
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
       "maxLength": 255,
-      "description": "Visual layout for the email. e.g. \"breaking-news\", \"exclusive-video\".",
+      "description": "Visual layout for the email. e.g. \"breaking-snooze\", \"exclusive-video\".",
       "pbj": {
         "type": "string",
         "rule": "single",
         "format": "slug"
-      }
-    },
-    "sender": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295,
-      "description": "Sendgrid sender id.",
-      "pbj": {
-        "type": "int",
-        "rule": "single"
       }
     }
   },
