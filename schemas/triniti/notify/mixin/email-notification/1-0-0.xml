@@ -6,6 +6,11 @@
   <schema id="pbj:triniti:notify:mixin:email-notification:1-0-0" mixin="true"
       extends="triniti:notify:mixin:notification:v1">
     <fields>
+      <field name="sender" type="string" format="email">
+        <description>
+          The sender email for this notification.
+        </description>
+      </field>
       <field name="lists" type="string" format="slug" rule="set">
         <description>
           A set of list ids that this email notification should be sent to.
@@ -30,6 +35,7 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
+        'sender' => $this->get('sender'),
         'template' => $this->get('template'),
     ];
 }
@@ -48,6 +54,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
+    sender: this.get('sender'),
     template: this.get('template'),
   };
 }

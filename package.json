@@ -1,6 +1,6 @@
 {
   "name": "@triniti/schemas",
-  "version": "0.6.6",
+  "version": "0.7.0",
   "description": "Schemas for common Triniti apps and components.",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^1.5.6"
+    "@gdbots/schemas": "^1.5.7"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
@@ -39,15 +39,15 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
-    "eslint": "^5.5.0",
+    "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "faucet": "^0.0.1",
-    "lodash": "^4.17.10",
-    "lodash-es": "^4.17.10",
+    "lodash": "^4.17.11",
+    "lodash-es": "^4.17.11",
     "md5": "^2.2.1",
     "moment": "^2.22.2",
     "rimraf": "^2.6.2",

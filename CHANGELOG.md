@@ -1,9 +1,30 @@
 # CHANGELOG
 
 
-## v0.6.6
+## v0.7.0
+__BREAKING CHANGES__
+
+* Use `gdbots/schemas` v1.5.7.
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:image-block`    
+    * Add `fallback_src_url` string form with format url.
+  * `triniti:notify:mixin:email-notification`
+    * Add `sender` string field with format email.
 * __Delete Schemas:__
-  * `triniti:canvas:mixin:vevo-video-block`.
+  * `triniti:canvas:mixin:pinterest-board-block`
+  * `triniti:canvas:mixin:pinterest-profile-block`
+  * `triniti:canvas:mixin:twitter-collection-timeline-block`
+  * `triniti:canvas:mixin:twitter-follow-button-block`
+  * `triniti:canvas:mixin:twitter-hashtag-button-block`
+  * `triniti:canvas:mixin:twitter-likes-timeline-block`
+  * `triniti:canvas:mixin:twitter-list-timeline-block`
+  * `triniti:canvas:mixin:twitter-mention-button-block`
+  * `triniti:canvas:mixin:twitter-moment-block`
+  * `triniti:canvas:mixin:twitter-search-timeline-block`
+  * `triniti:canvas:mixin:twitter-user-timeline-block`
+  * `triniti:canvas:mixin:twitter-video-block`
+  * `triniti:canvas:mixin:vevo-video-block`
+
 
 ## v0.6.5
 * Use `gdbots/schemas` v1.5.6.
@@ -39,7 +60,7 @@
 * __Add Schemas:__
   * `triniti:curator:mixin:sync-teaser`
 
-
+    
 ## v0.6.2
 * __Add Schemas:__
   * `triniti:sys:mixin:flagset`

@@ -17,6 +17,7 @@ trait EmailNotificationV1Trait
     {
         return [
             '_id' => (string)$this->get('_id'),
+            'sender' => $this->get('sender'),
             'template' => $this->get('template'),
         ];
     }

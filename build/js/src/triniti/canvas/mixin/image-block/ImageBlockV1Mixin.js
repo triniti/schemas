@@ -26,6 +26,12 @@ export default class ImageBlockV1Mixin extends Mixin {
       Fb.create('url', T.StringType.create())
         .format(Format.URL)
         .build(),
+      /*
+       * For imported image blocks it may be necessary to store the old URL.
+       */
+      Fb.create('fallback_src_url', T.StringType.create())
+        .format(Format.URL)
+        .build(),
     ];
   }
 }

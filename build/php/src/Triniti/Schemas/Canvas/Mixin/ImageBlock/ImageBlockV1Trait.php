@@ -20,6 +20,7 @@ trait ImageBlockV1Trait
             'node_ref' => (string)$this->get('node_ref'),
             'is_nswf' => $this->get('is_nswf'),
             'url' => $this->get('url'),
+            'fallback_src_url' => $this->get('fallback_src_url'),
         ];
     }
 }
