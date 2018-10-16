@@ -6,6 +6,8 @@ __BREAKING CHANGES__
 
 * Use `gdbots/schemas` v1.5.7.
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:image-block`    
+    * Add `fallback_src_url` string form with format url.
   * `triniti:notify:mixin:email-notification`
     * Add `sender` string field with format email.
 * __Delete Schemas:__
