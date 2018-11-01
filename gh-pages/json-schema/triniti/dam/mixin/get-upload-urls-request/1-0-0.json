@@ -187,6 +187,15 @@
         "rule": "list"
       }
     },
+    "asset_id": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "When requesting a url for a variant on an existing asset you should provide the asset_id and the version and optionally the quality.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "quality": {
       "type": "string",
       "pattern": "^[\\w\\.-]+$",

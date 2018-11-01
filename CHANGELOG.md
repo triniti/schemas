@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.7.1
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:dam:mixin:get-upload-urls-request`
+    * Add `asset_id` identifier (AssetId) field.
+
+
 ## v0.7.0
 __BREAKING CHANGES__
 
