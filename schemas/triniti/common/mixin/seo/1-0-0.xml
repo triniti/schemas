@@ -20,6 +20,13 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="seo_pubilshed_at" type="date-time">
+        <description>
+          Allows customization of the publish date for SEO purposes. For example
+          if something meaningful within an article is updated, adjust this date
+          instead of the actual publish date.
+        </description>
+      </field>
       <field name="meta_description" type="text" max="5000"/>
       <field name="meta_keywords" type="string" rule="set"/>
       <field name="is_unlisted" type="boolean">

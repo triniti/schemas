@@ -5,6 +5,8 @@
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:dam:mixin:get-upload-urls-request`
     * Add `asset_id` identifier (AssetId) field.
+  * `triniti:common:mixin:seo`
+    * Add `seo_pubilshed_at` date-time field.
 
 
 ## v0.7.0
@@ -12,7 +14,7 @@ __BREAKING CHANGES__
 
 * Use `gdbots/schemas` v1.5.7.
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
-  * `triniti:canvas:mixin:image-block`    
+  * `triniti:canvas:mixin:image-block`
     * Add `fallback_src_url` string form with format url.
   * `triniti:notify:mixin:email-notification`
     * Add `sender` string field with format email.
@@ -66,7 +68,7 @@ __BREAKING CHANGES__
 * __Add Schemas:__
   * `triniti:curator:mixin:sync-teaser`
 
-    
+
 ## v0.6.2
 * __Add Schemas:__
   * `triniti:sys:mixin:flagset`
