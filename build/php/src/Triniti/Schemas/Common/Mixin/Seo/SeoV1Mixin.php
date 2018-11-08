@@ -33,6 +33,13 @@ final class SeoV1Mixin extends AbstractMixin
             Fb::create('seo_image_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
+            /*
+             * Allows customization of the publish date for SEO purposes. For example
+             * if something meaningful within an article is updated, adjust this date
+             * instead of the actual publish date.
+             */
+            Fb::create('seo_pubilshed_at', T\DateTimeType::create())
+                ->build(),
             Fb::create('meta_description', T\TextType::create())
                 ->maxLength(5000)
                 ->build(),
