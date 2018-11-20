@@ -55,7 +55,9 @@ final class GalleryV1Mixin extends AbstractMixin
             Fb::create('description', T\TextType::create())
                 ->maxLength(5000)
                 ->build(),
-            Fb::create('related_galleries', T\IdentifierType::create())
+            Fb::create('image_count', T\MediumIntType::create())
+                ->build(),
+            Fb::create('related_gallery_refs', T\IdentifierType::create())
                 ->asAList()
                 ->className(NodeRef::class)
                 ->build(),

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:common::render-context:1-0-0">
+    <fields>
+      <field name="cache_enabled" type="boolean">
+        <default>true</default>
+      </field>
+      <field name="cache_expiry" type="medium-int">
+        <description>
+          Number of seconds the rendered output can be cached, if
+          the cache_enabled field is true. Zero means cache indefinitely.
+        </description>
+        <default>300</default>
+      </field>
+      <field name="container" type="message">
+        <description>
+          A message (e.g. article) where the rendering is taking place.
+          This is used by some renderers when it needs data from the
+          container or to generate urls.
+        </description>
+      </field>
+      <field name="platform" type="string" format="slug">
+        <description>
+          The platform the rendering is happening in, e.g.
+          web, amp, apple-news, facebook-instant-articles.
+        </description>
+        <default>web</default>
+      </field>
+      <field name="device_view" type="string" format="slug"/>
+      <field name="viewer_country" type="string" pattern="^[A-Z]{2}$"/>
+      <field name="section" type="string" pattern="^[\w-]+$">
+        <description>
+          Refers to the location on the screen or application that
+          the rendering is happening in, e.g. "article-detail",
+          "blogroll", "modal", "jumbotron". Renderers can use this
+          to customize the output.
+        </description>
+      </field>
+      <field name="booleans" type="boolean" rule="map"/>
+      <field name="floats" type="float" rule="map"/>
+      <field name="ints" type="int" rule="map"/>
+      <field name="strings" type="string" rule="map"/>
+      <field name="trinaries" type="trinary" rule="map"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+use Gdbots\Pbj\MessageRef;
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param string $tag
+ * @return MessageRef
+ */
+public function generateMessageRef($tag = null)
+{
+    return new MessageRef(static::schema()->getCurie(), $this->generateEtag(), $tag);
+}
+
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+import MessageRef from '@gdbots/pbj/MessageRef';
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param {?string} tag
+ * @returns {MessageRef}
+ */
+generateMessageRef(tag = null) {
+  return new MessageRef(this.schema().getCurie(), this.generateEtag(), tag);
+}
+
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {};
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>

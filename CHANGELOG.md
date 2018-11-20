@@ -1,12 +1,46 @@
 # CHANGELOG
 
 
+## v0.8.0
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:apollo:mixin:has-poll`
+  * `triniti:apollo:mixin:has-polls`
+  * `triniti:common::render-context`
+  * `triniti:curator:mixin:widget-search-request`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:dam:mixin:get-upload-urls-request`
+    * Add `asset_id` identifier (AssetId) field.
+  * `triniti:common:mixin:seo`
+    * Add `seo_published_at` date-time field.
+  * `triniti:curator:mixin:gallery`
+    * Add `image_count` medium-int field.
+    * Rename `related_galleries` field to `related_gallery_refs`.
+  * `triniti:curator:mixin:timeline`
+    * Rename `related_timelines` field to `related_timeline_refs`.
+  * `triniti:curator:mixin:widget`
+    * Change `search_request` message field `any-of` to `triniti:curator:mixin:widget-search-request`.
+  * `triniti:news:mixin:article`
+    * Rename `related_articles` field to `related_article_refs`.
+  * `triniti:news:mixin:search-articles-request`
+    * Add `timeline_ref` identifier (NodeRef) field.
+  * `triniti:ovp:mixin:video`
+    * Add `caption_ref` identifier (NodeRef) field.
+    * Rename `related_videos` field to `related_video_refs`.
+  * `triniti:people:mixin:has-people`
+    * Add `primary_person_refs` identifier (NodeRef) set field.
+* __Delete Schemas:__
+  * `triniti:canvas:block:render-context`
+  * `triniti:curator::widget-render-context`
+
+
 ## v0.7.0
 __BREAKING CHANGES__
 
 * Use `gdbots/schemas` v1.5.7.
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
-  * `triniti:canvas:mixin:image-block`    
+  * `triniti:canvas:mixin:image-block`
     * Add `fallback_src_url` string form with format url.
   * `triniti:notify:mixin:email-notification`
     * Add `sender` string field with format email.
@@ -60,7 +94,7 @@ __BREAKING CHANGES__
 * __Add Schemas:__
   * `triniti:curator:mixin:sync-teaser`
 
-    
+
 ## v0.6.2
 * __Add Schemas:__
   * `triniti:sys:mixin:flagset`
