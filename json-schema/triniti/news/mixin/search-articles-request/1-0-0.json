@@ -354,6 +354,15 @@
         "type": "string-enum",
         "rule": "single"
       }
+    },
+    "timeline_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A node ref of a timeline that an article must be slotted into to match the search request. This is only applicable or used when articles are slottable.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
     }
   },
   "required": [
