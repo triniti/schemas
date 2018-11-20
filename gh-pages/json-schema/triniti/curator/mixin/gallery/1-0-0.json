@@ -209,6 +209,16 @@
         "rule": "single"
       }
     },
+    "image_count": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 16777215,
+      "pbj": {
+        "type": "medium-int",
+        "rule": "single"
+      }
+    },
     "related_gallery_refs": {
       "type": "array",
       "items": [

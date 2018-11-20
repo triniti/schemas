@@ -19,7 +19,7 @@
       </field>
       <field name="search_request" type="message">
         <any-of>
-          <curie>gdbots:ncr:mixin:search-nodes-request</curie>
+          <curie>triniti:curator:mixin:widget-search-request</curie>
         </any-of>
       </field>
       <field name="show_header" type="boolean">

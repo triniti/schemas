@@ -167,7 +167,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "#/definitions/search-nodes-request"
+          "$ref": "#/definitions/widget-search-request"
         }
       ],
       "pbj": {
@@ -215,14 +215,11 @@
     "_id"
   ],
   "definitions": {
-    "search-nodes-request": {
+    "widget-search-request": {
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/search-nodes-request/1-0-0.json#"
-        },
-        {
-          "$ref": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/search-nodes-request/1-0-1.json#"
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/widget-search-request/1-0-0.json#"
         }
       ]
     }

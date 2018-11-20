@@ -14,6 +14,20 @@
         <default>relevance</default>
         <enum id="triniti:news:search-articles-sort"/>
       </field>
+      <field name="timeline_ref" type="identifier">
+        <description>
+          A node ref of a timeline that an article must be slotted into to match the search request.
+          This is only applicable or used when articles are slottable.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

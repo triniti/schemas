@@ -27,7 +27,7 @@ export default class WidgetV1Mixin extends Mixin {
         .build(),
       Fb.create('search_request', T.MessageType.create())
         .anyOfCuries([
-          'gdbots:ncr:mixin:search-nodes-request',
+          'triniti:curator:mixin:widget-search-request',
         ])
         .build(),
       Fb.create('show_header', T.BooleanType.create())

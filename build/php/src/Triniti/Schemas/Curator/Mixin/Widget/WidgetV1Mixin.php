@@ -7,7 +7,7 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\Mixin\SearchNodesRequest\SearchNodesRequest as GdbotsNcrSearchNodesRequest;
+use Triniti\Schemas\Curator\Mixin\WidgetSearchRequest\WidgetSearchRequest as TrinitiCuratorWidgetSearchRequest;
 use Triniti\Schemas\Curator\WidgetId;
 
 final class WidgetV1Mixin extends AbstractMixin
@@ -34,7 +34,7 @@ final class WidgetV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('search_request', T\MessageType::create())
                 ->anyOfClassNames([
-                    GdbotsNcrSearchNodesRequest::class,
+                    TrinitiCuratorWidgetSearchRequest::class,
                 ])
                 ->build(),
             Fb::create('show_header', T\BooleanType::create())

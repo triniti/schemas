@@ -8,6 +8,7 @@ __BREAKING CHANGES__
   * `triniti:apollo:mixin:has-poll`
   * `triniti:apollo:mixin:has-polls`
   * `triniti:common::render-context`
+  * `triniti:curator:mixin:widget-search-request`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:dam:mixin:get-upload-urls-request`
     * Add `asset_id` identifier (AssetId) field.
@@ -18,6 +19,8 @@ __BREAKING CHANGES__
     * Rename `related_galleries` field to `related_gallery_refs`.
   * `triniti:curator:mixin:timeline`
     * Rename `related_timelines` field to `related_timeline_refs`.
+  * `triniti:curator:mixin:widget`
+    * Change `search_request` message field `any-of` to `triniti:curator:mixin:widget-search-request`.
   * `triniti:news:mixin:article`
     * Rename `related_articles` field to `related_article_refs`.
   * `triniti:ovp:mixin:video`
