@@ -23,6 +23,8 @@ __BREAKING CHANGES__
     * Change `search_request` message field `any-of` to `triniti:curator:mixin:widget-search-request`.
   * `triniti:news:mixin:article`
     * Rename `related_articles` field to `related_article_refs`.
+  * `triniti:news:mixin:search-articles-request`
+    * Add `timeline_ref` identifier (NodeRef) field.
   * `triniti:ovp:mixin:video`
     * Add `caption_ref` identifier (NodeRef) field.
     * Rename `related_videos` field to `related_video_refs`.
