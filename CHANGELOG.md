@@ -14,6 +14,7 @@ __BREAKING CHANGES__
   * `triniti:common:mixin:seo`
     * Add `seo_published_at` date-time field.
   * `triniti:curator:mixin:gallery`
+    * Add `image_count` medium-int field.
     * Rename `related_galleries` field to `related_gallery_refs`.
   * `triniti:curator:mixin:timeline`
     * Rename `related_timelines` field to `related_timeline_refs`.
