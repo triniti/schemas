@@ -8,6 +8,6 @@
  */
 
 import MessageResolver from '@gdbots/pbj/MessageResolver';
-import '@triniti/schemas/triniti/canvas/block/RenderContextV1';
+import '@triniti/schemas/triniti/common/RenderContextV1';
 
 export default MessageResolver;

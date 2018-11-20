@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/block/render-context/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/common/render-context/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Message from '@gdbots/pbj/Message';
@@ -14,17 +14,27 @@ export default class RenderContextV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:canvas:block:render-context:1-0-0', RenderContextV1,
+    return new Schema('pbj:triniti:common::render-context:1-0-0', RenderContextV1,
       [
+        Fb.create('cache_enabled', T.BooleanType.create())
+          .withDefault(true)
+          .build(),
         /*
-         * The message (e.g. article) containing the blocks that are
-         * being rendered. This is used by some block renderers when
-         * it needs data from the container or to generate urls.
+         * Number of seconds the rendered output can be cached, if
+         * the cache_enabled field is true. Zero means cache indefinitely.
+         */
+        Fb.create('cache_expiry', T.MediumIntType.create())
+          .withDefault(300)
+          .build(),
+        /*
+         * A message (e.g. article) where the rendering is taking place.
+         * This is used by some renderers when it needs data from the
+         * container or to generate urls.
          */
         Fb.create('container', T.MessageType.create())
           .build(),
         /*
-         * The platform the blocks are being rendered into, e.g.
+         * The platform the rendering is happening in, e.g.
          * web, amp, apple-news, facebook-instant-articles.
          */
         Fb.create('platform', T.StringType.create())
@@ -34,29 +44,31 @@ export default class RenderContextV1 extends Message {
         Fb.create('device_view', T.StringType.create())
           .format(Format.SLUG)
           .build(),
+        Fb.create('viewer_country', T.StringType.create())
+          .pattern('^[A-Z]{2}$')
+          .build(),
         /*
          * Refers to the location on the screen or application that
-         * the blocks are being rendered into, e.g. "article-detail",
+         * the rendering is happening in, e.g. "article-detail",
          * "blogroll", "modal", "jumbotron". Renderers can use this
          * to customize the output.
          */
         Fb.create('section', T.StringType.create())
           .pattern('^[\\w-]+$')
           .build(),
-        /*
-         * A map to store config variables that can be used when
-         * rendering blocks, e.g. ad_zone, sponsor.
-         */
-        Fb.create('config', T.StringType.create())
+        Fb.create('booleans', T.BooleanType.create())
           .asAMap()
           .build(),
-        /*
-         * A map to store flags (booleans) that can be used when
-         * rendering blocks. These are different from "config"
-         * as they will always be booleans, e.g. disable_autoplay,
-         * allowfullscreen, dnt (do not track).
-         */
-        Fb.create('flags', T.BooleanType.create())
+        Fb.create('floats', T.FloatType.create())
+          .asAMap()
+          .build(),
+        Fb.create('ints', T.IntType.create())
+          .asAMap()
+          .build(),
+        Fb.create('strings', T.StringType.create())
+          .asAMap()
+          .build(),
+        Fb.create('trinaries', T.TrinaryType.create())
           .asAMap()
           .build(),
       ],
@@ -79,6 +91,6 @@ export default class RenderContextV1 extends Message {
   }
 }
 
-MessageResolver.register('triniti:canvas:block:render-context', RenderContextV1);
+MessageResolver.register('triniti:common::render-context', RenderContextV1);
 Object.freeze(RenderContextV1);
 Object.freeze(RenderContextV1.prototype);

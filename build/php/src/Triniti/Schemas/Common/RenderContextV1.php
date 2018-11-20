@@ -1,6 +1,6 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/block/render-context/1-0-0.json#
-namespace Triniti\Schemas\Canvas\Block;
+// @link http://schemas.triniti.io/json-schema/triniti/common/render-context/1-0-0.json#
+namespace Triniti\Schemas\Common;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Enum\Format;
@@ -18,17 +18,27 @@ final class RenderContextV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:triniti:canvas:block:render-context:1-0-0', __CLASS__,
+        return new Schema('pbj:triniti:common::render-context:1-0-0', __CLASS__,
             [
+                Fb::create('cache_enabled', T\BooleanType::create())
+                    ->withDefault(true)
+                    ->build(),
                 /*
-                 * The message (e.g. article) containing the blocks that are
-                 * being rendered. This is used by some block renderers when
-                 * it needs data from the container or to generate urls.
+                 * Number of seconds the rendered output can be cached, if
+                 * the cache_enabled field is true. Zero means cache indefinitely.
+                 */
+                Fb::create('cache_expiry', T\MediumIntType::create())
+                    ->withDefault(300)
+                    ->build(),
+                /*
+                 * A message (e.g. article) where the rendering is taking place.
+                 * This is used by some renderers when it needs data from the
+                 * container or to generate urls.
                  */
                 Fb::create('container', T\MessageType::create())
                     ->build(),
                 /*
-                 * The platform the blocks are being rendered into, e.g.
+                 * The platform the rendering is happening in, e.g.
                  * web, amp, apple-news, facebook-instant-articles.
                  */
                 Fb::create('platform', T\StringType::create())
@@ -38,29 +48,31 @@ final class RenderContextV1 extends AbstractMessage implements
                 Fb::create('device_view', T\StringType::create())
                     ->format(Format::SLUG())
                     ->build(),
+                Fb::create('viewer_country', T\StringType::create())
+                    ->pattern('^[A-Z]{2}$')
+                    ->build(),
                 /*
                  * Refers to the location on the screen or application that
-                 * the blocks are being rendered into, e.g. "article-detail",
+                 * the rendering is happening in, e.g. "article-detail",
                  * "blogroll", "modal", "jumbotron". Renderers can use this
                  * to customize the output.
                  */
                 Fb::create('section', T\StringType::create())
                     ->pattern('^[\w-]+$')
                     ->build(),
-                /*
-                 * A map to store config variables that can be used when
-                 * rendering blocks, e.g. ad_zone, sponsor.
-                 */
-                Fb::create('config', T\StringType::create())
+                Fb::create('booleans', T\BooleanType::create())
                     ->asAMap()
                     ->build(),
-                /*
-                 * A map to store flags (booleans) that can be used when
-                 * rendering blocks. These are different from "config"
-                 * as they will always be booleans, e.g. disable_autoplay,
-                 * allowfullscreen, dnt (do not track).
-                 */
-                Fb::create('flags', T\BooleanType::create())
+                Fb::create('floats', T\FloatType::create())
+                    ->asAMap()
+                    ->build(),
+                Fb::create('ints', T\IntType::create())
+                    ->asAMap()
+                    ->build(),
+                Fb::create('strings', T\StringType::create())
+                    ->asAMap()
+                    ->build(),
+                Fb::create('trinaries', T\TrinaryType::create())
                     ->asAMap()
                     ->build(),
             ]

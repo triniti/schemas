@@ -68,8 +68,14 @@ export default class VideoV1Mixin extends Mixin {
        */
       Fb.create('credit', T.StringType.create())
         .build(),
-      Fb.create('related_videos', T.IdentifierType.create())
+      Fb.create('related_video_refs', T.IdentifierType.create())
         .asAList()
+        .classProto(NodeRef)
+        .build(),
+      /*
+       * A reference to the caption asset in DAM for this video.
+       */
+      Fb.create('caption_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
       /*

@@ -20,7 +20,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="seo_pubilshed_at" type="date-time">
+      <field name="seo_published_at" type="date-time">
         <description>
           Allows customization of the publish date for SEO purposes. For example
           if something meaningful within an article is updated, adjust this date

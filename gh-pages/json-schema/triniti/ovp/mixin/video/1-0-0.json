@@ -253,7 +253,7 @@
         "rule": "single"
       }
     },
-    "related_videos": {
+    "related_video_refs": {
       "type": "array",
       "items": [
         {
@@ -265,6 +265,15 @@
       "pbj": {
         "type": "identifier",
         "rule": "list"
+      }
+    },
+    "caption_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the caption asset in DAM for this video.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
       }
     },
     "caption_urls": {

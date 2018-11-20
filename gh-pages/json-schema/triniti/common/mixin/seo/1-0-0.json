@@ -21,7 +21,7 @@
         "rule": "single"
       }
     },
-    "seo_pubilshed_at": {
+    "seo_published_at": {
       "type": "string",
       "format": "date-time",
       "description": "Allows customization of the publish date for SEO purposes. For example if something meaningful within an article is updated, adjust this date instead of the actual publish date.",

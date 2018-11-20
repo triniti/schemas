@@ -164,6 +164,21 @@
         "rule": "single"
       }
     },
+    "primary_person_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "pbj": {
+        "type": "identifier",
+        "rule": "set"
+      }
+    },
     "person_refs": {
       "type": "array",
       "items": [

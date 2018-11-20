@@ -1,12 +1,32 @@
 # CHANGELOG
 
 
-## v0.7.1
+## v0.8.0
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:apollo:mixin:has-poll`
+  * `triniti:apollo:mixin:has-polls`
+  * `triniti:common::render-context`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:dam:mixin:get-upload-urls-request`
     * Add `asset_id` identifier (AssetId) field.
   * `triniti:common:mixin:seo`
-    * Add `seo_pubilshed_at` date-time field.
+    * Add `seo_published_at` date-time field.
+  * `triniti:curator:mixin:gallery`
+    * Rename `related_galleries` field to `related_gallery_refs`.
+  * `triniti:curator:mixin:timeline`
+    * Rename `related_timelines` field to `related_timeline_refs`.
+  * `triniti:news:mixin:article`
+    * Rename `related_articles` field to `related_article_refs`.
+  * `triniti:ovp:mixin:video`
+    * Add `caption_ref` identifier (NodeRef) field.
+    * Rename `related_videos` field to `related_video_refs`.
+  * `triniti:people:mixin:has-people`
+    * Add `primary_person_refs` identifier (NodeRef) set field.
+* __Delete Schemas:__
+  * `triniti:canvas:block:render-context`
+  * `triniti:curator::widget-render-context`
 
 
 ## v0.7.0

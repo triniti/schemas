@@ -44,7 +44,7 @@
           not have HTML as it is used in metadata, feeds, SERP and social.
         </description>
       </field>
-      <field name="related_galleries" type="identifier" rule="list">
+      <field name="related_gallery_refs" type="identifier" rule="list">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>

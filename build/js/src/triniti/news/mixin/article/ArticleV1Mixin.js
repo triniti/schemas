@@ -60,7 +60,7 @@ export default class ArticleV1Mixin extends Mixin {
         .build(),
       Fb.create('related_articles_heading', T.StringType.create())
         .build(),
-      Fb.create('related_articles', T.IdentifierType.create())
+      Fb.create('related_article_refs', T.IdentifierType.create())
         .asAList()
         .classProto(NodeRef)
         .build(),

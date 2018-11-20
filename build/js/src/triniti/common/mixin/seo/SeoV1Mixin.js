@@ -32,7 +32,7 @@ export default class SeoV1Mixin extends Mixin {
        * if something meaningful within an article is updated, adjust this date
        * instead of the actual publish date.
        */
-      Fb.create('seo_pubilshed_at', T.DateTimeType.create())
+      Fb.create('seo_published_at', T.DateTimeType.create())
         .build(),
       Fb.create('meta_description', T.TextType.create())
         .maxLength(5000)

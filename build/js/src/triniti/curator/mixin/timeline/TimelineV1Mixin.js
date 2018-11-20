@@ -41,7 +41,7 @@ export default class TimelineV1Mixin extends Mixin {
       Fb.create('description', T.TextType.create())
         .maxLength(5000)
         .build(),
-      Fb.create('related_timelines', T.IdentifierType.create())
+      Fb.create('related_timeline_refs', T.IdentifierType.create())
         .asAList()
         .classProto(NodeRef)
         .build(),
