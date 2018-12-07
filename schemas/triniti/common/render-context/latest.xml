@@ -31,6 +31,12 @@
       </field>
       <field name="device_view" type="string" format="slug"/>
       <field name="viewer_country" type="string" pattern="^[A-Z]{2}$"/>
+      <field name="promotion_slot" type="string" format="slug">
+        <description>
+          The promotion_slot the rendering is happening in, e.g.
+          desktop-home-sidebar or smartphone-global-html-head.
+        </description>
+      </field>
       <field name="section" type="string" pattern="^[\w-]+$">
         <description>
           Refers to the location on the screen or application that
