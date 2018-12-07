@@ -21,7 +21,7 @@ __BREAKING CHANGES__
   * `triniti:common::render-context`
     * Add `promotion_slot` string field with format slug.
   * `triniti:canvas:mixin:poll-grid-block`
-    * * Rename `poll_refs` field to `node_refs`.
+    * Rename `poll_refs` field to `node_refs`.
 * __Delete Schemas:__
   * `triniti:curator:mixin:card-deck-widget`
 
