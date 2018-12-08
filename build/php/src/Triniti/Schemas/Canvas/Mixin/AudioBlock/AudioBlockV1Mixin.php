@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Canvas\Mixin\AudioBlock;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -31,6 +32,12 @@ final class AudioBlockV1Mixin extends AbstractMixin
              */
             Fb::create('image_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
+                ->build(),
+            /*
+             * For imported audio blocks it may be necessary to store the old URL.
+             */
+            Fb::create('fallback_src_url', T\StringType::create())
+                ->format(Format::URL())
                 ->build(),
         ];
     }

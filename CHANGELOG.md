@@ -5,6 +5,7 @@
 __BREAKING CHANGES__
 
 * __Add Schemas:__
+  * `triniti:curator:mixin:card-widget`
   * `triniti:curator:mixin:code-widget`
   * `triniti:curator:mixin:hero-bar-widget`
   * `triniti:curator:mixin:render-widget-request`
@@ -14,14 +15,18 @@ __BREAKING CHANGES__
   * `triniti:curator:mixin:widget-has-search-request`
   * `triniti:curator:mixin:widget-search-response`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:audio-block`
+    * Add `fallback_src_url` string field with format url.
+  * `triniti:canvas:mixin:document-block`
+    * Add `fallback_src_url` string field with format url.
+  * `triniti:canvas:mixin:poll-grid-block`
+    * Rename `poll_refs` field to `node_refs`.
   * `triniti:curator:mixin:blogroll-widget`
     * Rename `promotion_slot` to `promotion_slot_prefix`.
   * `triniti:curator:mixin:widget`
     * Remove `search_request` field.
   * `triniti:common::render-context`
     * Add `promotion_slot` string field with format slug.
-  * `triniti:canvas:mixin:poll-grid-block`
-    * Rename `poll_refs` field to `node_refs`.
 * __Delete Schemas:__
   * `triniti:curator:mixin:card-deck-widget`
 

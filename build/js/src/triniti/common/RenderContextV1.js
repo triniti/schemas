@@ -48,6 +48,13 @@ export default class RenderContextV1 extends Message {
           .pattern('^[A-Z]{2}$')
           .build(),
         /*
+         * The promotion_slot the rendering is happening in, e.g.
+         * desktop-home-sidebar or smartphone-global-html-head.
+         */
+        Fb.create('promotion_slot', T.StringType.create())
+          .format(Format.SLUG)
+          .build(),
+        /*
          * Refers to the location on the screen or application that
          * the rendering is happening in, e.g. "article-detail",
          * "blogroll", "modal", "jumbotron". Renderers can use this
