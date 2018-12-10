@@ -67,6 +67,18 @@
         "rule": "single"
       }
     },
+    "promotion_slot": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The promotion_slot the rendering is happening in, e.g. desktop-home-sidebar or smartphone-global-html-head.",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
     "section": {
       "type": "string",
       "pattern": "^[\\w-]+$",

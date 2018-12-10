@@ -163,18 +163,6 @@
         "rule": "single"
       }
     },
-    "search_request": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/widget-search-request"
-        }
-      ],
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
-    },
     "show_header": {
       "type": "boolean",
       "default": true,
@@ -210,12 +198,12 @@
         "rule": "single"
       }
     },
-    "promotion_slot": {
+    "promotion_slot_prefix": {
       "type": "string",
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
       "maxLength": 255,
-      "description": "The name of the slot that will contain a promotion with the widgets that will be used for the \"in-between\" aka \"separators\" in the blogroll.",
+      "description": "A prefix for the promotion slots that will be injected in between (aka \"separators\") items in the blogroll.",
       "pbj": {
         "type": "string",
         "rule": "single",
@@ -226,15 +214,5 @@
   "required": [
     "_id"
   ],
-  "definitions": {
-    "widget-search-request": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/widget-search-request/1-0-0.json#"
-        }
-      ]
-    }
-  },
   "additionalProperties": true
 }
