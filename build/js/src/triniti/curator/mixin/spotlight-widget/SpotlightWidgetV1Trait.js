@@ -1,4 +1,4 @@
-export default function BlogrollWidgetV1Trait(m) {
+export default function SpotlightWidgetV1Trait(m) {
   Object.assign(m.prototype, {
     /**
      * @returns {Object}
@@ -6,7 +6,6 @@ export default function BlogrollWidgetV1Trait(m) {
     getUriTemplateVars() {
       return {
         _id: `${this.get('_id', '')}`,
-        promotion_slot_prefix: this.get('promotion_slot_prefix'),
       };
     }
   });

@@ -17,6 +17,18 @@
           <default>() => WidgetId.generate()</default>
         </js-options>
       </field>
+      <field name="pre_render_code" type="text">
+        <description>
+          A string containing (HTML, JavaScript, CSS, etc.) that is injected into
+          the application before the widget renders.
+        </description>
+      </field>
+      <field name="post_render_code" type="text">
+        <description>
+          A string containing (HTML, JavaScript, CSS, etc.) that is injected into
+          the application after the widget renders.
+        </description>
+      </field>
       <field name="show_header" type="boolean">
         <default>true</default>
       </field>

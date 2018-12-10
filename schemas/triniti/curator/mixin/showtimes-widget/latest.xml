@@ -3,8 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:curator:mixin:card-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
+  <schema id="pbj:triniti:curator:mixin:showtimes-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
     <fields>
+      <field name="show" type="string" format="slug"/>
     </fields>
 
     <php-options>
@@ -19,6 +20,7 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
+        'show' => $this->get('show'),
     ];
 }
           ]]>
@@ -36,6 +38,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
+    show: this.get('show'),
   };
 }
           ]]>

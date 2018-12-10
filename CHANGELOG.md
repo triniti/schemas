@@ -1,6 +1,20 @@
 # CHANGELOG
 
 
+## v0.10.0
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:curator:mixin:showtimes-widget`
+  * `triniti:curator:mixin:spotlight-widget`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:widget`
+    * Add `pre_render_code` text field.
+    * Add `post_render_code` text field.
+* __Delete Schemas:__
+  * `triniti:curator:mixin:card-widget`
+
+
 ## v0.9.0
 __BREAKING CHANGES__
 

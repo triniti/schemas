@@ -1,4 +1,4 @@
-export default function CardWidgetV1Trait(m) {
+export default function ShowtimesWidgetV1Trait(m) {
   Object.assign(m.prototype, {
     /**
      * @returns {Object}
@@ -6,6 +6,7 @@ export default function CardWidgetV1Trait(m) {
     getUriTemplateVars() {
       return {
         _id: `${this.get('_id', '')}`,
+        show: this.get('show'),
       };
     }
   });
