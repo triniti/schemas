@@ -17,11 +17,6 @@
           <default>() => WidgetId.generate()</default>
         </js-options>
       </field>
-      <field name="search_request" type="message">
-        <any-of>
-          <curie>triniti:curator:mixin:widget-search-request</curie>
-        </any-of>
-      </field>
       <field name="show_header" type="boolean">
         <default>true</default>
       </field>

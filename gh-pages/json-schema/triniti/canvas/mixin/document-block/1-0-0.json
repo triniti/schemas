@@ -54,6 +54,16 @@
         "type": "identifier",
         "rule": "single"
       }
+    },
+    "fallback_src_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "For imported document blocks it may be necessary to store the old URL.",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
     }
   },
   "required": [

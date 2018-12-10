@@ -25,11 +25,6 @@ export default class WidgetV1Mixin extends Mixin {
         .classProto(WidgetId)
         .overridable(true)
         .build(),
-      Fb.create('search_request', T.MessageType.create())
-        .anyOfCuries([
-          'triniti:curator:mixin:widget-search-request',
-        ])
-        .build(),
       Fb.create('show_header', T.BooleanType.create())
         .withDefault(true)
         .build(),

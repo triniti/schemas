@@ -19,11 +19,10 @@ export default class BlogrollWidgetV1Mixin extends Mixin {
   getFields() {
     return [
       /*
-       * The name of the slot that will contain a promotion
-       * with the widgets that will be used for the "in-between"
-       * aka "separators" in the blogroll.
+       * A prefix for the promotion slots that will be injected
+       * in between (aka "separators") items in the blogroll.
        */
-      Fb.create('promotion_slot', T.StringType.create())
+      Fb.create('promotion_slot_prefix', T.StringType.create())
         .format(Format.SLUG)
         .build(),
     ];

@@ -28,7 +28,7 @@ final class PollGridBlockV1Mixin extends AbstractMixin
              * An array of poll refs to include in this block. It is
              * a list vs a set to allow sorting.
              */
-            Fb::create('poll_refs', T\IdentifierType::create())
+            Fb::create('node_refs', T\IdentifierType::create())
                 ->asAList()
                 ->className(NodeRef::class)
                 ->build(),

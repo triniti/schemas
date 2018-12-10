@@ -7,7 +7,6 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
-use Triniti\Schemas\Curator\Mixin\WidgetSearchRequest\WidgetSearchRequest as TrinitiCuratorWidgetSearchRequest;
 use Triniti\Schemas\Curator\WidgetId;
 
 final class WidgetV1Mixin extends AbstractMixin
@@ -31,11 +30,6 @@ final class WidgetV1Mixin extends AbstractMixin
                 ->withDefault(function() { return WidgetId::generate(); })
                 ->className(WidgetId::class)
                 ->overridable(true)
-                ->build(),
-            Fb::create('search_request', T\MessageType::create())
-                ->anyOfClassNames([
-                    TrinitiCuratorWidgetSearchRequest::class,
-                ])
                 ->build(),
             Fb::create('show_header', T\BooleanType::create())
                 ->withDefault(true)

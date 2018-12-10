@@ -29,7 +29,7 @@
         "rule": "single"
       }
     },
-    "poll_refs": {
+    "node_refs": {
       "type": "array",
       "items": [
         {

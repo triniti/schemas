@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:mixin:widget-has-search-request:1-0-0" mixin="true"
+      extends="triniti:curator:mixin:widget:v1">
+    <fields>
+      <field name="search_request" type="message">
+        <any-of>
+          <curie>triniti:curator:mixin:widget-search-request</curie>
+        </any-of>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

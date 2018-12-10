@@ -5,11 +5,10 @@
 
   <schema id="pbj:triniti:curator:mixin:blogroll-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
     <fields>
-      <field name="promotion_slot" type="string" format="slug">
+      <field name="promotion_slot_prefix" type="string" format="slug">
         <description>
-          The name of the slot that will contain a promotion
-          with the widgets that will be used for the "in-between"
-          aka "separators" in the blogroll.
+          A prefix for the promotion slots that will be injected
+          in between (aka "separators") items in the blogroll.
         </description>
       </field>
     </fields>

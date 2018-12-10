@@ -163,18 +163,6 @@
         "rule": "single"
       }
     },
-    "search_request": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/widget-search-request"
-        }
-      ],
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
-    },
     "show_header": {
       "type": "boolean",
       "default": true,
@@ -238,15 +226,5 @@
   "required": [
     "_id"
   ],
-  "definitions": {
-    "widget-search-request": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/widget-search-request/1-0-0.json#"
-        }
-      ]
-    }
-  },
   "additionalProperties": true
 }
