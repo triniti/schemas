@@ -8,6 +8,8 @@ __BREAKING CHANGES__
   * `triniti:curator:mixin:card-widget`
   * `triniti:curator:mixin:code-widget`
   * `triniti:curator:mixin:hero-bar-widget`
+  * `triniti:curator:mixin:render-promotion-request`
+  * `triniti:curator:mixin:render-promotion-response`
   * `triniti:curator:mixin:render-widget-request`
   * `triniti:curator:mixin:render-widget-response`
   * `triniti:curator:mixin:slider-widget`

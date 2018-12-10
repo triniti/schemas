@@ -17,6 +17,8 @@ export default class RenderWidgetResponseV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('from_cache', T.BooleanType.create())
+        .build(),
       Fb.create('html', T.TextType.create())
         .build(),
       Fb.create('search_response', T.MessageType.create())
