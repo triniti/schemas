@@ -302,7 +302,7 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 65535,
-      "description": "A string containing (HTML, JavaScript, CSS, etc.) that is injected into the application before the widgets render.",
+      "description": "A string containing HTML that is injected into the application before the widgets render.",
       "pbj": {
         "type": "text",
         "rule": "single"
@@ -312,7 +312,7 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 65535,
-      "description": "A string containing (HTML, JavaScript, CSS, etc.) that is injected into the application after the widgets render.",
+      "description": "A string containing HTML that is injected into the application after the widgets render.",
       "pbj": {
         "type": "text",
         "rule": "single"

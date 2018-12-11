@@ -26,13 +26,13 @@ export default class WidgetV1Mixin extends Mixin {
         .overridable(true)
         .build(),
       /*
-       * A string containing (HTML, JavaScript, CSS, etc.) that is injected into
+       * A string containing HTML that is injected into
        * the application before the widget renders.
        */
       Fb.create('pre_render_code', T.TextType.create())
         .build(),
       /*
-       * A string containing (HTML, JavaScript, CSS, etc.) that is injected into
+       * A string containing HTML that is injected into
        * the application after the widget renders.
        */
       Fb.create('post_render_code', T.TextType.create())
