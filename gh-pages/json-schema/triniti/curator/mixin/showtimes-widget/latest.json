@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/carousel-widget/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/showtimes-widget/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -218,28 +218,15 @@
         "rule": "single"
       }
     },
-    "show_captions": {
-      "type": "boolean",
-      "default": true,
+    "show": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
       "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "show_controls": {
-      "type": "boolean",
-      "default": true,
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "show_position_indicators": {
-      "type": "boolean",
-      "default": true,
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
       }
     }
   },

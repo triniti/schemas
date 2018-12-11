@@ -1,6 +1,6 @@
 <?php
 
-namespace Triniti\Schemas\Curator\Mixin\CardWidget;
+namespace Triniti\Schemas\Curator\Mixin\SpotlightWidget;
 
 use Gdbots\Pbj\Schema;
 
@@ -8,7 +8,7 @@ use Gdbots\Pbj\Schema;
  * @method static Schema schema
  * @method mixed get($fieldName, $default = null)
  */
-trait CardWidgetV1Trait
+trait SpotlightWidgetV1Trait
 {
     /**
      * @return array

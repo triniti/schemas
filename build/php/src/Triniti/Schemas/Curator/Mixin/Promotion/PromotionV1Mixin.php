@@ -88,13 +88,13 @@ final class PromotionV1Mixin extends AbstractMixin
                 ->pattern('^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$')
                 ->build(),
             /*
-             * A string containing (HTML, JavaScript, CSS, etc.) that is injected into
+             * A string containing HTML that is injected into
              * the application before the widgets render.
              */
             Fb::create('pre_render_code', T\TextType::create())
                 ->build(),
             /*
-             * A string containing (HTML, JavaScript, CSS, etc.) that is injected into
+             * A string containing HTML that is injected into
              * the application after the widgets render.
              */
             Fb::create('post_render_code', T\TextType::create())

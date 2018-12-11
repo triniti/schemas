@@ -1,6 +1,6 @@
 <?php
 
-namespace Triniti\Schemas\Curator\Mixin\BlogrollWidget;
+namespace Triniti\Schemas\Curator\Mixin\ShowtimesWidget;
 
 use Gdbots\Pbj\Schema;
 
@@ -8,7 +8,7 @@ use Gdbots\Pbj\Schema;
  * @method static Schema schema
  * @method mixed get($fieldName, $default = null)
  */
-trait BlogrollWidgetV1Trait
+trait ShowtimesWidgetV1Trait
 {
     /**
      * @return array
@@ -17,7 +17,7 @@ trait BlogrollWidgetV1Trait
     {
         return [
             '_id' => (string)$this->get('_id'),
-            'promotion_slot_prefix' => $this->get('promotion_slot_prefix'),
+            'show' => $this->get('show'),
         ];
     }
 }

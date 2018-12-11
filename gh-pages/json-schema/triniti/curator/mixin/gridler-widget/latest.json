@@ -163,6 +163,26 @@
         "rule": "single"
       }
     },
+    "pre_render_code": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "A string containing HTML that is injected into the application before the widget renders.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "post_render_code": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "A string containing HTML that is injected into the application after the widget renders.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
     "show_header": {
       "type": "boolean",
       "default": true,
