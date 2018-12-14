@@ -24,6 +24,10 @@ final class HasPeopleV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('primary_person_refs', T\IdentifierType::create())
+                ->asASet()
+                ->className(NodeRef::class)
+                ->build(),
             Fb::create('person_refs', T\IdentifierType::create())
                 ->asASet()
                 ->className(NodeRef::class)

@@ -17,10 +17,17 @@
           <default>() => WidgetId.generate()</default>
         </js-options>
       </field>
-      <field name="search_request" type="message">
-        <any-of>
-          <curie>gdbots:ncr:mixin:search-nodes-request</curie>
-        </any-of>
+      <field name="pre_render_code" type="text">
+        <description>
+          A string containing HTML that is injected into
+          the application before the widget renders.
+        </description>
+      </field>
+      <field name="post_render_code" type="text">
+        <description>
+          A string containing HTML that is injected into
+          the application after the widget renders.
+        </description>
       </field>
       <field name="show_header" type="boolean">
         <default>true</default>

@@ -195,6 +195,15 @@
         "rule": "single"
       }
     },
+    "launch_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "duration": {
       "type": "integer",
       "default": 0,
@@ -244,7 +253,7 @@
         "rule": "single"
       }
     },
-    "related_videos": {
+    "related_video_refs": {
       "type": "array",
       "items": [
         {
@@ -256,6 +265,15 @@
       "pbj": {
         "type": "identifier",
         "rule": "list"
+      }
+    },
+    "caption_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the caption asset in DAM for this video.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
       }
     },
     "caption_urls": {

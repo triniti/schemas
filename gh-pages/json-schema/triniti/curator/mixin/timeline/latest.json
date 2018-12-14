@@ -190,7 +190,7 @@
         "rule": "single"
       }
     },
-    "related_timelines": {
+    "related_timeline_refs": {
       "type": "array",
       "items": [
         {

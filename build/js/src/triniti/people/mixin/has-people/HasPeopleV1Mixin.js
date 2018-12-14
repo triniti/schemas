@@ -18,6 +18,10 @@ export default class HasPeopleV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('primary_person_refs', T.IdentifierType.create())
+        .asASet()
+        .classProto(NodeRef)
+        .build(),
       Fb.create('person_refs', T.IdentifierType.create())
         .asASet()
         .classProto(NodeRef)

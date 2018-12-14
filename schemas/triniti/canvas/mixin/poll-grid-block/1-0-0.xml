@@ -6,7 +6,7 @@
   <schema id="pbj:triniti:canvas:mixin:poll-grid-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="poll_refs" type="identifier" rule="list">
+      <field name="node_refs" type="identifier" rule="list">
         <description>
           An array of poll refs to include in this block. It is
           a list vs a set to allow sorting.

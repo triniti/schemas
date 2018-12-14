@@ -17,7 +17,7 @@ trait BlogrollWidgetV1Trait
     {
         return [
             '_id' => (string)$this->get('_id'),
-            'promotion_slot' => $this->get('promotion_slot'),
+            'promotion_slot_prefix' => $this->get('promotion_slot_prefix'),
         ];
     }
 }

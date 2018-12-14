@@ -29,6 +29,7 @@ export default class CaptionV1 extends Message {
         Fb.create('size', T.MediumIntType.create())
           .build(),
         Fb.create('file_ext', T.StringType.create())
+          .pattern('^[\\w\\.-]+$')
           .build(),
         Fb.create('created_at', T.TimestampType.create())
           .useTypeDefault(false)

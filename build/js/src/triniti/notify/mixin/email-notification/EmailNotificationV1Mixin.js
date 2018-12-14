@@ -19,6 +19,12 @@ export default class EmailNotificationV1Mixin extends Mixin {
   getFields() {
     return [
       /*
+       * The sender email for this notification.
+       */
+      Fb.create('sender', T.StringType.create())
+        .format(Format.EMAIL)
+        .build(),
+      /*
        * A set of list ids that this email notification should be sent to.
        * e.g. "sports-fans", "foodies" or "chud".
        */

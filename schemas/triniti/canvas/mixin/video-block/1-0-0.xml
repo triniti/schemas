@@ -7,6 +7,7 @@
       extends="triniti:canvas:mixin:node-ref-block:v1">
     <fields>
       <field name="autoplay" type="boolean"/>
+      <field name="launch_text" type="string"/>
       <field name="muted" type="boolean"/>
       <field name="start_at" type="small-int"/>
       <field name="show_more_videos" type="boolean"/>

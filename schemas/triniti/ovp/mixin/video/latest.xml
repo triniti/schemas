@@ -43,6 +43,7 @@
       </field>
       <field name="is_live" type="boolean"/>
       <field name="is_full_episode" type="boolean"/>
+      <field name="launch_text" type="string"/>
       <field name="duration" type="small-int">
         <description>Duration of the video in seconds.</description>
       </field>
@@ -62,7 +63,20 @@
           of the video. e.g. "Fox News", "CNN".
         </description>
       </field>
-      <field name="related_videos" type="identifier" rule="list">
+      <field name="related_video_refs" type="identifier" rule="list">
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="caption_ref" type="identifier">
+        <description>
+          A reference to the caption asset in DAM for this video.
+        </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>

@@ -1,11 +1,146 @@
 # CHANGELOG
 
-## v0.6.3
-* __Modify Schemas:__
+
+## v0.10.0
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:curator:mixin:showtimes-widget`
+  * `triniti:curator:mixin:spotlight-widget`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:widget`
+    * Add `pre_render_code` text field.
+    * Add `post_render_code` text field.
+* __Delete Schemas:__
+  * `triniti:curator:mixin:card-widget`
+
+
+## v0.9.0
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:curator:mixin:card-widget`
+  * `triniti:curator:mixin:code-widget`
+  * `triniti:curator:mixin:hero-bar-widget`
+  * `triniti:curator:mixin:render-promotion-request`
+  * `triniti:curator:mixin:render-promotion-response`
+  * `triniti:curator:mixin:render-widget-request`
+  * `triniti:curator:mixin:render-widget-response`
+  * `triniti:curator:mixin:slider-widget`
+  * `triniti:curator:mixin:tag-cloud-widget`
+  * `triniti:curator:mixin:widget-has-search-request`
+  * `triniti:curator:mixin:widget-search-response`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:audio-block`
+    * Add `fallback_src_url` string field with format url.
+  * `triniti:canvas:mixin:document-block`
+    * Add `fallback_src_url` string field with format url.
+  * `triniti:canvas:mixin:poll-grid-block`
+    * Rename `poll_refs` field to `node_refs`.
+  * `triniti:curator:mixin:blogroll-widget`
+    * Rename `promotion_slot` to `promotion_slot_prefix`.
+  * `triniti:curator:mixin:widget`
+    * Remove `search_request` field.
+  * `triniti:common::render-context`
+    * Add `promotion_slot` string field with format slug.
+* __Delete Schemas:__
+  * `triniti:curator:mixin:card-deck-widget`
+
+
+## v0.8.0
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:apollo:mixin:has-poll`
+  * `triniti:apollo:mixin:has-polls`
+  * `triniti:common::render-context`
+  * `triniti:curator:mixin:widget-search-request`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:dam:mixin:get-upload-urls-request`
+    * Add `asset_id` identifier (AssetId) field.
+  * `triniti:common:mixin:seo`
+    * Add `seo_published_at` date-time field.
+  * `triniti:curator:mixin:gallery`
+    * Add `image_count` medium-int field.
+    * Rename `related_galleries` field to `related_gallery_refs`.
+  * `triniti:curator:mixin:timeline`
+    * Rename `related_timelines` field to `related_timeline_refs`.
+  * `triniti:curator:mixin:widget`
+    * Change `search_request` message field `any-of` to `triniti:curator:mixin:widget-search-request`.
+  * `triniti:news:mixin:article`
+    * Rename `related_articles` field to `related_article_refs`.
+  * `triniti:news:mixin:search-articles-request`
+    * Add `timeline_ref` identifier (NodeRef) field.
+  * `triniti:ovp:mixin:video`
+    * Add `caption_ref` identifier (NodeRef) field.
+    * Rename `related_videos` field to `related_video_refs`.
+  * `triniti:people:mixin:has-people`
+    * Add `primary_person_refs` identifier (NodeRef) set field.
+* __Delete Schemas:__
+  * `triniti:canvas:block:render-context`
+  * `triniti:curator::widget-render-context`
+
+
+## v0.7.0
+__BREAKING CHANGES__
+
+* Use `gdbots/schemas` v1.5.7.
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:image-block`
+    * Add `fallback_src_url` string form with format url.
   * `triniti:notify:mixin:email-notification`
-    * Add `sender` string field with email format.
-    
-    
+    * Add `sender` string field with format email.
+* __Delete Schemas:__
+  * `triniti:canvas:mixin:pinterest-board-block`
+  * `triniti:canvas:mixin:pinterest-profile-block`
+  * `triniti:canvas:mixin:twitter-collection-timeline-block`
+  * `triniti:canvas:mixin:twitter-follow-button-block`
+  * `triniti:canvas:mixin:twitter-hashtag-button-block`
+  * `triniti:canvas:mixin:twitter-likes-timeline-block`
+  * `triniti:canvas:mixin:twitter-list-timeline-block`
+  * `triniti:canvas:mixin:twitter-mention-button-block`
+  * `triniti:canvas:mixin:twitter-moment-block`
+  * `triniti:canvas:mixin:twitter-search-timeline-block`
+  * `triniti:canvas:mixin:twitter-user-timeline-block`
+  * `triniti:canvas:mixin:twitter-video-block`
+  * `triniti:canvas:mixin:vevo-video-block`
+
+
+## v0.6.5
+* Use `gdbots/schemas` v1.5.6.
+* __Add Schemas:__
+  * `triniti:curator:mixin:gridler-widget`
+  * `triniti:curator:mixin:tetris-widget`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:sync-teaser`
+    * Remove `target` message field, will use new `ctx_causator` field on commands instead.
+
+
+## v0.6.4
+* Use `gdbots/schemas` v1.5.5.
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:gallery-block`
+    * Add `launch_text` string field.
+    * Add `poster_image_ref` identifier (NodeRef) field.
+  * `triniti:canvas:mixin:video-block`
+    * Add `launch_text` string field.
+  * `triniti:curator:mixin:gallery`
+    * Add `launch_text` string field.
+  * `triniti:curator:mixin:sync-teaser`
+    * Add `target` message field with `any-of` to `triniti:curator:mixin:teaserable`.
+  * `triniti:ovp:mixin:video`
+    * Add `launch_text` string field.
+  * `triniti:ovp.kaltura::entry`
+    * Add `thumbnail_id` string field with pattern `^[\w-]+$`
+    * Add `thumbnail_created_at` timestamp field.
+    * Add `thumbnail_ext` string field with pattern `^[\w\.-]+$`.
+
+
+## v0.6.3
+* __Add Schemas:__
+  * `triniti:curator:mixin:sync-teaser`
+
+
 ## v0.6.2
 * __Add Schemas:__
   * `triniti:sys:mixin:flagset`

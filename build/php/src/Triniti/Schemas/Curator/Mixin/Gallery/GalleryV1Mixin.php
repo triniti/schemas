@@ -46,6 +46,8 @@ final class GalleryV1Mixin extends AbstractMixin
             Fb::create('allow_comments', T\BooleanType::create())
                 ->withDefault(true)
                 ->build(),
+            Fb::create('launch_text', T\StringType::create())
+                ->build(),
             /*
              * A description of the gallery (usually a few sentences). It should typically
              * not have HTML as it is used in metadata, feeds, SERP and social.
@@ -53,7 +55,9 @@ final class GalleryV1Mixin extends AbstractMixin
             Fb::create('description', T\TextType::create())
                 ->maxLength(5000)
                 ->build(),
-            Fb::create('related_galleries', T\IdentifierType::create())
+            Fb::create('image_count', T\MediumIntType::create())
+                ->build(),
+            Fb::create('related_gallery_refs', T\IdentifierType::create())
                 ->asAList()
                 ->className(NodeRef::class)
                 ->build(),

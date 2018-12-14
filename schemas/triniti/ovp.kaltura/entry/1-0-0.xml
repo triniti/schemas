@@ -34,6 +34,12 @@
       <field name="data_url" type="text" format="url"/>
       <field name="download_url" type="text" format="url"/>
       <field name="version" type="small-int"/>
+      <!--
+        @link https://www.kaltura.com/api_v3/testmeDoc/objects/KalturaThumbAsset.html
+      -->
+      <field name="thumbnail_id" type="string" pattern="^[\w-]+$"/>
+      <field name="thumbnail_created_at" type="timestamp" use-type-default="false"/>
+      <field name="thumbnail_ext" type="string" pattern="^[\w\.-]+$"/>
       <field name="thumbnail_url" type="text" format="url"/>
       <field name="start_date" type="timestamp" use-type-default="false"/>
       <field name="end_date" type="timestamp" use-type-default="false"/>

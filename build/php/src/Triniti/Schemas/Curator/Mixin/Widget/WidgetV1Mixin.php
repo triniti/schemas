@@ -7,7 +7,6 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\Mixin\SearchNodesRequest\SearchNodesRequest as GdbotsNcrSearchNodesRequest;
 use Triniti\Schemas\Curator\WidgetId;
 
 final class WidgetV1Mixin extends AbstractMixin
@@ -32,10 +31,17 @@ final class WidgetV1Mixin extends AbstractMixin
                 ->className(WidgetId::class)
                 ->overridable(true)
                 ->build(),
-            Fb::create('search_request', T\MessageType::create())
-                ->anyOfClassNames([
-                    GdbotsNcrSearchNodesRequest::class,
-                ])
+            /*
+             * A string containing HTML that is injected into
+             * the application before the widget renders.
+             */
+            Fb::create('pre_render_code', T\TextType::create())
+                ->build(),
+            /*
+             * A string containing HTML that is injected into
+             * the application after the widget renders.
+             */
+            Fb::create('post_render_code', T\TextType::create())
                 ->build(),
             Fb::create('show_header', T\BooleanType::create())
                 ->withDefault(true)

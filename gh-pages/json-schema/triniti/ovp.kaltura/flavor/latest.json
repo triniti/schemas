@@ -199,8 +199,7 @@
     },
     "file_ext": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
+      "pattern": "^[\\w\\.-]+$",
       "pbj": {
         "type": "string",
         "rule": "single"

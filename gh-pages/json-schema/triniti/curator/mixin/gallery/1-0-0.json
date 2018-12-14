@@ -190,6 +190,15 @@
         "rule": "single"
       }
     },
+    "launch_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "description": {
       "type": "string",
       "minLength": 0,
@@ -200,7 +209,17 @@
         "rule": "single"
       }
     },
-    "related_galleries": {
+    "image_count": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 16777215,
+      "pbj": {
+        "type": "medium-int",
+        "rule": "single"
+      }
+    },
+    "related_gallery_refs": {
       "type": "array",
       "items": [
         {

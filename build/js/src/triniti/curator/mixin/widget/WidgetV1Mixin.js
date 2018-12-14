@@ -25,10 +25,17 @@ export default class WidgetV1Mixin extends Mixin {
         .classProto(WidgetId)
         .overridable(true)
         .build(),
-      Fb.create('search_request', T.MessageType.create())
-        .anyOfCuries([
-          'gdbots:ncr:mixin:search-nodes-request',
-        ])
+      /*
+       * A string containing HTML that is injected into
+       * the application before the widget renders.
+       */
+      Fb.create('pre_render_code', T.TextType.create())
+        .build(),
+      /*
+       * A string containing HTML that is injected into
+       * the application after the widget renders.
+       */
+      Fb.create('post_render_code', T.TextType.create())
         .build(),
       Fb.create('show_header', T.BooleanType.create())
         .withDefault(true)
