@@ -10,7 +10,7 @@
     <fields>
       <field name="text" type="text" max="2000"/>
       <field name="size" type="tiny-int" max="6"/>
-      <field name="url" type="string" format="url"/>
+      <field name="url" type="text" format="url"/>
     </fields>
 
     <php-options>

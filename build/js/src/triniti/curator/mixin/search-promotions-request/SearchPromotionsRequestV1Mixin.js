@@ -22,6 +22,11 @@ export default class SearchPromotionsRequestV1Mixin extends Mixin {
       Fb.create('slot', T.StringType.create())
         .format(Format.SLUG)
         .build(),
+      /*
+       * Used to search for promotions that will render at this time.
+       */
+      Fb.create('render_at', T.DateTimeType.create())
+        .build(),
       Fb.create('sort', T.StringEnumType.create())
         .withDefault(SearchPromotionsSort.RELEVANCE)
         .classProto(SearchPromotionsSort)

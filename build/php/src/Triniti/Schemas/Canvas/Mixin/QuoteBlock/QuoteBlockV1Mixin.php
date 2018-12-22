@@ -29,7 +29,7 @@ final class QuoteBlockV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('source', T\StringType::create())
                 ->build(),
-            Fb::create('source_url', T\StringType::create())
+            Fb::create('source_url', T\TextType::create())
                 ->format(Format::URL())
                 ->build(),
             Fb::create('is_pull_quote', T\BooleanType::create())

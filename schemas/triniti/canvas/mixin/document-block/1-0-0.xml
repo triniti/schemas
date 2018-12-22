@@ -20,7 +20,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="fallback_src_url" type="string" format="url">
+      <field name="fallback_src_url" type="text" format="url">
         <description>
           For imported document blocks it may be necessary to store the old URL.
         </description>

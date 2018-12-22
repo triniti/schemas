@@ -42,7 +42,7 @@ export default class WidgetV1Mixin extends Mixin {
         .build(),
       Fb.create('header_text', T.StringType.create())
         .build(),
-      Fb.create('view_all_url', T.StringType.create())
+      Fb.create('view_all_url', T.TextType.create())
         .format(Format.URL)
         .build(),
       Fb.create('view_all_text', T.StringType.create())

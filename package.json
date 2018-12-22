@@ -1,6 +1,6 @@
 {
   "name": "@triniti/schemas",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Schemas for common Triniti apps and components.",
   "repository": {
     "type": "git",
@@ -49,7 +49,7 @@
     "lodash": "^4.17.11",
     "lodash-es": "^4.17.11",
     "md5": "^2.2.1",
-    "moment": "^2.22.2",
+    "moment": "^2.23.0",
     "rimraf": "^2.6.2",
     "tape": "^4.9.1",
     "utf8": "^3.0.0",

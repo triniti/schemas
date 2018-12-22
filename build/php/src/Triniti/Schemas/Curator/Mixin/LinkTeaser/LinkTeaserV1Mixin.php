@@ -24,7 +24,7 @@ final class LinkTeaserV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('link_url', T\StringType::create())
+            Fb::create('link_url', T\TextType::create())
                 ->required()
                 ->format(Format::URL())
                 ->build(),

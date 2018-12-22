@@ -30,7 +30,7 @@ final class HeadingBlockV1Mixin extends AbstractMixin
             Fb::create('size', T\TinyIntType::create())
                 ->max(6)
                 ->build(),
-            Fb::create('url', T\StringType::create())
+            Fb::create('url', T\TextType::create())
                 ->format(Format::URL())
                 ->build(),
         ];

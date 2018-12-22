@@ -7,7 +7,7 @@
       extends="gdbots:pbjx:mixin:response:v1">
     <fields>
       <field name="from_cache" type="boolean"/>
-      <field name="html" type="text"/>
+      <field name="html" type="medium-text"/>
       <field name="search_response" type="message">
         <any-of>
           <curie>triniti:curator:mixin:widget-search-response</curie>

@@ -30,7 +30,7 @@ export default class DocumentBlockV1Mixin extends Mixin {
       /*
        * For imported document blocks it may be necessary to store the old URL.
        */
-      Fb.create('fallback_src_url', T.StringType.create())
+      Fb.create('fallback_src_url', T.TextType.create())
         .format(Format.URL)
         .build(),
     ];

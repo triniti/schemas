@@ -47,6 +47,8 @@
       <option key="PUBLISHED_AT_DESC" value="published-at-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
       <option key="TITLE_DESC" value="title-desc"/>
+      <option key="PRIORITY_ASC" value="priority-asc"/>
+      <option key="PRIORITY_DESC" value="priority-desc"/>
     </enum>
 
     <enum name="search-teasers-sort" type="string">

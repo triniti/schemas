@@ -23,7 +23,7 @@ export default class PollAnswerV1Mixin extends Mixin {
         .build(),
       Fb.create('title', T.StringType.create())
         .build(),
-      Fb.create('url', T.StringType.create())
+      Fb.create('url', T.TextType.create())
         .format(Format.URL)
         .build(),
       Fb.create('initial_votes', T.IntType.create())

@@ -6,10 +6,10 @@
   <schema id="pbj:triniti:canvas:mixin:image-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:node-ref-block:v1">
     <fields>
-      <field name="caption" type="text" max="2000"/>
+      <field name="caption" type="text" max="5000"/>
       <field name="is_nsfw" type="boolean"/>
-      <field name="url" type="string" format="url"/>
-      <field name="fallback_src_url" type="string" format="url">
+      <field name="url" type="text" format="url"/>
+      <field name="fallback_src_url" type="text" format="url">
         <description>
           For imported image blocks it may be necessary to store the old URL.
         </description>

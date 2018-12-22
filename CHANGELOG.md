@@ -1,6 +1,23 @@
 # CHANGELOG
 
 
+## v0.11.0
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:common:ad-size`
+  * `triniti:curator:mixin:ad-widget`
+  * `triniti:curator:mixin:media-list-widget`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * Change all string fields with format url to text to allow for increasingly more common urls longer than 255 bytes.
+  * `triniti:curator:mixin:render-widget-response`
+    * Change `html` text field to medium-text field.
+  * `triniti:curator:mixin:search-promotions-request`
+    * Add `render_at` date-time field.
+  * `triniti:curator:search-promotions-sort`
+    * Add `priority-asc` and `priority-desc` to enum.
+
+
 ## v0.10.0
 __BREAKING CHANGES__
 

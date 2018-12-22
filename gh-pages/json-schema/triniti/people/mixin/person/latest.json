@@ -175,7 +175,7 @@
     "bio": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 5000,
+      "maxLength": 65535,
       "description": "A short bio of the person. It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
       "pbj": {
         "type": "text",
@@ -198,7 +198,7 @@
       "type": "string",
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "single",
         "format": "url"
       }

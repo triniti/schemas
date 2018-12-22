@@ -8,7 +8,7 @@
   -->
   <schema id="pbj:triniti:canvas:mixin:facebook-video-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="href" type="string" format="url" required="true"/>
+      <field name="href" type="text" format="url" required="true"/>
       <field name="autoplay" type="boolean"/>
       <field name="show_text" type="boolean"/>
       <field name="show_captions" type="boolean"/>
