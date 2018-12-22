@@ -6,7 +6,7 @@
   <schema id="pbj:triniti:curator:mixin:link-teaser:1-0-0" mixin="true"
       extends="triniti:curator:mixin:teaser:v1">
     <fields>
-      <field name="link_url" type="string" format="url" required="true"/>
+      <field name="link_url" type="text" format="url" required="true"/>
     </fields>
 
     <php-options>

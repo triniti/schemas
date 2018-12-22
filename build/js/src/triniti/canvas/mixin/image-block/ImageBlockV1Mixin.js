@@ -19,17 +19,17 @@ export default class ImageBlockV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('caption', T.TextType.create())
-        .maxLength(2000)
+        .maxLength(5000)
         .build(),
       Fb.create('is_nsfw', T.BooleanType.create())
         .build(),
-      Fb.create('url', T.StringType.create())
+      Fb.create('url', T.TextType.create())
         .format(Format.URL)
         .build(),
       /*
        * For imported image blocks it may be necessary to store the old URL.
        */
-      Fb.create('fallback_src_url', T.StringType.create())
+      Fb.create('fallback_src_url', T.TextType.create())
         .format(Format.URL)
         .build(),
     ];

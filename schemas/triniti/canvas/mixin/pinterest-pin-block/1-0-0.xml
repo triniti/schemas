@@ -8,7 +8,7 @@
   -->
   <schema id="pbj:triniti:canvas:mixin:pinterest-pin-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="href" type="string" format="url" required="true"/>
+      <field name="href" type="text" format="url" required="true"/>
       <field name="terse" type="boolean">
         <description>When true, hides the description.</description>
       </field>

@@ -41,7 +41,7 @@ final class PollV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('question', T\StringType::create())
                 ->build(),
-            Fb::create('question_url', T\StringType::create())
+            Fb::create('question_url', T\TextType::create())
                 ->format(Format::URL())
                 ->build(),
             Fb::create('allow_multiple_responses', T\BooleanType::create())

@@ -15,6 +15,8 @@ use Gdbots\Common\Enum;
  * @method static SearchPromotionsSort PUBLISHED_AT_DESC()
  * @method static SearchPromotionsSort TITLE_ASC()
  * @method static SearchPromotionsSort TITLE_DESC()
+ * @method static SearchPromotionsSort PRIORITY_ASC()
+ * @method static SearchPromotionsSort PRIORITY_DESC()
  */
 final class SearchPromotionsSort extends Enum
 {
@@ -28,4 +30,6 @@ final class SearchPromotionsSort extends Enum
     const PUBLISHED_AT_DESC = 'published-at-desc';
     const TITLE_ASC = 'title-asc';
     const TITLE_DESC = 'title-desc';
+    const PRIORITY_ASC = 'priority-asc';
+    const PRIORITY_DESC = 'priority-desc';
 }

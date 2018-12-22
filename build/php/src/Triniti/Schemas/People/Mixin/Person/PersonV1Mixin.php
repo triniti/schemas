@@ -43,7 +43,6 @@ final class PersonV1Mixin extends AbstractMixin
              * used in metadata, feeds, SERP and social.
              */
             Fb::create('bio', T\TextType::create())
-                ->maxLength(5000)
                 ->build(),
             /*
              * Indicates where the bio data originated from, e.g. imdb, freebase, custom.
@@ -51,7 +50,7 @@ final class PersonV1Mixin extends AbstractMixin
             Fb::create('bio_source', T\StringType::create())
                 ->format(Format::SLUG())
                 ->build(),
-            Fb::create('imdb_url', T\StringType::create())
+            Fb::create('imdb_url', T\TextType::create())
                 ->format(Format::URL())
                 ->build(),
         ];

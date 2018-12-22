@@ -31,7 +31,7 @@
         </js-options>
       </field>
       <field name="question" type="string"/>
-      <field name="question_url" type="string" format="url"/>
+      <field name="question_url" type="text" format="url"/>
       <field name="allow_multiple_responses" type="boolean"/>
       <field name="answers" type="message" rule="list">
         <any-of>

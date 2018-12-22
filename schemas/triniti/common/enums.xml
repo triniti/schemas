@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-enums xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/enums.xsd">
+
+  <enums namespace="triniti:common">
+    <!--
+      @link https://support.google.com/adsense/answer/6002621?visit_id=636810270991533702-3998887204
+      @link https://blog.bannersnack.com/banner-standard-sizes/
+    -->
+    <enum name="ad-size" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="MEDIUM_RECTANGLE" value="medium_rectangle"/>
+      <option key="MEDIUM_RECTANGLE_FLEX" value="medium_rectangle_flex"/>
+      <option key="LARGE_RECTANGLE" value="large_rectangle"/>
+      <option key="SQUARE" value="square"/>
+      <option key="SMALL_SQUARE" value="small_square"/>
+      <option key="LEADERBOARD" value="leaderboard"/>
+      <option key="LEADERBOARD_FLEX" value="leaderboard_flex"/>
+      <option key="LARGE_LEADERBOARD" value="large_leaderboard"/>
+      <option key="HALF_PAGE" value="half_page"/>
+      <option key="SKYSCRAPER" value="skyscraper"/>
+      <option key="WIDE_SKYSCRAPER" value="wide_skyscraper"/>
+      <option key="BANNER" value="banner"/>
+      <option key="HALF_BANNER" value="half_banner"/>
+      <option key="PORTRAIT" value="portrait"/>
+      <option key="BILLBOARD" value="billboard"/>
+    </enum>
+  </enums>
+</pbj-enums>

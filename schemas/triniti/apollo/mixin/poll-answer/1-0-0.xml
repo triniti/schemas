@@ -18,7 +18,7 @@
     <fields>
       <field name="_id" type="uuid" required="true"/>
       <field name="title" type="string"/>
-      <field name="url" type="string" format="url"/>
+      <field name="url" type="text" format="url"/>
       <field name="initial_votes" type="int"/>
     </fields>
 

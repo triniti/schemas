@@ -60,7 +60,7 @@
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "description": "For imported document blocks it may be necessary to store the old URL.",
       "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "single",
         "format": "url"
       }

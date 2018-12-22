@@ -106,9 +106,9 @@
     "html": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 65535,
+      "maxLength": 16777215,
       "pbj": {
-        "type": "text",
+        "type": "medium-text",
         "rule": "single"
       }
     },
