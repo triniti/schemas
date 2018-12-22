@@ -40,7 +40,7 @@
     "caption": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 2000,
+      "maxLength": 5000,
       "pbj": {
         "type": "text",
         "rule": "single"
@@ -57,7 +57,7 @@
       "type": "string",
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "single",
         "format": "url"
       }
@@ -67,7 +67,7 @@
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "description": "For imported image blocks it may be necessary to store the old URL.",
       "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "single",
         "format": "url"
       }

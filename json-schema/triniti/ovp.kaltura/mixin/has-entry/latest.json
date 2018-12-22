@@ -287,7 +287,7 @@
       "additionalProperties": false,
       "description": "URL to the caption file keyed by the language code, e.g. \"en\", \"fr\".",
       "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "map",
         "format": "url"
       }
@@ -314,7 +314,7 @@
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "description": "URL to the mezzanine video asset.",
       "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "single",
         "format": "url"
       }
