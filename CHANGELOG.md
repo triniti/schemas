@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.11.1
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+    * Add `twitter_id` string field with pattern `^(\w){1,15}$`
+    * Add `is_celebrity` boolean field.
+
+
 ## v0.11.0
 __BREAKING CHANGES__
 

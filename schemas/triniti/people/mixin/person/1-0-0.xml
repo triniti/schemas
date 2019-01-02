@@ -42,6 +42,8 @@
         </description>
       </field>
       <field name="imdb_url" type="text" format="url"/>
+      <field name="twitter_id" type="string" pattern="^(\w){1,15}$"/>
+      <field name="is_celebrity" type="boolean"/>
     </fields>
 
     <php-options>
