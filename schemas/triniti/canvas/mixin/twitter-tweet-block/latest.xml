@@ -9,7 +9,7 @@
   <schema id="pbj:triniti:canvas:mixin:twitter-tweet-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="screen_name" type="string" pattern="^[\w\.]+$" required="true"/>
+      <field name="screen_name" type="string" pattern="^\w{1,15}$" required="true"/>
       <field name="tweet_id" type="string" pattern="^\d+$" required="true"/>
       <field name="tweet_text" type="text" max="5000"/>
       <field name="hide_media" type="boolean"/>

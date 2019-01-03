@@ -7,6 +7,7 @@ export default function PersonV1Trait(m) {
       return {
         _id: `${this.get('_id', '')}`,
         slug: this.get('slug'),
+        twitter_username: this.get('twitter_username'),
       };
     }
   });

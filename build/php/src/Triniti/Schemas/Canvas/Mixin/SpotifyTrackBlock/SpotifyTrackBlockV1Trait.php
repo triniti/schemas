@@ -1,6 +1,6 @@
 <?php
 
-namespace Triniti\Schemas\People\Mixin\Person;
+namespace Triniti\Schemas\Canvas\Mixin\SpotifyTrackBlock;
 
 use Gdbots\Pbj\Schema;
 
@@ -8,7 +8,7 @@ use Gdbots\Pbj\Schema;
  * @method static Schema schema
  * @method mixed get($fieldName, $default = null)
  */
-trait PersonV1Trait
+trait SpotifyTrackBlockV1Trait
 {
     /**
      * @return array
@@ -16,9 +16,8 @@ trait PersonV1Trait
     public function getUriTemplateVars()
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'slug' => $this->get('slug'),
-            'twitter_username' => $this->get('twitter_username'),
+            'etag' => $this->get('etag'),
+            'track_id' => $this->get('track_id'),
         ];
     }
 }

@@ -25,7 +25,7 @@ final class TwitterTweetBlockV1Mixin extends AbstractMixin
         return [
             Fb::create('screen_name', T\StringType::create())
                 ->required()
-                ->pattern('^[\w\.]+$')
+                ->pattern('^\w{1,15}$')
                 ->build(),
             Fb::create('tweet_id', T\StringType::create())
                 ->required()

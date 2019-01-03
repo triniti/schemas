@@ -96,13 +96,6 @@
         "rule": "single"
       }
     },
-    "from_cache": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
     "html": {
       "type": "string",
       "minLength": 0,

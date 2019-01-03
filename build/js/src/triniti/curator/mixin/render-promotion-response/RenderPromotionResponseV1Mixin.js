@@ -17,8 +17,6 @@ export default class RenderPromotionResponseV1Mixin extends Mixin {
    */
   getFields() {
     return [
-      Fb.create('from_cache', T.BooleanType.create())
-        .build(),
       Fb.create('promotion', T.MessageType.create())
         .anyOfCuries([
           'triniti:curator:mixin:promotion',

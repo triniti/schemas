@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/twitter-tweet-block/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/spotify-track-block/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -29,49 +29,17 @@
         "rule": "single"
       }
     },
-    "screen_name": {
+    "track_id": {
       "type": "string",
-      "pattern": "^\\w{1,15}$",
+      "pattern": "^\\w+$",
       "pbj": {
         "type": "string",
-        "rule": "single"
-      }
-    },
-    "tweet_id": {
-      "type": "string",
-      "pattern": "^\\d+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "tweet_text": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 5000,
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
-    },
-    "hide_media": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "hide_thread": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
         "rule": "single"
       }
     }
   },
   "required": [
-    "screen_name",
-    "tweet_id"
+    "track_id"
   ],
   "additionalProperties": true
 }

@@ -3,17 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <!--
-    @link https://dev.twitter.com/web/embedded-tweets/parameters
-  -->
-  <schema id="pbj:triniti:canvas:mixin:twitter-tweet-block:1-0-0" mixin="true"
+  <schema id="pbj:triniti:canvas:mixin:spotify-track-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="screen_name" type="string" pattern="^\w{1,15}$" required="true"/>
-      <field name="tweet_id" type="string" pattern="^\d+$" required="true"/>
-      <field name="tweet_text" type="text" max="5000"/>
-      <field name="hide_media" type="boolean"/>
-      <field name="hide_thread" type="boolean"/>
+      <field name="track_id" type="string" pattern="^\w+$" required="true"/>
     </fields>
 
     <php-options>
@@ -28,10 +21,7 @@ public function getUriTemplateVars()
 {
     return [
         'etag' => $this->get('etag'),
-        'screen_name' => $this->get('screen_name'),
-        'tweet_id' => $this->get('tweet_id'),
-        'hide_media' => $this->get('hide_media'),
-        'hide_thread' => $this->get('hide_thread'),
+        'track_id' => $this->get('track_id'),
     ];
 }
           ]]>
@@ -49,10 +39,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     etag: this.get('etag'),
-    screen_name: this.get('screen_name'),
-    tweet_id: this.get('tweet_id'),
-    hide_media: this.get('hide_media'),
-    hide_thread: this.get('hide_thread'),
+    track_id: this.get('track_id'),
   };
 }
           ]]>

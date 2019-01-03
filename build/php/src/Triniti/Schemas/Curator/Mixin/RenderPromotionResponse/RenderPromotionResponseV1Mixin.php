@@ -25,8 +25,6 @@ final class RenderPromotionResponseV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('from_cache', T\BooleanType::create())
-                ->build(),
             Fb::create('promotion', T\MessageType::create())
                 ->anyOfClassNames([
                     TrinitiCuratorPromotion::class,
