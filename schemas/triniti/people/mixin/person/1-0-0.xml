@@ -42,7 +42,7 @@
         </description>
       </field>
       <field name="imdb_url" type="text" format="url"/>
-      <field name="twitter_id" type="string" pattern="^(\w){1,15}$"/>
+      <field name="twitter_username" type="string" pattern="^\w{1,15}$"/>
       <field name="is_celebrity" type="boolean"/>
     </fields>
 
@@ -59,6 +59,7 @@ public function getUriTemplateVars()
     return [
         '_id' => (string)$this->get('_id'),
         'slug' => $this->get('slug'),
+        'twitter_username' => $this->get('twitter_username'),
     ];
 }
           ]]>
@@ -77,6 +78,7 @@ getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
     slug: this.get('slug'),
+    twitter_username: this.get('twitter_username'),
   };
 }
           ]]>

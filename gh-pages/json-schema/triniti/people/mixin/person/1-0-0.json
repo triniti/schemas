@@ -203,9 +203,9 @@
         "format": "url"
       }
     },
-    "twitter_id": {
+    "twitter_username": {
       "type": "string",
-      "pattern": "^(\\w){1,15}$",
+      "pattern": "^\\w{1,15}$",
       "pbj": {
         "type": "string",
         "rule": "single"

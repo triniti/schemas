@@ -2,8 +2,15 @@
 
 
 ## v0.11.1
+* __Add Schemas:__
+  * `triniti:canvas:mixin:spotify-track-block`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
-    * Add `twitter_id` string field with pattern `^(\w){1,15}$`
+  * `triniti:curator:mixin:render-promotion-response`
+    * Remove `from_cache` field.
+  * `triniti:curator:mixin:render-widget-response`
+    * Remove `from_cache` field.
+  * `triniti:people:mixin:person`
+    * Add `twitter_username` string field with pattern `^\w{1,15}$`
     * Add `is_celebrity` boolean field.
 
 

@@ -53,8 +53,8 @@ final class PersonV1Mixin extends AbstractMixin
             Fb::create('imdb_url', T\TextType::create())
                 ->format(Format::URL())
                 ->build(),
-            Fb::create('twitter_id', T\StringType::create())
-                ->pattern('^(\w){1,15}$')
+            Fb::create('twitter_username', T\StringType::create())
+                ->pattern('^\w{1,15}$')
                 ->build(),
             Fb::create('is_celebrity', T\BooleanType::create())
                 ->build(),
