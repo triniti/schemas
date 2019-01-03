@@ -202,6 +202,21 @@
         "rule": "single",
         "format": "url"
       }
+    },
+    "twitter_username": {
+      "type": "string",
+      "pattern": "^\\w{1,15}$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "is_celebrity": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
     }
   },
   "required": [
