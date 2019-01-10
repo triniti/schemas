@@ -14,4 +14,6 @@ SearchPromotionsSort.configure({
   PUBLISHED_AT_DESC: 'published-at-desc',
   TITLE_ASC: 'title-asc',
   TITLE_DESC: 'title-desc',
+  PRIORITY_ASC: 'priority-asc',
+  PRIORITY_DESC: 'priority-desc',
 }, 'triniti:curator:search-promotions-sort');

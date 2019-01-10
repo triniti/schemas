@@ -86,7 +86,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="caption_urls" type="string" format="url" rule="map">
+      <field name="caption_urls" type="text" format="url" rule="map">
         <description>
           URL to the caption file keyed by the language code, e.g. "en", "fr".
         </description>
@@ -94,7 +94,7 @@
       <field name="tvpg_rating" type="string-enum">
         <enum id="triniti:ovp:tvpg-rating"/>
       </field>
-      <field name="mezzanine_url" type="string" format="url">
+      <field name="mezzanine_url" type="text" format="url">
         <description>URL to the mezzanine video asset.</description>
       </field>
       <field name="mezzanine_ref" type="identifier">

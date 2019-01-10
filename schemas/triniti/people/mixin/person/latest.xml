@@ -30,7 +30,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="bio" type="text" max="5000">
+      <field name="bio" type="text">
         <description>
           A short bio of the person. It should typically not have HTML as it is
           used in metadata, feeds, SERP and social.
@@ -41,7 +41,9 @@
           Indicates where the bio data originated from, e.g. imdb, freebase, custom.
         </description>
       </field>
-      <field name="imdb_url" type="string" format="url"/>
+      <field name="imdb_url" type="text" format="url"/>
+      <field name="twitter_username" type="string" pattern="^\w{1,15}$"/>
+      <field name="is_celebrity" type="boolean"/>
     </fields>
 
     <php-options>
@@ -57,6 +59,7 @@ public function getUriTemplateVars()
     return [
         '_id' => (string)$this->get('_id'),
         'slug' => $this->get('slug'),
+        'twitter_username' => $this->get('twitter_username'),
     ];
 }
           ]]>
@@ -75,6 +78,7 @@ getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
     slug: this.get('slug'),
+    twitter_username: this.get('twitter_username'),
   };
 }
           ]]>

@@ -6,7 +6,6 @@
   <schema id="pbj:triniti:curator:mixin:render-promotion-response:1-0-0" mixin="true"
       extends="gdbots:pbjx:mixin:response:v1">
     <fields>
-      <field name="from_cache" type="boolean"/>
       <field name="promotion" type="message">
         <any-of>
           <curie>triniti:curator:mixin:promotion</curie>

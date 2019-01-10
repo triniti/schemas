@@ -81,7 +81,7 @@ export default class VideoV1Mixin extends Mixin {
       /*
        * URL to the caption file keyed by the language code, e.g. "en", "fr".
        */
-      Fb.create('caption_urls', T.StringType.create())
+      Fb.create('caption_urls', T.TextType.create())
         .asAMap()
         .format(Format.URL)
         .build(),
@@ -91,7 +91,7 @@ export default class VideoV1Mixin extends Mixin {
       /*
        * URL to the mezzanine video asset.
        */
-      Fb.create('mezzanine_url', T.StringType.create())
+      Fb.create('mezzanine_url', T.TextType.create())
         .format(Format.URL)
         .build(),
       /*

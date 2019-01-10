@@ -18,6 +18,7 @@ trait PersonV1Trait
         return [
             '_id' => (string)$this->get('_id'),
             'slug' => $this->get('slug'),
+            'twitter_username' => $this->get('twitter_username'),
         ];
     }
 }

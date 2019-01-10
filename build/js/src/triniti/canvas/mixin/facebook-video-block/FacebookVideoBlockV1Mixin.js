@@ -19,7 +19,7 @@ export default class FacebookVideoBlockV1Mixin extends Mixin {
    */
   getFields() {
     return [
-      Fb.create('href', T.StringType.create())
+      Fb.create('href', T.TextType.create())
         .required()
         .format(Format.URL)
         .build(),

@@ -33,7 +33,7 @@
         <default>true</default>
       </field>
       <field name="header_text" type="string"/>
-      <field name="view_all_url" type="string" format="url"/>
+      <field name="view_all_url" type="text" format="url"/>
       <field name="view_all_text" type="string"/>
     </fields>
   </schema>

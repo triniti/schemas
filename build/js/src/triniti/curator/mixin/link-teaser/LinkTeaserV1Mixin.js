@@ -18,7 +18,7 @@ export default class LinkTeaserV1Mixin extends Mixin {
    */
   getFields() {
     return [
-      Fb.create('link_url', T.StringType.create())
+      Fb.create('link_url', T.TextType.create())
         .required()
         .format(Format.URL)
         .build(),

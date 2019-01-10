@@ -24,7 +24,7 @@ final class FacebookPostBlockV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('href', T\StringType::create())
+            Fb::create('href', T\TextType::create())
                 ->required()
                 ->format(Format::URL())
                 ->build(),

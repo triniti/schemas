@@ -37,7 +37,6 @@ export default class PersonV1Mixin extends Mixin {
        * used in metadata, feeds, SERP and social.
        */
       Fb.create('bio', T.TextType.create())
-        .maxLength(5000)
         .build(),
       /*
        * Indicates where the bio data originated from, e.g. imdb, freebase, custom.
@@ -45,8 +44,13 @@ export default class PersonV1Mixin extends Mixin {
       Fb.create('bio_source', T.StringType.create())
         .format(Format.SLUG)
         .build(),
-      Fb.create('imdb_url', T.StringType.create())
+      Fb.create('imdb_url', T.TextType.create())
         .format(Format.URL)
+        .build(),
+      Fb.create('twitter_username', T.StringType.create())
+        .pattern('^\\w{1,15}$')
+        .build(),
+      Fb.create('is_celebrity', T.BooleanType.create())
         .build(),
     ];
   }

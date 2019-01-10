@@ -1,6 +1,6 @@
 {
   "name": "@triniti/schemas",
-  "version": "0.10.0",
+  "version": "0.11.1",
   "description": "Schemas for common Triniti apps and components.",
   "repository": {
     "type": "git",
@@ -44,12 +44,12 @@
     "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react": "^7.12.2",
     "faucet": "^0.0.1",
     "lodash": "^4.17.11",
     "lodash-es": "^4.17.11",
     "md5": "^2.2.1",
-    "moment": "^2.22.2",
+    "moment": "^2.23.0",
     "rimraf": "^2.6.2",
     "tape": "^4.9.1",
     "utf8": "^3.0.0",

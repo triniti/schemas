@@ -24,7 +24,7 @@ final class IframeBlockV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('src', T\StringType::create())
+            Fb::create('src', T\TextType::create())
                 ->required()
                 ->format(Format::URL())
                 ->build(),
