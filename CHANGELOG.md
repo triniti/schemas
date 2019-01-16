@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.11.2
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:ovp:mixin:video`
+    * Add `show_related_videos` boolean field.
+    * Add `related_videos_heading` string field.
+
 ## v0.11.1
 * __Add Schemas:__
   * `triniti:canvas:mixin:spotify-track-block`
