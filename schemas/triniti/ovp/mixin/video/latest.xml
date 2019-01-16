@@ -65,9 +65,9 @@
       </field>
       <field name="show_related_videos" type="boolean">
         <description>
-          Determines if the related articles should render. This is intended as a flag
-          on blogroll/lists, not the permalink of an article where you'd always expect
-          to see the related articles.
+          Determines if the related videos should render. This is intended as a flag
+          on blogroll/lists, not the permalink of a video where you'd always expect
+          to see the related videos.
         </description>
       </field>
       <field name="related_videos_heading" type="string"/>
