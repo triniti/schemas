@@ -48,6 +48,27 @@
         </description>
         <default>true</default>
       </field>
+      <field name="apple_news_enabled" type="boolean">
+        <description>
+          Determines if Apple News should be enabled for this article.
+        </description>
+        <default>true</default>
+      </field>
+      <field name="apple_news_article_id" type="uuid" use-type-default="false">
+        <description>
+          The unique identifier of the Apple News article.
+        </description>
+      </field>
+      <field name="apple_news_revision" type="string" pattern="^[\w\\\/\.:=-]+$">
+        <description>
+          The current revision token for the Apple News article.
+          e.g. AAAAAAAAAAAAAAAAAAAAAQ==
+        </description>
+      </field>
+      <field name="apple_news_share_url" type="text" format="url"/>
+      <field name="apple_news_updated_at" type="timestamp" use-type-default="false">
+        <description>Timestamp when Apple News was last updated at.</description>
+      </field>
       <field name="show_related_articles" type="boolean">
         <description>
           Determines if the related articles should render. This is intended as a flag

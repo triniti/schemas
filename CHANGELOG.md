@@ -2,10 +2,19 @@
 
 
 ## v0.11.2
+* __Add Schemas:__
+  * `triniti:news:mixin:apple-news-article-synced`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:news:mixin:article`
+    * Add `apple_news_enabled` boolean field.
+    * Add `apple_news_article_id` uuid field.
+    * Add `apple_news_revision` string field with pattern `^[\w\\\/\.:=-]+$`.
+    * Add `apple_news_share_url` text field with format url.
+    * Add `apple_news_updated_at` timestamp field. 
   * `triniti:ovp:mixin:video`
     * Add `show_related_videos` boolean field.
     * Add `related_videos_heading` string field.
+
 
 ## v0.11.1
 * __Add Schemas:__
@@ -16,7 +25,7 @@
   * `triniti:curator:mixin:render-widget-response`
     * Remove `from_cache` field.
   * `triniti:people:mixin:person`
-    * Add `twitter_username` string field with pattern `^\w{1,15}$`
+    * Add `twitter_username` string field with pattern `^\w{1,15}$`.
     * Add `is_celebrity` boolean field.
 
 
