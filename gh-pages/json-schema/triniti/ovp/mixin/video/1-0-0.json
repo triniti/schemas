@@ -253,6 +253,23 @@
         "rule": "single"
       }
     },
+    "show_related_videos": {
+      "type": "boolean",
+      "description": "Determines if the related videos should render. This is intended as a flag on blogroll/lists, not the permalink of a video where you'd always expect to see the related videos.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "related_videos_heading": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "related_video_refs": {
       "type": "array",
       "items": [

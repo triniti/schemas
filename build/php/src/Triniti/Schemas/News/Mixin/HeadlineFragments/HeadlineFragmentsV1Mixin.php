@@ -34,6 +34,14 @@ final class HeadlineFragmentsV1Mixin extends AbstractMixin
                 ->asAList()
                 ->build(),
             /*
+             * This array corresponds to the "hf" field and is used to control
+             * the size of the fragment h1...h6.
+             */
+            Fb::create('hf_sizes', T\TinyIntType::create())
+                ->asAList()
+                ->max(6)
+                ->build(),
+            /*
              * This array corresponds to the "hf" field. Any visual treatments that
              * need to be applied would have a value in the same list position in
              * this field. hf and hf_styles fields should always be the same length.

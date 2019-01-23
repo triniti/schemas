@@ -171,6 +171,23 @@
         "rule": "single"
       }
     },
+    "slotting": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that determine where articles will render in lists that use slotting. We call it slotting vs sticky or pinning as that is generally just one at a time.",
+      "pbj": {
+        "type": "tiny-int",
+        "rule": "map"
+      }
+    },
     "allow_comments": {
       "type": "boolean",
       "default": true,
@@ -207,6 +224,54 @@
       "pbj": {
         "type": "boolean",
         "rule": "single"
+      }
+    },
+    "apple_news_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Determines if Apple News should be enabled for this article.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "apple_news_id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "description": "The unique identifier of the Apple News article.",
+      "pbj": {
+        "type": "uuid",
+        "rule": "single",
+        "useTypeDefault": false
+      }
+    },
+    "apple_news_revision": {
+      "type": "string",
+      "pattern": "^[\\w\\\\\\/\\.:=-]+$",
+      "description": "The current revision token for the Apple News article. e.g. AAAAAAAAAAAAAAAAAAAAAQ==",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "apple_news_share_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "apple_news_updated_at": {
+      "type": "integer",
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "description": "Timestamp when Apple News was last updated at.",
+      "pbj": {
+        "type": "timestamp",
+        "rule": "single",
+        "useTypeDefault": false
       }
     },
     "show_related_articles": {
