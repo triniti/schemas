@@ -355,13 +355,16 @@
         "rule": "single"
       }
     },
-    "timeline_ref": {
+    "slotting_key": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A node ref of a timeline that an article must be slotted into to match the search request. This is only applicable or used when articles are slottable.",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The name of the slotting key to use to determine the order of articles returned in the response. e.g. \"home\", \"sports\", \"tv\"",
       "pbj": {
-        "type": "identifier",
-        "rule": "single"
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
       }
     }
   },

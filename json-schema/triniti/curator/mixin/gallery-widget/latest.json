@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery-widget/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -163,69 +163,27 @@
         "rule": "single"
       }
     },
-    "image_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the image asset to use for widgets, sharing, seo.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "poster_image_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the image asset to use as the poster.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "is_live": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "is_full_episode": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "launch_text": {
+    "pre_render_code": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
+      "maxLength": 65535,
+      "description": "A string containing HTML that is injected into the application before the widget renders.",
       "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "single"
       }
     },
-    "duration": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 65535,
-      "description": "Duration of the video in seconds.",
+    "post_render_code": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "A string containing HTML that is injected into the application after the widget renders.",
       "pbj": {
-        "type": "small-int",
+        "type": "text",
         "rule": "single"
       }
     },
-    "has_music": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 2,
-      "pbj": {
-        "type": "trinary",
-        "rule": "single"
-      }
-    },
-    "allow_comments": {
+    "show_header": {
       "type": "boolean",
       "default": true,
       "pbj": {
@@ -233,35 +191,7 @@
         "rule": "single"
       }
     },
-    "description": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 5000,
-      "description": "A description of the video (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
-    },
-    "credit": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "A credit is a short string used to publicly acknowledge the source/creator of the video. e.g. \"Fox News\", \"CNN\".",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "show_related_videos": {
-      "type": "boolean",
-      "description": "Determines if the related videos should render. This is intended as a flag on blogroll/lists, not the permalink of a video where you'd always expect to see the related videos.",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "related_videos_heading": {
+    "header_text": {
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
@@ -270,95 +200,21 @@
         "rule": "single"
       }
     },
-    "related_video_refs": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[\\w\\/\\.:-]+$"
-        }
-      ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "identifier",
-        "rule": "list"
-      }
-    },
-    "caption_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the caption asset in DAM for this video.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "caption_urls": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
-          "type": "string",
-          "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
-        }
-      },
-      "additionalProperties": false,
-      "description": "URL to the caption file keyed by the language code, e.g. \"en\", \"fr\".",
-      "pbj": {
-        "type": "text",
-        "rule": "map",
-        "format": "url"
-      }
-    },
-    "tvpg_rating": {
-      "type": "string",
-      "enum": [
-        "unknown",
-        "TV-G",
-        "TV-MA",
-        "TV-PG",
-        "TV-Y",
-        "TV-Y7",
-        "TV-Y7-FV",
-        "TV-14"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
-    },
-    "mezzanine_url": {
+    "view_all_url": {
       "type": "string",
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "description": "URL to the mezzanine video asset.",
       "pbj": {
         "type": "text",
         "rule": "single",
         "format": "url"
       }
     },
-    "mezzanine_ref": {
+    "view_all_text": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the mezzanine asset in DAM for this video.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "mpm": {
-      "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "description": "A tracking code for video clips that is used to correlate various metrics with payouts to talent in the clip.",
+      "minLength": 0,
+      "maxLength": 255,
       "pbj": {
         "type": "string",
-        "rule": "single"
-      }
-    },
-    "original_air_date": {
-      "type": "string",
-      "format": "date-time",
-      "pbj": {
-        "type": "date-time",
         "rule": "single"
       }
     }
