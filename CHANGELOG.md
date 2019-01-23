@@ -3,14 +3,26 @@
 
 ## v0.11.2
 * __Add Schemas:__
+  * `triniti:curator:mixin:alert-widget`
+  * `triniti:curator:mixin:gallery-widget`
+  * `triniti:curator:mixin:playlist-widget`
+  * `triniti:migrator:command:sync-cf-node`
   * `triniti:news:mixin:apple-news-article-synced`
+  * `triniti:news:mixin:article-slotting-removed`
+  * `triniti:news:mixin:remove-article-slotting`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:news:mixin:article`
     * Add `apple_news_enabled` boolean field.
-    * Add `apple_news_article_id` uuid field.
+    * Add `apple_news_id` uuid field.
     * Add `apple_news_revision` string field with pattern `^[\w\\\/\.:=-]+$`.
     * Add `apple_news_share_url` text field with format url.
-    * Add `apple_news_updated_at` timestamp field. 
+    * Add `apple_news_updated_at` timestamp field.
+    * Add `slotting` tiny-int map field.
+  * `triniti:news:mixin:headline-fragments`
+    * Add `hf_sizes` tiny-int list field with max of 6.
+  * `triniti:news:mixin:search-articles-request`
+    * Add `slotting_key` string field with format slug.
+    * Remove `timeline_ref` field. 
   * `triniti:ovp:mixin:video`
     * Add `show_related_videos` boolean field.
     * Add `related_videos_heading` string field.

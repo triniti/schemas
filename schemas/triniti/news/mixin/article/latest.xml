@@ -20,6 +20,13 @@
       <field name="is_homepage_news" type="boolean">
         <default>true</default>
       </field>
+      <field name="slotting" type="tiny-int" rule="map">
+        <description>
+          A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that determine where
+          articles will render in lists that use slotting. We call it slotting vs
+          sticky or pinning as that is generally just one at a time.
+        </description>
+      </field>
       <field name="allow_comments" type="boolean">
         <default>true</default>
       </field>
@@ -54,7 +61,7 @@
         </description>
         <default>true</default>
       </field>
-      <field name="apple_news_article_id" type="uuid" use-type-default="false">
+      <field name="apple_news_id" type="uuid" use-type-default="false">
         <description>
           The unique identifier of the Apple News article.
         </description>

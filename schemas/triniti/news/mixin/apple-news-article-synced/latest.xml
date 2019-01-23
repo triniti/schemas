@@ -32,7 +32,8 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="apple_news_article_id" type="uuid" use-type-default="false">
+      <field name="apple_news_operation" type="string" pattern="^(created|updated|deleted)$"/>
+      <field name="apple_news_id" type="uuid" use-type-default="false">
         <description>
           The unique identifier of the Apple News article.
         </description>
@@ -44,7 +45,6 @@
         </description>
       </field>
       <field name="apple_news_share_url" type="text" format="url"/>
-      <field name="apple_news_operation" type="string" pattern="^(created|updated|deleted)$"/>
     </fields>
   </schema>
 </pbj-schema>
