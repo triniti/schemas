@@ -56,6 +56,7 @@
     'gdbots:pbjx:request:echo-response' => 'Gdbots\Schemas\Pbjx\Request\EchoResponseV1',
     'gdbots:pbjx:request:request-failed-response' => 'Gdbots\Schemas\Pbjx\Request\RequestFailedResponseV1',
     'triniti:common::render-context' => 'Triniti\Schemas\Common\RenderContextV1',
+    'triniti:migrator:command:sync-cf-node' => 'Triniti\Schemas\Migrator\Command\SyncCfNodeV1',
     'triniti:notify::notifier-result' => 'Triniti\Schemas\Notify\NotifierResultV1',
     'triniti:ovp.kaltura::caption' => 'Triniti\Schemas\OvpKaltura\CaptionV1',
     'triniti:ovp.kaltura::entry' => 'Triniti\Schemas\OvpKaltura\EntryV1',
