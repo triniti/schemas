@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.11.3
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:showtimes-widget`
+    * Add `include_latest_episode` boolean field.
+    * Add `include_latest_promo` boolean field.
+    * Add `show_excerpt` boolean field.
+
 ## v0.11.2
 * __Add Schemas:__
   * `triniti:curator:mixin:alert-widget`
@@ -22,7 +29,7 @@
     * Add `hf_sizes` tiny-int list field with max of 6.
   * `triniti:news:mixin:search-articles-request`
     * Add `slotting_key` string field with format slug.
-    * Remove `timeline_ref` field. 
+    * Remove `timeline_ref` field.
   * `triniti:ovp:mixin:video`
     * Add `show_related_videos` boolean field.
     * Add `related_videos_heading` string field.
