@@ -27,6 +27,12 @@ final class ShowtimesWidgetV1Mixin extends AbstractMixin
             Fb::create('show', T\StringType::create())
                 ->format(Format::SLUG())
                 ->build(),
+            Fb::create('include_latest_episode', T\BooleanType::create())
+                ->build(),
+            Fb::create('include_latest_promo', T\BooleanType::create())
+                ->build(),
+            Fb::create('show_excerpt', T\BooleanType::create())
+                ->build(),
         ];
     }
 }
