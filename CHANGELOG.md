@@ -8,6 +8,7 @@
     * Add `include_latest_promo` boolean field.
     * Add `show_excerpt` boolean field.
 
+
 ## v0.11.2
 * __Add Schemas:__
   * `triniti:curator:mixin:alert-widget`
