@@ -9,6 +9,9 @@
       <field name="include_latest_episode" type="boolean"/>
       <field name="include_latest_promo" type="boolean"/>
       <field name="show_excerpt" type="boolean"/>
+      <field name="headline" type="string"/>
+      <field name="excerpt" type="text"/>
+      <field name="image_ref" type="identifier"/>
     </fields>
 
     <php-options>

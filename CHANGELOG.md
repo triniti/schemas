@@ -7,6 +7,9 @@
     * Add `include_latest_episode` boolean field.
     * Add `include_latest_promo` boolean field.
     * Add `show_excerpt` boolean field.
+    * Add `headline` string field.
+    * Add `excerpt` text field.
+    * Add `image_ref` identifier (NodeRef) field.
 
 
 ## v0.11.2
