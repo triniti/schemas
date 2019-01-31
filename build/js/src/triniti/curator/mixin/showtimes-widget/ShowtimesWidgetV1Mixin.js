@@ -27,6 +27,12 @@ export default class ShowtimesWidgetV1Mixin extends Mixin {
         .build(),
       Fb.create('show_excerpt', T.BooleanType.create())
         .build(),
+      Fb.create('headline', T.StringType.create())
+        .build(),
+      Fb.create('excerpt', T.TextType.create())
+        .build(),
+      Fb.create('image_ref', T.IdentifierType.create())
+        .build(),
     ];
   }
 }

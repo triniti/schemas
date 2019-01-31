@@ -249,6 +249,32 @@
         "type": "boolean",
         "rule": "single"
       }
+    },
+    "headline": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "excerpt": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "image_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
     }
   },
   "required": [
