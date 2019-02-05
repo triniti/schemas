@@ -17,6 +17,7 @@ trait TetrisWidgetV1Trait
     {
         return [
             '_id' => (string)$this->get('_id'),
+            'layout' => $this->get('layout'),
         ];
     }
 }

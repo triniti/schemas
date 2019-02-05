@@ -11,7 +11,7 @@ import MessageResolver from '@gdbots/pbj/MessageResolver';
 import '@gdbots/schemas/gdbots/ncr/command/CreateEdgeV1';
 import '@gdbots/schemas/gdbots/ncr/command/DeleteEdgeV1';
 import '@gdbots/schemas/gdbots/pbjx/command/CheckHealthV1';
-import '@triniti/schemas/triniti/migrator/command/SyncCfNodeV1';
+import '@triniti/schemas/triniti/migrator/command/SyncCfNodesV1';
 import '@triniti/schemas/triniti/ovp.kaltura/command/SyncEntryV1';
 
 export default MessageResolver;

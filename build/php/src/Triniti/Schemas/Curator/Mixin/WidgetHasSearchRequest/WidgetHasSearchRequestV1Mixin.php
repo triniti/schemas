@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\Mixin\Node\Node as GdbotsNcrNode;
 use Triniti\Schemas\Curator\Mixin\WidgetSearchRequest\WidgetSearchRequest as TrinitiCuratorWidgetSearchRequest;
 
 final class WidgetHasSearchRequestV1Mixin extends AbstractMixin
@@ -24,10 +25,34 @@ final class WidgetHasSearchRequestV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            /*
+             * When nodes have been acquired by another process you can populate
+             * this field instead of "search_request".
+             */
+            Fb::create('prefetched_nodes', T\MessageType::create())
+                ->asAList()
+                ->anyOfClassNames([
+                    GdbotsNcrNode::class,
+                ])
+                ->build(),
             Fb::create('search_request', T\MessageType::create())
                 ->anyOfClassNames([
                     TrinitiCuratorWidgetSearchRequest::class,
                 ])
+                ->build(),
+            Fb::create('show_pagination', T\BooleanType::create())
+                ->build(),
+            Fb::create('show_item_cta_text', T\BooleanType::create())
+                ->build(),
+            Fb::create('show_item_date', T\BooleanType::create())
+                ->build(),
+            Fb::create('show_item_duration', T\BooleanType::create())
+                ->build(),
+            Fb::create('show_item_excerpt', T\BooleanType::create())
+                ->build(),
+            Fb::create('show_item_icon', T\BooleanType::create())
+                ->build(),
+            Fb::create('show_item_media_count', T\BooleanType::create())
                 ->build(),
         ];
     }

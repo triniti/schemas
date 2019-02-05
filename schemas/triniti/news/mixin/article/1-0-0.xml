@@ -49,6 +49,7 @@
           with a human friendly label. e.g. "super-hero", "hero", "chud".
         </description>
       </field>
+      <field name="word_count" type="small-int"/>
       <field name="amp_enabled" type="boolean">
         <description>
           Determines if AMP (Accelerated Mobile Pages) should be enabled for this article.

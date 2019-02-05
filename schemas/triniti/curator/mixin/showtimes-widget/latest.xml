@@ -6,6 +6,23 @@
   <schema id="pbj:triniti:curator:mixin:showtimes-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
     <fields>
       <field name="show" type="string" format="slug"/>
+      <field name="include_latest_episode" type="boolean"/>
+      <field name="include_latest_promo" type="boolean"/>
+      <field name="headline" type="string"/>
+      <field name="excerpt" type="text"/>
+      <field name="image_ref" type="identifier">
+        <description>
+          A reference to the image asset to use.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
     </fields>
 
     <php-options>

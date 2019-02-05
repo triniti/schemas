@@ -9,5 +9,5 @@
  */
 
 \Gdbots\Pbj\MessageResolver::registerMap([
-    'triniti:migrator:command:sync-cf-node' => 'Triniti\Schemas\Migrator\Command\SyncCfNodeV1',
+    'triniti:migrator:command:sync-cf-nodes' => 'Triniti\Schemas\Migrator\Command\SyncCfNodesV1',
 ]);
