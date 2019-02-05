@@ -125,6 +125,7 @@
         </description>
       </field>
       <field name="original_air_date" type="date-time"/>
+      <field name="show" type="string"/>
     </fields>
 
     <php-options>

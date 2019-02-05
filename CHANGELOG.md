@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.12.1
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:ovp:mixin:video`
+    * Add `show` string field.
+  * `triniti:ovp:mixin:search-videos-request`
+    * Add `show` string field.
+
+
 ## v0.12.0
 __BREAKING CHANGES__
 
