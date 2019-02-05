@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery-widget/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/apollo/mixin/poll-stats/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -163,84 +163,31 @@
         "rule": "single"
       }
     },
-    "pre_render_code": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 65535,
-      "description": "A string containing HTML that is injected into the application before the widget renders.",
+    "votes": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
       "pbj": {
-        "type": "text",
+        "type": "int",
         "rule": "single"
       }
     },
-    "post_render_code": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 65535,
-      "description": "A string containing HTML that is injected into the application after the widget renders.",
+    "answers": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 4294967295
+        }
+      },
+      "additionalProperties": false,
+      "description": "Map of votes for each answer keyed by the poll answer id.",
       "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
-    },
-    "show_border": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "show_header": {
-      "type": "boolean",
-      "default": true,
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "header_text": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "partner_url": {
-      "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
-      }
-    },
-    "partner_text": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "view_all_url": {
-      "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
-      }
-    },
-    "view_all_text": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
+        "type": "int",
+        "rule": "map"
       }
     }
   },

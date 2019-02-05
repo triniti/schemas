@@ -217,6 +217,16 @@
         "format": "slug"
       }
     },
+    "word_count": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 65535,
+      "pbj": {
+        "type": "small-int",
+        "rule": "single"
+      }
+    },
     "amp_enabled": {
       "type": "boolean",
       "default": true,

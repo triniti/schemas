@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/migrator/command/sync-cf-node/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/migrator/command/sync-cf-nodes/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:triniti:migrator:command:sync-cf-node:1-0-0"
+      "default": "pbj:triniti:migrator:command:sync-cf-nodes:1-0-0"
     },
     "command_id": {
       "type": "string",
@@ -194,28 +194,19 @@
         "overridable": true
       }
     },
-    "cf_element": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "The CrowdFusion element slug.",
+    "cf_node_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+:[a-z0-9\\/-]+$"
+        }
+      ],
+      "additionalProperties": false,
+      "description": "An array of CrowdFusion node refs with format element:slug.",
       "pbj": {
         "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
-    },
-    "cf_slug": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "The CrowdFusion node slug.",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
+        "rule": "list"
       }
     }
   },

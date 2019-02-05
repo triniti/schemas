@@ -183,6 +183,13 @@
         "rule": "single"
       }
     },
+    "show_border": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "show_header": {
       "type": "boolean",
       "default": true,
@@ -192,6 +199,24 @@
       }
     },
     "header_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "partner_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "partner_text": {
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
