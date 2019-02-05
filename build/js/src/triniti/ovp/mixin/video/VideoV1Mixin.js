@@ -120,6 +120,7 @@ export default class VideoV1Mixin extends Mixin {
       Fb.create('original_air_date', T.DateTimeType.create())
         .build(),
       Fb.create('show', T.StringType.create())
+        .format(Format.SLUG)
         .build(),
     ];
   }

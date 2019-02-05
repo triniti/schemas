@@ -1,5 +1,6 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/search-videos-request/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import SearchVideosSort from '@triniti/schemas/triniti/ovp/enums/SearchVideosSort';
@@ -26,6 +27,7 @@ export default class SearchVideosRequestV1Mixin extends Mixin {
         .classProto(SearchVideosSort)
         .build(),
       Fb.create('show', T.StringType.create())
+        .format(Format.SLUG)
         .build(),
     ];
   }
