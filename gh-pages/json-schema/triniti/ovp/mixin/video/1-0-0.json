@@ -361,6 +361,17 @@
         "type": "date-time",
         "rule": "single"
       }
+    },
+    "show": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
     }
   },
   "required": [

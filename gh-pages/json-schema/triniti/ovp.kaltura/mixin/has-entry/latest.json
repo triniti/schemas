@@ -362,6 +362,17 @@
         "rule": "single"
       }
     },
+    "show": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
     "kaltura_entry_id": {
       "type": "string",
       "pattern": "^[\\w-]+$",

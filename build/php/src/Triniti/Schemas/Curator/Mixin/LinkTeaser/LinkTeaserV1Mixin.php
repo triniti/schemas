@@ -28,6 +28,11 @@ final class LinkTeaserV1Mixin extends AbstractMixin
                 ->required()
                 ->format(Format::URL())
                 ->build(),
+            Fb::create('partner_url', T\TextType::create())
+                ->format(Format::URL())
+                ->build(),
+            Fb::create('partner_text', T\StringType::create())
+                ->build(),
         ];
     }
 }

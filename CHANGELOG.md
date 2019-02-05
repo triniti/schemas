@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.12.1
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:teaser`
+    * Add `partner_url` text field with format url.
+    * Add `partner_text` string field.
+  * `triniti:ovp:mixin:search-videos-request`
+    * Add `show` string field with format slug.
+  * `triniti:ovp:mixin:video`
+    * Add `show` string field with format slug.
+
+
 ## v0.12.0
 __BREAKING CHANGES__
 

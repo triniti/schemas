@@ -13,6 +13,7 @@
         <default>relevance</default>
         <enum id="triniti:ovp:search-videos-sort"/>
       </field>
+      <field name="show" type="string" format="slug"/>
     </fields>
   </schema>
 </pbj-schema>

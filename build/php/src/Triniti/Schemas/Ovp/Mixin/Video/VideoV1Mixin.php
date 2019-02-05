@@ -125,6 +125,9 @@ final class VideoV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('original_air_date', T\DateTimeType::create())
                 ->build(),
+            Fb::create('show', T\StringType::create())
+                ->format(Format::SLUG())
+                ->build(),
         ];
     }
 }
