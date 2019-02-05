@@ -3,13 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:migrator:command:sync-cf-node:1-0-0">
+  <schema id="pbj:triniti:migrator:command:sync-cf-nodes:1-0-0">
     <fields>
-      <field name="cf_element" type="string" format="slug">
-        <description>The CrowdFusion element slug.</description>
-      </field>
-      <field name="cf_slug" type="string" format="slug">
-        <description>The CrowdFusion node slug.</description>
+      <field name="cf_node_refs" type="string" pattern="^[a-z0-9-]+:[a-z0-9\/-]+$" rule="list">
+        <description>An array of CrowdFusion node refs with format element:slug.</description>
       </field>
     </fields>
 

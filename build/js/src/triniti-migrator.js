@@ -8,6 +8,6 @@
  */
 
 import MessageResolver from '@gdbots/pbj/MessageResolver';
-import '@triniti/schemas/triniti/migrator/command/SyncCfNodeV1';
+import '@triniti/schemas/triniti/migrator/command/SyncCfNodesV1';
 
 export default MessageResolver;

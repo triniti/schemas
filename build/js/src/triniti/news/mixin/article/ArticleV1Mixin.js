@@ -53,6 +53,8 @@ export default class ArticleV1Mixin extends Mixin {
       Fb.create('classification', T.StringType.create())
         .format(Format.SLUG)
         .build(),
+      Fb.create('word_count', T.SmallIntType.create())
+        .build(),
       /*
        * Determines if AMP (Accelerated Mobile Pages) should be enabled for this article.
        */

@@ -6,6 +6,7 @@ export default function TetrisWidgetV1Trait(m) {
     getUriTemplateVars() {
       return {
         _id: `${this.get('_id', '')}`,
+        layout: this.get('layout'),
       };
     }
   });

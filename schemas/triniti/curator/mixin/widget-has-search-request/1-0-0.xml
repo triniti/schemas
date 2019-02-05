@@ -6,11 +6,27 @@
   <schema id="pbj:triniti:curator:mixin:widget-has-search-request:1-0-0" mixin="true"
       extends="triniti:curator:mixin:widget:v1">
     <fields>
+      <field name="prefetched_nodes" type="message" rule="list">
+        <description>
+          When nodes have been acquired by another process you can populate
+          this field instead of "search_request".
+        </description>
+        <any-of>
+          <curie>gdbots:ncr:mixin:node</curie>
+        </any-of>
+      </field>
       <field name="search_request" type="message">
         <any-of>
           <curie>triniti:curator:mixin:widget-search-request</curie>
         </any-of>
       </field>
+      <field name="show_pagination" type="boolean"/>
+      <field name="show_item_cta_text" type="boolean"/>
+      <field name="show_item_date" type="boolean"/>
+      <field name="show_item_duration" type="boolean"/>
+      <field name="show_item_excerpt" type="boolean"/>
+      <field name="show_item_icon" type="boolean"/>
+      <field name="show_item_media_count" type="boolean"/>
     </fields>
   </schema>
 </pbj-schema>
