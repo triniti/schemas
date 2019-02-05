@@ -31,6 +31,8 @@ final class SearchVideosRequestV1Mixin extends AbstractMixin
                 ->withDefault(SearchVideosSort::RELEVANCE())
                 ->className(SearchVideosSort::class)
                 ->build(),
+            Fb::create('show', T\StringType::create())
+                ->build(),
         ];
     }
 }

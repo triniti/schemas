@@ -25,6 +25,8 @@ export default class SearchVideosRequestV1Mixin extends Mixin {
         .withDefault(SearchVideosSort.RELEVANCE)
         .classProto(SearchVideosSort)
         .build(),
+      Fb.create('show', T.StringType.create())
+        .build(),
     ];
   }
 }

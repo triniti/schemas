@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:ovp:mixin:search-videos-request:1-0-0" mixin="true"
+      extends="gdbots:ncr:mixin:search-nodes-request:v1">
+    <fields>
+      <field name="is_unlisted" type="trinary">
+        <default>2</default>
+      </field>
+      <field name="sort" type="string-enum">
+        <default>relevance</default>
+        <enum id="triniti:ovp:search-videos-sort"/>
+      </field>
+      <field name="show" type="string"/>
+    </fields>
+  </schema>
+</pbj-schema>

@@ -344,6 +344,15 @@
         "type": "string-enum",
         "rule": "single"
       }
+    },
+    "show": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
     }
   },
   "required": [
