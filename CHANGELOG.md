@@ -4,9 +4,9 @@
 ## v0.12.1
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:ovp:mixin:video`
-    * Add `show` string field.
+    * Add `show` string field with format slug.
   * `triniti:ovp:mixin:search-videos-request`
-    * Add `show` string field.
+    * Add `show` string field with format slug.
 
 
 ## v0.12.0
