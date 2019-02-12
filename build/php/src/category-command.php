@@ -12,5 +12,6 @@
     'gdbots:ncr:command:create-edge' => 'Gdbots\Schemas\Ncr\Command\CreateEdgeV1',
     'gdbots:ncr:command:delete-edge' => 'Gdbots\Schemas\Ncr\Command\DeleteEdgeV1',
     'gdbots:pbjx:command:check-health' => 'Gdbots\Schemas\Pbjx\Command\CheckHealthV1',
+    'triniti:migrator:command:sync-cf-nodes' => 'Triniti\Schemas\Migrator\Command\SyncCfNodesV1',
     'triniti:ovp.kaltura:command:sync-entry' => 'Triniti\Schemas\OvpKaltura\Command\SyncEntryV1',
 ]);

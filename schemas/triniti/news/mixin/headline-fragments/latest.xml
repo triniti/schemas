@@ -13,6 +13,12 @@
           basically microbroetry.
         </description>
       </field>
+      <field name="hf_sizes" type="tiny-int" max="6" rule="list">
+        <description>
+          This array corresponds to the "hf" field and is used to control
+          the size of the fragment h1...h6.
+        </description>
+      </field>
       <field name="hf_styles" type="string" format="slug" rule="list">
         <description>
           This array corresponds to the "hf" field. Any visual treatments that

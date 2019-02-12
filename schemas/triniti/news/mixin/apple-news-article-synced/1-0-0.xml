@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:news:mixin:apple-news-article-synced:1-0-0" mixin="true"
+      extends="gdbots:pbjx:mixin:event:v1">
+    <fields>
+      <field name="node_ref" type="identifier" required="true">
+        <description>
+          A reference to the article that was synced.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="notification_ref" type="identifier" required="true">
+        <description>
+          A reference to the notification that caused the sync to take place.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="apple_news_operation" type="string" pattern="^(created|updated|deleted)$"/>
+      <field name="apple_news_id" type="uuid" use-type-default="false">
+        <description>
+          The unique identifier of the Apple News article.
+        </description>
+      </field>
+      <field name="apple_news_revision" type="string" pattern="^[\w\\\/\.:=-]+$">
+        <description>
+          The new revision token for the Apple News article.
+          e.g. AAAAAAAAAAAAAAAAAAAAAQ==
+        </description>
+      </field>
+      <field name="apple_news_share_url" type="text" format="url"/>
+    </fields>
+  </schema>
+</pbj-schema>

@@ -20,6 +20,13 @@
       <field name="is_homepage_news" type="boolean">
         <default>true</default>
       </field>
+      <field name="slotting" type="tiny-int" rule="map">
+        <description>
+          A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that determine where
+          articles will render in lists that use slotting. We call it slotting vs
+          sticky or pinning as that is generally just one at a time.
+        </description>
+      </field>
       <field name="allow_comments" type="boolean">
         <default>true</default>
       </field>
@@ -42,11 +49,33 @@
           with a human friendly label. e.g. "super-hero", "hero", "chud".
         </description>
       </field>
+      <field name="word_count" type="small-int"/>
       <field name="amp_enabled" type="boolean">
         <description>
           Determines if AMP (Accelerated Mobile Pages) should be enabled for this article.
         </description>
         <default>true</default>
+      </field>
+      <field name="apple_news_enabled" type="boolean">
+        <description>
+          Determines if Apple News should be enabled for this article.
+        </description>
+        <default>true</default>
+      </field>
+      <field name="apple_news_id" type="uuid" use-type-default="false">
+        <description>
+          The unique identifier of the Apple News article.
+        </description>
+      </field>
+      <field name="apple_news_revision" type="string" pattern="^[\w\\\/\.:=-]+$">
+        <description>
+          The current revision token for the Apple News article.
+          e.g. AAAAAAAAAAAAAAAAAAAAAQ==
+        </description>
+      </field>
+      <field name="apple_news_share_url" type="text" format="url"/>
+      <field name="apple_news_updated_at" type="timestamp" use-type-default="false">
+        <description>Timestamp when Apple News was last updated at.</description>
       </field>
       <field name="show_related_articles" type="boolean">
         <description>

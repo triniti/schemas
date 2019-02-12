@@ -4,6 +4,10 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:curator:mixin:tetris-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
+    <fields>
+      <field name="layout" type="string" format="slug"/>
+    </fields>
+
     <php-options>
       <insertion-points>
         <imports/>
@@ -16,6 +20,7 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
+        'layout' => $this->get('layout'),
     ];
 }
           ]]>
@@ -33,6 +38,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
+    layout: this.get('layout'),
   };
 }
           ]]>

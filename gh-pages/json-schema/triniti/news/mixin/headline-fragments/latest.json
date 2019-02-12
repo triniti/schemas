@@ -19,6 +19,23 @@
         "rule": "list"
       }
     },
+    "hf_sizes": {
+      "type": "array",
+      "items": [
+        {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 6
+        }
+      ],
+      "additionalProperties": false,
+      "description": "This array corresponds to the \"hf\" field and is used to control the size of the fragment h1...h6.",
+      "pbj": {
+        "type": "tiny-int",
+        "rule": "list"
+      }
+    },
     "hf_styles": {
       "type": "array",
       "items": [

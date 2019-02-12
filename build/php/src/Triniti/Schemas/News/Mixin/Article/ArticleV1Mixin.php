@@ -35,6 +35,14 @@ final class ArticleV1Mixin extends AbstractMixin
             Fb::create('is_homepage_news', T\BooleanType::create())
                 ->withDefault(true)
                 ->build(),
+            /*
+             * A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that determine where
+             * articles will render in lists that use slotting. We call it slotting vs
+             * sticky or pinning as that is generally just one at a time.
+             */
+            Fb::create('slotting', T\TinyIntType::create())
+                ->asAMap()
+                ->build(),
             Fb::create('allow_comments', T\BooleanType::create())
                 ->withDefault(true)
                 ->build(),
@@ -51,11 +59,41 @@ final class ArticleV1Mixin extends AbstractMixin
             Fb::create('classification', T\StringType::create())
                 ->format(Format::SLUG())
                 ->build(),
+            Fb::create('word_count', T\SmallIntType::create())
+                ->build(),
             /*
              * Determines if AMP (Accelerated Mobile Pages) should be enabled for this article.
              */
             Fb::create('amp_enabled', T\BooleanType::create())
                 ->withDefault(true)
+                ->build(),
+            /*
+             * Determines if Apple News should be enabled for this article.
+             */
+            Fb::create('apple_news_enabled', T\BooleanType::create())
+                ->withDefault(true)
+                ->build(),
+            /*
+             * The unique identifier of the Apple News article.
+             */
+            Fb::create('apple_news_id', T\UuidType::create())
+                ->useTypeDefault(false)
+                ->build(),
+            /*
+             * The current revision token for the Apple News article.
+             * e.g. AAAAAAAAAAAAAAAAAAAAAQ==
+             */
+            Fb::create('apple_news_revision', T\StringType::create())
+                ->pattern('^[\w\\\/\.:=-]+$')
+                ->build(),
+            Fb::create('apple_news_share_url', T\TextType::create())
+                ->format(Format::URL())
+                ->build(),
+            /*
+             * Timestamp when Apple News was last updated at.
+             */
+            Fb::create('apple_news_updated_at', T\TimestampType::create())
+                ->useTypeDefault(false)
                 ->build(),
             /*
              * Determines if the related articles should render. This is intended as a flag

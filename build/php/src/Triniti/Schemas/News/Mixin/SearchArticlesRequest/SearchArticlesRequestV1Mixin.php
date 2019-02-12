@@ -3,10 +3,10 @@
 namespace Triniti\Schemas\News\Mixin\SearchArticlesRequest;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\News\Enum\SearchArticlesSort;
 
 final class SearchArticlesRequestV1Mixin extends AbstractMixin
@@ -35,11 +35,11 @@ final class SearchArticlesRequestV1Mixin extends AbstractMixin
                 ->className(SearchArticlesSort::class)
                 ->build(),
             /*
-             * A node ref of a timeline that an article must be slotted into to match the search request.
-             * This is only applicable or used when articles are slottable.
+             * The name of the slotting key to use to determine the order of
+             * articles returned in the response. e.g. "home", "sports", "tv"
              */
-            Fb::create('timeline_ref', T\IdentifierType::create())
-                ->className(NodeRef::class)
+            Fb::create('slotting_key', T\StringType::create())
+                ->format(Format::SLUG())
                 ->build(),
         ];
     }

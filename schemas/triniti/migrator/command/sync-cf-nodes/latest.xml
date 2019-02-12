@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:migrator:command:sync-cf-nodes:1-0-0">
+    <fields>
+      <field name="cf_node_refs" type="string" pattern="^[a-z0-9-]+:[a-z0-9\/-]+$" rule="list">
+        <description>An array of CrowdFusion node refs with format element:slug.</description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

@@ -68,6 +68,15 @@ export default class VideoV1Mixin extends Mixin {
        */
       Fb.create('credit', T.StringType.create())
         .build(),
+      /*
+       * Determines if the related videos should render. This is intended as a flag
+       * on blogroll/lists, not the permalink of a video where you'd always expect
+       * to see the related videos.
+       */
+      Fb.create('show_related_videos', T.BooleanType.create())
+        .build(),
+      Fb.create('related_videos_heading', T.StringType.create())
+        .build(),
       Fb.create('related_video_refs', T.IdentifierType.create())
         .asAList()
         .classProto(NodeRef)
@@ -109,6 +118,9 @@ export default class VideoV1Mixin extends Mixin {
         .pattern('^[\\w\\.-]+$')
         .build(),
       Fb.create('original_air_date', T.DateTimeType.create())
+        .build(),
+      Fb.create('show', T.StringType.create())
+        .format(Format.SLUG)
         .build(),
     ];
   }

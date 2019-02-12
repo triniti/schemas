@@ -1,6 +1,79 @@
 # CHANGELOG
 
 
+## v0.12.1
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:teaser`
+    * Add `partner_url` text field with format url.
+    * Add `partner_text` string field.
+  * `triniti:ovp:mixin:search-videos-request`
+    * Add `show` string field with format slug.
+  * `triniti:ovp:mixin:video`
+    * Add `show` string field with format slug.
+
+
+## v0.12.0
+__BREAKING CHANGES__
+
+* __Add Schemas:__
+  * `triniti:apollo:mixin:poll-stats`
+  * `triniti:migrator:command:sync-cf-nodes`
+  * `triniti:news:mixin:article-stats`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:curator:mixin:showtimes-widget`
+    * Add `include_latest_episode` boolean field.
+    * Add `include_latest_promo` boolean field.
+    * Add `headline` string field.
+    * Add `excerpt` text field.
+    * Add `image_ref` identifier (NodeRef) field.
+  * `triniti:curator:mixin:tetris-widget`
+    * Add `layout` string field with format slug.
+  * `triniti:curator:mixin:widget`
+    * Add `show_border` boolean field.
+    * Add `partner_url` text field with format url.
+    * Add `partner_text` string field.
+  * `triniti:curator:mixin:widget-has-search-request`
+    * Add `prefetched_nodes` message list field with `any-of` to `gdbots:ncr:mixin:node`.
+    * Add `show_pagination` boolean field.
+    * Add `show_item_cta_text` boolean field.
+    * Add `show_item_date` boolean field.
+    * Add `show_item_duration` boolean field.
+    * Add `show_item_excerpt` boolean field.
+    * Add `show_item_icon` boolean field.
+    * Add `show_item_media_count` boolean field.
+  * `triniti:news:mixin:article`
+    * Add `word_count` small-int field.
+* __Delete Schemas:__
+  * `triniti:migrator:command:sync-cf-node`
+
+
+## v0.11.2
+* __Add Schemas:__
+  * `triniti:curator:mixin:alert-widget`
+  * `triniti:curator:mixin:gallery-widget`
+  * `triniti:curator:mixin:playlist-widget`
+  * `triniti:migrator:command:sync-cf-node`
+  * `triniti:news:mixin:apple-news-article-synced`
+  * `triniti:news:mixin:article-slotting-removed`
+  * `triniti:news:mixin:remove-article-slotting`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:news:mixin:article`
+    * Add `apple_news_enabled` boolean field.
+    * Add `apple_news_id` uuid field.
+    * Add `apple_news_revision` string field with pattern `^[\w\\\/\.:=-]+$`.
+    * Add `apple_news_share_url` text field with format url.
+    * Add `apple_news_updated_at` timestamp field.
+    * Add `slotting` tiny-int map field.
+  * `triniti:news:mixin:headline-fragments`
+    * Add `hf_sizes` tiny-int list field with max of 6.
+  * `triniti:news:mixin:search-articles-request`
+    * Add `slotting_key` string field with format slug.
+    * Remove `timeline_ref` field.
+  * `triniti:ovp:mixin:video`
+    * Add `show_related_videos` boolean field.
+    * Add `related_videos_heading` string field.
+
+
 ## v0.11.1
 * __Add Schemas:__
   * `triniti:canvas:mixin:spotify-track-block`
@@ -10,7 +83,7 @@
   * `triniti:curator:mixin:render-widget-response`
     * Remove `from_cache` field.
   * `triniti:people:mixin:person`
-    * Add `twitter_username` string field with pattern `^\w{1,15}$`
+    * Add `twitter_username` string field with pattern `^\w{1,15}$`.
     * Add `is_celebrity` boolean field.
 
 

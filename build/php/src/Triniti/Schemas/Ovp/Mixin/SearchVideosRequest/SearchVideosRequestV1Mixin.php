@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Ovp\Mixin\SearchVideosRequest;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -30,6 +31,9 @@ final class SearchVideosRequestV1Mixin extends AbstractMixin
             Fb::create('sort', T\StringEnumType::create())
                 ->withDefault(SearchVideosSort::RELEVANCE())
                 ->className(SearchVideosSort::class)
+                ->build(),
+            Fb::create('show', T\StringType::create())
+                ->format(Format::SLUG())
                 ->build(),
         ];
     }
