@@ -17,4 +17,5 @@ SearchArticlesSort.configure({
   ORDER_DATE_DESC: 'order-date-desc',
   TITLE_ASC: 'title-asc',
   TITLE_DESC: 'title-desc',
+  COMMENTS: 'comments',
 }, 'triniti:news:search-articles-sort');

@@ -348,7 +348,8 @@
         "order-date-asc",
         "order-date-desc",
         "title-asc",
-        "title-desc"
+        "title-desc",
+        "comments"
       ],
       "pbj": {
         "type": "string-enum",

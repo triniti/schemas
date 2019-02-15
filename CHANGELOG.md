@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.12.2
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:news:search-articles-sort`
+    * Add `comments` to enum.
+
+
 ## v0.12.1
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:curator:mixin:teaser`
