@@ -20,4 +20,5 @@ AdSize.configure({
   HALF_BANNER: 'half_banner',
   PORTRAIT: 'portrait',
   BILLBOARD: 'billboard',
+  SKIN: 'skin',
 }, 'triniti:common:ad-size');

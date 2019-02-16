@@ -2,7 +2,20 @@
 
 
 ## v0.12.2
+* __Add Schemas:__
+  * `triniti:common:aspect-ratio`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:canvas:mixin:image-block`
+    * Add `aspect_ratio` string-enum field using enum `triniti:common:aspect-ratio`.
+  * `triniti:common:ad-size`
+    * Add `skin` to enum.  mmmmm skin.
+  * `triniti:common:mixin:advertising`
+    * Add `dfp_ad_unit_path` string field with pattern `^[\w\/\.:-]+$`.
+    * Add pattern `^[\w\/\.:-]+$` to `dfp_cust_params` field.
+  * `triniti:common:mixin:swipeable`
+    * Add `soft_swipe` string field.
+  * `triniti:curator:mixin:ad-widget`
+    * Add `dfp_ad_unit_path` string field with pattern `^[\w\/\.:-]+$`.
   * `triniti:news:search-articles-sort`
     * Add `comments` to enum.
 
