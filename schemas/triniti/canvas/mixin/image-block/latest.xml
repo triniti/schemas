@@ -9,6 +9,9 @@
       <field name="caption" type="text" max="5000"/>
       <field name="is_nsfw" type="boolean"/>
       <field name="url" type="text" format="url"/>
+      <field name="aspect_ratio" type="string-enum">
+        <enum id="triniti:common:aspect-ratio"/>
+      </field>
       <field name="fallback_src_url" type="text" format="url">
         <description>
           For imported image blocks it may be necessary to store the old URL.

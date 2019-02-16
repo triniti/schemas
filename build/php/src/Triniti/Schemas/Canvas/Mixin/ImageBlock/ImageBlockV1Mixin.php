@@ -7,6 +7,7 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Triniti\Schemas\Common\Enum\AspectRatio;
 
 final class ImageBlockV1Mixin extends AbstractMixin
 {
@@ -31,6 +32,9 @@ final class ImageBlockV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('url', T\TextType::create())
                 ->format(Format::URL())
+                ->build(),
+            Fb::create('aspect_ratio', T\StringEnumType::create())
+                ->className(AspectRatio::class)
                 ->build(),
             /*
              * For imported image blocks it may be necessary to store the old URL.

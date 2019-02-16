@@ -261,10 +261,19 @@
         "banner",
         "half_banner",
         "portrait",
-        "billboard"
+        "billboard",
+        "skin"
       ],
       "pbj": {
         "type": "string-enum",
+        "rule": "single"
+      }
+    },
+    "dfp_ad_unit_path": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "pbj": {
+        "type": "string",
         "rule": "single"
       }
     },
@@ -273,8 +282,7 @@
       "patternProperties": {
         "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
           "type": "string",
-          "minLength": 0,
-          "maxLength": 255
+          "pattern": "^[\\w\\/\\.:-]+$"
         }
       },
       "additionalProperties": false,

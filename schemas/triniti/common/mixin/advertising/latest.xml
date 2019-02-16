@@ -8,7 +8,8 @@
       <field name="ads_enabled" type="boolean">
         <default>true</default>
       </field>
-      <field name="dfp_cust_params" type="string" rule="map"/>
+      <field name="dfp_ad_unit_path" type="string" pattern="^[\w\/\.:-]+$"/>
+      <field name="dfp_cust_params" type="string" pattern="^[\w\/\.:-]+$" rule="map"/>
     </fields>
   </schema>
 </pbj-schema>

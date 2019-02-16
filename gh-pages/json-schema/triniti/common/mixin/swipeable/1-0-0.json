@@ -12,6 +12,16 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "soft_swipe": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "You know, for a softer swipe. Mainly here for legacy content that couldn't think of a better name for whatever this was supposed to be.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
     }
   },
   "additionalProperties": true

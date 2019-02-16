@@ -1,4 +1,5 @@
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/image-block/1-0-0.json#
+import AspectRatio from '@triniti/schemas/triniti/common/enums/AspectRatio';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -25,6 +26,9 @@ export default class ImageBlockV1Mixin extends Mixin {
         .build(),
       Fb.create('url', T.TextType.create())
         .format(Format.URL)
+        .build(),
+      Fb.create('aspect_ratio', T.StringEnumType.create())
+        .classProto(AspectRatio)
         .build(),
       /*
        * For imported image blocks it may be necessary to store the old URL.

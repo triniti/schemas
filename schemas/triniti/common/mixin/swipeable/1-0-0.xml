@@ -11,6 +11,12 @@
           on the node. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
         </description>
       </field>
+      <field name="soft_swipe" type="string">
+        <description>
+          You know, for a softer swipe. Mainly here for legacy content that couldn't
+          think of a better name for whatever this was supposed to be.
+        </description>
+      </field>
     </fields>
   </schema>
 </pbj-schema>
