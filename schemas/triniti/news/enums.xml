@@ -18,6 +18,7 @@
       <option key="ORDER_DATE_DESC" value="order-date-desc"/>
       <option key="TITLE_ASC" value="title-asc"/>
       <option key="TITLE_DESC" value="title-desc"/>
+      <option key="COMMENTS" value="comments"/>
     </enum>
   </enums>
 </pbj-enums>

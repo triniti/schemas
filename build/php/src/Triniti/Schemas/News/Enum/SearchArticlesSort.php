@@ -18,6 +18,7 @@ use Gdbots\Common\Enum;
  * @method static SearchArticlesSort ORDER_DATE_DESC()
  * @method static SearchArticlesSort TITLE_ASC()
  * @method static SearchArticlesSort TITLE_DESC()
+ * @method static SearchArticlesSort COMMENTS()
  */
 final class SearchArticlesSort extends Enum
 {
@@ -34,4 +35,5 @@ final class SearchArticlesSort extends Enum
     const ORDER_DATE_DESC = 'order-date-desc';
     const TITLE_ASC = 'title-asc';
     const TITLE_DESC = 'title-desc';
+    const COMMENTS = 'comments';
 }

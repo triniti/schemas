@@ -21,8 +21,12 @@ export default class AdWidgetV1Mixin extends Mixin {
       Fb.create('ad_size', T.StringEnumType.create())
         .classProto(AdSize)
         .build(),
+      Fb.create('dfp_ad_unit_path', T.StringType.create())
+        .pattern('^[\\w\\/\\.:-]+$')
+        .build(),
       Fb.create('dfp_cust_params', T.StringType.create())
         .asAMap()
+        .pattern('^[\\w\\/\\.:-]+$')
         .build(),
     ];
   }

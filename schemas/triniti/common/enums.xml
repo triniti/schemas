@@ -25,6 +25,23 @@
       <option key="HALF_BANNER" value="half_banner"/>
       <option key="PORTRAIT" value="portrait"/>
       <option key="BILLBOARD" value="billboard"/>
+      <option key="SKIN" value="skin"/>
+    </enum>
+
+    <enum name="aspect-ratio" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="AUTO" value="auto"/>
+      <option key="R1by1" value="1by1"/>
+      <option key="R2by3" value="2by3"/>
+      <option key="R3by2" value="3by2"/>
+      <option key="R3by4" value="3by4"/>
+      <option key="R4by3" value="4by3"/>
+      <option key="R4by5" value="4by5"/>
+      <option key="R5by4" value="5by4"/>
+      <option key="R9by16" value="9by16"/>
+      <option key="R16by9" value="16by9"/>
+      <option key="ORIGINAL" value="original"/>
+      <option key="CUSTOM" value="custom"/>
     </enum>
   </enums>
 </pbj-enums>

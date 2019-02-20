@@ -21,6 +21,7 @@ use Gdbots\Common\Enum;
  * @method static AdSize HALF_BANNER()
  * @method static AdSize PORTRAIT()
  * @method static AdSize BILLBOARD()
+ * @method static AdSize SKIN()
  */
 final class AdSize extends Enum
 {
@@ -40,4 +41,5 @@ final class AdSize extends Enum
     const HALF_BANNER = 'half_banner';
     const PORTRAIT = 'portrait';
     const BILLBOARD = 'billboard';
+    const SKIN = 'skin';
 }
