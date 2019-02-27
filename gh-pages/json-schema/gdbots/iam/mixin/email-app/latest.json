@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/email-app/1-0-2.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/email-app/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -176,61 +176,6 @@
       "pbj": {
         "type": "identifier",
         "rule": "set"
-      }
-    },
-    "sendgrid_api_key": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 65535,
-      "description": "This field contains an access token (used as bearer token) and in some cases SMTP username and password. It should be encrypted. @link https://sendgrid.com/docs/ui/account-and-settings/api-keys/",
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
-    },
-    "sendgrid_lists": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
-          "type": "integer",
-          "default": 0,
-          "minimum": 0,
-          "maximum": 4294967295
-        }
-      },
-      "additionalProperties": false,
-      "description": "Keys are list slugs, e.g. \"newsletter-subscribers\" and values are sendgrid list ids. @link https://sendgrid.api-docs.io/v3.0/contacts-api-lists/create-a-list",
-      "pbj": {
-        "type": "int",
-        "rule": "map"
-      }
-    },
-    "sendgrid_senders": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
-          "type": "integer",
-          "default": 0,
-          "minimum": 0,
-          "maximum": 4294967295
-        }
-      },
-      "additionalProperties": false,
-      "description": "Keys are emails and values are sendgrid sender ids. @link https://sendgrid.api-docs.io/v3.0/sender-identities-api/create-a-sender-identity",
-      "pbj": {
-        "type": "int",
-        "rule": "map"
-      }
-    },
-    "sendgrid_suppression_group_id": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295,
-      "description": "The default sendgrid suppression group id.",
-      "pbj": {
-        "type": "int",
-        "rule": "single"
       }
     }
   },

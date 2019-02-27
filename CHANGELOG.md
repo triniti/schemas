@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v0.12.3
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:notify:mixin:apple-news-notification`
+    * Add `apple_news_id` uuid field.
+    * Add `apple_news_revision` string field with pattern `^[\w\\\/\.:=-]+$`.
+    * Add `apple_news_share_url` text field with format url.
+    * Add `apple_news_operation` string field with pattern `^(created|updated|deleted)$`.
+
+
 ## v0.12.2
 * __Add Schemas:__
   * `triniti:common:aspect-ratio`
