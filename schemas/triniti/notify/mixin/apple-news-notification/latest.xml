@@ -6,7 +6,7 @@
   <schema id="pbj:triniti:notify:mixin:apple-news-notification:1-0-0" mixin="true"
       extends="triniti:notify:mixin:notification:v1">
     <fields>
-      <field name="apple_news_operation" type="string" pattern="^(created|updated|deleted)$"/>
+      <field name="apple_news_operation" type="string" pattern="^(create|update|delete)$"/>
       <field name="apple_news_id" type="uuid" use-type-default="false">
         <description>
           The unique identifier of the Apple News article.

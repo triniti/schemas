@@ -7,7 +7,7 @@
     * Add `apple_news_id` uuid field.
     * Add `apple_news_revision` string field with pattern `^[\w\\\/\.:=-]+$`.
     * Add `apple_news_share_url` text field with format url.
-    * Add `apple_news_operation` string field with pattern `^(created|updated|deleted)$`.
+    * Add `apple_news_operation` string field with pattern `^(create|update|delete)$`.
 
 
 ## v0.12.2
