@@ -177,6 +177,15 @@
         "type": "identifier",
         "rule": "set"
       }
+    },
+    "sendgrid_api_key": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
     }
   },
   "required": [
