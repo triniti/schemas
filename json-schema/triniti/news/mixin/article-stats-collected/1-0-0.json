@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/news/mixin/apple-news-article-synced/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/news/mixin/article-stats-collected/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -164,62 +164,32 @@
     "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the article that was synced.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
       }
     },
-    "notification_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the notification that caused the sync to take place.",
+    "stats": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 4294967295
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map of stat values that should replace any existing collected values.",
       "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "apple_news_operation": {
-      "type": "string",
-      "pattern": "^(create|update|delete)$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "apple_news_id": {
-      "type": "string",
-      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
-      "description": "The unique identifier of the Apple News article.",
-      "pbj": {
-        "type": "uuid",
-        "rule": "single",
-        "useTypeDefault": false
-      }
-    },
-    "apple_news_revision": {
-      "type": "string",
-      "pattern": "^[\\w\\\\\\/\\.:=-]+$",
-      "description": "The new revision token for the Apple News article. e.g. AAAAAAAAAAAAAAAAAAAAAQ==",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "apple_news_share_url": {
-      "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
+        "type": "int",
+        "rule": "map"
       }
     }
   },
   "required": [
     "event_id",
-    "node_ref",
-    "notification_ref"
+    "node_ref"
   ],
   "definitions": {
     "app": {
