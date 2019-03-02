@@ -1,6 +1,50 @@
 # CHANGELOG
 
 
+## v0.12.3
+* __Add Schemas:__
+  * `triniti:news:mixin:article-stats-collected`
+  * `triniti:news:mixin:collect-article-stats`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:apollo:mixin:search-polls-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:canvas:mixin:search-pages-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:curator:mixin:search-galleries-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:curator:mixin:search-teasers-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:curator:mixin:search-timelines-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:dam:mixin:search-assets-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:news:mixin:search-articles-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:ovp:mixin:search-videos-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:notify:mixin:apple-news-notification`
+    * Add `apple_news_id` uuid field.
+    * Add `apple_news_revision` string field with pattern `^[\w\\\/\.:=-]+$`.
+    * Add `apple_news_share_url` text field with format url.
+    * Add `apple_news_operation` string field with pattern `^(create|update|delete)$`.
+
+
 ## v0.12.2
 * __Add Schemas:__
   * `triniti:common:aspect-ratio`

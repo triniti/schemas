@@ -34,7 +34,7 @@ export default class AppleNewsArticleSyncedV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       Fb.create('apple_news_operation', T.StringType.create())
-        .pattern('^(created|updated|deleted)$')
+        .pattern('^(create|update|delete)$')
         .build(),
       /*
        * The unique identifier of the Apple News article.
