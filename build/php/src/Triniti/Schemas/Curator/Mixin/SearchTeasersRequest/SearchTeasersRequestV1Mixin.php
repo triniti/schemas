@@ -53,6 +53,17 @@ final class SearchTeasersRequestV1Mixin extends AbstractMixin
             Fb::create('timeline_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
                 ->build(),
+            Fb::create('channel_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+            Fb::create('category_refs', T\IdentifierType::create())
+                ->asASet()
+                ->className(NodeRef::class)
+                ->build(),
+            Fb::create('person_refs', T\IdentifierType::create())
+                ->asASet()
+                ->className(NodeRef::class)
+                ->build(),
         ];
     }
 }

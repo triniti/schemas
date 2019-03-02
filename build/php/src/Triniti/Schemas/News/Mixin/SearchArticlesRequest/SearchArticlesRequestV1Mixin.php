@@ -7,6 +7,7 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\News\Enum\SearchArticlesSort;
 
 final class SearchArticlesRequestV1Mixin extends AbstractMixin
@@ -40,6 +41,17 @@ final class SearchArticlesRequestV1Mixin extends AbstractMixin
              */
             Fb::create('slotting_key', T\StringType::create())
                 ->format(Format::SLUG())
+                ->build(),
+            Fb::create('channel_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+            Fb::create('category_refs', T\IdentifierType::create())
+                ->asASet()
+                ->className(NodeRef::class)
+                ->build(),
+            Fb::create('person_refs', T\IdentifierType::create())
+                ->asASet()
+                ->className(NodeRef::class)
                 ->build(),
         ];
     }

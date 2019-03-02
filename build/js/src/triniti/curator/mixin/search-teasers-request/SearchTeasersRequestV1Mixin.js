@@ -47,6 +47,17 @@ export default class SearchTeasersRequestV1Mixin extends Mixin {
       Fb.create('timeline_ref', T.IdentifierType.create())
         .classProto(NodeRef)
         .build(),
+      Fb.create('channel_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      Fb.create('category_refs', T.IdentifierType.create())
+        .asASet()
+        .classProto(NodeRef)
+        .build(),
+      Fb.create('person_refs', T.IdentifierType.create())
+        .asASet()
+        .classProto(NodeRef)
+        .build(),
     ];
   }
 }
