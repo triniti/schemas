@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\News\Mixin\CollectArticleStats;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -27,6 +28,14 @@ final class CollectArticleStatsV1Mixin extends AbstractMixin
             Fb::create('node_ref', T\IdentifierType::create())
                 ->required()
                 ->className(NodeRef::class)
+                ->build(),
+            /*
+             * The name of the services to get the stats from, e.g. adobe, facebook,
+             * google, disqus, etc. When not provided you should call all providers.
+             */
+            Fb::create('providers', T\StringType::create())
+                ->asASet()
+                ->format(Format::SLUG())
                 ->build(),
         ];
     }

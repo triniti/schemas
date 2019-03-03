@@ -19,7 +19,8 @@ export default class SearchPeopleRequestV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('is_unlisted', T.TrinaryType.create())
-        .withDefault(2)
+        .build(),
+      Fb.create('is_celebrity', T.TrinaryType.create())
         .build(),
       Fb.create('sort', T.StringEnumType.create())
         .withDefault(SearchPeopleSort.TITLE_ASC)

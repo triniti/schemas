@@ -15,6 +15,11 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="providers" type="string" format="slug" rule="set">
+        <description>
+          The name of the providers used to collect the stats.
+        </description>
+      </field>
       <field name="stats" type="int" rule="map">
         <description>
           A map of stat values that should replace any existing collected values.

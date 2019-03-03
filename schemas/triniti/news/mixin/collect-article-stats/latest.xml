@@ -15,6 +15,12 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="providers" type="string" format="slug" rule="set">
+        <description>
+          The name of the services to get the stats from, e.g. adobe, facebook,
+          google, disqus, etc. When not provided you should call all providers.
+        </description>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

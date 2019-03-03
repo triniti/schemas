@@ -14,11 +14,10 @@
       </field>
       <field name="apple_news_revision" type="string" pattern="^[\w\\\/\.:=-]+$">
         <description>
-          The new revision token for the Apple News article.
+          The existing revision token for the Apple News article.
           e.g. AAAAAAAAAAAAAAAAAAAAAQ==
         </description>
       </field>
-      <field name="apple_news_share_url" type="text" format="url"/>
     </fields>
 
     <php-options>

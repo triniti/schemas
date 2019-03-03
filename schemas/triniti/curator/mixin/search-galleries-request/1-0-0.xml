@@ -6,9 +6,7 @@
   <schema id="pbj:triniti:curator:mixin:search-galleries-request:1-0-0" mixin="true"
       extends="gdbots:ncr:mixin:search-nodes-request:v1">
     <fields>
-      <field name="is_unlisted" type="trinary">
-        <default>2</default>
-      </field>
+      <field name="is_unlisted" type="trinary"/>
       <field name="sort" type="string-enum">
         <default>relevance</default>
         <enum id="triniti:curator:search-galleries-sort"/>

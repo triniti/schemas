@@ -314,7 +314,17 @@
     },
     "is_unlisted": {
       "type": "integer",
-      "default": 2,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 2,
+      "pbj": {
+        "type": "trinary",
+        "rule": "single"
+      }
+    },
+    "is_celebrity": {
+      "type": "integer",
+      "default": 0,
       "minimum": 0,
       "maximum": 2,
       "pbj": {

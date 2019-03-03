@@ -27,7 +27,6 @@ final class SearchArticlesRequestV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('is_unlisted', T\TrinaryType::create())
-                ->withDefault(2)
                 ->build(),
             Fb::create('is_locked', T\TrinaryType::create())
                 ->build(),

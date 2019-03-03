@@ -9,6 +9,7 @@
       <field name="nodes" type="message" rule="list">
         <any-of>
           <curie>triniti:news:mixin:article</curie>
+          <curie>triniti:news:mixin:article-stats</curie>
         </any-of>
       </field>
     </fields>

@@ -27,7 +27,6 @@ final class SearchVideosRequestV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('is_unlisted', T\TrinaryType::create())
-                ->withDefault(2)
                 ->build(),
             Fb::create('sort', T\StringEnumType::create())
                 ->withDefault(SearchVideosSort::RELEVANCE())

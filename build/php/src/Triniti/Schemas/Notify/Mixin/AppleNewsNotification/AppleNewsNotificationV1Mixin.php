@@ -3,7 +3,6 @@
 namespace Triniti\Schemas\Notify\Mixin\AppleNewsNotification;
 
 use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -34,14 +33,11 @@ final class AppleNewsNotificationV1Mixin extends AbstractMixin
                 ->useTypeDefault(false)
                 ->build(),
             /*
-             * The new revision token for the Apple News article.
+             * The existing revision token for the Apple News article.
              * e.g. AAAAAAAAAAAAAAAAAAAAAQ==
              */
             Fb::create('apple_news_revision', T\StringType::create())
                 ->pattern('^[\w\\\/\.:=-]+$')
-                ->build(),
-            Fb::create('apple_news_share_url', T\TextType::create())
-                ->format(Format::URL())
                 ->build(),
         ];
     }

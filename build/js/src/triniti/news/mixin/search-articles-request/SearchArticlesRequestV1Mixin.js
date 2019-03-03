@@ -21,7 +21,6 @@ export default class SearchArticlesRequestV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('is_unlisted', T.TrinaryType.create())
-        .withDefault(2)
         .build(),
       Fb.create('is_locked', T.TrinaryType.create())
         .build(),

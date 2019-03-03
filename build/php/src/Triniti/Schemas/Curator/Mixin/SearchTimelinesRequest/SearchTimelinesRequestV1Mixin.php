@@ -26,7 +26,6 @@ final class SearchTimelinesRequestV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('is_unlisted', T\TrinaryType::create())
-                ->withDefault(2)
                 ->build(),
             Fb::create('sort', T\StringEnumType::create())
                 ->withDefault(SearchTimelinesSort::RELEVANCE())
