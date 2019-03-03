@@ -1,7 +1,9 @@
 # CHANGELOG
 
 
-## v0.2.14
+## v0.13.0
+__BREAKING CHANGES__
+
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:apollo:mixin:search-polls-response`
     * Add mixin `triniti:apollo:mixin:poll-stats` to `nodes` field `any-of`.
