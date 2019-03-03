@@ -196,6 +196,25 @@
         "type": "identifier",
         "rule": "single"
       }
+    },
+    "providers": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "The name of the services to get the stats from, e.g. adobe, facebook, google, disqus, etc. When not provided you should call all providers.",
+      "pbj": {
+        "type": "string",
+        "rule": "set",
+        "format": "slug"
+      }
     }
   },
   "required": [

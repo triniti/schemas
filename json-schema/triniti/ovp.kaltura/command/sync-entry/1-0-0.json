@@ -194,6 +194,22 @@
         "overridable": true
       }
     },
+    "entry_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "partner_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "entry": {
       "type": "object",
       "anyOf": [

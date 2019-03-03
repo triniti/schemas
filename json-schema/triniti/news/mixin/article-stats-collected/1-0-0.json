@@ -169,6 +169,25 @@
         "rule": "single"
       }
     },
+    "providers": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "The name of the providers used to collect the stats.",
+      "pbj": {
+        "type": "string",
+        "rule": "set",
+        "format": "slug"
+      }
+    },
     "stats": {
       "type": "object",
       "patternProperties": {

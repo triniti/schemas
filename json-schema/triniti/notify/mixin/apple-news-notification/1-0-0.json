@@ -263,19 +263,10 @@
     "apple_news_revision": {
       "type": "string",
       "pattern": "^[\\w\\\\\\/\\.:=-]+$",
-      "description": "The new revision token for the Apple News article. e.g. AAAAAAAAAAAAAAAAAAAAAQ==",
+      "description": "The existing revision token for the Apple News article. e.g. AAAAAAAAAAAAAAAAAAAAAQ==",
       "pbj": {
         "type": "string",
         "rule": "single"
-      }
-    },
-    "apple_news_share_url": {
-      "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
       }
     }
   },
