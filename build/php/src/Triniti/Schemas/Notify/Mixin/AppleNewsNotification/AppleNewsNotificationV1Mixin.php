@@ -37,7 +37,7 @@ final class AppleNewsNotificationV1Mixin extends AbstractMixin
              * e.g. AAAAAAAAAAAAAAAAAAAAAQ==
              */
             Fb::create('apple_news_revision', T\StringType::create())
-                ->pattern('^[\w\\\/\.:=-]+$')
+                ->pattern('^[\w\/\.\\\:=+-]+$')
                 ->build(),
         ];
     }

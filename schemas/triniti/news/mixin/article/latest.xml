@@ -67,7 +67,7 @@
           The unique identifier of the Apple News article.
         </description>
       </field>
-      <field name="apple_news_revision" type="string" pattern="^[\w\\\/\.:=-]+$">
+      <field name="apple_news_revision" type="string" pattern="^[\w\/\.\\\:=+-]+$">
         <description>
           The current revision token for the Apple News article.
           e.g. AAAAAAAAAAAAAAAAAAAAAQ==

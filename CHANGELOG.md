@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.13.1
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:news:mixin:apple-news-article-synced`
+    * Change `apple_news_revision` string field pattern to `^[\w\/\.\\\:=+-]+$`.
+  * `triniti:news:mixin:article`
+    * Change `apple_news_revision` string field pattern to `^[\w\/\.\\\:=+-]+$`.
+  * `triniti:notify:mixin:apple-news-notification`
+    * Change `apple_news_revision` string field pattern to `^[\w\/\.\\\:=+-]+$`.
+
+
 ## v0.13.0
 __BREAKING CHANGES__
 
