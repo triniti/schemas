@@ -173,6 +173,66 @@
         "rule": "single"
       }
     },
+    "views": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "disqus_comments": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "disqus_dislikes": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "disqus_likes": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "fb_comments": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "fb_reactions": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
     "fb_shares": {
       "type": "integer",
       "default": 0,
@@ -183,7 +243,77 @@
         "rule": "single"
       }
     },
-    "views": {
+    "ga_entrances": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "ga_entrance_rate": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "ga_pageviews": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "ga_unique_pageviews": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "ga_time_on_page": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "ga_avg_time_on_page": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "ga_exits": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
+    "ga_exit_rate": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
