@@ -176,6 +176,39 @@
         "type": "uuid",
         "rule": "single"
       }
+    },
+    "s256": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 255,
+      "description": "\"s256\" means shard 256. Used to distribute read/write from storage and speed up replay/reindex processes. It can also be used to distribute workload in front end user interfaces or notifications (like isles in a grocery store). This value should NOT change once set.",
+      "pbj": {
+        "type": "tiny-int",
+        "rule": "single"
+      }
+    },
+    "s32": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 255,
+      "description": "\"s32\" means shard 32. See field \"s256\" for explanation.",
+      "pbj": {
+        "type": "tiny-int",
+        "rule": "single"
+      }
+    },
+    "s16": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 255,
+      "description": "\"s16\" means shard 16. See field \"s256\" for explanation.",
+      "pbj": {
+        "type": "tiny-int",
+        "rule": "single"
+      }
     }
   },
   "required": [

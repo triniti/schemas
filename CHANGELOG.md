@@ -1,6 +1,35 @@
 # CHANGELOG
 
 
+## v0.13.2
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:apollo:mixin:vote-casted`
+    * Add `s16` tiny-int field.
+    * Add `s32` tiny-int field.
+    * Add `s256` tiny-int field.
+  * `triniti:news:mixin:apple-news-article-synced`
+    * Change `apple_news_operation` string field pattern to `^(notification|create|update|delete)$`.
+    * Set default for `apple_news_operation` field to `notification`.
+  * `triniti:news:mixin:article-stats`
+    * Add `disqus_comments` int field.
+    * Add `disqus_dislikes` int field.
+    * Add `disqus_likes` int field.
+    * Add `fb_comments` int field.
+    * Add `fb_reactions` int field.
+    * Add `fb_shares` int field.
+    * Add `ga_entrances` int field.
+    * Add `ga_entrance_rate` int field.
+    * Add `ga_pageviews` int field.
+    * Add `ga_unique_pageviews` int field.
+    * Add `ga_time_on_page` int field.
+    * Add `ga_avg_time_on_page` int field.
+    * Add `ga_exits` int field.
+    * Add `ga_exit_rate` int field.
+  * `triniti:notify:mixin:apple-news-notification`
+    * Change `apple_news_operation` string field pattern to `^(notification|create|update|delete)$`.
+    * Set default for `apple_news_operation` field to `notification`.
+
+
 ## v0.13.1
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:news:mixin:apple-news-article-synced`

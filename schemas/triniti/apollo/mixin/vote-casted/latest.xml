@@ -20,6 +20,24 @@
         </js-options>
       </field>
       <field name="answer_id" type="uuid"/>
+      <field name="s256" type="tiny-int">
+        <description>
+          "s256" means shard 256. Used to distribute read/write from storage and speed up
+          replay/reindex processes. It can also be used to distribute workload in front end
+          user interfaces or notifications (like isles in a grocery store).
+          This value should NOT change once set.
+        </description>
+      </field>
+      <field name="s32" type="tiny-int">
+        <description>
+          "s32" means shard 32. See field "s256" for explanation.
+        </description>
+      </field>
+      <field name="s16" type="tiny-int">
+        <description>
+          "s16" means shard 16. See field "s256" for explanation.
+        </description>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

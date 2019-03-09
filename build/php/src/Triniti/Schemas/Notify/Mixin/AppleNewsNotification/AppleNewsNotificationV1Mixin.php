@@ -24,7 +24,8 @@ final class AppleNewsNotificationV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('apple_news_operation', T\StringType::create())
-                ->pattern('^(create|update|delete)$')
+                ->pattern('^(notification|create|update|delete)$')
+                ->withDefault("notification")
                 ->build(),
             /*
              * The unique identifier of the Apple News article.

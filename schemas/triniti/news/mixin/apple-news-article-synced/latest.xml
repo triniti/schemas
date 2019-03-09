@@ -32,7 +32,9 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="apple_news_operation" type="string" pattern="^(create|update|delete)$"/>
+      <field name="apple_news_operation" type="string" pattern="^(notification|create|update|delete)$">
+        <default>notification</default>
+      </field>
       <field name="apple_news_id" type="uuid" use-type-default="false">
         <description>
           The unique identifier of the Apple News article.

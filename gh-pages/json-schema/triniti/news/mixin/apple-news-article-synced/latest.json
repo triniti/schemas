@@ -181,7 +181,8 @@
     },
     "apple_news_operation": {
       "type": "string",
-      "pattern": "^(create|update|delete)$",
+      "default": "notification",
+      "pattern": "^(notification|create|update|delete)$",
       "pbj": {
         "type": "string",
         "rule": "single"

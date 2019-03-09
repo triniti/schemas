@@ -18,8 +18,21 @@
         </js-options>
       </field>
       <field name="comments" type="int"/>
-      <field name="fb_shares" type="int"/>
       <field name="views" type="int"/>
+      <field name="disqus_comments" type="int"/>
+      <field name="disqus_dislikes" type="int"/>
+      <field name="disqus_likes" type="int"/>
+      <field name="fb_comments" type="int"/>
+      <field name="fb_reactions" type="int"/>
+      <field name="fb_shares" type="int"/>
+      <field name="ga_entrances" type="int"/>
+      <field name="ga_entrance_rate" type="int"/>
+      <field name="ga_pageviews" type="int"/>
+      <field name="ga_unique_pageviews" type="int"/>
+      <field name="ga_time_on_page" type="int"/>
+      <field name="ga_avg_time_on_page" type="int"/>
+      <field name="ga_exits" type="int"/>
+      <field name="ga_exit_rate" type="int"/>
     </fields>
 
     <php-options>
