@@ -32,9 +32,35 @@ final class ArticleStatsV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('comments', T\IntType::create())
                 ->build(),
+            Fb::create('views', T\IntType::create())
+                ->build(),
+            Fb::create('disqus_comments', T\IntType::create())
+                ->build(),
+            Fb::create('disqus_dislikes', T\IntType::create())
+                ->build(),
+            Fb::create('disqus_likes', T\IntType::create())
+                ->build(),
+            Fb::create('fb_comments', T\IntType::create())
+                ->build(),
+            Fb::create('fb_reactions', T\IntType::create())
+                ->build(),
             Fb::create('fb_shares', T\IntType::create())
                 ->build(),
-            Fb::create('views', T\IntType::create())
+            Fb::create('ga_entrances', T\IntType::create())
+                ->build(),
+            Fb::create('ga_entrance_rate', T\IntType::create())
+                ->build(),
+            Fb::create('ga_pageviews', T\IntType::create())
+                ->build(),
+            Fb::create('ga_unique_pageviews', T\IntType::create())
+                ->build(),
+            Fb::create('ga_time_on_page', T\IntType::create())
+                ->build(),
+            Fb::create('ga_avg_time_on_page', T\IntType::create())
+                ->build(),
+            Fb::create('ga_exits', T\IntType::create())
+                ->build(),
+            Fb::create('ga_exit_rate', T\IntType::create())
                 ->build(),
         ];
     }
