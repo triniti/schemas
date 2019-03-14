@@ -2,6 +2,7 @@
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
+import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import SearchArticlesSort from '@triniti/schemas/triniti/news/enums/SearchArticlesSort';
 import T from '@gdbots/pbj/types';
@@ -20,7 +21,6 @@ export default class SearchArticlesRequestV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('is_unlisted', T.TrinaryType.create())
-        .withDefault(2)
         .build(),
       Fb.create('is_locked', T.TrinaryType.create())
         .build(),
@@ -34,6 +34,17 @@ export default class SearchArticlesRequestV1Mixin extends Mixin {
        */
       Fb.create('slotting_key', T.StringType.create())
         .format(Format.SLUG)
+        .build(),
+      Fb.create('channel_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      Fb.create('category_refs', T.IdentifierType.create())
+        .asASet()
+        .classProto(NodeRef)
+        .build(),
+      Fb.create('person_refs', T.IdentifierType.create())
+        .asASet()
+        .classProto(NodeRef)
         .build(),
     ];
   }

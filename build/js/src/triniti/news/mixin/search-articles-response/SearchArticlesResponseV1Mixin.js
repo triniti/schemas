@@ -21,6 +21,7 @@ export default class SearchArticlesResponseV1Mixin extends Mixin {
         .asAList()
         .anyOfCuries([
           'triniti:news:mixin:article',
+          'triniti:news:mixin:article-stats',
         ])
         .build(),
     ];

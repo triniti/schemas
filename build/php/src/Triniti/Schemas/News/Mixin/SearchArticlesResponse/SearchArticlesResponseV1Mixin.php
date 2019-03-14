@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Triniti\Schemas\News\Mixin\ArticleStats\ArticleStats as TrinitiNewsArticleStats;
 use Triniti\Schemas\News\Mixin\Article\Article as TrinitiNewsArticle;
 
 final class SearchArticlesResponseV1Mixin extends AbstractMixin
@@ -28,6 +29,7 @@ final class SearchArticlesResponseV1Mixin extends AbstractMixin
                 ->asAList()
                 ->anyOfClassNames([
                     TrinitiNewsArticle::class,
+                    TrinitiNewsArticleStats::class,
                 ])
                 ->build(),
         ];

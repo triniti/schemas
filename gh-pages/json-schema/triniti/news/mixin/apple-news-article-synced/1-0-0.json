@@ -181,7 +181,8 @@
     },
     "apple_news_operation": {
       "type": "string",
-      "pattern": "^(created|updated|deleted)$",
+      "default": "notification",
+      "pattern": "^(notification|create|update|delete)$",
       "pbj": {
         "type": "string",
         "rule": "single"
@@ -199,7 +200,7 @@
     },
     "apple_news_revision": {
       "type": "string",
-      "pattern": "^[\\w\\\\\\/\\.:=-]+$",
+      "pattern": "^[\\w\\/\\.\\\\\\:=+-]+$",
       "description": "The new revision token for the Apple News article. e.g. AAAAAAAAAAAAAAAAAAAAAQ==",
       "pbj": {
         "type": "string",

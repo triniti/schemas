@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Curator\Enum\SearchGalleriesSort;
 
 final class SearchGalleriesRequestV1Mixin extends AbstractMixin
@@ -25,11 +26,21 @@ final class SearchGalleriesRequestV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('is_unlisted', T\TrinaryType::create())
-                ->withDefault(2)
                 ->build(),
             Fb::create('sort', T\StringEnumType::create())
                 ->withDefault(SearchGalleriesSort::RELEVANCE())
                 ->className(SearchGalleriesSort::class)
+                ->build(),
+            Fb::create('channel_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+            Fb::create('category_refs', T\IdentifierType::create())
+                ->asASet()
+                ->className(NodeRef::class)
+                ->build(),
+            Fb::create('person_refs', T\IdentifierType::create())
+                ->asASet()
+                ->className(NodeRef::class)
                 ->build(),
         ];
     }

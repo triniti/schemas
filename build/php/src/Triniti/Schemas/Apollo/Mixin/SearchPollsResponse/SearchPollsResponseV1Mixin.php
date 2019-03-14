@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Triniti\Schemas\Apollo\Mixin\PollStats\PollStats as TrinitiApolloPollStats;
 use Triniti\Schemas\Apollo\Mixin\Poll\Poll as TrinitiApolloPoll;
 
 final class SearchPollsResponseV1Mixin extends AbstractMixin
@@ -28,6 +29,7 @@ final class SearchPollsResponseV1Mixin extends AbstractMixin
                 ->asAList()
                 ->anyOfClassNames([
                     TrinitiApolloPoll::class,
+                    TrinitiApolloPollStats::class,
                 ])
                 ->build(),
         ];

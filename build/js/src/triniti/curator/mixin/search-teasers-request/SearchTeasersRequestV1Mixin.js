@@ -21,7 +21,6 @@ export default class SearchTeasersRequestV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('is_unlisted', T.TrinaryType.create())
-        .withDefault(2)
         .build(),
       Fb.create('sort', T.StringEnumType.create())
         .withDefault(SearchTeasersSort.ORDER_DATE_DESC)
@@ -45,6 +44,17 @@ export default class SearchTeasersRequestV1Mixin extends Mixin {
        * A node ref of a timeline that a teaser must be associated with to match the search request.
        */
       Fb.create('timeline_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      Fb.create('channel_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      Fb.create('category_refs', T.IdentifierType.create())
+        .asASet()
+        .classProto(NodeRef)
+        .build(),
+      Fb.create('person_refs', T.IdentifierType.create())
+        .asASet()
         .classProto(NodeRef)
         .build(),
     ];

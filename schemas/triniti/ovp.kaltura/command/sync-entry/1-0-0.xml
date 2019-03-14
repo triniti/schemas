@@ -5,6 +5,8 @@
 
   <schema id="pbj:triniti:ovp.kaltura:command:sync-entry:1-0-0">
     <fields>
+      <field name="entry_id" type="string" pattern="^[\w-]+$"/>
+      <field name="partner_id" type="string" pattern="^[\w-]+$"/>
       <field name="entry" type="message">
         <any-of>
           <curie>triniti:ovp.kaltura::entry</curie>

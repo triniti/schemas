@@ -334,6 +334,44 @@
         "type": "string-enum",
         "rule": "single"
       }
+    },
+    "channel_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "category_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "pbj": {
+        "type": "identifier",
+        "rule": "set"
+      }
+    },
+    "person_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "pbj": {
+        "type": "identifier",
+        "rule": "set"
+      }
     }
   },
   "required": [

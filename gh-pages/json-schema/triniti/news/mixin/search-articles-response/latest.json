@@ -155,6 +155,9 @@
       "items": [
         {
           "$ref": "#/definitions/article"
+        },
+        {
+          "$ref": "#/definitions/article-stats"
         }
       ],
       "additionalProperties": false,
@@ -181,6 +184,14 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-0.json#"
+        }
+      ]
+    },
+    "article-stats": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/news/mixin/article-stats/1-0-0.json#"
         }
       ]
     }

@@ -5,7 +5,7 @@
 
   <schema id="pbj:triniti:migrator:command:sync-cf-nodes:1-0-0">
     <fields>
-      <field name="cf_node_refs" type="string" pattern="^[a-z0-9-]+:[a-z0-9\/-]+$" rule="list">
+      <field name="cf_node_refs" type="string" pattern="^[a-z0-9-]+:[a-z0-9\/-]+$" rule="set">
         <description>An array of CrowdFusion node refs with format element:slug.</description>
       </field>
     </fields>

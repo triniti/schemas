@@ -16,6 +16,12 @@ export default class SyncEntryV1 extends Message {
   static defineSchema() {
     return new Schema('pbj:triniti:ovp.kaltura:command:sync-entry:1-0-0', SyncEntryV1,
       [
+        Fb.create('entry_id', T.StringType.create())
+          .pattern('^[\\w-]+$')
+          .build(),
+        Fb.create('partner_id', T.StringType.create())
+          .pattern('^[\\w-]+$')
+          .build(),
         Fb.create('entry', T.MessageType.create())
           .anyOfCuries([
             'triniti:ovp.kaltura::entry',

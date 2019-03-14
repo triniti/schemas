@@ -1,6 +1,123 @@
 # CHANGELOG
 
 
+## v0.13.2
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:apollo:mixin:vote-casted`
+    * Add `s16` tiny-int field.
+    * Add `s32` tiny-int field.
+    * Add `s256` tiny-int field.
+  * `triniti:news:mixin:apple-news-article-synced`
+    * Change `apple_news_operation` string field pattern to `^(notification|create|update|delete)$`.
+    * Set default for `apple_news_operation` field to `notification`.
+  * `triniti:news:mixin:article-stats`
+    * Add `disqus_comments` int field.
+    * Add `disqus_dislikes` int field.
+    * Add `disqus_likes` int field.
+    * Add `fb_comments` int field.
+    * Add `fb_reactions` int field.
+    * Add `fb_shares` int field.
+    * Add `ga_entrances` int field.
+    * Add `ga_entrance_rate` int field.
+    * Add `ga_pageviews` int field.
+    * Add `ga_unique_pageviews` int field.
+    * Add `ga_time_on_page` int field.
+    * Add `ga_avg_time_on_page` int field.
+    * Add `ga_exits` int field.
+    * Add `ga_exit_rate` int field.
+  * `triniti:notify:mixin:apple-news-notification`
+    * Change `apple_news_operation` string field pattern to `^(notification|create|update|delete)$`.
+    * Set default for `apple_news_operation` field to `notification`.
+
+
+## v0.13.1
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:news:mixin:apple-news-article-synced`
+    * Change `apple_news_revision` string field pattern to `^[\w\/\.\\\:=+-]+$`.
+  * `triniti:news:mixin:article`
+    * Change `apple_news_revision` string field pattern to `^[\w\/\.\\\:=+-]+$`.
+  * `triniti:notify:mixin:apple-news-notification`
+    * Change `apple_news_revision` string field pattern to `^[\w\/\.\\\:=+-]+$`.
+
+
+## v0.13.0
+__BREAKING CHANGES__
+
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:apollo:mixin:search-polls-response`
+    * Add mixin `triniti:apollo:mixin:poll-stats` to `nodes` field `any-of`.
+  * `triniti:canvas:mixin:search-pages-request`
+    * Remove default for `is_unlisted` field.
+  * `triniti:curator:mixin:search-galleries-request`
+    * Remove default for `is_unlisted` field.
+  * `triniti:curator:mixin:search-teasers-request`
+    * Remove default for `is_unlisted` field.
+  * `triniti:curator:mixin:search-timelines-request`
+    * Remove default for `is_unlisted` field.
+  * `triniti:migrator:command:sync-cf-nodes`
+    * Change field `cf_node_refs` to rule set.
+  * `triniti:news:mixin:collect-article-stats`
+    * Add `provider` string field with format slug.
+  * `triniti:news:mixin:search-articles-request`
+    * Remove default for `is_unlisted` field.
+  * `triniti:news:mixin:search-articles-response`
+    * Add mixin `triniti:news:mixin:article-stats` to `nodes` field `any-of`.
+  * `triniti:notify:mixin:apple-news-notification`
+    * Remove `apple_news_share_url` field.
+  * `triniti:ovp:mixin:search-videos-request`
+    * Remove default for `is_unlisted` field.
+  * `triniti:ovp.kaltura:command:sync-entry`
+    * Add `entry_id` string field with pattern `^[\w-]+$`.
+    * Add `partner_id` string field with pattern `^[\w-]+$`.
+  * `triniti:people:mixin:search-people-request`
+    * Remove default for `is_unlisted` field.
+    * Add `is_celebrity` trinary field.
+
+
+## v0.12.3
+* __Add Schemas:__
+  * `triniti:news:mixin:article-stats-collected`
+  * `triniti:news:mixin:collect-article-stats`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:apollo:mixin:search-polls-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:canvas:mixin:search-pages-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:curator:mixin:search-galleries-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:curator:mixin:search-teasers-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:curator:mixin:search-timelines-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:dam:mixin:search-assets-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:news:mixin:search-articles-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:ovp:mixin:search-videos-request`
+    * Add `category_refs` identifier (NodeRef) set field.
+    * Add `channel_ref` identifier (NodeRef) field.
+    * Add `person_refs` identifier (NodeRef) set field.
+  * `triniti:notify:mixin:apple-news-notification`
+    * Add `apple_news_id` uuid field.
+    * Add `apple_news_revision` string field with pattern `^[\w\\\/\.:=-]+$`.
+    * Add `apple_news_share_url` text field with format url.
+    * Add `apple_news_operation` string field with pattern `^(create|update|delete)$`.
+
+
 ## v0.12.2
 * __Add Schemas:__
   * `triniti:common:aspect-ratio`

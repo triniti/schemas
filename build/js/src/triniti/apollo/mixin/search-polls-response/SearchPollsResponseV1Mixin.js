@@ -21,6 +21,7 @@ export default class SearchPollsResponseV1Mixin extends Mixin {
         .asAList()
         .anyOfCuries([
           'triniti:apollo:mixin:poll',
+          'triniti:apollo:mixin:poll-stats',
         ])
         .build(),
     ];

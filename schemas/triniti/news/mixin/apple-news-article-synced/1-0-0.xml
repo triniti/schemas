@@ -32,13 +32,15 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="apple_news_operation" type="string" pattern="^(created|updated|deleted)$"/>
+      <field name="apple_news_operation" type="string" pattern="^(notification|create|update|delete)$">
+        <default>notification</default>
+      </field>
       <field name="apple_news_id" type="uuid" use-type-default="false">
         <description>
           The unique identifier of the Apple News article.
         </description>
       </field>
-      <field name="apple_news_revision" type="string" pattern="^[\w\\\/\.:=-]+$">
+      <field name="apple_news_revision" type="string" pattern="^[\w\/\.\\\:=+-]+$">
         <description>
           The new revision token for the Apple News article.
           e.g. AAAAAAAAAAAAAAAAAAAAAQ==

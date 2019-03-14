@@ -257,7 +257,7 @@
     },
     "apple_news_revision": {
       "type": "string",
-      "pattern": "^[\\w\\\\\\/\\.:=-]+$",
+      "pattern": "^[\\w\\/\\.\\\\\\:=+-]+$",
       "description": "The current revision token for the Apple News article. e.g. AAAAAAAAAAAAAAAAAAAAAQ==",
       "pbj": {
         "type": "string",

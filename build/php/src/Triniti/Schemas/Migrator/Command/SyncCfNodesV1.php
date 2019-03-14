@@ -27,7 +27,7 @@ final class SyncCfNodesV1 extends AbstractMessage implements
                  * An array of CrowdFusion node refs with format element:slug.
                  */
                 Fb::create('cf_node_refs', T\StringType::create())
-                    ->asAList()
+                    ->asASet()
                     ->pattern('^[a-z0-9-]+:[a-z0-9\/-]+$')
                     ->build(),
             ],
