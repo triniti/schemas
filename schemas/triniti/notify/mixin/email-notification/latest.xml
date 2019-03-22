@@ -23,6 +23,7 @@
         </description>
       </field>
       <field name="sender" type="string" format="email"/>
+      <field name="subject" type="string"/>
     </fields>
     <php-options>
       <insertion-points>

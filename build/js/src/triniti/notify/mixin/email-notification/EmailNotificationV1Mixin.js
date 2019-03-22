@@ -18,9 +18,6 @@ export default class EmailNotificationV1Mixin extends Mixin {
    */
   getFields() {
     return [
-      /*
-       * The sender email for this notification.
-       */
       Fb.create('sender', T.StringType.create())
         .format(Format.EMAIL)
         .build(),
@@ -38,8 +35,7 @@ export default class EmailNotificationV1Mixin extends Mixin {
       Fb.create('template', T.StringType.create())
         .format(Format.SLUG)
         .build(),
-      Fb.create('sender', T.StringType.create())
-        .format(Format.EMAIL)
+      Fb.create('subject', T.StringType.create())
         .build(),
     ];
   }

@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.13.3
+ __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:notify:mixin:email-notification`
+    * Add `subject` string field.
+
+
 ## v0.13.2
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:apollo:mixin:vote-casted`

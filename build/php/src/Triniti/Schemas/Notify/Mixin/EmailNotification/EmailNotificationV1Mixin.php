@@ -24,9 +24,6 @@ final class EmailNotificationV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            /*
-             * The sender email for this notification.
-             */
             Fb::create('sender', T\StringType::create())
                 ->format(Format::EMAIL())
                 ->build(),
@@ -44,8 +41,7 @@ final class EmailNotificationV1Mixin extends AbstractMixin
             Fb::create('template', T\StringType::create())
                 ->format(Format::SLUG())
                 ->build(),
-            Fb::create('sender', T\StringType::create())
-                ->format(Format::EMAIL())
+            Fb::create('subject', T\StringType::create())
                 ->build(),
         ];
     }
