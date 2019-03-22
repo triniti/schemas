@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.15.0
+__Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:common:mixin:swipeable`
+    * Remove `soft_swipe` field, yes, i know, srsly, wth.
+
+
 ## v0.14.0
 __BREAKING CHANGES__
 

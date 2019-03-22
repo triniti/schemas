@@ -29,12 +29,6 @@ final class SwipeableV1Mixin extends AbstractMixin
              */
             Fb::create('swipe', T\StringType::create())
                 ->build(),
-            /*
-             * You know, for a softer swipe. Mainly here for legacy content that couldn't
-             * think of a better name for whatever this was supposed to be.
-             */
-            Fb::create('soft_swipe', T\StringType::create())
-                ->build(),
         ];
     }
 }
