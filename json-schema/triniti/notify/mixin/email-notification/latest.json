@@ -245,7 +245,6 @@
     "sender": {
       "type": "string",
       "format": "email",
-      "description": "The sender email for this notification.",
       "pbj": {
         "type": "string",
         "rule": "single",
@@ -281,6 +280,15 @@
         "type": "string",
         "rule": "single",
         "format": "slug"
+      }
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
       }
     }
   },
