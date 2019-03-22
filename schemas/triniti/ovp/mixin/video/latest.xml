@@ -51,6 +51,9 @@
       <field name="allow_comments" type="boolean">
         <default>true</default>
       </field>
+      <field name="sharing_enabled" type="boolean">
+        <default>true</default>
+      </field>
       <field name="description" type="text" max="5000">
         <description>
           A description of the video (usually a few sentences). It should typically

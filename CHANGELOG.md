@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v0.14.0
+__BREAKING CHANGES__
+
+__Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:apollo:mixin:poll-stats`
+    * Rename `answers` field to `answer_votes` so it doesn't conflict with answers field on poll in elasticsearch.
+  * `triniti:notify:mixin:email-notification`
+    * Add `subject` string field.
+  * `triniti:ovp:mixin:video`
+    * Add `sharing_enabled` boolean field.
+
+
 ## v0.13.2
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:apollo:mixin:vote-casted`

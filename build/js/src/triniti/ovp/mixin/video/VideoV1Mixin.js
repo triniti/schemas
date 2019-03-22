@@ -55,6 +55,9 @@ export default class VideoV1Mixin extends Mixin {
       Fb.create('allow_comments', T.BooleanType.create())
         .withDefault(true)
         .build(),
+      Fb.create('sharing_enabled', T.BooleanType.create())
+        .withDefault(true)
+        .build(),
       /*
        * A description of the video (usually a few sentences). It should typically
        * not have HTML as it is used in metadata, feeds, SERP and social.
