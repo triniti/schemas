@@ -18,7 +18,7 @@
         </js-options>
       </field>
       <field name="votes" type="int"/>
-      <field name="answers" type="int" rule="map">
+      <field name="answer_votes" type="int" rule="map">
         <description>
           Map of votes for each answer keyed by the poll answer id.
         </description>

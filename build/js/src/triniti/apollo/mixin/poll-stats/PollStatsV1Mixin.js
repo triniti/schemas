@@ -29,7 +29,7 @@ export default class PollStatsV1Mixin extends Mixin {
       /*
        * Map of votes for each answer keyed by the poll answer id.
        */
-      Fb.create('answers', T.IntType.create())
+      Fb.create('answer_votes', T.IntType.create())
         .asAMap()
         .build(),
     ];

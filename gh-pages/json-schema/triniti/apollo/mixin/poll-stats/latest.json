@@ -173,7 +173,7 @@
         "rule": "single"
       }
     },
-    "answers": {
+    "answer_votes": {
       "type": "object",
       "patternProperties": {
         "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
