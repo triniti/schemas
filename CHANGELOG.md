@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.15.1
+* Use `gdbots/schemas` v1.5.8.
+
+
 ## v0.15.0
 __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:common:mixin:swipeable`

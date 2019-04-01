@@ -6,11 +6,7 @@
   <schema id="pbj:triniti:notify:mixin:email-notification:1-0-0" mixin="true"
       extends="triniti:notify:mixin:notification:v1">
     <fields>
-      <field name="sender" type="string" format="email">
-        <description>
-          The sender email for this notification.
-        </description>
-      </field>
+      <field name="sender" type="string" format="email"/>
       <field name="lists" type="string" format="slug" rule="set">
         <description>
           A set of list ids that this email notification should be sent to.
@@ -22,7 +18,6 @@
           Visual layout for the email. e.g. "breaking-snooze", "exclusive-video".
         </description>
       </field>
-      <field name="sender" type="string" format="email"/>
       <field name="subject" type="string"/>
     </fields>
     <php-options>
