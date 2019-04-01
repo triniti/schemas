@@ -177,6 +177,24 @@
         "type": "identifier",
         "rule": "set"
       }
+    },
+    "azure_notification_hub_connection": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "An encrypted value of connection-string (starts with Endpoint=sb://) that can be obtained from Azure portal. @link https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-nodejs-push-notification-tutorial",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "azure_notification_hub_name": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
     }
   },
   "required": [
