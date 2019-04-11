@@ -25,7 +25,7 @@ final class AssetIdTest extends TestCase
 
     public function testCreate(): void
     {
-        $id = AssetId::create('image', 'jpg', \DateTime::createFromFormat('Ymd', '20151201'), UuidIdentifier::fromString('cb9c3c8c-5c88-453b-9609-33a59ede6505'));
+        $id = AssetId::create('image', 'jpg', \DateTimeImmutable::createFromFormat('Ymd', '20151201'), UuidIdentifier::fromString('cb9c3c8c-5c88-453b-9609-33a59ede6505'));
 
         $this->assertSame('image', $id->getType());
         $this->assertSame('jpg', $id->getExt());
@@ -39,7 +39,7 @@ final class AssetIdTest extends TestCase
 
     public function testGenerate(): void
     {
-        $date = new \DateTime();
+        $date = new \DateTimeImmutable();
         $id = AssetId::create('image', 'jpg');
 
         $this->assertSame('image', $id->getType());

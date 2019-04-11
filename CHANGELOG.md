@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.15.2
+* Use `gdbots/schemas` v1.5.10.
+* Use `DateTimeInterface` in `AssetId` for php language.
+
+
 ## v0.15.1
 * Use `gdbots/schemas` v1.5.8.
 
