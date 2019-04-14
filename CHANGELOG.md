@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.15.3
+__Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `triniti:ovp:mixin:video`
+    * Add `is_promo` boolean field.
+
+
 ## v0.15.2
 * Use `gdbots/schemas` v1.5.10.
 * Use `DateTimeInterface` in `AssetId` for php language.

@@ -43,6 +43,8 @@ export default class VideoV1Mixin extends Mixin {
         .build(),
       Fb.create('is_full_episode', T.BooleanType.create())
         .build(),
+      Fb.create('is_promo', T.BooleanType.create())
+        .build(),
       Fb.create('launch_text', T.StringType.create())
         .build(),
       /*
