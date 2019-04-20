@@ -243,6 +243,17 @@
         "rule": "single"
       }
     },
+    "fb_engagement": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4294967295,
+      "description": "The sum of all fb_* metrics collected.",
+      "pbj": {
+        "type": "int",
+        "rule": "single"
+      }
+    },
     "ga_entrances": {
       "type": "integer",
       "default": 0,

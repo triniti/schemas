@@ -25,6 +25,9 @@
       <field name="fb_comments" type="int"/>
       <field name="fb_reactions" type="int"/>
       <field name="fb_shares" type="int"/>
+      <field name="fb_engagement" type="int">
+        <description>The sum of all fb_* metrics collected.</description>
+      </field>
       <field name="ga_entrances" type="int"/>
       <field name="ga_entrance_rate" type="int"/>
       <field name="ga_pageviews" type="int"/>

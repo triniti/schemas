@@ -40,6 +40,11 @@ export default class ArticleStatsV1Mixin extends Mixin {
         .build(),
       Fb.create('fb_shares', T.IntType.create())
         .build(),
+      /*
+       * The sum of all fb_* metrics collected.
+       */
+      Fb.create('fb_engagement', T.IntType.create())
+        .build(),
       Fb.create('ga_entrances', T.IntType.create())
         .build(),
       Fb.create('ga_entrance_rate', T.IntType.create())
