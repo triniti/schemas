@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.15.5
+__Modify Schemas:__
+  * `triniti:notify:mixin:ios-notification`
+    * Add `fcm_topics` string set field with pattern `^[a-zA-Z0-9-_.~%]+$`.
+  * `triniti:notify:mixin:android-notification`
+    * Add `fcm_topics` string set field with pattern `^[a-zA-Z0-9-_.~%]+$`.
+  
+  
 ## v0.15.4
 __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:news:mixin:article-stats`
