@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.15.5
+* Use `gdbots/schemas` v1.5.11.
+
+__Modify Schemas:__
+  * `triniti:notify:mixin:ios-notification`
+    * Add `fcm_topics` string set field with pattern `^[\w\/\.:~%#-]+$`.
+  * `triniti:notify:mixin:android-notification`
+    * Add `fcm_topics` string set field with pattern `^[\w\/\.:~%#-]+$`.
+
+
 ## v0.15.4
 __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:news:mixin:article-stats`
