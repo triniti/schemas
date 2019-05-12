@@ -23,7 +23,7 @@ export default class IosNotificationV1Mixin extends Mixin {
        */
       Fb.create('fcm_topics', T.StringType.create())
         .asASet()
-        .pattern('^[a-zA-Z0-9-_.~%]+$')
+        .pattern('^[\\w\\/\\.:~%#-]+$')
         .build(),
     ];
   }

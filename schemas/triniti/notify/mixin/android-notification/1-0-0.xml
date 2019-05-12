@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:notify:mixin:android-notification:1-0-0" mixin="true"
-          extends="triniti:notify:mixin:notification:v1">
+      extends="triniti:notify:mixin:notification:v1">
     <fields>
-      <field name="fcm_topics" type="string" pattern="^[a-zA-Z0-9-_.~%]+$" rule="set">
+      <field name="fcm_topics" type="string" pattern="^[\w\/\.:~%#-]+$" rule="set">
         <description>
           @link https://firebase.google.com/docs/cloud-messaging/ios/topic-messaging
           FCM topic messaging allows you to send a message to multiple devices that have opted in to a particular topic.
         </description>
       </field>
     </fields>
+
     <php-options>
       <insertion-points>
         <imports/>

@@ -29,7 +29,7 @@ final class AndroidNotificationV1Mixin extends AbstractMixin
              */
             Fb::create('fcm_topics', T\StringType::create())
                 ->asASet()
-                ->pattern('^[a-zA-Z0-9-_.~%]+$')
+                ->pattern('^[\w\/\.:~%#-]+$')
                 ->build(),
         ];
     }
