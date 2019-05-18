@@ -173,6 +173,9 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/request/1-0-0.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/request/1-0-1.json#"
         }
       ]
     },
