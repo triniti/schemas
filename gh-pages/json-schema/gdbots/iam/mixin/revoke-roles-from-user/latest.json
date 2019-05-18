@@ -179,6 +179,16 @@
         "overridable": true
       }
     },
+    "ctx_ipv6": {
+      "type": "string",
+      "format": "ipv6",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "ipv6",
+        "overridable": true
+      }
+    },
     "ctx_ua": {
       "type": "string",
       "minLength": 0,
