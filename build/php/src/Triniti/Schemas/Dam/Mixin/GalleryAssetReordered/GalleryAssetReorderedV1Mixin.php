@@ -39,6 +39,12 @@ final class GalleryAssetReorderedV1Mixin extends AbstractMixin
              */
             Fb::create('gallery_seq', T\IntType::create())
                 ->build(),
+            /*
+             * The node ref for the gallery where the asset is removed from.
+             */
+            Fb::create('old_gallery_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
         ];
     }
 }
