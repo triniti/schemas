@@ -225,13 +225,19 @@
         "rule": "map"
       }
     },
-    "old_gallery_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "The node ref for the gallery where the asset is removed from.",
+    "old_gallery_refs": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map of asset ids to old gallery refs where they may have been moved from.",
       "pbj": {
         "type": "identifier",
-        "rule": "single"
+        "rule": "map"
       }
     }
   },

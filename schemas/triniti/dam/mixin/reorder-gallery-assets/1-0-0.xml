@@ -23,9 +23,9 @@
           A map of asset ids to gallery sequence numbers.
         </description>
       </field>
-      <field name="old_gallery_ref" type="identifier">
+      <field name="old_gallery_refs" type="identifier" rule="map">
         <description>
-          The node ref for the gallery where the asset is removed from.
+          A map of asset ids to old gallery refs where they may have been moved from.
         </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>

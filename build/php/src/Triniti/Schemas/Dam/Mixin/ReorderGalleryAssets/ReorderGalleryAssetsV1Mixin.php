@@ -37,9 +37,10 @@ final class ReorderGalleryAssetsV1Mixin extends AbstractMixin
                 ->asAMap()
                 ->build(),
             /*
-             * The node ref for the gallery where the asset is removed from.
+             * A map of asset ids to old gallery refs where they may have been moved from.
              */
-            Fb::create('old_gallery_ref', T\IdentifierType::create())
+            Fb::create('old_gallery_refs', T\IdentifierType::create())
+                ->asAMap()
                 ->className(NodeRef::class)
                 ->build(),
         ];
