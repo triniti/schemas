@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.15.7
+__Modify Schemas:__
+  * `triniti:dam:mixin:gallery-assets-reordered`
+    * Add `old_gallery_ref` identifier (NodeRef) field.
+  * `triniti:dam:mixin:reorder-gallery-assets`
+    * Add `old_gallery_refs` identifier (NodeRef) map field.
+
+
 ## v0.15.6
 * Use `gdbots/schemas` v1.5.12.
 

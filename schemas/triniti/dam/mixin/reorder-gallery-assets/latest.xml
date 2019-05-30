@@ -23,6 +23,19 @@
           A map of asset ids to gallery sequence numbers.
         </description>
       </field>
+      <field name="old_gallery_refs" type="identifier" rule="map">
+        <description>
+          A map of asset ids to old gallery refs where they may have been moved from.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

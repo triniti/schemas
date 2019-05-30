@@ -33,6 +33,19 @@
           An integer value representing the order in which this asset will appear in a gallery.
         </description>
       </field>
+      <field name="old_gallery_ref" type="identifier">
+        <description>
+          The node ref for the gallery where the asset is removed from.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
     </fields>
   </schema>
 </pbj-schema>

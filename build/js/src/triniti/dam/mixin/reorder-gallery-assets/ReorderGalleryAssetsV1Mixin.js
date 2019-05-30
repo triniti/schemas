@@ -30,6 +30,13 @@ export default class ReorderGalleryAssetsV1Mixin extends Mixin {
       Fb.create('gallery_seqs', T.IntType.create())
         .asAMap()
         .build(),
+      /*
+       * A map of asset ids to old gallery refs where they may have been moved from.
+       */
+      Fb.create('old_gallery_refs', T.IdentifierType.create())
+        .asAMap()
+        .classProto(NodeRef)
+        .build(),
     ];
   }
 }

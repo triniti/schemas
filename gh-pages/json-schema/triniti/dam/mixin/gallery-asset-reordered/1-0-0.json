@@ -198,6 +198,15 @@
         "type": "int",
         "rule": "single"
       }
+    },
+    "old_gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "The node ref for the gallery where the asset is removed from.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
     }
   },
   "required": [
