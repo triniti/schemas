@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v1.0.0
+* Peg stable version.
+
+
 ## v0.15.7
 __Modify Schemas:__
   * `triniti:dam:mixin:gallery-assets-reordered`

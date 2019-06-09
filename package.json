@@ -1,6 +1,6 @@
 {
   "name": "@triniti/schemas",
-  "version": "0.15.7",
+  "version": "1.0.0",
   "description": "Schemas for common Triniti apps and components.",
   "repository": {
     "type": "git",
