@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.0.1
+__Modify Schemas:__
+  * `triniti:news:mixin:article` patch revision `1-0-1`
+    * Change `show_related_articles` field default to true.
+
+
 ## v1.0.0
 * Peg stable version.
 

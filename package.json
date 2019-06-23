@@ -1,6 +1,6 @@
 {
   "name": "@triniti/schemas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Schemas for common Triniti apps and components.",
   "repository": {
     "type": "git",
@@ -30,8 +30,8 @@
     "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "@gdbots/common": "^0.1.2",
-    "@gdbots/pbj": "^0.2.6",
+    "@gdbots/common": "^1.0.0",
+    "@gdbots/pbj": "^1.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-lodash": "^3.3.4",

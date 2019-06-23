@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-1.json#
 namespace Triniti\Schemas\News\Mixin\Article;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -17,7 +17,7 @@ final class ArticleV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:news:mixin:article:1-0-0');
+        return SchemaId::fromString('pbj:triniti:news:mixin:article:1-0-1');
     }
 
     /**
@@ -101,6 +101,7 @@ final class ArticleV1Mixin extends AbstractMixin
              * to see the related articles.
              */
             Fb::create('show_related_articles', T\BooleanType::create())
+                ->withDefault(true)
                 ->build(),
             Fb::create('related_articles_heading', T\StringType::create())
                 ->build(),

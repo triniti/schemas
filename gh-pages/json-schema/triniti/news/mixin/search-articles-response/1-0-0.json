@@ -187,6 +187,9 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-0.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-1.json#"
         }
       ]
     },

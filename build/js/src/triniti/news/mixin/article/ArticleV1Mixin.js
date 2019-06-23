@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-1.json#
 import ArticleId from '@triniti/schemas/triniti/news/ArticleId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
@@ -12,7 +12,7 @@ export default class ArticleV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-0');
+    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-1');
   }
 
   /**
@@ -95,6 +95,7 @@ export default class ArticleV1Mixin extends Mixin {
        * to see the related articles.
        */
       Fb.create('show_related_articles', T.BooleanType.create())
+        .withDefault(true)
         .build(),
       Fb.create('related_articles_heading', T.StringType.create())
         .build(),
