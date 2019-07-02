@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/common/mixin/seo/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/common/mixin/seo/1-0-1.json#
 namespace Triniti\Schemas\Common\Mixin\Seo;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -15,7 +15,7 @@ final class SeoV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:common:mixin:seo:1-0-0');
+        return SchemaId::fromString('pbj:triniti:common:mixin:seo:1-0-1');
     }
 
     /**
@@ -34,11 +34,16 @@ final class SeoV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             /*
-             * Allows customization of the publish date for SEO purposes. For example
-             * if something meaningful within an article is updated, adjust this date
-             * instead of the actual publish date.
+             * Allows customization of the publish date for SEO purposes.
              */
             Fb::create('seo_published_at', T\DateTimeType::create())
+                ->build(),
+            /*
+             * Allows customization of the updated date for SEO purposes. For example
+             * if something meaningful is updated this date should be used instead of
+             * the node's normal updated_at field which accounts for every change.
+             */
+            Fb::create('seo_updated_at', T\DateTimeType::create())
                 ->build(),
             Fb::create('meta_description', T\TextType::create())
                 ->maxLength(5000)

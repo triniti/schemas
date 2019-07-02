@@ -1,8 +1,17 @@
 # CHANGELOG
 
 
+## v1.0.2
+* __Add Schemas:__
+  * `triniti:curator:mixin:gallery-image-count-updated`
+  * `triniti:curator:mixin:update-gallery-image-count`
+* __Modify Schemas:__
+  * `triniti:common:mixin:seo` patch revision `1-0-1`
+    * Add `seo_updated_at` date-time field.
+
+
 ## v1.0.1
-__Modify Schemas:__
+* __Modify Schemas:__
   * `triniti:news:mixin:article` patch revision `1-0-1`
     * Change `show_related_articles` field default to true.
 
@@ -12,7 +21,7 @@ __Modify Schemas:__
 
 
 ## v0.15.7
-__Modify Schemas:__
+* __Modify Schemas:__
   * `triniti:dam:mixin:gallery-assets-reordered`
     * Add `old_gallery_ref` identifier (NodeRef) field.
   * `triniti:dam:mixin:reorder-gallery-assets`
@@ -25,8 +34,7 @@ __Modify Schemas:__
 
 ## v0.15.5
 * Use `gdbots/schemas` v1.5.11.
-
-__Modify Schemas:__
+* __Modify Schemas:__
   * `triniti:notify:mixin:ios-notification`
     * Add `fcm_topics` string set field with pattern `^[\w\/\.:~%#-]+$`.
   * `triniti:notify:mixin:android-notification`
@@ -34,13 +42,13 @@ __Modify Schemas:__
 
 
 ## v0.15.4
-__Modify Schemas:__ _(no version changes as there is no production use yet)_
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:news:mixin:article-stats`
     * Add `fb_engagement` int field.
 
 
 ## v0.15.3
-__Modify Schemas:__ _(no version changes as there is no production use yet)_
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:ovp:mixin:video`
     * Add `is_promo` boolean field.
 
@@ -55,7 +63,7 @@ __Modify Schemas:__ _(no version changes as there is no production use yet)_
 
 
 ## v0.15.0
-__Modify Schemas:__ _(no version changes as there is no production use yet)_
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:common:mixin:swipeable`
     * Remove `soft_swipe` field, yes, i know, srsly, wth.
 
@@ -63,7 +71,7 @@ __Modify Schemas:__ _(no version changes as there is no production use yet)_
 ## v0.14.0
 __BREAKING CHANGES__
 
-__Modify Schemas:__ _(no version changes as there is no production use yet)_
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `triniti:apollo:mixin:poll-stats`
     * Rename `answers` field to `answer_votes` so it doesn't conflict with answers field on poll in elasticsearch.
   * `triniti:notify:mixin:email-notification`

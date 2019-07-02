@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/common/mixin/seo/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/common/mixin/seo/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -10,7 +10,7 @@ export default class SeoV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:common:mixin:seo:1-0-0');
+    return SchemaId.fromString('pbj:triniti:common:mixin:seo:1-0-1');
   }
 
   /**
@@ -28,11 +28,16 @@ export default class SeoV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       /*
-       * Allows customization of the publish date for SEO purposes. For example
-       * if something meaningful within an article is updated, adjust this date
-       * instead of the actual publish date.
+       * Allows customization of the publish date for SEO purposes.
        */
       Fb.create('seo_published_at', T.DateTimeType.create())
+        .build(),
+      /*
+       * Allows customization of the updated date for SEO purposes. For example
+       * if something meaningful is updated this date should be used instead of
+       * the node's normal updated_at field which accounts for every change.
+       */
+      Fb.create('seo_updated_at', T.DateTimeType.create())
         .build(),
       Fb.create('meta_description', T.TextType.create())
         .maxLength(5000)
