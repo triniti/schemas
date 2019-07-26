@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.0.3
+* __Modify Schemas:__
+  * `triniti:common::render-context` patch revision `1-0-1`
+    * Add `format` string field with format slug.
+
+
 ## v1.0.2
 * __Add Schemas:__
   * `triniti:curator:mixin:gallery-image-count-updated`

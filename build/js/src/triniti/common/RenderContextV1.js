@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/common/render-context/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/common/render-context/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Message from '@gdbots/pbj/Message';
@@ -14,7 +14,7 @@ export default class RenderContextV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:common::render-context:1-0-0', RenderContextV1,
+    return new Schema('pbj:triniti:common::render-context:1-0-1', RenderContextV1,
       [
         Fb.create('cache_enabled', T.BooleanType.create())
           .withDefault(true)
@@ -62,6 +62,12 @@ export default class RenderContextV1 extends Message {
          */
         Fb.create('section', T.StringType.create())
           .pattern('^[\\w-]+$')
+          .build(),
+        /*
+         * The format to be used for rendering, e.g. "html" or "json".
+         */
+        Fb.create('format', T.StringType.create())
+          .format(Format.SLUG)
           .build(),
         Fb.create('booleans', T.BooleanType.create())
           .asAMap()
