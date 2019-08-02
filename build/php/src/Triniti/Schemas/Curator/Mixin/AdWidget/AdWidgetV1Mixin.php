@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/ad-widget/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/ad-widget/1-0-1.json#
 namespace Triniti\Schemas\Curator\Mixin\AdWidget;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -15,7 +15,7 @@ final class AdWidgetV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:ad-widget:1-0-0');
+        return SchemaId::fromString('pbj:triniti:curator:mixin:ad-widget:1-0-1');
     }
 
     /**
@@ -33,6 +33,10 @@ final class AdWidgetV1Mixin extends AbstractMixin
             Fb::create('dfp_cust_params', T\StringType::create())
                 ->asAMap()
                 ->pattern('^[\w\/\.:-]+$')
+                ->build(),
+            Fb::create('refresh_enabled', T\BooleanType::create())
+                ->build(),
+            Fb::create('refresh_interval', T\SmallIntType::create())
                 ->build(),
         ];
     }

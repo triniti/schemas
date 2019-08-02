@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## vN.N.N
+* __Modify Schemas:__
+  * `triniti:curator:mixin:ad-widget` patch revision `1-0-1`
+    * Add `refresh_enabled` boolean field.
+    * Add `refresh_interval` small-int field.
+
+
 ## v1.0.2
 * __Add Schemas:__
   * `triniti:curator:mixin:gallery-image-count-updated`

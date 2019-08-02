@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:mixin:ad-widget:1-0-1" mixin="true" extends="triniti:curator:mixin:widget:v1">
+    <fields>
+      <field name="ad_size" type="string-enum">
+        <enum id="triniti:common:ad-size"/>
+      </field>
+      <field name="dfp_ad_unit_path" type="string" pattern="^[\w\/\.:-]+$"/>
+      <field name="dfp_cust_params" type="string" pattern="^[\w\/\.:-]+$" rule="map"/>
+      <field name="refresh_enabled" type="boolean"/>
+      <field name="refresh_interval" type="small-int"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        '_id' => (string)$this->get('_id'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    _id: `${this.get('_id', '')}`,
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>
