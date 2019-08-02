@@ -3,13 +3,15 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:curator:mixin:ad-widget:1-0-0" mixin="true" extends="triniti:curator:mixin:widget:v1">
+  <schema id="pbj:triniti:curator:mixin:ad-widget:1-0-1" mixin="true" extends="triniti:curator:mixin:widget:v1">
     <fields>
       <field name="ad_size" type="string-enum">
         <enum id="triniti:common:ad-size"/>
       </field>
       <field name="dfp_ad_unit_path" type="string" pattern="^[\w\/\.:-]+$"/>
       <field name="dfp_cust_params" type="string" pattern="^[\w\/\.:-]+$" rule="map"/>
+      <field name="refresh_enabled" type="boolean"/>
+      <field name="refresh_interval" type="small-int"/>
     </fields>
 
     <php-options>
