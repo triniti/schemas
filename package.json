@@ -19,7 +19,7 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^1.5.12"
+    "@gdbots/schemas": "^1.5.13"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
@@ -50,7 +50,7 @@
     "lodash-es": "^4.17.11",
     "md5": "^2.2.1",
     "moment": "^2.24.0",
-    "rimraf": "^2.7.0",
+    "rimraf": "^2.7.1",
     "tape": "^4.11.0",
     "utf8": "^3.0.0",
     "uuid": "^3.3.2"

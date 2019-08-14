@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -13,7 +13,7 @@ export default class VideoV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:ovp:mixin:video:1-0-0');
+    return SchemaId.fromString('pbj:triniti:ovp:mixin:video:1-0-1');
   }
 
   /**
@@ -126,6 +126,12 @@ export default class VideoV1Mixin extends Mixin {
         .build(),
       Fb.create('show', T.StringType.create())
         .format(Format.SLUG)
+        .build(),
+      /*
+       * A reference to the audio asset for this video.
+       */
+      Fb.create('audio_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
         .build(),
     ];
   }
