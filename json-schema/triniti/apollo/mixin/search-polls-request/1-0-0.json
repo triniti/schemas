@@ -297,6 +297,22 @@
         "rule": "single"
       }
     },
+    "published_after": {
+      "type": "string",
+      "format": "date-time",
+      "pbj": {
+        "type": "date-time",
+        "rule": "single"
+      }
+    },
+    "published_before": {
+      "type": "string",
+      "format": "date-time",
+      "pbj": {
+        "type": "date-time",
+        "rule": "single"
+      }
+    },
     "fields_used": {
       "type": "array",
       "items": [
@@ -320,6 +336,22 @@
       "pbj": {
         "type": "text",
         "rule": "single"
+      }
+    },
+    "derefs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\.-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "Field names to dereference, this serves as a hint to the server and is not necessarily gauranteed since authorization, availability, etc. are determined by the server not the client.",
+      "pbj": {
+        "type": "string",
+        "rule": "set"
       }
     },
     "sort": {
