@@ -61,5 +61,6 @@ import '@triniti/schemas/triniti/ovp.kaltura/CaptionV1';
 import '@triniti/schemas/triniti/ovp.kaltura/EntryV1';
 import '@triniti/schemas/triniti/ovp.kaltura/FlavorV1';
 import '@triniti/schemas/triniti/ovp.kaltura/command/SyncEntryV1';
+import '@triniti/schemas/triniti/sys/command/PurgeCacheV1';
 
 export default MessageResolver;

@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-1.json#
 namespace Triniti\Schemas\Ovp\Mixin\Video;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -18,7 +18,7 @@ final class VideoV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:ovp:mixin:video:1-0-0');
+        return SchemaId::fromString('pbj:triniti:ovp:mixin:video:1-0-1');
     }
 
     /**
@@ -132,6 +132,12 @@ final class VideoV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('show', T\StringType::create())
                 ->format(Format::SLUG())
+                ->build(),
+            /*
+             * A reference to the audio asset for this video.
+             */
+            Fb::create('audio_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
                 ->build(),
         ];
     }

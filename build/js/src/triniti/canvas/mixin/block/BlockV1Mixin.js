@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/block/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -9,7 +9,7 @@ export default class BlockV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:block:1-0-0');
+    return SchemaId.fromString('pbj:triniti:canvas:mixin:block:1-0-1');
   }
 
   /**
@@ -35,6 +35,13 @@ export default class BlockV1Mixin extends Mixin {
        * the article was updated to include that twitter block.
        */
       Fb.create('updated_date', T.DateTimeType.create())
+        .build(),
+      /*
+       * When true it means this block represents a portion of a document
+       * whose content is only indirectly related to the document's main content.
+       * Asides are frequently presented as sidebars or call-out boxes.
+       */
+      Fb.create('aside', T.BooleanType.create())
         .build(),
     ];
   }

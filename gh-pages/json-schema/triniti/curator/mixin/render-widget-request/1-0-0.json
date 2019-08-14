@@ -248,6 +248,9 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/triniti/common/render-context/1-0-0.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/common/render-context/1-0-1.json#"
         }
       ]
     }

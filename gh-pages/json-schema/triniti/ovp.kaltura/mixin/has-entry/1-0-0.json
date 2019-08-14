@@ -388,6 +388,15 @@
         "format": "slug"
       }
     },
+    "audio_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the audio asset for this video.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "kaltura_entry_id": {
       "type": "string",
       "pattern": "^[\\w-]+$",

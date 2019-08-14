@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/common/render-context/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/common/render-context/1-0-1.json#
 namespace Triniti\Schemas\Common;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -18,7 +18,7 @@ final class RenderContextV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:triniti:common::render-context:1-0-0', __CLASS__,
+        return new Schema('pbj:triniti:common::render-context:1-0-1', __CLASS__,
             [
                 Fb::create('cache_enabled', T\BooleanType::create())
                     ->withDefault(true)
@@ -66,6 +66,12 @@ final class RenderContextV1 extends AbstractMessage implements
                  */
                 Fb::create('section', T\StringType::create())
                     ->pattern('^[\w-]+$')
+                    ->build(),
+                /*
+                 * The format to be used for rendering, e.g. "html" or "json".
+                 */
+                Fb::create('format', T\StringType::create())
+                    ->format(Format::SLUG())
                     ->build(),
                 Fb::create('booleans', T\BooleanType::create())
                     ->asAMap()
