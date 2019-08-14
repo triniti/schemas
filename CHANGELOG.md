@@ -2,9 +2,15 @@
 
 
 ## v1.0.3
+* __Add Schemas:__
+  * `triniti:sys:command:purge-cache`
 * __Modify Schemas:__
   * `triniti:common::render-context` patch revision `1-0-1`
     * Add `format` string field with format slug.
+  * `triniti:dam:mixin:audio-asset` patch revision `1-0-1`
+    * Add `duration` small-int field.
+  * `triniti:dam:mixin:video-asset` patch revision `1-0-1`
+    * Add `duration` small-int field.
 
 
 ## v1.0.2
