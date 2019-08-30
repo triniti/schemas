@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-1.json#
 namespace Triniti\Schemas\Curator\Mixin\Gallery;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -16,7 +16,7 @@ final class GalleryV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:gallery:1-0-0');
+        return SchemaId::fromString('pbj:triniti:curator:mixin:gallery:1-0-1');
     }
 
     /**
@@ -56,6 +56,18 @@ final class GalleryV1Mixin extends AbstractMixin
                 ->maxLength(5000)
                 ->build(),
             Fb::create('image_count', T\MediumIntType::create())
+                ->build(),
+            /*
+             * A reference to the previous gallery.
+             */
+            Fb::create('prev_gallery_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
+                ->build(),
+            /*
+             * A reference to the next gallery.
+             */
+            Fb::create('next_gallery_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
                 ->build(),
             Fb::create('related_gallery_refs', T\IdentifierType::create())
                 ->asAList()

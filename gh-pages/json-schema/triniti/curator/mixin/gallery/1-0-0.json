@@ -219,6 +219,24 @@
         "rule": "single"
       }
     },
+    "prev_gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the previous gallery.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "next_gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the next gallery.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "related_gallery_refs": {
       "type": "array",
       "items": [
