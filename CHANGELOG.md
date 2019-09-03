@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v1.0.4
+* __Modify Schemas:__
+  * `triniti:canvas:mixin:gallery-block` patch revision `1-0-1`
+    * Add `start_at_poster` boolean field.
+  * `triniti:curator:mixin:gallery` patch revision `1-0-1`
+    * Add `next_gallery_ref` identifier (NodeRef) field.
+    * Add `prev_gallery_ref` identifier (NodeRef) field.
+
+
 ## v1.0.3
 * Use `gdbots/schemas` v1.5.13.
 * __Add Schemas:__

@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GalleryId from '@triniti/schemas/triniti/curator/GalleryId';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -11,7 +11,7 @@ export default class GalleryV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:curator:mixin:gallery:1-0-0');
+    return SchemaId.fromString('pbj:triniti:curator:mixin:gallery:1-0-1');
   }
 
   /**
@@ -50,6 +50,18 @@ export default class GalleryV1Mixin extends Mixin {
         .maxLength(5000)
         .build(),
       Fb.create('image_count', T.MediumIntType.create())
+        .build(),
+      /*
+       * A reference to the previous gallery.
+       */
+      Fb.create('prev_gallery_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
+        .build(),
+      /*
+       * A reference to the next gallery.
+       */
+      Fb.create('next_gallery_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
         .build(),
       Fb.create('related_gallery_refs', T.IdentifierType.create())
         .asAList()

@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/gallery-block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/gallery-block/1-0-1.json#
 namespace Triniti\Schemas\Canvas\Mixin\GalleryBlock;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -15,7 +15,7 @@ final class GalleryBlockV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:gallery-block:1-0-0');
+        return SchemaId::fromString('pbj:triniti:canvas:mixin:gallery-block:1-0-1');
     }
 
     /**
@@ -32,6 +32,13 @@ final class GalleryBlockV1Mixin extends AbstractMixin
              */
             Fb::create('poster_image_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
+                ->build(),
+            /*
+             * When true the gallery should open at the poster image selected.
+             * This assumes the poster image is also in the selected gallery.
+             */
+            Fb::create('start_at_poster', T\BooleanType::create())
+                ->withDefault(true)
                 ->build(),
         ];
     }
