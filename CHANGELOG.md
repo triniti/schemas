@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v1.0.5
+* __Modify Schemas:__
+  * `triniti:dam:mixin:asset-patched` patch revision `1-0-1`
+    * Add `title` string field.
+    * Add `description` text field.
+  * `triniti:dam:mixin:patch-assets` patch revision `1-0-1`
+    * Add `title` string field.
+    * Add `description` text field.
+
+
 ## v1.0.4
 * __Modify Schemas:__
   * `triniti:canvas:mixin:gallery-block` patch revision `1-0-1`

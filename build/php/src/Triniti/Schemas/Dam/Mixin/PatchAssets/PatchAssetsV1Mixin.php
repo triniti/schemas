@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/patch-assets/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/patch-assets/1-0-1.json#
 namespace Triniti\Schemas\Dam\Mixin\PatchAssets;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -14,7 +14,7 @@ final class PatchAssetsV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:dam:mixin:patch-assets:1-0-0');
+        return SchemaId::fromString('pbj:triniti:dam:mixin:patch-assets:1-0-1');
     }
 
     /**
@@ -23,9 +23,14 @@ final class PatchAssetsV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            Fb::create('title', T\StringType::create())
+                ->build(),
             Fb::create('expires_at', T\DateTimeType::create())
                 ->build(),
             Fb::create('credit', T\StringType::create())
+                ->build(),
+            Fb::create('description', T\TextType::create())
+                ->maxLength(5000)
                 ->build(),
         ];
     }
