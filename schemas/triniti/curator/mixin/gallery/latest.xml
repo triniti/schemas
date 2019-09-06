@@ -34,6 +34,11 @@
           of the contents of this gallery. e.g. "Fox News", "CNN".
         </description>
       </field>
+      <field name="credit_url" type="text" format="url">
+        <description>
+          A URL to the credited source/creator of the asset.
+        </description>
+      </field>
       <field name="allow_comments" type="boolean">
         <default>true</default>
       </field>

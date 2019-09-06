@@ -1,6 +1,7 @@
 // @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-0.json#
 import AssetId from '@triniti/schemas/triniti/dam/AssetId';
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -22,6 +23,11 @@ export default class AssetV1Mixin extends Mixin {
       Fb.create('_id', T.IdentifierType.create())
         .required()
         .classProto(AssetId)
+        .build(),
+      /*
+       * The title for public display.
+       */
+      Fb.create('display_title', T.StringType.create())
         .build(),
       Fb.create('mime_type', T.StringType.create())
         .required()
@@ -53,6 +59,23 @@ export default class AssetV1Mixin extends Mixin {
        * of the asset. e.g. "Fox News", "CNN".
        */
       Fb.create('credit', T.StringType.create())
+        .build(),
+      /*
+       * A URL to the credited source/creator of the asset.
+       */
+      Fb.create('credit_url', T.TextType.create())
+        .format(Format.URL)
+        .build(),
+      /*
+       * A call to action for the asset. e.g. "Click here for more".
+       */
+      Fb.create('cta_text', T.StringType.create())
+        .build(),
+      /*
+       * A URL to use with the call to action.
+       */
+      Fb.create('cta_url', T.TextType.create())
+        .format(Format.URL)
         .build(),
       /*
        * A set of node refs which have been linked to this asset.

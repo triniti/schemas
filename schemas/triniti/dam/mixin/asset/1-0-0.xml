@@ -15,6 +15,9 @@
           <class-proto>AssetId</class-proto>
         </js-options>
       </field>
+      <field name="display_title" type="string">
+        <description>The title for public display.</description>
+      </field>
       <field name="mime_type" type="string" pattern="^[\w-]+\/[\w\+\.-]+$" required="true"/>
       <field name="file_size" type="big-int">
         <description>The file size in bytes.</description>
@@ -36,6 +39,21 @@
         <description>
           A credit is a short string used to publicly acknowledge the source/creator
           of the asset. e.g. "Fox News", "CNN".
+        </description>
+      </field>
+      <field name="credit_url" type="text" format="url">
+        <description>
+          A URL to the credited source/creator of the asset.
+        </description>
+      </field>
+      <field name="cta_text" type="string">
+        <description>
+          A call to action for the asset.  e.g. "Click here for more".
+        </description>
+      </field>
+      <field name="cta_url" type="text" format="url">
+        <description>
+          A URL to use with the call to action.
         </description>
       </field>
       <field name="linked_refs" type="identifier" rule="set">

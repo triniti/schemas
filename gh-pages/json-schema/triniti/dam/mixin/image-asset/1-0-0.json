@@ -162,6 +162,16 @@
         "rule": "single"
       }
     },
+    "display_title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The title for public display.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "mime_type": {
       "type": "string",
       "pattern": "^[\\w-]+\\/[\\w\\+\\.-]+$",
@@ -208,6 +218,36 @@
       "pbj": {
         "type": "string",
         "rule": "single"
+      }
+    },
+    "credit_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "A URL to the credited source/creator of the asset.",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "cta_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "A call to action for the asset. e.g. \"Click here for more\".",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "cta_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "A URL to use with the call to action.",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
       }
     },
     "linked_refs": {

@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Dam\Mixin\Asset;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -28,6 +29,11 @@ final class AssetV1Mixin extends AbstractMixin
             Fb::create('_id', T\IdentifierType::create())
                 ->required()
                 ->className(AssetId::class)
+                ->build(),
+            /*
+             * The title for public display.
+             */
+            Fb::create('display_title', T\StringType::create())
                 ->build(),
             Fb::create('mime_type', T\StringType::create())
                 ->required()
@@ -59,6 +65,23 @@ final class AssetV1Mixin extends AbstractMixin
              * of the asset. e.g. "Fox News", "CNN".
              */
             Fb::create('credit', T\StringType::create())
+                ->build(),
+            /*
+             * A URL to the credited source/creator of the asset.
+             */
+            Fb::create('credit_url', T\TextType::create())
+                ->format(Format::URL())
+                ->build(),
+            /*
+             * A call to action for the asset. e.g. "Click here for more".
+             */
+            Fb::create('cta_text', T\StringType::create())
+                ->build(),
+            /*
+             * A URL to use with the call to action.
+             */
+            Fb::create('cta_url', T\TextType::create())
+                ->format(Format::URL())
                 ->build(),
             /*
              * A set of node refs which have been linked to this asset.

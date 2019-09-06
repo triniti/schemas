@@ -1,5 +1,6 @@
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import GalleryId from '@triniti/schemas/triniti/curator/GalleryId';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -36,6 +37,12 @@ export default class GalleryV1Mixin extends Mixin {
        * of the contents of this gallery. e.g. "Fox News", "CNN".
        */
       Fb.create('credit', T.StringType.create())
+        .build(),
+      /*
+       * A URL to the credited source/creator of the asset.
+       */
+      Fb.create('credit_url', T.TextType.create())
+        .format(Format.URL)
         .build(),
       Fb.create('allow_comments', T.BooleanType.create())
         .withDefault(true)
