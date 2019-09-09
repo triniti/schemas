@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:dam:mixin:asset:1-0-1" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+    <fields>
+      <field name="_id" type="identifier" required="true">
+        <php-options>
+          <imports>use Triniti\Schemas\Dam\AssetId;</imports>
+          <class-name>AssetId::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId';</imports>
+          <class-proto>AssetId</class-proto>
+        </js-options>
+      </field>
+      <field name="display_title" type="string"/>
+      <field name="mime_type" type="string" pattern="^[\w-]+\/[\w\+\.-]+$" required="true"/>
+      <field name="file_size" type="big-int">
+        <description>The file size in bytes.</description>
+      </field>
+      <field name="file_etag" type="string" pattern="^[\w\.:-]+$" max="100">
+        <description>
+          An etag created from the file itself. The file etag is different from the
+          node's etag because the node tracks metadata, which can be updated without
+          the file being changed.
+        </description>
+      </field>
+      <field name="description" type="text" max="5000">
+        <description>
+          A description of the asset (usually a few sentences). It should typically
+          not have HTML as it is used in metadata, feeds, SERP and social.
+        </description>
+      </field>
+      <field name="credit" type="string">
+        <description>
+          A credit is a short string used to publicly acknowledge the source/creator
+          of the asset. e.g. "Fox News", "CNN".
+        </description>
+      </field>
+      <field name="credit_url" type="text" format="url">
+        <description>
+          A URL to link to the credit source.
+        </description>
+      </field>
+      <field name="cta_text" type="string">
+        <description>
+          Call to action text.  e.g. "Click here"
+        </description>
+      </field>
+      <field name="cta_url" type="text" format="url">
+        <description>
+          A URL to link with the call to action text.
+        </description>
+      </field>
+      <field name="linked_refs" type="identifier" rule="set">
+        <description>
+          A set of node refs which have been linked to this asset.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="gallery_ref" type="identifier">
+        <description>
+          A node ref referencing the gallery where the asset is used.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="gallery_seq" type="int">
+        <description>
+          An integer value representing the order in which this asset will appear in a gallery.
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

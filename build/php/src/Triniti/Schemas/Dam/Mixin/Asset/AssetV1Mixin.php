@@ -1,8 +1,9 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-1.json#
 namespace Triniti\Schemas\Dam\Mixin\Asset;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -16,7 +17,7 @@ final class AssetV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:dam:mixin:asset:1-0-0');
+        return SchemaId::fromString('pbj:triniti:dam:mixin:asset:1-0-1');
     }
 
     /**
@@ -28,6 +29,8 @@ final class AssetV1Mixin extends AbstractMixin
             Fb::create('_id', T\IdentifierType::create())
                 ->required()
                 ->className(AssetId::class)
+                ->build(),
+            Fb::create('display_title', T\StringType::create())
                 ->build(),
             Fb::create('mime_type', T\StringType::create())
                 ->required()
@@ -59,6 +62,23 @@ final class AssetV1Mixin extends AbstractMixin
              * of the asset. e.g. "Fox News", "CNN".
              */
             Fb::create('credit', T\StringType::create())
+                ->build(),
+            /*
+             * A URL to link to the credit source.
+             */
+            Fb::create('credit_url', T\TextType::create())
+                ->format(Format::URL())
+                ->build(),
+            /*
+             * Call to action text. e.g. "Click here"
+             */
+            Fb::create('cta_text', T\StringType::create())
+                ->build(),
+            /*
+             * A URL to link with the call to action text.
+             */
+            Fb::create('cta_url', T\TextType::create())
+                ->format(Format::URL())
                 ->build(),
             /*
              * A set of node refs which have been linked to this asset.
