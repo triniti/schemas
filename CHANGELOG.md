@@ -10,7 +10,6 @@
     * Add `cta_url` text field
   * `triniti.curator.mixin.gallery` patch revision `1-0-1`
     * Add `credit_url` text field.
-    * Add `cta_url` text field.
 
 ## v1.0.5
 * __Modify Schemas:__
