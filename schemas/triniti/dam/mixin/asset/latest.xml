@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:dam:mixin:asset:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+  <schema id="pbj:triniti:dam:mixin:asset:1-0-1" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
       <field name="_id" type="identifier" required="true">
         <php-options>
@@ -15,6 +15,7 @@
           <class-proto>AssetId</class-proto>
         </js-options>
       </field>
+      <field name="display_title" type="string"/>
       <field name="mime_type" type="string" pattern="^[\w-]+\/[\w\+\.-]+$" required="true"/>
       <field name="file_size" type="big-int">
         <description>The file size in bytes.</description>
@@ -36,6 +37,21 @@
         <description>
           A credit is a short string used to publicly acknowledge the source/creator
           of the asset. e.g. "Fox News", "CNN".
+        </description>
+      </field>
+      <field name="credit_url" type="text" format="url">
+        <description>
+          A URL to link to the credit source.
+        </description>
+      </field>
+      <field name="cta_text" type="string">
+        <description>
+          Call to action text.  e.g. "Click here"
+        </description>
+      </field>
+      <field name="cta_url" type="text" format="url">
+        <description>
+          A URL to link with the call to action text.
         </description>
       </field>
       <field name="linked_refs" type="identifier" rule="set">

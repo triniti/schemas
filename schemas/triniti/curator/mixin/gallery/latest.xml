@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:curator:mixin:gallery:1-0-1" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+  <schema id="pbj:triniti:curator:mixin:gallery:1-0-2" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
       <field name="_id" type="identifier" required="true" overridable="true">
         <php-options>
@@ -32,6 +32,11 @@
         <description>
           A credit is a short string used to publicly acknowledge the source/creator
           of the contents of this gallery. e.g. "Fox News", "CNN".
+        </description>
+      </field>
+      <field name="credit_url" type="text" format="url">
+        <description>
+          A URL to link with the credit source.
         </description>
       </field>
       <field name="allow_comments" type="boolean">
