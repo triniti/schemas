@@ -56,12 +56,6 @@ final class GalleryV1Mixin extends AbstractMixin
             Fb::create('launch_text', T\StringType::create())
                 ->build(),
             /*
-             * Call to action URL to use with launch_text.
-             */
-            Fb::create('cta_url', T\TextType::create())
-                ->format(Format::URL())
-                ->build(),
-            /*
              * A description of the gallery (usually a few sentences). It should typically
              * not have HTML as it is used in metadata, feeds, SERP and social.
              */
