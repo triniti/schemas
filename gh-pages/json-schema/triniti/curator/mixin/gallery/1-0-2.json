@@ -209,6 +209,16 @@
         "rule": "single"
       }
     },
+    "cta_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "Call to action URL to use with launch_text.",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
     "description": {
       "type": "string",
       "minLength": 0,

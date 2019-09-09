@@ -43,6 +43,11 @@
         <default>true</default>
       </field>
       <field name="launch_text" type="string"/>
+      <field name="cta_url" type="text" format="url">
+        <description>
+          Call to action URL to use with launch_text.
+        </description>
+      </field>
       <field name="description" type="text" max="5000">
         <description>
           A description of the gallery (usually a few sentences). It should typically
