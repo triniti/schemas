@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:curator:mixin:youtube-video-teaser:1-0-1" mixin="true"
-      extends="triniti:curator:mixin:teaser:v1">
-    <fields>
-      <field name="youtube_video_id" type="string" pattern="^[\w-]+$" required="true"/>
-      <field name="youtube_custom_id" type="string" pattern="^[\w@#-]+$"/>
-    </fields>
-
+  <schema id="pbj:triniti:curator:mixin:asset-teaser:1-0-0" mixin="true"
+          extends="triniti:curator:mixin:teaser-has-target:v1">
     <php-options>
       <insertion-points>
         <imports/>
@@ -22,7 +17,7 @@ public function getUriTemplateVars()
 {
     return [
         '_id' => (string)$this->get('_id'),
-        'youtube_video_id' => $this->get('youtube_video_id'),
+        'target_ref' => (string)$this->get('target_ref'),
     ];
 }
           ]]>
@@ -40,7 +35,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     _id: `${this.get('_id', '')}`,
-    youtube_video_id: this.get('youtube_video_id'),
+    target_ref: `${this.get('target_ref', '')}`,
   };
 }
           ]]>

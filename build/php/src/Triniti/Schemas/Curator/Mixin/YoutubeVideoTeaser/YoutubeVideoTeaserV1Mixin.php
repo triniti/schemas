@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/youtube-video-teaser/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/youtube-video-teaser/1-0-1.json#
 namespace Triniti\Schemas\Curator\Mixin\YoutubeVideoTeaser;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -14,7 +14,7 @@ final class YoutubeVideoTeaserV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:youtube-video-teaser:1-0-0');
+        return SchemaId::fromString('pbj:triniti:curator:mixin:youtube-video-teaser:1-0-1');
     }
 
     /**
@@ -26,6 +26,9 @@ final class YoutubeVideoTeaserV1Mixin extends AbstractMixin
             Fb::create('youtube_video_id', T\StringType::create())
                 ->required()
                 ->pattern('^[\w-]+$')
+                ->build(),
+            Fb::create('youtube_custom_id', T\StringType::create())
+                ->pattern('^[\w@#-]+$')
                 ->build(),
         ];
     }

@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/category-teaser/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/asset-teaser/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {

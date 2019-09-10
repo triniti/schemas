@@ -1,8 +1,9 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaser/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaser/1-0-1.json#
 namespace Triniti\Schemas\Curator\Mixin\Teaser;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -16,7 +17,7 @@ final class TeaserV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:teaser:1-0-0');
+        return SchemaId::fromString('pbj:triniti:curator:mixin:teaser:1-0-1');
     }
 
     /**
@@ -53,9 +54,25 @@ final class TeaserV1Mixin extends AbstractMixin
                 ->maxLength(5000)
                 ->build(),
             /*
+             * Text to be used to caption the teaser.
+             */
+            Fb::create('caption', T\StringType::create())
+                ->build(),
+            /*
              * Text to be used for the call to action.
              */
             Fb::create('cta_text', T\StringType::create())
+                ->build(),
+            /*
+             * Text to be used to credit the teaser source.
+             */
+            Fb::create('credit', T\StringType::create())
+                ->build(),
+            /*
+             * URL to be used to link to the teaser source.
+             */
+            Fb::create('credit_url', T\TextType::create())
+                ->format(Format::URL())
                 ->build(),
             Fb::create('gallery_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)

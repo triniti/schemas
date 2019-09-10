@@ -191,6 +191,16 @@
         "rule": "single"
       }
     },
+    "caption": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used to caption the teaser.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "cta_text": {
       "type": "string",
       "minLength": 0,
@@ -199,6 +209,26 @@
       "pbj": {
         "type": "string",
         "rule": "single"
+      }
+    },
+    "credit": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used to credit the teaser source.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "credit_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "URL to be used to link to the teaser source.",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
       }
     },
     "gallery_ref": {
