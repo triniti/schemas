@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:curator:mixin:timeline:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+  <schema id="pbj:triniti:curator:mixin:timeline:1-0-1" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
       <field name="_id" type="identifier" required="true" overridable="true">
         <php-options>
@@ -17,6 +17,7 @@
           <default>() => TimelineId.generate()</default>
         </js-options>
       </field>
+      <field name="display_title" type="string"/>
       <field name="image_ref" type="identifier">
         <description>
           A reference to the image asset to use for widgets, sharing, seo.

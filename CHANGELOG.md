@@ -12,10 +12,12 @@
     * Add `cta_url` text field
   * `triniti:curator:mixin:gallery` patch revision `1-0-1`
     * Add `credit_url` text field.
-  * `triniti:curator:mixin:teaser` patch revision
+  * `triniti:curator:mixin:teaser` patch revision `1-0-1`
     * Add `caption` string field
     * Add `credit` string field
     * Add `credit_url` text field
+  * `triniti:curator:mixin:timeline` patch revision `1-0-1`
+    * Add `display_title` string field
   * `triniti:curator:mixin:youtube-video-teaser` patch revision `1-0-1`
     * Add `youtube_custom_id` string field
 
