@@ -230,15 +230,6 @@
         "rule": "set"
       }
     },
-    "title": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
     "expires_at": {
       "type": "string",
       "format": "date-time",
@@ -253,15 +244,6 @@
       "maxLength": 255,
       "pbj": {
         "type": "string",
-        "rule": "single"
-      }
-    },
-    "description": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 5000,
-      "pbj": {
-        "type": "text",
         "rule": "single"
       }
     }

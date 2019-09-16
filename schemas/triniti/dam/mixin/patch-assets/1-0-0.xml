@@ -5,10 +5,8 @@
 
   <schema id="pbj:triniti:dam:mixin:patch-assets:1-0-0" mixin="true" extends="gdbots:ncr:mixin:patch-nodes:v1">
     <fields>
-      <field name="title" type="string"/>
       <field name="expires_at" type="date-time"/>
       <field name="credit" type="string"/>
-      <field name="description" type="text" max="5000" />
     </fields>
   </schema>
 </pbj-schema>

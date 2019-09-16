@@ -1,8 +1,9 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/patch-assets/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/patch-assets/1-0-2.json#
 namespace Triniti\Schemas\Dam\Mixin\PatchAssets;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -14,7 +15,7 @@ final class PatchAssetsV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:dam:mixin:patch-assets:1-0-1');
+        return SchemaId::fromString('pbj:triniti:dam:mixin:patch-assets:1-0-2');
     }
 
     /**
@@ -25,9 +26,19 @@ final class PatchAssetsV1Mixin extends AbstractMixin
         return [
             Fb::create('title', T\StringType::create())
                 ->build(),
+            Fb::create('display_title', T\StringType::create())
+                ->build(),
             Fb::create('expires_at', T\DateTimeType::create())
                 ->build(),
             Fb::create('credit', T\StringType::create())
+                ->build(),
+            Fb::create('credit_url', T\TextType::create())
+                ->format(Format::URL())
+                ->build(),
+            Fb::create('cta_text', T\StringType::create())
+                ->build(),
+            Fb::create('cta_url', T\TextType::create())
+                ->format(Format::URL())
                 ->build(),
             Fb::create('description', T\TextType::create())
                 ->maxLength(5000)
