@@ -162,6 +162,15 @@
         "rule": "single"
       }
     },
+    "display_title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "mime_type": {
       "type": "string",
       "pattern": "^[\\w-]+\\/[\\w\\+\\.-]+$",
@@ -208,6 +217,36 @@
       "pbj": {
         "type": "string",
         "rule": "single"
+      }
+    },
+    "credit_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "A URL to link to the credit source.",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "cta_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Call to action text. e.g. \"Click here\"",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "cta_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "A URL to link with the call to action text.",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
       }
     },
     "linked_refs": {

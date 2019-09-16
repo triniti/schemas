@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -11,7 +11,7 @@ export default class TimelineV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:curator:mixin:timeline:1-0-0');
+    return SchemaId.fromString('pbj:triniti:curator:mixin:timeline:1-0-1');
   }
 
   /**
@@ -24,6 +24,8 @@ export default class TimelineV1Mixin extends Mixin {
         .withDefault(() => TimelineId.generate())
         .classProto(TimelineId)
         .overridable(true)
+        .build(),
+      Fb.create('display_title', T.StringType.create())
         .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.

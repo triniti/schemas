@@ -1,5 +1,6 @@
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaser/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaser/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -11,7 +12,7 @@ export default class TeaserV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:curator:mixin:teaser:1-0-0');
+    return SchemaId.fromString('pbj:triniti:curator:mixin:teaser:1-0-1');
   }
 
   /**
@@ -47,9 +48,25 @@ export default class TeaserV1Mixin extends Mixin {
         .maxLength(5000)
         .build(),
       /*
+       * Text to be used to caption the teaser.
+       */
+      Fb.create('caption', T.StringType.create())
+        .build(),
+      /*
        * Text to be used for the call to action.
        */
       Fb.create('cta_text', T.StringType.create())
+        .build(),
+      /*
+       * Text to be used to credit the teaser source.
+       */
+      Fb.create('credit', T.StringType.create())
+        .build(),
+      /*
+       * URL to be used to link to the teaser source.
+       */
+      Fb.create('credit_url', T.TextType.create())
+        .format(Format.URL)
         .build(),
       Fb.create('gallery_ref', T.IdentifierType.create())
         .classProto(NodeRef)

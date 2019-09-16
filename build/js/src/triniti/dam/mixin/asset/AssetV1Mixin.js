@@ -1,6 +1,7 @@
-// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-1.json#
 import AssetId from '@triniti/schemas/triniti/dam/AssetId';
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -11,7 +12,7 @@ export default class AssetV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:dam:mixin:asset:1-0-0');
+    return SchemaId.fromString('pbj:triniti:dam:mixin:asset:1-0-1');
   }
 
   /**
@@ -22,6 +23,8 @@ export default class AssetV1Mixin extends Mixin {
       Fb.create('_id', T.IdentifierType.create())
         .required()
         .classProto(AssetId)
+        .build(),
+      Fb.create('display_title', T.StringType.create())
         .build(),
       Fb.create('mime_type', T.StringType.create())
         .required()
@@ -53,6 +56,23 @@ export default class AssetV1Mixin extends Mixin {
        * of the asset. e.g. "Fox News", "CNN".
        */
       Fb.create('credit', T.StringType.create())
+        .build(),
+      /*
+       * A URL to link to the credit source.
+       */
+      Fb.create('credit_url', T.TextType.create())
+        .format(Format.URL)
+        .build(),
+      /*
+       * Call to action text. e.g. "Click here"
+       */
+      Fb.create('cta_text', T.StringType.create())
+        .build(),
+      /*
+       * A URL to link with the call to action text.
+       */
+      Fb.create('cta_url', T.TextType.create())
+        .format(Format.URL)
         .build(),
       /*
        * A set of node refs which have been linked to this asset.

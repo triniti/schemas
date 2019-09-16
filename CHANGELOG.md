@@ -1,6 +1,30 @@
 # CHANGELOG
 
 
+## v1.0.6
+* __Add Schemas:__
+  * `triniti:curator:mixin:asset-teaser`
+* __Modify Schemas:__
+  * `triniti:dam:mixin:asset` patch revision `1-0-1`
+    * Add `display_title` string field.
+    * Add `credit_url` text field with format url.
+    * Add `cta_text` string field.
+    * Add `cta_url` text field with format url.
+  * `triniti:dam:mixin:asset-patched` patch revision `1-0-2`
+    * Add `credit_url` string field.
+    * Add `description` text field.
+  * `triniti:curator:mixin:gallery` patch revision `1-0-1`
+    * Add `credit_url` text field.
+  * `triniti:curator:mixin:teaser` patch revision `1-0-1`
+    * Add `caption` string field.
+    * Add `credit` string field.
+    * Add `credit_url` text field with format url.
+  * `triniti:curator:mixin:timeline` patch revision `1-0-1`
+    * Add `display_title` string field.
+  * `triniti:curator:mixin:youtube-video-teaser` patch revision `1-0-1`
+    * Add `youtube_custom_id` string field.
+
+
 ## v1.0.5
 * __Modify Schemas:__
   * `triniti:dam:mixin:asset-patched` patch revision `1-0-1`

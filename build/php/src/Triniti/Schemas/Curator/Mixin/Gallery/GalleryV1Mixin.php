@@ -1,8 +1,9 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-2.json#
 namespace Triniti\Schemas\Curator\Mixin\Gallery;
 
 use Gdbots\Pbj\AbstractMixin;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
@@ -16,7 +17,7 @@ final class GalleryV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:gallery:1-0-1');
+        return SchemaId::fromString('pbj:triniti:curator:mixin:gallery:1-0-2');
     }
 
     /**
@@ -42,6 +43,12 @@ final class GalleryV1Mixin extends AbstractMixin
              * of the contents of this gallery. e.g. "Fox News", "CNN".
              */
             Fb::create('credit', T\StringType::create())
+                ->build(),
+            /*
+             * A URL to link with the credit source.
+             */
+            Fb::create('credit_url', T\TextType::create())
+                ->format(Format::URL())
                 ->build(),
             Fb::create('allow_comments', T\BooleanType::create())
                 ->withDefault(true)

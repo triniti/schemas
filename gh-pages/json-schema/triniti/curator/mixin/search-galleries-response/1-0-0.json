@@ -187,6 +187,9 @@
         },
         {
           "$ref": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-1.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-2.json#"
         }
       ]
     }
