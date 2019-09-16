@@ -184,6 +184,9 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-0.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/dam/mixin/asset/1-0-1.json#"
         }
       ]
     }
