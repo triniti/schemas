@@ -3,7 +3,7 @@
 
 ## v1.0.7
 * __Modify Schemas:__
-  * `triniti:notify:mixin:browser-notification`
+  * `triniti:notify:mixin:browser-notification` patch revision `1-0-1`
      * Add `fcm_topics` string set field with pattern `^[\w\/\.:~%#-]+$`.
  
  
