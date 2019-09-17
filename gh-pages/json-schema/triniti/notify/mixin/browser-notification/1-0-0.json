@@ -241,6 +241,22 @@
         "type": "message",
         "rule": "single"
       }
+    },
+    "fcm_topics": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:~%#-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "@link https://firebase.google.com/docs/cloud-messaging/ios/topic-messaging FCM topic messaging allows you to send a message to multiple devices that have opted in to a particular topic.",
+      "pbj": {
+        "type": "string",
+        "rule": "set"
+      }
     }
   },
   "required": [
