@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.0.7
+* __Modify Schemas:__
+  * `triniti:notify:mixin:browser-notification`
+     * Add `fcm_topics` string set field with pattern `^[\w\/\.:~%#-]+$`.
+ 
+ 
 ## v1.0.6
 * __Add Schemas:__
   * `triniti:curator:mixin:asset-teaser`
