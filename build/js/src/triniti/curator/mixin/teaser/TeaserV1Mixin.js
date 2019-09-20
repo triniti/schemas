@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaser/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/teaser/1-0-2.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -12,7 +12,7 @@ export default class TeaserV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:curator:mixin:teaser:1-0-1');
+    return SchemaId.fromString('pbj:triniti:curator:mixin:teaser:1-0-2');
   }
 
   /**
@@ -33,6 +33,14 @@ export default class TeaserV1Mixin extends Mixin {
        * blog-like, reverse chronological, clarity in sorting.
        */
       Fb.create('order_date', T.DateTimeType.create())
+        .build(),
+      /*
+       * A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that determine where
+       * teasers will render in lists that use slotting. We call it slotting vs
+       * sticky or pinning as that is generally just one at a time.
+       */
+      Fb.create('slotting', T.TinyIntType.create())
+        .asAMap()
         .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.

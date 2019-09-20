@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v1.0.7
+* __Add Schemas:__
+  * `triniti:canvas:mixin:divider-block`
+  * `triniti:curator:mixin:has-related-teasers`
+  * `triniti:curator:mixin:remove-teaser-slotting`
+  * `triniti:curator:mixin:teaser-slotting-removed`
+* __Modify Schemas:__
+  * `triniti:curator:mixin:search-teasers-request` patch revision `1-0-1`
+    * Add `slotting_key` string field with.
+  * `triniti:curator:mixin:teaser` patch revision `1-0-2`
+    * Add `slotting` tiny-map map field.
+  * `triniti:notify:mixin:browser-notification` patch revision `1-0-1`
+     * Add `fcm_topics` string set field with pattern `^[\w\/\.:~%#-]+$`.
+
+
 ## v1.0.6
 * __Add Schemas:__
   * `triniti:curator:mixin:asset-teaser`
