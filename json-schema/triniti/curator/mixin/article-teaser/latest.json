@@ -172,6 +172,23 @@
         "rule": "single"
       }
     },
+    "slotting": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that determine where teasers will render in lists that use slotting. We call it slotting vs sticky or pinning as that is generally just one at a time.",
+      "pbj": {
+        "type": "tiny-int",
+        "rule": "map"
+      }
+    },
     "image_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
