@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/search-teasers-request/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/search-teasers-request/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -12,7 +12,7 @@ export default class SearchTeasersRequestV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:curator:mixin:search-teasers-request:1-0-0');
+    return SchemaId.fromString('pbj:triniti:curator:mixin:search-teasers-request:1-0-1');
   }
 
   /**
@@ -25,6 +25,13 @@ export default class SearchTeasersRequestV1Mixin extends Mixin {
       Fb.create('sort', T.StringEnumType.create())
         .withDefault(SearchTeasersSort.ORDER_DATE_DESC)
         .classProto(SearchTeasersSort)
+        .build(),
+      /*
+       * The name of the slotting key to use to determine the order of
+       * teasers returned in the response. e.g. "home", "sports", "tv"
+       */
+      Fb.create('slotting_key', T.StringType.create())
+        .format(Format.SLUG)
         .build(),
       /*
        * A set of teaser types (node must match at least one) to include in

@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/search-teasers-request/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/search-teasers-request/1-0-1.json#
 namespace Triniti\Schemas\Curator\Mixin\SearchTeasersRequest;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -17,7 +17,7 @@ final class SearchTeasersRequestV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:search-teasers-request:1-0-0');
+        return SchemaId::fromString('pbj:triniti:curator:mixin:search-teasers-request:1-0-1');
     }
 
     /**
@@ -31,6 +31,13 @@ final class SearchTeasersRequestV1Mixin extends AbstractMixin
             Fb::create('sort', T\StringEnumType::create())
                 ->withDefault(SearchTeasersSort::ORDER_DATE_DESC())
                 ->className(SearchTeasersSort::class)
+                ->build(),
+            /*
+             * The name of the slotting key to use to determine the order of
+             * teasers returned in the response. e.g. "home", "sports", "tv"
+             */
+            Fb::create('slotting_key', T\StringType::create())
+                ->format(Format::SLUG())
                 ->build(),
             /*
              * A set of teaser types (node must match at least one) to include in
