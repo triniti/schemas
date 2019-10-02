@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/image-block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/image-block/1-0-1.json#
 namespace Triniti\Schemas\Canvas\Mixin\ImageBlock;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -16,7 +16,7 @@ final class ImageBlockV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:image-block:1-0-0');
+        return SchemaId::fromString('pbj:triniti:canvas:mixin:image-block:1-0-1');
     }
 
     /**
@@ -32,6 +32,8 @@ final class ImageBlockV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('url', T\TextType::create())
                 ->format(Format::URL())
+                ->build(),
+            Fb::create('launch_text', T\StringType::create())
                 ->build(),
             Fb::create('aspect_ratio', T\StringEnumType::create())
                 ->className(AspectRatio::class)
