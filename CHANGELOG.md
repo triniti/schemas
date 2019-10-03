@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v1.1.0
+* Use `gdbots/schemas` v1.6.0.
+* __Modify Schemas:__
+  * `triniti:canvas:mixin:image-block` patch revision `1-0-1`
+    * Add `launch_text` string field.
+
+
 ## v1.0.7
 * __Add Schemas:__
   * `triniti:canvas:mixin:divider-block`

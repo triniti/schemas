@@ -1,6 +1,6 @@
 {
   "name": "@triniti/schemas",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Schemas for common Triniti apps and components.",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^1.5.13"
+    "@gdbots/schemas": "^1.6.0"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
@@ -44,7 +44,7 @@
     "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react": "^7.15.1",
     "faucet": "^0.0.1",
     "lodash": "^4.17.11",
     "lodash-es": "^4.17.11",
