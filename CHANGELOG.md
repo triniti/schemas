@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v1.1.1
+* __Modify Schemas:__
+  * `triniti:news:mixin:article` patch revision `1-0-2`
+    * Add `author_ref` identifier (NodeRef) field.
+
 ## v1.1.0
 * Use `gdbots/schemas` v1.6.0.
 * __Modify Schemas:__

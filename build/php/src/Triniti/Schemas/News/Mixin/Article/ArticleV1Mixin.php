@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-2.json#
 namespace Triniti\Schemas\News\Mixin\Article;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -17,7 +17,7 @@ final class ArticleV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:news:mixin:article:1-0-1');
+        return SchemaId::fromString('pbj:triniti:news:mixin:article:1-0-2');
     }
 
     /**
@@ -45,6 +45,12 @@ final class ArticleV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('allow_comments', T\BooleanType::create())
                 ->withDefault(true)
+                ->build(),
+            /*
+             * A reference to the author of the article.
+             */
+            Fb::create('author_ref', T\IdentifierType::create())
+                ->className(NodeRef::class)
                 ->build(),
             /*
              * A reference to the image asset to use for widgets, sharing, seo.

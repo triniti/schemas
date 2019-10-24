@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-2.json#
 import ArticleId from '@triniti/schemas/triniti/news/ArticleId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
@@ -12,7 +12,7 @@ export default class ArticleV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-1');
+    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-2');
   }
 
   /**
@@ -39,6 +39,12 @@ export default class ArticleV1Mixin extends Mixin {
         .build(),
       Fb.create('allow_comments', T.BooleanType.create())
         .withDefault(true)
+        .build(),
+      /*
+       * A reference to the author of the article.
+       */
+      Fb.create('author_ref', T.IdentifierType.create())
+        .classProto(NodeRef)
         .build(),
       /*
        * A reference to the image asset to use for widgets, sharing, seo.
