@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/pbjx/envelope/1-0-2.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/pbjx/envelope/1-1-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:gdbots:pbjx::envelope:1-0-2"
+      "default": "pbj:gdbots:pbjx::envelope:1-1-0"
     },
     "envelope_id": {
       "type": "string",
@@ -190,15 +190,30 @@
       "patternProperties": {
         "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
           "type": "string",
-          "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+          "minLength": 0,
+          "maxLength": 65535
         }
       },
       "additionalProperties": false,
       "description": "@link https://en.wikipedia.org/wiki/HATEOAS",
       "pbj": {
         "type": "text",
-        "rule": "map",
-        "format": "url"
+        "rule": "map"
+      }
+    },
+    "metas": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 65535
+        }
+      },
+      "additionalProperties": false,
+      "pbj": {
+        "type": "text",
+        "rule": "map"
       }
     }
   },

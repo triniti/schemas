@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-2.json#
 namespace Triniti\Schemas\Ovp\Mixin\Video;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -18,7 +18,7 @@ final class VideoV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:ovp:mixin:video:1-0-1');
+        return SchemaId::fromString('pbj:triniti:ovp:mixin:video:1-0-2');
     }
 
     /**
@@ -46,6 +46,12 @@ final class VideoV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             Fb::create('is_live', T\BooleanType::create())
+                ->build(),
+            /*
+             * URL to the m3u8 for the live stream.
+             */
+            Fb::create('live_m3u8_url', T\TextType::create())
+                ->format(Format::URL())
                 ->build(),
             Fb::create('is_full_episode', T\BooleanType::create())
                 ->build(),

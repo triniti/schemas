@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-2.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -13,7 +13,7 @@ export default class VideoV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:ovp:mixin:video:1-0-1');
+    return SchemaId.fromString('pbj:triniti:ovp:mixin:video:1-0-2');
   }
 
   /**
@@ -40,6 +40,12 @@ export default class VideoV1Mixin extends Mixin {
         .classProto(NodeRef)
         .build(),
       Fb.create('is_live', T.BooleanType.create())
+        .build(),
+      /*
+       * URL to the m3u8 for the live stream.
+       */
+      Fb.create('live_m3u8_url', T.TextType.create())
+        .format(Format.URL)
         .build(),
       Fb.create('is_full_episode', T.BooleanType.create())
         .build(),
