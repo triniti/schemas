@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.1.1
+* __Modify Schemas:__
+  * `triniti:news:mixin:article` patch revision `1-0-2`
+    * Add `author_ref` identifier (NodeRef) field.
+  * `triniti:ovp:mixin:video` patch revision `1-0-2`
+    * Add `live_m3u8_url` text field with format url.
+
+
 ## v1.1.0
 * Use `gdbots/schemas` v1.6.0.
 * __Modify Schemas:__

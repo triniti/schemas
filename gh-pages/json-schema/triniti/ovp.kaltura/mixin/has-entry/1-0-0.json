@@ -188,6 +188,16 @@
         "rule": "single"
       }
     },
+    "live_m3u8_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "URL to the m3u8 for the live stream.",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
     "is_full_episode": {
       "type": "boolean",
       "pbj": {
