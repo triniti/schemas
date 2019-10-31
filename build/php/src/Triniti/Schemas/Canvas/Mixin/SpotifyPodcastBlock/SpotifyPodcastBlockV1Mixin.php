@@ -23,12 +23,16 @@ final class SpotifyPodcastBlockV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            /*
+             * Id of an episode that is part of a podcast/show. Should not be set if show_id is set.
+             */
             Fb::create('episode_id', T\StringType::create())
-                ->required()
                 ->pattern('^\w+$')
                 ->build(),
+            /*
+             * Id of a podcast/show. Should not be set if episode_id is set.
+             */
             Fb::create('show_id', T\StringType::create())
-                ->required()
                 ->pattern('^\w+$')
                 ->build(),
         ];

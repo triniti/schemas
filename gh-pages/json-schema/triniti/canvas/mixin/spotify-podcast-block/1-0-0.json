@@ -40,6 +40,7 @@
     "episode_id": {
       "type": "string",
       "pattern": "^\\w+$",
+      "description": "Id of an episode that is part of a podcast/show. Should not be set if show_id is set.",
       "pbj": {
         "type": "string",
         "rule": "single"
@@ -48,15 +49,12 @@
     "show_id": {
       "type": "string",
       "pattern": "^\\w+$",
+      "description": "Id of a podcast/show. Should not be set if episode_id is set.",
       "pbj": {
         "type": "string",
         "rule": "single"
       }
     }
   },
-  "required": [
-    "episode_id",
-    "show_id"
-  ],
   "additionalProperties": true
 }
