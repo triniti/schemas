@@ -3,11 +3,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <!-- use spotify-embed-block instead -->
-  <schema id="pbj:triniti:canvas:mixin:spotify-track-block:1-0-0" mixin="true"
-      extends="triniti:canvas:mixin:block:v1" deprecated="true">
+  <schema id="pbj:triniti:canvas:mixin:spotify-embed-block:1-0-0" mixin="true"
+      extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="track_id" type="string" pattern="^\w+$" required="true"/>
+      <field name="spotify_type" type="string" pattern="^(album|artist|episode|playlist|show|track)$" required="true">
+        <description>
+          The type portion of a Spotify URI.
+          @link https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids
+        </description>
+      </field>
+      <field name="spotify_id" type="string" pattern="^\w+$" required="true"/>
     </fields>
 
     <php-options>
@@ -22,7 +27,8 @@ public function getUriTemplateVars()
 {
     return [
         'etag' => $this->get('etag'),
-        'track_id' => $this->get('track_id'),
+        'spotify_type' => $this->get('spotify_type'),
+        'spotify_id' => $this->get('spotify_id'),
     ];
 }
           ]]>
@@ -40,7 +46,8 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     etag: this.get('etag'),
-    track_id: this.get('track_id'),
+    spotify_type: this.get('spotify_type'),
+    spotify_id: this.get('spotify_id'),
   };
 }
           ]]>
