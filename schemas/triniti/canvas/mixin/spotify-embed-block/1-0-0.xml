@@ -6,8 +6,8 @@
   <schema id="pbj:triniti:canvas:mixin:spotify-embed-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="spotify_type" type="string" pattern="^(album|artist|episode|playlist|show|track)$"/>
-      <field name="spotify_id" type="string" pattern="^\w+$"/>
+      <field name="spotify_type" type="string" pattern="^(album|artist|episode|playlist|show|track)$" required="true"/>
+      <field name="spotify_id" type="string" pattern="^\w+$" required="true"/>
     </fields>
 
     <php-options>
