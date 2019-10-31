@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:canvas:mixin:spotify-embed-block:1-0-0" mixin="true"
+      extends="triniti:canvas:mixin:block:v1">
+    <fields>
+      <field name="spotify_type" type="string" pattern="^(album|artist|episode|playlist|show|track)$" required="true"/>
+      <field name="spotify_id" type="string" pattern="^\w+$" required="true"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [
+        'etag' => $this->get('etag'),
+        'spotify_type' => $this->get('spotify_type'),
+        'spotify_id' => $this->get('spotify_id'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    etag: this.get('etag'),
+    spotify_type: this.get('spotify_type'),
+    spotify_id: this.get('spotify_id'),
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>

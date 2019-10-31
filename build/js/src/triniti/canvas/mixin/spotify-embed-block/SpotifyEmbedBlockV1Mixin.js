@@ -18,9 +18,11 @@ export default class SpotifyEmbedBlockV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('spotify_type', T.StringType.create())
+        .required()
         .pattern('^(album|artist|episode|playlist|show|track)$')
         .build(),
       Fb.create('spotify_id', T.StringType.create())
+        .required()
         .pattern('^\\w+$')
         .build(),
     ];
