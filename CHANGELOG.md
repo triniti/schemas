@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v1.1.2
+* __Add Schemas:__
+  * `triniti:canvas:mixin:spotify-podcast-block`
+
+
 ## v1.1.1
 * __Modify Schemas:__
   * `triniti:news:mixin:article` patch revision `1-0-2`
