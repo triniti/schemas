@@ -3,7 +3,7 @@
 
 ## v1.1.2
 * __Add Schemas:__
-  * `triniti:canvas:mixin:spotify-podcast-block`
+  * `triniti:canvas:mixin:spotify-embed-block`
 
 
 ## v1.1.1
