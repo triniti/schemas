@@ -17,6 +17,10 @@ export default class SpotifyEmbedBlockV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      /*
+       * The type portion of a Spotify URI.
+       * @link https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids
+       */
       Fb.create('spotify_type', T.StringType.create())
         .required()
         .pattern('^(album|artist|episode|playlist|show|track)$')

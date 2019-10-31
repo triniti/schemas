@@ -4,6 +4,8 @@
 ## v1.1.2
 * __Add Schemas:__
   * `triniti:canvas:mixin:spotify-embed-block`
+  * `triniti:canvas:mixin:tiktok-embed-block`
+* Mark `triniti:canvas:mixin:spotify-track-block` as deprecated, use the more betterer `spotify-embed-block`.
 
 
 ## v1.1.1

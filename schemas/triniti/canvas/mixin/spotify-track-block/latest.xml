@@ -3,8 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
+  <!-- use spotify-embed-block instead -->
   <schema id="pbj:triniti:canvas:mixin:spotify-track-block:1-0-0" mixin="true"
-      extends="triniti:canvas:mixin:block:v1">
+      extends="triniti:canvas:mixin:block:v1" deprecated="true">
     <fields>
       <field name="track_id" type="string" pattern="^\w+$" required="true"/>
     </fields>

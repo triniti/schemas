@@ -6,7 +6,12 @@
   <schema id="pbj:triniti:canvas:mixin:spotify-embed-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="spotify_type" type="string" pattern="^(album|artist|episode|playlist|show|track)$" required="true"/>
+      <field name="spotify_type" type="string" pattern="^(album|artist|episode|playlist|show|track)$" required="true">
+        <description>
+          The type portion of a Spotify URI.
+          @link https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids
+        </description>
+      </field>
       <field name="spotify_id" type="string" pattern="^\w+$" required="true"/>
     </fields>
 

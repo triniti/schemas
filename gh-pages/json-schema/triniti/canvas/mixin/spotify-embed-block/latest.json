@@ -40,6 +40,7 @@
     "spotify_type": {
       "type": "string",
       "pattern": "^(album|artist|episode|playlist|show|track)$",
+      "description": "The type portion of a Spotify URI. @link https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids",
       "pbj": {
         "type": "string",
         "rule": "single"
