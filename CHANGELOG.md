@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.1.3
+* __Modify Schemas:__
+  * `triniti:curator:mixin:render-widget-response` patch revision `1-0-1`
+    * Add `links` text map field.
+
+
 ## v1.1.2
 * __Add Schemas:__
   * `triniti:canvas:mixin:spotify-embed-block`
