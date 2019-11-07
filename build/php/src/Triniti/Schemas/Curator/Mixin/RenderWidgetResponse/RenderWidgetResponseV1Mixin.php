@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/render-widget-response/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/render-widget-response/1-0-1.json#
 namespace Triniti\Schemas\Curator\Mixin\RenderWidgetResponse;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -15,7 +15,7 @@ final class RenderWidgetResponseV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:render-widget-response:1-0-0');
+        return SchemaId::fromString('pbj:triniti:curator:mixin:render-widget-response:1-0-1');
     }
 
     /**
@@ -30,6 +30,12 @@ final class RenderWidgetResponseV1Mixin extends AbstractMixin
                 ->anyOfClassNames([
                     TrinitiCuratorWidgetSearchResponse::class,
                 ])
+                ->build(),
+            /*
+             * @link https://en.wikipedia.org/wiki/HATEOAS
+             */
+            Fb::create('links', T\TextType::create())
+                ->asAMap()
                 ->build(),
         ];
     }

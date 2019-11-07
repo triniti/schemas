@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/render-widget-response/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/render-widget-response/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -9,7 +9,7 @@ export default class RenderWidgetResponseV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:curator:mixin:render-widget-response:1-0-0');
+    return SchemaId.fromString('pbj:triniti:curator:mixin:render-widget-response:1-0-1');
   }
 
   /**
@@ -23,6 +23,12 @@ export default class RenderWidgetResponseV1Mixin extends Mixin {
         .anyOfCuries([
           'triniti:curator:mixin:widget-search-response',
         ])
+        .build(),
+      /*
+       * @link https://en.wikipedia.org/wiki/HATEOAS
+       */
+      Fb.create('links', T.TextType.create())
+        .asAMap()
         .build(),
     ];
   }
