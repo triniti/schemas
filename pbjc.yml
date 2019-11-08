@@ -12,6 +12,7 @@ namespaces:
   - triniti:notify
   - triniti:ovp
   - triniti:ovp.kaltura
+  - triniti:ovp.medialive
   - triniti:people
   - triniti:sys
   - triniti:taxonomy
