@@ -6,6 +6,8 @@
 * __Add Schemas:__
   * `triniti:ovp.medialive:command:start-channel`
   * `triniti:ovp.medialive:command:stop-channel`
+  * `triniti:ovp.medialive:mixin:channel-started`
+  * `triniti:ovp.medialive:mixin:channel-stopped`
   * `triniti:ovp.medialive:mixin:has-channel`
 
 
