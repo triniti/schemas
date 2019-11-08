@@ -1,7 +1,8 @@
 # CHANGELOG
 
 
-## v1.1.3
+## v1.2.0
+* Use `gdbots/schemas` v1.6.0.
 * __Add Schemas:__
   * `triniti:ovp.medialive:command:start-channel`
   * `triniti:ovp.medialive:command:stop-channel`
