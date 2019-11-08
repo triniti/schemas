@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1 as GdbotsPbjxCommandV1;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin as GdbotsPbjxCommandV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Trait as GdbotsPbjxCommandV1Trait;
@@ -23,8 +24,9 @@ final class StartChannelV1 extends AbstractMessage implements
     {
         return new Schema('pbj:triniti:ovp.medialive:command:start-channel:1-0-0', __CLASS__,
             [
-                Fb::create('channel_arn', T\StringType::create())
-                    ->pattern('^[\w:-]+$')
+                Fb::create('video_ref', T\IdentifierType::create())
+                    ->required()
+                    ->className(NodeRef::class)
                     ->build(),
             ],
             [

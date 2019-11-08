@@ -204,18 +204,19 @@
         "overridable": true
       }
     },
-    "channel_arn": {
+    "video_ref": {
       "type": "string",
-      "pattern": "^[\\w:-]+$",
+      "pattern": "^[\\w\\/\\.:-]+$",
       "pbj": {
-        "type": "string",
+        "type": "identifier",
         "rule": "single"
       }
     }
   },
   "required": [
     "_schema",
-    "command_id"
+    "command_id",
+    "video_ref"
   ],
   "definitions": {
     "app": {
