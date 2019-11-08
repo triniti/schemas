@@ -2,7 +2,7 @@
 
 
 ## v1.2.0
-* Use `gdbots/schemas` v1.6.0.
+* Use `gdbots/schemas` v1.6.1.
 * __Add Schemas:__
   * `triniti:ovp.medialive:command:start-channel`
   * `triniti:ovp.medialive:command:stop-channel`
