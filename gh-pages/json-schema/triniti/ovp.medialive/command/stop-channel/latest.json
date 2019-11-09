@@ -204,7 +204,7 @@
         "overridable": true
       }
     },
-    "video_ref": {
+    "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
       "pbj": {
@@ -216,7 +216,7 @@
   "required": [
     "_schema",
     "command_id",
-    "video_ref"
+    "node_ref"
   ],
   "definitions": {
     "app": {

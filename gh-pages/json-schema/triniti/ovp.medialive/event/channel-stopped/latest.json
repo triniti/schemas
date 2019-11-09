@@ -1,8 +1,13 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/ovp.medialive/mixin/channel-started/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/ovp.medialive/event/channel-stopped/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
+    "_schema": {
+      "type": "string",
+      "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
+      "default": "pbj:triniti:ovp.medialive:event:channel-stopped:1-0-0"
+    },
     "event_id": {
       "type": "string",
       "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
@@ -171,7 +176,22 @@
         "overridable": true
       }
     },
-    "video_ref": {
+    "tags": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Tags is a map that categorizes data or tracks references in external systems. The tags names should be consistent and descriptive, e.g. fb_user_id:123, salesforce_customer_id:456.",
+      "pbj": {
+        "type": "string",
+        "rule": "map"
+      }
+    },
+    "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
       "pbj": {
@@ -181,8 +201,9 @@
     }
   },
   "required": [
+    "_schema",
     "event_id",
-    "video_ref"
+    "node_ref"
   ],
   "definitions": {
     "app": {
@@ -202,5 +223,5 @@
       ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }

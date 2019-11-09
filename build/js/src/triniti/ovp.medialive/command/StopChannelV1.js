@@ -17,7 +17,7 @@ export default class StopChannelV1 extends Message {
   static defineSchema() {
     return new Schema('pbj:triniti:ovp.medialive:command:stop-channel:1-0-0', StopChannelV1,
       [
-        Fb.create('video_ref', T.IdentifierType.create())
+        Fb.create('node_ref', T.IdentifierType.create())
           .required()
           .classProto(NodeRef)
           .build(),

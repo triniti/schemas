@@ -24,7 +24,7 @@ final class StartChannelV1 extends AbstractMessage implements
     {
         return new Schema('pbj:triniti:ovp.medialive:command:start-channel:1-0-0', __CLASS__,
             [
-                Fb::create('video_ref', T\IdentifierType::create())
+                Fb::create('node_ref', T\IdentifierType::create())
                     ->required()
                     ->className(NodeRef::class)
                     ->build(),

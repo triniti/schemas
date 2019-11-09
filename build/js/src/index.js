@@ -63,6 +63,8 @@ import '@triniti/schemas/triniti/ovp.kaltura/FlavorV1';
 import '@triniti/schemas/triniti/ovp.kaltura/command/SyncEntryV1';
 import '@triniti/schemas/triniti/ovp.medialive/command/StartChannelV1';
 import '@triniti/schemas/triniti/ovp.medialive/command/StopChannelV1';
+import '@triniti/schemas/triniti/ovp.medialive/event/ChannelStartedV1';
+import '@triniti/schemas/triniti/ovp.medialive/event/ChannelStoppedV1';
 import '@triniti/schemas/triniti/sys/command/PurgeCacheV1';
 
 export default MessageResolver;

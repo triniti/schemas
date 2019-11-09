@@ -17,7 +17,7 @@ export default class StartChannelV1 extends Message {
   static defineSchema() {
     return new Schema('pbj:triniti:ovp.medialive:command:start-channel:1-0-0', StartChannelV1,
       [
-        Fb.create('video_ref', T.IdentifierType.create())
+        Fb.create('node_ref', T.IdentifierType.create())
           .required()
           .classProto(NodeRef)
           .build(),
