@@ -182,6 +182,22 @@
         "overridable": true
       }
     },
+    "derefs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\.-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "Field names to dereference, this serves as a hint to the server and is not necessarily gauranteed since authorization, availability, etc. are determined by the server not the client.",
+      "pbj": {
+        "type": "string",
+        "rule": "set"
+      }
+    },
     "q": {
       "type": "string",
       "minLength": 0,
@@ -209,6 +225,13 @@
       "maximum": 255,
       "pbj": {
         "type": "tiny-int",
+        "rule": "single"
+      }
+    },
+    "autocomplete": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
         "rule": "single"
       }
     },
@@ -336,22 +359,6 @@
       "pbj": {
         "type": "text",
         "rule": "single"
-      }
-    },
-    "derefs": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[\\w\\.-]+$"
-        }
-      ],
-      "uniqueItems": true,
-      "additionalProperties": false,
-      "description": "Field names to dereference, this serves as a hint to the server and is not necessarily gauranteed since authorization, availability, etc. are determined by the server not the client.",
-      "pbj": {
-        "type": "string",
-        "rule": "set"
       }
     },
     "sort": {

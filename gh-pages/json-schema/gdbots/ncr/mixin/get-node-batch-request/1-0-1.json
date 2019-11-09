@@ -182,6 +182,22 @@
         "overridable": true
       }
     },
+    "derefs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\.-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "Field names to dereference, this serves as a hint to the server and is not necessarily gauranteed since authorization, availability, etc. are determined by the server not the client.",
+      "pbj": {
+        "type": "string",
+        "rule": "set"
+      }
+    },
     "consistent_read": {
       "type": "boolean",
       "description": "If true, a strongly consistent read is used; if false (the default), an eventually consistent read is used.",
@@ -202,22 +218,6 @@
       "additionalProperties": false,
       "pbj": {
         "type": "identifier",
-        "rule": "set"
-      }
-    },
-    "derefs": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[\\w\\.-]+$"
-        }
-      ],
-      "uniqueItems": true,
-      "additionalProperties": false,
-      "description": "Field names to dereference, this serves as a hint to the server and is not necessarily gauranteed since authorization, availability, etc. are determined by the server not the client.",
-      "pbj": {
-        "type": "string",
         "rule": "set"
       }
     }

@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v1.1.3
+* Use `gdbots/schemas` v1.6.2.
+* __Add Schemas:__
+  * `triniti:ovp.medialive:command:start-channel`
+  * `triniti:ovp.medialive:command:stop-channel`
+  * `triniti:ovp.medialive:event:channel-started`
+  * `triniti:ovp.medialive:event:channel-stopped`
+  * `triniti:ovp.medialive:mixin:has-channel`
+
+
 ## v1.1.2
 * __Add Schemas:__
   * `triniti:canvas:mixin:spotify-embed-block`
