@@ -5,7 +5,7 @@
 
   <schema id="pbj:triniti:enrichments:mixin:channel-state:1-0-0" mixin="true">
     <fields>
-      <field name="channel_state" type="string-enum">
+      <field name="medialive_channel_state" type="string-enum">
         <enum id="triniti:ovp.medialive:channel-state"/>
       </field>
     </fields>
