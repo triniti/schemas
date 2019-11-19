@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:enrichments:mixin:channel-state:1-0-0" mixin="true">
+  <schema id="pbj:triniti:enrichments:mixin:medialive-channel-state:1-0-0" mixin="true">
     <fields>
       <field name="medialive_channel_state" type="string-enum">
         <enum id="triniti:ovp.medialive:channel-state"/>

@@ -4,7 +4,7 @@
 ## v1.1.4
 * Use `gdbots/schemas` v1.6.3.
 * __Add Schemas:__
-  * `triniti:enrichments:mixin:channel-state`
+  * `triniti:enrichments:mixin:medialive-channel-state`
 
 
 ## v1.1.3
