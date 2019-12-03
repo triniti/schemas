@@ -7,7 +7,7 @@
     <!--
       @link https://docs.aws.amazon.com/medialive/latest/apireference/channels.html#channels-properties
     -->
-    <enum name="medialive-channel-status" type="string">
+    <enum name="channel-state" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="CREATE_FAILED" value="CREATE_FAILED"/>
       <option key="CREATING" value="CREATING"/>
