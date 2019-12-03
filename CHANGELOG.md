@@ -2,6 +2,7 @@
 
 
 ## v1.1.4
+* Use `gdbots/schemas` v1.6.3.
 * __Add Schemas:__
   * `triniti:ovp.medialive:medialive-channel-status`
 
