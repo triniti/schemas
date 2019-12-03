@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/search-forms-response/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/get-upload-url-response/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -141,76 +141,29 @@
         "rule": "map"
       }
     },
-    "total": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295,
-      "description": "The total number of nodes matching the search.",
+    "file_id": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "The id to use when sending the submission.",
       "pbj": {
-        "type": "int",
+        "type": "identifier",
         "rule": "single"
       }
     },
-    "has_more": {
-      "type": "boolean",
+    "s3_presigned_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "An S3 presigned URL where the client can upload the file.",
       "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "time_taken": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 16777215,
-      "description": "How long in milliseconds it took to run the query.",
-      "pbj": {
-        "type": "medium-int",
-        "rule": "single"
-      }
-    },
-    "max_score": {
-      "type": "number",
-      "default": 0,
-      "description": "The maximum score of a matching node from the entire search.",
-      "pbj": {
-        "type": "float",
-        "rule": "single"
-      }
-    },
-    "cursors": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
-          "type": "string",
-          "minLength": 0,
-          "maxLength": 255
-        }
-      },
-      "additionalProperties": false,
-      "description": "Cursors are optionally provided by the underlying search system to allow for efficient pagination. In the absense of cursors, paging is done using count and page number.",
-      "pbj": {
-        "type": "string",
-        "rule": "map"
-      }
-    },
-    "nodes": {
-      "type": "array",
-      "items": [
-        {
-          "$ref": "#/definitions/form"
-        }
-      ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message",
-        "rule": "list"
+        "type": "text",
+        "rule": "single",
+        "format": "url"
       }
     }
   },
   "required": [
-    "response_id"
+    "response_id",
+    "file_id"
   ],
   "definitions": {
     "request": {
@@ -224,23 +177,6 @@
         },
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/request/1-0-2.json#"
-        }
-      ]
-    },
-    "form": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-0.json#"
-        },
-        {
-          "$ref": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-1.json#"
-        },
-        {
-          "$ref": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-2.json#"
-        },
-        {
-          "$ref": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-3.json#"
         }
       ]
     }
