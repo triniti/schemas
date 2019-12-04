@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.1.4
+* Use `gdbots/schemas` v1.6.3.
+* __Add Schemas:__
+  * `triniti:ovp.medialive:channel-state`
+
+
 ## v1.1.3
 * Use `gdbots/schemas` v1.6.2.
 * __Add Schemas:__

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-enums xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/enums.xsd">
+
+  <enums namespace="triniti:ovp.medialive">
+    <!--
+      @link https://docs.aws.amazon.com/medialive/latest/apireference/channels.html#channels-properties
+    -->
+    <enum name="channel-state" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="CREATE_FAILED" value="CREATE_FAILED"/>
+      <option key="CREATING" value="CREATING"/>
+      <option key="DELETED" value="DELETED"/>
+      <option key="DELETING" value="DELETING"/>
+      <option key="IDLE" value="IDLE"/>
+      <option key="RECOVERING" value="RECOVERING"/>
+      <option key="RUNNING" value="RUNNING"/>
+      <option key="STARTING" value="STARTING"/>
+      <option key="STOPPING" value="STOPPING"/>
+      <option key="UPDATE_FAILED" value="UPDATE_FAILED"/>
+      <option key="UPDATING" value="UPDATING"/>
+    </enum>
+  </enums>
+</pbj-enums>
