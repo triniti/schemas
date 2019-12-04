@@ -22,8 +22,8 @@
     "@gdbots/schemas": "^1.6.3"
   },
   "peerDependencies": {
-    "@gdbots/common": "~0.1 || ^1.0",
-    "@gdbots/pbj": "~0.2 || ^1.0",
+    "@gdbots/common": "^1.0.2",
+    "@gdbots/pbj": "^1.0.1",
     "lodash": "^4.17.4",
     "lodash-es": "^4.17.4",
     "md5": "^2.2.1",
