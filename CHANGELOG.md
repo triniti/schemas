@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.1.5
+* __Modify Schemas:__
+  * `triniti:news:mixin:article` patch revision `1-0-2`
+    * Add `smart_news_enabled` boolean field.
+
+        
 ## v1.1.4
 * Use `gdbots/schemas` v1.6.3.
 * __Add Schemas:__

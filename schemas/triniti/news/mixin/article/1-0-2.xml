@@ -69,6 +69,12 @@
         </description>
         <default>true</default>
       </field>
+      <field name="smart_news_enabled" type="boolean">
+        <description>
+          Determines if SmartNews should be enabled for this article.
+        </description>
+        <default>true</default>
+      </field>
       <field name="apple_news_enabled" type="boolean">
         <description>
           Determines if Apple News should be enabled for this article.
