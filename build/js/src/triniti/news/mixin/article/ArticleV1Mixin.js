@@ -70,7 +70,7 @@ export default class ArticleV1Mixin extends Mixin {
       /*
        * Determines if SmartNews should be enabled for this article.
        */
-      Fb.create('smart_news_enabled', T.BooleanType.create())
+      Fb.create('smartnews_enabled', T.BooleanType.create())
         .withDefault(true)
         .build(),
       /*

@@ -4,7 +4,7 @@
 ## v1.1.5
 * __Modify Schemas:__
   * `triniti:news:mixin:article` patch revision `1-0-2`
-    * Add `smart_news_enabled` boolean field.
+    * Add `smartnews_enabled` boolean field.
 
         
 ## v1.1.4

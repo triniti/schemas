@@ -245,7 +245,7 @@
         "rule": "single"
       }
     },
-    "smart_news_enabled": {
+    "smartnews_enabled": {
       "type": "boolean",
       "default": true,
       "description": "Determines if SmartNews should be enabled for this article.",
