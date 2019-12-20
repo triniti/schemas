@@ -262,7 +262,9 @@
         "half_banner",
         "portrait",
         "billboard",
-        "skin"
+        "skin",
+        "instream",
+        "outstream"
       ],
       "pbj": {
         "type": "string-enum",

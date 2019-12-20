@@ -71,8 +71,7 @@
     }
   },
   "required": [
-    "playlist_id",
-    "video_id"
+    "playlist_id"
   ],
   "additionalProperties": true
 }
