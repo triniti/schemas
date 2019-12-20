@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-3.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/forms/mixin/form/1-0-2.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -200,33 +200,6 @@
         "type": "string",
         "rule": "single",
         "format": "url"
-      }
-    },
-    "template": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
-    },
-    "custom_code": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
-          "type": "string",
-          "minLength": 0,
-          "maxLength": 65535
-        }
-      },
-      "additionalProperties": false,
-      "description": "A map containing (HTML, JavaScript, CSS, etc.) that is injected into a template at a named insertion point, e.g. \"html_head\" or \"footer\".",
-      "pbj": {
-        "type": "text",
-        "rule": "map"
       }
     },
     "fields": {
