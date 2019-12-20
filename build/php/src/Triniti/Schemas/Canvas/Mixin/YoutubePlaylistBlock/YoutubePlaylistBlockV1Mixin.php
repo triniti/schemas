@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/youtube-playlist-block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/youtube-playlist-block/1-0-1.json#
 namespace Triniti\Schemas\Canvas\Mixin\YoutubePlaylistBlock;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -15,7 +15,7 @@ final class YoutubePlaylistBlockV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:youtube-playlist-block:1-0-0');
+        return SchemaId::fromString('pbj:triniti:canvas:mixin:youtube-playlist-block:1-0-1');
     }
 
     /**
@@ -29,7 +29,6 @@ final class YoutubePlaylistBlockV1Mixin extends AbstractMixin
                 ->pattern('^[\w-]+$')
                 ->build(),
             Fb::create('video_id', T\StringType::create())
-                ->required()
                 ->pattern('^[\w-]+$')
                 ->build(),
             Fb::create('autoplay', T\BooleanType::create())

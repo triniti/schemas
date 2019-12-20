@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/update-node/1-0-1.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/update-node/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -232,22 +232,6 @@
         "type": "message",
         "rule": "single",
         "overridable": true
-      }
-    },
-    "paths": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[a-zA-Z_]{1}[\\w\\.]*$"
-        }
-      ],
-      "uniqueItems": true,
-      "additionalProperties": false,
-      "description": "The names of the fields this update command should apply changes to. Nested paths can be referenced using dot notation.",
-      "pbj": {
-        "type": "string",
-        "rule": "set"
       }
     }
   },

@@ -1,12 +1,17 @@
 # CHANGELOG
 
+## v1.1.6
+* __Modify Schemas:__
+  * `triniti:canvas:mixin:youtube-playlist` patch revision `1-0-1`
+    * Updated `video_id` string field.
+
 
 ## v1.1.5
 * __Modify Schemas:__
   * `triniti:news:mixin:article` patch revision `1-0-2`
     * Add `smartnews_enabled` boolean field.
 
-        
+
 ## v1.1.4
 * Use `gdbots/schemas` v1.6.3.
 * __Add Schemas:__

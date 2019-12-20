@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/ios-app/1-0-3.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/ios-app/1-0-2.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -203,36 +203,6 @@
       "description": "An encrypted value of legacy-server-key that can be obtained from the cloud messaging tab of the Firebase console. @link https://firebase.google.com/docs/cloud-messaging/auth-server",
       "pbj": {
         "type": "text",
-        "rule": "single"
-      }
-    },
-    "fcm_project_id": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "A unique identifier for your Firebase project, used in requests to the FCM v1 HTTP endpoint. @link https://firebase.google.com/docs/cloud-messaging/concept-options#projectid",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
-    },
-    "fcm_sender_id": {
-      "type": "string",
-      "pattern": "^\\d+$",
-      "description": "A unique numerical value created when you create your Firebase project. @link https://firebase.google.com/docs/cloud-messaging/concept-options#senderid",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "fcm_web_api_key": {
-      "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "description": "An un-encrypted key that can be obtained from the cloud messaging tab of the Firebase console.",
-      "pbj": {
-        "type": "string",
         "rule": "single"
       }
     }
