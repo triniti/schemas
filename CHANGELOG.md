@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v1.1.5
+* __Modify Schemas:__
+  * `triniti:canvas:mixin:youtube-playlist-block` _(no version changes as there is no production use yet)_
+    * Mark `video_id` field as not required.
+  * `triniti:common:ad-size`
+    * Add `INSTREAM` and `OUTSTREAM` to enum.
+  * `triniti:news:mixin:article` patch revision `1-0-2`
+    * Add `smartnews_enabled` boolean field.
+
+
 ## v1.1.4
 * Use `gdbots/schemas` v1.6.3.
 * __Add Schemas:__

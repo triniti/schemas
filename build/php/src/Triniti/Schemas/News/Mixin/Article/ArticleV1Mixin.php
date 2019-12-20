@@ -74,6 +74,12 @@ final class ArticleV1Mixin extends AbstractMixin
                 ->withDefault(true)
                 ->build(),
             /*
+             * Determines if SmartNews should be enabled for this article.
+             */
+            Fb::create('smartnews_enabled', T\BooleanType::create())
+                ->withDefault(true)
+                ->build(),
+            /*
              * Determines if Apple News should be enabled for this article.
              */
             Fb::create('apple_news_enabled', T\BooleanType::create())

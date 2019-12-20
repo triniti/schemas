@@ -7,7 +7,7 @@
       extends="triniti:canvas:mixin:block:v1">
     <fields>
       <field name="playlist_id" type="string" pattern="^[\w-]+$" required="true"/>
-      <field name="video_id" type="string" pattern="^[\w-]+$" required="true"/>
+      <field name="video_id" type="string" pattern="^[\w-]+$"/>
       <field name="autoplay" type="boolean"/>
       <field name="poster_image_ref" type="identifier">
         <description>

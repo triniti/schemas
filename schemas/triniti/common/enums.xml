@@ -26,6 +26,8 @@
       <option key="PORTRAIT" value="portrait"/>
       <option key="BILLBOARD" value="billboard"/>
       <option key="SKIN" value="skin"/>
+      <option key="INSTREAM" value="instream"/>
+      <option key="OUTSTREAM" value="outstream"/>
     </enum>
 
     <enum name="aspect-ratio" type="string">

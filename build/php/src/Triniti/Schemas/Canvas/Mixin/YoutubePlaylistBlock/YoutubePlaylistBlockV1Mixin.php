@@ -29,7 +29,6 @@ final class YoutubePlaylistBlockV1Mixin extends AbstractMixin
                 ->pattern('^[\w-]+$')
                 ->build(),
             Fb::create('video_id', T\StringType::create())
-                ->required()
                 ->pattern('^[\w-]+$')
                 ->build(),
             Fb::create('autoplay', T\BooleanType::create())
