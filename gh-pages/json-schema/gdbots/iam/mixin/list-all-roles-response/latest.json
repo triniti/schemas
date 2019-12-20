@@ -96,6 +96,51 @@
         "rule": "single"
       }
     },
+    "derefs": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Responses can include \"dereferenced\" messages to prevent the consumer from needing to make multiple HTTP requests. It is up to the consumer to make use of the dereferenced messages if/when they are provided.",
+      "pbj": {
+        "type": "message",
+        "rule": "map"
+      }
+    },
+    "links": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 65535
+        }
+      },
+      "additionalProperties": false,
+      "description": "@link https://en.wikipedia.org/wiki/HATEOAS",
+      "pbj": {
+        "type": "text",
+        "rule": "map"
+      }
+    },
+    "metas": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 65535
+        }
+      },
+      "additionalProperties": false,
+      "pbj": {
+        "type": "text",
+        "rule": "map"
+      }
+    },
     "roles": {
       "type": "array",
       "items": [
@@ -124,6 +169,9 @@
         },
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/request/1-0-1.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/request/1-0-2.json#"
         }
       ]
     }

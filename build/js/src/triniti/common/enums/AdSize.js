@@ -21,4 +21,6 @@ AdSize.configure({
   PORTRAIT: 'portrait',
   BILLBOARD: 'billboard',
   SKIN: 'skin',
+  INSTREAM: 'instream',
+  OUTSTREAM: 'outstream',
 }, 'triniti:common:ad-size');

@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/youtube-playlist-block/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/youtube-playlist-block/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -10,7 +10,7 @@ export default class YoutubePlaylistBlockV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:youtube-playlist-block:1-0-1');
+    return SchemaId.fromString('pbj:triniti:canvas:mixin:youtube-playlist-block:1-0-0');
   }
 
   /**
@@ -20,6 +20,9 @@ export default class YoutubePlaylistBlockV1Mixin extends Mixin {
     return [
       Fb.create('playlist_id', T.StringType.create())
         .required()
+        .pattern('^[\\w-]+$')
+        .build(),
+      Fb.create('video_id', T.StringType.create())
         .pattern('^[\\w-]+$')
         .build(),
       Fb.create('autoplay', T.BooleanType.create())

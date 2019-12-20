@@ -22,6 +22,8 @@ use Gdbots\Common\Enum;
  * @method static AdSize PORTRAIT()
  * @method static AdSize BILLBOARD()
  * @method static AdSize SKIN()
+ * @method static AdSize INSTREAM()
+ * @method static AdSize OUTSTREAM()
  */
 final class AdSize extends Enum
 {
@@ -42,4 +44,6 @@ final class AdSize extends Enum
     const PORTRAIT = 'portrait';
     const BILLBOARD = 'billboard';
     const SKIN = 'skin';
+    const INSTREAM = 'instream';
+    const OUTSTREAM = 'outstream';
 }

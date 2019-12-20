@@ -17,6 +17,7 @@ import '@gdbots/schemas/gdbots/forms/field/AgeFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/CountryFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/DateFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/DobFieldV1';
+import '@gdbots/schemas/gdbots/forms/field/DocumentFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/EmailFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/FacebookUserFieldV1';
 import '@gdbots/schemas/gdbots/forms/field/GenderFieldV1';

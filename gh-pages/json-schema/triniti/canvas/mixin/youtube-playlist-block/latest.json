@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/youtube-playlist-block/1-0-1.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/youtube-playlist-block/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -38,6 +38,14 @@
       }
     },
     "playlist_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "video_id": {
       "type": "string",
       "pattern": "^[\\w-]+$",
       "pbj": {
