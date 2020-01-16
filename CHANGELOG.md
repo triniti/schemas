@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v1.1.6
+* __Add Schemas:__
+  * `triniti:ovp.jwplayer:command:sync-media`
+  * `triniti:ovp.jwplayer:event:media-synced`
+  * `triniti:ovp.jwplayer:mixin:has-media`
+
+
 ## v1.1.5
 * __Modify Schemas:__
   * `triniti:canvas:mixin:youtube-playlist-block` _(no version changes as there is no production use yet)_
