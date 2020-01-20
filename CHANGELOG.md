@@ -2,6 +2,14 @@
 
 
 ## v1.1.6
+* __Modify Schemas:__
+  * `triniti:canvas:mixin:document-block` patch revision `1-0-1`
+    * Add `aspect_ratio` string-enum field using enum `triniti:common:aspect-ratio`.
+  * `triniti:canvas:mixin:gallery-block` patch revision `1-0-2`
+    * Add `aspect_ratio` string-enum field using enum `triniti:common:aspect-ratio`.
+  * `triniti:ovp:mixin:video` patch revision `1-0-3`
+    * Add `youtube_custom_id` string field with pattern `^[\w@#-]+$`.
+    * Add `youtube_video_id` string field with pattern `^[\w-]+$`.
 * __Add Schemas:__
   * `triniti:ovp.jwplayer:command:sync-media`
   * `triniti:ovp.jwplayer:event:media-synced`

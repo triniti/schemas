@@ -17,6 +17,15 @@ export default class HasMediaV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('jwplayer_sync_enabled', T.BooleanType.create())
+        .withDefault(true)
+        .build(),
+      /*
+       * Timestamp when the media was last synced with JWPlayer.
+       */
+      Fb.create('jwplayer_synced_at', T.TimestampType.create())
+        .useTypeDefault(false)
+        .build(),
       Fb.create('jwplayer_media_id', T.StringType.create())
         .pattern('^[\\w-]+$')
         .build(),

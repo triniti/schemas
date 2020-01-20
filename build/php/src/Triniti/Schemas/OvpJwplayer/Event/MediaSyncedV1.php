@@ -31,6 +31,9 @@ final class MediaSyncedV1 extends AbstractMessage implements
                     ->required()
                     ->className(NodeRef::class)
                     ->build(),
+                Fb::create('jwplayer_media_id', T\StringType::create())
+                    ->pattern('^[\w-]+$')
+                    ->build(),
             ],
             [
                 GdbotsPbjxEventV1Mixin::create(),

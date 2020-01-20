@@ -198,6 +198,14 @@
         "type": "identifier",
         "rule": "single"
       }
+    },
+    "jwplayer_media_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
     }
   },
   "required": [

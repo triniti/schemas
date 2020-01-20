@@ -407,6 +407,41 @@
         "rule": "single"
       }
     },
+    "youtube_video_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "youtube_custom_id": {
+      "type": "string",
+      "pattern": "^[\\w@#-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "jwplayer_sync_enabled": {
+      "type": "boolean",
+      "default": true,
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "jwplayer_synced_at": {
+      "type": "integer",
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "description": "Timestamp when the media was last synced with JWPlayer.",
+      "pbj": {
+        "type": "timestamp",
+        "rule": "single",
+        "useTypeDefault": false
+      }
+    },
     "jwplayer_media_id": {
       "type": "string",
       "pattern": "^[\\w-]+$",

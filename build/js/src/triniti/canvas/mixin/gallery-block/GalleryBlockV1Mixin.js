@@ -1,4 +1,5 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/gallery-block/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/gallery-block/1-0-2.json#
+import AspectRatio from '@triniti/schemas/triniti/common/enums/AspectRatio';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -10,7 +11,7 @@ export default class GalleryBlockV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:gallery-block:1-0-1');
+    return SchemaId.fromString('pbj:triniti:canvas:mixin:gallery-block:1-0-2');
   }
 
   /**
@@ -19,6 +20,9 @@ export default class GalleryBlockV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('launch_text', T.StringType.create())
+        .build(),
+      Fb.create('aspect_ratio', T.StringEnumType.create())
+        .classProto(AspectRatio)
         .build(),
       /*
        * A reference to an image asset to use as the poster that will

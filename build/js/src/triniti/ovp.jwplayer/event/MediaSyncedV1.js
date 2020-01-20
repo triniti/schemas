@@ -22,6 +22,9 @@ export default class MediaSyncedV1 extends Message {
           .required()
           .classProto(NodeRef)
           .build(),
+        Fb.create('jwplayer_media_id', T.StringType.create())
+          .pattern('^[\\w-]+$')
+          .build(),
       ],
       [
         GdbotsPbjxEventV1Mixin.create(),

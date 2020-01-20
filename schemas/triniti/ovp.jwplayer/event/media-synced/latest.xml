@@ -15,6 +15,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="jwplayer_media_id" type="string" pattern="^[\w-]+$"/>
     </fields>
 
     <mixins>
