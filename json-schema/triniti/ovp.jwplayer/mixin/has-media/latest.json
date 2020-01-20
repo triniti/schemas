@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-3.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/mixin/has-media/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -418,6 +418,33 @@
     "youtube_custom_id": {
       "type": "string",
       "pattern": "^[\\w@#-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "jwplayer_sync_enabled": {
+      "type": "boolean",
+      "default": true,
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "jwplayer_synced_at": {
+      "type": "integer",
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "description": "Timestamp when the media was last synced with JWPlayer.",
+      "pbj": {
+        "type": "timestamp",
+        "rule": "single",
+        "useTypeDefault": false
+      }
+    },
+    "jwplayer_media_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
       "pbj": {
         "type": "string",
         "rule": "single"
