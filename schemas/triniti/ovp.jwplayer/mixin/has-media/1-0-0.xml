@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:ovp.jwplayer:mixin:has-media:1-0-0" mixin="true" extends="triniti:ovp:mixin:video:v1">
+    <fields>
+      <field name="jwplayer_sync_enabled" type="boolean">
+        <default>true</default>
+      </field>
+      <field name="jwplayer_synced_at" type="timestamp" use-type-default="false">
+        <description>Timestamp when the media was last synced with JWPlayer.</description>
+      </field>
+      <field name="jwplayer_media_id" type="string" pattern="^[\w-]+$"/>
+    </fields>
+  </schema>
+</pbj-schema>

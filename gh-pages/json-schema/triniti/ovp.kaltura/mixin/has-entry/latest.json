@@ -407,6 +407,22 @@
         "rule": "single"
       }
     },
+    "youtube_video_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "youtube_custom_id": {
+      "type": "string",
+      "pattern": "^[\\w@#-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "kaltura_entry_id": {
       "type": "string",
       "pattern": "^[\\w-]+$",

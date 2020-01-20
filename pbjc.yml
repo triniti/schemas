@@ -11,6 +11,7 @@ namespaces:
   - triniti:news
   - triniti:notify
   - triniti:ovp
+  - triniti:ovp.jwplayer
   - triniti:ovp.kaltura
   - triniti:ovp.medialive
   - triniti:people
