@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v1.1.7
+* Use `gdbots/schemas` v1.6.4 with optimized PHP class for NodeRef.
+
+
 ## v1.1.6
 * __Modify Schemas:__
   * `triniti:canvas:mixin:document-block` patch revision `1-0-1`
