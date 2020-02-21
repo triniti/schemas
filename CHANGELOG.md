@@ -1,8 +1,10 @@
 # CHANGELOG
 
 
-## vN.N.N
-* Added scrolling_enabled boolean to iframe block schema
+## v1.1.8
+* __Modify Schemas:__
+  * `triniti:canvas:mixin:iframe-block` patch revision `1-0-1`
+    * Add `scrolling_enabled` boolean field.
 
 
 ## v1.1.7
