@@ -10,6 +10,9 @@
       <field name="width" type="string" pattern="^\d+(%|px)?$"/>
       <field name="height" type="string" pattern="^\d+(%|px)?$"/>
       <field name="align" type="string" pattern="^(center|right|left)$"/>
+      <field name="scrolling_enabled" type="boolean">
+        <default>false</default>
+      </field>
       <field name="data" type="string" rule="map">
         <description>
           A map containing values for the data-* attributes

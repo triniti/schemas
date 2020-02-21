@@ -37,6 +37,8 @@ final class IframeBlockV1Mixin extends AbstractMixin
             Fb::create('align', T\StringType::create())
                 ->pattern('^(center|right|left)$')
                 ->build(),
+            Fb::create('scrolling_enabled', T\BooleanType::create())
+                ->build(),
             /*
              * A map containing values for the data-* attributes
              */
