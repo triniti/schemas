@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## vN.N.N
+* Added scrolling_enabled boolean to iframe block schema
+
+
 ## v1.1.7
 * Use `gdbots/schemas` v1.6.4 with optimized PHP class for NodeRef.
 
