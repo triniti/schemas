@@ -12,7 +12,7 @@
       <field name="align" type="string" pattern="^(center|right|left)$"/>
       <field name="scrolling_enabled" type="boolean">
         <description>
-          Determines of scrolling should be enabled for this iframe
+          When true the embedded iFrame will get a scrollbar
         </description>
       </field>
       <field name="data" type="string" rule="map">

@@ -70,13 +70,6 @@
         "rule": "single"
       }
     },
-    "scrolling_enabled": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
     "data": {
       "type": "object",
       "patternProperties": {

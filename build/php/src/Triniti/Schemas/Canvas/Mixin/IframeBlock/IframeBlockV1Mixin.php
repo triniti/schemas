@@ -38,7 +38,7 @@ final class IframeBlockV1Mixin extends AbstractMixin
                 ->pattern('^(center|right|left)$')
                 ->build(),
             /*
-             * Determines of scrolling should be enabled for this iframe
+             * When true the embedded iFrame will get a scrollbar
              */
             Fb::create('scrolling_enabled', T\BooleanType::create())
                 ->build(),
