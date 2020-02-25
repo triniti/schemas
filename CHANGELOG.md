@@ -5,6 +5,8 @@
 * __Modify Schemas:__
   * `triniti:canvas:mixin:iframe-block` patch revision `1-0-1`
     * Add `scrolling_enabled` boolean field.
+  * `triniti:notify:mixin:browser-notification` patch revision `1-0-2`
+    * Add `require_interaction` boolean field.
 
 
 ## v1.1.7
