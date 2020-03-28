@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/promotion/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/promotion/1-0-1.json#
 namespace Triniti\Schemas\Curator\Mixin\Promotion;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -9,6 +9,7 @@ use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Curator\PromotionId;
+use Triniti\Schemas\Curator\Slot as TrinitiCuratorSlot;
 
 final class PromotionV1Mixin extends AbstractMixin
 {
@@ -17,7 +18,7 @@ final class PromotionV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:promotion:1-0-0');
+        return SchemaId::fromString('pbj:triniti:curator:mixin:promotion:1-0-1');
     }
 
     /**
@@ -105,6 +106,12 @@ final class PromotionV1Mixin extends AbstractMixin
             Fb::create('widget_refs', T\IdentifierType::create())
                 ->asAList()
                 ->className(NodeRef::class)
+                ->build(),
+            Fb::create('slots', T\MessageType::create())
+                ->asAList()
+                ->anyOfClassNames([
+                    TrinitiCuratorSlot::class,
+                ])
                 ->build(),
         ];
     }

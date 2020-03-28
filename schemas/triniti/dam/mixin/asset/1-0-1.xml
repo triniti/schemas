@@ -46,7 +46,7 @@
       </field>
       <field name="cta_text" type="string">
         <description>
-          Call to action text.  e.g. "Click here"
+          Call to action text. e.g. "Click here"
         </description>
       </field>
       <field name="cta_url" type="text" format="url">

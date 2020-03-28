@@ -72,7 +72,6 @@
     },
     "scrolling_enabled": {
       "type": "boolean",
-      "description": "When true the embedded iFrame will get a scrollbar",
       "pbj": {
         "type": "boolean",
         "rule": "single"

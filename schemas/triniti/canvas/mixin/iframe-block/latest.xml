@@ -10,11 +10,7 @@
       <field name="width" type="string" pattern="^\d+(%|px)?$"/>
       <field name="height" type="string" pattern="^\d+(%|px)?$"/>
       <field name="align" type="string" pattern="^(center|right|left)$"/>
-      <field name="scrolling_enabled" type="boolean">
-        <description>
-          When true the embedded iFrame will get a scrollbar
-        </description>
-      </field>
+      <field name="scrolling_enabled" type="boolean"/>
       <field name="data" type="string" rule="map">
         <description>
           A map containing values for the data-* attributes
@@ -59,7 +55,6 @@ getUriTemplateVars() {
     width: this.get('width'),
     height: this.get('height'),
     align: this.get('align'),
-    data: this.get('data'),
   };
 }
           ]]>

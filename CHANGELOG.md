@@ -2,9 +2,15 @@
 
 
 ## v1.1.8
+* Use `gdbots/schemas` v1.6.5.
+* __Add Schemas:__
+  * `triniti:curator::slot`
+  * `triniti:curator:slot-rendering`
 * __Modify Schemas:__
   * `triniti:canvas:mixin:iframe-block` patch revision `1-0-1`
     * Add `scrolling_enabled` boolean field.
+  * `triniti:curator:mixin:promotion` patch revision `1-0-1`
+    * Add `slots` message list field with `any-of` to `triniti:curator::slot`.
   * `triniti:notify:mixin:browser-notification` patch revision `1-0-2`
     * Add `require_interaction` boolean field.
 

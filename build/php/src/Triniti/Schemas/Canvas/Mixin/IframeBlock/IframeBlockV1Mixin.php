@@ -37,9 +37,6 @@ final class IframeBlockV1Mixin extends AbstractMixin
             Fb::create('align', T\StringType::create())
                 ->pattern('^(center|right|left)$')
                 ->build(),
-            /*
-             * When true the embedded iFrame will get a scrollbar
-             */
             Fb::create('scrolling_enabled', T\BooleanType::create())
                 ->build(),
             /*

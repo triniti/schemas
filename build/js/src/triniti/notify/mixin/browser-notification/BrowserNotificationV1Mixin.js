@@ -27,8 +27,8 @@ export default class BrowserNotificationV1Mixin extends Mixin {
         .build(),
       /*
        * @link https://developer.mozilla.org/en-US/docs/Web/API/notification/Notification
-       * Sets the requireInteraction option on a Notification that indicates that a notification should remain active until
-       * the user clicks or dismisses it, rather than closing automatically.
+       * Sets the requireInteraction option on a Notification that indicates that a notification
+       * should remain active until the user clicks or dismisses it, rather than closing automatically.
        */
       Fb.create('require_interaction', T.BooleanType.create())
         .withDefault(true)
