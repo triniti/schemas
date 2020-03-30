@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-3.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-4.json#
 namespace Triniti\Schemas\Ovp\Mixin\Video;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -18,7 +18,7 @@ final class VideoV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:ovp:mixin:video:1-0-3');
+        return SchemaId::fromString('pbj:triniti:ovp:mixin:video:1-0-4');
     }
 
     /**
@@ -125,6 +125,13 @@ final class VideoV1Mixin extends AbstractMixin
              */
             Fb::create('mezzanine_ref', T\IdentifierType::create())
                 ->className(NodeRef::class)
+                ->build(),
+            /*
+             * URL to the playable sources keyed by the type, e.g. "hls", "mp4".
+             */
+            Fb::create('source_urls', T\TextType::create())
+                ->asAMap()
+                ->format(Format::URL())
                 ->build(),
             /*
              * A tracking code for video clips that is used to correlate
