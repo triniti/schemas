@@ -241,6 +241,9 @@
         },
         {
           "$ref": "http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-3.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-4.json#"
         }
       ]
     }

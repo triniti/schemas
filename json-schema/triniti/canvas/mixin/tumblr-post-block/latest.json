@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/iframe-block/1-0-1.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/canvas/mixin/tumblr-post-block/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -37,7 +37,7 @@
         "rule": "single"
       }
     },
-    "src": {
+    "href": {
       "type": "string",
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "pbj": {
@@ -46,56 +46,18 @@
         "format": "url"
       }
     },
-    "width": {
+    "canonical_url": {
       "type": "string",
-      "pattern": "^\\d+(%|px)?$",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "height": {
-      "type": "string",
-      "pattern": "^\\d+(%|px)?$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "align": {
-      "type": "string",
-      "pattern": "^(center|right|left)$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "scrolling_enabled": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "data": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
-          "type": "string",
-          "minLength": 0,
-          "maxLength": 255
-        }
-      },
-      "additionalProperties": false,
-      "description": "A map containing values for the data-* attributes",
-      "pbj": {
-        "type": "string",
-        "rule": "map"
+        "type": "text",
+        "rule": "single",
+        "format": "url"
       }
     }
   },
   "required": [
-    "src"
+    "href"
   ],
   "additionalProperties": true
 }

@@ -370,6 +370,22 @@
         "rule": "single"
       }
     },
+    "source_urls": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+        }
+      },
+      "additionalProperties": false,
+      "description": "URL to the playable sources keyed by the type, e.g. \"hls\", \"mp4\".",
+      "pbj": {
+        "type": "text",
+        "rule": "map",
+        "format": "url"
+      }
+    },
     "mpm": {
       "type": "string",
       "pattern": "^[\\w\\.-]+$",
