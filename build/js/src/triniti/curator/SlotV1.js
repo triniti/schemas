@@ -20,7 +20,7 @@ export default class SlotV1 extends Message {
       [
         /*
          * The name of the location where the widget should render,
-         * e.g. "sidebar", "global-html-head" or "jumbotron-top".
+         * e.g. "sidebar", "html-head" or "jumbotron-top".
          */
         Fb.create('name', T.StringType.create())
           .format(Format.SLUG)
