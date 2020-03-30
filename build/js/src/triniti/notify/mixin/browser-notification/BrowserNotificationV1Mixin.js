@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/notify/mixin/browser-notification/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/notify/mixin/browser-notification/1-0-2.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -9,7 +9,7 @@ export default class BrowserNotificationV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:notify:mixin:browser-notification:1-0-1');
+    return SchemaId.fromString('pbj:triniti:notify:mixin:browser-notification:1-0-2');
   }
 
   /**
@@ -24,6 +24,14 @@ export default class BrowserNotificationV1Mixin extends Mixin {
       Fb.create('fcm_topics', T.StringType.create())
         .asASet()
         .pattern('^[\\w\\/\\.:~%#-]+$')
+        .build(),
+      /*
+       * @link https://developer.mozilla.org/en-US/docs/Web/API/notification/Notification
+       * Sets the requireInteraction option on a Notification that indicates that a notification
+       * should remain active until the user clicks or dismisses it, rather than closing automatically.
+       */
+      Fb.create('require_interaction', T.BooleanType.create())
+        .withDefault(true)
         .build(),
     ];
   }

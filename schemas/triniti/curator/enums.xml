@@ -93,5 +93,12 @@
       <option key="TITLE_ASC" value="title-asc"/>
       <option key="TITLE_DESC" value="title-desc"/>
     </enum>
+
+    <enum name="slot-rendering" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="SERVER" value="server"/>
+      <option key="CLIENT" value="client"/>
+      <option key="LAZY" value="lazy"/>
+    </enum>
   </enums>
 </pbj-enums>

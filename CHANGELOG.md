@@ -1,6 +1,23 @@
 # CHANGELOG
 
 
+## v1.1.8
+* Use `gdbots/schemas` v1.6.5.
+* __Add Schemas:__
+  * `triniti:canvas:mixin:tumblr-post-block`
+  * `triniti:curator::slot`
+  * `triniti:curator:slot-rendering`
+* __Modify Schemas:__
+  * `triniti:canvas:mixin:iframe-block` patch revision `1-0-1`
+    * Add `scrolling_enabled` boolean field.
+  * `triniti:curator:mixin:promotion` patch revision `1-0-1`
+    * Add `slots` message list field with `any-of` to `triniti:curator::slot`.
+  * `triniti:notify:mixin:browser-notification` patch revision `1-0-2`
+    * Add `require_interaction` boolean field.
+  * `triniti:ovp:mixin:video` patch revision `1-0-4`
+    * Add `source_urls` text map field with format url.
+
+
 ## v1.1.7
 * Use `gdbots/schemas` v1.6.4 with optimized PHP class for NodeRef.
 

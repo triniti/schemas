@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-3.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-4.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -13,7 +13,7 @@ export default class VideoV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:ovp:mixin:video:1-0-3');
+    return SchemaId.fromString('pbj:triniti:ovp:mixin:video:1-0-4');
   }
 
   /**
@@ -119,6 +119,13 @@ export default class VideoV1Mixin extends Mixin {
        */
       Fb.create('mezzanine_ref', T.IdentifierType.create())
         .classProto(NodeRef)
+        .build(),
+      /*
+       * URL to the playable sources keyed by the type, e.g. "hls", "mp4".
+       */
+      Fb.create('source_urls', T.TextType.create())
+        .asAMap()
+        .format(Format.URL)
         .build(),
       /*
        * A tracking code for video clips that is used to correlate

@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/iframe-block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/iframe-block/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -10,7 +10,7 @@ export default class IframeBlockV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:iframe-block:1-0-0');
+    return SchemaId.fromString('pbj:triniti:canvas:mixin:iframe-block:1-0-1');
   }
 
   /**
@@ -30,6 +30,8 @@ export default class IframeBlockV1Mixin extends Mixin {
         .build(),
       Fb.create('align', T.StringType.create())
         .pattern('^(center|right|left)$')
+        .build(),
+      Fb.create('scrolling_enabled', T.BooleanType.create())
         .build(),
       /*
        * A map containing values for the data-* attributes

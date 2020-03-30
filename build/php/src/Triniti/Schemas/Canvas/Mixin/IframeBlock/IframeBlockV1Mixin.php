@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/iframe-block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/iframe-block/1-0-1.json#
 namespace Triniti\Schemas\Canvas\Mixin\IframeBlock;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -15,7 +15,7 @@ final class IframeBlockV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:iframe-block:1-0-0');
+        return SchemaId::fromString('pbj:triniti:canvas:mixin:iframe-block:1-0-1');
     }
 
     /**
@@ -36,6 +36,8 @@ final class IframeBlockV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('align', T\StringType::create())
                 ->pattern('^(center|right|left)$')
+                ->build(),
+            Fb::create('scrolling_enabled', T\BooleanType::create())
                 ->build(),
             /*
              * A map containing values for the data-* attributes

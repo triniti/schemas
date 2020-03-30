@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator::slot:1-0-0">
+    <fields>
+      <field name="name" type="string" format="slug">
+        <description>
+          The name of the location where the widget should render,
+          e.g. "sidebar", "html-head" or "jumbotron-top".
+        </description>
+      </field>
+      <field name="widget_ref" type="identifier">
+        <description>
+          A reference to the widget this slot will render.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="rendering" type="string-enum">
+        <default>lazy</default>
+        <enum id="triniti:curator:slot-rendering"/>
+      </field>
+      <!--
+        Possible ideas below (no need yet so left them off)
+      -->
+      <!--
+      <field name="orientation" type="string" pattern="^(landscape|portrait)$">
+        <description>
+          The orientation that must be used for this widget to render.
+        </description>
+      </field>
+      <field name="variant" type="string" pattern="^[\w\.-]+$" max="20"/>
+        <description>
+          When a/b testing, slots rendering with client or lazy can be
+          conditionally rendered based on variant.
+        </description>
+      </field>
+      -->
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+use Gdbots\Pbj\MessageRef;
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param string $tag
+ * @return MessageRef
+ */
+public function generateMessageRef($tag = null)
+{
+    return new MessageRef(static::schema()->getCurie(), $this->generateEtag(), $tag);
+}
+
+/**
+ * @return array
+ */
+public function getUriTemplateVars()
+{
+    return [];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <imports>
+          <![CDATA[
+import MessageRef from '@gdbots/pbj/MessageRef';
+            ]]>
+        </imports>
+        <methods>
+          <![CDATA[
+/**
+ * @param {?string} tag
+ * @returns {MessageRef}
+ */
+generateMessageRef(tag = null) {
+  return new MessageRef(this.schema().getCurie(), this.generateEtag(), tag);
+}
+
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {};
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>
