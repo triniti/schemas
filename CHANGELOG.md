@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## vN.N.N
+* `triniti:news:mixin:article` patch revision `1-0-3`
+    * Add `facebook_instant_articles_enabled` boolean field.
+
+
 ## v1.1.8
 * Use `gdbots/schemas` v1.6.5.
 * __Add Schemas:__
