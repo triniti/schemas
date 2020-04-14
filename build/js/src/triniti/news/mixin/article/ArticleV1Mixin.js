@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-3.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-4.json#
 import ArticleId from '@triniti/schemas/triniti/news/ArticleId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
@@ -12,7 +12,7 @@ export default class ArticleV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-3');
+    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-4');
   }
 
   /**
@@ -58,6 +58,11 @@ export default class ArticleV1Mixin extends Mixin {
        */
       Fb.create('classification', T.StringType.create())
         .format(Format.SLUG)
+        .build(),
+      /*
+       * Text to be used for the call to action.
+       */
+      Fb.create('cta_text', T.StringType.create())
         .build(),
       Fb.create('word_count', T.SmallIntType.create())
         .build(),

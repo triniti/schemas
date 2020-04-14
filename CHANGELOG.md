@@ -2,7 +2,8 @@
 
 
 ## v1.1.9
-* `triniti:news:mixin:article` patch revision `1-0-3`
+* `triniti:news:mixin:article` patch revision `1-0-4`
+    * Add `cta_text` string field.
     * Add `facebook_instant_articles_enabled` boolean field.
 
 
