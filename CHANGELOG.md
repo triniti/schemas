@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## vN.N.N
+## v1.1.9
 * `triniti:news:mixin:article` patch revision `1-0-3`
     * Add `facebook_instant_articles_enabled` boolean field.
 
