@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.1.9
+* `triniti:news:mixin:article` patch revision `1-0-3`
+    * Add `cta_text` string field.
+    * Add `facebook_instant_articles_enabled` boolean field.
+
+
 ## v1.1.8
 * Use `gdbots/schemas` v1.6.5.
 * __Add Schemas:__
