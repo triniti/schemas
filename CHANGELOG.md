@@ -2,6 +2,9 @@
 
 
 ## v1.1.9
+* __Add Schemas:__
+  * `triniti:news:command:sync-facebook-instant-article`
+  * `triniti:news:event:facebook-instant-article-synced`
 * __Modify Schemas:__
   * `triniti:news:mixin:article` patch revision `1-0-3`
     * Add `facebook_instant_articles_enabled` boolean field.
@@ -9,6 +12,8 @@
     * Add `cta_text` string field.
   * `triniti:canvas:mixin:node-ref-block` patch revision `1-0-1`
     * Add `title` string field.
+  * `triniti:curator:mixin:playlist-widget` patch revision `1-0-1`
+    * Add `autoplay` boolean field with default true.
 
 
 ## v1.1.8

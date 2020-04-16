@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:canvas:mixin:node-ref-block:1-0-1" mixin="true" extends="triniti:canvas:mixin:block:v1">
+    <fields>
+      <field name="node_ref" type="identifier" required="true">
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="title" type="string">
+        <description>
+          An optional override for the title of the node.
+        </description>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>
