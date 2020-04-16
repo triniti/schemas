@@ -7,6 +7,8 @@
     * Add `facebook_instant_articles_enabled` boolean field.
   * `triniti:canvas:mixin:article-block` patch revision `1-0-1`
     * Add `cta_text` string field.
+  * `triniti:canvas:mixin:node-ref-block` patch revision `1-0-1`
+    * Add `title` string field.
 
 
 ## v1.1.8
