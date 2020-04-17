@@ -45,6 +45,16 @@
         "rule": "single"
       }
     },
+    "title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "An optional override for the title of the node.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "launch_text": {
       "type": "string",
       "minLength": 0,
