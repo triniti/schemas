@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/node-ref-block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/node-ref-block/1-0-1.json#
 namespace Triniti\Schemas\Canvas\Mixin\NodeRefBlock;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -15,7 +15,7 @@ final class NodeRefBlockV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:node-ref-block:1-0-0');
+        return SchemaId::fromString('pbj:triniti:canvas:mixin:node-ref-block:1-0-1');
     }
 
     /**
@@ -27,6 +27,11 @@ final class NodeRefBlockV1Mixin extends AbstractMixin
             Fb::create('node_ref', T\IdentifierType::create())
                 ->required()
                 ->className(NodeRef::class)
+                ->build(),
+            /*
+             * An optional override for the title of the node.
+             */
+            Fb::create('title', T\StringType::create())
                 ->build(),
         ];
     }

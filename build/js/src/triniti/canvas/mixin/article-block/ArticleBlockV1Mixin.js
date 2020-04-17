@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/article-block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/article-block/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -10,7 +10,7 @@ export default class ArticleBlockV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:article-block:1-0-0');
+    return SchemaId.fromString('pbj:triniti:canvas:mixin:article-block:1-0-1');
   }
 
   /**
@@ -18,6 +18,8 @@ export default class ArticleBlockV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      Fb.create('cta_text', T.StringType.create())
+        .build(),
       Fb.create('link_text', T.StringType.create())
         .build(),
       Fb.create('show_image', T.BooleanType.create())

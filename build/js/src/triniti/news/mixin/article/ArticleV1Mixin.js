@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-2.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-3.json#
 import ArticleId from '@triniti/schemas/triniti/news/ArticleId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
@@ -12,7 +12,7 @@ export default class ArticleV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-2');
+    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-3');
   }
 
   /**
@@ -100,6 +100,12 @@ export default class ArticleV1Mixin extends Mixin {
        */
       Fb.create('apple_news_updated_at', T.TimestampType.create())
         .useTypeDefault(false)
+        .build(),
+      /*
+       * Determines if Facebook Instant Articles should be enabled for this article.
+       */
+      Fb.create('facebook_instant_articles_enabled', T.BooleanType.create())
+        .withDefault(true)
         .build(),
       /*
        * Determines if the related articles should render. This is intended as a flag
