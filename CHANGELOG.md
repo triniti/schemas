@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.1.10
+* __Add Schemas:__
+  * `triniti:ovp:event:transcoding-completed`
+  * `triniti:ovp:event:transcoding-started`
+  * `triniti:ovp:event:transcription-completed`
+  * `triniti:ovp:event:transcription-started`
+
+
 ## v1.1.9
 * __Add Schemas:__
   * `triniti:news:command:sync-facebook-instant-article`
