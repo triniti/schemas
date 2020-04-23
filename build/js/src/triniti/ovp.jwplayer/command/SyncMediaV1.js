@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/command/sync-media/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/command/sync-media/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';
@@ -15,11 +15,20 @@ export default class SyncMediaV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:ovp.jwplayer:command:sync-media:1-0-0', SyncMediaV1,
+    return new Schema('pbj:triniti:ovp.jwplayer:command:sync-media:1-0-1', SyncMediaV1,
       [
         Fb.create('node_ref', T.IdentifierType.create())
           .required()
           .classProto(NodeRef)
+          .build(),
+        /*
+         * Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields to sync. A field is
+         * considered to be auxiliary if it cannot be updated using the standard "update video"
+         * api call. If empty, all auxiliary fields will be synced.
+         */
+        Fb.create('fields', T.StringType.create())
+          .asASet()
+          .pattern('^[\\w-]+$')
           .build(),
       ],
       [
