@@ -11,7 +11,7 @@
   * `triniti:ovp.jwplayer:command:sync-media` patch revision `1-0-1`
     * Add `fields` string set field with pattern `^[\w-]+$`.
   * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-1`
-    * Add `fields` string set field with pattern `^[\w-]+$`.
+    * Add `fields` string map field with pattern `^[\w\/\.:-]+$`.
 
 
 ## v1.1.9
