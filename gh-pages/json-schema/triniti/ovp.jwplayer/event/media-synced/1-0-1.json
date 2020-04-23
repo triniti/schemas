@@ -207,16 +207,25 @@
         "rule": "single"
       }
     },
-    "fields": {
+    "jwplayer_thumbnail_image_id": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "The id of the image used to generate the jwplayer thumbnail.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
+    "jwplayer_caption_keys": {
       "type": "object",
       "patternProperties": {
         "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
           "type": "string",
-          "pattern": "^[\\w\\/\\.:-]+$"
+          "pattern": "^[\\w]+$"
         }
       },
       "additionalProperties": false,
-      "description": "Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced and their corresponding values. A field is considered to be auxiliary if it cannot be updated using the standard \"update video\" api call.",
+      "description": "The keys of the jwplayer captions that were generated.",
       "pbj": {
         "type": "string",
         "rule": "map"

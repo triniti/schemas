@@ -21,14 +21,9 @@ export default class SyncMediaV1 extends Message {
           .required()
           .classProto(NodeRef)
           .build(),
-        /*
-         * Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields to sync. A field is
-         * considered to be auxiliary if it cannot be updated using the standard "update video"
-         * api call. If empty, all auxiliary fields will be synced.
-         */
-        Fb.create('fields', T.StringType.create())
-          .asASet()
-          .pattern('^[\\w-]+$')
+        Fb.create('sync_thumbnail', T.BooleanType.create())
+          .build(),
+        Fb.create('sync_captions', T.BooleanType.create())
           .build(),
       ],
       [

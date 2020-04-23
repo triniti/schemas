@@ -1,4 +1,5 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-1.json#
+import AssetId from '@triniti/schemas/triniti/dam/AssetId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
@@ -26,13 +27,17 @@ export default class MediaSyncedV1 extends Message {
           .pattern('^[\\w-]+$')
           .build(),
         /*
-         * Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced and their
-         * corresponding values. A field is considered to be auxiliary if it cannot be updated
-         * using the standard "update video" api call.
+         * The id of the image used to generate the jwplayer thumbnail.
          */
-        Fb.create('fields', T.StringType.create())
+        Fb.create('jwplayer_thumbnail_image_id', T.IdentifierType.create())
+          .classProto(AssetId)
+          .build(),
+        /*
+         * The keys of the jwplayer captions that were generated.
+         */
+        Fb.create('jwplayer_caption_keys', T.StringType.create())
           .asAMap()
-          .pattern('^[\\w\\/\\.:-]+$')
+          .pattern('^[\\w]+$')
           .build(),
       ],
       [

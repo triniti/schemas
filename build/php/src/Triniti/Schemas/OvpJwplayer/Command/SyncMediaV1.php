@@ -28,14 +28,9 @@ final class SyncMediaV1 extends AbstractMessage implements
                     ->required()
                     ->className(NodeRef::class)
                     ->build(),
-                /*
-                 * Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields to sync. A field is
-                 * considered to be auxiliary if it cannot be updated using the standard "update video"
-                 * api call. If empty, all auxiliary fields will be synced.
-                 */
-                Fb::create('fields', T\StringType::create())
-                    ->asASet()
-                    ->pattern('^[\w-]+$')
+                Fb::create('sync_thumbnail', T\BooleanType::create())
+                    ->build(),
+                Fb::create('sync_captions', T\BooleanType::create())
                     ->build(),
             ],
             [

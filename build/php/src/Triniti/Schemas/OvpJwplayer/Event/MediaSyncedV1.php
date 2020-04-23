@@ -12,6 +12,7 @@ use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait as GdbotsPbjxEventV1Trait;
+use Triniti\Schemas\Dam\AssetId;
 
 final class MediaSyncedV1 extends AbstractMessage implements
     MediaSynced,
@@ -35,13 +36,17 @@ final class MediaSyncedV1 extends AbstractMessage implements
                     ->pattern('^[\w-]+$')
                     ->build(),
                 /*
-                 * Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced and their
-                 * corresponding values. A field is considered to be auxiliary if it cannot be updated
-                 * using the standard "update video" api call.
+                 * The id of the image used to generate the jwplayer thumbnail.
                  */
-                Fb::create('fields', T\StringType::create())
+                Fb::create('jwplayer_thumbnail_image_id', T\IdentifierType::create())
+                    ->className(AssetId::class)
+                    ->build(),
+                /*
+                 * The keys of the jwplayer captions that were generated.
+                 */
+                Fb::create('jwplayer_caption_keys', T\StringType::create())
                     ->asAMap()
-                    ->pattern('^[\w\/\.:-]+$')
+                    ->pattern('^[\w]+$')
                     ->build(),
             ],
             [

@@ -212,20 +212,18 @@
         "rule": "single"
       }
     },
-    "fields": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[\\w-]+$"
-        }
-      ],
-      "uniqueItems": true,
-      "additionalProperties": false,
-      "description": "Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields to sync. A field is considered to be auxiliary if it cannot be updated using the standard \"update video\" api call. If empty, all auxiliary fields will be synced.",
+    "sync_thumbnail": {
+      "type": "boolean",
       "pbj": {
-        "type": "string",
-        "rule": "set"
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "sync_captions": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
       }
     }
   },
