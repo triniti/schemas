@@ -16,11 +16,11 @@
         </js-options>
       </field>
       <field name="jwplayer_media_id" type="string" pattern="^[\w-]+$"/>
-      <field name="fields" type="string" pattern="^[\w-]+$" rule="set">
+      <field name="fields" type="string" pattern="^[\w\/\.:-]+$" rule="map">
         <description>
-          Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced. A field is
-          considered to be auxiliary if it cannot be updated using the standard "update video"
-          api call.
+          Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced and their
+          corresponding values. A field is considered to be auxiliary if it cannot be updated
+          using the standard "update video" api call.
         </description>
       </field>
     </fields>

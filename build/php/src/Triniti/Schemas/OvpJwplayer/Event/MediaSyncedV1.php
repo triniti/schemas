@@ -35,13 +35,13 @@ final class MediaSyncedV1 extends AbstractMessage implements
                     ->pattern('^[\w-]+$')
                     ->build(),
                 /*
-                 * Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced. A field is
-                 * considered to be auxiliary if it cannot be updated using the standard "update video"
-                 * api call.
+                 * Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced and their
+                 * corresponding values. A field is considered to be auxiliary if it cannot be updated
+                 * using the standard "update video" api call.
                  */
                 Fb::create('fields', T\StringType::create())
-                    ->asASet()
-                    ->pattern('^[\w-]+$')
+                    ->asAMap()
+                    ->pattern('^[\w\/\.:-]+$')
                     ->build(),
             ],
             [

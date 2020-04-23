@@ -208,19 +208,18 @@
       }
     },
     "fields": {
-      "type": "array",
-      "items": [
-        {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
           "type": "string",
-          "pattern": "^[\\w-]+$"
+          "pattern": "^[\\w\\/\\.:-]+$"
         }
-      ],
-      "uniqueItems": true,
+      },
       "additionalProperties": false,
-      "description": "Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced. A field is considered to be auxiliary if it cannot be updated using the standard \"update video\" api call.",
+      "description": "Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced and their corresponding values. A field is considered to be auxiliary if it cannot be updated using the standard \"update video\" api call.",
       "pbj": {
         "type": "string",
-        "rule": "set"
+        "rule": "map"
       }
     }
   },
