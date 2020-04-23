@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-1.json#
 namespace Triniti\Schemas\OvpJwplayer\Event;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -25,13 +25,22 @@ final class MediaSyncedV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:triniti:ovp.jwplayer:event:media-synced:1-0-0', __CLASS__,
+        return new Schema('pbj:triniti:ovp.jwplayer:event:media-synced:1-0-1', __CLASS__,
             [
                 Fb::create('node_ref', T\IdentifierType::create())
                     ->required()
                     ->className(NodeRef::class)
                     ->build(),
                 Fb::create('jwplayer_media_id', T\StringType::create())
+                    ->pattern('^[\w-]+$')
+                    ->build(),
+                /*
+                 * Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced. A field is
+                 * considered to be auxiliary if it cannot be updated using the standard "update video"
+                 * api call.
+                 */
+                Fb::create('fields', T\StringType::create())
+                    ->asASet()
                     ->pattern('^[\w-]+$')
                     ->build(),
             ],

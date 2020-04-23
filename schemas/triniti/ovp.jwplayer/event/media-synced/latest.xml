@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:ovp.jwplayer:event:media-synced:1-0-0">
+  <schema id="pbj:triniti:ovp.jwplayer:event:media-synced:1-0-1">
     <fields>
       <field name="node_ref" type="identifier" required="true">
         <php-options>
@@ -16,6 +16,13 @@
         </js-options>
       </field>
       <field name="jwplayer_media_id" type="string" pattern="^[\w-]+$"/>
+      <field name="fields" type="string" pattern="^[\w-]+$" rule="set">
+        <description>
+          Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced. A field is
+          considered to be auxiliary if it cannot be updated using the standard "update video"
+          api call.
+        </description>
+      </field>
     </fields>
 
     <mixins>

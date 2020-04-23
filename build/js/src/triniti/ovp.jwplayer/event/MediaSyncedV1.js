@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
@@ -16,13 +16,22 @@ export default class MediaSyncedV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:ovp.jwplayer:event:media-synced:1-0-0', MediaSyncedV1,
+    return new Schema('pbj:triniti:ovp.jwplayer:event:media-synced:1-0-1', MediaSyncedV1,
       [
         Fb.create('node_ref', T.IdentifierType.create())
           .required()
           .classProto(NodeRef)
           .build(),
         Fb.create('jwplayer_media_id', T.StringType.create())
+          .pattern('^[\\w-]+$')
+          .build(),
+        /*
+         * Auxiliary (e.g. thumbnail, captions, etc) jwplayer fields that were synced. A field is
+         * considered to be auxiliary if it cannot be updated using the standard "update video"
+         * api call.
+         */
+        Fb.create('fields', T.StringType.create())
+          .asASet()
           .pattern('^[\\w-]+$')
           .build(),
       ],
