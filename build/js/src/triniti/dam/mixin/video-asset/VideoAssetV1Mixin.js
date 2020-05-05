@@ -1,15 +1,16 @@
-// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/video-asset/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/video-asset/1-0-2.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/types';
+import TranscriptionStatus from '@triniti/schemas/triniti/ovp/enums/TranscriptionStatus';
 
 export default class VideoAssetV1Mixin extends Mixin {
   /**
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:dam:mixin:video-asset:1-0-1');
+    return SchemaId.fromString('pbj:triniti:dam:mixin:video-asset:1-0-2');
   }
 
   /**
@@ -21,6 +22,9 @@ export default class VideoAssetV1Mixin extends Mixin {
        * Duration of the video in seconds.
        */
       Fb.create('duration', T.SmallIntType.create())
+        .build(),
+      Fb.create('transcription_status', T.StringEnumType.create())
+        .classProto(TranscriptionStatus)
         .build(),
     ];
   }
