@@ -9,11 +9,10 @@
   * `triniti:ovp:mixin:transcription-started`
 * __Modify Schemas:__
   * `triniti:ovp.jwplayer:command:sync-media` patch revision `1-0-1`
-    * Add `sync_thumbnail` boolean field.
-    * Add `sync_captions` boolean field.
+    * Add `fields` string set field with pattern `^[\w]+$`.
   * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-1`
-    * Add `jwplayer_thumbnail_image_id` identifier (AssetId) field.
     * Add `jwplayer_caption_keys` string map field with pattern `^[\w]+$`.
+    * Add `thumbnail_image_id` identifier (AssetId) field.
 
 
 ## v1.1.9

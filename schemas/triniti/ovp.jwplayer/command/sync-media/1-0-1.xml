@@ -15,8 +15,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="sync_thumbnail" type="boolean"/>
-      <field name="sync_captions" type="boolean"/>
+      <field name="fields" type="string" pattern="^[\w]+$" rule="set"/>
     </fields>
 
     <mixins>

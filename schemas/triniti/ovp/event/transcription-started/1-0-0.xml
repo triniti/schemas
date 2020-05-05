@@ -3,13 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:ovp:mixin:transcription-completed:1-0-0" mixin="true"
-      extends="gdbots:pbjx:mixin:event:v1">
+  <schema id="pbj:triniti:ovp:event:transcription-started:1-0-0">
     <fields>
       <field name="node_ref" type="identifier" required="true">
-        <description>
-          A reference to the video that was transcribed.
-        </description>
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>
@@ -19,7 +15,12 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="transcription_job_identifier" type="string" pattern="^[\w:-]+$"/>
+      <field name="job_identifier" type="string" pattern="^[\w:-]+$"/>
     </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
+      <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
+    </mixins>
   </schema>
 </pbj-schema>

@@ -16,7 +16,12 @@
         </js-options>
       </field>
       <field name="jwplayer_media_id" type="string" pattern="^[\w-]+$"/>
-      <field name="jwplayer_thumbnail_image_id" type="identifier">
+      <field name="jwplayer_caption_keys" type="string" pattern="^[\w]+$" rule="map">
+        <description>
+          The keys of the jwplayer captions that were generated.
+        </description>
+      </field>
+      <field name="thumbnail_image_id" type="identifier">
         <description>
           The id of the image used to generate the jwplayer thumbnail.
         </description>
@@ -28,11 +33,6 @@
           <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId';</imports>
           <class-proto>AssetId</class-proto>
         </js-options>
-      </field>
-      <field name="jwplayer_caption_keys" type="string" pattern="^[\w]+$" rule="map">
-        <description>
-          The keys of the jwplayer captions that were generated.
-        </description>
       </field>
     </fields>
 
