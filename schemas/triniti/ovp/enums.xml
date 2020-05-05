@@ -35,7 +35,7 @@
       <option key="TV_14" value="TV-14"/>
     </enum>
 
-    <enum name="transcription-status" type="string">
+    <enum name="transcoding-status" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="PROCESSING" value="processing"/>
       <option key="COMPLETE" value="complete"/>

@@ -7,14 +7,13 @@
   * `triniti:ovp:event:transcoding-started`
   * `triniti:ovp:event:transcription-completed`
   * `triniti:ovp:event:transcription-started`
+  * `triniti:ovp:mixin:transcodeable`
 * __Modify Schemas:__
   * `triniti:ovp.jwplayer:command:sync-media` patch revision `1-0-1`
     * Add `fields` string set field with pattern `^[\w]+$`.
   * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-1`
     * Add `jwplayer_caption_keys` string map field with pattern `^[\w]+$`.
     * Add `thumbnail_image_id` identifier (AssetId) field.
-  * `triniti:dam:mixin:video-asset` patch revision `1-0-2`
-    * Add `transcription_status` string-enum set field with id `triniti:ovp:transcription-status`.
 
 
 ## v1.1.9
