@@ -3,10 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:dam:mixin:video-asset:1-0-1" mixin="true" extends="triniti:dam:mixin:asset:v1">
+  <schema id="pbj:triniti:dam:mixin:video-asset:1-0-2" mixin="true" extends="triniti:dam:mixin:asset:v1">
     <fields>
       <field name="duration" type="small-int">
         <description>Duration of the video in seconds.</description>
+      </field>
+      <field name="transcription_status" type="string-enum">
+        <enum id="triniti:ovp:transcription-status"/>
       </field>
     </fields>
 

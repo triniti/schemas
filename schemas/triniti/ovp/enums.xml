@@ -34,5 +34,12 @@
       <option key="TV_Y7_FV" value="TV-Y7-FV"/>
       <option key="TV_14" value="TV-14"/>
     </enum>
+
+    <enum name="transcription-status" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="PROCESSING" value="processing"/>
+      <option key="COMPLETE" value="complete"/>
+      <option key="FAILED" value="failed"/>
+    </enum>
   </enums>
 </pbj-enums>
