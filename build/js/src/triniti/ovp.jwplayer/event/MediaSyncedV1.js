@@ -27,17 +27,17 @@ export default class MediaSyncedV1 extends Message {
           .pattern('^[\\w-]+$')
           .build(),
         /*
-         * The id of the image used to generate the jwplayer thumbnail.
-         */
-        Fb.create('jwplayer_thumbnail_image_id', T.IdentifierType.create())
-          .classProto(AssetId)
-          .build(),
-        /*
          * The keys of the jwplayer captions that were generated.
          */
         Fb.create('jwplayer_caption_keys', T.StringType.create())
           .asAMap()
           .pattern('^[\\w]+$')
+          .build(),
+        /*
+         * The id of the image used to generate the jwplayer thumbnail.
+         */
+        Fb.create('thumbnail_image_id', T.IdentifierType.create())
+          .classProto(AssetId)
           .build(),
       ],
       [

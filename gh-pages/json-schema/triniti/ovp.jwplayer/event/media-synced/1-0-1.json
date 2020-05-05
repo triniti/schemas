@@ -207,15 +207,6 @@
         "rule": "single"
       }
     },
-    "jwplayer_thumbnail_image_id": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "The id of the image used to generate the jwplayer thumbnail.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
     "jwplayer_caption_keys": {
       "type": "object",
       "patternProperties": {
@@ -229,6 +220,15 @@
       "pbj": {
         "type": "string",
         "rule": "map"
+      }
+    },
+    "thumbnail_image_id": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "The id of the image used to generate the jwplayer thumbnail.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
       }
     }
   },

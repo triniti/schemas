@@ -22,7 +22,7 @@ export default class TranscriptionCompletedV1 extends Message {
           .required()
           .classProto(NodeRef)
           .build(),
-        Fb.create('transcription_job_identifier', T.StringType.create())
+        Fb.create('job_identifier', T.StringType.create())
           .pattern('^[\\w:-]+$')
           .build(),
       ],

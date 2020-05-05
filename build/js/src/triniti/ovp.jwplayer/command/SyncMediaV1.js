@@ -21,9 +21,9 @@ export default class SyncMediaV1 extends Message {
           .required()
           .classProto(NodeRef)
           .build(),
-        Fb.create('sync_thumbnail', T.BooleanType.create())
-          .build(),
-        Fb.create('sync_captions', T.BooleanType.create())
+        Fb.create('fields', T.StringType.create())
+          .asASet()
+          .pattern('^[\\w]+$')
           .build(),
       ],
       [

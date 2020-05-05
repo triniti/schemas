@@ -212,18 +212,19 @@
         "rule": "single"
       }
     },
-    "sync_thumbnail": {
-      "type": "boolean",
+    "fields": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
       "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "sync_captions": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
+        "type": "string",
+        "rule": "set"
       }
     }
   },

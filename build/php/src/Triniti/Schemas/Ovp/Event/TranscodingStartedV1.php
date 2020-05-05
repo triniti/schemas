@@ -31,7 +31,7 @@ final class TranscodingStartedV1 extends AbstractMessage implements
                     ->required()
                     ->className(NodeRef::class)
                     ->build(),
-                Fb::create('transcoding_job_identifier', T\StringType::create())
+                Fb::create('job_identifier', T\StringType::create())
                     ->pattern('^[\w:-]+$')
                     ->build(),
             ],
