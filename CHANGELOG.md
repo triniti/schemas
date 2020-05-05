@@ -3,10 +3,10 @@
 
 ## v1.1.10
 * __Add Schemas:__
-  * `triniti:ovp:mixin:transcoding-completed`
-  * `triniti:ovp:mixin:transcoding-started`
-  * `triniti:ovp:mixin:transcription-completed`
-  * `triniti:ovp:mixin:transcription-started`
+  * `triniti:ovp:event:transcoding-completed`
+  * `triniti:ovp:event:transcoding-started`
+  * `triniti:ovp:event:transcription-completed`
+  * `triniti:ovp:event:transcription-started`
 * __Modify Schemas:__
   * `triniti:ovp.jwplayer:command:sync-media` patch revision `1-0-1`
     * Add `fields` string set field with pattern `^[\w]+$`.
