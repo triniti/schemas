@@ -222,10 +222,10 @@
         "rule": "map"
       }
     },
-    "thumbnail_image_id": {
+    "thumbnail_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "The id of the image used to generate the jwplayer thumbnail.",
+      "description": "The node_ref of the image used to generate the jwplayer thumbnail.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
@@ -235,7 +235,8 @@
   "required": [
     "_schema",
     "event_id",
-    "node_ref"
+    "node_ref",
+    "thumbnail_ref"
   ],
   "definitions": {
     "app": {

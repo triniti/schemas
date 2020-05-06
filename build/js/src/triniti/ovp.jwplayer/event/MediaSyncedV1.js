@@ -1,5 +1,4 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-1.json#
-import AssetId from '@triniti/schemas/triniti/dam/AssetId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
@@ -34,10 +33,11 @@ export default class MediaSyncedV1 extends Message {
           .pattern('^[\\w]+$')
           .build(),
         /*
-         * The id of the image used to generate the jwplayer thumbnail.
+         * The node_ref of the image used to generate the jwplayer thumbnail.
          */
-        Fb.create('thumbnail_image_id', T.IdentifierType.create())
-          .classProto(AssetId)
+        Fb.create('thumbnail_ref', T.IdentifierType.create())
+          .required()
+          .classProto(NodeRef)
           .build(),
       ],
       [

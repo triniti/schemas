@@ -6,6 +6,6 @@ export default class TranscodingStatus extends Enum {
 TranscodingStatus.configure({
   UNKNOWN: 'unknown',
   PROCESSING: 'processing',
-  COMPLETE: 'complete',
+  COMPLETED: 'completed',
   FAILED: 'failed',
 }, 'triniti:ovp:transcoding-status');

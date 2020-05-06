@@ -12,7 +12,6 @@ use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait as GdbotsPbjxEventV1Trait;
-use Triniti\Schemas\Dam\AssetId;
 
 final class MediaSyncedV1 extends AbstractMessage implements
     MediaSynced,
@@ -43,10 +42,11 @@ final class MediaSyncedV1 extends AbstractMessage implements
                     ->pattern('^[\w]+$')
                     ->build(),
                 /*
-                 * The id of the image used to generate the jwplayer thumbnail.
+                 * The node_ref of the image used to generate the jwplayer thumbnail.
                  */
-                Fb::create('thumbnail_image_id', T\IdentifierType::create())
-                    ->className(AssetId::class)
+                Fb::create('thumbnail_ref', T\IdentifierType::create())
+                    ->required()
+                    ->className(NodeRef::class)
                     ->build(),
             ],
             [

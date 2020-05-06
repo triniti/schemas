@@ -169,7 +169,7 @@
       "enum": [
         "unknown",
         "processing",
-        "complete",
+        "completed",
         "failed"
       ],
       "pbj": {
