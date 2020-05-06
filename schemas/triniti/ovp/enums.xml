@@ -38,6 +38,15 @@
     <enum name="transcoding-status" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="PROCESSING" value="processing"/>
+      <option key="CANCELED" value="canceled"/>
+      <option key="COMPLETED" value="completed"/>
+      <option key="FAILED" value="failed"/>
+    </enum>
+
+    <enum name="transcription-status" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="PROCESSING" value="processing"/>
+      <option key="CANCELED" value="canceled"/>
       <option key="COMPLETED" value="completed"/>
       <option key="FAILED" value="failed"/>
     </enum>
