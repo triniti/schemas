@@ -13,7 +13,7 @@
     * Add `fields` string set field with pattern `^[\w]+$`.
   * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-1`
     * Add `jwplayer_caption_keys` string map field with pattern `^[\w]+$`.
-    * Add `thumbnail_image_id` identifier (AssetId) field.
+    * Add `thumbnail_ref` identifier (NodeRef) field.
 
 
 ## v1.1.9

@@ -21,17 +21,17 @@
           The keys of the jwplayer captions that were generated.
         </description>
       </field>
-      <field name="thumbnail_image_id" type="identifier">
+      <field name="thumbnail_ref" type="identifier" required="true">
         <description>
-          The id of the image used to generate the jwplayer thumbnail.
+          The node_ref of the image used to generate the jwplayer thumbnail.
         </description>
         <php-options>
-          <imports>use Triniti\Schemas\Dam\AssetId;</imports>
-          <class-name>AssetId::class</class-name>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
         </php-options>
         <js-options>
-          <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId';</imports>
-          <class-proto>AssetId</class-proto>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
     </fields>

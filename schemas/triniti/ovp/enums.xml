@@ -38,7 +38,7 @@
     <enum name="transcoding-status" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="PROCESSING" value="processing"/>
-      <option key="COMPLETE" value="complete"/>
+      <option key="COMPLETED" value="completed"/>
       <option key="FAILED" value="failed"/>
     </enum>
   </enums>
