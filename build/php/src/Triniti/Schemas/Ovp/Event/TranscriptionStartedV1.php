@@ -27,12 +27,21 @@ final class TranscriptionStartedV1 extends AbstractMessage implements
     {
         return new Schema('pbj:triniti:ovp:event:transcription-started:1-0-0', __CLASS__,
             [
+                /*
+                 * A reference to the video asset that will be transcribed.
+                 */
                 Fb::create('node_ref', T\IdentifierType::create())
                     ->required()
                     ->className(NodeRef::class)
                     ->build(),
-                Fb::create('job_identifier', T\StringType::create())
-                    ->pattern('^[\w:-]+$')
+                Fb::create('transcribe_job_name', T\StringType::create())
+                    ->pattern('^[\w-]+$')
+                    ->build(),
+                Fb::create('transcribe_job_region', T\StringType::create())
+                    ->pattern('^[a-z]{2}-[a-z]+-[0-9]{1}$/')
+                    ->build(),
+                Fb::create('language_code', T\StringType::create())
+                    ->pattern('^[\w-]+$')
                     ->build(),
             ],
             [

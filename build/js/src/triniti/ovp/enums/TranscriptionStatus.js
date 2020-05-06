@@ -1,12 +1,12 @@
 import Enum from '@gdbots/common/Enum';
 
-export default class TranscodingStatus extends Enum {
+export default class TranscriptionStatus extends Enum {
 }
 
-TranscodingStatus.configure({
+TranscriptionStatus.configure({
   UNKNOWN: 'unknown',
   PROCESSING: 'processing',
   CANCELED: 'canceled',
   COMPLETED: 'completed',
   FAILED: 'failed',
-}, 'triniti:ovp:transcoding-status');
+}, 'triniti:ovp:transcription-status');

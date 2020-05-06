@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/ovp/event/transcription-completed/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/ovp/event/transcoding-failed/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:triniti:ovp:event:transcription-completed:1-0-0"
+      "default": "pbj:triniti:ovp:event:transcoding-failed:1-0-0"
     },
     "event_id": {
       "type": "string",
@@ -194,33 +194,26 @@
     "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the video asset that was transcribed.",
+      "description": "A reference to the video asset that failed to transcode.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
       }
     },
-    "transcribe_job_name": {
+    "mediaconvert_job_arn": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
+      "pattern": "^[\\w:-]+$",
       "pbj": {
         "type": "string",
         "rule": "single"
       }
     },
-    "transcribe_job_region": {
+    "error_message": {
       "type": "string",
-      "pattern": "^[a-z]{2}-[a-z]+-[0-9]{1}$/",
+      "minLength": 0,
+      "maxLength": 65535,
       "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "language_code": {
-      "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
+        "type": "text",
         "rule": "single"
       }
     }

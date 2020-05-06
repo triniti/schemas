@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/event/transcoding-completed/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/event/transcoding-failed/1-0-0.json#
 namespace Triniti\Schemas\Ovp\Event;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -13,8 +13,8 @@ use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait as GdbotsPbjxEventV1Trait;
 
-final class TranscodingCompletedV1 extends AbstractMessage implements
-    TranscodingCompleted,
+final class TranscodingFailedV1 extends AbstractMessage implements
+    TranscodingFailed,
     GdbotsPbjxEventV1,
     GdbotsCommonTaggableV1
 {
@@ -25,10 +25,10 @@ final class TranscodingCompletedV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:triniti:ovp:event:transcoding-completed:1-0-0', __CLASS__,
+        return new Schema('pbj:triniti:ovp:event:transcoding-failed:1-0-0', __CLASS__,
             [
                 /*
-                 * A reference to the video asset that was transcoded.
+                 * A reference to the video asset that failed to transcode.
                  */
                 Fb::create('node_ref', T\IdentifierType::create())
                     ->required()
@@ -36,6 +36,8 @@ final class TranscodingCompletedV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('mediaconvert_job_arn', T\StringType::create())
                     ->pattern('^[\w:-]+$')
+                    ->build(),
+                Fb::create('error_message', T\TextType::create())
                     ->build(),
             ],
             [

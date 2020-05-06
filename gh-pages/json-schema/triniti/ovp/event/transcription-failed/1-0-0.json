@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/ovp/event/transcription-completed/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/ovp/event/transcription-failed/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:triniti:ovp:event:transcription-completed:1-0-0"
+      "default": "pbj:triniti:ovp:event:transcription-failed:1-0-0"
     },
     "event_id": {
       "type": "string",
@@ -194,7 +194,7 @@
     "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the video asset that was transcribed.",
+      "description": "A reference to the video asset that failed to transcribe.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
@@ -221,6 +221,15 @@
       "pattern": "^[\\w-]+$",
       "pbj": {
         "type": "string",
+        "rule": "single"
+      }
+    },
+    "error_message": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "pbj": {
+        "type": "text",
         "rule": "single"
       }
     }

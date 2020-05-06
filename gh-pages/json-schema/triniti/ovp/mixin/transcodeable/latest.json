@@ -169,6 +169,7 @@
       "enum": [
         "unknown",
         "processing",
+        "canceled",
         "completed",
         "failed"
       ],

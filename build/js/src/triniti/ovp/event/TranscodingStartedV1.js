@@ -18,11 +18,14 @@ export default class TranscodingStartedV1 extends Message {
   static defineSchema() {
     return new Schema('pbj:triniti:ovp:event:transcoding-started:1-0-0', TranscodingStartedV1,
       [
+        /*
+         * A reference to the video asset that will be transcoded.
+         */
         Fb.create('node_ref', T.IdentifierType.create())
           .required()
           .classProto(NodeRef)
           .build(),
-        Fb.create('job_identifier', T.StringType.create())
+        Fb.create('mediaconvert_job_arn', T.StringType.create())
           .pattern('^[\\w:-]+$')
           .build(),
       ],

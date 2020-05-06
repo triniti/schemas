@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/event/transcription-completed/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/event/transcription-failed/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
@@ -9,17 +9,17 @@ import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 
-export default class TranscriptionCompletedV1 extends Message {
+export default class TranscriptionFailedV1 extends Message {
   /**
    * @private
    *
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:ovp:event:transcription-completed:1-0-0', TranscriptionCompletedV1,
+    return new Schema('pbj:triniti:ovp:event:transcription-failed:1-0-0', TranscriptionFailedV1,
       [
         /*
-         * A reference to the video asset that was transcribed.
+         * A reference to the video asset that failed to transcribe.
          */
         Fb.create('node_ref', T.IdentifierType.create())
           .required()
@@ -34,6 +34,8 @@ export default class TranscriptionCompletedV1 extends Message {
         Fb.create('language_code', T.StringType.create())
           .pattern('^[\\w-]+$')
           .build(),
+        Fb.create('error_message', T.TextType.create())
+          .build(),
       ],
       [
         GdbotsPbjxEventV1Mixin.create(),
@@ -43,7 +45,7 @@ export default class TranscriptionCompletedV1 extends Message {
   }
 }
 
-GdbotsPbjxEventV1Trait(TranscriptionCompletedV1);
-MessageResolver.register('triniti:ovp:event:transcription-completed', TranscriptionCompletedV1);
-Object.freeze(TranscriptionCompletedV1);
-Object.freeze(TranscriptionCompletedV1.prototype);
+GdbotsPbjxEventV1Trait(TranscriptionFailedV1);
+MessageResolver.register('triniti:ovp:event:transcription-failed', TranscriptionFailedV1);
+Object.freeze(TranscriptionFailedV1);
+Object.freeze(TranscriptionFailedV1.prototype);

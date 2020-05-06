@@ -194,14 +194,31 @@
     "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the video asset that was transcribed.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
       }
     },
-    "job_identifier": {
+    "transcribe_job_name": {
       "type": "string",
-      "pattern": "^[\\w:-]+$",
+      "pattern": "^[\\w-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "transcribe_job_region": {
+      "type": "string",
+      "pattern": "^[a-z]{2}-[a-z]+-[0-9]{1}$/",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "language_code": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
       "pbj": {
         "type": "string",
         "rule": "single"
