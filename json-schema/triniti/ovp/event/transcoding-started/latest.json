@@ -1,14 +1,14 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/command/sync-media/1-0-1.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/ovp/event/transcoding-started/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:triniti:ovp.jwplayer:command:sync-media:1-0-1"
+      "default": "pbj:triniti:ovp:event:transcoding-started:1-0-0"
     },
-    "command_id": {
+    "event_id": {
       "type": "string",
       "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
       "pbj": {
@@ -21,34 +21,6 @@
       "pattern": "^[1-9]{1}[0-9]{12,15}$",
       "pbj": {
         "type": "microtime",
-        "rule": "single"
-      }
-    },
-    "expected_etag": {
-      "type": "string",
-      "pattern": "^[\\w\\.:-]+$",
-      "description": "Used to perform optimistic concurrency control. @link https://en.wikipedia.org/wiki/HTTP_ETag",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "ctx_retries": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 255,
-      "description": "The \"ctx_retries\" field is used to keep track of how many attempts were made to process this command. In some cases, the service or transport that handles the command may be down or an optimistic check has failed and is being retried.",
-      "pbj": {
-        "type": "tiny-int",
-        "rule": "single"
-      }
-    },
-    "ctx_causator": {
-      "type": "object",
-      "description": "The \"ctx_causator\" is the actual causator object that \"ctx_causator_ref\" refers to. In some cases it's useful for command handlers to copy the causator into the command. For example, when a node is being updated we may want to know what the node will be after the update. We can derive this via the causator instead of requesting the node and engaging a race condition.",
-      "pbj": {
-        "type": "message",
         "rule": "single"
       }
     },
@@ -155,7 +127,7 @@
           "$ref": "#/definitions/app"
         }
       ],
-      "description": "The \"ctx_app\" refers to the application used to send the command. This is different from ctx_ua (user_agent) because the agent used (Safari, Firefox) is not necessarily the app used (cms, iOS app, website)",
+      "description": "The \"ctx_app\" refers to the application used to send the command which in turn resulted in this event being published.",
       "pbj": {
         "type": "message",
         "rule": "single"
@@ -168,7 +140,7 @@
           "$ref": "#/definitions/cloud"
         }
       ],
-      "description": "The \"ctx_cloud\" is set by the server receiving the command and is generally only used internally for tracking and performance monitoring.",
+      "description": "The \"ctx_cloud\" is usually copied from the command that resulted in this event being published. This means the value most likely refers to the cloud that received the command originally, not the machine processing the event.",
       "pbj": {
         "type": "message",
         "rule": "single"
@@ -222,30 +194,32 @@
     "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the video asset that will be transcoded.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
       }
     },
-    "fields": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[\\w]+$"
-        }
-      ],
-      "uniqueItems": true,
-      "additionalProperties": false,
+    "mediaconvert_job_arn": {
+      "type": "string",
+      "pattern": "^[\\/\\w:-]+$",
       "pbj": {
         "type": "string",
-        "rule": "set"
+        "rule": "single"
+      }
+    },
+    "mediaconvert_queue_arn": {
+      "type": "string",
+      "pattern": "^[\\/\\w:-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
       }
     }
   },
   "required": [
     "_schema",
-    "command_id",
+    "event_id",
     "node_ref"
   ],
   "definitions": {
