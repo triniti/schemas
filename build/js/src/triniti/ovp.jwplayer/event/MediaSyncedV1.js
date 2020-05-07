@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
@@ -16,7 +16,7 @@ export default class MediaSyncedV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:ovp.jwplayer:event:media-synced:1-0-0', MediaSyncedV1,
+    return new Schema('pbj:triniti:ovp.jwplayer:event:media-synced:1-0-1', MediaSyncedV1,
       [
         Fb.create('node_ref', T.IdentifierType.create())
           .required()
@@ -24,6 +24,20 @@ export default class MediaSyncedV1 extends Message {
           .build(),
         Fb.create('jwplayer_media_id', T.StringType.create())
           .pattern('^[\\w-]+$')
+          .build(),
+        /*
+         * The keys of the jwplayer captions that were generated.
+         */
+        Fb.create('jwplayer_caption_keys', T.StringType.create())
+          .asAMap()
+          .pattern('^[\\w]+$')
+          .build(),
+        /*
+         * The node_ref of the image used to generate the jwplayer thumbnail.
+         */
+        Fb.create('thumbnail_ref', T.IdentifierType.create())
+          .required()
+          .classProto(NodeRef)
           .build(),
       ],
       [

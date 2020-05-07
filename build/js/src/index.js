@@ -73,6 +73,14 @@ import '@triniti/schemas/triniti/ovp.medialive/command/StartChannelV1';
 import '@triniti/schemas/triniti/ovp.medialive/command/StopChannelV1';
 import '@triniti/schemas/triniti/ovp.medialive/event/ChannelStartedV1';
 import '@triniti/schemas/triniti/ovp.medialive/event/ChannelStoppedV1';
+import '@triniti/schemas/triniti/ovp/command/UpdateTranscodingStatusV1';
+import '@triniti/schemas/triniti/ovp/command/UpdateTranscriptionStatusV1';
+import '@triniti/schemas/triniti/ovp/event/TranscodingCompletedV1';
+import '@triniti/schemas/triniti/ovp/event/TranscodingFailedV1';
+import '@triniti/schemas/triniti/ovp/event/TranscodingStartedV1';
+import '@triniti/schemas/triniti/ovp/event/TranscriptionCompletedV1';
+import '@triniti/schemas/triniti/ovp/event/TranscriptionFailedV1';
+import '@triniti/schemas/triniti/ovp/event/TranscriptionStartedV1';
 import '@triniti/schemas/triniti/sys/command/PurgeCacheV1';
 
 export default MessageResolver;

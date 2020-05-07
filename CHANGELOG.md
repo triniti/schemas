@@ -1,6 +1,29 @@
 # CHANGELOG
 
 
+## v1.1.10
+* __Add Schemas:__
+  * `triniti:ovp:command:update-transcoding-status`
+  * `triniti:ovp:command:update-transcription-status`
+  * `triniti:ovp:event:transcoding-completed`
+  * `triniti:ovp:event:transcoding-failed`
+  * `triniti:ovp:event:transcoding-started`
+  * `triniti:ovp:event:transcription-completed`
+  * `triniti:ovp:event:transcription-failed`
+  * `triniti:ovp:event:transcription-started`
+  * `triniti:ovp:mixin:transcodeable`
+  * `triniti:ovp:mixin:transcribable`
+  * `triniti:ovp:transcoding-status`
+  * `triniti:ovp:transcription-status`
+* __Modify Schemas:__
+  * `triniti:ovp.jwplayer:command:sync-media` patch revision `1-0-1`
+    * Add `fields` string set field with pattern `^[\w]+$`.
+    * Add `gdbots:common:mixin:taggable`
+  * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-1`
+    * Add `jwplayer_caption_keys` string map field with pattern `^[\w]+$`.
+    * Add `thumbnail_ref` identifier (NodeRef) field.
+
+
 ## v1.1.9
 * __Add Schemas:__
   * `triniti:news:command:sync-facebook-instant-article`
