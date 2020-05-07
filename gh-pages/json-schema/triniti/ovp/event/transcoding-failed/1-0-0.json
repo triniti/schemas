@@ -208,7 +208,7 @@
         "rule": "single"
       }
     },
-    "mediaconvert_queue": {
+    "mediaconvert_queue_arn": {
       "type": "string",
       "pattern": "^[\\/\\w:-]+$",
       "pbj": {

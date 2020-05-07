@@ -37,7 +37,7 @@ final class TranscodingStartedV1 extends AbstractMessage implements
                 Fb::create('mediaconvert_job_arn', T\StringType::create())
                     ->pattern('^[\/\w:-]+$')
                     ->build(),
-                Fb::create('mediaconvert_queue', T\StringType::create())
+                Fb::create('mediaconvert_queue_arn', T\StringType::create())
                     ->pattern('^[\/\w:-]+$')
                     ->build(),
             ],
