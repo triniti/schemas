@@ -12,6 +12,7 @@ use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait as GdbotsPbjxEventV1Trait;
+use Triniti\Schemas\Ovp\Enum\MediaconvertErrorCode;
 
 final class TranscodingFailedV1 extends AbstractMessage implements
     TranscodingFailed,
@@ -42,8 +43,8 @@ final class TranscodingFailedV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('error_message', T\TextType::create())
                     ->build(),
-                Fb::create('error_code', T\StringType::create())
-                    ->pattern('^\d{4}$')
+                Fb::create('error_code', T\IntEnumType::create())
+                    ->className(MediaconvertErrorCode::class)
                     ->build(),
             ],
             [
