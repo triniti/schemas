@@ -9,10 +9,10 @@ use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Gdbots\Schemas\Pbjx\Enum\Code;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait as GdbotsPbjxEventV1Trait;
-use Triniti\Schemas\Ovp\Enum\MediaconvertErrorCode;
 
 final class TranscodingFailedV1 extends AbstractMessage implements
     TranscodingFailed,
@@ -44,7 +44,7 @@ final class TranscodingFailedV1 extends AbstractMessage implements
                 Fb::create('error_message', T\TextType::create())
                     ->build(),
                 Fb::create('error_code', T\IntEnumType::create())
-                    ->className(MediaconvertErrorCode::class)
+                    ->className(Code::class)
                     ->build(),
             ],
             [

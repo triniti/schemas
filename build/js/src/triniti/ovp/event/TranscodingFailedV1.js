@@ -1,9 +1,9 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp/event/transcoding-failed/1-0-0.json#
+import Code from '@gdbots/schemas/gdbots/pbjx/enums/Code';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';
-import MediaconvertErrorCode from '@triniti/schemas/triniti/ovp/enums/MediaconvertErrorCode';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
@@ -35,7 +35,7 @@ export default class TranscodingFailedV1 extends Message {
         Fb.create('error_message', T.TextType.create())
           .build(),
         Fb.create('error_code', T.IntEnumType.create())
-          .classProto(MediaconvertErrorCode)
+          .classProto(Code)
           .build(),
       ],
       [
