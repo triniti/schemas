@@ -16,6 +16,7 @@
 * __Modify Schemas:__
   * `triniti:ovp.jwplayer:command:sync-media` patch revision `1-0-1`
     * Add `fields` string set field with pattern `^[\w]+$`.
+    * Add `gdbots:common:mixin:taggable`
   * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-1`
     * Add `jwplayer_caption_keys` string map field with pattern `^[\w]+$`.
     * Add `thumbnail_ref` identifier (NodeRef) field.

@@ -21,6 +21,9 @@
       <field name="transcribe_job_name" type="string" pattern="^[\w-]+$"/>
       <field name="transcribe_job_region" type="string" pattern="^[a-z]{2}-[a-z]+-[0-9]{1}$/"/>
       <field name="language_code" type="string" pattern="^[\w-]+$"/>
+      <field name="time_taken" type="small-int">
+        <description>How long in seconds it took to produce a transcribed artifact.</description>
+      </field>
     </fields>
 
     <mixins>

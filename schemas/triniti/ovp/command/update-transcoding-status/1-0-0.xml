@@ -21,12 +21,14 @@
       <field name="transcoding_status" type="string-enum">
         <enum id="triniti:ovp:transcoding-status"/>
       </field>
-      <field name="mediaconvert_job_arn" type="string" pattern="^[\w:-]+$"/>
+      <field name="mediaconvert_job_arn" type="string" pattern="^[\/\w:-]+$"/>
+      <field name="mediaconvert_queue" type="string" pattern="^[\/\w:-]+$"/>
       <field name="error_message" type="text"/>
     </fields>
 
     <mixins>
       <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
+      <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

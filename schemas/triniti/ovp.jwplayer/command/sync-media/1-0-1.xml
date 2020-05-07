@@ -20,6 +20,7 @@
 
     <mixins>
       <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
+      <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>
