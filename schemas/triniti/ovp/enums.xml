@@ -50,39 +50,5 @@
       <option key="COMPLETED" value="completed"/>
       <option key="FAILED" value="failed"/>
     </enum>
-
-    <enum name="mediaconvert-error-code" type="int">
-      <option key="UNKNOWN" value="0"/>
-      <option key="INPUT_ERROR" value="1010"/>
-      <option key="VIDEO_ERROR" value="1020"/>
-      <option key="AUDIO_ERROR" value="1021"/>
-      <option key="UNSUPPORTED_CODEC" value="1030"/>
-      <option key="SETTINGS_ERROR" value="1040"/>
-      <option key="ACCELERATION_SETTINGS_ERROR" value="1041"/>
-      <option key="JOB_DOESNT_REQUIRE_ENOUGH_PROCESSING_POWER_FOR_ACCELERATED_TRANSCODING" value="1042"/>
-      <option key="DISK_FULL" value="1050"/>
-      <option key="FILE_OPEN_ERROR" value="1056"/>
-      <option key="CLIPPING_ERROR" value="1060"/>
-      <option key="DEMUXER_PARSE_ERROR" value="1075"/>
-      <option key="SOURCE_READ_ERROR" value="1076"/>
-      <option key="MXF_OUTPUT_ERROR" value="1080"/>
-      <option key="ENCRYPTION_ERROR" value="1091"/>
-      <option key="PERMISSIONS_ISSUE" value="1401"/>
-      <option key="FILE_OPEN_ERROR" value="1404"/>
-      <option key="IAM_ROLE_ERROR_NOT_PERMITTED_OR_ANOTHER_PROBLEM" value="1432"/>
-      <option key="IAM_ROLE_ERROR_DOESNT_EXIST" value="1433"/>
-      <option key="IAM_ROLE_ERROR_NOT_PERMITTED" value="1434"/>
-      <option key="DISK_FULL_BUT_DIFFERENT" value="1507"/>
-      <option key="IAM_ROLE_ERROR_NOT_PERMITTED_OR_MALFORMED" value="1515"/>
-      <option key="ACCELERATION_FAULT" value="1550"/>
-      <option key="UNKNOWN_ERROR" value="1999"/>
-      <option key="HTTP_FILE_ACCESS_NOT_AUTHORIZED" value="3401"/>
-      <option key="HTTP_ACCESS_FORBIDDEN" value="3403"/>
-      <option key="HTTP_FILE_NOT_FOUND" value="3404"/>
-      <option key="HTTP_UPLOAD_ERROR" value="3408"/>
-      <option key="HTTP_SERVER_ERROR" value="3450"/>
-      <option key="HTTP_SERVER_CONNECTION_ERROR" value="3451"/>
-      <option key="HTTP_UNKNOWN_ERROR" value="3999"/>
-    </enum>
   </enums>
 </pbj-enums>

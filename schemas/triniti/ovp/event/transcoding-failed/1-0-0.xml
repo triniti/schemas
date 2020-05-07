@@ -22,7 +22,7 @@
       <field name="mediaconvert_queue_arn" type="string" pattern="^[\/\w:-]+$"/>
       <field name="error_message" type="text"/>
       <field name="error_code" type="int-enum">
-        <enum id="triniti:ovp:mediaconvert-error-code"/>
+        <enum id="gdbots:pbjx:code"/>
       </field>
     </fields>
 
