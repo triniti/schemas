@@ -3,6 +3,7 @@
 namespace Triniti\Schemas\Ovp\Event;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
@@ -38,7 +39,8 @@ final class TranscriptionStartedV1 extends AbstractMessage implements
                     ->pattern('^[\w-]+$')
                     ->build(),
                 Fb::create('transcribe_job_region', T\StringType::create())
-                    ->pattern('^[a-z]{2}-[a-z]+-[0-9]{1}$/')
+                    ->maxLength(20)
+                    ->format(Format::SLUG())
                     ->build(),
                 Fb::create('language_code', T\StringType::create())
                     ->pattern('^[\w-]+$')

@@ -1,5 +1,6 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp/event/transcription-started/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';
@@ -29,7 +30,8 @@ export default class TranscriptionStartedV1 extends Message {
           .pattern('^[\\w-]+$')
           .build(),
         Fb.create('transcribe_job_region', T.StringType.create())
-          .pattern('^[a-z]{2}-[a-z]+-[0-9]{1}$/')
+          .maxLength(20)
+          .format(Format.SLUG)
           .build(),
         Fb.create('language_code', T.StringType.create())
           .pattern('^[\\w-]+$')

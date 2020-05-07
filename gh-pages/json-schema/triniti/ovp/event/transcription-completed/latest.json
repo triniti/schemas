@@ -210,10 +210,13 @@
     },
     "transcribe_job_region": {
       "type": "string",
-      "pattern": "^[a-z]{2}-[a-z]+-[0-9]{1}$/",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 20,
       "pbj": {
         "type": "string",
-        "rule": "single"
+        "rule": "single",
+        "format": "slug"
       }
     },
     "language_code": {

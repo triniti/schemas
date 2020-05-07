@@ -19,7 +19,7 @@
         </js-options>
       </field>
       <field name="transcribe_job_name" type="string" pattern="^[\w-]+$"/>
-      <field name="transcribe_job_region" type="string" pattern="^[a-z]{2}-[a-z]+-[0-9]{1}$/"/>
+      <field name="transcribe_job_region" type="string" format="slug" max="20"/>
       <field name="language_code" type="string" pattern="^[\w-]+$"/>
     </fields>
 

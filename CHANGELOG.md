@@ -13,6 +13,8 @@
   * `triniti:ovp:event:transcription-started`
   * `triniti:ovp:mixin:transcodeable`
   * `triniti:ovp:mixin:transcribable`
+  * `triniti:ovp:transcoding-status`
+  * `triniti:ovp:transcription-status`
 * __Modify Schemas:__
   * `triniti:ovp.jwplayer:command:sync-media` patch revision `1-0-1`
     * Add `fields` string set field with pattern `^[\w]+$`.

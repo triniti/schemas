@@ -9,6 +9,7 @@ use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
 use Gdbots\Schemas\Ncr\NodeRef;
+use Gdbots\Schemas\Pbjx\Enum\Code;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1 as GdbotsPbjxCommandV1;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin as GdbotsPbjxCommandV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Trait as GdbotsPbjxCommandV1Trait;
@@ -43,6 +44,9 @@ final class UpdateTranscodingStatusV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('mediaconvert_queue_arn', T\StringType::create())
                     ->pattern('^[\/\w:-]+$')
+                    ->build(),
+                Fb::create('error_code', T\IntEnumType::create())
+                    ->className(Code::class)
                     ->build(),
                 Fb::create('error_message', T\TextType::create())
                     ->build(),

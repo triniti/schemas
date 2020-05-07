@@ -1,4 +1,5 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp/command/update-transcoding-status/1-0-0.json#
+import Code from '@gdbots/schemas/gdbots/pbjx/enums/Code';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
@@ -34,6 +35,9 @@ export default class UpdateTranscodingStatusV1 extends Message {
           .build(),
         Fb.create('mediaconvert_queue_arn', T.StringType.create())
           .pattern('^[\\/\\w:-]+$')
+          .build(),
+        Fb.create('error_code', T.IntEnumType.create())
+          .classProto(Code)
           .build(),
         Fb.create('error_message', T.TextType.create())
           .build(),

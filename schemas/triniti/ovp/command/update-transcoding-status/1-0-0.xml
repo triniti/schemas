@@ -23,6 +23,9 @@
       </field>
       <field name="mediaconvert_job_arn" type="string" pattern="^[\/\w:-]+$"/>
       <field name="mediaconvert_queue_arn" type="string" pattern="^[\/\w:-]+$"/>
+      <field name="error_code" type="int-enum">
+        <enum id="gdbots:pbjx:code"/>
+      </field>
       <field name="error_message" type="text"/>
     </fields>
 

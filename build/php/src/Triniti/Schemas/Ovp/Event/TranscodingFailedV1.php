@@ -41,10 +41,10 @@ final class TranscodingFailedV1 extends AbstractMessage implements
                 Fb::create('mediaconvert_queue_arn', T\StringType::create())
                     ->pattern('^[\/\w:-]+$')
                     ->build(),
-                Fb::create('error_message', T\TextType::create())
-                    ->build(),
                 Fb::create('error_code', T\IntEnumType::create())
                     ->className(Code::class)
+                    ->build(),
+                Fb::create('error_message', T\TextType::create())
                     ->build(),
             ],
             [

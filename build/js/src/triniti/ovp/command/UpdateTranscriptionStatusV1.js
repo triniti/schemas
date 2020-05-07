@@ -1,5 +1,7 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp/command/update-transcription-status/1-0-0.json#
+import Code from '@gdbots/schemas/gdbots/pbjx/enums/Code';
 import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';
@@ -33,10 +35,14 @@ export default class UpdateTranscriptionStatusV1 extends Message {
           .pattern('^[\\w-]+$')
           .build(),
         Fb.create('transcribe_job_region', T.StringType.create())
-          .pattern('^[a-z]{2}-[a-z]+-[0-9]{1}$/')
+          .maxLength(20)
+          .format(Format.SLUG)
           .build(),
         Fb.create('language_code', T.StringType.create())
           .pattern('^[\\w-]+$')
+          .build(),
+        Fb.create('error_code', T.IntEnumType.create())
+          .classProto(Code)
           .build(),
         Fb.create('error_message', T.TextType.create())
           .build(),
