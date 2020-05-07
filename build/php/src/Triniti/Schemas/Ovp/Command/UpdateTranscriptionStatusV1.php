@@ -6,6 +6,8 @@ use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
+use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
 use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1 as GdbotsPbjxCommandV1;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin as GdbotsPbjxCommandV1Mixin;
@@ -14,7 +16,8 @@ use Triniti\Schemas\Ovp\Enum\TranscriptionStatus;
 
 final class UpdateTranscriptionStatusV1 extends AbstractMessage implements
     UpdateTranscriptionStatus,
-    GdbotsPbjxCommandV1
+    GdbotsPbjxCommandV1,
+    GdbotsCommonTaggableV1
 {
     use GdbotsPbjxCommandV1Trait;
 
@@ -49,6 +52,7 @@ final class UpdateTranscriptionStatusV1 extends AbstractMessage implements
             ],
             [
                 GdbotsPbjxCommandV1Mixin::create(),
+                GdbotsCommonTaggableV1Mixin::create(),
             ]
         );
     }

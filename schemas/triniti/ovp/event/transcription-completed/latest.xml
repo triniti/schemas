@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:ovp:event:transcription-completed:1-0-0">
+    <fields>
+      <field name="node_ref" type="identifier" required="true">
+        <description>
+          A reference to the video asset that was transcribed.
+        </description>
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="transcribe_job_name" type="string" pattern="^[\w-]+$"/>
+      <field name="transcribe_job_region" type="string" pattern="^[a-z]{2}-[a-z]+-[0-9]{1}$/"/>
+      <field name="language_code" type="string" pattern="^[\w-]+$"/>
+      <field name="time_taken" type="small-int">
+        <description>How long in seconds it took to produce a transcribed artifact.</description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
+      <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

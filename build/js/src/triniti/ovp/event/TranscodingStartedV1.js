@@ -26,7 +26,10 @@ export default class TranscodingStartedV1 extends Message {
           .classProto(NodeRef)
           .build(),
         Fb.create('mediaconvert_job_arn', T.StringType.create())
-          .pattern('^[\\w:-]+$')
+          .pattern('^[\\/\\w:-]+$')
+          .build(),
+        Fb.create('mediaconvert_queue', T.StringType.create())
+          .pattern('^[\\/\\w:-]+$')
           .build(),
       ],
       [

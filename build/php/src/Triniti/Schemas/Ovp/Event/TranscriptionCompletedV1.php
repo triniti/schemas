@@ -43,6 +43,11 @@ final class TranscriptionCompletedV1 extends AbstractMessage implements
                 Fb::create('language_code', T\StringType::create())
                     ->pattern('^[\w-]+$')
                     ->build(),
+                /*
+                 * How long in seconds it took to produce a transcribed artifact.
+                 */
+                Fb::create('time_taken', T\SmallIntType::create())
+                    ->build(),
             ],
             [
                 GdbotsPbjxEventV1Mixin::create(),

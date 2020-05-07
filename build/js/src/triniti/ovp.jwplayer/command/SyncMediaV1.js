@@ -1,5 +1,6 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/command/sync-media/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';
 import Message from '@gdbots/pbj/Message';
@@ -28,6 +29,7 @@ export default class SyncMediaV1 extends Message {
       ],
       [
         GdbotsPbjxCommandV1Mixin.create(),
+        GdbotsCommonTaggableV1Mixin.create(),
       ],
     );
   }

@@ -26,9 +26,15 @@ export default class TranscodingFailedV1 extends Message {
           .classProto(NodeRef)
           .build(),
         Fb.create('mediaconvert_job_arn', T.StringType.create())
-          .pattern('^[\\w:-]+$')
+          .pattern('^[\\/\\w:-]+$')
+          .build(),
+        Fb.create('mediaconvert_queue', T.StringType.create())
+          .pattern('^[\\/\\w:-]+$')
           .build(),
         Fb.create('error_message', T.TextType.create())
+          .build(),
+        Fb.create('error_code', T.StringType.create())
+          .pattern('^\\d{4}$')
           .build(),
       ],
       [

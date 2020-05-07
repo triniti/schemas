@@ -1,5 +1,6 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp/command/update-transcription-status/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';
 import Message from '@gdbots/pbj/Message';
@@ -42,6 +43,7 @@ export default class UpdateTranscriptionStatusV1 extends Message {
       ],
       [
         GdbotsPbjxCommandV1Mixin.create(),
+        GdbotsCommonTaggableV1Mixin.create(),
       ],
     );
   }

@@ -223,6 +223,17 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "time_taken": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 65535,
+      "description": "How long in seconds it took to produce a transcribed artifact.",
+      "pbj": {
+        "type": "small-int",
+        "rule": "single"
+      }
     }
   },
   "required": [
