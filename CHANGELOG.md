@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.1.11
+* __Modify Schemas:__
+  * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-2`
+    * Mark `thumbnail_ref` field as not required.
+
+
 ## v1.1.10
 * __Add Schemas:__
   * `triniti:ovp:command:update-transcoding-status`

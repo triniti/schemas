@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/event/media-synced/1-0-2.json#
 namespace Triniti\Schemas\OvpJwplayer\Event;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -25,7 +25,7 @@ final class MediaSyncedV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:triniti:ovp.jwplayer:event:media-synced:1-0-1', __CLASS__,
+        return new Schema('pbj:triniti:ovp.jwplayer:event:media-synced:1-0-2', __CLASS__,
             [
                 Fb::create('node_ref', T\IdentifierType::create())
                     ->required()
@@ -45,7 +45,6 @@ final class MediaSyncedV1 extends AbstractMessage implements
                  * The node_ref of the image used to generate the jwplayer thumbnail.
                  */
                 Fb::create('thumbnail_ref', T\IdentifierType::create())
-                    ->required()
                     ->className(NodeRef::class)
                     ->build(),
             ],
