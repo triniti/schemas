@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v1.1.12
+* Use `gdbots/schemas` v1.6.6.
+
+
 ## v1.1.11
 * __Modify Schemas:__
   * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-2`
