@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## vN.N.N
+## v1.1.12
 * Use `gdbots/schemas` v1.6.6.
 * __Add Schemas:__
   * `gdbots:common:mixin:labelable`
