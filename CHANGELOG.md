@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## vN.N.N
+* Use `gdbots/schemas` v1.6.6.
+* __Add Schemas:__
+  * `gdbots:common:mixin:labelable`
+  * `gdbots:ncr:command:update-node-labels`
+  * `gdbots:ncr:event:node-labels-updated`
+* __Modify Schemas:__
+  * `triniti:ovp:mixin:video` patch revision `1-0-4`
+    * Add `recommendations_enabled` boolean to turn off recommendations.
+
+
 ## v1.1.11
 * __Modify Schemas:__
   * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-2`

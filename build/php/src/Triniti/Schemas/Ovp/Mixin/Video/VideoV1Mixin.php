@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-4.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-5.json#
 namespace Triniti\Schemas\Ovp\Mixin\Video;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -18,7 +18,7 @@ final class VideoV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:ovp:mixin:video:1-0-4');
+        return SchemaId::fromString('pbj:triniti:ovp:mixin:video:1-0-5');
     }
 
     /**
@@ -84,6 +84,12 @@ final class VideoV1Mixin extends AbstractMixin
              * of the video. e.g. "Fox News", "CNN".
              */
             Fb::create('credit', T\StringType::create())
+                ->build(),
+            /*
+             * No recommended videos will show up for that video when false.
+             */
+            Fb::create('recommendations_enabled', T\BooleanType::create())
+                ->withDefault(true)
                 ->build(),
             /*
              * Determines if the related videos should render. This is intended as a flag
