@@ -15,6 +15,9 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
+      <field name="facebook_instant_articles_operation" type="string" pattern="^(create|update|delete)$">
+        <default>create</default>
+      </field>
     </fields>
 
     <mixins>

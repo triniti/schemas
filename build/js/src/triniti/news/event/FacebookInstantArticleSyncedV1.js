@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/news/event/facebook-instant-article-synced/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/event/facebook-instant-article-synced/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
@@ -16,11 +16,15 @@ export default class FacebookInstantArticleSyncedV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:news:event:facebook-instant-article-synced:1-0-0', FacebookInstantArticleSyncedV1,
+    return new Schema('pbj:triniti:news:event:facebook-instant-article-synced:1-0-1', FacebookInstantArticleSyncedV1,
       [
         Fb.create('node_ref', T.IdentifierType.create())
           .required()
           .classProto(NodeRef)
+          .build(),
+        Fb.create('facebook_instant_articles_operation', T.StringType.create())
+          .pattern('^(create|update|delete)$')
+          .withDefault("create")
           .build(),
       ],
       [

@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/news/event/facebook-instant-article-synced/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/event/facebook-instant-article-synced/1-0-1.json#
 namespace Triniti\Schemas\News\Event;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -25,11 +25,15 @@ final class FacebookInstantArticleSyncedV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:triniti:news:event:facebook-instant-article-synced:1-0-0', __CLASS__,
+        return new Schema('pbj:triniti:news:event:facebook-instant-article-synced:1-0-1', __CLASS__,
             [
                 Fb::create('node_ref', T\IdentifierType::create())
                     ->required()
                     ->className(NodeRef::class)
+                    ->build(),
+                Fb::create('facebook_instant_articles_operation', T\StringType::create())
+                    ->pattern('^(create|update|delete)$')
+                    ->withDefault("create")
                     ->build(),
             ],
             [
