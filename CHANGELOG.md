@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.1.12
+* __Modify Schemas:__
+  * `triniti:news:command:sync-facebook-instant-article` patch revision `1-0-1`
+    * Add `gdbots:common:mixin:taggable`
+
+
 ## v1.1.11
 * __Modify Schemas:__
   * `triniti:ovp.jwplayer:event:media-synced` patch revision `1-0-2`
