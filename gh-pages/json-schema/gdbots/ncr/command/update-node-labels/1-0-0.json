@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/news/command/sync-facebook-instant-article/1-0-1.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/ncr/command/update-node-labels/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:triniti:news:command:sync-facebook-instant-article:1-0-1"
+      "default": "pbj:gdbots:ncr:command:update-node-labels:1-0-0"
     },
     "command_id": {
       "type": "string",
@@ -227,13 +227,34 @@
         "rule": "single"
       }
     },
-    "fbia_operation": {
-      "type": "string",
-      "default": "create",
-      "pattern": "^(create|update|delete)$",
+    "add_labels": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
       "pbj": {
         "type": "string",
-        "rule": "single"
+        "rule": "set"
+      }
+    },
+    "remove_labels": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "pbj": {
+        "type": "string",
+        "rule": "set"
       }
     }
   },
