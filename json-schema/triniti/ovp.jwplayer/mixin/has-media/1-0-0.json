@@ -278,6 +278,14 @@
         "rule": "single"
       }
     },
+    "recommendations_enabled": {
+      "type": "boolean",
+      "default": true,
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "show_related_videos": {
       "type": "boolean",
       "description": "Determines if the related videos should render. This is intended as a flag on blogroll/lists, not the permalink of a video where you'd always expect to see the related videos.",
