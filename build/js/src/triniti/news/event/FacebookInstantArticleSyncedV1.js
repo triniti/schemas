@@ -22,7 +22,7 @@ export default class FacebookInstantArticleSyncedV1 extends Message {
           .required()
           .classProto(NodeRef)
           .build(),
-        Fb.create('facebook_instant_articles_operation', T.StringType.create())
+        Fb.create('fbia_operation', T.StringType.create())
           .pattern('^(create|update|delete)$')
           .withDefault("create")
           .build(),

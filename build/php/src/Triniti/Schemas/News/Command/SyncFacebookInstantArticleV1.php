@@ -31,7 +31,7 @@ final class SyncFacebookInstantArticleV1 extends AbstractMessage implements
                     ->required()
                     ->className(NodeRef::class)
                     ->build(),
-                Fb::create('facebook_instant_articles_operation', T\StringType::create())
+                Fb::create('fbia_operation', T\StringType::create())
                     ->pattern('^(create|update|delete)$')
                     ->withDefault("create")
                     ->build(),

@@ -2,12 +2,15 @@
 
 
 ## v1.1.12
+* Use `gdbots/schemas` v1.6.6.
 * __Modify Schemas:__
   * `triniti:news:command:sync-facebook-instant-article` patch revision `1-0-1`
-    * Add `facebook_instant_articles_operation` string field.
+    * Add `fbia_operation` string field.
     * Add `gdbots:common:mixin:taggable`
   * `triniti:news:event:facebook-instant-article-synced` patch revision `1-0-1`
-    * Add `facebook_instant_articles_operation` string field.
+    * Add `fbia_operation` string field.
+  * `triniti:ovp:mixin:video` patch revision `1-0-5`
+    * Add `recommendations_enabled` boolean field.
 
 
 ## v1.1.11

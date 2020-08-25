@@ -227,7 +227,7 @@
         "rule": "single"
       }
     },
-    "facebook_instant_articles_operation": {
+    "fbia_operation": {
       "type": "string",
       "default": "create",
       "pattern": "^(create|update|delete)$",

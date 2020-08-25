@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-4.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-5.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
@@ -13,7 +13,7 @@ export default class VideoV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:ovp:mixin:video:1-0-4');
+    return SchemaId.fromString('pbj:triniti:ovp:mixin:video:1-0-5');
   }
 
   /**
@@ -78,6 +78,9 @@ export default class VideoV1Mixin extends Mixin {
        * of the video. e.g. "Fox News", "CNN".
        */
       Fb.create('credit', T.StringType.create())
+        .build(),
+      Fb.create('recommendations_enabled', T.BooleanType.create())
+        .withDefault(true)
         .build(),
       /*
        * Determines if the related videos should render. This is intended as a flag
