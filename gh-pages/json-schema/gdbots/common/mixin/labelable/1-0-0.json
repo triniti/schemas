@@ -1,0 +1,24 @@
+{
+  "id": "http://schemas.triniti.io/json-schema/gdbots/common/mixin/labelable/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "labels": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "A set of strings used for categorization or workflow. Similar to slack channels, github or gmail labels.",
+      "pbj": {
+        "type": "string",
+        "rule": "set"
+      }
+    }
+  },
+  "additionalProperties": true
+}
