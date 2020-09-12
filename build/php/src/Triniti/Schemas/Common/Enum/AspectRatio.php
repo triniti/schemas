@@ -15,6 +15,7 @@ use Gdbots\Common\Enum;
  * @method static AspectRatio R4BY5()
  * @method static AspectRatio R5BY4()
  * @method static AspectRatio R5BY6()
+ * @method static AspectRatio R6BY5()
  * @method static AspectRatio R9BY16()
  * @method static AspectRatio R16BY9()
  * @method static AspectRatio ORIGINAL()
@@ -32,6 +33,7 @@ final class AspectRatio extends Enum
     const R4BY5 = '4by5';
     const R5BY4 = '5by4';
     const R5BY6 = '5by6';
+    const R6BY5 = '6by5';
     const R9BY16 = '9by16';
     const R16BY9 = '16by9';
     const ORIGINAL = 'original';

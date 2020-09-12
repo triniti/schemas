@@ -14,6 +14,7 @@ AspectRatio.configure({
   R4BY5: '4by5',
   R5BY4: '5by4',
   R5BY6: '5by6',
+  R6BY5: '6by5',
   R9BY16: '9by16',
   R16BY9: '16by9',
   ORIGINAL: 'original',

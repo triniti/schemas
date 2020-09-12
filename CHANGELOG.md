@@ -4,7 +4,7 @@
 ## v1.1.13
 * __Modify Schemas:__
   * `triniti:common:aspect-ratio`
-    * Add `R5by6` to enum.
+    * Add `R5by6` and `R6by5` to enum.
 
 
 ## v1.1.12
