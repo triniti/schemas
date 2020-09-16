@@ -19,7 +19,7 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^1.6.6"
+    "@gdbots/schemas": "^2.0.0"
   },
   "peerDependencies": {
     "@gdbots/common": "^1.0.2",
