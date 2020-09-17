@@ -1,51 +1,28 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/sys/mixin/redirect/1-0-0.json#
 namespace Triniti\Schemas\Sys\Mixin\Redirect;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Triniti\Schemas\Sys\RedirectId;
+use Gdbots\Pbj\Schema;
 
-final class RedirectV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait RedirectV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:sys:mixin:redirect:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            Fb::create('_id', T\IdentifierType::create())
-                ->required()
-                ->className(RedirectId::class)
-                ->overridable(true)
-                ->build(),
-            /*
-             * The URL (absolute or relative on the current domain) that the incoming URI
-             * should be redirected to.
-             */
-            Fb::create('redirect_to', T\StringType::create())
-                ->build(),
-            /*
-             * When permanent, the HTTP status code should be a 301 and 302 otherwise.
-             */
-            Fb::create('is_permanent', T\BooleanType::create())
-                ->build(),
-            /*
-             * Vanity URLs are used for on-air or promotional purposes and are generally
-             * off the root and very short, e.g. /tour or /christmas
-             */
-            Fb::create('is_vanity', T\BooleanType::create())
-                ->build(),
+            '_id' => (string)$this->get('_id'),
+            'uri' => $this->get('title'),
+            'redirect_to' => $this->get('redirect_to'),
+            'is_permanent' => $this->get('is_permanent'),
+            'is_vanity' => $this->get('is_vanity'),
         ];
     }
 }

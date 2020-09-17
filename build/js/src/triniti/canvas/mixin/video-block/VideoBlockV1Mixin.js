@@ -1,40 +1,17 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/video-block/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Mixin from '@gdbots/pbj/Mixin';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
-import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/types';
-
-export default class VideoBlockV1Mixin extends Mixin {
-  /**
-   * @returns {SchemaId}
-   */
-  getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:video-block:1-0-0');
-  }
-
-  /**
-   * @returns {Field[]}
-   */
-  getFields() {
-    return [
-      Fb.create('autoplay', T.BooleanType.create())
-        .build(),
-      Fb.create('launch_text', T.StringType.create())
-        .build(),
-      Fb.create('muted', T.BooleanType.create())
-        .build(),
-      Fb.create('start_at', T.SmallIntType.create())
-        .build(),
-      Fb.create('show_more_videos', T.BooleanType.create())
-        .build(),
-      /*
-       * A reference to an image asset to use as the poster that will
-       * override what is provided by the target video.
-       */
-      Fb.create('poster_image_ref', T.IdentifierType.create())
-        .classProto(NodeRef)
-        .build(),
-    ];
-  }
+export default function VideoBlockV1Mixin(M) {
+  Object.assign(M.prototype, {
+    /**
+     * @returns {Object}
+     */
+    getUriTemplateVars() {
+      return {
+        etag: this.get('etag'),
+        node_ref: `${this.get('node_ref', '')}`,
+        autoplay: this.get('autoplay'),
+        muted: this.get('muted'),
+        start_at: this.get('start_at'),
+        show_more_videos: this.get('show_more_videos'),
+      };
+    }
+  });
 }

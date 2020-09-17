@@ -1,45 +1,24 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/notify/mixin/apple-news-notification/1-0-0.json#
 namespace Triniti\Schemas\Notify\Mixin\AppleNewsNotification;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class AppleNewsNotificationV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait AppleNewsNotificationV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:notify:mixin:apple-news-notification:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            Fb::create('apple_news_operation', T\StringType::create())
-                ->pattern('^(notification|create|update|delete)$')
-                ->withDefault("notification")
-                ->build(),
-            /*
-             * The unique identifier of the Apple News article.
-             */
-            Fb::create('apple_news_id', T\UuidType::create())
-                ->useTypeDefault(false)
-                ->build(),
-            /*
-             * The existing revision token for the Apple News article.
-             * e.g. AAAAAAAAAAAAAAAAAAAAAQ==
-             */
-            Fb::create('apple_news_revision', T\StringType::create())
-                ->pattern('^[\w\/\.\\\:=+-]+$')
-                ->build(),
+            '_id' => (string)$this->get('_id'),
         ];
     }
 }

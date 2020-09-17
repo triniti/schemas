@@ -1,17 +1,25 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/person-teaser/1-0-0.json#
 namespace Triniti\Schemas\Curator\Mixin\PersonTeaser;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\SchemaId;
+use Gdbots\Pbj\Schema;
 
-final class PersonTeaserV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait PersonTeaserV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
+    public function getUriTemplateVars()
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:person-teaser:1-0-0');
+        return [
+            '_id' => (string)$this->get('_id'),
+            'target_ref' => (string)$this->get('target_ref'),
+        ];
     }
 }

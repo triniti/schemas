@@ -1,36 +1,14 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/article-block/1-0-1.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Mixin from '@gdbots/pbj/Mixin';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
-import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/types';
-
-export default class ArticleBlockV1Mixin extends Mixin {
-  /**
-   * @returns {SchemaId}
-   */
-  getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:article-block:1-0-1');
-  }
-
-  /**
-   * @returns {Field[]}
-   */
-  getFields() {
-    return [
-      Fb.create('cta_text', T.StringType.create())
-        .build(),
-      Fb.create('link_text', T.StringType.create())
-        .build(),
-      Fb.create('show_image', T.BooleanType.create())
-        .withDefault(true)
-        .build(),
-      /*
-       * An optional reference to an image asset to use as the poster.
-       */
-      Fb.create('image_ref', T.IdentifierType.create())
-        .classProto(NodeRef)
-        .build(),
-    ];
-  }
+export default function ArticleBlockV1Mixin(M) {
+  Object.assign(M.prototype, {
+    /**
+     * @returns {Object}
+     */
+    getUriTemplateVars() {
+      return {
+        etag: this.get('etag'),
+        node_ref: `${this.get('node_ref', '')}`,
+        show_image: this.get('show_image'),
+      };
+    }
+  });
 }

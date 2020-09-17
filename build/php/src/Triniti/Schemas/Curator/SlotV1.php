@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/curator/slot/1-0-0.json#
 namespace Triniti\Schemas\Curator;
 
@@ -11,16 +13,16 @@ use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Curator\Enum\SlotRendering;
 
-final class SlotV1 extends AbstractMessage implements
-    Slot
+final class SlotV1 extends AbstractMessage
 {
+    const SCHEMA_ID = 'pbj:triniti:curator::slot:1-0-0';
+    const SCHEMA_CURIE = 'triniti:curator::slot';
+    const SCHEMA_CURIE_MAJOR = 'triniti:curator::slot:v1';
+    const MIXINS = [];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:triniti:curator::slot:1-0-0', __CLASS__,
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
                 /*
                  * The name of the location where the widget should render,
@@ -39,7 +41,8 @@ final class SlotV1 extends AbstractMessage implements
                     ->withDefault(SlotRendering::LAZY())
                     ->className(SlotRendering::class)
                     ->build(),
-            ]
+            ],
+            self::MIXINS
         );
     }
 

@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.kaltura/entry/1-0-0.json#
 namespace Triniti\Schemas\OvpKaltura;
 
@@ -15,16 +17,16 @@ use Triniti\Schemas\OvpKaltura\Enum\EntryType;
 use Triniti\Schemas\OvpKaltura\Enum\MediaType;
 use Triniti\Schemas\OvpKaltura\Enum\SourceType;
 
-final class EntryV1 extends AbstractMessage implements
-    Entry
+final class EntryV1 extends AbstractMessage
 {
+    const SCHEMA_ID = 'pbj:triniti:ovp.kaltura::entry:1-0-0';
+    const SCHEMA_CURIE = 'triniti:ovp.kaltura::entry';
+    const SCHEMA_CURIE_MAJOR = 'triniti:ovp.kaltura::entry:v1';
+    const MIXINS = [];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:triniti:ovp.kaltura::entry:1-0-0', __CLASS__,
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
                 Fb::create('entry_id', T\StringType::create())
                     ->pattern('^[\w-]+$')
@@ -144,7 +146,8 @@ final class EntryV1 extends AbstractMessage implements
                 Fb::create('metadata', T\TextType::create())
                     ->asAMap()
                     ->build(),
-            ]
+            ],
+            self::MIXINS
         );
     }
 

@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.kaltura/flavor/1-0-0.json#
 namespace Triniti\Schemas\OvpKaltura;
 
@@ -10,16 +12,16 @@ use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Triniti\Schemas\OvpKaltura\Enum\FlavorAssetStatus;
 
-final class FlavorV1 extends AbstractMessage implements
-    Flavor
+final class FlavorV1 extends AbstractMessage
 {
+    const SCHEMA_ID = 'pbj:triniti:ovp.kaltura::flavor:1-0-0';
+    const SCHEMA_CURIE = 'triniti:ovp.kaltura::flavor';
+    const SCHEMA_CURIE_MAJOR = 'triniti:ovp.kaltura::flavor:v1';
+    const MIXINS = [];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:triniti:ovp.kaltura::flavor:1-0-0', __CLASS__,
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
                 Fb::create('entry_id', T\StringType::create())
                     ->pattern('^[\w-]+$')
@@ -73,7 +75,8 @@ final class FlavorV1 extends AbstractMessage implements
                 Fb::create('url', T\TextType::create())
                     ->format(Format::URL())
                     ->build(),
-            ]
+            ],
+            self::MIXINS
         );
     }
 

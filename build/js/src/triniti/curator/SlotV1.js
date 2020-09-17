@@ -3,7 +3,6 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Message from '@gdbots/pbj/Message';
 import MessageRef from '@gdbots/pbj/MessageRef';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
 import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import Schema from '@gdbots/pbj/Schema';
 import SlotRendering from '@triniti/schemas/triniti/curator/enums/SlotRendering';
@@ -16,7 +15,7 @@ export default class SlotV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:curator::slot:1-0-0', SlotV1,
+    return new Schema(this.SCHEMA_ID, this,
       [
         /*
          * The name of the location where the widget should render,
@@ -36,6 +35,7 @@ export default class SlotV1 extends Message {
           .classProto(SlotRendering)
           .build(),
       ],
+      this.MIXINS,
     );
   }
 
@@ -55,6 +55,11 @@ export default class SlotV1 extends Message {
   }
 }
 
-MessageResolver.register('triniti:curator::slot', SlotV1);
-Object.freeze(SlotV1);
-Object.freeze(SlotV1.prototype);
+const M = SlotV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:curator::slot:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:curator::slot';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:curator::slot:v1';
+M.prototype.MIXINS = M.MIXINS = [];
+
+Object.freeze(M);
+Object.freeze(M.prototype);

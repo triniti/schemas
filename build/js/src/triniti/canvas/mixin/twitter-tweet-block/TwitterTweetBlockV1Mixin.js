@@ -1,37 +1,16 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/twitter-tweet-block/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Mixin from '@gdbots/pbj/Mixin';
-import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/types';
-
-export default class TwitterTweetBlockV1Mixin extends Mixin {
-  /**
-   * @returns {SchemaId}
-   */
-  getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:twitter-tweet-block:1-0-0');
-  }
-
-  /**
-   * @returns {Field[]}
-   */
-  getFields() {
-    return [
-      Fb.create('screen_name', T.StringType.create())
-        .required()
-        .pattern('^\\w{1,15}$')
-        .build(),
-      Fb.create('tweet_id', T.StringType.create())
-        .required()
-        .pattern('^\\d+$')
-        .build(),
-      Fb.create('tweet_text', T.TextType.create())
-        .maxLength(5000)
-        .build(),
-      Fb.create('hide_media', T.BooleanType.create())
-        .build(),
-      Fb.create('hide_thread', T.BooleanType.create())
-        .build(),
-    ];
-  }
+export default function TwitterTweetBlockV1Mixin(M) {
+  Object.assign(M.prototype, {
+    /**
+     * @returns {Object}
+     */
+    getUriTemplateVars() {
+      return {
+        etag: this.get('etag'),
+        screen_name: this.get('screen_name'),
+        tweet_id: this.get('tweet_id'),
+        hide_media: this.get('hide_media'),
+        hide_thread: this.get('hide_thread'),
+      };
+    }
+  });
 }

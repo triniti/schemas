@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.kaltura/caption/1-0-0.json#
 namespace Triniti\Schemas\OvpKaltura;
 
@@ -11,16 +13,16 @@ use Gdbots\Pbj\Type as T;
 use Triniti\Schemas\OvpKaltura\Enum\CaptionAssetStatus;
 use Triniti\Schemas\OvpKaltura\Enum\CaptionType;
 
-final class CaptionV1 extends AbstractMessage implements
-    Caption
+final class CaptionV1 extends AbstractMessage
 {
+    const SCHEMA_ID = 'pbj:triniti:ovp.kaltura::caption:1-0-0';
+    const SCHEMA_CURIE = 'triniti:ovp.kaltura::caption';
+    const SCHEMA_CURIE_MAJOR = 'triniti:ovp.kaltura::caption:v1';
+    const MIXINS = [];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:triniti:ovp.kaltura::caption:1-0-0', __CLASS__,
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
                 Fb::create('id', T\StringType::create())
                     ->pattern('^[\w-]+$')
@@ -64,7 +66,8 @@ final class CaptionV1 extends AbstractMessage implements
                 Fb::create('format', T\StringEnumType::create())
                     ->className(CaptionType::class)
                     ->build(),
-            ]
+            ],
+            self::MIXINS
         );
     }
 

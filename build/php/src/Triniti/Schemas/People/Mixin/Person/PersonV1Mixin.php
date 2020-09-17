@@ -1,63 +1,26 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/people/mixin/person/1-0-0.json#
 namespace Triniti\Schemas\People\Mixin\Person;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\Enum\Format;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
-use Triniti\Schemas\People\PersonId;
+use Gdbots\Pbj\Schema;
 
-final class PersonV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait PersonV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:people:mixin:person:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            Fb::create('_id', T\IdentifierType::create())
-                ->required()
-                ->withDefault(function() { return PersonId::generate(); })
-                ->className(PersonId::class)
-                ->overridable(true)
-                ->build(),
-            /*
-             * A reference to the image asset to use for widgets, sharing, seo.
-             */
-            Fb::create('image_ref', T\IdentifierType::create())
-                ->className(NodeRef::class)
-                ->build(),
-            /*
-             * A short bio of the person. It should typically not have HTML as it is
-             * used in metadata, feeds, SERP and social.
-             */
-            Fb::create('bio', T\TextType::create())
-                ->build(),
-            /*
-             * Indicates where the bio data originated from, e.g. imdb, freebase, custom.
-             */
-            Fb::create('bio_source', T\StringType::create())
-                ->format(Format::SLUG())
-                ->build(),
-            Fb::create('imdb_url', T\TextType::create())
-                ->format(Format::URL())
-                ->build(),
-            Fb::create('twitter_username', T\StringType::create())
-                ->pattern('^\w{1,15}$')
-                ->build(),
-            Fb::create('is_celebrity', T\BooleanType::create())
-                ->build(),
+            '_id' => (string)$this->get('_id'),
+            'slug' => $this->get('slug'),
+            'twitter_username' => $this->get('twitter_username'),
         ];
     }
 }

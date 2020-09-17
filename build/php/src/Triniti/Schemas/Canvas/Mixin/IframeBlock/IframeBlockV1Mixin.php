@@ -1,50 +1,28 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/iframe-block/1-0-1.json#
 namespace Triniti\Schemas\Canvas\Mixin\IframeBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\Enum\Format;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class IframeBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait IframeBlockV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:iframe-block:1-0-1');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            Fb::create('src', T\TextType::create())
-                ->required()
-                ->format(Format::URL())
-                ->build(),
-            Fb::create('width', T\StringType::create())
-                ->pattern('^\d+(%|px)?$')
-                ->build(),
-            Fb::create('height', T\StringType::create())
-                ->pattern('^\d+(%|px)?$')
-                ->build(),
-            Fb::create('align', T\StringType::create())
-                ->pattern('^(center|right|left)$')
-                ->build(),
-            Fb::create('scrolling_enabled', T\BooleanType::create())
-                ->build(),
-            /*
-             * A map containing values for the data-* attributes
-             */
-            Fb::create('data', T\StringType::create())
-                ->asAMap()
-                ->build(),
+            'etag' => $this->get('etag'),
+            'src' => $this->get('src'),
+            'width' => $this->get('width'),
+            'height' => $this->get('height'),
+            'align' => $this->get('align'),
         ];
     }
 }

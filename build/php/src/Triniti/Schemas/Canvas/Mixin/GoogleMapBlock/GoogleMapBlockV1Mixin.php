@@ -1,39 +1,28 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/google-map-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\GoogleMapBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class GoogleMapBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait GoogleMapBlockV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:google-map-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            Fb::create('q', T\StringType::create())
-                ->build(),
-            Fb::create('center', T\GeoPointType::create())
-                ->build(),
-            Fb::create('zoom', T\TinyIntType::create())
-                ->max(21)
-                ->build(),
-            Fb::create('maptype', T\StringType::create())
-                ->pattern('^(roadmap|satellite)$')
-                ->withDefault("roadmap")
-                ->build(),
+            'etag' => $this->get('etag'),
+            'q' => $this->get('q'),
+            'center' => (string)$this->get('center'),
+            'zoom' => $this->get('zoom'),
+            'maptype' => $this->get('maptype'),
         ];
     }
 }

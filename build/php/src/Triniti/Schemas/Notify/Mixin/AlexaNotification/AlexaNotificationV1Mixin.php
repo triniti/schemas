@@ -1,17 +1,24 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/notify/mixin/alexa-notification/1-0-0.json#
 namespace Triniti\Schemas\Notify\Mixin\AlexaNotification;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\SchemaId;
+use Gdbots\Pbj\Schema;
 
-final class AlexaNotificationV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait AlexaNotificationV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
+    public function getUriTemplateVars()
     {
-        return SchemaId::fromString('pbj:triniti:notify:mixin:alexa-notification:1-0-0');
+        return [
+            '_id' => (string)$this->get('_id'),
+        ];
     }
 }

@@ -1,26 +1,13 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Mixin from '@gdbots/pbj/Mixin';
-import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/types';
-
-export default class TiktokEmbedBlockV1Mixin extends Mixin {
-  /**
-   * @returns {SchemaId}
-   */
-  getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:tiktok-embed-block:1-0-0');
-  }
-
-  /**
-   * @returns {Field[]}
-   */
-  getFields() {
-    return [
-      Fb.create('tiktok_id', T.StringType.create())
-        .required()
-        .pattern('^\\w+$')
-        .build(),
-    ];
-  }
+export default function TiktokEmbedBlockV1Mixin(M) {
+  Object.assign(M.prototype, {
+    /**
+     * @returns {Object}
+     */
+    getUriTemplateVars() {
+      return {
+        etag: this.get('etag'),
+        tiktok_id: this.get('tiktok_id'),
+      };
+    }
+  });
 }

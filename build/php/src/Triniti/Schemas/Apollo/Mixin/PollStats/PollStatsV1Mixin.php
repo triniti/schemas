@@ -1,43 +1,22 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/apollo/mixin/poll-stats/1-0-0.json#
 namespace Triniti\Schemas\Apollo\Mixin\PollStats;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Triniti\Schemas\Apollo\PollId;
+use Gdbots\Pbj\Schema;
 
-final class PollStatsV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait PollStatsV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
+    public function getUriTemplateVars()
     {
-        return SchemaId::fromString('pbj:triniti:apollo:mixin:poll-stats:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
-    {
-        return [
-            Fb::create('_id', T\IdentifierType::create())
-                ->required()
-                ->withDefault(function() { return PollId::generate(); })
-                ->className(PollId::class)
-                ->overridable(true)
-                ->build(),
-            Fb::create('votes', T\IntType::create())
-                ->build(),
-            /*
-             * Map of votes for each answer keyed by the poll answer id.
-             */
-            Fb::create('answer_votes', T\IntType::create())
-                ->asAMap()
-                ->build(),
-        ];
+        return ['_id' => (string)$this->get('_id')];
     }
 }

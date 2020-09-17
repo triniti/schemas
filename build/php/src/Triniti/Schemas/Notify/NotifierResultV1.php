@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/notify/notifier-result/1-0-0.json#
 namespace Triniti\Schemas\Notify;
 
@@ -7,21 +9,30 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\MessageRef;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
-use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
 
-final class NotifierResultV1 extends AbstractMessage implements
-    NotifierResult,
-    GdbotsCommonTaggableV1
+final class NotifierResultV1 extends AbstractMessage
 {
+    const SCHEMA_ID = 'pbj:triniti:notify::notifier-result:1-0-0';
+    const SCHEMA_CURIE = 'triniti:notify::notifier-result';
+    const SCHEMA_CURIE_MAJOR = 'triniti:notify::notifier-result:v1';
+    const MIXINS = [
+      'gdbots:common:mixin:taggable:v1',
+      'gdbots:common:mixin:taggable',
+    ];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:triniti:notify::notifier-result:1-0-0', __CLASS__,
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
+                /*
+                 * Tags is a map that categorizes data or tracks references in
+                 * external systems. The tags names should be consistent and descriptive,
+                 * e.g. fb_user_id:123, salesforce_customer_id:456.
+                 */
+                Fb::create('tags', T\StringType::create())
+                    ->asAMap()
+                    ->pattern('^[\w\/\.:-]+$')
+                    ->build(),
                 Fb::create('ok', T\BooleanType::create())
                     ->withDefault(true)
                     ->build(),
@@ -41,9 +52,7 @@ final class NotifierResultV1 extends AbstractMessage implements
                 Fb::create('raw_response', T\TextType::create())
                     ->build(),
             ],
-            [
-                GdbotsCommonTaggableV1Mixin::create(),
-            ]
+            self::MIXINS
         );
     }
 

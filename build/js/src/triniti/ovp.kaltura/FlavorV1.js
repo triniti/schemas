@@ -4,7 +4,6 @@ import FlavorAssetStatus from '@triniti/schemas/triniti/ovp.kaltura/enums/Flavor
 import Format from '@gdbots/pbj/enums/Format';
 import Message from '@gdbots/pbj/Message';
 import MessageRef from '@gdbots/pbj/MessageRef';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 
@@ -15,7 +14,7 @@ export default class FlavorV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:ovp.kaltura::flavor:1-0-0', FlavorV1,
+    return new Schema(this.SCHEMA_ID, this,
       [
         Fb.create('entry_id', T.StringType.create())
           .pattern('^[\\w-]+$')
@@ -70,6 +69,7 @@ export default class FlavorV1 extends Message {
           .format(Format.URL)
           .build(),
       ],
+      this.MIXINS,
     );
   }
 
@@ -92,6 +92,11 @@ export default class FlavorV1 extends Message {
   }
 }
 
-MessageResolver.register('triniti:ovp.kaltura::flavor', FlavorV1);
-Object.freeze(FlavorV1);
-Object.freeze(FlavorV1.prototype);
+const M = FlavorV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:ovp.kaltura::flavor:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:ovp.kaltura::flavor';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:ovp.kaltura::flavor:v1';
+M.prototype.MIXINS = M.MIXINS = [];
+
+Object.freeze(M);
+Object.freeze(M.prototype);

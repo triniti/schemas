@@ -1,32 +1,25 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\TiktokEmbedBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class TiktokEmbedBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait TiktokEmbedBlockV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:tiktok-embed-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            Fb::create('tiktok_id', T\StringType::create())
-                ->required()
-                ->pattern('^\w+$')
-                ->build(),
+            'etag' => $this->get('etag'),
+            'tiktok_id' => $this->get('tiktok_id'),
         ];
     }
 }

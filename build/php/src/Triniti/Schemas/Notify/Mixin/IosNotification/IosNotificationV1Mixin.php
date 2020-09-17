@@ -1,36 +1,24 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/notify/mixin/ios-notification/1-0-0.json#
 namespace Triniti\Schemas\Notify\Mixin\IosNotification;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class IosNotificationV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait IosNotificationV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:notify:mixin:ios-notification:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            /*
-             * @link https://firebase.google.com/docs/cloud-messaging/ios/topic-messaging
-             * FCM topic messaging allows you to send a message to multiple devices that have opted in to a particular topic.
-             */
-            Fb::create('fcm_topics', T\StringType::create())
-                ->asASet()
-                ->pattern('^[\w\/\.:~%#-]+$')
-                ->build(),
+            '_id' => (string)$this->get('_id'),
         ];
     }
 }

@@ -1,43 +1,13 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/gallery-block/1-0-2.json#
-import AspectRatio from '@triniti/schemas/triniti/common/enums/AspectRatio';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Mixin from '@gdbots/pbj/Mixin';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
-import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/types';
-
-export default class GalleryBlockV1Mixin extends Mixin {
-  /**
-   * @returns {SchemaId}
-   */
-  getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:gallery-block:1-0-2');
-  }
-
-  /**
-   * @returns {Field[]}
-   */
-  getFields() {
-    return [
-      Fb.create('launch_text', T.StringType.create())
-        .build(),
-      Fb.create('aspect_ratio', T.StringEnumType.create())
-        .classProto(AspectRatio)
-        .build(),
-      /*
-       * A reference to an image asset to use as the poster that will
-       * override what is provided by the target gallery.
-       */
-      Fb.create('poster_image_ref', T.IdentifierType.create())
-        .classProto(NodeRef)
-        .build(),
-      /*
-       * When true the gallery should open at the poster image selected.
-       * This assumes the poster image is also in the selected gallery.
-       */
-      Fb.create('start_at_poster', T.BooleanType.create())
-        .withDefault(true)
-        .build(),
-    ];
-  }
+export default function GalleryBlockV1Mixin(M) {
+  Object.assign(M.prototype, {
+    /**
+     * @returns {Object}
+     */
+    getUriTemplateVars() {
+      return {
+        etag: this.get('etag'),
+        node_ref: `${this.get('node_ref', '')}`,
+      };
+    }
+  });
 }

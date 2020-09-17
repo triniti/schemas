@@ -1,32 +1,25 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/spotify-track-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\SpotifyTrackBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class SpotifyTrackBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait SpotifyTrackBlockV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:spotify-track-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            Fb::create('track_id', T\StringType::create())
-                ->required()
-                ->pattern('^\w+$')
-                ->build(),
+            'etag' => $this->get('etag'),
+            'track_id' => $this->get('track_id'),
         ];
     }
 }

@@ -5,7 +5,6 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Message from '@gdbots/pbj/Message';
 import MessageRef from '@gdbots/pbj/MessageRef';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 
@@ -16,7 +15,7 @@ export default class CaptionV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:ovp.kaltura::caption:1-0-0', CaptionV1,
+    return new Schema(this.SCHEMA_ID, this,
       [
         Fb.create('id', T.StringType.create())
           .pattern('^[\\w-]+$')
@@ -61,6 +60,7 @@ export default class CaptionV1 extends Message {
           .classProto(CaptionType)
           .build(),
       ],
+      this.MIXINS,
     );
   }
 
@@ -83,6 +83,11 @@ export default class CaptionV1 extends Message {
   }
 }
 
-MessageResolver.register('triniti:ovp.kaltura::caption', CaptionV1);
-Object.freeze(CaptionV1);
-Object.freeze(CaptionV1.prototype);
+const M = CaptionV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:ovp.kaltura::caption:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:ovp.kaltura::caption';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:ovp.kaltura::caption:v1';
+M.prototype.MIXINS = M.MIXINS = [];
+
+Object.freeze(M);
+Object.freeze(M.prototype);

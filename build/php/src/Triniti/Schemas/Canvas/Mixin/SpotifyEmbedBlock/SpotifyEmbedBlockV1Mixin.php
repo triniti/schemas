@@ -1,40 +1,26 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/spotify-embed-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\SpotifyEmbedBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class SpotifyEmbedBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait SpotifyEmbedBlockV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:spotify-embed-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            /*
-             * The type portion of a Spotify URI.
-             * @link https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids
-             */
-            Fb::create('spotify_type', T\StringType::create())
-                ->required()
-                ->pattern('^(album|artist|episode|playlist|show|track)$')
-                ->build(),
-            Fb::create('spotify_id', T\StringType::create())
-                ->required()
-                ->pattern('^\w+$')
-                ->build(),
+            'etag' => $this->get('etag'),
+            'spotify_type' => $this->get('spotify_type'),
+            'spotify_id' => $this->get('spotify_id'),
         ];
     }
 }

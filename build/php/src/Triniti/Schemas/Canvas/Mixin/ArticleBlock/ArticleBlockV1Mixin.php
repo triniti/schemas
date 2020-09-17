@@ -1,42 +1,26 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/article-block/1-0-1.json#
 namespace Triniti\Schemas\Canvas\Mixin\ArticleBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
+use Gdbots\Pbj\Schema;
 
-final class ArticleBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait ArticleBlockV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:article-block:1-0-1');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            Fb::create('cta_text', T\StringType::create())
-                ->build(),
-            Fb::create('link_text', T\StringType::create())
-                ->build(),
-            Fb::create('show_image', T\BooleanType::create())
-                ->withDefault(true)
-                ->build(),
-            /*
-             * An optional reference to an image asset to use as the poster.
-             */
-            Fb::create('image_ref', T\IdentifierType::create())
-                ->className(NodeRef::class)
-                ->build(),
+            'etag' => $this->get('etag'),
+            'node_ref' => (string)$this->get('node_ref'),
+            'show_image' => $this->get('show_image'),
         ];
     }
 }
