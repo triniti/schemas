@@ -23,7 +23,7 @@
   },
   "peerDependencies": {
     "@gdbots/common": "^1.0.2",
-    "@gdbots/pbj": "^1.0.1",
+    "@gdbots/pbj": "^2.0.0",
     "lodash": "^4.17.4",
     "lodash-es": "^4.17.4",
     "md5": "^2.2.1",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@gdbots/common": "^1.0.2",
-    "@gdbots/pbj": "^1.0.0",
+    "@gdbots/pbj": "^2.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-lodash": "^3.3.4",
