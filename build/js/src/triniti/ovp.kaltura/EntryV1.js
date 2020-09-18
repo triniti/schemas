@@ -7,7 +7,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import MediaType from '@triniti/schemas/triniti/ovp.kaltura/enums/MediaType';
 import Message from '@gdbots/pbj/Message';
-import MessageRef from '@gdbots/pbj/MessageRef';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef';';
 import Schema from '@gdbots/pbj/Schema';
 import SourceType from '@triniti/schemas/triniti/ovp.kaltura/enums/SourceType';
 import T from '@gdbots/pbj/types';

@@ -1,7 +1,7 @@
 // @link http://schemas.triniti.io/json-schema/triniti/notify/notifier-result/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Message from '@gdbots/pbj/Message';
-import MessageRef from '@gdbots/pbj/MessageRef';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef';';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 

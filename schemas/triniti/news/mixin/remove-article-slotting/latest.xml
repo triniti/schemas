@@ -5,18 +5,10 @@
 
   <schema id="pbj:triniti:news:mixin:remove-article-slotting:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:command:v1">
     <fields>
-      <field name="except_ref" type="identifier">
+      <field name="except_ref" type="node-ref">
         <description>
           The one node allowed to keep the slotting.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="slotting" type="tiny-int" rule="map">
         <description>

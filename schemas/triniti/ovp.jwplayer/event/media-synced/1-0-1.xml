@@ -5,16 +5,7 @@
 
   <schema id="pbj:triniti:ovp.jwplayer:event:media-synced:1-0-1">
     <fields>
-      <field name="node_ref" type="identifier" required="true">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="node_ref" type="node-ref" required="true"/>
       <field name="jwplayer_media_id" type="string" pattern="^[\w-]+$"/>
       <field name="jwplayer_caption_keys" type="string" pattern="^[\w]+$" rule="map">
         <description>

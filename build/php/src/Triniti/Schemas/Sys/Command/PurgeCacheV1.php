@@ -9,7 +9,6 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin as GdbotsPbjxCommandV1Mixin;
 
 final class PurgeCacheV1 extends AbstractMessage
@@ -107,8 +106,7 @@ final class PurgeCacheV1 extends AbstractMessage
                  */
                 Fb::create('ctx_msg', T\TextType::create())
                     ->build(),
-                Fb::create('node_ref', T\IdentifierType::create())
-                    ->className(NodeRef::class)
+                Fb::create('node_ref', T\NodeRefType::create())
                     ->build(),
             ],
             self::MIXINS

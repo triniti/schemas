@@ -4,7 +4,6 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import Message from '@gdbots/pbj/Message';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 
@@ -82,9 +81,8 @@ export default class TranscodingFailedV1 extends Message {
         /*
          * A reference to the video asset that failed to transcode.
          */
-        Fb.create('node_ref', T.IdentifierType.create())
+        Fb.create('node_ref', T.NodeRefType.create())
           .required()
-          .classProto(NodeRef)
           .build(),
         Fb.create('mediaconvert_job_arn', T.StringType.create())
           .pattern('^[\\/\\w:-]+$')

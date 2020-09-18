@@ -7,9 +7,9 @@ namespace Triniti\Schemas\OvpKaltura;
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\MessageRef;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\WellKnown\MessageRef;
 use Triniti\Schemas\OvpKaltura\Enum\DisplayInSearchType;
 use Triniti\Schemas\OvpKaltura\Enum\EntryModerationStatus;
 use Triniti\Schemas\OvpKaltura\Enum\EntryStatus;
@@ -151,19 +151,12 @@ final class EntryV1 extends AbstractMessage
         );
     }
 
-    /**
-     * @param string $tag
-     * @return MessageRef
-     */
-    public function generateMessageRef($tag = null)
+    public function generateMessageRef(?string $tag = null): MessageRef
     {
         return new MessageRef(static::schema()->getCurie(), $this->get('entry_id'), $tag);
     }
     
-    /**
-     * @return array
-     */
-    public function getUriTemplateVars()
+    public function getUriTemplateVars(): array
     {
         return [
             'entry_id' => $this->get('entry_id'),

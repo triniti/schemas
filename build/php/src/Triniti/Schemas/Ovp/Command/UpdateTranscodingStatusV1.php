@@ -9,7 +9,6 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Enum\Code;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin as GdbotsPbjxCommandV1Mixin;
 use Triniti\Schemas\Ovp\Enum\TranscodingStatus;
@@ -123,9 +122,8 @@ final class UpdateTranscodingStatusV1 extends AbstractMessage
                 /*
                  * A reference to the video asset that is being transcoded.
                  */
-                Fb::create('node_ref', T\IdentifierType::create())
+                Fb::create('node_ref', T\NodeRefType::create())
                     ->required()
-                    ->className(NodeRef::class)
                     ->build(),
                 Fb::create('transcoding_status', T\StringEnumType::create())
                     ->className(TranscodingStatus::class)

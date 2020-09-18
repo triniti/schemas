@@ -12,10 +12,7 @@ use Gdbots\Pbj\Schema;
  */
 trait TimelineTeaserV1Mixin
 {
-    /**
-     * @return array
-     */
-    public function getUriTemplateVars()
+    public function getUriTemplateVars(): array
     {
         return [
             '_id' => (string)$this->get('_id'),

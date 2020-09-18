@@ -17,18 +17,10 @@
           <default>() => CategoryId.generate()</default>
         </js-options>
       </field>
-      <field name="image_ref" type="identifier">
+      <field name="image_ref" type="node-ref">
         <description>
           A reference to the image asset to use for widgets, sharing, seo.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="description" type="text" max="5000">
         <description>
@@ -43,10 +35,7 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
         '_id' => (string)$this->get('_id'),

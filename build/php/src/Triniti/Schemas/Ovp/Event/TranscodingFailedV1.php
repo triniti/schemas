@@ -9,7 +9,6 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Enum\Code;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
 
@@ -96,9 +95,8 @@ final class TranscodingFailedV1 extends AbstractMessage
                 /*
                  * A reference to the video asset that failed to transcode.
                  */
-                Fb::create('node_ref', T\IdentifierType::create())
+                Fb::create('node_ref', T\NodeRefType::create())
                     ->required()
-                    ->className(NodeRef::class)
                     ->build(),
                 Fb::create('mediaconvert_job_arn', T\StringType::create())
                     ->pattern('^[\/\w:-]+$')

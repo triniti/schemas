@@ -17,16 +17,8 @@
           <default>() => GalleryId.generate()</default>
         </js-options>
       </field>
-      <field name="image_ref" type="identifier">
+      <field name="image_ref" type="node-ref">
         <description>A reference to the image asset to use as the cover/primary.</description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="credit" type="string">
         <description>
@@ -50,38 +42,13 @@
         </description>
       </field>
       <field name="image_count" type="medium-int"/>
-      <field name="prev_gallery_ref" type="identifier">
+      <field name="prev_gallery_ref" type="node-ref">
         <description>A reference to the previous gallery.</description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
-      <field name="next_gallery_ref" type="identifier">
+      <field name="next_gallery_ref" type="node-ref">
         <description>A reference to the next gallery.</description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
-      <field name="related_gallery_refs" type="identifier" rule="list">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="related_gallery_refs" type="node-ref" rule="list"/>
     </fields>
 
     <php-options>
@@ -89,10 +56,7 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
         '_id' => (string)$this->get('_id'),

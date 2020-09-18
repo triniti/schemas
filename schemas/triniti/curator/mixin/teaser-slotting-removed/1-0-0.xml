@@ -6,16 +6,7 @@
   <schema id="pbj:triniti:curator:mixin:teaser-slotting-removed:1-0-0" mixin="true"
       extends="gdbots:pbjx:mixin:event:v1">
     <fields>
-      <field name="node_ref" type="identifier" required="true">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="node_ref" type="node-ref" required="true"/>
       <field name="slotting_keys" type="string" format="slug" rule="set"/>
     </fields>
   </schema>

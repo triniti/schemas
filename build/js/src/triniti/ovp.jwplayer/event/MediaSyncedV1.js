@@ -78,9 +78,8 @@ export default class MediaSyncedV1 extends Message {
           .asAMap()
           .pattern('^[\\w\\/\\.:-]+$')
           .build(),
-        Fb.create('node_ref', T.IdentifierType.create())
+        Fb.create('node_ref', T.NodeRefType.create())
           .required()
-          .classProto(NodeRef)
           .build(),
         Fb.create('jwplayer_media_id', T.StringType.create())
           .pattern('^[\\w-]+$')

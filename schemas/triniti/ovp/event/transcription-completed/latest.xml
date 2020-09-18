@@ -5,18 +5,10 @@
 
   <schema id="pbj:triniti:ovp:event:transcription-completed:1-0-0">
     <fields>
-      <field name="node_ref" type="identifier" required="true">
+      <field name="node_ref" type="node-ref" required="true">
         <description>
           A reference to the video asset that was transcribed.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="transcribe_job_name" type="string" pattern="^[\w-]+$"/>
       <field name="transcribe_job_region" type="string" format="slug" max="20"/>

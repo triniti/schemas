@@ -4,7 +4,6 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import Message from '@gdbots/pbj/Message';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 import TranscodingStatus from '@triniti/schemas/triniti/ovp/enums/TranscodingStatus';
@@ -109,9 +108,8 @@ export default class UpdateTranscodingStatusV1 extends Message {
         /*
          * A reference to the video asset that is being transcoded.
          */
-        Fb.create('node_ref', T.IdentifierType.create())
+        Fb.create('node_ref', T.NodeRefType.create())
           .required()
-          .classProto(NodeRef)
           .build(),
         Fb.create('transcoding_status', T.StringEnumType.create())
           .classProto(TranscodingStatus)

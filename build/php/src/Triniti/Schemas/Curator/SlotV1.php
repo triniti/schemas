@@ -7,9 +7,9 @@ namespace Triniti\Schemas\Curator;
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\MessageRef;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\WellKnown\MessageRef;
 use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Curator\Enum\SlotRendering;
 
@@ -51,7 +51,7 @@ final class SlotV1 extends AbstractMessage
         return new MessageRef(static::schema()->getCurie(), $this->generateEtag(), $tag);
     }
     
-    public function getUriTemplateVars(): array
+    public function getUriTemplateVars(): array: array
     {
         return [];
     }

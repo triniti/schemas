@@ -50,7 +50,7 @@
       <insertion-points>
         <imports>
           <![CDATA[
-use Gdbots\Pbj\MessageRef;
+use Gdbots\Pbj\WellKnown\MessageRef;
             ]]>
         </imports>
         <methods>
@@ -60,7 +60,7 @@ public function generateMessageRef(?string $tag = null): MessageRef
     return new MessageRef(static::schema()->getCurie(), $this->generateEtag(), $tag);
 }
 
-public function getUriTemplateVars(): array
+public function getUriTemplateVars(): array: array
 {
     return [];
 }

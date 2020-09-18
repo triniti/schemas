@@ -79,7 +79,7 @@ final class AssetId implements Identifier
      *
      * @throws AssertionFailed
      */
-    public static function fromString($string)
+    public static function fromString($string): Identifier
     {
         if (!preg_match(self::VALID_PATTERN, $string, $matches)) {
             throw new AssertionFailed(
@@ -179,7 +179,7 @@ final class AssetId implements Identifier
     /**
      * {@inheritdoc}
      */
-    public function toString()
+    public function toString(): string
     {
         return $this->id;
     }
@@ -203,7 +203,7 @@ final class AssetId implements Identifier
     /**
      * {@inheritdoc}
      */
-    public function equals(Identifier $other)
+    public function equals(Identifier $other): bool
     {
         return $this == $other;
     }

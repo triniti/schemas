@@ -3,7 +3,6 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import Message from '@gdbots/pbj/Message';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 
@@ -104,9 +103,8 @@ export default class SyncMediaV1 extends Message {
           .asAMap()
           .pattern('^[\\w\\/\\.:-]+$')
           .build(),
-        Fb.create('node_ref', T.IdentifierType.create())
+        Fb.create('node_ref', T.NodeRefType.create())
           .required()
-          .classProto(NodeRef)
           .build(),
         Fb.create('fields', T.StringType.create())
           .asASet()

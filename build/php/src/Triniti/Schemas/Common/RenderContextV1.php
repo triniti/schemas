@@ -7,9 +7,9 @@ namespace Triniti\Schemas\Common;
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\MessageRef;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\WellKnown\MessageRef;
 
 final class RenderContextV1 extends AbstractMessage
 {
@@ -95,19 +95,12 @@ final class RenderContextV1 extends AbstractMessage
         );
     }
 
-    /**
-     * @param string $tag
-     * @return MessageRef
-     */
-    public function generateMessageRef($tag = null)
+    public function generateMessageRef(?string $tag = null): MessageRef
     {
         return new MessageRef(static::schema()->getCurie(), $this->generateEtag(), $tag);
     }
     
-    /**
-     * @return array
-     */
-    public function getUriTemplateVars()
+    public function getUriTemplateVars(): array
     {
         return [];
     }

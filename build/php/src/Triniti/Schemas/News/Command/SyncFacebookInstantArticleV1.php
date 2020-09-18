@@ -9,7 +9,6 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin as GdbotsPbjxCommandV1Mixin;
 
 final class SyncFacebookInstantArticleV1 extends AbstractMessage
@@ -118,9 +117,8 @@ final class SyncFacebookInstantArticleV1 extends AbstractMessage
                     ->asAMap()
                     ->pattern('^[\w\/\.:-]+$')
                     ->build(),
-                Fb::create('node_ref', T\IdentifierType::create())
+                Fb::create('node_ref', T\NodeRefType::create())
                     ->required()
-                    ->className(NodeRef::class)
                     ->build(),
                 Fb::create('fbia_operation', T\StringType::create())
                     ->pattern('^(create|update|delete)$')

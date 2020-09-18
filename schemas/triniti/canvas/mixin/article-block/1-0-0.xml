@@ -30,10 +30,7 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
         'etag' => $this->get('etag'),

@@ -4,7 +4,6 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import Message from '@gdbots/pbj/Message';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 import TranscriptionStatus from '@triniti/schemas/triniti/ovp/enums/TranscriptionStatus';
@@ -109,9 +108,8 @@ export default class UpdateTranscriptionStatusV1 extends Message {
         /*
          * A reference to the video asset that is being transcribed.
          */
-        Fb.create('node_ref', T.IdentifierType.create())
+        Fb.create('node_ref', T.NodeRefType.create())
           .required()
-          .classProto(NodeRef)
           .build(),
         Fb.create('transcription_status', T.StringEnumType.create())
           .classProto(TranscriptionStatus)

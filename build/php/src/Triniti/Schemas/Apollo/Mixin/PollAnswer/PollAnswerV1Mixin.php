@@ -4,8 +4,8 @@ declare(strict_types=1);
 // @link http://schemas.triniti.io/json-schema/triniti/apollo/mixin/poll-answer/1-0-0.json#
 namespace Triniti\Schemas\Apollo\Mixin\PollAnswer;
 
-use Gdbots\Pbj\MessageRef;
 use Gdbots\Pbj\Schema;
+use Gdbots\Pbj\WellKnown\MessageRef;
 
 /**
  * @method static Schema schema
@@ -13,19 +13,12 @@ use Gdbots\Pbj\Schema;
  */
 trait PollAnswerV1Mixin
 {
-    /**
-     * @param string $tag
-     * @return MessageRef
-     */
-    public function generateMessageRef($tag = null)
+    public function generateMessageRef(?string $tag = null): MessageRef
     {
         return new MessageRef(static::schema()->getCurie(), $this->get('_id'), $tag);
     }
     
-    /**
-     * @return array
-     */
-    public function getUriTemplateVars()
+    public function getUriTemplateVars(): array
     {
         return [
             '_id' => (string)$this->get('_id'),

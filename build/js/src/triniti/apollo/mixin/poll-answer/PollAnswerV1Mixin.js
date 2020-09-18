@@ -1,4 +1,4 @@
-import MessageRef from '@gdbots/pbj/MessageRef';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef';';
 
 export default function PollAnswerV1Mixin(M) {
   Object.assign(M.prototype, {

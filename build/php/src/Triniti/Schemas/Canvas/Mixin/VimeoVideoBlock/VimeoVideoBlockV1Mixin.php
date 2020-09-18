@@ -12,10 +12,7 @@ use Gdbots\Pbj\Schema;
  */
 trait VimeoVideoBlockV1Mixin
 {
-    /**
-     * @return array
-     */
-    public function getUriTemplateVars()
+    public function getUriTemplateVars(): array
     {
         return [
             'etag' => $this->get('etag'),

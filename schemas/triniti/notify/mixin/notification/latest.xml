@@ -17,31 +17,15 @@
           <default>() => NotificationId.generate()</default>
         </js-options>
       </field>
-      <field name="app_ref" type="identifier">
+      <field name="app_ref" type="node-ref">
         <description>
           A reference to the app this notification is being sent to.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
-      <field name="content_ref" type="identifier">
+      <field name="content_ref" type="node-ref">
         <description>
           A reference to the content this notification will include.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="send_status" type="string-enum">
         <default>draft</default>

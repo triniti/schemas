@@ -92,9 +92,8 @@ final class MediaSyncedV1 extends AbstractMessage
                     ->asAMap()
                     ->pattern('^[\w\/\.:-]+$')
                     ->build(),
-                Fb::create('node_ref', T\IdentifierType::create())
+                Fb::create('node_ref', T\NodeRefType::create())
                     ->required()
-                    ->className(NodeRef::class)
                     ->build(),
                 Fb::create('jwplayer_media_id', T\StringType::create())
                     ->pattern('^[\w-]+$')
