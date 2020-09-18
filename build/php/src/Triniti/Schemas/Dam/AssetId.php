@@ -43,20 +43,11 @@ final class AssetId implements Identifier
      */
     const VALID_PATTERN = '/^([a-z0-9]{1,12})_([a-z0-9]{1,10})_([0-9]{8})_([a-f0-9]{32})$/';
 
-    /** @var string */
-    private $id;
-
-    /** @var string */
-    private $type;
-
-    /** @var string */
-    private $ext;
-
-    /** @var string */
-    private $date;
-
-    /** @var string */
-    private $uuid;
+    private string $id;
+    private string $type;
+    private string $ext;
+    private string $date;
+    private string $uuid;
 
     /**
      * @param string $type
@@ -73,13 +64,7 @@ final class AssetId implements Identifier
         $this->id = sprintf('%s_%s_%s_%s', $type, $ext, $this->date, $this->uuid);
     }
 
-    /**
-     * {@inheritdoc}
-     * @return static
-     *
-     * @throws AssertionFailed
-     */
-    public static function fromString($string): Identifier
+    public static function fromString($string): self
     {
         if (!preg_match(self::VALID_PATTERN, $string, $matches)) {
             throw new AssertionFailed(
@@ -103,7 +88,7 @@ final class AssetId implements Identifier
      * @param \DateTimeInterface $date
      * @param UuidIdentifier     $uuid Uuid for the asset, if not supplied a v4 uuid will be created.
      *
-     * @return AssetId
+     * @return self
      *
      * @throws AssertionFailed
      */
@@ -132,17 +117,11 @@ final class AssetId implements Identifier
         return $assetId;
     }
 
-    /**
-     * @return string
-     */
     public function getType(): string
     {
         return $this->type;
     }
 
-    /**
-     * @return string
-     */
     public function getExt(): string
     {
         return $this->ext;
@@ -155,7 +134,7 @@ final class AssetId implements Identifier
      */
     public function getDate(bool $asObject = false)
     {
-        if (true === $asObject) {
+        if ($asObject) {
             return \DateTimeImmutable::createFromFormat('!Ymd', $this->date, new \DateTimeZone('UTC'));
         }
 
@@ -170,39 +149,34 @@ final class AssetId implements Identifier
     public function getUuid(bool $asObject = false)
     {
         if (true === $asObject) {
-            return UuidIdentifier::fromString($this->uuid);
+            $uuid = [
+                substr($this->uuid, 0, 8),
+                substr($this->uuid, 8, 4),
+                substr($this->uuid, 12, 4),
+                substr($this->uuid, 16, 4),
+                substr($this->uuid, 20, 12),
+            ];
+            return UuidIdentifier::fromString(implode('-', $uuid));
         }
 
         return $this->uuid;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function toString(): string
     {
         return $this->id;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function __toString()
     {
         return $this->toString();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function jsonSerialize()
     {
         return $this->toString();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function equals(Identifier $other): bool
     {
         return $this == $other;
