@@ -43,7 +43,11 @@ use Gdbots\Pbj\MessageRef;
         </imports>
         <methods>
           <![CDATA[
-public function generateMessageRef(?string $tag = null): MessageRef
+/**
+ * @param string $tag
+ * @return MessageRef
+ */
+public function generateMessageRef($tag = null)
 {
     return new MessageRef(static::schema()->getCurie(), $this->get('id'), $tag);
 }
