@@ -6,12 +6,7 @@
     "ctx_ua": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 65535,
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "overridable": true
-      }
+      "maxLength": 65535
     },
     "ctx_ua_parsed": {
       "type": "object",
@@ -19,11 +14,7 @@
         {
           "$ref": "#/definitions/user-agent"
         }
-      ],
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      ]
     }
   },
   "definitions": {

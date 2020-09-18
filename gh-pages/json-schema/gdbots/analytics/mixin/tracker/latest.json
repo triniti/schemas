@@ -4,11 +4,7 @@
   "type": "object",
   "properties": {
     "is_enabled": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "type": "boolean"
     }
   },
   "additionalProperties": true

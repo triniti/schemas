@@ -10,47 +10,32 @@
     },
     "command_id": {
       "type": "string",
-      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
-      "pbj": {
-        "type": "time-uuid",
-        "rule": "single"
-      }
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
     "occurred_at": {
       "type": "string",
-      "pattern": "^[1-9]{1}[0-9]{12,15}$",
-      "pbj": {
-        "type": "microtime",
-        "rule": "single"
-      }
+      "pattern": "^[1-9]{1}[0-9]{12,15}$"
     },
     "expected_etag": {
       "type": "string",
       "pattern": "^[\\w\\.:-]+$",
-      "description": "Used to perform optimistic concurrency control. @link https://en.wikipedia.org/wiki/HTTP_ETag",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "description": "Used to perform optimistic concurrency control. @link https://en.wikipedia.org/wiki/HTTP_ETag"
+    },
+    "ctx_tenant_id": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "Multi-tenant apps can use this field to track the tenant id."
     },
     "ctx_retries": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
       "maximum": 255,
-      "description": "The \"ctx_retries\" field is used to keep track of how many attempts were made to process this command. In some cases, the service or transport that handles the command may be down or an optimistic check has failed and is being retried.",
-      "pbj": {
-        "type": "tiny-int",
-        "rule": "single"
-      }
+      "description": "The \"ctx_retries\" field is used to keep track of how many attempts were made to process this command. In some cases, the service or transport that handles the command may be down or an optimistic check has failed and is being retried."
     },
     "ctx_causator": {
       "type": "object",
-      "description": "The \"ctx_causator\" is the actual causator object that \"ctx_causator_ref\" refers to. In some cases it's useful for command handlers to copy the causator into the command. For example, when a node is being updated we may want to know what the node will be after the update. We can derive this via the causator instead of requesting the node and engaging a race condition.",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      "description": "The \"ctx_causator\" is the actual causator object that \"ctx_causator_ref\" refers to. In some cases it's useful for command handlers to copy the causator into the command. For example, when a node is being updated we may want to know what the node will be after the update. We can derive this via the causator instead of requesting the node and engaging a race condition."
     },
     "ctx_causator_ref": {
       "type": "object",
@@ -78,11 +63,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_correlator_ref": {
       "type": "object",
@@ -110,11 +91,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_user_ref": {
       "type": "object",
@@ -142,11 +119,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_app": {
       "type": "object",
@@ -155,11 +128,7 @@
           "$ref": "#/definitions/app"
         }
       ],
-      "description": "The \"ctx_app\" refers to the application used to send the command. This is different from ctx_ua (user_agent) because the agent used (Safari, Firefox) is not necessarily the app used (cms, iOS app, website)",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      "description": "The \"ctx_app\" refers to the application used to send the command. This is different from ctx_ua (user_agent) because the agent used (Safari, Firefox) is not necessarily the app used (cms, iOS app, website)"
     },
     "ctx_cloud": {
       "type": "object",
@@ -168,41 +137,26 @@
           "$ref": "#/definitions/cloud"
         }
       ],
-      "description": "The \"ctx_cloud\" is set by the server receiving the command and is generally only used internally for tracking and performance monitoring.",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      "description": "The \"ctx_cloud\" is set by the server receiving the command and is generally only used internally for tracking and performance monitoring."
     },
     "ctx_ip": {
       "type": "string",
-      "format": "ipv4",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "ipv4",
-        "overridable": true
-      }
+      "format": "ipv4"
     },
     "ctx_ipv6": {
       "type": "string",
-      "format": "ipv6",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "ipv6",
-        "overridable": true
-      }
+      "format": "ipv6"
     },
     "ctx_ua": {
       "type": "string",
       "minLength": 0,
+      "maxLength": 65535
+    },
+    "ctx_msg": {
+      "type": "string",
+      "minLength": 0,
       "maxLength": 65535,
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "overridable": true
-      }
+      "description": "An optional message/reason for the command being sent. Consider this like a git commit message."
     },
     "tags": {
       "type": "object",
@@ -213,20 +167,12 @@
         }
       },
       "additionalProperties": false,
-      "description": "Tags is a map that categorizes data or tracks references in external systems. The tags names should be consistent and descriptive, e.g. fb_user_id:123, salesforce_customer_id:456.",
-      "pbj": {
-        "type": "string",
-        "rule": "map"
-      }
+      "description": "Tags is a map that categorizes data or tracks references in external systems. The tags names should be consistent and descriptive, e.g. fb_user_id:123, salesforce_customer_id:456."
     },
     "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the video asset that is being transcribed.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
+      "description": "A reference to the video asset that is being transcribed."
     },
     "transcription_status": {
       "type": "string",
@@ -236,38 +182,21 @@
         "canceled",
         "completed",
         "failed"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "transcribe_job_name": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "transcribe_job_region": {
       "type": "string",
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
-      "maxLength": 20,
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
+      "maxLength": 20
     },
     "language_code": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "error_code": {
       "type": "integer",
@@ -289,20 +218,12 @@
         13,
         14,
         15
-      ],
-      "pbj": {
-        "type": "int-enum",
-        "rule": "single"
-      }
+      ]
     },
     "error_message": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 65535,
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
+      "maxLength": 65535
     }
   },
   "required": [

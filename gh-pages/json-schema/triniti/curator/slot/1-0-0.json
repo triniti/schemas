@@ -13,21 +13,12 @@
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
       "maxLength": 255,
-      "description": "The name of the location where the widget should render, e.g. \"sidebar\", \"html-head\" or \"jumbotron-top\".",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
+      "description": "The name of the location where the widget should render, e.g. \"sidebar\", \"html-head\" or \"jumbotron-top\"."
     },
     "widget_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the widget this slot will render.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
+      "description": "A reference to the widget this slot will render."
     },
     "rendering": {
       "type": "string",
@@ -37,11 +28,7 @@
         "server",
         "client",
         "lazy"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     }
   },
   "required": [

@@ -10,55 +10,31 @@
     },
     "entry_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "title": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "description": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 65535,
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
+      "maxLength": 65535
     },
     "partner_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "user_id": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "creator_id": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "tags": {
       "type": "array",
@@ -70,11 +46,7 @@
         }
       ],
       "uniqueItems": true,
-      "additionalProperties": false,
-      "pbj": {
-        "type": "string",
-        "rule": "set"
-      }
+      "additionalProperties": false
     },
     "categories": {
       "type": "array",
@@ -86,11 +58,7 @@
         }
       ],
       "uniqueItems": true,
-      "additionalProperties": false,
-      "pbj": {
-        "type": "string",
-        "rule": "set"
-      }
+      "additionalProperties": false
     },
     "categories_ids": {
       "type": "array",
@@ -101,11 +69,7 @@
         }
       ],
       "uniqueItems": true,
-      "additionalProperties": false,
-      "pbj": {
-        "type": "string",
-        "rule": "set"
-      }
+      "additionalProperties": false
     },
     "categories_normalized": {
       "type": "array",
@@ -117,11 +81,7 @@
         }
       ],
       "uniqueItems": true,
-      "additionalProperties": false,
-      "pbj": {
-        "type": "string",
-        "rule": "set"
-      }
+      "additionalProperties": false
     },
     "status": {
       "type": "string",
@@ -139,11 +99,7 @@
         5,
         6,
         7
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "moderation_status": {
       "type": "string",
@@ -155,11 +111,7 @@
         4,
         5,
         6
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "type": {
       "type": "string",
@@ -175,39 +127,21 @@
         7,
         8,
         10
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "created_at": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "updated_at": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "rank": {
       "type": "number",
-      "default": 0,
-      "pbj": {
-        "type": "float",
-        "rule": "single"
-      }
+      "default": 0
     },
     "flavor_params_ids": {
       "type": "array",
@@ -220,142 +154,72 @@
         }
       ],
       "uniqueItems": true,
-      "additionalProperties": false,
-      "pbj": {
-        "type": "int",
-        "rule": "set"
-      }
+      "additionalProperties": false
     },
     "data_url": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
-      }
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
     },
     "download_url": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
-      }
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
     },
     "version": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "thumbnail_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "thumbnail_created_at": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "thumbnail_ext": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     },
     "thumbnail_url": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
-      }
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
     },
     "start_date": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "end_date": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "reference_id": {
       "type": "string",
-      "pattern": "^[\\w\\.:,\\/-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.:,\\/-]+$"
     },
     "replacing_entry_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "replaced_entry_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "redirect_entry_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "root_entry_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "parent_entry_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "display_in_search": {
       "type": "string",
@@ -365,81 +229,48 @@
         0,
         1,
         2
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "plays": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 4294967295,
-      "pbj": {
-        "type": "int",
-        "rule": "single"
-      }
+      "maximum": 4294967295
     },
     "views": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 4294967295,
-      "pbj": {
-        "type": "int",
-        "rule": "single"
-      }
+      "maximum": 4294967295
     },
     "last_played_at": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "width": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "height": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "duration": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "duration_ms": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 16777215,
-      "pbj": {
-        "type": "medium-int",
-        "rule": "single"
-      }
+      "maximum": 16777215
     },
     "media_type": {
       "type": "string",
@@ -452,11 +283,7 @@
         202,
         203,
         204
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "source_type": {
       "type": "string",
@@ -478,11 +305,7 @@
         36,
         37,
         42
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "metadata": {
       "type": "object",
@@ -493,11 +316,7 @@
           "maxLength": 65535
         }
       },
-      "additionalProperties": false,
-      "pbj": {
-        "type": "text",
-        "rule": "map"
-      }
+      "additionalProperties": false
     }
   },
   "required": [

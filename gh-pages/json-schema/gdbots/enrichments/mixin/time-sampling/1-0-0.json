@@ -7,31 +7,19 @@
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 4294967295,
-      "pbj": {
-        "type": "int",
-        "rule": "single"
-      }
+      "maximum": 4294967295
     },
     "ts_ymd": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 4294967295,
-      "pbj": {
-        "type": "int",
-        "rule": "single"
-      }
+      "maximum": 4294967295
     },
     "ts_ym": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 16777215,
-      "pbj": {
-        "type": "medium-int",
-        "rule": "single"
-      }
+      "maximum": 16777215
     }
   },
   "additionalProperties": true

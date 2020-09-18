@@ -10,19 +10,16 @@
     },
     "event_id": {
       "type": "string",
-      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
-      "pbj": {
-        "type": "time-uuid",
-        "rule": "single"
-      }
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
     "occurred_at": {
       "type": "string",
-      "pattern": "^[1-9]{1}[0-9]{12,15}$",
-      "pbj": {
-        "type": "microtime",
-        "rule": "single"
-      }
+      "pattern": "^[1-9]{1}[0-9]{12,15}$"
+    },
+    "ctx_tenant_id": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "Multi-tenant apps can use this field to track the tenant id."
     },
     "ctx_causator_ref": {
       "type": "object",
@@ -50,11 +47,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_correlator_ref": {
       "type": "object",
@@ -82,11 +75,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_user_ref": {
       "type": "object",
@@ -114,11 +103,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_app": {
       "type": "object",
@@ -127,11 +112,7 @@
           "$ref": "#/definitions/app"
         }
       ],
-      "description": "The \"ctx_app\" refers to the application used to send the command which in turn resulted in this event being published.",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      "description": "The \"ctx_app\" refers to the application used to send the command which in turn resulted in this event being published."
     },
     "ctx_cloud": {
       "type": "object",
@@ -140,41 +121,26 @@
           "$ref": "#/definitions/cloud"
         }
       ],
-      "description": "The \"ctx_cloud\" is usually copied from the command that resulted in this event being published. This means the value most likely refers to the cloud that received the command originally, not the machine processing the event.",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      "description": "The \"ctx_cloud\" is usually copied from the command that resulted in this event being published. This means the value most likely refers to the cloud that received the command originally, not the machine processing the event."
     },
     "ctx_ip": {
       "type": "string",
-      "format": "ipv4",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "ipv4",
-        "overridable": true
-      }
+      "format": "ipv4"
     },
     "ctx_ipv6": {
       "type": "string",
-      "format": "ipv6",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "ipv6",
-        "overridable": true
-      }
+      "format": "ipv6"
     },
     "ctx_ua": {
       "type": "string",
       "minLength": 0,
+      "maxLength": 65535
+    },
+    "ctx_msg": {
+      "type": "string",
+      "minLength": 0,
       "maxLength": 65535,
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "overridable": true
-      }
+      "description": "An optional message/reason for the event being created. Consider this like a git commit message."
     },
     "tags": {
       "type": "object",
@@ -185,27 +151,15 @@
         }
       },
       "additionalProperties": false,
-      "description": "Tags is a map that categorizes data or tracks references in external systems. The tags names should be consistent and descriptive, e.g. fb_user_id:123, salesforce_customer_id:456.",
-      "pbj": {
-        "type": "string",
-        "rule": "map"
-      }
+      "description": "Tags is a map that categorizes data or tracks references in external systems. The tags names should be consistent and descriptive, e.g. fb_user_id:123, salesforce_customer_id:456."
     },
     "node_ref": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\/\\.:-]+$"
     },
     "jwplayer_media_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "jwplayer_caption_keys": {
       "type": "object",
@@ -216,20 +170,12 @@
         }
       },
       "additionalProperties": false,
-      "description": "The keys of the jwplayer captions that were generated.",
-      "pbj": {
-        "type": "string",
-        "rule": "map"
-      }
+      "description": "The keys of the jwplayer captions that were generated."
     },
     "thumbnail_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "The node_ref of the image used to generate the jwplayer thumbnail.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
+      "description": "The node_ref of the image used to generate the jwplayer thumbnail."
     }
   },
   "required": [

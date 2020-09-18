@@ -11,77 +11,44 @@
     "name": {
       "type": "string",
       "pattern": "^[a-zA-Z_]{1}[\\w-]*$",
-      "description": "A unique identifier (within the form) for the field. This value is not shown to the user and should NOT change once set.",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "description": "A unique identifier (within the form) for the field. This value is not shown to the user and should NOT change once set."
     },
     "maps_to": {
       "type": "string",
       "default": "cf",
       "pattern": "^[a-zA-Z_]{1}\\w*$",
-      "description": "The name of the schema field the answer will map to. By default this will go to the \"cf\" field which is a \"dynamic-field\" list containing all answers filled out on the form (ref \"gdbots:forms:mixin:send-submission\").",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "description": "The name of the schema field the answer will map to. By default this will go to the \"cf\" field which is a \"dynamic-field\" list containing all answers filled out on the form (ref \"gdbots:forms:mixin:send-submission\")."
     },
     "label": {
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
-      "description": "The main text for the question/field.",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "description": "The main text for the question/field."
     },
     "placeholder": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "description": {
       "type": "string",
       "minLength": 0,
       "maxLength": 65535,
-      "description": "A short description to better explain this field.",
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
+      "description": "A short description to better explain this field."
     },
     "is_required": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "type": "boolean"
     },
     "link_text": {
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
-      "description": "The text that will replace the token \"{link}\" within the label or description.",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "description": "The text that will replace the token \"{link}\" within the label or description."
     },
     "link_url": {
       "type": "string",
       "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "description": "The URL to use for the replaced token \"{link}\" within the label or description.",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "url"
-      }
+      "description": "The URL to use for the replaced token \"{link}\" within the label or description."
     },
     "pii_impact": {
       "type": "string",
@@ -90,42 +57,26 @@
         "high",
         "moderate",
         "low"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "weight_units": {
       "type": "string",
       "default": "pounds",
-      "pattern": "^(kilograms|pounds)$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^(kilograms|pounds)$"
     },
     "min_weight": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
       "maximum": 65535,
-      "description": "The person's minimum physical weight recorded in pounds or kilograms.",
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "description": "The person's minimum physical weight recorded in pounds or kilograms."
     },
     "max_weight": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
       "maximum": 65535,
-      "description": "The person's maximum physical weight recorded in pounds or kilograms.",
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "description": "The person's maximum physical weight recorded in pounds or kilograms."
     }
   },
   "required": [

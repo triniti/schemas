@@ -13,11 +13,7 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "A set of strings used for categorization or workflow. Similar to slack channels, github or gmail labels.",
-      "pbj": {
-        "type": "string",
-        "rule": "set"
-      }
+      "description": "A set of strings used for categorization or workflow. Similar to slack channels, github or gmail labels."
     }
   },
   "additionalProperties": true

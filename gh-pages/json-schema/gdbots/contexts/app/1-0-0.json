@@ -10,52 +10,27 @@
     },
     "_id": {
       "type": "string",
-      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
-      "pbj": {
-        "type": "uuid",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
     "vendor": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     },
     "name": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     },
     "version": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     },
     "build": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     },
     "variant": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     }
   },
   "required": [

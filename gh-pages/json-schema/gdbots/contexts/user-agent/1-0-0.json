@@ -10,97 +10,57 @@
     },
     "br_family": {
       "type": "string",
-      "pattern": ".+",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": ".+"
     },
     "br_major": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "br_minor": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "br_patch": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "os_family": {
       "type": "string",
-      "pattern": ".+",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": ".+"
     },
     "os_major": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "os_minor": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "os_patch": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "os_patch_minor": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "dvce_family": {
       "type": "string",
-      "pattern": ".+",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": ".+"
     }
   },
   "required": [

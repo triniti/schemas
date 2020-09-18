@@ -5,30 +5,23 @@
   "properties": {
     "request_id": {
       "type": "string",
-      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
-      "pbj": {
-        "type": "uuid",
-        "rule": "single"
-      }
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
     "occurred_at": {
       "type": "string",
-      "pattern": "^[1-9]{1}[0-9]{12,15}$",
-      "pbj": {
-        "type": "microtime",
-        "rule": "single"
-      }
+      "pattern": "^[1-9]{1}[0-9]{12,15}$"
+    },
+    "ctx_tenant_id": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "Multi-tenant apps can use this field to track the tenant id."
     },
     "ctx_retries": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
       "maximum": 255,
-      "description": "The \"ctx_retries\" field is used to keep track of how many attempts were made to handle this request. In some cases, the service or transport that handles the request may be down or over capacity and is being retried.",
-      "pbj": {
-        "type": "tiny-int",
-        "rule": "single"
-      }
+      "description": "The \"ctx_retries\" field is used to keep track of how many attempts were made to handle this request. In some cases, the service or transport that handles the request may be down or over capacity and is being retried."
     },
     "ctx_causator_ref": {
       "type": "object",
@@ -56,11 +49,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_correlator_ref": {
       "type": "object",
@@ -88,11 +77,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_user_ref": {
       "type": "object",
@@ -120,11 +105,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_app": {
       "type": "object",
@@ -133,11 +114,7 @@
           "$ref": "#/definitions/app"
         }
       ],
-      "description": "The \"ctx_app\" refers to the application used to make the request. This is different from ctx_ua (user_agent) because the agent used (Safari, Firefox) is not necessarily the app used (cms, iOS app, website)",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      "description": "The \"ctx_app\" refers to the application used to make the request. This is different from ctx_ua (user_agent) because the agent used (Safari, Firefox) is not necessarily the app used (cms, iOS app, website)"
     },
     "ctx_cloud": {
       "type": "object",
@@ -146,41 +123,20 @@
           "$ref": "#/definitions/cloud"
         }
       ],
-      "description": "The \"ctx_cloud\" is set by the server making the request and is generally only used internally for tracking and performance monitoring.",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      "description": "The \"ctx_cloud\" is set by the server making the request and is generally only used internally for tracking and performance monitoring."
     },
     "ctx_ip": {
       "type": "string",
-      "format": "ipv4",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "ipv4",
-        "overridable": true
-      }
+      "format": "ipv4"
     },
     "ctx_ipv6": {
       "type": "string",
-      "format": "ipv6",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "ipv6",
-        "overridable": true
-      }
+      "format": "ipv6"
     },
     "ctx_ua": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 65535,
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "overridable": true
-      }
+      "maxLength": 65535
     },
     "derefs": {
       "type": "array",
@@ -192,11 +148,7 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "Field names to dereference, this serves as a hint to the server and is not necessarily gauranteed since authorization, availability, etc. are determined by the server not the client.",
-      "pbj": {
-        "type": "string",
-        "rule": "set"
-      }
+      "description": "Field names to dereference, this serves as a hint to the server and is not necessarily gauranteed since authorization, availability, etc. are determined by the server not the client."
     }
   },
   "required": [
