@@ -27,19 +27,11 @@
       <field name="title" type="string"/>
       <field name="user_id" type="string" pattern="^[\w\.-]+$"/>
       <field name="user_name" type="string" pattern="^[\s\w\.-]+$"/>
-      <field name="poster_image_ref" type="identifier">
+      <field name="poster_image_ref" type="node-ref">
         <description>
           A reference to an image asset to use as the poster that will
           override what is provided by vimeo.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
     </fields>
 

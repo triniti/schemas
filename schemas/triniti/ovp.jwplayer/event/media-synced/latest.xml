@@ -12,18 +12,10 @@
           The keys of the jwplayer captions that were generated.
         </description>
       </field>
-      <field name="thumbnail_ref" type="identifier">
+      <field name="thumbnail_ref" type="node-ref">
         <description>
           The node_ref of the image used to generate the jwplayer thumbnail.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
     </fields>
 

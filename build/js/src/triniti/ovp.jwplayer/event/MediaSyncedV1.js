@@ -3,7 +3,6 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import Message from '@gdbots/pbj/Message';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 
@@ -94,8 +93,7 @@ export default class MediaSyncedV1 extends Message {
         /*
          * The node_ref of the image used to generate the jwplayer thumbnail.
          */
-        Fb.create('thumbnail_ref', T.IdentifierType.create())
-          .classProto(NodeRef)
+        Fb.create('thumbnail_ref', T.NodeRefType.create())
           .build(),
       ],
       this.MIXINS,

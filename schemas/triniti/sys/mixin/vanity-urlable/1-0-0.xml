@@ -5,7 +5,7 @@
 
   <schema id="pbj:triniti:sys:mixin:vanity-urlable:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="redirect_ref" type="identifier">
+      <field name="redirect_ref" type="node-ref">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>

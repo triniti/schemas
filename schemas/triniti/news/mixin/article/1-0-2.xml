@@ -30,31 +30,15 @@
       <field name="allow_comments" type="boolean">
         <default>true</default>
       </field>
-      <field name="author_ref" type="identifier">
+      <field name="author_ref" type="node-ref">
         <description>
           A reference to the author of the article.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
-      <field name="image_ref" type="identifier">
+      <field name="image_ref" type="node-ref">
         <description>
           A reference to the image asset to use for widgets, sharing, seo.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="classification" type="string" format="slug">
         <description>
@@ -105,7 +89,7 @@
         <default>true</default>
       </field>
       <field name="related_articles_heading" type="string"/>
-      <field name="related_article_refs" type="identifier" rule="list">
+      <field name="related_article_refs" type="node-ref" rule="list">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>

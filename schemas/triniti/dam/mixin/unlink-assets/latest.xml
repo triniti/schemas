@@ -6,18 +6,10 @@
   <schema id="pbj:triniti:dam:mixin:unlink-assets:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:command:v1">
     <fields>
       <field name="node_ref" type="node-ref" required="true"/>
-      <field name="asset_refs" type="identifier" rule="set">
+      <field name="asset_refs" type="node-ref" rule="set">
         <description>
           A set of asset refs to unlink from this node ref.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
     </fields>
   </schema>

@@ -95,7 +95,7 @@
         <default>true</default>
       </field>
       <field name="related_articles_heading" type="string"/>
-      <field name="related_article_refs" type="identifier" rule="list">
+      <field name="related_article_refs" type="node-ref" rule="list">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>

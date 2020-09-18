@@ -10,7 +10,6 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Pbj\WellKnown\MessageRef;
-use Gdbots\Schemas\Ncr\NodeRef;
 use Triniti\Schemas\Curator\Enum\SlotRendering;
 
 final class SlotV1 extends AbstractMessage
@@ -34,8 +33,7 @@ final class SlotV1 extends AbstractMessage
                 /*
                  * A reference to the widget this slot will render.
                  */
-                Fb::create('widget_ref', T\IdentifierType::create())
-                    ->className(NodeRef::class)
+                Fb::create('widget_ref', T\NodeRefType::create())
                     ->build(),
                 Fb::create('rendering', T\StringEnumType::create())
                     ->withDefault(SlotRendering::LAZY())

@@ -9,7 +9,6 @@ use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
 
 final class MediaSyncedV1 extends AbstractMessage
@@ -108,8 +107,7 @@ final class MediaSyncedV1 extends AbstractMessage
                 /*
                  * The node_ref of the image used to generate the jwplayer thumbnail.
                  */
-                Fb::create('thumbnail_ref', T\IdentifierType::create())
-                    ->className(NodeRef::class)
+                Fb::create('thumbnail_ref', T\NodeRefType::create())
                     ->build(),
             ],
             self::MIXINS

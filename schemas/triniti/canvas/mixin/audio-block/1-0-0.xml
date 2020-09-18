@@ -7,18 +7,10 @@
       extends="triniti:canvas:mixin:node-ref-block:v1">
     <fields>
       <field name="launch_text" type="string"/>
-      <field name="image_ref" type="identifier">
+      <field name="image_ref" type="node-ref">
         <description>
           An optional reference to an image asset to use as the poster.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="fallback_src_url" type="text" format="url">
         <description>

@@ -17,29 +17,13 @@
           <default>() => VideoId.generate()</default>
         </js-options>
       </field>
-      <field name="image_ref" type="identifier">
+      <field name="image_ref" type="node-ref">
         <description>
           A reference to the image asset to use for widgets, sharing, seo.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
-      <field name="poster_image_ref" type="identifier">
+      <field name="poster_image_ref" type="node-ref">
         <description>A reference to the image asset to use as the poster.</description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="is_live" type="boolean"/>
       <field name="is_full_episode" type="boolean"/>
@@ -75,7 +59,7 @@
         </description>
       </field>
       <field name="related_videos_heading" type="string"/>
-      <field name="related_video_refs" type="identifier" rule="list">
+      <field name="related_video_refs" type="node-ref" rule="list">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>
@@ -85,18 +69,10 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="caption_ref" type="identifier">
+      <field name="caption_ref" type="node-ref">
         <description>
           A reference to the caption asset in DAM for this video.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="caption_urls" type="text" format="url" rule="map">
         <description>
@@ -109,18 +85,10 @@
       <field name="mezzanine_url" type="text" format="url">
         <description>URL to the mezzanine video asset.</description>
       </field>
-      <field name="mezzanine_ref" type="identifier">
+      <field name="mezzanine_ref" type="node-ref">
         <description>
           A reference to the mezzanine asset in DAM for this video.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="mpm" type="string" pattern="^[\w\.-]+$" max="50">
         <description>

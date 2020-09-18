@@ -3,7 +3,6 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import Message from '@gdbots/pbj/Message';
 import MessageRef from '@gdbots/pbj/well-known/MessageRef';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import Schema from '@gdbots/pbj/Schema';
 import SlotRendering from '@triniti/schemas/triniti/curator/enums/SlotRendering';
 import T from '@gdbots/pbj/types';
@@ -27,8 +26,7 @@ export default class SlotV1 extends Message {
         /*
          * A reference to the widget this slot will render.
          */
-        Fb.create('widget_ref', T.IdentifierType.create())
-          .classProto(NodeRef)
+        Fb.create('widget_ref', T.NodeRefType.create())
           .build(),
         Fb.create('rendering', T.StringEnumType.create())
           .withDefault(SlotRendering.LAZY)

@@ -11,7 +11,7 @@
         <default>relevance</default>
         <enum id="triniti:curator:search-timelines-sort"/>
       </field>
-      <field name="channel_ref" type="identifier">
+      <field name="channel_ref" type="node-ref">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>
@@ -21,7 +21,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="category_refs" type="identifier" rule="set">
+      <field name="category_refs" type="node-ref" rule="set">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>
@@ -31,7 +31,7 @@
           <class-proto>NodeRef</class-proto>
         </js-options>
       </field>
-      <field name="person_refs" type="identifier" rule="set">
+      <field name="person_refs" type="node-ref" rule="set">
         <php-options>
           <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
           <class-name>NodeRef::class</class-name>
