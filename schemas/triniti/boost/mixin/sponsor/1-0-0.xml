@@ -5,18 +5,6 @@
 
   <schema id="pbj:triniti:boost:mixin:sponsor:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true" overridable="true">
-        <php-options>
-          <imports>use Triniti\Schemas\Boost\SponsorId;</imports>
-          <class-name>SponsorId::class</class-name>
-          <default>function() { return SponsorId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import SponsorId from '@triniti/schemas/triniti/boost/SponsorId';</imports>
-          <class-proto>SponsorId</class-proto>
-          <default>() => SponsorId.generate()</default>
-        </js-options>
-      </field>
       <field name="type" type="string-enum">
         <default>external</default>
         <enum id="triniti:boost:sponsor-type"/>

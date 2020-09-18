@@ -5,18 +5,6 @@
 
   <schema id="pbj:triniti:curator:mixin:timeline:1-0-1" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true" overridable="true">
-        <php-options>
-          <imports>use Triniti\Schemas\Curator\TimelineId;</imports>
-          <class-name>TimelineId::class</class-name>
-          <default>function() { return TimelineId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import TimelineId from '@triniti/schemas/triniti/curator/TimelineId';</imports>
-          <class-proto>TimelineId</class-proto>
-          <default>() => TimelineId.generate()</default>
-        </js-options>
-      </field>
       <field name="display_title" type="string"/>
       <field name="image_ref" type="node-ref">
         <description>
@@ -32,16 +20,7 @@
           not have HTML as it is used in metadata, feeds, SERP and social.
         </description>
       </field>
-      <field name="related_timeline_refs" type="node-ref" rule="list">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="related_timeline_refs" type="node-ref" rule="list"/>
     </fields>
 
     <php-options>

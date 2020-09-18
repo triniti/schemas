@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Triniti\Tests\Schemas\Dam;
 
+use Gdbots\Pbj\Exception\AssertionFailed;
 use Gdbots\Pbj\WellKnown\UuidIdentifier;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
@@ -60,12 +61,12 @@ final class AssetIdTest extends TestCase
 
     /**
      * @dataProvider getInvalidIds
-     * @expectedException \Gdbots\Pbj\Exception\AssertionFailed
      *
      * @param string $string
      */
     public function testInvalid(string $string): void
     {
+        $this->expectException(AssertionFailed::class);
         AssetId::fromString($string);
     }
 

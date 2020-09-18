@@ -5,18 +5,6 @@
 
   <schema id="pbj:triniti:notify:mixin:notification:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true" overridable="true">
-        <php-options>
-          <imports>use Triniti\Schemas\Notify\NotificationId;</imports>
-          <class-name>NotificationId::class</class-name>
-          <default>function() { return NotificationId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import NotificationId from '@triniti/schemas/triniti/notify/NotificationId';</imports>
-          <class-proto>NotificationId</class-proto>
-          <default>() => NotificationId.generate()</default>
-        </js-options>
-      </field>
       <field name="app_ref" type="node-ref">
         <description>
           A reference to the app this notification is being sent to.

@@ -5,18 +5,6 @@
 
   <schema id="pbj:triniti:news:mixin:article:1-0-2" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true" overridable="true">
-        <php-options>
-          <imports>use Triniti\Schemas\News\ArticleId;</imports>
-          <class-name>ArticleId::class</class-name>
-          <default>function() { return ArticleId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import ArticleId from '@triniti/schemas/triniti/news/ArticleId';</imports>
-          <class-proto>ArticleId</class-proto>
-          <default>() => ArticleId.generate()</default>
-        </js-options>
-      </field>
       <field name="is_homepage_news" type="boolean">
         <default>true</default>
       </field>
@@ -89,16 +77,7 @@
         <default>true</default>
       </field>
       <field name="related_articles_heading" type="string"/>
-      <field name="related_article_refs" type="node-ref" rule="list">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="related_article_refs" type="node-ref" rule="list"/>
     </fields>
 
     <php-options>

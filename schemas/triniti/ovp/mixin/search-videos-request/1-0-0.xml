@@ -13,26 +13,8 @@
       </field>
       <field name="show" type="string" format="slug"/>
       <field name="channel_ref" type="node-ref"/>
-      <field name="category_refs" type="node-ref" rule="set">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
-      <field name="person_refs" type="node-ref" rule="set">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="category_refs" type="node-ref" rule="set"/>
+      <field name="person_refs" type="node-ref" rule="set"/>
     </fields>
   </schema>
 </pbj-schema>

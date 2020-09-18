@@ -5,18 +5,6 @@
 
   <schema id="pbj:triniti:curator:mixin:gallery:1-0-2" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true" overridable="true">
-        <php-options>
-          <imports>use Triniti\Schemas\Curator\GalleryId;</imports>
-          <class-name>GalleryId::class</class-name>
-          <default>function() { return GalleryId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import GalleryId from '@triniti/schemas/triniti/curator/GalleryId';</imports>
-          <class-proto>GalleryId</class-proto>
-          <default>() => GalleryId.generate()</default>
-        </js-options>
-      </field>
       <field name="image_ref" type="node-ref">
         <description>A reference to the image asset to use as the cover/primary.</description>
       </field>
@@ -48,16 +36,7 @@
       <field name="next_gallery_ref" type="node-ref">
         <description>A reference to the next gallery.</description>
       </field>
-      <field name="related_gallery_refs" type="node-ref" rule="list">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="related_gallery_refs" type="node-ref" rule="list"/>
     </fields>
 
     <php-options>
