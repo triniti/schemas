@@ -49,7 +49,7 @@ final class SlotV1 extends AbstractMessage
         return new MessageRef(static::schema()->getCurie(), $this->generateEtag(), $tag);
     }
     
-    public function getUriTemplateVars(): array: array
+    public function getUriTemplateVars(): array
     {
         return [];
     }
