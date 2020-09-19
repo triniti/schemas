@@ -9,7 +9,6 @@ autoload.php
 composer.lock
 /composer.phar
 /phpunit.xml
-.phpunit.result.cache
 /vendor/
 .buildpath
 *.iml
