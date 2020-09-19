@@ -58,3 +58,7 @@ Thumbs.db
 # Vagrant provisioning #
 ########################
 .vagrant/
+
+# Test files #
+########################
+.phpunit.result.cache
