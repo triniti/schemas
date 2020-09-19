@@ -7,13 +7,6 @@ use Gdbots\Pbj\Assertion;
 use Gdbots\Pbj\Exception\AssertionFailed;
 use Gdbots\Pbj\WellKnown\Identifier;
 use Gdbots\Pbj\WellKnown\UuidIdentifier;
-use Triniti\Schemas\Dam\Mixin\ArchiveAsset\ArchiveAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\AudioAsset\AudioAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\CodeAsset\CodeAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\DocumentAsset\DocumentAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\ImageAsset\ImageAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\UnknownAsset\UnknownAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\VideoAsset\VideoAssetV1Mixin;
 
 /**
  * An asset id is a composite id that contains enough data to easily
@@ -49,12 +42,6 @@ final class AssetId implements Identifier
     private string $date;
     private string $uuid;
 
-    /**
-     * @param string $type
-     * @param string $ext
-     * @param string $date
-     * @param string $uuid
-     */
     private function __construct(string $type, string $ext, string $date, string $uuid)
     {
         $this->type = $type;
@@ -64,7 +51,7 @@ final class AssetId implements Identifier
         $this->id = sprintf('%s_%s_%s_%s', $type, $ext, $this->date, $this->uuid);
     }
 
-    public static function fromString($string): self
+    public static function fromString(string $string): self
     {
         if (!preg_match(self::VALID_PATTERN, $string, $matches)) {
             throw new AssertionFailed(
@@ -148,7 +135,7 @@ final class AssetId implements Identifier
      */
     public function getUuid(bool $asObject = false)
     {
-        if (true === $asObject) {
+        if ($asObject) {
             $uuid = [
                 substr($this->uuid, 0, 8),
                 substr($this->uuid, 8, 4),

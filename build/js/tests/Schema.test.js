@@ -4,6 +4,7 @@ import isPlainObject from 'lodash/isPlainObject';
 import Message from '@gdbots/pbj/Message';
 import MessageRef from '@gdbots/pbj/well-known/MessageRef';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
+import '@triniti/schemas';
 
 
 async function resolveImport(resolver) {

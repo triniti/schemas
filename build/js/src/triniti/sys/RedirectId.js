@@ -1,12 +1,6 @@
-/* eslint-disable no-mixed-operators, no-useless-escape */
 import base64 from 'base-64';
 import utf8 from 'utf8';
 import Identifier from '@gdbots/pbj/well-known/Identifier';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
-import RedirectV1Mixin from './mixin/redirect/RedirectV1Mixin';
-
-/** @type {SchemaQName} */
-let qname;
 
 /**
  * Encodes the input string to URL safe base64 encoding
@@ -31,7 +25,6 @@ const urlsafeB64Decode = input => utf8.decode(base64.decode(
     .replace(/\_/g, '/')
 ));
 
-
 /**
  * A redirect id is a URL safe base64 encoded string.
  * The string is case sensitive.
@@ -40,17 +33,6 @@ export default class RedirectId extends Identifier {
   constructor(value) {
     super(value);
     Object.freeze(this);
-  }
-
-  /**
-   * @returns {NodeRef}
-   */
-  toNodeRef() {
-    if (!qname) {
-      qname = RedirectV1Mixin.findOne().getQName();
-    }
-
-    return new NodeRef(qname, this.value);
   }
 
   /**

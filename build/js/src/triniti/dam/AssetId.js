@@ -1,14 +1,6 @@
 import AssertionFailed from '@gdbots/pbj/exceptions/AssertionFailed';
 import Identifier from '@gdbots/pbj/well-known/Identifier';
 import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
-import ArchiveAssetV1Mixin from './mixin/archive-asset/ArchiveAssetV1Mixin';
-import AudioAssetV1Mixin from './mixin/audio-asset/AudioAssetV1Mixin';
-import CodeAssetV1Mixin from './mixin/code-asset/CodeAssetV1Mixin';
-import DocumentAssetV1Mixin from './mixin/document-asset/DocumentAssetV1Mixin';
-import ImageAssetV1Mixin from './mixin/image-asset/ImageAssetV1Mixin';
-import VideoAssetV1Mixin from './mixin/video-asset/VideoAssetV1Mixin';
-import UnknownAssetV1Mixin from './mixin/unknown-asset/UnknownAssetV1Mixin';
 
 /**
  * Regular expression pattern for matching a valid AssetId string.
@@ -158,33 +150,5 @@ export default class AssetId extends Identifier {
     }
 
     return `${p.join('/')}.${this.ext}`;
-  }
-
-  /**
-   * @returns {NodeRef}
-   */
-  toNodeRef() {
-    switch (this.type) {
-      case 'archive':
-        return new NodeRef(ArchiveAssetV1Mixin.findOne().getQName(), this.value);
-
-      case 'audio':
-        return new NodeRef(AudioAssetV1Mixin.findOne().getQName(), this.value);
-
-      case 'code':
-        return new NodeRef(CodeAssetV1Mixin.findOne().getQName(), this.value);
-
-      case 'document':
-        return new NodeRef(DocumentAssetV1Mixin.findOne().getQName(), this.value);
-
-      case 'image':
-        return new NodeRef(ImageAssetV1Mixin.findOne().getQName(), this.value);
-
-      case 'video':
-        return new NodeRef(VideoAssetV1Mixin.findOne().getQName(), this.value);
-
-      default:
-        return new NodeRef(UnknownAssetV1Mixin.findOne().getQName(), this.value);
-    }
   }
 }

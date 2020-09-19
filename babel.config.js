@@ -22,7 +22,7 @@ switch (env) {
       {
         root: ['./build/js/src'],
         alias: {
-          '@wbeme/schemas': './build/js/src',
+          '@triniti/schemas': './build/js/src',
         },
       },
     ]);
