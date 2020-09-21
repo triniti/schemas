@@ -1,3 +1,3 @@
 require('@babel/register')({
-  ignore: [/node_modules\/(?!@gdbots|@triniti|lodash-es)/],
+  ignore: [/node_modules\/(?!@gdbots|lodash-es)/],
 });
