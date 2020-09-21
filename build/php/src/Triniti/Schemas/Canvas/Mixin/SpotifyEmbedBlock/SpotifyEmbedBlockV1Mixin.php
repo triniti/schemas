@@ -15,9 +15,9 @@ trait SpotifyEmbedBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'spotify_type' => $this->get('spotify_type'),
-            'spotify_id' => $this->get('spotify_id'),
+            'etag' => $this->fget('etag'),
+            'spotify_type' => $this->fget('spotify_type'),
+            'spotify_id' => $this->fget('spotify_id'),
         ];
     }
 }

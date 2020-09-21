@@ -15,9 +15,9 @@ trait PageV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'slug' => $this->get('slug'),
-            'layout' => $this->get('layout'),
+            '_id' => (string)$this->fget('_id'),
+            'slug' => $this->fget('slug'),
+            'layout' => $this->fget('layout'),
         ];
     }
 }

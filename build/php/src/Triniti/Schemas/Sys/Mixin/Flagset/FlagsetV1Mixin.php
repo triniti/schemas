@@ -15,7 +15,7 @@ trait FlagsetV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
+            '_id' => (string)$this->fget('_id'),
         ];
     }
 }

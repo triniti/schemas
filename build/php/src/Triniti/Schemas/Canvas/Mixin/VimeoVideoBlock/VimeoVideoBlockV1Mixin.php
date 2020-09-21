@@ -15,14 +15,14 @@ trait VimeoVideoBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'id' => $this->get('id'),
-            'autoplay' => $this->get('autoplay'),
-            'loop' => $this->get('loop'),
-            'show_byline' => $this->get('show_byline'),
-            'show_portrait' => $this->get('show_portrait'),
-            'show_title' => $this->get('show_title'),
-            'user_id' => $this->get('user_id'),
+            'etag' => $this->fget('etag'),
+            'id' => $this->fget('id'),
+            'autoplay' => $this->fget('autoplay'),
+            'loop' => $this->fget('loop'),
+            'show_byline' => $this->fget('show_byline'),
+            'show_portrait' => $this->fget('show_portrait'),
+            'show_title' => $this->fget('show_title'),
+            'user_id' => $this->fget('user_id'),
         ];
     }
 }

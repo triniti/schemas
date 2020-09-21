@@ -15,11 +15,11 @@ trait ImageBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'node_ref' => (string)$this->get('node_ref'),
-            'is_nswf' => $this->get('is_nswf'),
-            'url' => $this->get('url'),
-            'fallback_src_url' => $this->get('fallback_src_url'),
+            'etag' => $this->fget('etag'),
+            'node_ref' => (string)$this->fget('node_ref'),
+            'is_nswf' => $this->fget('is_nswf'),
+            'url' => $this->fget('url'),
+            'fallback_src_url' => $this->fget('fallback_src_url'),
         ];
     }
 }

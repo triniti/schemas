@@ -15,11 +15,11 @@ trait GoogleMapBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'q' => $this->get('q'),
-            'center' => (string)$this->get('center'),
-            'zoom' => $this->get('zoom'),
-            'maptype' => $this->get('maptype'),
+            'etag' => $this->fget('etag'),
+            'q' => $this->fget('q'),
+            'center' => (string)$this->fget('center'),
+            'zoom' => $this->fget('zoom'),
+            'maptype' => $this->fget('maptype'),
         ];
     }
 }

@@ -15,6 +15,6 @@ trait BlockV1Mixin
 {
     public function generateMessageRef(?string $tag = null): MessageRef
     {
-        return new MessageRef(static::schema()->getCurie(), $this->get('etag') ?: $this->generateEtag(['etag']), $tag);
+        return new MessageRef(static::schema()->getCurie(), $this->fget('etag') ?: $this->generateEtag(['etag']), $tag);
     }
 }

@@ -15,8 +15,8 @@ trait TiktokEmbedBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'tiktok_id' => $this->get('tiktok_id'),
+            'etag' => $this->fget('etag'),
+            'tiktok_id' => $this->fget('tiktok_id'),
         ];
     }
 }

@@ -21,8 +21,8 @@
 public function getUriTemplateVars(): array
 {
     return [
-        '_id' => (string)$this->get('_id'),
-        'promotion_slot_prefix' => $this->get('promotion_slot_prefix'),
+        '_id' => (string)$this->fget('_id'),
+        'promotion_slot_prefix' => $this->fget('promotion_slot_prefix'),
     ];
 }
           ]]>

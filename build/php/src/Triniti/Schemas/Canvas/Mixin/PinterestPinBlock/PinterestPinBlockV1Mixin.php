@@ -15,10 +15,10 @@ trait PinterestPinBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'href' => $this->get('href'),
-            'terse' => $this->get('terse'),
-            'size' => $this->get('size'),
+            'etag' => $this->fget('etag'),
+            'href' => $this->fget('href'),
+            'terse' => $this->fget('terse'),
+            'size' => $this->fget('size'),
         ];
     }
 }

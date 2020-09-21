@@ -21,9 +21,9 @@
 public function getUriTemplateVars(): array
 {
     return [
-        '_id' => (string)$this->get('_id'),
-        'width' => $this->get('width'),
-        'height' => $this->get('height'),
+        '_id' => (string)$this->fget('_id'),
+        'width' => $this->fget('width'),
+        'height' => $this->fget('height'),
     ];
 }
           ]]>

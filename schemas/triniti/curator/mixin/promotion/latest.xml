@@ -63,8 +63,8 @@
 public function getUriTemplateVars(): array
 {
     return [
-        '_id' => (string)$this->get('_id'),
-        'slot' => (string)$this->get('slot'),
+        '_id' => (string)$this->fget('_id'),
+        'slot' => (string)$this->fget('slot'),
     ];
 }
           ]]>

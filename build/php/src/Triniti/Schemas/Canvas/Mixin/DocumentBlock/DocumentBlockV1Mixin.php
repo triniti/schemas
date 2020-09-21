@@ -15,8 +15,8 @@ trait DocumentBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'node_ref' => (string)$this->get('node_ref'),
+            'etag' => $this->fget('etag'),
+            'node_ref' => (string)$this->fget('node_ref'),
         ];
     }
 }

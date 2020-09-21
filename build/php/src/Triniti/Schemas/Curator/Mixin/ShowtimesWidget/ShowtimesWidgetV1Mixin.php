@@ -15,8 +15,8 @@ trait ShowtimesWidgetV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'show' => $this->get('show'),
+            '_id' => (string)$this->fget('_id'),
+            'show' => $this->fget('show'),
         ];
     }
 }

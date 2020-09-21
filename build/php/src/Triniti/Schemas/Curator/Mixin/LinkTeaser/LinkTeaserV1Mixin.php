@@ -15,8 +15,8 @@ trait LinkTeaserV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'link_url' => $this->get('link_url'),
+            '_id' => (string)$this->fget('_id'),
+            'link_url' => $this->fget('link_url'),
         ];
     }
 }

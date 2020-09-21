@@ -15,10 +15,10 @@ trait YoutubeVideoBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'id' => $this->get('id'),
-            'autoplay' => $this->get('autoplay'),
-            'start_at' => $this->get('start_at'),
+            'etag' => $this->fget('etag'),
+            'id' => $this->fget('id'),
+            'autoplay' => $this->fget('autoplay'),
+            'start_at' => $this->fget('start_at'),
         ];
     }
 }

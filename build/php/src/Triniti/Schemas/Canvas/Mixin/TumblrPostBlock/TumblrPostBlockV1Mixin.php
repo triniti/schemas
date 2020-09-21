@@ -15,9 +15,9 @@ trait TumblrPostBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'href' => $this->get('href'),
-            'canonical_url' => $this->get('canonical_url'),
+            'etag' => $this->fget('etag'),
+            'href' => $this->fget('href'),
+            'canonical_url' => $this->fget('canonical_url'),
         ];
     }
 }

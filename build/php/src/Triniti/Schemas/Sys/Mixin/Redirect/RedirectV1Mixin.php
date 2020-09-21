@@ -15,11 +15,11 @@ trait RedirectV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'uri' => $this->get('title'),
-            'redirect_to' => $this->get('redirect_to'),
-            'is_permanent' => $this->get('is_permanent'),
-            'is_vanity' => $this->get('is_vanity'),
+            '_id' => (string)$this->fget('_id'),
+            'uri' => $this->fget('title'),
+            'redirect_to' => $this->fget('redirect_to'),
+            'is_permanent' => $this->fget('is_permanent'),
+            'is_vanity' => $this->fget('is_vanity'),
         ];
     }
 }

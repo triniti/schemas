@@ -31,12 +31,12 @@
 public function getUriTemplateVars(): array
 {
     return [
-        'etag' => $this->get('etag'),
-        'track_id' => $this->get('track_id'),
-        'auto_play' => $this->get('auto_play'),
-        'show_comments' => $this->get('show_comments'),
-        'hide_related' => $this->get('hide_related'),
-        'visual' => $this->get('visual'),
+        'etag' => $this->fget('etag'),
+        'track_id' => $this->fget('track_id'),
+        'auto_play' => $this->fget('auto_play'),
+        'show_comments' => $this->fget('show_comments'),
+        'hide_related' => $this->fget('hide_related'),
+        'visual' => $this->fget('visual'),
     ];
 }
           ]]>

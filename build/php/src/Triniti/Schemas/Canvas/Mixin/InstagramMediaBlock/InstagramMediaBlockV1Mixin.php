@@ -15,9 +15,9 @@ trait InstagramMediaBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'id' => $this->get('id'),
-            'hidecaption' => $this->get('hidecaption'),
+            'etag' => $this->fget('etag'),
+            'id' => $this->fget('id'),
+            'hidecaption' => $this->fget('hidecaption'),
         ];
     }
 }

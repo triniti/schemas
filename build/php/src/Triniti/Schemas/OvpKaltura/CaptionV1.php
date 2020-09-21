@@ -73,14 +73,14 @@ final class CaptionV1 extends AbstractMessage
 
     public function generateMessageRef(?string $tag = null): MessageRef
     {
-        return new MessageRef(static::schema()->getCurie(), $this->get('id'), $tag);
+        return new MessageRef(static::schema()->getCurie(), $this->fget('id'), $tag);
     }
     
     public function getUriTemplateVars(): array
     {
         return [
-            'id' => $this->get('id'),
-            'entry_id' => $this->get('entry_id'),
+            'id' => $this->fget('id'),
+            'entry_id' => $this->fget('entry_id'),
         ];
     }
 }

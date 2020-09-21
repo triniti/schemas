@@ -15,9 +15,9 @@ trait EmailNotificationV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'sender' => $this->get('sender'),
-            'template' => $this->get('template'),
+            '_id' => (string)$this->fget('_id'),
+            'sender' => $this->fget('sender'),
+            'template' => $this->fget('template'),
         ];
     }
 }

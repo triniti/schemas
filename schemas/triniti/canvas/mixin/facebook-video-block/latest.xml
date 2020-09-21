@@ -28,11 +28,11 @@
 public function getUriTemplateVars(): array
 {
     return [
-        'etag' => $this->get('etag'),
-        'href' => $this->get('href'),
-        'autoplay' => $this->get('autoplay'),
-        'show_text' => $this->get('show_text'),
-        'show_captions' => $this->get('show_captions'),
+        'etag' => $this->fget('etag'),
+        'href' => $this->fget('href'),
+        'autoplay' => $this->fget('autoplay'),
+        'show_text' => $this->fget('show_text'),
+        'show_captions' => $this->fget('show_captions'),
     ];
 }
           ]]>

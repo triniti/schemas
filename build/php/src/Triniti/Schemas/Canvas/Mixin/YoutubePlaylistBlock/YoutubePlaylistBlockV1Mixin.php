@@ -15,10 +15,10 @@ trait YoutubePlaylistBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'playlist_id' => $this->get('playlist_id'),
-            'video_id' => $this->get('video_id'),
-            'autoplay' => $this->get('autoplay'),
+            'etag' => $this->fget('etag'),
+            'playlist_id' => $this->fget('playlist_id'),
+            'video_id' => $this->fget('video_id'),
+            'autoplay' => $this->fget('autoplay'),
         ];
     }
 }

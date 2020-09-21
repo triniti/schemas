@@ -15,8 +15,8 @@ trait SpotifyTrackBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'track_id' => $this->get('track_id'),
+            'etag' => $this->fget('etag'),
+            'track_id' => $this->fget('track_id'),
         ];
     }
 }

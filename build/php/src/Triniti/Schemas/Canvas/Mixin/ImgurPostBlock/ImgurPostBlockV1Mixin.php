@@ -15,9 +15,9 @@ trait ImgurPostBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
-            'id' => $this->get('id'),
-            'show_context' => $this->get('show_context'),
+            'etag' => $this->fget('etag'),
+            'id' => $this->fget('id'),
+            'show_context' => $this->fget('show_context'),
         ];
     }
 }

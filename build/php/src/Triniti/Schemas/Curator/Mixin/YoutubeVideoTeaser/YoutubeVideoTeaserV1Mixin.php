@@ -15,8 +15,8 @@ trait YoutubeVideoTeaserV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'youtube_video_id' => $this->get('youtube_video_id'),
+            '_id' => (string)$this->fget('_id'),
+            'youtube_video_id' => $this->fget('youtube_video_id'),
         ];
     }
 }

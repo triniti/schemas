@@ -15,7 +15,7 @@ trait PageBreakBlockV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            'etag' => $this->get('etag'),
+            'etag' => $this->fget('etag'),
         ];
     }
 }

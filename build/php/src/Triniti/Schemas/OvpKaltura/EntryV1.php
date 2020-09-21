@@ -153,14 +153,14 @@ final class EntryV1 extends AbstractMessage
 
     public function generateMessageRef(?string $tag = null): MessageRef
     {
-        return new MessageRef(static::schema()->getCurie(), $this->get('entry_id'), $tag);
+        return new MessageRef(static::schema()->getCurie(), $this->fget('entry_id'), $tag);
     }
     
     public function getUriTemplateVars(): array
     {
         return [
-            'entry_id' => $this->get('entry_id'),
-            'partner_id' => $this->get('partner_id'),
+            'entry_id' => $this->fget('entry_id'),
+            'partner_id' => $this->fget('partner_id'),
         ];
     }
 }

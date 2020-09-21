@@ -15,14 +15,14 @@ trait PollAnswerV1Mixin
 {
     public function generateMessageRef(?string $tag = null): MessageRef
     {
-        return new MessageRef(static::schema()->getCurie(), $this->get('_id'), $tag);
+        return new MessageRef(static::schema()->getCurie(), $this->fget('_id'), $tag);
     }
     
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'url' => $this->get('url'),
+            '_id' => (string)$this->fget('_id'),
+            'url' => $this->fget('url'),
         ];
     }
 }

@@ -15,9 +15,9 @@ trait PersonV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'slug' => $this->get('slug'),
-            'twitter_username' => $this->get('twitter_username'),
+            '_id' => (string)$this->fget('_id'),
+            'slug' => $this->fget('slug'),
+            'twitter_username' => $this->fget('twitter_username'),
         ];
     }
 }
