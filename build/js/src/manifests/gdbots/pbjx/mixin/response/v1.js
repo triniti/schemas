@@ -35,4 +35,7 @@ export default [
   'triniti:sys:request:list-all-flagsets-response:v1',
   'triniti:sys:request:list-all-picklists-response:v1',
   'triniti:sys:request:search-redirects-response:v1',
+  'triniti:taxonomy:request:get-all-channels-response:v1',
+  'triniti:taxonomy:request:search-categories-response:v1',
+  'triniti:taxonomy:request:suggest-hashtags-response:v1',
 ];

@@ -24,4 +24,5 @@ export default [
   'triniti:ovp:request:search-videos-request:v1',
   'triniti:people:request:search-people-request:v1',
   'triniti:sys:request:search-redirects-request:v1',
+  'triniti:taxonomy:request:search-categories-request:v1',
 ];

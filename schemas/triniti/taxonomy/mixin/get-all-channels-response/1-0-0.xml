@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:taxonomy:mixin:get-all-channels-response:1-0-0" mixin="true"
-      extends="gdbots:pbjx:mixin:response:v1">
+      extends="gdbots:pbjx:mixin:response:v1" deprecated="true">
     <fields>
       <field name="nodes" type="message" rule="list">
         <any-of>

@@ -70,6 +70,12 @@ __BREAKING CHANGES__
     * `triniti:sys:mixin:list-all-picklists-response`
     * `triniti:sys:mixin:search-redirects-request`
     * `triniti:sys:mixin:search-redirects-response`
+    * `triniti:taxonomy:mixin:get-all-channels-request`
+    * `triniti:taxonomy:mixin:get-all-channels-response`
+    * `triniti:taxonomy:mixin:search-categories-request`
+    * `triniti:taxonomy:mixin:search-categories-response`
+    * `triniti:taxonomy:mixin:suggest-hashtags-request`
+    * `triniti:taxonomy:mixin:suggest-hashtags-response`
 * __Add Schemas:__
     * `triniti:apollo:command:cast-vote`
     * `triniti:apollo:request:search-polls-request`
@@ -131,6 +137,12 @@ __BREAKING CHANGES__
     * `triniti:sys:request:list-all-picklists-response`
     * `triniti:sys:request:search-redirects-request`
     * `triniti:sys:request:search-redirects-response`
+    * `triniti:taxonomy:request:get-all-channels-request`
+    * `triniti:taxonomy:request:get-all-channels-response`
+    * `triniti:taxonomy:request:search-categories-request`
+    * `triniti:taxonomy:request:search-categories-response`
+    * `triniti:taxonomy:request:suggest-hashtags-request`
+    * `triniti:taxonomy:request:suggest-hashtags-response`
 
 
 ## v1.1.13

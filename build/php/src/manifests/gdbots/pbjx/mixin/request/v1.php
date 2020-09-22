@@ -37,4 +37,7 @@ return [
     'triniti:sys:request:list-all-flagsets-request:v1',
     'triniti:sys:request:list-all-picklists-request:v1',
     'triniti:sys:request:search-redirects-request:v1',
+    'triniti:taxonomy:request:get-all-channels-request:v1',
+    'triniti:taxonomy:request:search-categories-request:v1',
+    'triniti:taxonomy:request:suggest-hashtags-request:v1',
 ];

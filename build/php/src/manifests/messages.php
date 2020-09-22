@@ -193,4 +193,10 @@ return [
     'triniti:sys:request:list-all-picklists-response:v1' => 'Triniti\Schemas\Sys\Request\ListAllPicklistsResponseV1',
     'triniti:sys:request:search-redirects-request:v1' => 'Triniti\Schemas\Sys\Request\SearchRedirectsRequestV1',
     'triniti:sys:request:search-redirects-response:v1' => 'Triniti\Schemas\Sys\Request\SearchRedirectsResponseV1',
+    'triniti:taxonomy:request:get-all-channels-request:v1' => 'Triniti\Schemas\Taxonomy\Request\GetAllChannelsRequestV1',
+    'triniti:taxonomy:request:get-all-channels-response:v1' => 'Triniti\Schemas\Taxonomy\Request\GetAllChannelsResponseV1',
+    'triniti:taxonomy:request:search-categories-request:v1' => 'Triniti\Schemas\Taxonomy\Request\SearchCategoriesRequestV1',
+    'triniti:taxonomy:request:search-categories-response:v1' => 'Triniti\Schemas\Taxonomy\Request\SearchCategoriesResponseV1',
+    'triniti:taxonomy:request:suggest-hashtags-request:v1' => 'Triniti\Schemas\Taxonomy\Request\SuggestHashtagsRequestV1',
+    'triniti:taxonomy:request:suggest-hashtags-response:v1' => 'Triniti\Schemas\Taxonomy\Request\SuggestHashtagsResponseV1',
 ];
