@@ -184,5 +184,7 @@ MessageResolver::register([
     'triniti:ovp:event:transcription-completed:v1' => 'Triniti\Schemas\Ovp\Event\TranscriptionCompletedV1',
     'triniti:ovp:event:transcription-failed:v1' => 'Triniti\Schemas\Ovp\Event\TranscriptionFailedV1',
     'triniti:ovp:event:transcription-started:v1' => 'Triniti\Schemas\Ovp\Event\TranscriptionStartedV1',
+    'triniti:ovp:request:search-videos-request:v1' => 'Triniti\Schemas\Ovp\Request\SearchVideosRequestV1',
+    'triniti:ovp:request:search-videos-response:v1' => 'Triniti\Schemas\Ovp\Request\SearchVideosResponseV1',
     'triniti:sys:command:purge-cache:v1' => 'Triniti\Schemas\Sys\Command\PurgeCacheV1',
 ]);

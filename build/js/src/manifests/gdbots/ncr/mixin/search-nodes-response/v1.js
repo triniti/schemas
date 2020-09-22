@@ -20,4 +20,5 @@ export default [
   'triniti:curator:request:search-widgets-response:v1',
   'triniti:dam:request:search-assets-response:v1',
   'triniti:news:request:search-articles-response:v1',
+  'triniti:ovp:request:search-videos-response:v1',
 ];

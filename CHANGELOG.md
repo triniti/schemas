@@ -59,6 +59,8 @@ __BREAKING CHANGES__
     * `triniti:notify:mixin:search-notificatons-request`
     * `triniti:notify:mixin:search-notificatons-response`
     * `triniti:notify:mixin:send-notification`
+    * `triniti:ovp:mixin:search-videos-request`
+    * `triniti:ovp:mixin:search-videos-response`
 * __Add Schemas:__
     * `triniti:apollo:command:cast-vote`
     * `triniti:apollo:request:search-polls-request`
@@ -109,6 +111,8 @@ __BREAKING CHANGES__
     * `triniti:notify:request:search-notifications-request`
     * `triniti:notify:request:search-notifications-response`
     * `triniti:notify:command:send-notification`
+    * `triniti:ovp:request:search-videos-request`
+    * `triniti:ovp:request:search-videos-response`
 
 
 ## v1.1.13

@@ -13,4 +13,5 @@ return [
     'triniti:curator:request:search-galleries-request:v1',
     'triniti:curator:request:search-teasers-request:v1',
     'triniti:news:request:search-articles-request:v1',
+    'triniti:ovp:request:search-videos-request:v1',
 ];
