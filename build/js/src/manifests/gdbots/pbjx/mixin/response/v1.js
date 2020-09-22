@@ -30,4 +30,5 @@ export default [
   'triniti:dam:request:search-assets-response:v1',
   'triniti:news:request:search-articles-response:v1',
   'triniti:ovp:request:search-videos-response:v1',
+  'triniti:people:request:search-people-response:v1',
 ];

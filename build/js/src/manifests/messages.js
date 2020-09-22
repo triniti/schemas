@@ -180,5 +180,7 @@ export default {
   'triniti:ovp:event:transcription-started:v1': () => import('@triniti/schemas/triniti/ovp/event/TranscriptionStartedV1'),
   'triniti:ovp:request:search-videos-request:v1': () => import('@triniti/schemas/triniti/ovp/request/SearchVideosRequestV1'),
   'triniti:ovp:request:search-videos-response:v1': () => import('@triniti/schemas/triniti/ovp/request/SearchVideosResponseV1'),
+  'triniti:people:request:search-people-request:v1': () => import('@triniti/schemas/triniti/people/request/SearchPeopleRequestV1'),
+  'triniti:people:request:search-people-response:v1': () => import('@triniti/schemas/triniti/people/request/SearchPeopleResponseV1'),
   'triniti:sys:command:purge-cache:v1': () => import('@triniti/schemas/triniti/sys/command/PurgeCacheV1'),
 };
