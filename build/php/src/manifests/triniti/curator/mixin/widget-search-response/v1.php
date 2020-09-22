@@ -10,4 +10,6 @@ declare(strict_types=1);
  */
 
 return [
+    'triniti:curator:request:search-galleries-response:v1',
+    'triniti:curator:request:search-teasers-response:v1',
 ];

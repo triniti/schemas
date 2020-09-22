@@ -16,4 +16,9 @@ return [
     'triniti:apollo:request:search-polls-request:v1',
     'triniti:boost:request:search-sponsors-request:v1',
     'triniti:canvas:request:search-pages-request:v1',
+    'triniti:curator:request:search-galleries-request:v1',
+    'triniti:curator:request:search-promotions-request:v1',
+    'triniti:curator:request:search-teasers-request:v1',
+    'triniti:curator:request:search-timelines-request:v1',
+    'triniti:curator:request:search-widgets-request:v1',
 ];

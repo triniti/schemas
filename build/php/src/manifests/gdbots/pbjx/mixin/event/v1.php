@@ -33,6 +33,8 @@ return [
     'gdbots:pbjx:event:event-execution-failed:v1',
     'gdbots:pbjx:event:health-checked:v1',
     'triniti:apollo:event:vote-casted:v1',
+    'triniti:curator:event:gallery-image-count-updated:v1',
+    'triniti:curator:event:teaser-slotting-removed:v1',
     'triniti:news:event:facebook-instant-article-synced:v1',
     'triniti:ovp.jwplayer:event:media-synced:v1',
     'triniti:ovp.medialive:event:channel-started:v1',

@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:curator:mixin:remove-teaser-slotting:1-0-0" mixin="true"
-      extends="gdbots:pbjx:mixin:command:v1">
+      extends="gdbots:pbjx:mixin:command:v1" deprecated="true">
     <fields>
       <field name="except_ref" type="node-ref">
         <description>

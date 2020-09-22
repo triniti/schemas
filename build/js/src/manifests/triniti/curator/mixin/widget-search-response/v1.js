@@ -7,4 +7,6 @@
  */
 
 export default [
+  'triniti:curator:request:search-galleries-response:v1',
+  'triniti:curator:request:search-teasers-response:v1',
 ];

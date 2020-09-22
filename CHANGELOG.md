@@ -14,11 +14,57 @@ __BREAKING CHANGES__
     * `triniti:apollo:mixin:search-polls-request`
     * `triniti:apollo:mixin:search-polls-response`
     * `triniti:apollo:mixin:vote-casted`
+    * `triniti:boost:mixin:search-sponsors-request`
+    * `triniti:boost:mixin:search-sponsors-response`
+    * `triniti:canvas:mixin:search-pages-request`
+    * `triniti:canvas:mixin:search-pages-response`
+    * `triniti:curator:mixin:gallery-image-count-updated`
+    * `triniti:curator:mixin:remove-teaser-slotting`
+    * `triniti:curator:mixin:sync-teaser`
+    * `triniti:curator:mixin:render-promotion-request`
+    * `triniti:curator:mixin:render-promotion-response`
+    * `triniti:curator:mixin:render-widget-request`
+    * `triniti:curator:mixin:render-widget-response`
+    * `triniti:curator:mixin:search-galleries-request`
+    * `triniti:curator:mixin:search-galleries-response`
+    * `triniti:curator:mixin:search-promotions-request`
+    * `triniti:curator:mixin:search-promotions-response`
+    * `triniti:curator:mixin:search-teasers-request`
+    * `triniti:curator:mixin:search-teasers-response`
+    * `triniti:curator:mixin:search-timelines-request`
+    * `triniti:curator:mixin:search-timelines-response`
+    * `triniti:curator:mixin:search-widgets-request`
+    * `triniti:curator:mixin:search-widgets-response`
+    * `triniti:curator:mixin:teaser-slotting-removed`
+    * `triniti:curator:mixin:update-gallery-image-count`
 * __Add Schemas:__
     * `triniti:apollo:command:cast-vote`
     * `triniti:apollo:request:search-polls-request`
     * `triniti:apollo:request:search-polls-response`
     * `triniti:apollo:event:vote-casted`
+    * `triniti:boost:request:search-sponsors-request`
+    * `triniti:boost:request:search-sponsors-response`
+    * `triniti:canvas:request:search-pages-request`
+    * `triniti:canvas:request:search-pages-response`
+    * `triniti:curator:event:gallery-image-count-updated`
+    * `triniti:curator:command:remove-teaser-slotting`
+    * `triniti:curator:command:sync-teaser`
+    * `triniti:curator:request:render-promotion-request`
+    * `triniti:curator:request:render-promotion-response`
+    * `triniti:curator:request:render-widget-request`
+    * `triniti:curator:request:render-widget-response`
+    * `triniti:curator:request:search-galleries-request`
+    * `triniti:curator:request:search-galleries-response`
+    * `triniti:curator:request:search-promotions-request`
+    * `triniti:curator:request:search-promotions-response`
+    * `triniti:curator:request:search-teasers-request`
+    * `triniti:curator:request:search-teasers-response`
+    * `triniti:curator:request:search-timelines-request`
+    * `triniti:curator:request:search-timelines-response`
+    * `triniti:curator:request:search-widgets-request`
+    * `triniti:curator:request:search-widgets-response`
+    * `triniti:curator:event:teaser-slotting-removed`
+    * `triniti:curator:command:update-gallery-image-count`
 
 
 ## v1.1.13

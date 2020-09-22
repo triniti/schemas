@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:command:remove-teaser-slotting:1-0-0">
+    <fields>
+      <field name="except_ref" type="node-ref">
+        <description>
+          The one node allowed to keep the slotting.
+        </description>
+      </field>
+      <field name="slotting" type="tiny-int" rule="map">
+        <description>
+          A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that must be
+          removed from nodes currently having those slotting values.
+        </description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

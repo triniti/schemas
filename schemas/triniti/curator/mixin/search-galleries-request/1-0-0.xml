@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:curator:mixin:search-galleries-request:1-0-0" mixin="true"
-      extends="gdbots:ncr:mixin:search-nodes-request:v1">
+      extends="gdbots:ncr:mixin:search-nodes-request:v1" deprecated="true">
     <fields>
       <field name="is_unlisted" type="trinary"/>
       <field name="sort" type="string-enum">

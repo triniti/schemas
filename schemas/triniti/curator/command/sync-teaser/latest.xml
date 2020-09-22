@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:command:sync-teaser:1-0-0">
+    <fields>
+      <field name="target_ref" type="node-ref">
+        <description>
+          A reference to the target - every teaser that teases this target
+          will be synced (if set to sync_with_target).
+        </description>
+      </field>
+      <field name="teaser_ref" type="node-ref">
+        <description>
+          A reference to the teaser that will be synced to its target.
+        </description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

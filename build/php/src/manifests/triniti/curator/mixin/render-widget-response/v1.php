@@ -10,4 +10,5 @@ declare(strict_types=1);
  */
 
 return [
+    'triniti:curator:request:render-widget-response:v1',
 ];

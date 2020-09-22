@@ -7,4 +7,5 @@
  */
 
 export default [
+  'triniti:curator:request:search-timelines-response:v1',
 ];

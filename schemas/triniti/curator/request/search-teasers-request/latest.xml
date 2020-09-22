@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:request:search-teasers-request:1-0-1">
+    <fields>
+      <field name="is_unlisted" type="trinary"/>
+      <field name="sort" type="string-enum">
+        <default>order-date-desc</default>
+        <enum id="triniti:curator:search-teasers-sort"/>
+      </field>
+      <field name="slotting_key" type="string" format="slug">
+        <description>
+          The name of the slotting key to use to determine the order of
+          teasers returned in the response. e.g. "home", "sports", "tv"
+        </description>
+      </field>
+      <field name="types" type="string" format="slug" rule="set">
+        <description>
+          A set of teaser types (node must match at least one) to include in
+          the search results, such as image-teaser or video-teaser.
+        </description>
+      </field>
+      <field name="gallery_ref" type="node-ref">
+        <description>
+          A node ref of a gallery that a teaser must be associated with to match the search request.
+        </description>
+      </field>
+      <field name="timeline_ref" type="node-ref">
+        <description>
+          A node ref of a timeline that a teaser must be associated with to match the search request.
+        </description>
+      </field>
+      <field name="channel_ref" type="node-ref"/>
+      <field name="category_refs" type="node-ref" rule="set"/>
+      <field name="person_refs" type="node-ref" rule="set"/>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:request:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:search-nodes-request:v1</curie-major>
+      <curie-major>triniti:curator:mixin:widget-search-request:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

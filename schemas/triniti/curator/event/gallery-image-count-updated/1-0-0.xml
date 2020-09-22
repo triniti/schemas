@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:event:gallery-image-count-updated:1-0-0">
+    <fields>
+      <field name="node_ref" type="node-ref" required="true">
+        <description>
+          A reference to the gallery updated.
+        </description>
+      </field>
+      <field name="image_count" type="medium-int"/>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

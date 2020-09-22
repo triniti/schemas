@@ -13,4 +13,9 @@ export default [
   'triniti:apollo:request:search-polls-response:v1',
   'triniti:boost:request:search-sponsors-response:v1',
   'triniti:canvas:request:search-pages-response:v1',
+  'triniti:curator:request:search-galleries-response:v1',
+  'triniti:curator:request:search-promotions-response:v1',
+  'triniti:curator:request:search-teasers-response:v1',
+  'triniti:curator:request:search-timelines-response:v1',
+  'triniti:curator:request:search-widgets-response:v1',
 ];
