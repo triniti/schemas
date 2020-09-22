@@ -37,6 +37,8 @@ return [
     'triniti:dam:command:reorder-gallery-assets:v1',
     'triniti:dam:command:unlink-assets:v1',
     'triniti:migrator:command:sync-cf-nodes:v1',
+    'triniti:news:command:collect-article-stats:v1',
+    'triniti:news:command:remove-article-slotting:v1',
     'triniti:news:command:sync-facebook-instant-article:v1',
     'triniti:ovp.jwplayer:command:sync-media:v1',
     'triniti:ovp.kaltura:command:sync-entry:v1',

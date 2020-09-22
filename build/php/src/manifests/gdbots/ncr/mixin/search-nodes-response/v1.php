@@ -22,4 +22,5 @@ return [
     'triniti:curator:request:search-timelines-response:v1',
     'triniti:curator:request:search-widgets-response:v1',
     'triniti:dam:request:search-assets-response:v1',
+    'triniti:news:request:search-articles-response:v1',
 ];

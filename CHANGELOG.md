@@ -46,6 +46,14 @@ __BREAKING CHANGES__
     * `triniti:dam:mixin:reorder-gallery-assets`
     * `triniti:dam:mixin:search-assets-request`
     * `triniti:dam:mixin:search-assets-response`
+    * `triniti:dam:mixin:unlink-assets`
+    * `triniti:news:mixin:apple-news-article-synced`
+    * `triniti:news:mixin:article-slotting-removed`
+    * `triniti:news:mixin:article-stats-collected`
+    * `triniti:news:mixin:collect-article-stats`
+    * `triniti:news:mixin:remove-article-slotting`
+    * `triniti:news:mixin:search-articles-request`
+    * `triniti:news:mixin:search-articles-response`
 * __Add Schemas:__
     * `triniti:apollo:command:cast-vote`
     * `triniti:apollo:request:search-polls-request`
@@ -83,6 +91,14 @@ __BREAKING CHANGES__
     * `triniti:dam:command:reorder-gallery-assets`
     * `triniti:dam:request:search-assets-request`
     * `triniti:dam:request:search-assets-response`
+    * `triniti:dam:command:unlink-assets`
+    * `triniti:news:event:apple-news-article-synced`
+    * `triniti:news:event:article-slotting-removed`
+    * `triniti:news:event:article-stats-collected`
+    * `triniti:news:command:collect-article-stats`
+    * `triniti:news:command:remove-article-slotting`
+    * `triniti:news:request:search-articles-request`
+    * `triniti:news:request:search-articles-response`
 
 
 ## v1.1.13

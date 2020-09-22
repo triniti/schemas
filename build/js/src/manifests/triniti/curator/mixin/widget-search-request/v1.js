@@ -9,4 +9,5 @@
 export default [
   'triniti:curator:request:search-galleries-request:v1',
   'triniti:curator:request:search-teasers-request:v1',
+  'triniti:news:request:search-articles-request:v1',
 ];
