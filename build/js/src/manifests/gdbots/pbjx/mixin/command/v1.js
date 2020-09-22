@@ -27,6 +27,7 @@ export default [
   'gdbots:ncr:command:update-node-tags:v1',
   'gdbots:ncr:command:update-node:v1',
   'gdbots:pbjx:command:check-health:v1',
+  'triniti:apollo:command:cast-vote:v1',
   'triniti:migrator:command:sync-cf-nodes:v1',
   'triniti:news:command:sync-facebook-instant-article:v1',
   'triniti:ovp.jwplayer:command:sync-media:v1',

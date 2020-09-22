@@ -7,7 +7,8 @@
     Yes, I intentionally unconventially and un-uninflectedly used "cast(ed)".
     Every now and again you have to stick it to the english language.  (╯°□°)╯︵ ┻━┻
   -->
-  <schema id="pbj:triniti:apollo:mixin:vote-casted:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:event:v1">
+  <schema id="pbj:triniti:apollo:mixin:vote-casted:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:event:v1"
+      deprecated="true">
     <fields>
       <field name="poll_ref" type="node-ref" required="true"/>
       <field name="answer_id" type="uuid"/>

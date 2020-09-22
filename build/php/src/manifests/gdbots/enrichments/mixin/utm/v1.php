@@ -10,4 +10,6 @@ declare(strict_types=1);
  */
 
 return [
+    'triniti:apollo:command:cast-vote:v1',
+    'triniti:apollo:event:vote-casted:v1',
 ];

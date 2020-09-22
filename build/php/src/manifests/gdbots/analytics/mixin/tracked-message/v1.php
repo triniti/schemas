@@ -30,4 +30,5 @@ return [
     'gdbots:ncr:event:node-unlocked:v1',
     'gdbots:ncr:event:node-unpublished:v1',
     'gdbots:ncr:event:node-updated:v1',
+    'triniti:apollo:event:vote-casted:v1',
 ];

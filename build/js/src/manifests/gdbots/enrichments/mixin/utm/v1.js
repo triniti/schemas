@@ -7,4 +7,6 @@
  */
 
 export default [
+  'triniti:apollo:command:cast-vote:v1',
+  'triniti:apollo:event:vote-casted:v1',
 ];

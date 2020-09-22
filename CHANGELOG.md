@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v2.0.0
+__BREAKING CHANGES__
+
+* Use gdbots/pbjc v1.x and gdbots/pbj v3.x.
+* Replace all identifier fields using NodeRef with new node-ref type.
+* Use PHP7 typehinting in all insertion points for php.
+* Use new fget method where possible in insertion points.
+* Remove use of identifier classes where uuid can be used, e.g. UserId, AppId.
+* __Deprecated Schemas:__ (these will be removed in 3.x)
+    * `triniti:apollo:mixin:cast-vote`
+    * `triniti:apollo:mixin:search-polls-request`
+    * `triniti:apollo:mixin:search-polls-response`
+    * `triniti:apollo:mixin:vote-casted`
+* __Add Schemas:__
+    * `triniti:apollo:command:cast-vote`
+    * `triniti:apollo:request:search-polls-request`
+    * `triniti:apollo:request:search-polls-response`
+    * `triniti:apollo:event:vote-casted`
+
+
 ## v1.1.13
 * __Modify Schemas:__
   * `triniti:common:aspect-ratio`

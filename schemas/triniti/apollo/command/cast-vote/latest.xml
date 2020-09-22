@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:apollo:command:cast-vote:1-0-0">
+    <fields>
+      <field name="poll_ref" type="node-ref" required="true"/>
+      <field name="answer_id" type="uuid"/>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
+      <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:time-parting:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:time-sampling:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:utm:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>
