@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:dam:event:gallery-asset-reordered:1-0-0">
+    <fields>
+      <field name="node_ref" type="node-ref" required="true"/>
+      <field name="gallery_ref" type="node-ref">
+        <description>
+          The node ref for the gallery where the asset is used.
+        </description>
+      </field>
+      <field name="gallery_seq" type="int">
+        <description>
+          An integer value representing the order in which this asset will appear in a gallery.
+        </description>
+      </field>
+      <field name="old_gallery_ref" type="node-ref">
+        <description>
+          The node ref for the gallery where the asset is removed from.
+        </description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

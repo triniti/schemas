@@ -37,6 +37,15 @@ __BREAKING CHANGES__
     * `triniti:curator:mixin:search-widgets-response`
     * `triniti:curator:mixin:teaser-slotting-removed`
     * `triniti:curator:mixin:update-gallery-image-count`
+    * `triniti:dam:mixin:asset-linked`
+    * `triniti:dam:mixin:asset-patched`
+    * `triniti:dam:mixin:asset-unlinked`
+    * `triniti:dam:mixin:gallery-asset-reordered`
+    * `triniti:dam:mixin:get-upload-urls-request`
+    * `triniti:dam:mixin:get-upload-urls-response`
+    * `triniti:dam:mixin:reorder-gallery-assets`
+    * `triniti:dam:mixin:search-assets-request`
+    * `triniti:dam:mixin:search-assets-response`
 * __Add Schemas:__
     * `triniti:apollo:command:cast-vote`
     * `triniti:apollo:request:search-polls-request`
@@ -65,6 +74,15 @@ __BREAKING CHANGES__
     * `triniti:curator:request:search-widgets-response`
     * `triniti:curator:event:teaser-slotting-removed`
     * `triniti:curator:command:update-gallery-image-count`
+    * `triniti:dam:event:asset-linked`
+    * `triniti:dam:event:asset-patched`
+    * `triniti:dam:event:asset-unlinked`
+    * `triniti:dam:event:gallery-asset-reordered`
+    * `triniti:dam:request:get-upload-urls-request`
+    * `triniti:dam:request:get-upload-urls-response`
+    * `triniti:dam:command:reorder-gallery-assets`
+    * `triniti:dam:request:search-assets-request`
+    * `triniti:dam:request:search-assets-response`
 
 
 ## v1.1.13

@@ -7,4 +7,5 @@
  */
 
 export default [
+  'triniti:dam:event:asset-patched:v1',
 ];

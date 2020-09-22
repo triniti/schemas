@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:dam:event:asset-patched:1-0-1">
+    <fields>
+      <field name="title" type="string"/>
+      <field name="expires_at" type="date-time"/>
+      <field name="credit" type="string"/>
+      <field name="description" type="text" max="5000"/>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:node-patched:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

@@ -29,4 +29,5 @@ export default [
   'gdbots:ncr:event:node-updated:v1',
   'triniti:apollo:command:cast-vote:v1',
   'triniti:apollo:event:vote-casted:v1',
+  'triniti:dam:request:get-upload-urls-request:v1',
 ];

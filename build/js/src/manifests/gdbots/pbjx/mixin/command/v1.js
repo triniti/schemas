@@ -31,6 +31,8 @@ export default [
   'triniti:curator:command:remove-teaser-slotting:v1',
   'triniti:curator:command:sync-teaser:v1',
   'triniti:curator:command:update-gallery-image-count:v1',
+  'triniti:dam:command:reorder-gallery-assets:v1',
+  'triniti:dam:command:unlink-assets:v1',
   'triniti:migrator:command:sync-cf-nodes:v1',
   'triniti:news:command:sync-facebook-instant-article:v1',
   'triniti:ovp.jwplayer:command:sync-media:v1',
