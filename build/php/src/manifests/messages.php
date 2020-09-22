@@ -113,6 +113,8 @@ return [
     'triniti:apollo:event:vote-casted:v1' => 'Triniti\Schemas\Apollo\Event\VoteCastedV1',
     'triniti:apollo:request:search-polls-request:v1' => 'Triniti\Schemas\Apollo\Request\SearchPollsRequestV1',
     'triniti:apollo:request:search-polls-response:v1' => 'Triniti\Schemas\Apollo\Request\SearchPollsResponseV1',
+    'triniti:boost:request:search-sponsors-request:v1' => 'Triniti\Schemas\Boost\Request\SearchSponsorsRequestV1',
+    'triniti:boost:request:search-sponsors-response:v1' => 'Triniti\Schemas\Boost\Request\SearchSponsorsResponseV1',
     'triniti:common::render-context:v1' => 'Triniti\Schemas\Common\RenderContextV1',
     'triniti:curator::slot:v1' => 'Triniti\Schemas\Curator\SlotV1',
     'triniti:migrator:command:sync-cf-nodes:v1' => 'Triniti\Schemas\Migrator\Command\SyncCfNodesV1',

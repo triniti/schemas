@@ -19,4 +19,5 @@ return [
     'gdbots:ncr:request:get-node-request:v1',
     'gdbots:pbjx:request:echo-request:v1',
     'triniti:apollo:request:search-polls-request:v1',
+    'triniti:boost:request:search-sponsors-request:v1',
 ];

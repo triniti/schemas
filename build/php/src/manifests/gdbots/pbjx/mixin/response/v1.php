@@ -20,4 +20,5 @@ return [
     'gdbots:pbjx:request:echo-response:v1',
     'gdbots:pbjx:request:request-failed-response:v1',
     'triniti:apollo:request:search-polls-response:v1',
+    'triniti:boost:request:search-sponsors-response:v1',
 ];

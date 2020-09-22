@@ -3,13 +3,17 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:boost:mixin:search-sponsors-request:1-0-0" mixin="true"
-      extends="gdbots:ncr:mixin:search-nodes-request:v1" deprecated="true">
+  <schema id="pbj:triniti:boost:request:search-sponsors-request:1-0-0">
     <fields>
       <field name="sort" type="string-enum">
         <default>relevance</default>
         <enum id="triniti:boost:search-sponsors-sort"/>
       </field>
     </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:request:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:search-nodes-request:v1</curie-major>
+    </mixins>
   </schema>
 </pbj-schema>

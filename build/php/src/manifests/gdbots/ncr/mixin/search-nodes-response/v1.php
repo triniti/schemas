@@ -14,4 +14,5 @@ return [
     'gdbots:iam:request:search-roles-response:v1',
     'gdbots:iam:request:search-users-response:v1',
     'triniti:apollo:request:search-polls-response:v1',
+    'triniti:boost:request:search-sponsors-response:v1',
 ];

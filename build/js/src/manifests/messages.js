@@ -110,6 +110,8 @@ export default {
   'triniti:apollo:event:vote-casted:v1': () => import('@triniti/schemas/triniti/apollo/event/VoteCastedV1'),
   'triniti:apollo:request:search-polls-request:v1': () => import('@triniti/schemas/triniti/apollo/request/SearchPollsRequestV1'),
   'triniti:apollo:request:search-polls-response:v1': () => import('@triniti/schemas/triniti/apollo/request/SearchPollsResponseV1'),
+  'triniti:boost:request:search-sponsors-request:v1': () => import('@triniti/schemas/triniti/boost/request/SearchSponsorsRequestV1'),
+  'triniti:boost:request:search-sponsors-response:v1': () => import('@triniti/schemas/triniti/boost/request/SearchSponsorsResponseV1'),
   'triniti:common::render-context:v1': () => import('@triniti/schemas/triniti/common/RenderContextV1'),
   'triniti:curator::slot:v1': () => import('@triniti/schemas/triniti/curator/SlotV1'),
   'triniti:migrator:command:sync-cf-nodes:v1': () => import('@triniti/schemas/triniti/migrator/command/SyncCfNodesV1'),
