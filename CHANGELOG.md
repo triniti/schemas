@@ -54,6 +54,11 @@ __BREAKING CHANGES__
     * `triniti:news:mixin:remove-article-slotting`
     * `triniti:news:mixin:search-articles-request`
     * `triniti:news:mixin:search-articles-response`
+    * `triniti:notify:mixin:notification-failed`
+    * `triniti:notify:mixin:notification-sent`
+    * `triniti:notify:mixin:search-notificatons-request`
+    * `triniti:notify:mixin:search-notificatons-response`
+    * `triniti:notify:mixin:send-notification`
 * __Add Schemas:__
     * `triniti:apollo:command:cast-vote`
     * `triniti:apollo:request:search-polls-request`
@@ -99,6 +104,11 @@ __BREAKING CHANGES__
     * `triniti:news:command:remove-article-slotting`
     * `triniti:news:request:search-articles-request`
     * `triniti:news:request:search-articles-response`
+    * `triniti:notify:event:notification-failed`
+    * `triniti:notify:event:notification-sent`
+    * `triniti:notify:request:search-notifications-request`
+    * `triniti:notify:request:search-notifications-response`
+    * `triniti:notify:command:send-notification`
 
 
 ## v1.1.13

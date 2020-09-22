@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:notify:mixin:send-notification:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:command:v1">
+  <schema id="pbj:triniti:notify:mixin:send-notification:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:command:v1" deprecated="true">
     <fields>
       <field name="node_ref" type="node-ref" required="true"/>
     </fields>

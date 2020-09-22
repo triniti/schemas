@@ -28,4 +28,5 @@ export default [
   'triniti:dam:request:get-upload-urls-request:v1',
   'triniti:dam:request:search-assets-request:v1',
   'triniti:news:request:search-articles-request:v1',
+  'triniti:notify:request:search-notifications-request:v1',
 ];

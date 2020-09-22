@@ -40,6 +40,7 @@ return [
     'triniti:news:command:collect-article-stats:v1',
     'triniti:news:command:remove-article-slotting:v1',
     'triniti:news:command:sync-facebook-instant-article:v1',
+    'triniti:notify:command:send-notification:v1',
     'triniti:ovp.jwplayer:command:sync-media:v1',
     'triniti:ovp.kaltura:command:sync-entry:v1',
     'triniti:ovp.medialive:command:start-channel:v1',

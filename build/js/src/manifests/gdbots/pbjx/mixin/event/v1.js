@@ -40,6 +40,8 @@ export default [
   'triniti:news:event:article-slotting-removed:v1',
   'triniti:news:event:article-stats-collected:v1',
   'triniti:news:event:facebook-instant-article-synced:v1',
+  'triniti:notify:event:notification-failed:v1',
+  'triniti:notify:event:notification-sent:v1',
   'triniti:ovp.jwplayer:event:media-synced:v1',
   'triniti:ovp.medialive:event:channel-started:v1',
   'triniti:ovp.medialive:event:channel-stopped:v1',
