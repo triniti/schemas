@@ -115,6 +115,8 @@ return [
     'triniti:apollo:request:search-polls-response:v1' => 'Triniti\Schemas\Apollo\Request\SearchPollsResponseV1',
     'triniti:boost:request:search-sponsors-request:v1' => 'Triniti\Schemas\Boost\Request\SearchSponsorsRequestV1',
     'triniti:boost:request:search-sponsors-response:v1' => 'Triniti\Schemas\Boost\Request\SearchSponsorsResponseV1',
+    'triniti:canvas:request:search-pages-request:v1' => 'Triniti\Schemas\Canvas\Request\SearchPagesRequestV1',
+    'triniti:canvas:request:search-pages-response:v1' => 'Triniti\Schemas\Canvas\Request\SearchPagesResponseV1',
     'triniti:common::render-context:v1' => 'Triniti\Schemas\Common\RenderContextV1',
     'triniti:curator::slot:v1' => 'Triniti\Schemas\Curator\SlotV1',
     'triniti:migrator:command:sync-cf-nodes:v1' => 'Triniti\Schemas\Migrator\Command\SyncCfNodesV1',

@@ -112,6 +112,8 @@ export default {
   'triniti:apollo:request:search-polls-response:v1': () => import('@triniti/schemas/triniti/apollo/request/SearchPollsResponseV1'),
   'triniti:boost:request:search-sponsors-request:v1': () => import('@triniti/schemas/triniti/boost/request/SearchSponsorsRequestV1'),
   'triniti:boost:request:search-sponsors-response:v1': () => import('@triniti/schemas/triniti/boost/request/SearchSponsorsResponseV1'),
+  'triniti:canvas:request:search-pages-request:v1': () => import('@triniti/schemas/triniti/canvas/request/SearchPagesRequestV1'),
+  'triniti:canvas:request:search-pages-response:v1': () => import('@triniti/schemas/triniti/canvas/request/SearchPagesResponseV1'),
   'triniti:common::render-context:v1': () => import('@triniti/schemas/triniti/common/RenderContextV1'),
   'triniti:curator::slot:v1': () => import('@triniti/schemas/triniti/curator/SlotV1'),
   'triniti:migrator:command:sync-cf-nodes:v1': () => import('@triniti/schemas/triniti/migrator/command/SyncCfNodesV1'),

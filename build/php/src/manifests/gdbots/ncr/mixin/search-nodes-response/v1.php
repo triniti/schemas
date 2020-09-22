@@ -15,4 +15,5 @@ return [
     'gdbots:iam:request:search-users-response:v1',
     'triniti:apollo:request:search-polls-response:v1',
     'triniti:boost:request:search-sponsors-response:v1',
+    'triniti:canvas:request:search-pages-response:v1',
 ];
