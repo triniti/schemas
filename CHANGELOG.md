@@ -20,7 +20,6 @@ __BREAKING CHANGES__
     * `triniti:canvas:mixin:search-pages-response`
     * `triniti:curator:mixin:gallery-image-count-updated`
     * `triniti:curator:mixin:remove-teaser-slotting`
-    * `triniti:curator:mixin:sync-teaser`
     * `triniti:curator:mixin:render-promotion-request`
     * `triniti:curator:mixin:render-promotion-response`
     * `triniti:curator:mixin:render-widget-request`
@@ -35,6 +34,7 @@ __BREAKING CHANGES__
     * `triniti:curator:mixin:search-timelines-response`
     * `triniti:curator:mixin:search-widgets-request`
     * `triniti:curator:mixin:search-widgets-response`
+    * `triniti:curator:mixin:sync-teaser`
     * `triniti:curator:mixin:teaser-slotting-removed`
     * `triniti:curator:mixin:update-gallery-image-count`
     * `triniti:dam:mixin:asset-linked`
@@ -78,16 +78,18 @@ __BREAKING CHANGES__
     * `triniti:taxonomy:mixin:suggest-hashtags-response`
 * __Add Schemas:__
     * `triniti:apollo:command:cast-vote`
+    * `triniti:apollo:event:vote-casted`
     * `triniti:apollo:request:search-polls-request`
     * `triniti:apollo:request:search-polls-response`
-    * `triniti:apollo:event:vote-casted`
     * `triniti:boost:request:search-sponsors-request`
     * `triniti:boost:request:search-sponsors-response`
     * `triniti:canvas:request:search-pages-request`
     * `triniti:canvas:request:search-pages-response`
-    * `triniti:curator:event:gallery-image-count-updated`
     * `triniti:curator:command:remove-teaser-slotting`
     * `triniti:curator:command:sync-teaser`
+    * `triniti:curator:command:update-gallery-image-count`
+    * `triniti:curator:event:gallery-image-count-updated`
+    * `triniti:curator:event:teaser-slotting-removed`
     * `triniti:curator:request:render-promotion-request`
     * `triniti:curator:request:render-promotion-response`
     * `triniti:curator:request:render-widget-request`
@@ -102,30 +104,28 @@ __BREAKING CHANGES__
     * `triniti:curator:request:search-timelines-response`
     * `triniti:curator:request:search-widgets-request`
     * `triniti:curator:request:search-widgets-response`
-    * `triniti:curator:event:teaser-slotting-removed`
-    * `triniti:curator:command:update-gallery-image-count`
+    * `triniti:dam:command:reorder-gallery-assets`
+    * `triniti:dam:command:unlink-assets`
     * `triniti:dam:event:asset-linked`
     * `triniti:dam:event:asset-patched`
     * `triniti:dam:event:asset-unlinked`
     * `triniti:dam:event:gallery-asset-reordered`
     * `triniti:dam:request:get-upload-urls-request`
     * `triniti:dam:request:get-upload-urls-response`
-    * `triniti:dam:command:reorder-gallery-assets`
     * `triniti:dam:request:search-assets-request`
     * `triniti:dam:request:search-assets-response`
-    * `triniti:dam:command:unlink-assets`
+    * `triniti:news:command:collect-article-stats`
+    * `triniti:news:command:remove-article-slotting`
     * `triniti:news:event:apple-news-article-synced`
     * `triniti:news:event:article-slotting-removed`
     * `triniti:news:event:article-stats-collected`
-    * `triniti:news:command:collect-article-stats`
-    * `triniti:news:command:remove-article-slotting`
     * `triniti:news:request:search-articles-request`
     * `triniti:news:request:search-articles-response`
+    * `triniti:notify:command:send-notification`
     * `triniti:notify:event:notification-failed`
     * `triniti:notify:event:notification-sent`
     * `triniti:notify:request:search-notifications-request`
     * `triniti:notify:request:search-notifications-response`
-    * `triniti:notify:command:send-notification`
     * `triniti:ovp:request:search-videos-request`
     * `triniti:ovp:request:search-videos-response`
     * `triniti:people:request:search-people-request`
