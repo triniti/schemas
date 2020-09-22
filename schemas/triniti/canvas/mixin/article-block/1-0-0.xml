@@ -26,7 +26,7 @@ public function getUriTemplateVars(): array
 {
     return [
         'etag' => $this->fget('etag'),
-        'node_ref' => (string)$this->fget('node_ref'),
+        'node_ref' => $this->fget('node_ref'),
         'show_image' => $this->fget('show_image'),
     ];
 }

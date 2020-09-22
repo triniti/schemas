@@ -15,7 +15,7 @@ trait GridlerWidgetV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->fget('_id'),
+            '_id' => $this->fget('_id'),
         ];
     }
 }

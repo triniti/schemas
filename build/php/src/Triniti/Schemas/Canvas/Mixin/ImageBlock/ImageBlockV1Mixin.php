@@ -16,7 +16,7 @@ trait ImageBlockV1Mixin
     {
         return [
             'etag' => $this->fget('etag'),
-            'node_ref' => (string)$this->fget('node_ref'),
+            'node_ref' => $this->fget('node_ref'),
             'is_nswf' => $this->fget('is_nswf'),
             'url' => $this->fget('url'),
             'fallback_src_url' => $this->fget('fallback_src_url'),

@@ -90,7 +90,7 @@
 public function getUriTemplateVars(): array
 {
     return [
-        '_id' => (string)$this->fget('_id'),
+        '_id' => $this->fget('_id'),
         'slug' => $this->fget('slug'),
         'is_live' => $this->fget('is_live'),
         'is_full_episode' => $this->fget('is_full_episode'),

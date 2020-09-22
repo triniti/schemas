@@ -15,8 +15,8 @@ trait PromotionV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->fget('_id'),
-            'slot' => (string)$this->fget('slot'),
+            '_id' => $this->fget('_id'),
+            'slot' => $this->fget('slot'),
         ];
     }
 }

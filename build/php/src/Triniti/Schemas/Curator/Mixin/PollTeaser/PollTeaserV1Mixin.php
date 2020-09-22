@@ -15,8 +15,8 @@ trait PollTeaserV1Mixin
     public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->fget('_id'),
-            'target_ref' => (string)$this->fget('target_ref'),
+            '_id' => $this->fget('_id'),
+            'target_ref' => $this->fget('target_ref'),
         ];
     }
 }

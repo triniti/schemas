@@ -17,7 +17,7 @@ trait GoogleMapBlockV1Mixin
         return [
             'etag' => $this->fget('etag'),
             'q' => $this->fget('q'),
-            'center' => (string)$this->fget('center'),
+            'center' => $this->fget('center'),
             'zoom' => $this->fget('zoom'),
             'maptype' => $this->fget('maptype'),
         ];

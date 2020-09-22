@@ -29,7 +29,7 @@
 public function getUriTemplateVars(): array
 {
     return [
-        '_id' => (string)$this->fget('_id'),
+        '_id' => $this->fget('_id'),
         'alpha_sort' => $this->fget('alpha_sort'),
         'allow_other' => $this->fget('allow_other'),
         'default_value' => $this->fget('default_value'),

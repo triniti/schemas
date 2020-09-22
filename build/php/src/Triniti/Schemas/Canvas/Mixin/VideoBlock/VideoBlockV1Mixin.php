@@ -16,7 +16,7 @@ trait VideoBlockV1Mixin
     {
         return [
             'etag' => $this->fget('etag'),
-            'node_ref' => (string)$this->fget('node_ref'),
+            'node_ref' => $this->fget('node_ref'),
             'autoplay' => $this->fget('autoplay'),
             'muted' => $this->fget('muted'),
             'start_at' => $this->fget('start_at'),

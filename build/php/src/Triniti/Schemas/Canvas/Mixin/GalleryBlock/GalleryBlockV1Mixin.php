@@ -16,7 +16,7 @@ trait GalleryBlockV1Mixin
     {
         return [
             'etag' => $this->fget('etag'),
-            'node_ref' => (string)$this->fget('node_ref'),
+            'node_ref' => $this->fget('node_ref'),
         ];
     }
 }
