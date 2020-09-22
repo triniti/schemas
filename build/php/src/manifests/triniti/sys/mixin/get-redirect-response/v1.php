@@ -10,4 +10,5 @@ declare(strict_types=1);
  */
 
 return [
+    'triniti:sys:request:get-redirect-response:v1',
 ];

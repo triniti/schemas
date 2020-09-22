@@ -63,6 +63,13 @@ __BREAKING CHANGES__
     * `triniti:ovp:mixin:search-videos-response`
     * `triniti:people:mixin:search-people-request`
     * `triniti:people:mixin:search-people-response`
+    * `triniti:sys:mixin:get-redirect-response`
+    * `triniti:sys:mixin:list-all-flagsets-request`
+    * `triniti:sys:mixin:list-all-flagsets-response`
+    * `triniti:sys:mixin:list-all-picklists-request`
+    * `triniti:sys:mixin:list-all-picklists-response`
+    * `triniti:sys:mixin:search-redirects-request`
+    * `triniti:sys:mixin:search-redirects-response`
 * __Add Schemas:__
     * `triniti:apollo:command:cast-vote`
     * `triniti:apollo:request:search-polls-request`
@@ -117,6 +124,13 @@ __BREAKING CHANGES__
     * `triniti:ovp:request:search-videos-response`
     * `triniti:people:request:search-people-request`
     * `triniti:people:request:search-people-response`
+    * `triniti:sys:request:get-redirect-response`
+    * `triniti:sys:request:list-all-flagsets-request`
+    * `triniti:sys:request:list-all-flagsets-response`
+    * `triniti:sys:request:list-all-picklists-request`
+    * `triniti:sys:request:list-all-picklists-response`
+    * `triniti:sys:request:search-redirects-request`
+    * `triniti:sys:request:search-redirects-response`
 
 
 ## v1.1.13

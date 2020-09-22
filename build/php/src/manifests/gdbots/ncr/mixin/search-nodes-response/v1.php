@@ -25,4 +25,5 @@ return [
     'triniti:news:request:search-articles-response:v1',
     'triniti:ovp:request:search-videos-response:v1',
     'triniti:people:request:search-people-response:v1',
+    'triniti:sys:request:search-redirects-response:v1',
 ];

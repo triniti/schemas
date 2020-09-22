@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:sys:request:list-all-flagsets-response:1-0-0">
+    <fields>
+      <field name="flagsets" type="node-ref" rule="set"/>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:response:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

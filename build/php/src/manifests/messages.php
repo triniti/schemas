@@ -186,4 +186,11 @@ return [
     'triniti:people:request:search-people-request:v1' => 'Triniti\Schemas\People\Request\SearchPeopleRequestV1',
     'triniti:people:request:search-people-response:v1' => 'Triniti\Schemas\People\Request\SearchPeopleResponseV1',
     'triniti:sys:command:purge-cache:v1' => 'Triniti\Schemas\Sys\Command\PurgeCacheV1',
+    'triniti:sys:request:get-redirect-response:v1' => 'Triniti\Schemas\Sys\Request\GetRedirectResponseV1',
+    'triniti:sys:request:list-all-flagsets-request:v1' => 'Triniti\Schemas\Sys\Request\ListAllFlagsetsRequestV1',
+    'triniti:sys:request:list-all-flagsets-response:v1' => 'Triniti\Schemas\Sys\Request\ListAllFlagsetsResponseV1',
+    'triniti:sys:request:list-all-picklists-request:v1' => 'Triniti\Schemas\Sys\Request\ListAllPicklistsRequestV1',
+    'triniti:sys:request:list-all-picklists-response:v1' => 'Triniti\Schemas\Sys\Request\ListAllPicklistsResponseV1',
+    'triniti:sys:request:search-redirects-request:v1' => 'Triniti\Schemas\Sys\Request\SearchRedirectsRequestV1',
+    'triniti:sys:request:search-redirects-response:v1' => 'Triniti\Schemas\Sys\Request\SearchRedirectsResponseV1',
 ];

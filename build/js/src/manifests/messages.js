@@ -183,4 +183,11 @@ export default {
   'triniti:people:request:search-people-request:v1': () => import('@triniti/schemas/triniti/people/request/SearchPeopleRequestV1'),
   'triniti:people:request:search-people-response:v1': () => import('@triniti/schemas/triniti/people/request/SearchPeopleResponseV1'),
   'triniti:sys:command:purge-cache:v1': () => import('@triniti/schemas/triniti/sys/command/PurgeCacheV1'),
+  'triniti:sys:request:get-redirect-response:v1': () => import('@triniti/schemas/triniti/sys/request/GetRedirectResponseV1'),
+  'triniti:sys:request:list-all-flagsets-request:v1': () => import('@triniti/schemas/triniti/sys/request/ListAllFlagsetsRequestV1'),
+  'triniti:sys:request:list-all-flagsets-response:v1': () => import('@triniti/schemas/triniti/sys/request/ListAllFlagsetsResponseV1'),
+  'triniti:sys:request:list-all-picklists-request:v1': () => import('@triniti/schemas/triniti/sys/request/ListAllPicklistsRequestV1'),
+  'triniti:sys:request:list-all-picklists-response:v1': () => import('@triniti/schemas/triniti/sys/request/ListAllPicklistsResponseV1'),
+  'triniti:sys:request:search-redirects-request:v1': () => import('@triniti/schemas/triniti/sys/request/SearchRedirectsRequestV1'),
+  'triniti:sys:request:search-redirects-response:v1': () => import('@triniti/schemas/triniti/sys/request/SearchRedirectsResponseV1'),
 };

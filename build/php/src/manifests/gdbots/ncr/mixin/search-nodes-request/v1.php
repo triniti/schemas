@@ -26,4 +26,5 @@ return [
     'triniti:notify:request:search-notifications-request:v1',
     'triniti:ovp:request:search-videos-request:v1',
     'triniti:people:request:search-people-request:v1',
+    'triniti:sys:request:search-redirects-request:v1',
 ];
