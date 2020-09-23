@@ -174,7 +174,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/render-widget-response/1-0-0.json#"
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/curator/request/render-widget-response/1-0-0.json#"
         }
       ]
     }

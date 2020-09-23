@@ -67,7 +67,7 @@ export default class RenderPromotionResponseV1 extends Message {
         Fb.create('widgets', T.MessageType.create())
           .asAList()
           .anyOfCuries([
-            'triniti:curator:mixin:render-widget-response',
+            'triniti:curator:request:render-widget-response',
           ])
           .build(),
       ],
@@ -83,8 +83,6 @@ M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:curator:request
 M.prototype.MIXINS = M.MIXINS = [
   'gdbots:pbjx:mixin:response:v1',
   'gdbots:pbjx:mixin:response',
-  'triniti:curator:mixin:render-promotion-response:v1',
-  'triniti:curator:mixin:render-promotion-response',
 ];
 
 GdbotsPbjxResponseV1Mixin(M);

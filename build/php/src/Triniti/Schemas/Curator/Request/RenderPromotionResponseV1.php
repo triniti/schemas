@@ -18,8 +18,6 @@ final class RenderPromotionResponseV1 extends AbstractMessage
     const MIXINS = [
       'gdbots:pbjx:mixin:response:v1',
       'gdbots:pbjx:mixin:response',
-      'triniti:curator:mixin:render-promotion-response:v1',
-      'triniti:curator:mixin:render-promotion-response',
     ];
 
     use GdbotsPbjxResponseV1Mixin;
@@ -81,7 +79,7 @@ final class RenderPromotionResponseV1 extends AbstractMessage
                 Fb::create('widgets', T\MessageType::create())
                     ->asAList()
                     ->anyOfCuries([
-                        'triniti:curator:mixin:render-widget-response',
+                        'triniti:curator:request:render-widget-response',
                     ])
                     ->build(),
             ],

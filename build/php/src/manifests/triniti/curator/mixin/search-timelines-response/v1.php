@@ -10,5 +10,4 @@ declare(strict_types=1);
  */
 
 return [
-    'triniti:curator:request:search-timelines-response:v1',
 ];

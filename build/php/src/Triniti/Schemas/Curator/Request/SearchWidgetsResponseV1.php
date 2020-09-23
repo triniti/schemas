@@ -20,8 +20,6 @@ final class SearchWidgetsResponseV1 extends AbstractMessage
       'gdbots:pbjx:mixin:response',
       'gdbots:ncr:mixin:search-nodes-response:v1',
       'gdbots:ncr:mixin:search-nodes-response',
-      'triniti:curator:mixin:search-widgets-response:v1',
-      'triniti:curator:mixin:search-widgets-response',
     ];
 
     use GdbotsPbjxResponseV1Mixin;

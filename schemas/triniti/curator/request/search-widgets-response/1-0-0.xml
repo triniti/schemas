@@ -15,7 +15,6 @@
     <mixins>
       <curie-major>gdbots:pbjx:mixin:response:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:search-nodes-response:v1</curie-major>
-      <curie-major>triniti:curator:mixin:search-widgets-response:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

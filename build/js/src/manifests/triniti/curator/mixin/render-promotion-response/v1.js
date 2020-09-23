@@ -7,5 +7,4 @@
  */
 
 export default [
-  'triniti:curator:request:render-promotion-response:v1',
 ];

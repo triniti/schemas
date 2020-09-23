@@ -104,8 +104,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'gdbots:pbjx:mixin:response',
   'gdbots:ncr:mixin:search-nodes-response:v1',
   'gdbots:ncr:mixin:search-nodes-response',
-  'triniti:curator:mixin:search-timelines-response:v1',
-  'triniti:curator:mixin:search-timelines-response',
 ];
 
 GdbotsPbjxResponseV1Mixin(M);

@@ -10,5 +10,4 @@ declare(strict_types=1);
  */
 
 return [
-    'triniti:curator:request:render-promotion-response:v1',
 ];
