@@ -1,44 +1,70 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/dam/event/asset-patched/1-0-0.json#
-namespace Triniti\Schemas\Dam\Event;
+// @link http://schemas.triniti.io/json-schema/triniti/dam/command/patch-assets/1-0-0.json#
+namespace Triniti\Schemas\Dam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin as GdbotsPbjxCommandV1Mixin;
 
-final class AssetPatchedV1 extends AbstractMessage
+final class PatchAssetsV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:triniti:dam:event:asset-patched:1-0-0';
-    const SCHEMA_CURIE = 'triniti:dam:event:asset-patched';
-    const SCHEMA_CURIE_MAJOR = 'triniti:dam:event:asset-patched:v1';
+    const SCHEMA_ID = 'pbj:triniti:dam:command:patch-assets:1-0-0';
+    const SCHEMA_CURIE = 'triniti:dam:command:patch-assets';
+    const SCHEMA_CURIE_MAJOR = 'triniti:dam:command:patch-assets:v1';
     const MIXINS = [
-      'gdbots:pbjx:mixin:event:v1',
-      'gdbots:pbjx:mixin:event',
-      'gdbots:ncr:mixin:node-patched:v1',
-      'gdbots:ncr:mixin:node-patched',
+      'gdbots:pbjx:mixin:command:v1',
+      'gdbots:pbjx:mixin:command',
+      'gdbots:ncr:mixin:patch-nodes:v1',
+      'gdbots:ncr:mixin:patch-nodes',
     ];
 
-    use GdbotsPbjxEventV1Mixin;
+    use GdbotsPbjxCommandV1Mixin;
 
     protected static function defineSchema(): Schema
     {
         return new Schema(self::SCHEMA_ID, __CLASS__,
             [
-                Fb::create('event_id', T\TimeUuidType::create())
+                Fb::create('command_id', T\TimeUuidType::create())
                     ->required()
                     ->build(),
                 Fb::create('occurred_at', T\MicrotimeType::create())
+                    ->build(),
+                /*
+                 * Used to perform optimistic concurrency control.
+                 * @link https://en.wikipedia.org/wiki/HTTP_ETag
+                 */
+                Fb::create('expected_etag', T\StringType::create())
+                    ->maxLength(100)
+                    ->pattern('^[\w\.:-]+$')
                     ->build(),
                 /*
                  * Multi-tenant apps can use this field to track the tenant id.
                  */
                 Fb::create('ctx_tenant_id', T\StringType::create())
                     ->pattern('^[\w\/\.:-]+$')
+                    ->build(),
+                /*
+                 * The "ctx_retries" field is used to keep track of how many attempts were
+                 * made to process this command. In some cases, the service or transport
+                 * that handles the command may be down or an optimistic check has failed
+                 * and is being retried.
+                 */
+                Fb::create('ctx_retries', T\TinyIntType::create())
+                    ->build(),
+                /*
+                 * The "ctx_causator" is the actual causator object that "ctx_causator_ref"
+                 * refers to. In some cases it's useful for command handlers to copy the
+                 * causator into the command. For example, when a node is being updated we
+                 * may want to know what the node will be after the update. We can derive
+                 * this via the causator instead of requesting the node and engaging a race
+                 * condition.
+                 */
+                Fb::create('ctx_causator', T\MessageType::create())
                     ->build(),
                 Fb::create('ctx_causator_ref', T\MessageRefType::create())
                     ->build(),
@@ -47,8 +73,9 @@ final class AssetPatchedV1 extends AbstractMessage
                 Fb::create('ctx_user_ref', T\MessageRefType::create())
                     ->build(),
                 /*
-                 * The "ctx_app" refers to the application used to send the command which
-                 * in turn resulted in this event being published.
+                 * The "ctx_app" refers to the application used to send the command. This is
+                 * different from ctx_ua (user_agent) because the agent used (Safari, Firefox)
+                 * is not necessarily the app used (cms, iOS app, website)
                  */
                 Fb::create('ctx_app', T\MessageType::create())
                     ->anyOfCuries([
@@ -56,9 +83,8 @@ final class AssetPatchedV1 extends AbstractMessage
                     ])
                     ->build(),
                 /*
-                 * The "ctx_cloud" is usually copied from the command that resulted in this
-                 * event being published. This means the value most likely refers to the cloud
-                 * that received the command originally, not the machine processing the event.
+                 * The "ctx_cloud" is set by the server receiving the command and is generally
+                 * only used internally for tracking and performance monitoring.
                  */
                 Fb::create('ctx_cloud', T\MessageType::create())
                     ->anyOfCuries([
@@ -77,16 +103,16 @@ final class AssetPatchedV1 extends AbstractMessage
                     ->overridable(true)
                     ->build(),
                 /*
-                 * An optional message/reason for the event being created.
+                 * An optional message/reason for the command being sent.
                  * Consider this like a git commit message.
                  */
                 Fb::create('ctx_msg', T\TextType::create())
                     ->build(),
-                Fb::create('node_ref', T\NodeRefType::create())
-                    ->required()
+                Fb::create('node_refs', T\NodeRefType::create())
+                    ->asASet()
                     ->build(),
                 /*
-                 * The names of the fields this patch event should apply changes to.
+                 * The names of the fields this patch command should apply changes to.
                  * Nested paths can be referenced using dot notation.
                  */
                 Fb::create('paths', T\StringType::create())

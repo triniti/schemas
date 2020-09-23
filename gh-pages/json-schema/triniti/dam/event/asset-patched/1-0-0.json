@@ -158,6 +158,16 @@
       "additionalProperties": false,
       "description": "The names of the fields this patch event should apply changes to. Nested paths can be referenced using dot notation."
     },
+    "title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "display_title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
     "expires_at": {
       "type": "string",
       "format": "date-time"
@@ -166,6 +176,24 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 255
+    },
+    "credit_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+    },
+    "cta_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "cta_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 5000
     }
   },
   "required": [

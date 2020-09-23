@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/dam/event/asset-patched/1-0-2.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/dam/event/asset-patched/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:triniti:dam:event:asset-patched:1-0-2"
+      "default": "pbj:triniti:dam:event:asset-patched:1-0-0"
     },
     "event_id": {
       "type": "string",

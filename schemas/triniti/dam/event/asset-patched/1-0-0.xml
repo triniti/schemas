@@ -5,8 +5,14 @@
 
   <schema id="pbj:triniti:dam:event:asset-patched:1-0-0">
     <fields>
+      <field name="title" type="string"/>
+      <field name="display_title" type="string"/>
       <field name="expires_at" type="date-time"/>
       <field name="credit" type="string"/>
+      <field name="credit_url" type="text" format="url"/>
+      <field name="cta_text" type="string"/>
+      <field name="cta_url" type="text" format="url"/>
+      <field name="description" type="text" max="5000"/>
     </fields>
 
     <mixins>

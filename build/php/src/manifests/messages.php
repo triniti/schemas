@@ -138,6 +138,7 @@ return [
     'triniti:curator:request:search-timelines-response:v1' => 'Triniti\Schemas\Curator\Request\SearchTimelinesResponseV1',
     'triniti:curator:request:search-widgets-request:v1' => 'Triniti\Schemas\Curator\Request\SearchWidgetsRequestV1',
     'triniti:curator:request:search-widgets-response:v1' => 'Triniti\Schemas\Curator\Request\SearchWidgetsResponseV1',
+    'triniti:dam:command:patch-assets:v1' => 'Triniti\Schemas\Dam\Command\PatchAssetsV1',
     'triniti:dam:command:reorder-gallery-assets:v1' => 'Triniti\Schemas\Dam\Command\ReorderGalleryAssetsV1',
     'triniti:dam:command:unlink-assets:v1' => 'Triniti\Schemas\Dam\Command\UnlinkAssetsV1',
     'triniti:dam:event:asset-linked:v1' => 'Triniti\Schemas\Dam\Event\AssetLinkedV1',

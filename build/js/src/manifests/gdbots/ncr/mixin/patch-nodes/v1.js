@@ -7,4 +7,5 @@
  */
 
 export default [
+  'triniti:dam:command:patch-assets:v1',
 ];

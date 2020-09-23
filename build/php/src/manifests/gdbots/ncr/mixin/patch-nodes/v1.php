@@ -10,4 +10,5 @@ declare(strict_types=1);
  */
 
 return [
+    'triniti:dam:command:patch-assets:v1',
 ];
