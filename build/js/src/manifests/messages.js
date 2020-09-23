@@ -135,6 +135,7 @@ export default {
   'triniti:curator:request:search-timelines-response:v1': () => import('@triniti/schemas/triniti/curator/request/SearchTimelinesResponseV1'),
   'triniti:curator:request:search-widgets-request:v1': () => import('@triniti/schemas/triniti/curator/request/SearchWidgetsRequestV1'),
   'triniti:curator:request:search-widgets-response:v1': () => import('@triniti/schemas/triniti/curator/request/SearchWidgetsResponseV1'),
+  'triniti:dam:command:link-assets:v1': () => import('@triniti/schemas/triniti/dam/command/LinkAssetsV1'),
   'triniti:dam:command:patch-assets:v1': () => import('@triniti/schemas/triniti/dam/command/PatchAssetsV1'),
   'triniti:dam:command:reorder-gallery-assets:v1': () => import('@triniti/schemas/triniti/dam/command/ReorderGalleryAssetsV1'),
   'triniti:dam:command:unlink-assets:v1': () => import('@triniti/schemas/triniti/dam/command/UnlinkAssetsV1'),

@@ -43,6 +43,7 @@ __BREAKING CHANGES__
   * `triniti:dam:mixin:gallery-asset-reordered`
   * `triniti:dam:mixin:get-upload-urls-request`
   * `triniti:dam:mixin:get-upload-urls-response`
+  * `triniti:dam:mixin:link-assets`
   * `triniti:dam:mixin:patch-assets`
   * `triniti:dam:mixin:reorder-gallery-assets`
   * `triniti:dam:mixin:search-assets-request`
@@ -105,6 +106,7 @@ __BREAKING CHANGES__
   * `triniti:curator:request:search-timelines-response`
   * `triniti:curator:request:search-widgets-request`
   * `triniti:curator:request:search-widgets-response`
+  * `triniti:dam:command:link-assets`
   * `triniti:dam:command:patch-assets`
   * `triniti:dam:command:reorder-gallery-assets`
   * `triniti:dam:command:unlink-assets`
