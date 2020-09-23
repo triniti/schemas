@@ -162,6 +162,7 @@ export default {
   'triniti:notify:event:notification-failed:v1': () => import('@triniti/schemas/triniti/notify/event/NotificationFailedV1'),
   'triniti:notify:event:notification-sent:v1': () => import('@triniti/schemas/triniti/notify/event/NotificationSentV1'),
   'triniti:notify:request:search-notifications-request:v1': () => import('@triniti/schemas/triniti/notify/request/SearchNotificationsRequestV1'),
+  'triniti:notify:request:search-notifications-response:v1': () => import('@triniti/schemas/triniti/notify/request/SearchNotificationsResponseV1'),
   'triniti:ovp.jwplayer:command:sync-media:v1': () => import('@triniti/schemas/triniti/ovp.jwplayer/command/SyncMediaV1'),
   'triniti:ovp.jwplayer:event:media-synced:v1': () => import('@triniti/schemas/triniti/ovp.jwplayer/event/MediaSyncedV1'),
   'triniti:ovp.kaltura::caption:v1': () => import('@triniti/schemas/triniti/ovp.kaltura/CaptionV1'),

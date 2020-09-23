@@ -168,6 +168,7 @@ MessageResolver::register([
     'triniti:notify:event:notification-failed:v1' => 'Triniti\Schemas\Notify\Event\NotificationFailedV1',
     'triniti:notify:event:notification-sent:v1' => 'Triniti\Schemas\Notify\Event\NotificationSentV1',
     'triniti:notify:request:search-notifications-request:v1' => 'Triniti\Schemas\Notify\Request\SearchNotificationsRequestV1',
+    'triniti:notify:request:search-notifications-response:v1' => 'Triniti\Schemas\Notify\Request\SearchNotificationsResponseV1',
     'triniti:ovp.jwplayer:command:sync-media:v1' => 'Triniti\Schemas\OvpJwplayer\Command\SyncMediaV1',
     'triniti:ovp.jwplayer:event:media-synced:v1' => 'Triniti\Schemas\OvpJwplayer\Event\MediaSyncedV1',
     'triniti:ovp.kaltura::caption:v1' => 'Triniti\Schemas\OvpKaltura\CaptionV1',
