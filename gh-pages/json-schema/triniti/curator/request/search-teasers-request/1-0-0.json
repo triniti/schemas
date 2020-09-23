@@ -283,6 +283,13 @@
         "title-desc"
       ]
     },
+    "slotting_key": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The name of the slotting key to use to determine the order of teasers returned in the response. e.g. \"home\", \"sports\", \"tv\""
+    },
     "types": {
       "type": "array",
       "items": [

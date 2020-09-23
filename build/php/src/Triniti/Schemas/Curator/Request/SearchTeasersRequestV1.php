@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/curator/request/search-teasers-request/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/request/search-teasers-request/1-0-0.json#
 namespace Triniti\Schemas\Curator\Request;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -15,7 +15,7 @@ use Triniti\Schemas\Curator\Enum\SearchTeasersSort;
 
 final class SearchTeasersRequestV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:triniti:curator:request:search-teasers-request:1-0-1';
+    const SCHEMA_ID = 'pbj:triniti:curator:request:search-teasers-request:1-0-0';
     const SCHEMA_CURIE = 'triniti:curator:request:search-teasers-request';
     const SCHEMA_CURIE_MAJOR = 'triniti:curator:request:search-teasers-request:v1';
     const MIXINS = [

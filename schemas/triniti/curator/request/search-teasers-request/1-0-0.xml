@@ -10,6 +10,12 @@
         <default>order-date-desc</default>
         <enum id="triniti:curator:search-teasers-sort"/>
       </field>
+      <field name="slotting_key" type="string" format="slug">
+        <description>
+          The name of the slotting key to use to determine the order of
+          teasers returned in the response. e.g. "home", "sports", "tv"
+        </description>
+      </field>
       <field name="types" type="string" format="slug" rule="set">
         <description>
           A set of teaser types (node must match at least one) to include in

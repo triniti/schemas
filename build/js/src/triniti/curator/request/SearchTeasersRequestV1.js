@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/curator/request/search-teasers-request/1-0-1.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/request/search-teasers-request/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
@@ -181,7 +181,7 @@ export default class SearchTeasersRequestV1 extends Message {
 }
 
 const M = SearchTeasersRequestV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:curator:request:search-teasers-request:1-0-1';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:curator:request:search-teasers-request:1-0-0';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:curator:request:search-teasers-request';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:curator:request:search-teasers-request:v1';
 M.prototype.MIXINS = M.MIXINS = [
