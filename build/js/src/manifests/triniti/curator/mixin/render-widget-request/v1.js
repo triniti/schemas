@@ -7,5 +7,4 @@
  */
 
 export default [
-  'triniti:curator:request:render-widget-request:v1',
 ];

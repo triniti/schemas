@@ -103,8 +103,6 @@ M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:curator:request
 M.prototype.MIXINS = M.MIXINS = [
   'gdbots:pbjx:mixin:request:v1',
   'gdbots:pbjx:mixin:request',
-  'triniti:curator:mixin:render-widget-request:v1',
-  'triniti:curator:mixin:render-widget-request',
 ];
 
 GdbotsPbjxRequestV1Mixin(M);

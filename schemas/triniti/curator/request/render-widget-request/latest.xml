@@ -20,7 +20,6 @@
 
     <mixins>
       <curie-major>gdbots:pbjx:mixin:request:v1</curie-major>
-      <curie-major>triniti:curator:mixin:render-widget-request:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

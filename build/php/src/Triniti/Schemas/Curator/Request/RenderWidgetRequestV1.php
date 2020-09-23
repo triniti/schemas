@@ -19,8 +19,6 @@ final class RenderWidgetRequestV1 extends AbstractMessage
     const MIXINS = [
       'gdbots:pbjx:mixin:request:v1',
       'gdbots:pbjx:mixin:request',
-      'triniti:curator:mixin:render-widget-request:v1',
-      'triniti:curator:mixin:render-widget-request',
     ];
 
     use GdbotsPbjxRequestV1Mixin;
