@@ -33,7 +33,10 @@ export default [
   'triniti:ovp:request:search-videos-response:v1',
   'triniti:people:request:search-people-response:v1',
   'triniti:sys:request:get-redirect-response:v1',
+  'triniti:sys:request:search-flagsets-response:v1',
+  'triniti:sys:request:search-picklists-response:v1',
   'triniti:sys:request:search-redirects-response:v1',
   'triniti:taxonomy:request:search-categories-response:v1',
+  'triniti:taxonomy:request:search-channels-response:v1',
   'triniti:taxonomy:request:suggest-hashtags-response:v1',
 ];

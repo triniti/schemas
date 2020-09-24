@@ -138,8 +138,6 @@ __BREAKING CHANGES__
   * `triniti:sys:request:get-redirect-response`
   * `triniti:sys:request:search-redirects-request`
   * `triniti:sys:request:search-redirects-response`
-  * `triniti:taxonomy:request:get-all-channels-request`
-  * `triniti:taxonomy:request:get-all-channels-response`
   * `triniti:taxonomy:request:search-categories-request`
   * `triniti:taxonomy:request:search-categories-response`
   * `triniti:taxonomy:request:suggest-hashtags-request`
