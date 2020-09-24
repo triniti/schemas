@@ -136,10 +136,16 @@ __BREAKING CHANGES__
   * `triniti:people:request:search-people-response`
   * `triniti:sys:request:get-redirect-request`
   * `triniti:sys:request:get-redirect-response`
+  * `triniti:sys:request:search-flagsets-request`
+  * `triniti:sys:request:search-flagsets-response`
+  * `triniti:sys:request:search-picklists-request`
+  * `triniti:sys:request:search-picklists-response`
   * `triniti:sys:request:search-redirects-request`
   * `triniti:sys:request:search-redirects-response`
   * `triniti:taxonomy:request:search-categories-request`
   * `triniti:taxonomy:request:search-categories-response`
+  * `triniti:taxonomy:request:search-channels-request`
+  * `triniti:taxonomy:request:search-channels-response`
   * `triniti:taxonomy:request:suggest-hashtags-request`
   * `triniti:taxonomy:request:suggest-hashtags-response`
 
