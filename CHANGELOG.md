@@ -135,10 +135,6 @@ __BREAKING CHANGES__
   * `triniti:people:request:search-people-request`
   * `triniti:people:request:search-people-response`
   * `triniti:sys:request:get-redirect-response`
-  * `triniti:sys:request:list-all-flagsets-request`
-  * `triniti:sys:request:list-all-flagsets-response`
-  * `triniti:sys:request:list-all-picklists-request`
-  * `triniti:sys:request:list-all-picklists-response`
   * `triniti:sys:request:search-redirects-request`
   * `triniti:sys:request:search-redirects-response`
   * `triniti:taxonomy:request:get-all-channels-request`
