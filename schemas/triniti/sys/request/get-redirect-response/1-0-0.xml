@@ -21,7 +21,6 @@
     <mixins>
       <curie-major>gdbots:pbjx:mixin:response:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:get-node-response:v1</curie-major>
-      <curie-major>triniti:sys:mixin:get-redirect-response:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

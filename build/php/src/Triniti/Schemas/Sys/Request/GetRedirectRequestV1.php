@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/sys/request/list-all-picklists-request/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/sys/request/get-redirect-request/1-0-0.json#
 namespace Triniti\Schemas\Sys\Request;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -11,14 +11,16 @@ use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Mixin as GdbotsPbjxRequestV1Mixin;
 
-final class ListAllPicklistsRequestV1 extends AbstractMessage
+final class GetRedirectRequestV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:triniti:sys:request:list-all-picklists-request:1-0-0';
-    const SCHEMA_CURIE = 'triniti:sys:request:list-all-picklists-request';
-    const SCHEMA_CURIE_MAJOR = 'triniti:sys:request:list-all-picklists-request:v1';
+    const SCHEMA_ID = 'pbj:triniti:sys:request:get-redirect-request:1-0-0';
+    const SCHEMA_CURIE = 'triniti:sys:request:get-redirect-request';
+    const SCHEMA_CURIE_MAJOR = 'triniti:sys:request:get-redirect-request:v1';
     const MIXINS = [
       'gdbots:pbjx:mixin:request:v1',
       'gdbots:pbjx:mixin:request',
+      'gdbots:ncr:mixin:get-node-request:v1',
+      'gdbots:ncr:mixin:get-node-request',
     ];
 
     use GdbotsPbjxRequestV1Mixin;
@@ -89,6 +91,29 @@ final class ListAllPicklistsRequestV1 extends AbstractMessage
                 Fb::create('derefs', T\StringType::create())
                     ->asASet()
                     ->pattern('^[\w\.-]+$')
+                    ->build(),
+                /*
+                 * If true, a strongly consistent read is used; if false (the default), an eventually consistent read is used.
+                 */
+                Fb::create('consistent_read', T\BooleanType::create())
+                    ->build(),
+                /*
+                 * When "node_ref" is supplied it SHOULD be used to perform the request.
+                 * The "node_ref" and "slug" are analogous to protobuf unions in that
+                 * only one of these should exist and the priority of selection is as
+                 * ordered in this schema.
+                 */
+                Fb::create('node_ref', T\NodeRefType::create())
+                    ->build(),
+                /*
+                 * The "qname" field should be populated when the request is not
+                 * using "node_ref", e.g. "acme:article"
+                 */
+                Fb::create('qname', T\StringType::create())
+                    ->pattern('^[a-z0-9-]+:[a-z0-9-]+$')
+                    ->build(),
+                Fb::create('slug', T\StringType::create())
+                    ->format(Format::SLUG())
                     ->build(),
             ],
             self::MIXINS

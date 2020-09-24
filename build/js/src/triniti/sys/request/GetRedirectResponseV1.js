@@ -85,8 +85,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'gdbots:pbjx:mixin:response',
   'gdbots:ncr:mixin:get-node-response:v1',
   'gdbots:ncr:mixin:get-node-response',
-  'triniti:sys:mixin:get-redirect-response:v1',
-  'triniti:sys:mixin:get-redirect-response',
 ];
 
 GdbotsPbjxResponseV1Mixin(M);

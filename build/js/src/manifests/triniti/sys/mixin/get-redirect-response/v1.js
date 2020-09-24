@@ -7,5 +7,4 @@
  */
 
 export default [
-  'triniti:sys:request:get-redirect-response:v1',
 ];

@@ -134,6 +134,7 @@ __BREAKING CHANGES__
   * `triniti:ovp:request:search-videos-response`
   * `triniti:people:request:search-people-request`
   * `triniti:people:request:search-people-response`
+  * `triniti:sys:request:get-redirect-request`
   * `triniti:sys:request:get-redirect-response`
   * `triniti:sys:request:search-redirects-request`
   * `triniti:sys:request:search-redirects-response`

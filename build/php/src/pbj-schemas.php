@@ -192,6 +192,7 @@ MessageResolver::register([
     'triniti:people:request:search-people-request:v1' => 'Triniti\Schemas\People\Request\SearchPeopleRequestV1',
     'triniti:people:request:search-people-response:v1' => 'Triniti\Schemas\People\Request\SearchPeopleResponseV1',
     'triniti:sys:command:purge-cache:v1' => 'Triniti\Schemas\Sys\Command\PurgeCacheV1',
+    'triniti:sys:request:get-redirect-request:v1' => 'Triniti\Schemas\Sys\Request\GetRedirectRequestV1',
     'triniti:sys:request:get-redirect-response:v1' => 'Triniti\Schemas\Sys\Request\GetRedirectResponseV1',
     'triniti:sys:request:search-redirects-request:v1' => 'Triniti\Schemas\Sys\Request\SearchRedirectsRequestV1',
     'triniti:sys:request:search-redirects-response:v1' => 'Triniti\Schemas\Sys\Request\SearchRedirectsResponseV1',

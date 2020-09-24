@@ -1,12 +1,12 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/taxonomy/request/get-all-channels-request/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/sys/request/get-redirect-request/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:triniti:taxonomy:request:get-all-channels-request:1-0-0"
+      "default": "pbj:triniti:sys:request:get-redirect-request:1-0-0"
     },
     "request_id": {
       "type": "string",
@@ -154,6 +154,26 @@
       "uniqueItems": true,
       "additionalProperties": false,
       "description": "Field names to dereference, this serves as a hint to the server and is not necessarily gauranteed since authorization, availability, etc. are determined by the server not the client."
+    },
+    "consistent_read": {
+      "type": "boolean",
+      "description": "If true, a strongly consistent read is used; if false (the default), an eventually consistent read is used."
+    },
+    "node_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "When \"node_ref\" is supplied it SHOULD be used to perform the request. The \"node_ref\" and \"slug\" are analogous to protobuf unions in that only one of these should exist and the priority of selection is as ordered in this schema."
+    },
+    "qname": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+:[a-z0-9-]+$",
+      "description": "The \"qname\" field should be populated when the request is not using \"node_ref\", e.g. \"acme:article\""
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255
     }
   },
   "required": [

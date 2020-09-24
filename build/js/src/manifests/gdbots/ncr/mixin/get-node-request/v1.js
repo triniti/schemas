@@ -9,4 +9,5 @@
 export default [
   'gdbots:iam:request:get-user-request:v1',
   'gdbots:ncr:request:get-node-request:v1',
+  'triniti:sys:request:get-redirect-request:v1',
 ];

@@ -20,8 +20,6 @@ final class GetRedirectResponseV1 extends AbstractMessage
       'gdbots:pbjx:mixin:response',
       'gdbots:ncr:mixin:get-node-response:v1',
       'gdbots:ncr:mixin:get-node-response',
-      'triniti:sys:mixin:get-redirect-response:v1',
-      'triniti:sys:mixin:get-redirect-response',
     ];
 
     use GdbotsPbjxResponseV1Mixin;

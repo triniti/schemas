@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/sys/request/list-all-picklists-request/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/sys/request/get-redirect-request/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
@@ -6,7 +6,7 @@ import Message from '@gdbots/pbj/Message';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 
-export default class ListAllPicklistsRequestV1 extends Message {
+export default class GetRedirectRequestV1 extends Message {
   /**
    * @private
    *
@@ -78,19 +78,44 @@ export default class ListAllPicklistsRequestV1 extends Message {
           .asASet()
           .pattern('^[\\w\\.-]+$')
           .build(),
+        /*
+         * If true, a strongly consistent read is used; if false (the default), an eventually consistent read is used.
+         */
+        Fb.create('consistent_read', T.BooleanType.create())
+          .build(),
+        /*
+         * When "node_ref" is supplied it SHOULD be used to perform the request.
+         * The "node_ref" and "slug" are analogous to protobuf unions in that
+         * only one of these should exist and the priority of selection is as
+         * ordered in this schema.
+         */
+        Fb.create('node_ref', T.NodeRefType.create())
+          .build(),
+        /*
+         * The "qname" field should be populated when the request is not
+         * using "node_ref", e.g. "acme:article"
+         */
+        Fb.create('qname', T.StringType.create())
+          .pattern('^[a-z0-9-]+:[a-z0-9-]+$')
+          .build(),
+        Fb.create('slug', T.StringType.create())
+          .format(Format.SLUG)
+          .build(),
       ],
       this.MIXINS,
     );
   }
 }
 
-const M = ListAllPicklistsRequestV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:sys:request:list-all-picklists-request:1-0-0';
-M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:sys:request:list-all-picklists-request';
-M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:sys:request:list-all-picklists-request:v1';
+const M = GetRedirectRequestV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:sys:request:get-redirect-request:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:sys:request:get-redirect-request';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:sys:request:get-redirect-request:v1';
 M.prototype.MIXINS = M.MIXINS = [
   'gdbots:pbjx:mixin:request:v1',
   'gdbots:pbjx:mixin:request',
+  'gdbots:ncr:mixin:get-node-request:v1',
+  'gdbots:ncr:mixin:get-node-request',
 ];
 
 GdbotsPbjxRequestV1Mixin(M);
