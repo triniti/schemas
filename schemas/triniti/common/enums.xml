@@ -40,6 +40,8 @@
       <option key="R4by3" value="4by3"/>
       <option key="R4by5" value="4by5"/>
       <option key="R5by4" value="5by4"/>
+      <option key="R5by6" value="5by6"/>
+      <option key="R6by5" value="6by5"/>
       <option key="R9by16" value="9by16"/>
       <option key="R16by9" value="16by9"/>
       <option key="ORIGINAL" value="original"/>

@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.1.13
+* __Modify Schemas:__
+  * `triniti:common:aspect-ratio`
+    * Add `R5by6` and `R6by5` to enum.
+
+
 ## v1.1.12
 * Use `gdbots/schemas` v1.6.6.
 * __Modify Schemas:__
