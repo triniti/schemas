@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v1.1.14
+* __Add Schemas:__
+  * `triniti:canvas:mixin:eme-form-block`
+
+
 ## v1.1.13
 * __Modify Schemas:__
   * `triniti:common:aspect-ratio`
