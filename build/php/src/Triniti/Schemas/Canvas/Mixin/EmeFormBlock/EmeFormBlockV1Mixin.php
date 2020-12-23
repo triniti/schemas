@@ -6,6 +6,7 @@ use Gdbots\Pbj\AbstractMixin;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\SchemaId;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Ncr\NodeRef;
 
 final class EmeFormBlockV1Mixin extends AbstractMixin
 {
@@ -23,14 +24,11 @@ final class EmeFormBlockV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
-            Fb::create('solicit_id', T\StringType::create())
+            Fb::create('form_ref', T\IdentifierType::create())
                 ->required()
-                ->pattern('^[\w\/-]+$')
+                ->className(NodeRef::class)
                 ->build(),
-            /*
-             * Represents the date on which the solicit is set to expire.
-             */
-            Fb::create('expiration_date', T\DateTimeType::create())
+            Fb::create('expires_at', T\DateTimeType::create())
                 ->build(),
         ];
     }

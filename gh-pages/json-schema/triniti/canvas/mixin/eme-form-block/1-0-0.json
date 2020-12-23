@@ -37,18 +37,17 @@
         "rule": "single"
       }
     },
-    "solicit_id": {
+    "form_ref": {
       "type": "string",
-      "pattern": "^[\\w\\/-]+$",
+      "pattern": "^[\\w\\/\\.:-]+$",
       "pbj": {
-        "type": "string",
+        "type": "identifier",
         "rule": "single"
       }
     },
-    "expiration_date": {
+    "expires_at": {
       "type": "string",
       "format": "date-time",
-      "description": "Represents the date on which the solicit is set to expire.",
       "pbj": {
         "type": "date-time",
         "rule": "single"
@@ -56,7 +55,7 @@
     }
   },
   "required": [
-    "solicit_id"
+    "form_ref"
   ],
   "additionalProperties": true
 }

@@ -6,8 +6,7 @@ export default function EmeFormBlockV1Trait(m) {
     getUriTemplateVars() {
       return {
         etag: this.get('etag'),
-        solicit_id: this.get('solicit_id'),
-        expiration_date: this.get('expiration_date'),
+        form_ref: `${this.get('form_ref', '')}`,
       };
     }
   });

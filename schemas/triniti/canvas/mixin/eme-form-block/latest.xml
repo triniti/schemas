@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pbj-schema xmlns="http://gdbots.io/pbj/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:canvas:mixin:eme-form-block:1-0-0" mixin="true" extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="solicit_id" type="string" pattern="^[\w\/-]+$" required="true"/>
-      <field name="expiration_date" type="date-time">
-        <description>
-          Represents the date on which the solicit is set to expire.
-        </description>
+      <field name="form_ref" type="identifier" required="true">
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
       </field>
+      <field name="expires_at" type="date-time"/>
     </fields>
 
     <php-options>
@@ -25,8 +30,7 @@ public function getUriTemplateVars()
 {
     return [
         'etag' => $this->get('etag'),
-        'solicit_id' => $this->get('solicit_id'),
-        'expiration_date' => $this->get('expiration_date'),
+        'form_ref' => (string)$this->get('form_ref'),
     ];
 }
           ]]>
@@ -44,8 +48,7 @@ public function getUriTemplateVars()
 getUriTemplateVars() {
   return {
     etag: this.get('etag'),
-    solicit_id: this.get('solicit_id'),
-    expiration_date: this.get('expiration_date'),
+    form_ref: `${this.get('form_ref', '')}`,
   };
 }
           ]]>

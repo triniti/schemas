@@ -1,6 +1,7 @@
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/eme-form-block/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
+import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/types';
 
@@ -17,14 +18,11 @@ export default class EmeFormBlockV1Mixin extends Mixin {
    */
   getFields() {
     return [
-      Fb.create('solicit_id', T.StringType.create())
+      Fb.create('form_ref', T.IdentifierType.create())
         .required()
-        .pattern('^[\\w\\/-]+$')
+        .classProto(NodeRef)
         .build(),
-      /*
-       * Represents the date on which the solicit is set to expire.
-       */
-      Fb.create('expiration_date', T.DateTimeType.create())
+      Fb.create('expires_at', T.DateTimeType.create())
         .build(),
     ];
   }

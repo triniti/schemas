@@ -17,8 +17,7 @@ trait EmeFormBlockV1Trait
     {
         return [
             'etag' => $this->get('etag'),
-            'solicit_id' => $this->get('solicit_id'),
-            'expiration_date' => $this->get('expiration_date'),
+            'form_ref' => (string)$this->get('form_ref'),
         ];
     }
 }
