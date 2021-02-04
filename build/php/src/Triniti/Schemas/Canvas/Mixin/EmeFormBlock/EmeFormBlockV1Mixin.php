@@ -18,8 +18,8 @@ trait EmeFormBlockV1Mixin
     public function getUriTemplateVars()
     {
         return [
-            'etag' => $this->get('etag'),
-            'form_ref' => (string)$this->get('form_ref'),
+            'etag' => $this->fget('etag'),
+            'form_ref' => $this->fget('form_ref'),
         ];
     }
 }
