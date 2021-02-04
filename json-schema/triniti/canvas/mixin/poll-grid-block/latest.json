@@ -5,37 +5,21 @@
   "properties": {
     "etag": {
       "type": "string",
-      "pattern": "^[\\w\\.:-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.:-]+$"
     },
     "css_class": {
       "type": "string",
       "pattern": "^[\\w\\s-]+$",
-      "description": "In rendering environments that support HTML the css_class can be appended to the dom elements' class attribute.",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "description": "In rendering environments that support HTML the css_class can be appended to the dom elements' class attribute."
     },
     "updated_date": {
       "type": "string",
       "format": "date-time",
-      "description": "Represents an update that occurred on the node this block is attached to. DOES NOT indicate an update to the block itself. eg an article with a twitter block with updated_date means that the article was updated to include that twitter block.",
-      "pbj": {
-        "type": "date-time",
-        "rule": "single"
-      }
+      "description": "Represents an update that occurred on the node this block is attached to. DOES NOT indicate an update to the block itself. eg an article with a twitter block with updated_date means that the article was updated to include that twitter block."
     },
     "aside": {
       "type": "boolean",
-      "description": "When true it means this block represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "description": "When true it means this block represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes."
     },
     "node_refs": {
       "type": "array",
@@ -46,11 +30,7 @@
         }
       ],
       "additionalProperties": false,
-      "description": "An array of poll refs to include in this block. It is a list vs a set to allow sorting.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "list"
-      }
+      "description": "An array of poll refs to include in this block. It is a list vs a set to allow sorting."
     }
   },
   "additionalProperties": true

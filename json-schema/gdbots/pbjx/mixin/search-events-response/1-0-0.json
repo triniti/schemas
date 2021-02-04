@@ -5,19 +5,16 @@
   "properties": {
     "response_id": {
       "type": "string",
-      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
-      "pbj": {
-        "type": "uuid",
-        "rule": "single"
-      }
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
     "created_at": {
       "type": "string",
-      "pattern": "^[1-9]{1}[0-9]{12,15}$",
-      "pbj": {
-        "type": "microtime",
-        "rule": "single"
-      }
+      "pattern": "^[1-9]{1}[0-9]{12,15}$"
+    },
+    "ctx_tenant_id": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "Multi-tenant apps can use this field to track the tenant id."
     },
     "ctx_request_ref": {
       "type": "object",
@@ -45,11 +42,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "ctx_request": {
       "type": "object",
@@ -58,11 +51,7 @@
           "$ref": "#/definitions/request"
         }
       ],
-      "description": "The \"ctx_request\" is the actual request object that \"ctx_request_ref\" refers to. In some cases it's useful for request handlers to copy the request into the response so the requestor has everything in one message. This will NOT always be populated. A common use case is search request/response cycles where you want to know what the search criteria was so you can render that along with the results.",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      "description": "The \"ctx_request\" is the actual request object that \"ctx_request_ref\" refers to. In some cases it's useful for request handlers to copy the request into the response so the requestor has everything in one message. This will NOT always be populated. A common use case is search request/response cycles where you want to know what the search criteria was so you can render that along with the results."
     },
     "ctx_correlator_ref": {
       "type": "object",
@@ -90,11 +79,7 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "derefs": {
       "type": "object",
@@ -104,11 +89,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "Responses can include \"dereferenced\" messages to prevent the consumer from needing to make multiple HTTP requests. It is up to the consumer to make use of the dereferenced messages if/when they are provided.",
-      "pbj": {
-        "type": "message",
-        "rule": "map"
-      }
+      "description": "Responses can include \"dereferenced\" messages to prevent the consumer from needing to make multiple HTTP requests. It is up to the consumer to make use of the dereferenced messages if/when they are provided."
     },
     "links": {
       "type": "object",
@@ -120,11 +101,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "@link https://en.wikipedia.org/wiki/HATEOAS",
-      "pbj": {
-        "type": "text",
-        "rule": "map"
-      }
+      "description": "@link https://en.wikipedia.org/wiki/HATEOAS"
     },
     "metas": {
       "type": "object",
@@ -135,49 +112,29 @@
           "maxLength": 65535
         }
       },
-      "additionalProperties": false,
-      "pbj": {
-        "type": "text",
-        "rule": "map"
-      }
+      "additionalProperties": false
     },
     "total": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
       "maximum": 4294967295,
-      "description": "The total number of events matching the search.",
-      "pbj": {
-        "type": "int",
-        "rule": "single"
-      }
+      "description": "The total number of events matching the search."
     },
     "has_more": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "type": "boolean"
     },
     "time_taken": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
       "maximum": 16777215,
-      "description": "How long in milliseconds it took to run the query.",
-      "pbj": {
-        "type": "medium-int",
-        "rule": "single"
-      }
+      "description": "How long in milliseconds it took to run the query."
     },
     "max_score": {
       "type": "number",
       "default": 0,
-      "description": "The maximum score of a matching event from the entire search.",
-      "pbj": {
-        "type": "float",
-        "rule": "single"
-      }
+      "description": "The maximum score of a matching event from the entire search."
     },
     "cursors": {
       "type": "object",
@@ -189,11 +146,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "Cursors are optionally provided by the underlying search system to allow for efficient pagination. In the absense of cursors, paging is done using count and page number.",
-      "pbj": {
-        "type": "string",
-        "rule": "map"
-      }
+      "description": "Cursors are optionally provided by the underlying search system to allow for efficient pagination. In the absense of cursors, paging is done using count and page number."
     },
     "events": {
       "type": "array",
@@ -202,12 +155,7 @@
           "$ref": "#/definitions/event"
         }
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message",
-        "rule": "list",
-        "overridable": true
-      }
+      "additionalProperties": false
     }
   },
   "required": [
@@ -225,6 +173,9 @@
         },
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/request/1-0-2.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/request/1-0-3.json#"
         }
       ]
     },
@@ -236,6 +187,9 @@
         },
         {
           "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/event/1-0-1.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/event/1-0-2.json#"
         }
       ]
     }

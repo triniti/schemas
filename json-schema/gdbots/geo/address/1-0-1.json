@@ -10,11 +10,7 @@
     },
     "geo_hash": {
       "type": "string",
-      "pattern": "^\\w+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^\\w+$"
     },
     "geo_point": {
       "type": "object",
@@ -45,107 +41,59 @@
         "type",
         "coordinates"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "geo-point",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "verified": {
       "type": "boolean",
-      "description": "Indicates if a verification has been run on this address.",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "description": "Indicates if a verification has been run on this address."
     },
     "is_verified": {
       "type": "boolean",
-      "description": "Indicates if this is a valid adddress or not. Generally only true if the verified field is also true.",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "description": "Indicates if this is a valid adddress or not. Generally only true if the verified field is also true."
     },
     "street1": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "street2": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 20,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 20
     },
     "po_box": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 20,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 20
     },
     "city": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 100,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 100
     },
     "region": {
       "type": "string",
       "pattern": "^[A-Z0-9]{2}$",
-      "description": "A two letter alpha or numeric code indicating the region, e.g. \"CA\". @link http://www.maxmind.com/download/geoip/misc/region_codes.csv",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "description": "A two letter alpha or numeric code indicating the region, e.g. \"CA\". @link http://www.maxmind.com/download/geoip/misc/region_codes.csv"
     },
     "region_name": {
       "type": "string",
       "minLength": 0,
       "maxLength": 150,
-      "description": "The full name of the region, e.g. \"California\".",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "description": "The full name of the region, e.g. \"California\"."
     },
     "postal_code": {
       "type": "string",
-      "pattern": "^[\\w\\s-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\s-]+$"
     },
     "country": {
       "type": "string",
-      "pattern": "^[A-Z]{2}$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[A-Z]{2}$"
     },
     "continent": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     }
   },
   "required": [

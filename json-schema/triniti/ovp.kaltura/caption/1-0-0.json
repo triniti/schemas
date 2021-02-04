@@ -10,129 +10,69 @@
     },
     "id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "entry_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "version": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "size": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 16777215,
-      "pbj": {
-        "type": "medium-int",
-        "rule": "single"
-      }
+      "maximum": 16777215
     },
     "file_ext": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     },
     "created_at": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "updated_at": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "deleted_at": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "description": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "language": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "language_code": {
       "type": "string",
-      "pattern": "^\\w+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^\\w+$"
     },
     "is_default": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "type": "boolean"
     },
     "accuracy": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "url": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
-      }
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
     },
     "status": {
       "type": "string",
@@ -144,11 +84,7 @@
         3,
         7,
         9
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "format": {
       "type": "string",
@@ -158,11 +94,7 @@
         2,
         3,
         4
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     }
   },
   "required": [

@@ -9,35 +9,19 @@
       "default": "pbj:gdbots:analytics:tracker:keen:1-0-0"
     },
     "is_enabled": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "type": "boolean"
     },
     "project_id": {
       "type": "string",
-      "pattern": "^\\w+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^\\w+$"
     },
     "read_key": {
       "type": "string",
-      "pattern": "^\\w+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^\\w+$"
     },
     "write_key": {
       "type": "string",
-      "pattern": "^\\w+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^\\w+$"
     }
   },
   "required": [

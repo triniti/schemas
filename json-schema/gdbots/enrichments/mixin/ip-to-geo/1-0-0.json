@@ -5,13 +5,7 @@
   "properties": {
     "ctx_ip": {
       "type": "string",
-      "format": "ipv4",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "ipv4",
-        "overridable": true
-      }
+      "format": "ipv4"
     },
     "ctx_ip_geo": {
       "type": "object",
@@ -19,11 +13,7 @@
         {
           "$ref": "#/definitions/address"
         }
-      ],
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      ]
     }
   },
   "definitions": {

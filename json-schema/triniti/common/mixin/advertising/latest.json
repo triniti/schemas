@@ -5,19 +5,11 @@
   "properties": {
     "ads_enabled": {
       "type": "boolean",
-      "default": true,
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "default": true
     },
     "dfp_ad_unit_path": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\/\\.:-]+$"
     },
     "dfp_cust_params": {
       "type": "object",
@@ -27,11 +19,7 @@
           "pattern": "^[\\w\\/\\.:-]+$"
         }
       },
-      "additionalProperties": false,
-      "pbj": {
-        "type": "string",
-        "rule": "map"
-      }
+      "additionalProperties": false
     }
   },
   "additionalProperties": true

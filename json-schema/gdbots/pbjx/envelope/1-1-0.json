@@ -10,29 +10,17 @@
     },
     "envelope_id": {
       "type": "string",
-      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
-      "pbj": {
-        "type": "uuid",
-        "rule": "single"
-      }
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
     "ok": {
       "type": "boolean",
-      "default": true,
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "default": true
     },
     "code": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "http_code": {
       "type": "integer",
@@ -101,36 +89,20 @@
         508,
         510,
         511
-      ],
-      "pbj": {
-        "type": "int-enum",
-        "rule": "single"
-      }
+      ]
     },
     "etag": {
       "type": "string",
-      "pattern": "^[\\w\\.:-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.:-]+$"
     },
     "error_name": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\/\\.:-]+$"
     },
     "error_message": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 65535,
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
+      "maxLength": 65535
     },
     "message_ref": {
       "type": "object",
@@ -158,18 +130,10 @@
         "curie",
         "id"
       ],
-      "additionalProperties": false,
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "additionalProperties": false
     },
     "message": {
-      "type": "object",
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
+      "type": "object"
     },
     "derefs": {
       "type": "object",
@@ -179,11 +143,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "Some pbjx operations (normally requests) can include \"dereferenced\" messages on the envelope to prevent the consumer from needing to make multiple HTTP requests. It is up to the consumer to make use of the dereferenced messages if/when they are provided.",
-      "pbj": {
-        "type": "message",
-        "rule": "map"
-      }
+      "description": "Some pbjx operations (normally requests) can include \"dereferenced\" messages on the envelope to prevent the consumer from needing to make multiple HTTP requests. It is up to the consumer to make use of the dereferenced messages if/when they are provided."
     },
     "links": {
       "type": "object",
@@ -195,11 +155,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "@link https://en.wikipedia.org/wiki/HATEOAS",
-      "pbj": {
-        "type": "text",
-        "rule": "map"
-      }
+      "description": "@link https://en.wikipedia.org/wiki/HATEOAS"
     },
     "metas": {
       "type": "object",
@@ -210,11 +166,7 @@
           "maxLength": 65535
         }
       },
-      "additionalProperties": false,
-      "pbj": {
-        "type": "text",
-        "rule": "map"
-      }
+      "additionalProperties": false
     }
   },
   "required": [
