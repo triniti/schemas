@@ -4,18 +4,9 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:curator:mixin:render-promotion-request:1-0-0" mixin="true"
-      extends="gdbots:pbjx:mixin:request:v1">
+      extends="gdbots:pbjx:mixin:request:v1" deprecated="true">
     <fields>
-      <field name="promotion_ref" type="identifier">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="promotion_ref" type="node-ref"/>
       <field name="slot" type="string" format="slug">
         <description>
           The name of the slot to use for finding the promotion to render.

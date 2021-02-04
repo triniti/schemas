@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:request:render-promotion-request:1-0-0">
+    <fields>
+      <field name="promotion_ref" type="node-ref"/>
+      <field name="slot" type="string" format="slug">
+        <description>
+          The name of the slot to use for finding the promotion to render.
+          If promotion_ref is supplied this should be ignored.
+        </description>
+      </field>
+      <field name="render_at" type="date-time">
+        <description>
+          Used to preview a time other than now of what a promotion slot will render.
+          This is primarily for CMS preview or unit testing.
+        </description>
+      </field>
+      <field name="context" type="message">
+        <any-of>
+          <curie>triniti:common::render-context</curie>
+        </any-of>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:request:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

@@ -5,30 +5,10 @@
 
   <schema id="pbj:triniti:people:mixin:person:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true" overridable="true">
-        <php-options>
-          <imports>use Triniti\Schemas\People\PersonId;</imports>
-          <class-name>PersonId::class</class-name>
-          <default>function() { return PersonId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import PersonId from '@triniti/schemas/triniti/people/PersonId';</imports>
-          <class-proto>PersonId</class-proto>
-          <default>() => PersonId.generate()</default>
-        </js-options>
-      </field>
-      <field name="image_ref" type="identifier">
+      <field name="image_ref" type="node-ref">
         <description>
           A reference to the image asset to use for widgets, sharing, seo.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="bio" type="text">
         <description>
@@ -51,15 +31,12 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        '_id' => (string)$this->get('_id'),
-        'slug' => $this->get('slug'),
-        'twitter_username' => $this->get('twitter_username'),
+        '_id' => $this->fget('_id'),
+        'slug' => $this->fget('slug'),
+        'twitter_username' => $this->fget('twitter_username'),
     ];
 }
           ]]>

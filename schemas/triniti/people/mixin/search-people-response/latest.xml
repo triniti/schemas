@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:people:mixin:search-people-response:1-0-0" mixin="true"
-      extends="gdbots:ncr:mixin:search-nodes-response:v1">
+      extends="gdbots:ncr:mixin:search-nodes-response:v1" deprecated="true">
     <fields>
       <field name="nodes" type="message" rule="list">
         <any-of>

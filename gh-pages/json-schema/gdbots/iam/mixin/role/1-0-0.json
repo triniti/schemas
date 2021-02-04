@@ -5,11 +5,7 @@
   "properties": {
     "_id": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\/\\.:-]+$"
     },
     "status": {
       "type": "string",
@@ -23,27 +19,15 @@
         "expired",
         "archived",
         "deleted"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "etag": {
       "type": "string",
-      "pattern": "^[\\w\\.:-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.:-]+$"
     },
     "created_at": {
       "type": "string",
-      "pattern": "^[1-9]{1}[0-9]{12,15}$",
-      "pbj": {
-        "type": "microtime",
-        "rule": "single"
-      }
+      "pattern": "^[1-9]{1}[0-9]{12,15}$"
     },
     "creator_ref": {
       "type": "object",
@@ -72,20 +56,11 @@
         "id"
       ],
       "additionalProperties": false,
-      "description": "A fully qualified reference to what created this node. This is intentionally a message-ref and not a user id because it is often a program that creates nodes, not a user.",
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "description": "A fully qualified reference to what created this node. This is intentionally a message-ref and not a user id because it is often a program that creates nodes, not a user."
     },
     "updated_at": {
       "type": "string",
-      "pattern": "^[1-9]{1}[0-9]{12,15}$",
-      "pbj": {
-        "type": "microtime",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "pattern": "^[1-9]{1}[0-9]{12,15}$"
     },
     "updater_ref": {
       "type": "object",
@@ -114,11 +89,7 @@
         "id"
       ],
       "additionalProperties": false,
-      "description": "A fully qualified reference to what updated this node. This is intentionally a message-ref and not a user id because it is often a program that updates nodes, not a user. E.g. \"acme:iam:node:app:cli-scheduler\" or \"acme:iam:node:user:60c71df0-fda8-11e5-bfb9-30342d363854\"",
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "description": "A fully qualified reference to what updated this node. This is intentionally a message-ref and not a user id because it is often a program that updates nodes, not a user. E.g. \"acme:iam:node:app:cli-scheduler\" or \"acme:iam:node:user:60c71df0-fda8-11e5-bfb9-30342d363854\""
     },
     "last_event_ref": {
       "type": "object",
@@ -147,20 +118,12 @@
         "id"
       ],
       "additionalProperties": false,
-      "description": "A reference to the last event that changed the state of this node. E.g. \"acme:blog:event:article-published:60c71df0-fda8-11e5-bfb9-30342d363854\"",
-      "pbj": {
-        "type": "message-ref",
-        "rule": "single"
-      }
+      "description": "A reference to the last event that changed the state of this node. E.g. \"acme:blog:event:article-published:60c71df0-fda8-11e5-bfb9-30342d363854\""
     },
     "title": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "allowed": {
       "type": "array",
@@ -172,11 +135,7 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "The \"allowed\" field is a set of actions that a user will be granted. Although the string can be anything it is best practice to use the curies of the pbjx commands and requests from your application. E.g. \"acme:blog:command:publish-article\" or \"acme:blog:command:*\"",
-      "pbj": {
-        "type": "string",
-        "rule": "set"
-      }
+      "description": "The \"allowed\" field is a set of actions that a user will be granted. Although the string can be anything it is best practice to use the curies of the pbjx commands and requests from your application. E.g. \"acme:blog:command:publish-article\" or \"acme:blog:command:*\""
     },
     "denied": {
       "type": "array",
@@ -188,11 +147,7 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "The \"denied\" field works just like the \"allowed\" field with the exception that these rules take precedence and deny a user's ability to perform the action.",
-      "pbj": {
-        "type": "string",
-        "rule": "set"
-      }
+      "description": "The \"denied\" field works just like the \"allowed\" field with the exception that these rules take precedence and deny a user's ability to perform the action."
     }
   },
   "required": [

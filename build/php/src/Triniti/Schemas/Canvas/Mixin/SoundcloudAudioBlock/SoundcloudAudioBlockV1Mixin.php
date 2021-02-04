@@ -1,51 +1,26 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/soundcloud-audio-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\SoundcloudAudioBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
+use Gdbots\Pbj\Schema;
 
-final class SoundcloudAudioBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait SoundcloudAudioBlockV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:soundcloud-audio-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('track_id', T\StringType::create())
-                ->required()
-                ->pattern('^\d+$')
-                ->build(),
-            Fb::create('auto_play', T\BooleanType::create())
-                ->build(),
-            Fb::create('show_comments', T\BooleanType::create())
-                ->build(),
-            Fb::create('hide_related', T\BooleanType::create())
-                ->build(),
-            /*
-             * Whether or not to use the thumbnail as a poster image.
-             */
-            Fb::create('visual', T\BooleanType::create())
-                ->build(),
-            /*
-             * A reference to an image asset to use as the poster that will
-             * override what is provided by soundcloud.
-             */
-            Fb::create('poster_image_ref', T\IdentifierType::create())
-                ->className(NodeRef::class)
-                ->build(),
+            'etag' => $this->fget('etag'),
+            'track_id' => $this->fget('track_id'),
+            'auto_play' => $this->fget('auto_play'),
+            'show_comments' => $this->fget('show_comments'),
+            'hide_related' => $this->fget('hide_related'),
+            'visual' => $this->fget('visual'),
         ];
     }
 }

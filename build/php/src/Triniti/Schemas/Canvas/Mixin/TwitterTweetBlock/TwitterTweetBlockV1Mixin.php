@@ -1,43 +1,25 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/twitter-tweet-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\TwitterTweetBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class TwitterTweetBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait TwitterTweetBlockV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:twitter-tweet-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('screen_name', T\StringType::create())
-                ->required()
-                ->pattern('^\w{1,15}$')
-                ->build(),
-            Fb::create('tweet_id', T\StringType::create())
-                ->required()
-                ->pattern('^\d+$')
-                ->build(),
-            Fb::create('tweet_text', T\TextType::create())
-                ->maxLength(5000)
-                ->build(),
-            Fb::create('hide_media', T\BooleanType::create())
-                ->build(),
-            Fb::create('hide_thread', T\BooleanType::create())
-                ->build(),
+            'etag' => $this->fget('etag'),
+            'screen_name' => $this->fget('screen_name'),
+            'tweet_id' => $this->fget('tweet_id'),
+            'hide_media' => $this->fget('hide_media'),
+            'hide_thread' => $this->fget('hide_thread'),
         ];
     }
 }

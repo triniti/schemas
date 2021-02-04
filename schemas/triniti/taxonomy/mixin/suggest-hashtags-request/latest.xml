@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:taxonomy:mixin:suggest-hashtags-request:1-0-0" mixin="true"
-      extends="gdbots:pbjx:mixin:request:v1">
+      extends="gdbots:pbjx:mixin:request:v1" deprecated="true">
     <fields>
       <field name="prefix" type="string" format="hashtag"/>
       <field name="count" type="tiny-int">

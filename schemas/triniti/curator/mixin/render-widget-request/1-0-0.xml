@@ -4,18 +4,9 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:curator:mixin:render-widget-request:1-0-0" mixin="true"
-      extends="gdbots:pbjx:mixin:request:v1">
+      extends="gdbots:pbjx:mixin:request:v1" deprecated="true">
     <fields>
-      <field name="widget_ref" type="identifier">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="widget_ref" type="node-ref"/>
       <field name="widget" type="message">
         <any-of>
           <curie>triniti:curator:mixin:widget</curie>

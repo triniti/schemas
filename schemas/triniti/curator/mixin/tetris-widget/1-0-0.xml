@@ -13,14 +13,11 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        '_id' => (string)$this->get('_id'),
-        'layout' => $this->get('layout'),
+        '_id' => $this->fget('_id'),
+        'layout' => $this->fget('layout'),
     ];
 }
           ]]>

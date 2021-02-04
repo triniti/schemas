@@ -12,19 +12,11 @@
       <field name="autoplay" type="boolean"/>
       <field name="show_text" type="boolean"/>
       <field name="show_captions" type="boolean"/>
-      <field name="poster_image_ref" type="identifier">
+      <field name="poster_image_ref" type="node-ref">
         <description>
           A reference to an image asset to use as the poster that will
           override what is provided by facebook.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
     </fields>
 
@@ -33,17 +25,14 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        'etag' => $this->get('etag'),
-        'href' => $this->get('href'),
-        'autoplay' => $this->get('autoplay'),
-        'show_text' => $this->get('show_text'),
-        'show_captions' => $this->get('show_captions'),
+        'etag' => $this->fget('etag'),
+        'href' => $this->fget('href'),
+        'autoplay' => $this->fget('autoplay'),
+        'show_text' => $this->fget('show_text'),
+        'show_captions' => $this->fget('show_captions'),
     ];
 }
           ]]>

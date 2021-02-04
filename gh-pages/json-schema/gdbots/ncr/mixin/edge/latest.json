@@ -5,19 +5,11 @@
   "properties": {
     "from_ref": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\/\\.:-]+$"
     },
     "to_ref": {
       "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\/\\.:-]+$"
     },
     "multiplicity": {
       "type": "string",
@@ -29,20 +21,11 @@
         "many2one",
         "one2many",
         "one2one"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single",
-        "overridable": true
-      }
+      ]
     },
     "created_at": {
       "type": "string",
-      "pattern": "^[1-9]{1}[0-9]{12,15}$",
-      "pbj": {
-        "type": "microtime",
-        "rule": "single"
-      }
+      "pattern": "^[1-9]{1}[0-9]{12,15}$"
     }
   },
   "required": [

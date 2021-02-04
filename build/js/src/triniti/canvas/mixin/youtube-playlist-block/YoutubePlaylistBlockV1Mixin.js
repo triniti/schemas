@@ -1,39 +1,15 @@
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/youtube-playlist-block/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Mixin from '@gdbots/pbj/Mixin';
-import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';
-import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/types';
-
-export default class YoutubePlaylistBlockV1Mixin extends Mixin {
-  /**
-   * @returns {SchemaId}
-   */
-  getId() {
-    return SchemaId.fromString('pbj:triniti:canvas:mixin:youtube-playlist-block:1-0-0');
-  }
-
-  /**
-   * @returns {Field[]}
-   */
-  getFields() {
-    return [
-      Fb.create('playlist_id', T.StringType.create())
-        .required()
-        .pattern('^[\\w-]+$')
-        .build(),
-      Fb.create('video_id', T.StringType.create())
-        .pattern('^[\\w-]+$')
-        .build(),
-      Fb.create('autoplay', T.BooleanType.create())
-        .build(),
-      /*
-       * A reference to an image asset to use as the poster that will
-       * override what is provided by youtube.
-       */
-      Fb.create('poster_image_ref', T.IdentifierType.create())
-        .classProto(NodeRef)
-        .build(),
-    ];
-  }
+export default function YoutubePlaylistBlockV1Mixin(M) {
+  Object.assign(M.prototype, {
+    /**
+     * @returns {Object}
+     */
+    getUriTemplateVars() {
+      return {
+        etag: this.get('etag'),
+        playlist_id: this.get('playlist_id'),
+        video_id: this.get('video_id'),
+        autoplay: this.get('autoplay'),
+      };
+    }
+  });
 }

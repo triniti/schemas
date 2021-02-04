@@ -7,14 +7,6 @@ use Gdbots\Pbj\Assertion;
 use Gdbots\Pbj\Exception\AssertionFailed;
 use Gdbots\Pbj\WellKnown\Identifier;
 use Gdbots\Pbj\WellKnown\UuidIdentifier;
-use Gdbots\Schemas\Ncr\NodeRef;
-use Triniti\Schemas\Dam\Mixin\ArchiveAsset\ArchiveAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\AudioAsset\AudioAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\CodeAsset\CodeAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\DocumentAsset\DocumentAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\ImageAsset\ImageAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\UnknownAsset\UnknownAssetV1Mixin;
-use Triniti\Schemas\Dam\Mixin\VideoAsset\VideoAssetV1Mixin;
 
 /**
  * An asset id is a composite id that contains enough data to easily
@@ -44,27 +36,12 @@ final class AssetId implements Identifier
      */
     const VALID_PATTERN = '/^([a-z0-9]{1,12})_([a-z0-9]{1,10})_([0-9]{8})_([a-f0-9]{32})$/';
 
-    /** @var string */
-    private $id;
+    private string $id;
+    private string $type;
+    private string $ext;
+    private string $date;
+    private string $uuid;
 
-    /** @var string */
-    private $type;
-
-    /** @var string */
-    private $ext;
-
-    /** @var string */
-    private $date;
-
-    /** @var string */
-    private $uuid;
-
-    /**
-     * @param string $type
-     * @param string $ext
-     * @param string $date
-     * @param string $uuid
-     */
     private function __construct(string $type, string $ext, string $date, string $uuid)
     {
         $this->type = $type;
@@ -74,13 +51,7 @@ final class AssetId implements Identifier
         $this->id = sprintf('%s_%s_%s_%s', $type, $ext, $this->date, $this->uuid);
     }
 
-    /**
-     * {@inheritdoc}
-     * @return static
-     *
-     * @throws AssertionFailed
-     */
-    public static function fromString($string)
+    public static function fromString(string $string): self
     {
         if (!preg_match(self::VALID_PATTERN, $string, $matches)) {
             throw new AssertionFailed(
@@ -104,7 +75,7 @@ final class AssetId implements Identifier
      * @param \DateTimeInterface $date
      * @param UuidIdentifier     $uuid Uuid for the asset, if not supplied a v4 uuid will be created.
      *
-     * @return AssetId
+     * @return self
      *
      * @throws AssertionFailed
      */
@@ -133,17 +104,11 @@ final class AssetId implements Identifier
         return $assetId;
     }
 
-    /**
-     * @return string
-     */
     public function getType(): string
     {
         return $this->type;
     }
 
-    /**
-     * @return string
-     */
     public function getExt(): string
     {
         return $this->ext;
@@ -156,7 +121,7 @@ final class AssetId implements Identifier
      */
     public function getDate(bool $asObject = false)
     {
-        if (true === $asObject) {
+        if ($asObject) {
             return \DateTimeImmutable::createFromFormat('!Ymd', $this->date, new \DateTimeZone('UTC'));
         }
 
@@ -170,41 +135,36 @@ final class AssetId implements Identifier
      */
     public function getUuid(bool $asObject = false)
     {
-        if (true === $asObject) {
-            return UuidIdentifier::fromString($this->uuid);
+        if ($asObject) {
+            $uuid = [
+                substr($this->uuid, 0, 8),
+                substr($this->uuid, 8, 4),
+                substr($this->uuid, 12, 4),
+                substr($this->uuid, 16, 4),
+                substr($this->uuid, 20, 12),
+            ];
+            return UuidIdentifier::fromString(implode('-', $uuid));
         }
 
         return $this->uuid;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function toString()
+    public function toString(): string
     {
         return $this->id;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function __toString()
     {
         return $this->toString();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function jsonSerialize()
     {
         return $this->toString();
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function equals(Identifier $other)
+    public function equals(Identifier $other): bool
     {
         return $this == $other;
     }
@@ -238,34 +198,5 @@ final class AssetId implements Identifier
             null === $quality ? '' : '_' . $quality,
             $this->ext
         );
-    }
-
-    /**
-     * @return NodeRef
-     */
-    public function toNodeRef(): NodeRef
-    {
-        switch ($this->type) {
-            case 'archive':
-                return new NodeRef(ArchiveAssetV1Mixin::findOne()->getQName(), $this->id);
-
-            case 'audio':
-                return new NodeRef(AudioAssetV1Mixin::findOne()->getQName(), $this->id);
-
-            case 'code':
-                return new NodeRef(CodeAssetV1Mixin::findOne()->getQName(), $this->id);
-
-            case 'document':
-                return new NodeRef(DocumentAssetV1Mixin::findOne()->getQName(), $this->id);
-
-            case 'image':
-                return new NodeRef(ImageAssetV1Mixin::findOne()->getQName(), $this->id);
-
-            case 'video':
-                return new NodeRef(VideoAssetV1Mixin::findOne()->getQName(), $this->id);
-
-            default:
-                return new NodeRef(UnknownAssetV1Mixin::findOne()->getQName(), $this->id);
-        }
     }
 }

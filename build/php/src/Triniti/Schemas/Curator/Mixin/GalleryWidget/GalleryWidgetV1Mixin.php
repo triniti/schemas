@@ -1,17 +1,21 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery-widget/1-0-0.json#
 namespace Triniti\Schemas\Curator\Mixin\GalleryWidget;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\SchemaId;
+use Gdbots\Pbj\Schema;
 
-final class GalleryWidgetV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait GalleryWidgetV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
+    public function getUriTemplateVars(): array
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:gallery-widget:1-0-0');
+        return [
+            '_id' => $this->fget('_id'),
+        ];
     }
 }

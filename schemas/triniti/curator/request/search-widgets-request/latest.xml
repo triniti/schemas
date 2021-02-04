@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:curator:request:search-widgets-request:1-0-0">
+    <fields>
+      <field name="sort" type="string-enum">
+        <default>relevance</default>
+        <enum id="triniti:curator:search-widgets-sort"/>
+      </field>
+      <field name="types" type="string" format="slug" rule="set">
+        <description>
+          A set of widget types (node must match at least one) to include in
+          the search results, such as carousel-widget.
+        </description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:request:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:search-nodes-request:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

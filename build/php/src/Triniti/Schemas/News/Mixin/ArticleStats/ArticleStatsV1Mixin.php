@@ -1,72 +1,21 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article-stats/1-0-0.json#
 namespace Triniti\Schemas\News\Mixin\ArticleStats;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Triniti\Schemas\News\ArticleId;
+use Gdbots\Pbj\Schema;
 
-final class ArticleStatsV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait ArticleStatsV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:news:mixin:article-stats:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('_id', T\IdentifierType::create())
-                ->required()
-                ->withDefault(function() { return ArticleId::generate(); })
-                ->className(ArticleId::class)
-                ->overridable(true)
-                ->build(),
-            Fb::create('comments', T\IntType::create())
-                ->build(),
-            Fb::create('views', T\IntType::create())
-                ->build(),
-            Fb::create('disqus_comments', T\IntType::create())
-                ->build(),
-            Fb::create('disqus_dislikes', T\IntType::create())
-                ->build(),
-            Fb::create('disqus_likes', T\IntType::create())
-                ->build(),
-            Fb::create('fb_comments', T\IntType::create())
-                ->build(),
-            Fb::create('fb_reactions', T\IntType::create())
-                ->build(),
-            Fb::create('fb_shares', T\IntType::create())
-                ->build(),
-            /*
-             * The sum of all fb_* metrics collected.
-             */
-            Fb::create('fb_engagement', T\IntType::create())
-                ->build(),
-            Fb::create('ga_entrances', T\IntType::create())
-                ->build(),
-            Fb::create('ga_entrance_rate', T\IntType::create())
-                ->build(),
-            Fb::create('ga_pageviews', T\IntType::create())
-                ->build(),
-            Fb::create('ga_unique_pageviews', T\IntType::create())
-                ->build(),
-            Fb::create('ga_time_on_page', T\IntType::create())
-                ->build(),
-            Fb::create('ga_avg_time_on_page', T\IntType::create())
-                ->build(),
-            Fb::create('ga_exits', T\IntType::create())
-                ->build(),
-            Fb::create('ga_exit_rate', T\IntType::create())
-                ->build(),
+            '_id' => $this->fget('_id'),
         ];
     }
 }

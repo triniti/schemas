@@ -12,50 +12,27 @@
       "type": "string",
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
-      "maxLength": 20,
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
+      "maxLength": 20
     },
     "region": {
       "type": "string",
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
-      "maxLength": 20,
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
+      "maxLength": 20
     },
     "zone": {
       "type": "string",
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
-      "maxLength": 20,
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
+      "maxLength": 20
     },
     "instance_id": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     },
     "instance_type": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     }
   },
   "required": [

@@ -1,13 +1,15 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.kaltura/entry/1-0-0.json#
 namespace Triniti\Schemas\OvpKaltura;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\MessageRef;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\WellKnown\MessageRef;
 use Triniti\Schemas\OvpKaltura\Enum\DisplayInSearchType;
 use Triniti\Schemas\OvpKaltura\Enum\EntryModerationStatus;
 use Triniti\Schemas\OvpKaltura\Enum\EntryStatus;
@@ -15,16 +17,16 @@ use Triniti\Schemas\OvpKaltura\Enum\EntryType;
 use Triniti\Schemas\OvpKaltura\Enum\MediaType;
 use Triniti\Schemas\OvpKaltura\Enum\SourceType;
 
-final class EntryV1 extends AbstractMessage implements
-    Entry
+final class EntryV1 extends AbstractMessage
 {
+    const SCHEMA_ID = 'pbj:triniti:ovp.kaltura::entry:1-0-0';
+    const SCHEMA_CURIE = 'triniti:ovp.kaltura::entry';
+    const SCHEMA_CURIE_MAJOR = 'triniti:ovp.kaltura::entry:v1';
+    const MIXINS = [];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:triniti:ovp.kaltura::entry:1-0-0', __CLASS__,
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
                 Fb::create('entry_id', T\StringType::create())
                     ->pattern('^[\w-]+$')
@@ -144,27 +146,21 @@ final class EntryV1 extends AbstractMessage implements
                 Fb::create('metadata', T\TextType::create())
                     ->asAMap()
                     ->build(),
-            ]
+            ],
+            self::MIXINS
         );
     }
 
-    /**
-     * @param string $tag
-     * @return MessageRef
-     */
-    public function generateMessageRef($tag = null)
+    public function generateMessageRef(?string $tag = null): MessageRef
     {
-        return new MessageRef(static::schema()->getCurie(), $this->get('entry_id'), $tag);
+        return new MessageRef(static::schema()->getCurie(), $this->fget('entry_id'), $tag);
     }
     
-    /**
-     * @return array
-     */
-    public function getUriTemplateVars()
+    public function getUriTemplateVars(): array
     {
         return [
-            'entry_id' => $this->get('entry_id'),
-            'partner_id' => $this->get('partner_id'),
+            'entry_id' => $this->fget('entry_id'),
+            'partner_id' => $this->fget('partner_id'),
         ];
     }
 }

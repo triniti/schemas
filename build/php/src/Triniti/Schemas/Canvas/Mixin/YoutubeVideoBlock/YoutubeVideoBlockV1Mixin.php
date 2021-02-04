@@ -1,44 +1,24 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/youtube-video-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\YoutubeVideoBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
+use Gdbots\Pbj\Schema;
 
-final class YoutubeVideoBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait YoutubeVideoBlockV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:youtube-video-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('id', T\StringType::create())
-                ->required()
-                ->pattern('^[\w-]+$')
-                ->build(),
-            Fb::create('autoplay', T\BooleanType::create())
-                ->build(),
-            Fb::create('start_at', T\SmallIntType::create())
-                ->build(),
-            /*
-             * A reference to an image asset to use as the poster that will
-             * override what is provided by youtube.
-             */
-            Fb::create('poster_image_ref', T\IdentifierType::create())
-                ->className(NodeRef::class)
-                ->build(),
+            'etag' => $this->fget('etag'),
+            'id' => $this->fget('id'),
+            'autoplay' => $this->fget('autoplay'),
+            'start_at' => $this->fget('start_at'),
         ];
     }
 }

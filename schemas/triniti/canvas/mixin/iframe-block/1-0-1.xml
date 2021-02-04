@@ -23,17 +23,14 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        'etag' => $this->get('etag'),
-        'src' => $this->get('src'),
-        'width' => $this->get('width'),
-        'height' => $this->get('height'),
-        'align' => $this->get('align'),
+        'etag' => $this->fget('etag'),
+        'src' => $this->fget('src'),
+        'width' => $this->fget('width'),
+        'height' => $this->fget('height'),
+        'align' => $this->fget('align'),
     ];
 }
           ]]>

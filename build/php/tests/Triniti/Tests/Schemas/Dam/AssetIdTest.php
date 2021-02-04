@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Triniti\Tests\Schemas\Dam;
 
+use Gdbots\Pbj\Exception\AssertionFailed;
 use Gdbots\Pbj\WellKnown\UuidIdentifier;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
@@ -18,7 +19,7 @@ final class AssetIdTest extends TestCase
         $this->assertSame('jpg', $id->getExt());
         $this->assertSame(
             UuidIdentifier::fromString('cb9c3c8c-5c88-453b-9609-33a59ede6505')->toString(),
-            UuidIdentifier::fromString(Uuid::fromString($id->getUuid()))->toString()
+            UuidIdentifier::fromString($id->getUuid(true)->toString())->toString()
         );
         $this->assertSame('image/cb/2015/12/01/cb9c3c8c5c88453b960933a59ede6505.jpg', $id->toFilePath());
         $this->assertSame('image/cb/o/2015/12/01/cb9c3c8c5c88453b960933a59ede6505.jpg', $id->toFilePath('o'));
@@ -32,7 +33,7 @@ final class AssetIdTest extends TestCase
         $this->assertSame('jpg', $id->getExt());
         $this->assertSame(
             UuidIdentifier::fromString('cb9c3c8c-5c88-453b-9609-33a59ede6505')->toString(),
-            UuidIdentifier::fromString(Uuid::fromString($id->getUuid()))->toString()
+            UuidIdentifier::fromString($id->getUuid(true)->toString())->toString()
         );
         $this->assertSame('image/cb/2015/12/01/cb9c3c8c5c88453b960933a59ede6505.jpg', $id->toFilePath());
         $this->assertSame('image/cb/250x/2015/12/01/cb9c3c8c5c88453b960933a59ede6505_n.jpg', $id->toFilePath('250x', 'n'));
@@ -55,17 +56,17 @@ final class AssetIdTest extends TestCase
             $id->toFilePath()
         );
 
-        $this->assertInstanceOf(UuidIdentifier::class, UuidIdentifier::fromString(Uuid::fromString($id->getUuid())));
+        $this->assertInstanceOf(UuidIdentifier::class, UuidIdentifier::fromString($id->getUuid(true)->toString()));
     }
 
     /**
      * @dataProvider getInvalidIds
-     * @expectedException \Gdbots\Pbj\Exception\AssertionFailed
      *
      * @param string $string
      */
     public function testInvalid(string $string): void
     {
+        $this->expectException(AssertionFailed::class);
         AssetId::fromString($string);
     }
 

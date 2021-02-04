@@ -17,15 +17,12 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        'etag' => $this->get('etag'),
-        'href' => $this->get('href'),
-        'show_text' => $this->get('show_text'),
+        'etag' => $this->fget('etag'),
+        'href' => $this->fget('href'),
+        'show_text' => $this->fget('show_text'),
     ];
 }
           ]]>

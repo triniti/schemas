@@ -11,18 +11,10 @@
           e.g. "sidebar", "html-head" or "jumbotron-top".
         </description>
       </field>
-      <field name="widget_ref" type="identifier">
+      <field name="widget_ref" type="node-ref">
         <description>
           A reference to the widget this slot will render.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="rendering" type="string-enum">
         <default>lazy</default>
@@ -50,24 +42,17 @@
       <insertion-points>
         <imports>
           <![CDATA[
-use Gdbots\Pbj\MessageRef;
+use Gdbots\Pbj\WellKnown\MessageRef;
             ]]>
         </imports>
         <methods>
           <![CDATA[
-/**
- * @param string $tag
- * @return MessageRef
- */
-public function generateMessageRef($tag = null)
+public function generateMessageRef(?string $tag = null): MessageRef
 {
     return new MessageRef(static::schema()->getCurie(), $this->generateEtag(), $tag);
 }
 
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [];
 }
@@ -80,7 +65,7 @@ public function getUriTemplateVars()
       <insertion-points>
         <imports>
           <![CDATA[
-import MessageRef from '@gdbots/pbj/MessageRef';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef';
             ]]>
         </imports>
         <methods>

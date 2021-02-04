@@ -10,99 +10,55 @@
     },
     "entry_id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "flavor_params_id": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 4294967295,
-      "pbj": {
-        "type": "int",
-        "rule": "single"
-      }
+      "maximum": 4294967295
     },
     "id": {
       "type": "string",
-      "pattern": "^[\\w-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w-]+$"
     },
     "width": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "height": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "bitrate": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "frame_rate": {
       "type": "number",
-      "default": 0,
-      "pbj": {
-        "type": "float",
-        "rule": "single"
-      }
+      "default": 0
     },
     "is_original": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "type": "boolean"
     },
     "is_web": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "type": "boolean"
     },
     "container_format": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "video_codec_id": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "status": {
       "type": "string",
@@ -119,37 +75,21 @@
         7,
         8,
         9
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
+      ]
     },
     "language": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "maxLength": 255
     },
     "is_default": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "type": "boolean"
     },
     "version": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 65535,
-      "pbj": {
-        "type": "small-int",
-        "rule": "single"
-      }
+      "maximum": 65535
     },
     "tags": {
       "type": "array",
@@ -161,67 +101,36 @@
         }
       ],
       "uniqueItems": true,
-      "additionalProperties": false,
-      "pbj": {
-        "type": "string",
-        "rule": "set"
-      }
+      "additionalProperties": false
     },
     "created_at": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "updated_at": {
       "type": "integer",
       "minimum": -2147483648,
-      "maximum": 2147483647,
-      "pbj": {
-        "type": "timestamp",
-        "rule": "single",
-        "useTypeDefault": false
-      }
+      "maximum": 2147483647
     },
     "size": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 4294967295,
-      "pbj": {
-        "type": "int",
-        "rule": "single"
-      }
+      "maximum": 4294967295
     },
     "file_ext": {
       "type": "string",
-      "pattern": "^[\\w\\.-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.-]+$"
     },
     "description": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 65535,
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
+      "maxLength": 65535
     },
     "url": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
-      }
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
     }
   },
   "required": [

@@ -15,5 +15,15 @@
       <option key="TITLE_ASC" value="title-asc"/>
       <option key="TITLE_DESC" value="title-desc"/>
     </enum>
+
+    <enum name="search-channels-sort" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="CREATED_AT_ASC" value="created-at-asc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
+      <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
+    </enum>
   </enums>
 </pbj-enums>

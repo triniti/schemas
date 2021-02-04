@@ -1,8 +1,9 @@
 <?php
+declare(strict_types=1);
 
 namespace Triniti\Schemas\Ovp\Enum;
 
-use Gdbots\Common\Enum;
+use Gdbots\Pbj\Enum;
 
 /**
  * @method static TranscodingStatus UNKNOWN()

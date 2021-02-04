@@ -4,43 +4,16 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:canvas:mixin:search-pages-request:1-0-0" mixin="true"
-      extends="gdbots:ncr:mixin:search-nodes-request:v1">
+      extends="gdbots:ncr:mixin:search-nodes-request:v1" deprecated="true">
     <fields>
       <field name="is_unlisted" type="trinary"/>
       <field name="sort" type="string-enum">
         <default>relevance</default>
         <enum id="triniti:canvas:search-pages-sort"/>
       </field>
-      <field name="channel_ref" type="identifier">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
-      <field name="category_refs" type="identifier" rule="set">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
-      <field name="person_refs" type="identifier" rule="set">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="channel_ref" type="node-ref"/>
+      <field name="category_refs" type="node-ref" rule="set"/>
+      <field name="person_refs" type="node-ref" rule="set"/>
     </fields>
   </schema>
 </pbj-schema>

@@ -1,35 +1,22 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/youtube-video-teaser/1-0-1.json#
 namespace Triniti\Schemas\Curator\Mixin\YoutubeVideoTeaser;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class YoutubeVideoTeaserV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait YoutubeVideoTeaserV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:youtube-video-teaser:1-0-1');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('youtube_video_id', T\StringType::create())
-                ->required()
-                ->pattern('^[\w-]+$')
-                ->build(),
-            Fb::create('youtube_custom_id', T\StringType::create())
-                ->pattern('^[\w@#-]+$')
-                ->build(),
+            '_id' => $this->fget('_id'),
+            'youtube_video_id' => $this->fget('youtube_video_id'),
         ];
     }
 }

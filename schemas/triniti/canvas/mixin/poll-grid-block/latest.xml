@@ -6,19 +6,11 @@
   <schema id="pbj:triniti:canvas:mixin:poll-grid-block:1-0-0" mixin="true"
       extends="triniti:canvas:mixin:block:v1">
     <fields>
-      <field name="node_refs" type="identifier" rule="list">
+      <field name="node_refs" type="node-ref" rule="list">
         <description>
           An array of poll refs to include in this block. It is
           a list vs a set to allow sorting.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
     </fields>
 
@@ -27,13 +19,10 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        'etag' => $this->get('etag'),
+        'etag' => $this->fget('etag'),
     ];
 }
           ]]>

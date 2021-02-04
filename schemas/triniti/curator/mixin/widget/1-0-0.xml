@@ -5,18 +5,6 @@
 
   <schema id="pbj:triniti:curator:mixin:widget:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true" overridable="true">
-        <php-options>
-          <imports>use Triniti\Schemas\Curator\WidgetId;</imports>
-          <class-name>WidgetId::class</class-name>
-          <default>function() { return WidgetId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import WidgetId from '@triniti/schemas/triniti/curator/WidgetId';</imports>
-          <class-proto>WidgetId</class-proto>
-          <default>() => WidgetId.generate()</default>
-        </js-options>
-      </field>
       <field name="pre_render_code" type="text">
         <description>
           A string containing HTML that is injected into

@@ -1,9 +1,7 @@
 // @link http://schemas.triniti.io/json-schema/triniti/notify/notifier-result/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
-import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import Message from '@gdbots/pbj/Message';
-import MessageRef from '@gdbots/pbj/MessageRef';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/types';
 
@@ -14,8 +12,17 @@ export default class NotifierResultV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:notify::notifier-result:1-0-0', NotifierResultV1,
+    return new Schema(this.SCHEMA_ID, this,
       [
+        /*
+         * Tags is a map that categorizes data or tracks references in
+         * external systems. The tags names should be consistent and descriptive,
+         * e.g. fb_user_id:123, salesforce_customer_id:456.
+         */
+        Fb.create('tags', T.StringType.create())
+          .asAMap()
+          .pattern('^[\\w\\/\\.:-]+$')
+          .build(),
         Fb.create('ok', T.BooleanType.create())
           .withDefault(true)
           .build(),
@@ -35,9 +42,7 @@ export default class NotifierResultV1 extends Message {
         Fb.create('raw_response', T.TextType.create())
           .build(),
       ],
-      [
-        GdbotsCommonTaggableV1Mixin.create(),
-      ],
+      this.MIXINS,
     );
   }
 
@@ -57,6 +62,14 @@ export default class NotifierResultV1 extends Message {
   }
 }
 
-MessageResolver.register('triniti:notify::notifier-result', NotifierResultV1);
-Object.freeze(NotifierResultV1);
-Object.freeze(NotifierResultV1.prototype);
+const M = NotifierResultV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:notify::notifier-result:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:notify::notifier-result';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:notify::notifier-result:v1';
+M.prototype.MIXINS = M.MIXINS = [
+  'gdbots:common:mixin:taggable:v1',
+  'gdbots:common:mixin:taggable',
+];
+
+Object.freeze(M);
+Object.freeze(M.prototype);

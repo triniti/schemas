@@ -1,30 +1,21 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/code-widget/1-0-0.json#
 namespace Triniti\Schemas\Curator\Mixin\CodeWidget;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class CodeWidgetV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait CodeWidgetV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:code-widget:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('code', T\TextType::create())
-                ->build(),
+            '_id' => $this->fget('_id'),
         ];
     }
 }

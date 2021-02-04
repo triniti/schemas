@@ -10,19 +10,11 @@
       <field name="aspect_ratio" type="string-enum">
         <enum id="triniti:common:aspect-ratio"/>
       </field>
-      <field name="poster_image_ref" type="identifier">
+      <field name="poster_image_ref" type="node-ref">
         <description>
           A reference to an image asset to use as the poster that will
           override what is provided by the target gallery.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="start_at_poster" type="boolean">
         <description>
@@ -38,14 +30,11 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        'etag' => $this->get('etag'),
-        'node_ref' => (string)$this->get('node_ref'),
+        'etag' => $this->fget('etag'),
+        'node_ref' => $this->fget('node_ref'),
     ];
 }
           ]]>

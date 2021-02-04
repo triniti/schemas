@@ -20,21 +20,13 @@
         10,
         11,
         12
-      ],
-      "pbj": {
-        "type": "int-enum",
-        "rule": "single"
-      }
+      ]
     },
     "day_of_month": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 31,
-      "pbj": {
-        "type": "tiny-int",
-        "rule": "single"
-      }
+      "maximum": 31
     },
     "day_of_week": {
       "type": "integer",
@@ -48,28 +40,16 @@
         5,
         6,
         7
-      ],
-      "pbj": {
-        "type": "int-enum",
-        "rule": "single"
-      }
+      ]
     },
     "is_weekend": {
-      "type": "boolean",
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
+      "type": "boolean"
     },
     "hour_of_day": {
       "type": "integer",
       "default": 0,
       "minimum": 0,
-      "maximum": 23,
-      "pbj": {
-        "type": "tiny-int",
-        "rule": "single"
-      }
+      "maximum": 23
     }
   },
   "additionalProperties": true

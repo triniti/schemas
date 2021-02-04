@@ -3,7 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:triniti:dam:mixin:asset-patched:1-0-1" mixin="true" extends="gdbots:ncr:mixin:node-patched:v1">
+  <schema id="pbj:triniti:dam:mixin:asset-patched:1-0-1" mixin="true" extends="gdbots:ncr:mixin:node-patched:v1"
+      deprecated="true">
     <fields>
       <field name="title" type="string"/>
       <field name="expires_at" type="date-time"/>

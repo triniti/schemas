@@ -1,39 +1,21 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/ad-widget/1-0-0.json#
 namespace Triniti\Schemas\Curator\Mixin\AdWidget;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Triniti\Schemas\Common\Enum\AdSize;
+use Gdbots\Pbj\Schema;
 
-final class AdWidgetV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait AdWidgetV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:ad-widget:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('ad_size', T\StringEnumType::create())
-                ->className(AdSize::class)
-                ->build(),
-            Fb::create('dfp_ad_unit_path', T\StringType::create())
-                ->pattern('^[\w\/\.:-]+$')
-                ->build(),
-            Fb::create('dfp_cust_params', T\StringType::create())
-                ->asAMap()
-                ->pattern('^[\w\/\.:-]+$')
-                ->build(),
+            '_id' => $this->fget('_id'),
         ];
     }
 }

@@ -13,11 +13,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "A map containing (HTML, JavaScript, CSS, etc.) that is injected into an application at a named insertion point, e.g. \"html_head\" or \"footer\".",
-      "pbj": {
-        "type": "text",
-        "rule": "map"
-      }
+      "description": "A map containing (HTML, JavaScript, CSS, etc.) that is injected into an application at a named insertion point, e.g. \"html_head\" or \"footer\"."
     }
   },
   "additionalProperties": true

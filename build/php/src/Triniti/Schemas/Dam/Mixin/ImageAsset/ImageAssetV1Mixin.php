@@ -1,38 +1,23 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/image-asset/1-0-0.json#
 namespace Triniti\Schemas\Dam\Mixin\ImageAsset;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class ImageAssetV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait ImageAssetV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:dam:mixin:image-asset:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            /*
-             * The image width in pixels.
-             */
-            Fb::create('width', T\SmallIntType::create())
-                ->build(),
-            /*
-             * The image height in pixels.
-             */
-            Fb::create('height', T\SmallIntType::create())
-                ->build(),
+            '_id' => $this->fget('_id'),
+            'width' => $this->fget('width'),
+            'height' => $this->fget('height'),
         ];
     }
 }

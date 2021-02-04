@@ -1,49 +1,21 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/sys/mixin/flagset/1-0-0.json#
 namespace Triniti\Schemas\Sys\Mixin\Flagset;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Triniti\Schemas\Sys\FlagsetId;
+use Gdbots\Pbj\Schema;
 
-final class FlagsetV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait FlagsetV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:sys:mixin:flagset:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('_id', T\IdentifierType::create())
-                ->required()
-                ->className(FlagsetId::class)
-                ->overridable(true)
-                ->build(),
-            Fb::create('booleans', T\BooleanType::create())
-                ->asAMap()
-                ->build(),
-            Fb::create('floats', T\FloatType::create())
-                ->asAMap()
-                ->build(),
-            Fb::create('ints', T\IntType::create())
-                ->asAMap()
-                ->build(),
-            Fb::create('strings', T\StringType::create())
-                ->asAMap()
-                ->build(),
-            Fb::create('trinaries', T\TrinaryType::create())
-                ->asAMap()
-                ->build(),
+            '_id' => $this->fget('_id'),
         ];
     }
 }

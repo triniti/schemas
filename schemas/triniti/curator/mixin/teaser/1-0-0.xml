@@ -5,18 +5,6 @@
 
   <schema id="pbj:triniti:curator:mixin:teaser:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true" overridable="true">
-        <php-options>
-          <imports>use Triniti\Schemas\Curator\TeaserId;</imports>
-          <class-name>TeaserId::class</class-name>
-          <default>function() { return TeaserId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import TeaserId from '@triniti/schemas/triniti/curator/TeaserId';</imports>
-          <class-proto>TeaserId</class-proto>
-          <default>() => TeaserId.generate()</default>
-        </js-options>
-      </field>
       <field name="order_date" type="date-time">
         <description>
           Determines the sequence that this teaser node will be rendered
@@ -25,18 +13,10 @@
           blog-like, reverse chronological, clarity in sorting.
         </description>
       </field>
-      <field name="image_ref" type="identifier">
+      <field name="image_ref" type="node-ref">
         <description>
           A reference to the image asset to use for widgets, sharing, seo.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="description" type="text" max="5000">
         <description>
@@ -49,26 +29,8 @@
           Text to be used for the call to action.
         </description>
       </field>
-      <field name="gallery_ref" type="identifier">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
-      <field name="timeline_ref" type="identifier">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="gallery_ref" type="node-ref"/>
+      <field name="timeline_ref" type="node-ref"/>
     </fields>
   </schema>
 </pbj-schema>

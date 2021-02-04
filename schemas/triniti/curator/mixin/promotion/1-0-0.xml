@@ -5,18 +5,6 @@
 
   <schema id="pbj:triniti:curator:mixin:promotion:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <field name="_id" type="identifier" required="true" overridable="true">
-        <php-options>
-          <imports>use Triniti\Schemas\Curator\PromotionId;</imports>
-          <class-name>PromotionId::class</class-name>
-          <default>function() { return PromotionId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import PromotionId from '@triniti/schemas/triniti/curator/PromotionId';</imports>
-          <class-proto>PromotionId</class-proto>
-          <default>() => PromotionId.generate()</default>
-        </js-options>
-      </field>
       <field name="slot" type="string" format="slug">
         <description>
           The name of the location where the promotion should render,
@@ -55,18 +43,10 @@
           the application after the widgets render.
         </description>
       </field>
-      <field name="widget_refs" type="identifier" rule="list">
+      <field name="widget_refs" type="node-ref" rule="list">
         <description>
           A list of widget node refs that this promotion will render.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
     </fields>
 
@@ -75,14 +55,11 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        '_id' => (string)$this->get('_id'),
-        'slot' => (string)$this->get('slot'),
+        '_id' => $this->fget('_id'),
+        'slot' => $this->fget('slot'),
     ];
 }
           ]]>

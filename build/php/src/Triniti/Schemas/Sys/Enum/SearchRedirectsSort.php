@@ -1,8 +1,9 @@
 <?php
+declare(strict_types=1);
 
 namespace Triniti\Schemas\Sys\Enum;
 
-use Gdbots\Common\Enum;
+use Gdbots\Pbj\Enum;
 
 /**
  * @method static SearchRedirectsSort UNKNOWN()

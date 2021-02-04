@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:dam:request:get-upload-urls-request:1-0-0">
+    <fields>
+      <field name="files" type="string" rule="list"/>
+      <field name="asset_id" type="identifier">
+        <description>
+          When requesting a url for a variant on an existing asset you should
+          provide the asset_id and the version and optionally the quality.
+        </description>
+        <php-options>
+          <imports>use Triniti\Schemas\Dam\AssetId;</imports>
+          <class-name>AssetId::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId';</imports>
+          <class-proto>AssetId</class-proto>
+        </js-options>
+      </field>
+      <field name="quality" type="string" pattern="^[\w\.-]+$"/>
+      <field name="version" type="string" pattern="^[\w\.-]+$"/>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:request:v1</curie-major>
+      <curie-major>gdbots:analytics:mixin:tracked-message:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:ip-to-geo:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:time-parting:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:time-sampling:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:ua-parser:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

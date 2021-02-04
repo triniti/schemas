@@ -4,6 +4,26 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/enums.xsd">
 
   <enums namespace="triniti:sys">
+    <enum name="search-flagsets-sort" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="CREATED_AT_ASC" value="created-at-asc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
+      <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
+    </enum>
+
+    <enum name="search-picklists-sort" type="string">
+      <option key="UNKNOWN" value="unknown"/>
+      <option key="CREATED_AT_ASC" value="created-at-asc"/>
+      <option key="CREATED_AT_DESC" value="created-at-desc"/>
+      <option key="UPDATED_AT_ASC" value="updated-at-asc"/>
+      <option key="UPDATED_AT_DESC" value="updated-at-desc"/>
+      <option key="TITLE_ASC" value="title-asc"/>
+      <option key="TITLE_DESC" value="title-desc"/>
+    </enum>
+
     <enum name="search-redirects-sort" type="string">
       <option key="UNKNOWN" value="unknown"/>
       <option key="CREATED_AT_ASC" value="created-at-asc"/>

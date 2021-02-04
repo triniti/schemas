@@ -1,38 +1,23 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/imgur-post-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\ImgurPostBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class ImgurPostBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait ImgurPostBlockV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:imgur-post-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('id', T\StringType::create())
-                ->required()
-                ->pattern('^[\w\/-]+$')
-                ->build(),
-            /*
-             * When true, shows the post details.
-             */
-            Fb::create('show_context', T\BooleanType::create())
-                ->withDefault(true)
-                ->build(),
+            'etag' => $this->fget('etag'),
+            'id' => $this->fget('id'),
+            'show_context' => $this->fget('show_context'),
         ];
     }
 }

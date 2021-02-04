@@ -1,35 +1,25 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/eme-form-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\EmeFormBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
+use Gdbots\Pbj\Schema;
 
-final class EmeFormBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait EmeFormBlockV1Mixin
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:eme-form-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars()
     {
         return [
-            Fb::create('form_ref', T\IdentifierType::create())
-                ->required()
-                ->className(NodeRef::class)
-                ->build(),
-            Fb::create('expires_at', T\DateTimeType::create())
-                ->build(),
+            'etag' => $this->fget('etag'),
+            'form_ref' => $this->fget('form_ref'),
         ];
     }
 }

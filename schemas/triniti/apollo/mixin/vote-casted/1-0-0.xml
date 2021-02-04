@@ -7,18 +7,10 @@
     Yes, I intentionally unconventially and un-uninflectedly used "cast(ed)".
     Every now and again you have to stick it to the english language.  (╯°□°)╯︵ ┻━┻
   -->
-  <schema id="pbj:triniti:apollo:mixin:vote-casted:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:event:v1">
+  <schema id="pbj:triniti:apollo:mixin:vote-casted:1-0-0" mixin="true" extends="gdbots:pbjx:mixin:event:v1"
+      deprecated="true">
     <fields>
-      <field name="poll_ref" type="identifier" required="true">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="poll_ref" type="node-ref" required="true"/>
       <field name="answer_id" type="uuid"/>
       <field name="s256" type="tiny-int">
         <description>

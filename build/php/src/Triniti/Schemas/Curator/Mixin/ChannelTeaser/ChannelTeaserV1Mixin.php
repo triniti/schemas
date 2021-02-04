@@ -1,17 +1,22 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/channel-teaser/1-0-0.json#
 namespace Triniti\Schemas\Curator\Mixin\ChannelTeaser;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\SchemaId;
+use Gdbots\Pbj\Schema;
 
-final class ChannelTeaserV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait ChannelTeaserV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
+    public function getUriTemplateVars(): array
     {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:channel-teaser:1-0-0');
+        return [
+            '_id' => $this->fget('_id'),
+            'target_ref' => $this->fget('target_ref'),
+        ];
     }
 }

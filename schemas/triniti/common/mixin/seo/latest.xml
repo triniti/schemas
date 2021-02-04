@@ -6,19 +6,11 @@
   <schema id="pbj:triniti:common:mixin:seo:1-0-1" mixin="true">
     <fields>
       <field name="seo_title" type="string"/>
-      <field name="seo_image_ref" type="identifier">
+      <field name="seo_image_ref" type="node-ref">
         <description>
           A reference to the image asset to use for SEO instead of
           the usual image_ref.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
       <field name="seo_published_at" type="date-time">
         <description>

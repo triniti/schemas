@@ -1,46 +1,26 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/video-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\VideoBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
+use Gdbots\Pbj\Schema;
 
-final class VideoBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait VideoBlockV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:video-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('autoplay', T\BooleanType::create())
-                ->build(),
-            Fb::create('launch_text', T\StringType::create())
-                ->build(),
-            Fb::create('muted', T\BooleanType::create())
-                ->build(),
-            Fb::create('start_at', T\SmallIntType::create())
-                ->build(),
-            Fb::create('show_more_videos', T\BooleanType::create())
-                ->build(),
-            /*
-             * A reference to an image asset to use as the poster that will
-             * override what is provided by the target video.
-             */
-            Fb::create('poster_image_ref', T\IdentifierType::create())
-                ->className(NodeRef::class)
-                ->build(),
+            'etag' => $this->fget('etag'),
+            'node_ref' => $this->fget('node_ref'),
+            'autoplay' => $this->fget('autoplay'),
+            'muted' => $this->fget('muted'),
+            'start_at' => $this->fget('start_at'),
+            'show_more_videos' => $this->fget('show_more_videos'),
         ];
     }
 }

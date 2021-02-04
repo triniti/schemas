@@ -5,29 +5,17 @@
   "properties": {
     "etag": {
       "type": "string",
-      "pattern": "^[\\w\\.:-]+$",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "pattern": "^[\\w\\.:-]+$"
     },
     "css_class": {
       "type": "string",
       "pattern": "^[\\w\\s-]+$",
-      "description": "In rendering environments that support HTML the css_class can be appended to the dom elements' class attribute.",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
+      "description": "In rendering environments that support HTML the css_class can be appended to the dom elements' class attribute."
     },
     "updated_date": {
       "type": "string",
       "format": "date-time",
-      "description": "Represents an update that occurred on the node this block is attached to. DOES NOT indicate an update to the block itself. eg an article with a twitter block with updated_date means that the article was updated to include that twitter block.",
-      "pbj": {
-        "type": "date-time",
-        "rule": "single"
-      }
+      "description": "Represents an update that occurred on the node this block is attached to. DOES NOT indicate an update to the block itself. eg an article with a twitter block with updated_date means that the article was updated to include that twitter block."
     }
   },
   "additionalProperties": true

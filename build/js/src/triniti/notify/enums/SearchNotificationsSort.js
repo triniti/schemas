@@ -1,4 +1,4 @@
-import Enum from '@gdbots/common/Enum';
+import Enum from '@gdbots/pbj/Enum';
 
 export default class SearchNotificationsSort extends Enum {
 }

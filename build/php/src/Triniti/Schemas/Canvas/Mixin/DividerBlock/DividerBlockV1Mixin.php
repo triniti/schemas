@@ -1,37 +1,21 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/divider-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\DividerBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\Enum\Format;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class DividerBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait DividerBlockV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:divider-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('text', T\StringType::create())
-                ->build(),
-            Fb::create('stroke_color', T\StringType::create())
-                ->format(Format::SLUG())
-                ->build(),
-            Fb::create('stroke_style', T\StringType::create())
-                ->format(Format::SLUG())
-                ->build(),
+            'etag' => $this->fget('etag'),
         ];
     }
 }

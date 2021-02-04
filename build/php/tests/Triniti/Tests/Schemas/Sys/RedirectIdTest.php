@@ -3,16 +3,15 @@ declare(strict_types=1);
 
 namespace Triniti\Tests\Schemas\Sys;
 
+use Gdbots\Pbj\Exception\InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Triniti\Schemas\Sys\RedirectId;
 
 final class RedirectIdTest extends TestCase
 {
-    /**
-     * @expectedException \Gdbots\Pbj\Exception\InvalidArgumentException
-     */
     public function testEmptyUri(): void
     {
+        $this->expectException(InvalidArgumentException::class);
         RedirectId::fromUri('');
     }
 

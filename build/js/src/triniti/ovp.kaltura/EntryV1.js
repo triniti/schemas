@@ -7,8 +7,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import MediaType from '@triniti/schemas/triniti/ovp.kaltura/enums/MediaType';
 import Message from '@gdbots/pbj/Message';
-import MessageRef from '@gdbots/pbj/MessageRef';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef';
 import Schema from '@gdbots/pbj/Schema';
 import SourceType from '@triniti/schemas/triniti/ovp.kaltura/enums/SourceType';
 import T from '@gdbots/pbj/types';
@@ -20,7 +19,7 @@ export default class EntryV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:triniti:ovp.kaltura::entry:1-0-0', EntryV1,
+    return new Schema(this.SCHEMA_ID, this,
       [
         Fb.create('entry_id', T.StringType.create())
           .pattern('^[\\w-]+$')
@@ -141,6 +140,7 @@ export default class EntryV1 extends Message {
           .asAMap()
           .build(),
       ],
+      this.MIXINS,
     );
   }
 
@@ -163,6 +163,11 @@ export default class EntryV1 extends Message {
   }
 }
 
-MessageResolver.register('triniti:ovp.kaltura::entry', EntryV1);
-Object.freeze(EntryV1);
-Object.freeze(EntryV1.prototype);
+const M = EntryV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:ovp.kaltura::entry:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:ovp.kaltura::entry';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:ovp.kaltura::entry:v1';
+M.prototype.MIXINS = M.MIXINS = [];
+
+Object.freeze(M);
+Object.freeze(M.prototype);

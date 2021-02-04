@@ -33,18 +33,14 @@
       <insertion-points>
         <imports>
           <![CDATA[
-use Gdbots\Pbj\MessageRef;
+use Gdbots\Pbj\WellKnown\MessageRef;
             ]]>
         </imports>
         <methods>
           <![CDATA[
-/**
- * @param string $tag
- * @return MessageRef
- */
-public function generateMessageRef($tag = null)
+public function generateMessageRef(?string $tag = null): MessageRef
 {
-    return new MessageRef(static::schema()->getCurie(), $this->get('etag') ?: $this->generateEtag(['etag']), $tag);
+    return new MessageRef(static::schema()->getCurie(), $this->fget('etag') ?: $this->generateEtag(['etag']), $tag);
 }
             ]]>
         </methods>
@@ -55,7 +51,7 @@ public function generateMessageRef($tag = null)
       <insertion-points>
         <imports>
           <![CDATA[
-import MessageRef from '@gdbots/pbj/MessageRef';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef';
             ]]>
         </imports>
         <methods>

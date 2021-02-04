@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:canvas:request:search-pages-request:1-0-0">
+    <fields>
+      <field name="is_unlisted" type="trinary"/>
+      <field name="sort" type="string-enum">
+        <default>relevance</default>
+        <enum id="triniti:canvas:search-pages-sort"/>
+      </field>
+      <field name="channel_ref" type="node-ref"/>
+      <field name="category_refs" type="node-ref" rule="set"/>
+      <field name="person_refs" type="node-ref" rule="set"/>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:request:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:search-nodes-request:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

@@ -10,18 +10,10 @@
       <field name="include_latest_promo" type="boolean"/>
       <field name="headline" type="string"/>
       <field name="excerpt" type="text"/>
-      <field name="image_ref" type="identifier">
+      <field name="image_ref" type="node-ref">
         <description>
           A reference to the image asset to use.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
     </fields>
 
@@ -30,14 +22,11 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        '_id' => (string)$this->get('_id'),
-        'show' => $this->get('show'),
+        '_id' => $this->fget('_id'),
+        'show' => $this->fget('show'),
     ];
 }
           ]]>

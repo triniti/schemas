@@ -1,37 +1,24 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/carousel-widget/1-0-0.json#
 namespace Triniti\Schemas\Curator\Mixin\CarouselWidget;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class CarouselWidgetV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait CarouselWidgetV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:curator:mixin:carousel-widget:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('show_captions', T\BooleanType::create())
-                ->withDefault(true)
-                ->build(),
-            Fb::create('show_controls', T\BooleanType::create())
-                ->withDefault(true)
-                ->build(),
-            Fb::create('show_position_indicators', T\BooleanType::create())
-                ->withDefault(true)
-                ->build(),
+            '_id' => $this->fget('_id'),
+            'show_captions' => $this->fget('show_captions'),
+            'show_controls' => $this->fget('show_controls'),
+            'show_position_indicators' => $this->fget('show_position_indicators'),
         ];
     }
 }

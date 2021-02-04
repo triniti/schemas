@@ -15,19 +15,11 @@
           Whether or not to use the thumbnail as a poster image.
         </description>
       </field>
-      <field name="poster_image_ref" type="identifier">
+      <field name="poster_image_ref" type="node-ref">
         <description>
           A reference to an image asset to use as the poster that will
           override what is provided by soundcloud.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
     </fields>
 
@@ -36,18 +28,15 @@
         <imports/>
         <methods>
           <![CDATA[
-/**
- * @return array
- */
-public function getUriTemplateVars()
+public function getUriTemplateVars(): array
 {
     return [
-        'etag' => $this->get('etag'),
-        'track_id' => $this->get('track_id'),
-        'auto_play' => $this->get('auto_play'),
-        'show_comments' => $this->get('show_comments'),
-        'hide_related' => $this->get('hide_related'),
-        'visual' => $this->get('visual'),
+        'etag' => $this->fget('etag'),
+        'track_id' => $this->fget('track_id'),
+        'auto_play' => $this->fget('auto_play'),
+        'show_comments' => $this->fget('show_comments'),
+        'hide_related' => $this->fget('hide_related'),
+        'visual' => $this->fget('visual'),
     ];
 }
           ]]>

@@ -1,6 +1,155 @@
 # CHANGELOG
 
 
+## v2.0.0
+__BREAKING CHANGES__
+
+* Use gdbots/pbjc v1.x and gdbots/pbj v3.x.
+* Replace all identifier fields using NodeRef with new node-ref type.
+* Use PHP7 typehinting in all insertion points for php.
+* Use new fget method where possible in insertion points.
+* Remove use of identifier classes where uuid can be used, e.g. UserId, AppId.
+* __Deprecated Schemas:__ (these will be removed in 3.x)
+  * `triniti:apollo:mixin:cast-vote`
+  * `triniti:apollo:mixin:search-polls-request`
+  * `triniti:apollo:mixin:search-polls-response`
+  * `triniti:apollo:mixin:vote-casted`
+  * `triniti:boost:mixin:search-sponsors-request`
+  * `triniti:boost:mixin:search-sponsors-response`
+  * `triniti:canvas:mixin:search-pages-request`
+  * `triniti:canvas:mixin:search-pages-response`
+  * `triniti:curator:mixin:gallery-image-count-updated`
+  * `triniti:curator:mixin:remove-teaser-slotting`
+  * `triniti:curator:mixin:render-promotion-request`
+  * `triniti:curator:mixin:render-promotion-response`
+  * `triniti:curator:mixin:render-widget-request`
+  * `triniti:curator:mixin:render-widget-response`
+  * `triniti:curator:mixin:search-galleries-request`
+  * `triniti:curator:mixin:search-galleries-response`
+  * `triniti:curator:mixin:search-promotions-request`
+  * `triniti:curator:mixin:search-promotions-response`
+  * `triniti:curator:mixin:search-teasers-request`
+  * `triniti:curator:mixin:search-teasers-response`
+  * `triniti:curator:mixin:search-timelines-request`
+  * `triniti:curator:mixin:search-timelines-response`
+  * `triniti:curator:mixin:search-widgets-request`
+  * `triniti:curator:mixin:search-widgets-response`
+  * `triniti:curator:mixin:sync-teaser`
+  * `triniti:curator:mixin:teaser-slotting-removed`
+  * `triniti:curator:mixin:update-gallery-image-count`
+  * `triniti:dam:mixin:asset-linked`
+  * `triniti:dam:mixin:asset-patched`
+  * `triniti:dam:mixin:asset-unlinked`
+  * `triniti:dam:mixin:gallery-asset-reordered`
+  * `triniti:dam:mixin:get-upload-urls-request`
+  * `triniti:dam:mixin:get-upload-urls-response`
+  * `triniti:dam:mixin:link-assets`
+  * `triniti:dam:mixin:patch-assets`
+  * `triniti:dam:mixin:reorder-gallery-assets`
+  * `triniti:dam:mixin:search-assets-request`
+  * `triniti:dam:mixin:search-assets-response`
+  * `triniti:dam:mixin:unlink-assets`
+  * `triniti:news:mixin:apple-news-article-synced`
+  * `triniti:news:mixin:article-slotting-removed`
+  * `triniti:news:mixin:article-stats-collected`
+  * `triniti:news:mixin:collect-article-stats`
+  * `triniti:news:mixin:remove-article-slotting`
+  * `triniti:news:mixin:search-articles-request`
+  * `triniti:news:mixin:search-articles-response`
+  * `triniti:notify:mixin:notification-failed`
+  * `triniti:notify:mixin:notification-sent`
+  * `triniti:notify:mixin:search-notificatons-request`
+  * `triniti:notify:mixin:search-notificatons-response`
+  * `triniti:notify:mixin:send-notification`
+  * `triniti:ovp:mixin:search-videos-request`
+  * `triniti:ovp:mixin:search-videos-response`
+  * `triniti:people:mixin:search-people-request`
+  * `triniti:people:mixin:search-people-response`
+  * `triniti:sys:mixin:get-redirect-response`
+  * `triniti:sys:mixin:list-all-flagsets-request`
+  * `triniti:sys:mixin:list-all-flagsets-response`
+  * `triniti:sys:mixin:list-all-picklists-request`
+  * `triniti:sys:mixin:list-all-picklists-response`
+  * `triniti:sys:mixin:search-redirects-request`
+  * `triniti:sys:mixin:search-redirects-response`
+  * `triniti:taxonomy:mixin:get-all-channels-request`
+  * `triniti:taxonomy:mixin:get-all-channels-response`
+  * `triniti:taxonomy:mixin:search-categories-request`
+  * `triniti:taxonomy:mixin:search-categories-response`
+  * `triniti:taxonomy:mixin:suggest-hashtags-request`
+  * `triniti:taxonomy:mixin:suggest-hashtags-response`
+* __Add Schemas:__
+  * `triniti:apollo:command:cast-vote`
+  * `triniti:apollo:event:vote-casted`
+  * `triniti:apollo:request:search-polls-request`
+  * `triniti:apollo:request:search-polls-response`
+  * `triniti:boost:request:search-sponsors-request`
+  * `triniti:boost:request:search-sponsors-response`
+  * `triniti:canvas:request:search-pages-request`
+  * `triniti:canvas:request:search-pages-response`
+  * `triniti:curator:command:remove-teaser-slotting`
+  * `triniti:curator:command:sync-teaser`
+  * `triniti:curator:command:update-gallery-image-count`
+  * `triniti:curator:event:gallery-image-count-updated`
+  * `triniti:curator:event:teaser-slotting-removed`
+  * `triniti:curator:request:render-promotion-request`
+  * `triniti:curator:request:render-promotion-response`
+  * `triniti:curator:request:render-widget-request`
+  * `triniti:curator:request:render-widget-response`
+  * `triniti:curator:request:search-galleries-request`
+  * `triniti:curator:request:search-galleries-response`
+  * `triniti:curator:request:search-promotions-request`
+  * `triniti:curator:request:search-promotions-response`
+  * `triniti:curator:request:search-teasers-request`
+  * `triniti:curator:request:search-teasers-response`
+  * `triniti:curator:request:search-timelines-request`
+  * `triniti:curator:request:search-timelines-response`
+  * `triniti:curator:request:search-widgets-request`
+  * `triniti:curator:request:search-widgets-response`
+  * `triniti:dam:command:link-assets`
+  * `triniti:dam:command:patch-assets`
+  * `triniti:dam:command:reorder-gallery-assets`
+  * `triniti:dam:command:unlink-assets`
+  * `triniti:dam:event:asset-linked`
+  * `triniti:dam:event:asset-patched`
+  * `triniti:dam:event:asset-unlinked`
+  * `triniti:dam:event:gallery-asset-reordered`
+  * `triniti:dam:request:get-upload-urls-request`
+  * `triniti:dam:request:get-upload-urls-response`
+  * `triniti:dam:request:search-assets-request`
+  * `triniti:dam:request:search-assets-response`
+  * `triniti:news:command:collect-article-stats`
+  * `triniti:news:command:remove-article-slotting`
+  * `triniti:news:event:apple-news-article-synced`
+  * `triniti:news:event:article-slotting-removed`
+  * `triniti:news:event:article-stats-collected`
+  * `triniti:news:request:search-articles-request`
+  * `triniti:news:request:search-articles-response`
+  * `triniti:notify:command:send-notification`
+  * `triniti:notify:event:notification-failed`
+  * `triniti:notify:event:notification-sent`
+  * `triniti:notify:request:search-notifications-request`
+  * `triniti:notify:request:search-notifications-response`
+  * `triniti:ovp:request:search-videos-request`
+  * `triniti:ovp:request:search-videos-response`
+  * `triniti:people:request:search-people-request`
+  * `triniti:people:request:search-people-response`
+  * `triniti:sys:request:get-redirect-request`
+  * `triniti:sys:request:get-redirect-response`
+  * `triniti:sys:request:search-flagsets-request`
+  * `triniti:sys:request:search-flagsets-response`
+  * `triniti:sys:request:search-picklists-request`
+  * `triniti:sys:request:search-picklists-response`
+  * `triniti:sys:request:search-redirects-request`
+  * `triniti:sys:request:search-redirects-response`
+  * `triniti:taxonomy:request:search-categories-request`
+  * `triniti:taxonomy:request:search-categories-response`
+  * `triniti:taxonomy:request:search-channels-request`
+  * `triniti:taxonomy:request:search-channels-response`
+  * `triniti:taxonomy:request:suggest-hashtags-request`
+  * `triniti:taxonomy:request:suggest-hashtags-response`
+
+
 ## v1.1.14
 * __Add Schemas:__
   * `triniti:canvas:mixin:eme-form-block`

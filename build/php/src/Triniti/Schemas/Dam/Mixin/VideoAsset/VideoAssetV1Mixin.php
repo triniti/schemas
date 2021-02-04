@@ -1,33 +1,19 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/video-asset/1-0-1.json#
 namespace Triniti\Schemas\Dam\Mixin\VideoAsset;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\Schema;
 
-final class VideoAssetV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait VideoAssetV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
+    public function getUriTemplateVars(): array
     {
-        return SchemaId::fromString('pbj:triniti:dam:mixin:video-asset:1-0-1');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
-    {
-        return [
-            /*
-             * Duration of the video in seconds.
-             */
-            Fb::create('duration', T\SmallIntType::create())
-                ->build(),
-        ];
+        return ['_id' => $this->fget('_id')];
     }
 }

@@ -4,34 +4,18 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:triniti:curator:mixin:sync-teaser:1-0-0" mixin="true"
-      extends="gdbots:pbjx:mixin:command:v1">
+      extends="gdbots:pbjx:mixin:command:v1" deprecated="true">
     <fields>
-      <field name="target_ref" type="identifier">
+      <field name="target_ref" type="node-ref">
         <description>
           A reference to the target - every teaser that teases this target
           will be synced (if set to sync_with_target).
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
-      <field name="teaser_ref" type="identifier">
+      <field name="teaser_ref" type="node-ref">
         <description>
           A reference to the teaser that will be synced to its target.
         </description>
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
       </field>
     </fields>
   </schema>

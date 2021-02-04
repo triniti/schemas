@@ -1,70 +1,28 @@
 <?php
+declare(strict_types=1);
+
 // @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/vimeo-video-block/1-0-0.json#
 namespace Triniti\Schemas\Canvas\Mixin\VimeoVideoBlock;
 
-use Gdbots\Pbj\AbstractMixin;
-use Gdbots\Pbj\FieldBuilder as Fb;
-use Gdbots\Pbj\SchemaId;
-use Gdbots\Pbj\Type as T;
-use Gdbots\Schemas\Ncr\NodeRef;
+use Gdbots\Pbj\Schema;
 
-final class VimeoVideoBlockV1Mixin extends AbstractMixin
+/**
+ * @method static Schema schema
+ * @method mixed fget($fieldName, $default = null)
+ */
+trait VimeoVideoBlockV1Mixin
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:vimeo-video-block:1-0-0');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFields()
+    public function getUriTemplateVars(): array
     {
         return [
-            Fb::create('id', T\StringType::create())
-                ->required()
-                ->pattern('^\d+$')
-                ->build(),
-            Fb::create('autoplay', T\BooleanType::create())
-                ->build(),
-            Fb::create('loop', T\BooleanType::create())
-                ->build(),
-            /*
-             * Whether or not to show the byline (eg "from Dick Tracy") in the thumbnail.
-             */
-            Fb::create('show_byline', T\BooleanType::create())
-                ->build(),
-            /*
-             * Whether or not to show the portrait (profile image) in the thumbnail.
-             */
-            Fb::create('show_portrait', T\BooleanType::create())
-                ->build(),
-            /*
-             * Whether or not to show the video title in the thumbnail.
-             */
-            Fb::create('show_title', T\BooleanType::create())
-                ->build(),
-            Fb::create('description', T\TextType::create())
-                ->maxLength(5000)
-                ->build(),
-            Fb::create('title', T\StringType::create())
-                ->build(),
-            Fb::create('user_id', T\StringType::create())
-                ->pattern('^[\w\.-]+$')
-                ->build(),
-            Fb::create('user_name', T\StringType::create())
-                ->pattern('^[\s\w\.-]+$')
-                ->build(),
-            /*
-             * A reference to an image asset to use as the poster that will
-             * override what is provided by vimeo.
-             */
-            Fb::create('poster_image_ref', T\IdentifierType::create())
-                ->className(NodeRef::class)
-                ->build(),
+            'etag' => $this->fget('etag'),
+            'id' => $this->fget('id'),
+            'autoplay' => $this->fget('autoplay'),
+            'loop' => $this->fget('loop'),
+            'show_byline' => $this->fget('show_byline'),
+            'show_portrait' => $this->fget('show_portrait'),
+            'show_title' => $this->fget('show_title'),
+            'user_id' => $this->fget('user_id'),
         ];
     }
 }
