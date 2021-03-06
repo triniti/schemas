@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v2.0.1
+* Fix syntax error `triniti:canvas:mixin:eme-form-block`.  no schema changes.
+
+
 ## v2.0.0
 __BREAKING CHANGES__
 

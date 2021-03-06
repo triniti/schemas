@@ -12,10 +12,7 @@ use Gdbots\Pbj\Schema;
  */
 trait EmeFormBlockV1Mixin
 {
-    /**
-     * @return array
-     */
-    public function getUriTemplateVars()
+    public function getUriTemplateVars(): array
     {
         return [
             'etag' => $this->fget('etag'),

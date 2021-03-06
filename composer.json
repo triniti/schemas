@@ -33,15 +33,6 @@
       "git add .",
       "@test"
     ],
-    "post-package-install": [
-      "Gdbots\\Pbjc\\Composer\\ScriptHandler::writePbjSchemaStoresFile"
-    ],
-    "post-package-uninstall": [
-      "Gdbots\\Pbjc\\Composer\\ScriptHandler::writePbjSchemaStoresFile"
-    ],
-    "post-package-update": [
-      "Gdbots\\Pbjc\\Composer\\ScriptHandler::writePbjSchemaStoresFile"
-    ],
     "test": [
       "vendor/bin/phpunit",
       "npm test"
