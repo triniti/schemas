@@ -6,7 +6,7 @@
   <schema id="pbj:triniti:dam:mixin:image-asset:1-0-1" mixin="true" extends="triniti:dam:mixin:asset:v1">
     <fields>
       <field name="alt_text" type="text">
-        <description>Alternate text for an image, if the image cannot be displayed.</description>
+        <description>Alternate text for an image, if the image cannot be displayed or seen.</description>
       </field>
       <field name="width" type="small-int">
         <description>The image width in pixels.</description>

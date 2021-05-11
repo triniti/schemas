@@ -202,7 +202,7 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 65535,
-      "description": "Alternate text for an image, if the image cannot be displayed."
+      "description": "Alternate text for an image, if the image cannot be displayed or seen."
     },
     "width": {
       "type": "integer",
