@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.1.15
+* __Modify Schemas:__
+  * `triniti:dam:mixin:image-asset` path revision `1-0-1`
+    * Add `alt_text` text field.
+
+
 ## v1.1.14
 * __Add Schemas:__
   * `triniti:canvas:mixin:eme-form-block`
