@@ -3,7 +3,7 @@
 
 ## v1.1.15
 * __Modify Schemas:__
-  * `triniti:dam:mixin:image-asset` path revision `1-0-1`
+  * `triniti:dam:mixin:image-asset` patch revision `1-0-1`
     * Add `alt_text` text field.
 
 
