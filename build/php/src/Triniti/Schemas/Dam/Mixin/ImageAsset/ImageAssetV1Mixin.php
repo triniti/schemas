@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/image-asset/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/image-asset/1-0-1.json#
 namespace Triniti\Schemas\Dam\Mixin\ImageAsset;
 
 use Gdbots\Pbj\Schema;

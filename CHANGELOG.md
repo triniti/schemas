@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v2.0.2
+* __Modify Schemas:__
+  * `triniti:dam:mixin:image-asset` patch revision `1-0-1`
+    * Add `alt_text` text field.
+
+
 ## v2.0.1
 * Fix syntax error `triniti:canvas:mixin:eme-form-block`.  no schema changes.
 
