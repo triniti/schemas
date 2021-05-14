@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/image-asset/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/image-asset/1-0-1.json#
 namespace Triniti\Schemas\Dam\Mixin\ImageAsset;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -14,7 +14,7 @@ final class ImageAssetV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:dam:mixin:image-asset:1-0-0');
+        return SchemaId::fromString('pbj:triniti:dam:mixin:image-asset:1-0-1');
     }
 
     /**
@@ -23,6 +23,11 @@ final class ImageAssetV1Mixin extends AbstractMixin
     public function getFields()
     {
         return [
+            /*
+             * Alternate text for an image, if the image cannot be displayed or seen.
+             */
+            Fb::create('alt_text', T\TextType::create())
+                ->build(),
             /*
              * The image width in pixels.
              */

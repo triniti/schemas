@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/image-asset/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/dam/mixin/image-asset/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -9,7 +9,7 @@ export default class ImageAssetV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:dam:mixin:image-asset:1-0-0');
+    return SchemaId.fromString('pbj:triniti:dam:mixin:image-asset:1-0-1');
   }
 
   /**
@@ -17,6 +17,11 @@ export default class ImageAssetV1Mixin extends Mixin {
    */
   getFields() {
     return [
+      /*
+       * Alternate text for an image, if the image cannot be displayed or seen.
+       */
+      Fb.create('alt_text', T.TextType.create())
+        .build(),
       /*
        * The image width in pixels.
        */
