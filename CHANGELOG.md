@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v2.0.3
+* __Add Schemas:__
+  * `triniti:notify:mixin:command:twitter-notification`
+
+
 ## v2.0.2
 * __Modify Schemas:__
   * `triniti:dam:mixin:image-asset` patch revision `1-0-1`
