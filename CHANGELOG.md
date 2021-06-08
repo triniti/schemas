@@ -3,7 +3,7 @@
 
 ## v2.0.3
 * __Add Schemas:__
-  * `triniti:notify:mixin:command:twitter-notification`
+  * `triniti:notify:mixin:twitter-notification`
 
 
 ## v2.0.2
