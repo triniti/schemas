@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v2.0.3
+* __Add Schemas:__
+  * `triniti:notify:mixin:twitter-notification`
+* __Modify Schemas:__
+  * `triniti:curator:mixin:gallery` patch revision `1-0-3`
+    * Add `layout` string field with format slug.
+  * `triniti:news:mixin:article` patch revision `1-0-4`
+    * Add `twitter_publish_enabled` boolean field.
+
+
 ## v2.0.2
 * __Modify Schemas:__
   * `triniti:dam:mixin:image-asset` patch revision `1-0-1`

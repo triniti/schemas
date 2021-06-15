@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-2.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-3.json#
 namespace Triniti\Schemas\Curator\Mixin\Gallery;
 
 use Gdbots\Pbj\Schema;
