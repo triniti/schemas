@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-3.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-4.json#
 import ArticleId from '@triniti/schemas/triniti/news/ArticleId';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
@@ -12,7 +12,7 @@ export default class ArticleV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-3');
+    return SchemaId.fromString('pbj:triniti:news:mixin:article:1-0-4');
   }
 
   /**
@@ -105,6 +105,13 @@ export default class ArticleV1Mixin extends Mixin {
        * Determines if Facebook Instant Articles should be enabled for this article.
        */
       Fb.create('facebook_instant_articles_enabled', T.BooleanType.create())
+        .withDefault(true)
+        .build(),
+      /*
+       * Determines if a twitter notification should be automatically created when
+       * this article is published.
+       */
+      Fb.create('twitter_publish_enabled', T.BooleanType.create())
         .withDefault(true)
         .build(),
       /*

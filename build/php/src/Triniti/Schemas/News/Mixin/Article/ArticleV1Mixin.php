@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-3.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-4.json#
 namespace Triniti\Schemas\News\Mixin\Article;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -17,7 +17,7 @@ final class ArticleV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:news:mixin:article:1-0-3');
+        return SchemaId::fromString('pbj:triniti:news:mixin:article:1-0-4');
     }
 
     /**
@@ -111,6 +111,13 @@ final class ArticleV1Mixin extends AbstractMixin
              * Determines if Facebook Instant Articles should be enabled for this article.
              */
             Fb::create('facebook_instant_articles_enabled', T\BooleanType::create())
+                ->withDefault(true)
+                ->build(),
+            /*
+             * Determines if a twitter notification should be automatically created when
+             * this article is published.
+             */
+            Fb::create('twitter_publish_enabled', T\BooleanType::create())
                 ->withDefault(true)
                 ->build(),
             /*

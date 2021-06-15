@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-2.json#
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-3.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import GalleryId from '@triniti/schemas/triniti/curator/GalleryId';
@@ -12,7 +12,7 @@ export default class GalleryV1Mixin extends Mixin {
    * @returns {SchemaId}
    */
   getId() {
-    return SchemaId.fromString('pbj:triniti:curator:mixin:gallery:1-0-2');
+    return SchemaId.fromString('pbj:triniti:curator:mixin:gallery:1-0-3');
   }
 
   /**
@@ -48,6 +48,12 @@ export default class GalleryV1Mixin extends Mixin {
         .withDefault(true)
         .build(),
       Fb.create('launch_text', T.StringType.create())
+        .build(),
+      /*
+       * Visual layout for the page. e.g. "carousel", "list".
+       */
+      Fb.create('layout', T.StringType.create())
+        .format(Format.SLUG)
         .build(),
       /*
        * A description of the gallery (usually a few sentences). It should typically

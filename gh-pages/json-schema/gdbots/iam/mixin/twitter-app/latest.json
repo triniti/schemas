@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-3.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/twitter-app/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -8,8 +8,7 @@
       "pattern": "^[\\w\\/\\.:-]+$",
       "pbj": {
         "type": "identifier",
-        "rule": "single",
-        "overridable": true
+        "rule": "single"
       }
     },
     "status": {
@@ -163,103 +162,7 @@
         "rule": "single"
       }
     },
-    "image_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the image asset to use as the cover/primary.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "credit": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "A credit is a short string used to publicly acknowledge the source/creator of the contents of this gallery. e.g. \"Fox News\", \"CNN\".",
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "credit_url": {
-      "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "description": "A URL to link with the credit source.",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
-      }
-    },
-    "allow_comments": {
-      "type": "boolean",
-      "default": true,
-      "pbj": {
-        "type": "boolean",
-        "rule": "single"
-      }
-    },
-    "launch_text": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "layout": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "Visual layout for the page. e.g. \"carousel\", \"list\".",
-      "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
-      }
-    },
-    "description": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 5000,
-      "description": "A description of the gallery (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
-      "pbj": {
-        "type": "text",
-        "rule": "single"
-      }
-    },
-    "image_count": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 16777215,
-      "pbj": {
-        "type": "medium-int",
-        "rule": "single"
-      }
-    },
-    "prev_gallery_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the previous gallery.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "next_gallery_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the next gallery.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "related_gallery_refs": {
+    "roles": {
       "type": "array",
       "items": [
         {
@@ -267,10 +170,50 @@
           "pattern": "^[\\w\\/\\.:-]+$"
         }
       ],
+      "uniqueItems": true,
       "additionalProperties": false,
+      "description": "The roles determine what permissions this app will have when using the system. The role itself is a node which has a set of \"allow\" and \"deny\" rules.",
       "pbj": {
         "type": "identifier",
-        "rule": "list"
+        "rule": "set"
+      }
+    },
+    "oauth_consumer_key": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "description": "Equivalent to username of your Twitter developer app when making API requests. @link https://developer.twitter.com/en/docs/authentication/oauth-1-0a",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "oauth_consumer_secret": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "Equivalent to password of your Twitter developer app when making API requests. The \"oauth_consumer_secret\" should be encrypted and never stored in plain text. @link https://developer.twitter.com/en/docs/authentication/oauth-1-0a",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    },
+    "oauth_token": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "description": "An oauth token is a user-specific credentials used to authenticate OAuth 1.0a API requests. It specifies the Twitter account the request is made on behalf of. @link https://developer.twitter.com/en/docs/authentication/oauth-1-0a",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "oauth_token_secret": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "An oauth token secret is a user-specific credentials used to authenticate OAuth 1.0a API requests. It specifies the Twitter account the request is made on behalf of. The \"oauth_token_secret\" should be encrypted and never stored in plain text. @link https://developer.twitter.com/en/docs/authentication/oauth-1-0a",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
       }
     }
   },

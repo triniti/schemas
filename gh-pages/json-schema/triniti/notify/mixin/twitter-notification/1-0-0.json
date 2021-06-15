@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/gallery/1-0-3.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/notify/mixin/twitter-notification/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -163,119 +163,98 @@
         "rule": "single"
       }
     },
-    "image_ref": {
+    "app_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the image asset to use as the cover/primary.",
+      "description": "A reference to the app this notification is being sent to.",
       "pbj": {
         "type": "identifier",
         "rule": "single"
       }
     },
-    "credit": {
+    "content_ref": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "A credit is a short string used to publicly acknowledge the source/creator of the contents of this gallery. e.g. \"Fox News\", \"CNN\".",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the content this notification will include.",
       "pbj": {
-        "type": "string",
+        "type": "identifier",
         "rule": "single"
       }
     },
-    "credit_url": {
+    "send_status": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "description": "A URL to link with the credit source.",
+      "default": "draft",
+      "enum": [
+        "unknown",
+        "draft",
+        "scheduled",
+        "sent",
+        "canceled",
+        "failed"
+      ],
       "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
+        "type": "string-enum",
+        "rule": "single"
       }
     },
-    "allow_comments": {
+    "send_on_publish": {
       "type": "boolean",
-      "default": true,
       "pbj": {
         "type": "boolean",
         "rule": "single"
       }
     },
-    "launch_text": {
+    "send_at": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
+      "format": "date-time",
       "pbj": {
-        "type": "string",
+        "type": "date-time",
         "rule": "single"
       }
     },
-    "layout": {
+    "sent_at": {
       "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "Visual layout for the page. e.g. \"carousel\", \"list\".",
+      "format": "date-time",
       "pbj": {
-        "type": "string",
-        "rule": "single",
-        "format": "slug"
+        "type": "date-time",
+        "rule": "single"
       }
     },
-    "description": {
+    "body": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 5000,
-      "description": "A description of the gallery (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social.",
+      "maxLength": 2000,
+      "description": "The body of the notification to use (format depends on app/platform). If present this value should take precedence over the body derived from content_ref.",
       "pbj": {
         "type": "text",
         "rule": "single"
       }
     },
-    "image_count": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 16777215,
-      "pbj": {
-        "type": "medium-int",
-        "rule": "single"
-      }
-    },
-    "prev_gallery_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the previous gallery.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "next_gallery_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "A reference to the next gallery.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "related_gallery_refs": {
-      "type": "array",
-      "items": [
+    "notifier_result": {
+      "type": "object",
+      "anyOf": [
         {
-          "type": "string",
-          "pattern": "^[\\w\\/\\.:-]+$"
+          "$ref": "#/definitions/notifier-result"
         }
       ],
-      "additionalProperties": false,
       "pbj": {
-        "type": "identifier",
-        "rule": "list"
+        "type": "message",
+        "rule": "single"
       }
     }
   },
   "required": [
     "_id"
   ],
+  "definitions": {
+    "notifier-result": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/notify/notifier-result/1-0-0.json#"
+        }
+      ]
+    }
+  },
   "additionalProperties": true
 }
