@@ -4,6 +4,9 @@
 ## v2.0.3
 * __Add Schemas:__
   * `triniti:notify:mixin:twitter-notification`
+* __Modify Schemas:__
+  * `triniti:curator:mixin:gallery` patch revision `1-0-3`
+    * Add `layout` string field with format slug.
 
 
 ## v2.0.2
