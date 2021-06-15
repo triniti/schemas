@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-3.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/mixin/article/1-0-4.json#
 namespace Triniti\Schemas\News\Mixin\Article;
 
 use Gdbots\Pbj\Schema;

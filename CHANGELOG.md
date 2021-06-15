@@ -4,6 +4,9 @@
 ## v2.0.3
 * __Add Schemas:__
   * `triniti:notify:mixin:twitter-notification`
+* __Modify Schemas:__
+  * `triniti:news:mixin:article` patch revision `1-0-4`
+    * Add `twitter_publish_enabled` boolean field.
 
 
 ## v2.0.2
