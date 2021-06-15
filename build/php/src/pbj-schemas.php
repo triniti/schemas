@@ -44,6 +44,8 @@ MessageResolver::register([
     'gdbots:forms:field:skype-user-field:v1' => 'Gdbots\Schemas\Forms\Field\SkypeUserFieldV1',
     'gdbots:forms:field:snapchat-user-field:v1' => 'Gdbots\Schemas\Forms\Field\SnapchatUserFieldV1',
     'gdbots:forms:field:statement-field:v1' => 'Gdbots\Schemas\Forms\Field\StatementFieldV1',
+    'gdbots:forms:field:tiktok-user-field:v1' => 'Gdbots\Schemas\Forms\Field\TiktokUserFieldV1',
+    'gdbots:forms:field:tiktok-video-field:v1' => 'Gdbots\Schemas\Forms\Field\TiktokVideoFieldV1',
     'gdbots:forms:field:twitter-user-field:v1' => 'Gdbots\Schemas\Forms\Field\TwitterUserFieldV1',
     'gdbots:forms:field:video-field:v1' => 'Gdbots\Schemas\Forms\Field\VideoFieldV1',
     'gdbots:forms:field:website-field:v1' => 'Gdbots\Schemas\Forms\Field\WebsiteFieldV1',

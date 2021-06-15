@@ -31,6 +31,8 @@ export default [
   'gdbots:forms:field:skype-user-field:v1',
   'gdbots:forms:field:snapchat-user-field:v1',
   'gdbots:forms:field:statement-field:v1',
+  'gdbots:forms:field:tiktok-user-field:v1',
+  'gdbots:forms:field:tiktok-video-field:v1',
   'gdbots:forms:field:twitter-user-field:v1',
   'gdbots:forms:field:video-field:v1',
   'gdbots:forms:field:website-field:v1',

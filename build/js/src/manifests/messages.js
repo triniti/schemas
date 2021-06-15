@@ -38,6 +38,8 @@ export default {
   'gdbots:forms:field:skype-user-field:v1': () => import('@gdbots/schemas/gdbots/forms/field/SkypeUserFieldV1'),
   'gdbots:forms:field:snapchat-user-field:v1': () => import('@gdbots/schemas/gdbots/forms/field/SnapchatUserFieldV1'),
   'gdbots:forms:field:statement-field:v1': () => import('@gdbots/schemas/gdbots/forms/field/StatementFieldV1'),
+  'gdbots:forms:field:tiktok-user-field:v1': () => import('@gdbots/schemas/gdbots/forms/field/TiktokUserFieldV1'),
+  'gdbots:forms:field:tiktok-video-field:v1': () => import('@gdbots/schemas/gdbots/forms/field/TiktokVideoFieldV1'),
   'gdbots:forms:field:twitter-user-field:v1': () => import('@gdbots/schemas/gdbots/forms/field/TwitterUserFieldV1'),
   'gdbots:forms:field:video-field:v1': () => import('@gdbots/schemas/gdbots/forms/field/VideoFieldV1'),
   'gdbots:forms:field:website-field:v1': () => import('@gdbots/schemas/gdbots/forms/field/WebsiteFieldV1'),

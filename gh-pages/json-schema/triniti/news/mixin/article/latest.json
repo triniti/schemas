@@ -213,7 +213,7 @@
     "twitter_publish_enabled": {
       "type": "boolean",
       "default": true,
-      "description": "Determines if auto post to Twitter should be enabled for this article on publish."
+      "description": "Determines if a twitter notification should be automatically created when this article is published."
     },
     "show_related_articles": {
       "type": "boolean",

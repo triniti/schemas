@@ -76,7 +76,8 @@
       </field>
       <field name="twitter_publish_enabled" type="boolean">
         <description>
-          Determines if auto post to Twitter should be enabled for this article on publish.
+          Determines if a twitter notification should be automatically created when
+          this article is published.
         </description>
         <default>true</default>
       </field>

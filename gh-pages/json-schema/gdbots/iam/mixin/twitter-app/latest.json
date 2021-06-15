@@ -140,7 +140,7 @@
     },
     "oauth_consumer_key": {
       "type": "string",
-      "pattern": "^[\\w]+$",
+      "pattern": "^[\\w-]+$",
       "description": "Equivalent to username of your Twitter developer app when making API requests. @link https://developer.twitter.com/en/docs/authentication/oauth-1-0a"
     },
     "oauth_consumer_secret": {
