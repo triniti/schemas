@@ -6,7 +6,7 @@ declare(strict_types=1);
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "gdbots:ncr:mixin:search-nodes-request:v1"
- * @link http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/search-nodes-request/1-0-3.json#
+ * @link http://schemas.triniti.io/json-schema/gdbots/ncr/mixin/search-nodes-request/1-0-4.json#
  */
 
 return [

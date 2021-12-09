@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v3.0.0
+__BREAKING CHANGES__
+
+* Require `php>=8.1`
+* Require php gdbots/schemas v3.x.
+
+
 ## v2.0.3
 * __Add Schemas:__
   * `triniti:notify:mixin:twitter-notification`

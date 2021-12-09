@@ -3,24 +3,13 @@ declare(strict_types=1);
 
 namespace Triniti\Schemas\OvpKaltura\Enum;
 
-use Gdbots\Pbj\Enum;
-
-/**
- * @method static EntryModerationStatus UNKNOWN()
- * @method static EntryModerationStatus PENDING_MODERATION()
- * @method static EntryModerationStatus APPROVED()
- * @method static EntryModerationStatus REJECTED()
- * @method static EntryModerationStatus DELETED()
- * @method static EntryModerationStatus FLAGGED_FOR_REVIEW()
- * @method static EntryModerationStatus AUTO_APPROVED()
- */
-final class EntryModerationStatus extends Enum
+enum EntryModerationStatus: string
 {
-    const UNKNOWN = 'unknown';
-    const PENDING_MODERATION = '1';
-    const APPROVED = '2';
-    const REJECTED = '3';
-    const DELETED = '4';
-    const FLAGGED_FOR_REVIEW = '5';
-    const AUTO_APPROVED = '6';
+    case UNKNOWN = 'unknown';
+    case PENDING_MODERATION = '1';
+    case APPROVED = '2';
+    case REJECTED = '3';
+    case DELETED = '4';
+    case FLAGGED_FOR_REVIEW = '5';
+    case AUTO_APPROVED = '6';
 }

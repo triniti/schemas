@@ -3,18 +3,10 @@ declare(strict_types=1);
 
 namespace Triniti\Schemas\Curator\Enum;
 
-use Gdbots\Pbj\Enum;
-
-/**
- * @method static SlotRendering UNKNOWN()
- * @method static SlotRendering SERVER()
- * @method static SlotRendering CLIENT()
- * @method static SlotRendering LAZY()
- */
-final class SlotRendering extends Enum
+enum SlotRendering: string
 {
-    const UNKNOWN = 'unknown';
-    const SERVER = 'server';
-    const CLIENT = 'client';
-    const LAZY = 'lazy';
+    case UNKNOWN = 'unknown';
+    case SERVER = 'server';
+    case CLIENT = 'client';
+    case LAZY = 'lazy';
 }

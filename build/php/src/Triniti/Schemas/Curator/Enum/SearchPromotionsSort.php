@@ -3,34 +3,18 @@ declare(strict_types=1);
 
 namespace Triniti\Schemas\Curator\Enum;
 
-use Gdbots\Pbj\Enum;
-
-/**
- * @method static SearchPromotionsSort UNKNOWN()
- * @method static SearchPromotionsSort RELEVANCE()
- * @method static SearchPromotionsSort CREATED_AT_ASC()
- * @method static SearchPromotionsSort CREATED_AT_DESC()
- * @method static SearchPromotionsSort UPDATED_AT_ASC()
- * @method static SearchPromotionsSort UPDATED_AT_DESC()
- * @method static SearchPromotionsSort PUBLISHED_AT_ASC()
- * @method static SearchPromotionsSort PUBLISHED_AT_DESC()
- * @method static SearchPromotionsSort TITLE_ASC()
- * @method static SearchPromotionsSort TITLE_DESC()
- * @method static SearchPromotionsSort PRIORITY_ASC()
- * @method static SearchPromotionsSort PRIORITY_DESC()
- */
-final class SearchPromotionsSort extends Enum
+enum SearchPromotionsSort: string
 {
-    const UNKNOWN = 'unknown';
-    const RELEVANCE = 'relevance';
-    const CREATED_AT_ASC = 'created-at-asc';
-    const CREATED_AT_DESC = 'created-at-desc';
-    const UPDATED_AT_ASC = 'updated-at-asc';
-    const UPDATED_AT_DESC = 'updated-at-desc';
-    const PUBLISHED_AT_ASC = 'published-at-asc';
-    const PUBLISHED_AT_DESC = 'published-at-desc';
-    const TITLE_ASC = 'title-asc';
-    const TITLE_DESC = 'title-desc';
-    const PRIORITY_ASC = 'priority-asc';
-    const PRIORITY_DESC = 'priority-desc';
+    case UNKNOWN = 'unknown';
+    case RELEVANCE = 'relevance';
+    case CREATED_AT_ASC = 'created-at-asc';
+    case CREATED_AT_DESC = 'created-at-desc';
+    case UPDATED_AT_ASC = 'updated-at-asc';
+    case UPDATED_AT_DESC = 'updated-at-desc';
+    case PUBLISHED_AT_ASC = 'published-at-asc';
+    case PUBLISHED_AT_DESC = 'published-at-desc';
+    case TITLE_ASC = 'title-asc';
+    case TITLE_DESC = 'title-desc';
+    case PRIORITY_ASC = 'priority-asc';
+    case PRIORITY_DESC = 'priority-desc';
 }

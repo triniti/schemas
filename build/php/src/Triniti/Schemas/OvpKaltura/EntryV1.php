@@ -76,10 +76,10 @@ final class EntryV1 extends AbstractMessage
                     ->asASet()
                     ->build(),
                 Fb::create('data_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('download_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('version', T\SmallIntType::create())
                     ->build(),
@@ -93,7 +93,7 @@ final class EntryV1 extends AbstractMessage
                     ->pattern('^[\w\.-]+$')
                     ->build(),
                 Fb::create('thumbnail_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('start_date', T\TimestampType::create())
                     ->useTypeDefault(false)

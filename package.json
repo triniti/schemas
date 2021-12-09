@@ -1,6 +1,6 @@
 {
   "name": "@triniti/schemas",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Schemas for common Triniti apps and components.",
   "repository": {
     "type": "git",
@@ -18,13 +18,13 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^2.1.1"
+    "@gdbots/schemas": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/register": "^7.10.5",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/register": "^7.16.0",
     "@gdbots/pbj": "^2.0.1",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-module-resolver": "^4.0.0",

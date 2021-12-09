@@ -77,11 +77,11 @@ final class SearchArticlesRequestV1 extends AbstractMessage
                     ])
                     ->build(),
                 Fb::create('ctx_ip', T\StringType::create())
-                    ->format(Format::IPV4())
+                    ->format(Format::IPV4)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ipv6', T\StringType::create())
-                    ->format(Format::IPV6())
+                    ->format(Format::IPV6)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ua', T\TextType::create())
@@ -110,6 +110,8 @@ final class SearchArticlesRequestV1 extends AbstractMessage
                     ->withDefault(1)
                     ->build(),
                 Fb::create('autocomplete', T\BooleanType::create())
+                    ->build(),
+                Fb::create('track_total_hits', T\BooleanType::create())
                     ->build(),
                 /*
                  * A cursor is a string (normally base64 encoded) which marks a specific item in a list of data.
@@ -156,7 +158,7 @@ final class SearchArticlesRequestV1 extends AbstractMessage
                 Fb::create('is_locked', T\TrinaryType::create())
                     ->build(),
                 Fb::create('sort', T\StringEnumType::create())
-                    ->withDefault(SearchArticlesSort::RELEVANCE())
+                    ->withDefault(SearchArticlesSort::RELEVANCE)
                     ->className(SearchArticlesSort::class)
                     ->build(),
                 /*
@@ -164,7 +166,7 @@ final class SearchArticlesRequestV1 extends AbstractMessage
                  * articles returned in the response. e.g. "home", "sports", "tv"
                  */
                 Fb::create('slotting_key', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('channel_ref', T\NodeRefType::create())
                     ->build(),

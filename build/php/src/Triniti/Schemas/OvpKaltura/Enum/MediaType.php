@@ -3,26 +3,14 @@ declare(strict_types=1);
 
 namespace Triniti\Schemas\OvpKaltura\Enum;
 
-use Gdbots\Pbj\Enum;
-
-/**
- * @method static MediaType UNKNOWN()
- * @method static MediaType VIDEO()
- * @method static MediaType IMAGE()
- * @method static MediaType AUDIO()
- * @method static MediaType LIVE_STREAM_FLASH()
- * @method static MediaType LIVE_STREAM_WINDOWS_MEDIA()
- * @method static MediaType LIVE_STREAM_REAL_MEDIA()
- * @method static MediaType LIVE_STREAM_QUICKTIME()
- */
-final class MediaType extends Enum
+enum MediaType: string
 {
-    const UNKNOWN = 'unknown';
-    const VIDEO = '1';
-    const IMAGE = '2';
-    const AUDIO = '5';
-    const LIVE_STREAM_FLASH = '201';
-    const LIVE_STREAM_WINDOWS_MEDIA = '202';
-    const LIVE_STREAM_REAL_MEDIA = '203';
-    const LIVE_STREAM_QUICKTIME = '204';
+    case UNKNOWN = 'unknown';
+    case VIDEO = '1';
+    case IMAGE = '2';
+    case AUDIO = '5';
+    case LIVE_STREAM_FLASH = '201';
+    case LIVE_STREAM_WINDOWS_MEDIA = '202';
+    case LIVE_STREAM_REAL_MEDIA = '203';
+    case LIVE_STREAM_QUICKTIME = '204';
 }

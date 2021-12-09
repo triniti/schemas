@@ -51,7 +51,7 @@ final class AssetId implements Identifier
         $this->id = sprintf('%s_%s_%s_%s', $type, $ext, $this->date, $this->uuid);
     }
 
-    public static function fromString(string $string): self
+    public static function fromString(string $string): static
     {
         if (!preg_match(self::VALID_PATTERN, $string, $matches)) {
             throw new AssertionFailed(
@@ -159,7 +159,7 @@ final class AssetId implements Identifier
         return $this->toString();
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->toString();
     }

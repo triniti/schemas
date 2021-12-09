@@ -66,11 +66,11 @@ final class AssetPatchedV1 extends AbstractMessage
                     ])
                     ->build(),
                 Fb::create('ctx_ip', T\StringType::create())
-                    ->format(Format::IPV4())
+                    ->format(Format::IPV4)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ipv6', T\StringType::create())
-                    ->format(Format::IPV6())
+                    ->format(Format::IPV6)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ua', T\TextType::create())
@@ -102,12 +102,12 @@ final class AssetPatchedV1 extends AbstractMessage
                 Fb::create('credit', T\StringType::create())
                     ->build(),
                 Fb::create('credit_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('cta_text', T\StringType::create())
                     ->build(),
                 Fb::create('cta_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('description', T\TextType::create())
                     ->maxLength(5000)

@@ -22,7 +22,7 @@ class SchemaTest extends TestCase
             $this->assertInstanceOf(MessageRef::class, $ref);
             $this->assertSame($ref->toString(), $message->generateMessageRef('tag')->toString());
             $this->assertInstanceOf(NodeRef::class, $message->generateNodeRef());
-            $this->assertTrue(ArrayUtil::isAssoc($message->getUriTemplateVars()));
+            $this->assertTrue(is_array($message->getUriTemplateVars()));
         }
     }
 }

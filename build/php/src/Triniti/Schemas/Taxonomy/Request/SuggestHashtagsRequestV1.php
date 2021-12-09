@@ -71,11 +71,11 @@ final class SuggestHashtagsRequestV1 extends AbstractMessage
                     ])
                     ->build(),
                 Fb::create('ctx_ip', T\StringType::create())
-                    ->format(Format::IPV4())
+                    ->format(Format::IPV4)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ipv6', T\StringType::create())
-                    ->format(Format::IPV6())
+                    ->format(Format::IPV6)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ua', T\TextType::create())
@@ -91,7 +91,7 @@ final class SuggestHashtagsRequestV1 extends AbstractMessage
                     ->pattern('^[\w\.-]+$')
                     ->build(),
                 Fb::create('prefix', T\StringType::create())
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
                 /*
                  * The number of results to return.

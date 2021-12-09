@@ -73,7 +73,7 @@ final class FlavorV1 extends AbstractMessage
                 Fb::create('description', T\TextType::create())
                     ->build(),
                 Fb::create('url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
             ],
             self::MIXINS
