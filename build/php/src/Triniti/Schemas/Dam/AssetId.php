@@ -70,14 +70,14 @@ final class AssetId implements Identifier
     }
 
     /**
-     * @param string             $type The primary type for this asset. e.g. image, video, audio.
-     * @param string             $ext  Extension of the asset.  jpg, gif, mp4, txt, pdf
-     * @param \DateTimeInterface $date
-     * @param UuidIdentifier     $uuid Uuid for the asset, if not supplied a v4 uuid will be created.
+     * @param string                  $type The primary type for this asset. e.g. image, video, audio.
+     * @param string                  $ext  Extension of the asset.  jpg, gif, mp4, txt, pdf
+     * @param \DateTimeInterface|null $date
+     * @param UuidIdentifier|null     $uuid Uuid for the asset, if not supplied a v4 uuid will be created.
      *
      * @return self
      *
-     * @throws AssertionFailed
+     * @throws \Exception
      */
     public static function create(
         string $type,
@@ -114,12 +114,7 @@ final class AssetId implements Identifier
         return $this->ext;
     }
 
-    /**
-     * @param bool $asObject Returns the date as a \DateTimeInterface instead of Ymd string.
-     *
-     * @return \DateTimeInterface|string
-     */
-    public function getDate(bool $asObject = false)
+    public function getDate(bool $asObject = false): \DateTimeInterface|string
     {
         if ($asObject) {
             return \DateTimeImmutable::createFromFormat('!Ymd', $this->date, new \DateTimeZone('UTC'));
@@ -128,12 +123,7 @@ final class AssetId implements Identifier
         return $this->date;
     }
 
-    /**
-     * @param bool $asObject Returns the uuid as a UuidIdentifier instead of formatted uuid string (all lowercase, no dashes)
-     *
-     * @return UuidIdentifier|string
-     */
-    public function getUuid(bool $asObject = false)
+    public function getUuid(bool $asObject = false): UuidIdentifier|string
     {
         if ($asObject) {
             $uuid = [
@@ -159,7 +149,7 @@ final class AssetId implements Identifier
         return $this->toString();
     }
 
-    public function jsonSerialize(): mixed
+    public function jsonSerialize(): string
     {
         return $this->toString();
     }
@@ -179,8 +169,8 @@ final class AssetId implements Identifier
      * would return:
      *  'image/27/250x/2015/12/01/27ca03c7b490460992a78692aca42b10_n.jpg'
      *
-     * @param string $version An identifier for the version, e.g. "o" for original or "250x" for a thumbnail size.
-     * @param string $quality If applicable, a quality setting like "n" for normal or "high", "low", etc.
+     * @param string|null $version An identifier for the version, e.g. "o" for original or "250x" for a thumbnail size.
+     * @param string|null $quality If applicable, a quality setting like "n" for normal or "high", "low", etc.
      *
      * @return string
      */

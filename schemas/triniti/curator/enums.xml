@@ -9,6 +9,7 @@
       <option key="ARTICLE" value="article"/>
       <option key="AUDIO" value="audio"/>
       <option key="CATEGORY" value="category"/>
+      <option key="FORM" value="form"/>
       <option key="GALLERY" value="gallery"/>
       <option key="IMAGE" value="image"/>
       <option key="LINK" value="link"/>

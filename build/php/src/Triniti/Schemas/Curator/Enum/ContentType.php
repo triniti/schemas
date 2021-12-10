@@ -9,6 +9,7 @@ enum ContentType: string
     case ARTICLE = 'article';
     case AUDIO = 'audio';
     case CATEGORY = 'category';
+    case FORM = 'form';
     case GALLERY = 'gallery';
     case IMAGE = 'image';
     case LINK = 'link';

@@ -8,6 +8,7 @@ ContentType.configure({
   ARTICLE: 'article',
   AUDIO: 'audio',
   CATEGORY: 'category',
+  FORM: 'form',
   GALLERY: 'gallery',
   IMAGE: 'image',
   LINK: 'link',
