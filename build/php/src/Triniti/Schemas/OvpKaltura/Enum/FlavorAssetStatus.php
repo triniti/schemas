@@ -3,34 +3,18 @@ declare(strict_types=1);
 
 namespace Triniti\Schemas\OvpKaltura\Enum;
 
-use Gdbots\Pbj\Enum;
-
-/**
- * @method static FlavorAssetStatus UNKNOWN()
- * @method static FlavorAssetStatus ERROR()
- * @method static FlavorAssetStatus QUEUED()
- * @method static FlavorAssetStatus CONVERTING()
- * @method static FlavorAssetStatus READY()
- * @method static FlavorAssetStatus DELETED()
- * @method static FlavorAssetStatus NOT_APPLICABLE()
- * @method static FlavorAssetStatus TEMP()
- * @method static FlavorAssetStatus WAIT_FOR_CONVERT()
- * @method static FlavorAssetStatus IMPORTING()
- * @method static FlavorAssetStatus VALIDATING()
- * @method static FlavorAssetStatus EXPORTING()
- */
-final class FlavorAssetStatus extends Enum
+enum FlavorAssetStatus: string
 {
-    const UNKNOWN = 'unknown';
-    const ERROR = '-1';
-    const QUEUED = '0';
-    const CONVERTING = '1';
-    const READY = '2';
-    const DELETED = '3';
-    const NOT_APPLICABLE = '4';
-    const TEMP = '5';
-    const WAIT_FOR_CONVERT = '6';
-    const IMPORTING = '7';
-    const VALIDATING = '8';
-    const EXPORTING = '9';
+    case UNKNOWN = 'unknown';
+    case ERROR = '-1';
+    case QUEUED = '0';
+    case CONVERTING = '1';
+    case READY = '2';
+    case DELETED = '3';
+    case NOT_APPLICABLE = '4';
+    case TEMP = '5';
+    case WAIT_FOR_CONVERT = '6';
+    case IMPORTING = '7';
+    case VALIDATING = '8';
+    case EXPORTING = '9';
 }

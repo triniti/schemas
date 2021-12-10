@@ -44,11 +44,11 @@ final class RenderContextV1 extends AbstractMessage
                  * web, amp, apple-news, facebook-instant-articles.
                  */
                 Fb::create('platform', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->withDefault("web")
                     ->build(),
                 Fb::create('device_view', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('viewer_country', T\StringType::create())
                     ->pattern('^[A-Z]{2}$')
@@ -58,7 +58,7 @@ final class RenderContextV1 extends AbstractMessage
                  * desktop-home-sidebar or smartphone-global-html-head.
                  */
                 Fb::create('promotion_slot', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * Refers to the location on the screen or application that
@@ -73,7 +73,7 @@ final class RenderContextV1 extends AbstractMessage
                  * The format to be used for rendering, e.g. "html" or "json".
                  */
                 Fb::create('format', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('booleans', T\BooleanType::create())
                     ->asAMap()

@@ -3,48 +3,25 @@ declare(strict_types=1);
 
 namespace Triniti\Schemas\Common\Enum;
 
-use Gdbots\Pbj\Enum;
-
-/**
- * @method static AdSize UNKNOWN()
- * @method static AdSize MEDIUM_RECTANGLE()
- * @method static AdSize MEDIUM_RECTANGLE_FLEX()
- * @method static AdSize LARGE_RECTANGLE()
- * @method static AdSize SQUARE()
- * @method static AdSize SMALL_SQUARE()
- * @method static AdSize LEADERBOARD()
- * @method static AdSize LEADERBOARD_FLEX()
- * @method static AdSize LARGE_LEADERBOARD()
- * @method static AdSize HALF_PAGE()
- * @method static AdSize SKYSCRAPER()
- * @method static AdSize WIDE_SKYSCRAPER()
- * @method static AdSize BANNER()
- * @method static AdSize HALF_BANNER()
- * @method static AdSize PORTRAIT()
- * @method static AdSize BILLBOARD()
- * @method static AdSize SKIN()
- * @method static AdSize INSTREAM()
- * @method static AdSize OUTSTREAM()
- */
-final class AdSize extends Enum
+enum AdSize: string
 {
-    const UNKNOWN = 'unknown';
-    const MEDIUM_RECTANGLE = 'medium_rectangle';
-    const MEDIUM_RECTANGLE_FLEX = 'medium_rectangle_flex';
-    const LARGE_RECTANGLE = 'large_rectangle';
-    const SQUARE = 'square';
-    const SMALL_SQUARE = 'small_square';
-    const LEADERBOARD = 'leaderboard';
-    const LEADERBOARD_FLEX = 'leaderboard_flex';
-    const LARGE_LEADERBOARD = 'large_leaderboard';
-    const HALF_PAGE = 'half_page';
-    const SKYSCRAPER = 'skyscraper';
-    const WIDE_SKYSCRAPER = 'wide_skyscraper';
-    const BANNER = 'banner';
-    const HALF_BANNER = 'half_banner';
-    const PORTRAIT = 'portrait';
-    const BILLBOARD = 'billboard';
-    const SKIN = 'skin';
-    const INSTREAM = 'instream';
-    const OUTSTREAM = 'outstream';
+    case UNKNOWN = 'unknown';
+    case MEDIUM_RECTANGLE = 'medium_rectangle';
+    case MEDIUM_RECTANGLE_FLEX = 'medium_rectangle_flex';
+    case LARGE_RECTANGLE = 'large_rectangle';
+    case SQUARE = 'square';
+    case SMALL_SQUARE = 'small_square';
+    case LEADERBOARD = 'leaderboard';
+    case LEADERBOARD_FLEX = 'leaderboard_flex';
+    case LARGE_LEADERBOARD = 'large_leaderboard';
+    case HALF_PAGE = 'half_page';
+    case SKYSCRAPER = 'skyscraper';
+    case WIDE_SKYSCRAPER = 'wide_skyscraper';
+    case BANNER = 'banner';
+    case HALF_BANNER = 'half_banner';
+    case PORTRAIT = 'portrait';
+    case BILLBOARD = 'billboard';
+    case SKIN = 'skin';
+    case INSTREAM = 'instream';
+    case OUTSTREAM = 'outstream';
 }

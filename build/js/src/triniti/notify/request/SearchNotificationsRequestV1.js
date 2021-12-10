@@ -96,6 +96,8 @@ export default class SearchNotificationsRequestV1 extends Message {
           .build(),
         Fb.create('autocomplete', T.BooleanType.create())
           .build(),
+        Fb.create('track_total_hits', T.BooleanType.create())
+          .build(),
         /*
          * A cursor is a string (normally base64 encoded) which marks a specific item in a list of data.
          * When cursor is present it should be used instead of "page".

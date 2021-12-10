@@ -87,7 +87,7 @@ final class GetUploadUrlsResponseV1 extends AbstractMessage
                  */
                 Fb::create('s3_presigned_urls', T\TextType::create())
                     ->asAMap()
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
             ],
             self::MIXINS

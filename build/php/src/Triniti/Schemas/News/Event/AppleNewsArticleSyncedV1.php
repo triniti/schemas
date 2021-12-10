@@ -64,11 +64,11 @@ final class AppleNewsArticleSyncedV1 extends AbstractMessage
                     ])
                     ->build(),
                 Fb::create('ctx_ip', T\StringType::create())
-                    ->format(Format::IPV4())
+                    ->format(Format::IPV4)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ipv6', T\StringType::create())
-                    ->format(Format::IPV6())
+                    ->format(Format::IPV6)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ua', T\TextType::create())
@@ -110,7 +110,7 @@ final class AppleNewsArticleSyncedV1 extends AbstractMessage
                     ->pattern('^[\w\/\.\\\:=+-]+$')
                     ->build(),
                 Fb::create('apple_news_share_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
             ],
             self::MIXINS

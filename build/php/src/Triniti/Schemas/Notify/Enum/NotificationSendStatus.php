@@ -3,22 +3,12 @@ declare(strict_types=1);
 
 namespace Triniti\Schemas\Notify\Enum;
 
-use Gdbots\Pbj\Enum;
-
-/**
- * @method static NotificationSendStatus UNKNOWN()
- * @method static NotificationSendStatus DRAFT()
- * @method static NotificationSendStatus SCHEDULED()
- * @method static NotificationSendStatus SENT()
- * @method static NotificationSendStatus CANCELED()
- * @method static NotificationSendStatus FAILED()
- */
-final class NotificationSendStatus extends Enum
+enum NotificationSendStatus: string
 {
-    const UNKNOWN = 'unknown';
-    const DRAFT = 'draft';
-    const SCHEDULED = 'scheduled';
-    const SENT = 'sent';
-    const CANCELED = 'canceled';
-    const FAILED = 'failed';
+    case UNKNOWN = 'unknown';
+    case DRAFT = 'draft';
+    case SCHEDULED = 'scheduled';
+    case SENT = 'sent';
+    case CANCELED = 'canceled';
+    case FAILED = 'failed';
 }

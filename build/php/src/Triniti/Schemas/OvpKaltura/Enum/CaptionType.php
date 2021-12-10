@@ -3,20 +3,11 @@ declare(strict_types=1);
 
 namespace Triniti\Schemas\OvpKaltura\Enum;
 
-use Gdbots\Pbj\Enum;
-
-/**
- * @method static CaptionType UNKNOWN()
- * @method static CaptionType SRT()
- * @method static CaptionType DFXP()
- * @method static CaptionType WEBVTT()
- * @method static CaptionType CAP()
- */
-final class CaptionType extends Enum
+enum CaptionType: string
 {
-    const UNKNOWN = 'unknown';
-    const SRT = '1';
-    const DFXP = '2';
-    const WEBVTT = '3';
-    const CAP = '4';
+    case UNKNOWN = 'unknown';
+    case SRT = '1';
+    case DFXP = '2';
+    case WEBVTT = '3';
+    case CAP = '4';
 }

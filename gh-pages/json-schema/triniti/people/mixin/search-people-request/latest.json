@@ -171,6 +171,9 @@
     "autocomplete": {
       "type": "boolean"
     },
+    "track_total_hits": {
+      "type": "boolean"
+    },
     "cursor": {
       "type": "string",
       "minLength": 0,

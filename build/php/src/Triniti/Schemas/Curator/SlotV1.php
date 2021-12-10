@@ -28,7 +28,7 @@ final class SlotV1 extends AbstractMessage
                  * e.g. "sidebar", "html-head" or "jumbotron-top".
                  */
                 Fb::create('name', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * A reference to the widget this slot will render.
@@ -36,7 +36,7 @@ final class SlotV1 extends AbstractMessage
                 Fb::create('widget_ref', T\NodeRefType::create())
                     ->build(),
                 Fb::create('rendering', T\StringEnumType::create())
-                    ->withDefault(SlotRendering::LAZY())
+                    ->withDefault(SlotRendering::LAZY)
                     ->className(SlotRendering::class)
                     ->build(),
             ],

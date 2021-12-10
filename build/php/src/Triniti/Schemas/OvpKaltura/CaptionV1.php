@@ -58,7 +58,7 @@ final class CaptionV1 extends AbstractMessage
                 Fb::create('accuracy', T\SmallIntType::create())
                     ->build(),
                 Fb::create('url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('status', T\StringEnumType::create())
                     ->className(CaptionAssetStatus::class)
