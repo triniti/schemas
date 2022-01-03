@@ -1,9 +1,9 @@
 // @link http://schemas.triniti.io/json-schema/triniti/notify/notifier-result/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Message from '@gdbots/pbj/Message';
-import MessageRef from '@gdbots/pbj/well-known/MessageRef';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Message from '@gdbots/pbj/Message.js';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class NotifierResultV1 extends Message {
   /**

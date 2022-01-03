@@ -1,16 +1,16 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.kaltura/entry/1-0-0.json#
-import DisplayInSearchType from '@triniti/schemas/triniti/ovp.kaltura/enums/DisplayInSearchType';
-import EntryModerationStatus from '@triniti/schemas/triniti/ovp.kaltura/enums/EntryModerationStatus';
-import EntryStatus from '@triniti/schemas/triniti/ovp.kaltura/enums/EntryStatus';
-import EntryType from '@triniti/schemas/triniti/ovp.kaltura/enums/EntryType';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import MediaType from '@triniti/schemas/triniti/ovp.kaltura/enums/MediaType';
-import Message from '@gdbots/pbj/Message';
-import MessageRef from '@gdbots/pbj/well-known/MessageRef';
-import Schema from '@gdbots/pbj/Schema';
-import SourceType from '@triniti/schemas/triniti/ovp.kaltura/enums/SourceType';
-import T from '@gdbots/pbj/types';
+import DisplayInSearchType from '@triniti/schemas/triniti/ovp.kaltura/enums/DisplayInSearchType.js';
+import EntryModerationStatus from '@triniti/schemas/triniti/ovp.kaltura/enums/EntryModerationStatus.js';
+import EntryStatus from '@triniti/schemas/triniti/ovp.kaltura/enums/EntryStatus.js';
+import EntryType from '@triniti/schemas/triniti/ovp.kaltura/enums/EntryType.js';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import MediaType from '@triniti/schemas/triniti/ovp.kaltura/enums/MediaType.js';
+import Message from '@gdbots/pbj/Message.js';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import SourceType from '@triniti/schemas/triniti/ovp.kaltura/enums/SourceType.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class EntryV1 extends Message {
   /**

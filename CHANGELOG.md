@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v3.0.1
+__BREAKING CHANGES FOR JAVASCRIPT__
+
+We missed updating the npm gdbots/pbj lib in the last release, luckily nothing is using 3.x in js at the time of this release so we're "safe".
+
+* Use node v14.13.1.
+* Use npm gdbots/pbj 3.x.
+
+
 ## v3.0.0
 __BREAKING CHANGES__
 

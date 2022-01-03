@@ -65,7 +65,7 @@ public function getUriTemplateVars(): array
       <insertion-points>
         <imports>
           <![CDATA[
-import MessageRef from '@gdbots/pbj/well-known/MessageRef';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef.js';
             ]]>
         </imports>
         <methods>

@@ -11,7 +11,7 @@
           <class-name>RedirectId::class</class-name>
         </php-options>
         <js-options>
-          <imports>import RedirectId from '@triniti/schemas/triniti/sys/RedirectId';</imports>
+          <imports>import RedirectId from '@triniti/schemas/triniti/sys/RedirectId.js';</imports>
           <class-proto>RedirectId</class-proto>
         </js-options>
       </field>

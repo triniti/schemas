@@ -1,11 +1,11 @@
 // @link http://schemas.triniti.io/json-schema/triniti/dam/request/get-upload-urls-response/1-0-0.json#
-import AssetId from '@triniti/schemas/triniti/dam/AssetId';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
+import AssetId from '@triniti/schemas/triniti/dam/AssetId.js';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class GetUploadUrlsResponseV1 extends Message {
   /**

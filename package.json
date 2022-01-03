@@ -1,6 +1,6 @@
 {
   "name": "@triniti/schemas",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Schemas for common Triniti apps and components.",
   "repository": {
     "type": "git",
@@ -13,26 +13,23 @@
     "build:prepub": "cp -rf ./{*.md,package.json} ./build/js/dist",
     "clean": "rimraf ./build/js/dist",
     "pub": "npm run build && cd ./build/js/dist && npm publish --access public",
-    "test": "BABEL_ENV=cjs tape -r ./build/js/tests/bootstrap.js './build/js/tests/**/*.test.js*' | faucet"
+    "test": "tape -r ./build/js/tests/bootstrap.cjs './build/js/tests/**/*.test.js*' | faucet"
   },
-  "module": "./index.js",
-  "jsnext:main": "./index.js",
+  "type": "module",
+  "main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^3.0.0"
+    "@gdbots/schemas": "^3.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@babel/register": "^7.16.0",
-    "@gdbots/pbj": "^2.0.1",
-    "babel-plugin-lodash": "^3.3.4",
-    "babel-plugin-module-resolver": "^4.0.0",
+    "@gdbots/pbj": "^3.0.0",
+    "@triniti/schemas": "file:./build/js/src/",
     "faucet": "^0.0.1",
-    "lodash": "^4.17.19",
     "lodash-es": "^4.17.15",
     "md5": "^2.2.1",
-    "moment": "^2.27.0",
     "rimraf": "^3.0.2",
     "tape": "^5.0.1",
     "utf8": "^3.0.0",

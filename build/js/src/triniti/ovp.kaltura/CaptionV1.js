@@ -1,12 +1,12 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.kaltura/caption/1-0-0.json#
-import CaptionAssetStatus from '@triniti/schemas/triniti/ovp.kaltura/enums/CaptionAssetStatus';
-import CaptionType from '@triniti/schemas/triniti/ovp.kaltura/enums/CaptionType';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import Message from '@gdbots/pbj/Message';
-import MessageRef from '@gdbots/pbj/well-known/MessageRef';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
+import CaptionAssetStatus from '@triniti/schemas/triniti/ovp.kaltura/enums/CaptionAssetStatus.js';
+import CaptionType from '@triniti/schemas/triniti/ovp.kaltura/enums/CaptionType.js';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import Message from '@gdbots/pbj/Message.js';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class CaptionV1 extends Message {
   /**

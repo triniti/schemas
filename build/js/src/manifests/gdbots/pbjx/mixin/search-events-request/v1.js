@@ -3,7 +3,7 @@
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "gdbots:pbjx:mixin:search-events-request:v1"
- * @link http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/search-events-request/1-0-0.json#
+ * @link http://schemas.triniti.io/json-schema/gdbots/pbjx/mixin/search-events-request/1-0-1.json#
  */
 
 export default [

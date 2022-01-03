@@ -1,12 +1,12 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp/command/update-transcoding-status/1-0-0.json#
-import Code from '@gdbots/schemas/gdbots/pbjx/enums/Code';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TranscodingStatus from '@triniti/schemas/triniti/ovp/enums/TranscodingStatus';
+import Code from '@gdbots/schemas/gdbots/pbjx/enums/Code.js';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TranscodingStatus from '@triniti/schemas/triniti/ovp/enums/TranscodingStatus.js';
 
 export default class UpdateTranscodingStatusV1 extends Message {
   /**

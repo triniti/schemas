@@ -1,4 +1,4 @@
-import Enum from '@gdbots/pbj/Enum';
+import Enum from '@gdbots/pbj/Enum.js';
 
 export default class SearchPromotionsSort extends Enum {
 }

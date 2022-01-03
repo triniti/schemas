@@ -1,6 +1,6 @@
-import AssertionFailed from '@gdbots/pbj/exceptions/AssertionFailed';
-import Identifier from '@gdbots/pbj/well-known/Identifier';
-import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier';
+import AssertionFailed from '@gdbots/pbj/exceptions/AssertionFailed.js';
+import Identifier from '@gdbots/pbj/well-known/Identifier.js';
+import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier.js';
 
 /**
  * Regular expression pattern for matching a valid AssetId string.

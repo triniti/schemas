@@ -1,6 +1,6 @@
 import base64 from 'base-64';
 import utf8 from 'utf8';
-import Identifier from '@gdbots/pbj/well-known/Identifier';
+import Identifier from '@gdbots/pbj/well-known/Identifier.js';
 
 /**
  * Encodes the input string to URL safe base64 encoding

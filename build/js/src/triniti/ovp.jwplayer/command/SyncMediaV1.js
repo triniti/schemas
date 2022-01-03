@@ -1,10 +1,10 @@
 // @link http://schemas.triniti.io/json-schema/triniti/ovp.jwplayer/command/sync-media/1-0-1.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class SyncMediaV1 extends Message {
   /**

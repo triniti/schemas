@@ -1,12 +1,12 @@
 // @link http://schemas.triniti.io/json-schema/triniti/notify/event/notification-sent/1-0-0.json#
-import DayOfWeek from '@gdbots/schemas/gdbots/common/enums/DayOfWeek';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import Month from '@gdbots/schemas/gdbots/common/enums/Month';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
+import DayOfWeek from '@gdbots/schemas/gdbots/common/enums/DayOfWeek.js';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import Month from '@gdbots/schemas/gdbots/common/enums/Month.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class NotificationSentV1 extends Message {
   /**

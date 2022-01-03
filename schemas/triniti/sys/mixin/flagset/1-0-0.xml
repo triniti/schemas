@@ -11,7 +11,7 @@
           <class-name>FlagsetId::class</class-name>
         </php-options>
         <js-options>
-          <imports>import FlagsetId from '@triniti/schemas/triniti/sys/FlagsetId';</imports>
+          <imports>import FlagsetId from '@triniti/schemas/triniti/sys/FlagsetId.js';</imports>
           <class-proto>FlagsetId</class-proto>
         </js-options>
       </field>

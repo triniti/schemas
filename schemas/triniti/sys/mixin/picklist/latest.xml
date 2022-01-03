@@ -11,7 +11,7 @@
           <class-name>PicklistId::class</class-name>
         </php-options>
         <js-options>
-          <imports>import PicklistId from '@triniti/schemas/triniti/sys/PicklistId';</imports>
+          <imports>import PicklistId from '@triniti/schemas/triniti/sys/PicklistId.js';</imports>
           <class-proto>PicklistId</class-proto>
         </js-options>
       </field>

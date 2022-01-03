@@ -16,7 +16,7 @@
           <class-name>AssetId::class</class-name>
         </php-options>
         <js-options>
-          <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId';</imports>
+          <imports>import AssetId from '@triniti/schemas/triniti/dam/AssetId.js';</imports>
           <class-proto>AssetId</class-proto>
         </js-options>
       </field>

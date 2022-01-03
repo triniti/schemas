@@ -1,9 +1,9 @@
 // @link http://schemas.triniti.io/json-schema/triniti/curator/request/search-teasers-response/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class SearchTeasersResponseV1 extends Message {
   /**
