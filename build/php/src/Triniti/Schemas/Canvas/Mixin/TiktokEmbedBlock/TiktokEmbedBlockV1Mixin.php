@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-1.json#
 namespace Triniti\Schemas\Canvas\Mixin\TiktokEmbedBlock;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -14,7 +14,7 @@ final class TiktokEmbedBlockV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:canvas:mixin:tiktok-embed-block:1-0-0');
+        return SchemaId::fromString('pbj:triniti:canvas:mixin:tiktok-embed-block:1-0-1');
     }
 
     /**
@@ -24,6 +24,10 @@ final class TiktokEmbedBlockV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('tiktok_id', T\StringType::create())
+                ->required()
+                ->pattern('^\w+$')
+                ->build(),
+            Fb::create('user_name', T\StringType::create())
                 ->required()
                 ->pattern('^\w+$')
                 ->build(),

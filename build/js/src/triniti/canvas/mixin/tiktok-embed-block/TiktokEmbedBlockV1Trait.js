@@ -7,6 +7,7 @@ export default function TiktokEmbedBlockV1Trait(m) {
       return {
         etag: this.get('etag'),
         tiktok_id: this.get('tiktok_id'),
+        user_name: this.get('user_name'),
       };
     }
   });
