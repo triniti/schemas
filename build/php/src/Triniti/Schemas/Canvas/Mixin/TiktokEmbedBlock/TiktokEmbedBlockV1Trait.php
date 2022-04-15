@@ -18,6 +18,7 @@ trait TiktokEmbedBlockV1Trait
         return [
             'etag' => $this->get('etag'),
             'tiktok_id' => $this->get('tiktok_id'),
+            'user_name' => $this->get('user_name'),
         ];
     }
 }
