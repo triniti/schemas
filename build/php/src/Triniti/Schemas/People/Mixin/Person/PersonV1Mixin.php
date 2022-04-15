@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.triniti.io/json-schema/triniti/people/mixin/person/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/people/mixin/person/1-0-1.json#
 namespace Triniti\Schemas\People\Mixin\Person;
 
 use Gdbots\Pbj\AbstractMixin;
@@ -17,7 +17,7 @@ final class PersonV1Mixin extends AbstractMixin
      */
     public function getId()
     {
-        return SchemaId::fromString('pbj:triniti:people:mixin:person:1-0-0');
+        return SchemaId::fromString('pbj:triniti:people:mixin:person:1-0-1');
     }
 
     /**
@@ -31,6 +31,8 @@ final class PersonV1Mixin extends AbstractMixin
                 ->withDefault(function() { return PersonId::generate(); })
                 ->className(PersonId::class)
                 ->overridable(true)
+                ->build(),
+            Fb::create('display_title', T\StringType::create())
                 ->build(),
             /*
              * A reference to the image asset to use for widgets, sharing, seo.
