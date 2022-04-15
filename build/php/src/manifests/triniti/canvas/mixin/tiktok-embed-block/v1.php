@@ -6,7 +6,7 @@ declare(strict_types=1);
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "triniti:canvas:mixin:tiktok-embed-block:v1"
- * @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-0.json#
+ * @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-1.json#
  */
 
 return [

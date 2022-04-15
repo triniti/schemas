@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v3.0.2
+* __Modify Schemas:__
+  * `triniti:canvas:mixin:tiktok-embed-block` patch revision `1-0-1`
+    * Add `user_name` string field.
+  * `triniti:people:mixin:person` patch revision `1-0-1`
+    * Add `display_title` string field.
+
+
 ## v3.0.1
 __BREAKING CHANGES FOR JAVASCRIPT__
 

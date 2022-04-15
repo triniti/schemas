@@ -184,6 +184,9 @@
       "anyOf": [
         {
           "$ref": "http://schemas.triniti.io/json-schema/triniti/people/mixin/person/1-0-0.json#"
+        },
+        {
+          "$ref": "http://schemas.triniti.io/json-schema/triniti/people/mixin/person/1-0-1.json#"
         }
       ]
     }

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/people/mixin/person/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/people/mixin/person/1-0-1.json#
 namespace Triniti\Schemas\People\Mixin\Person;
 
 use Gdbots\Pbj\Schema;

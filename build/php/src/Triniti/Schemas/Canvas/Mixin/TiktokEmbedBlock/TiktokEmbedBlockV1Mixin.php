@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-1.json#
 namespace Triniti\Schemas\Canvas\Mixin\TiktokEmbedBlock;
 
 use Gdbots\Pbj\Schema;
@@ -17,6 +17,7 @@ trait TiktokEmbedBlockV1Mixin
         return [
             'etag' => $this->fget('etag'),
             'tiktok_id' => $this->fget('tiktok_id'),
+            'user_name' => $this->fget('user_name'),
         ];
     }
 }
