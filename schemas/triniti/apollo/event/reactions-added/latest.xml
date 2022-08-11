@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:apollo:event:reactions-added:1-0-0">
+    <fields>
+      <field name="node_ref" type="node-ref" required="true"/>
+      <field name="reactions" type="string" format="slug" rule="set">
+        <description>
+          Reactions that are to be added.
+        </description>
+      </field>
+      <field name="s256" type="tiny-int">
+        <description>
+          "s256" means shard 256. Used to distribute read/write from storage and speed up
+          replay/reindex processes. It can also be used to distribute workload in front end
+          user interfaces or notifications (like isles in a grocery store).
+          This value should NOT change once set.
+        </description>
+      </field>
+      <field name="s32" type="tiny-int">
+        <description>
+          "s32" means shard 32. See field "s256" for explanation.
+        </description>
+      </field>
+      <field name="s16" type="tiny-int">
+        <description>
+          "s16" means shard 16. See field "s256" for explanation.
+        </description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
+      <curie-major>gdbots:analytics:mixin:tracked-message:v1</curie-major>
+      <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:ip-to-geo:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:time-parting:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:time-sampling:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:ua-parser:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:utm:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

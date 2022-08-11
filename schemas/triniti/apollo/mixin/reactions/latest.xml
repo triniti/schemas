@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:triniti:apollo:mixin:reactions:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
+    <fields>
+      <!--
+        Reaction types with slug format
+      -->
+      <field name="love" type="int"/>
+      <field name="haha" type="int"/>
+      <field name="wow" type="int"/>
+      <field name="wtf" type="int"/>
+      <field name="trash" type="int"/>
+      <field name="sad" type="int"/>
+    </fields>
+
+    <php-options>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+public function getUriTemplateVars(): array
+{
+    return [
+        '_id' => $this->fget('_id'),
+    ];
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars() {
+  return {
+    _id: `${this.get('_id', '')}`,
+  };
+}
+          ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
+  </schema>
+</pbj-schema>
