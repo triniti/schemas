@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v3.0.3
+* __Add Schemas:__
+  * `triniti:apollo:command:add-reactions`
+  * `triniti:apollo:event:reactions-added`
+  * `triniti:apollo:mixin:reactions`
+
+
 ## v3.0.2
 * __Modify Schemas:__
   * `triniti:canvas:mixin:tiktok-embed-block` patch revision `1-0-1`
