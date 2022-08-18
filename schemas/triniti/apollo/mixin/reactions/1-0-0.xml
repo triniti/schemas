@@ -5,15 +5,12 @@
 
   <schema id="pbj:triniti:apollo:mixin:reactions:1-0-0" mixin="true" extends="gdbots:ncr:mixin:node:v1">
     <fields>
-      <!--
-        Reaction types with slug format
-      -->
-      <field name="love" type="int"/>
-      <field name="haha" type="int"/>
-      <field name="wow" type="int"/>
-      <field name="wtf" type="int"/>
-      <field name="trash" type="int"/>
-      <field name="sad" type="int"/>
+      <field name="reactions" type="int" rule="map">
+        <description>
+          Count for each reactions type keyed with slug format.
+        </description>
+      </field>
+      <field name="target" type="string" format="slug"/>
     </fields>
 
     <php-options>

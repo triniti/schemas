@@ -270,8 +270,7 @@
         }
       ],
       "uniqueItems": true,
-      "additionalProperties": false,
-      "description": "Reactions that are to be added."
+      "additionalProperties": false
     }
   },
   "required": [

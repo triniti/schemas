@@ -6,11 +6,7 @@
   <schema id="pbj:triniti:apollo:command:add-reactions:1-0-0">
     <fields>
       <field name="node_ref" type="node-ref" required="true"/>
-      <field name="reactions" type="string" format="slug" rule="set">
-        <description>
-          Reactions that are to be added.
-        </description>
-      </field>
+      <field name="reactions" type="string" format="slug" rule="set"/>
     </fields>
 
     <mixins>

@@ -126,41 +126,24 @@
       "minLength": 0,
       "maxLength": 255
     },
-    "love": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295
+    "reactions": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 4294967295
+        }
+      },
+      "additionalProperties": false,
+      "description": "Count for each reactions type keyed with slug format."
     },
-    "haha": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295
-    },
-    "wow": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295
-    },
-    "wtf": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295
-    },
-    "trash": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295
-    },
-    "sad": {
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "maximum": 4294967295
+    "target": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255
     }
   },
   "required": [

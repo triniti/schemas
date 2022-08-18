@@ -160,9 +160,6 @@ final class ReactionsAddedV1 extends AbstractMessage
                 Fb::create('node_ref', T\NodeRefType::create())
                     ->required()
                     ->build(),
-                /*
-                 * Reactions that are to be added.
-                 */
                 Fb::create('reactions', T\StringType::create())
                     ->asASet()
                     ->format(Format::SLUG)
