@@ -137,7 +137,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "Count for each reactions type keyed with slug format."
+      "description": "Count for each reactions keyed with slug format."
     },
     "target": {
       "type": "string",

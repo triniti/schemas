@@ -5,6 +5,7 @@
 * __Add Schemas:__
   * `triniti:apollo:command:add-reactions`
   * `triniti:apollo:event:reactions-added`
+  * `triniti:apollo:mixin:has-reactions`
   * `triniti:apollo:mixin:reactions`
 
 

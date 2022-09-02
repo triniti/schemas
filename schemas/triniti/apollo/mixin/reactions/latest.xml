@@ -7,7 +7,7 @@
     <fields>
       <field name="reactions" type="int" rule="map">
         <description>
-          Count for each reactions type keyed with slug format.
+          Count for each reactions keyed with slug format.
         </description>
       </field>
       <field name="target" type="string" format="slug"/>
