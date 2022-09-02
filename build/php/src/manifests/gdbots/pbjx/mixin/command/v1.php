@@ -30,6 +30,7 @@ return [
     'gdbots:ncr:command:update-node-tags:v1',
     'gdbots:ncr:command:update-node:v1',
     'gdbots:pbjx:command:check-health:v1',
+    'triniti:apollo:command:add-reactions:v1',
     'triniti:apollo:command:cast-vote:v1',
     'triniti:curator:command:remove-teaser-slotting:v1',
     'triniti:curator:command:sync-teaser:v1',

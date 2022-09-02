@@ -32,6 +32,7 @@ return [
     'gdbots:ncr:event:node-updated:v1',
     'gdbots:pbjx:event:event-execution-failed:v1',
     'gdbots:pbjx:event:health-checked:v1',
+    'triniti:apollo:event:reactions-added:v1',
     'triniti:apollo:event:vote-casted:v1',
     'triniti:curator:event:gallery-image-count-updated:v1',
     'triniti:curator:event:teaser-slotting-removed:v1',
