@@ -1,12 +1,18 @@
 # CHANGELOG
 
 
+## v3.0.4
+* __Add Schemas:__
+  * `triniti:news:command:inspect-article-seo`
+
+
 ## v3.0.3
 * __Add Schemas:__
   * `triniti:apollo:command:add-reactions`
   * `triniti:apollo:event:reactions-added`
   * `triniti:apollo:mixin:has-reactions`
   * `triniti:apollo:mixin:reactions`
+  
 
 
 ## v3.0.2
