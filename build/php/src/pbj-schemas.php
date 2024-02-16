@@ -158,6 +158,7 @@ MessageResolver::register([
     'triniti:dam:request:search-assets-request:v1' => 'Triniti\Schemas\Dam\Request\SearchAssetsRequestV1',
     'triniti:dam:request:search-assets-response:v1' => 'Triniti\Schemas\Dam\Request\SearchAssetsResponseV1',
     'triniti:migrator:command:sync-cf-nodes:v1' => 'Triniti\Schemas\Migrator\Command\SyncCfNodesV1',
+    'triniti:news:command:inspect-article-seo:v1' => 'Triniti\Schemas\News\Command\InspectArticleSeoV1',
     'triniti:news:command:collect-article-stats:v1' => 'Triniti\Schemas\News\Command\CollectArticleStatsV1',
     'triniti:news:command:remove-article-slotting:v1' => 'Triniti\Schemas\News\Command\RemoveArticleSlottingV1',
     'triniti:news:command:sync-facebook-instant-article:v1' => 'Triniti\Schemas\News\Command\SyncFacebookInstantArticleV1',

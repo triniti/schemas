@@ -153,6 +153,7 @@ export default {
   'triniti:dam:request:search-assets-response:v1': () => import('@triniti/schemas/triniti/dam/request/SearchAssetsResponseV1.js'),
   'triniti:migrator:command:sync-cf-nodes:v1': () => import('@triniti/schemas/triniti/migrator/command/SyncCfNodesV1.js'),
   'triniti:news:command:collect-article-stats:v1': () => import('@triniti/schemas/triniti/news/command/CollectArticleStatsV1.js'),
+  'triniti:news:command:inspect-article-seo:v1': () => import('@triniti/schemas/triniti/news/command/InspectArticleSeoV1.js'),
   'triniti:news:command:remove-article-slotting:v1': () => import('@triniti/schemas/triniti/news/command/RemoveArticleSlottingV1.js'),
   'triniti:news:command:sync-facebook-instant-article:v1': () => import('@triniti/schemas/triniti/news/command/SyncFacebookInstantArticleV1.js'),
   'triniti:news:event:apple-news-article-synced:v1': () => import('@triniti/schemas/triniti/news/event/AppleNewsArticleSyncedV1.js'),
