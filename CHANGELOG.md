@@ -12,7 +12,6 @@
   * `triniti:apollo:event:reactions-added`
   * `triniti:apollo:mixin:has-reactions`
   * `triniti:apollo:mixin:reactions`
-  
 
 
 ## v3.0.2
