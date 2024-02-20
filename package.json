@@ -27,12 +27,12 @@
     "@babel/register": "^7.16.0",
     "@gdbots/pbj": "^3.0.0",
     "@triniti/schemas": "file:./build/js/src/",
-    "faucet": "^0.0.1",
+    "faucet": "^0.0.4",
     "lodash-es": "^4.17.15",
     "md5": "^2.2.1",
-    "rimraf": "^3.0.2",
+    "rimraf": "^5.0.5",
     "tape": "^5.0.1",
     "utf8": "^3.0.0",
-    "uuid": "^8.2.0"
+    "uuid": "^9.0.1"
   }
 }
