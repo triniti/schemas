@@ -110,7 +110,7 @@ final class InspectArticleSeoV1 extends AbstractMessage
                     ->required()
                     ->build(),
                 /*
-                 * The name of the search engines to get the stats from, e.g. google, bing, badoo, etc. When not provided you should call all providers.
+                 * The search engines to inspect, e.g. google, bing, baidu, etc. When not provided you should inspect all providers.
                  */
                 Fb::create('providers', T\StringType::create())
                     ->asASet()
