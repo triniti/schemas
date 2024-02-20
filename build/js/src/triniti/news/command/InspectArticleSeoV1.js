@@ -98,7 +98,7 @@ export default class InspectArticleSeoV1 extends Message {
           .required()
           .build(),
         /*
-         * Provides a list of providers to inspect article node ref.
+         * The name of the search engines to get the stats from, e.g. google, bing, badoo, etc. When not provided you should call all providers.
          */
         Fb.create('providers', T.StringType.create())
           .asASet()
