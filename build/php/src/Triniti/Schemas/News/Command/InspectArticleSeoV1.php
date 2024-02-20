@@ -110,8 +110,7 @@ final class InspectArticleSeoV1 extends AbstractMessage
                     ->required()
                     ->build(),
                 /*
-                 * The name of the services to get the stats from, e.g. adobe, facebook,
-                 * google, disqus, etc. When not provided you should call all providers.
+                 * Provides a list of providers to inspect article node ref.
                  */
                 Fb::create('providers', T\StringType::create())
                     ->asASet()

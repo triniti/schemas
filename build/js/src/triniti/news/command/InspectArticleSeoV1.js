@@ -1,4 +1,4 @@
-// @link http://schemas.triniti.io/json-schema/triniti/news/command/inspect-article-stats/1-0-0.json#
+// @link http://schemas.triniti.io/json-schema/triniti/news/command/inspect-article-seo/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin.js';
@@ -98,8 +98,7 @@ export default class InspectArticleSeoV1 extends Message {
           .required()
           .build(),
         /*
-         * The name of the services to get the stats from, e.g. adobe, facebook,
-         * google, disqus, etc. When not provided you should call all providers.
+         * Provides a list of providers to inspect article node ref.
          */
         Fb.create('providers', T.StringType.create())
           .asASet()
@@ -112,9 +111,9 @@ export default class InspectArticleSeoV1 extends Message {
 }
 
 const M = InspectArticleSeoV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:news:command:inspect-article-stats:1-0-0';
-M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:news:command:inspect-article-stats';
-M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:news:command:inspect-article-stats:v1';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:triniti:news:command:inspect-article-seo:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'triniti:news:command:inspect-article-seo';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'triniti:news:command:inspect-article-seo:v1';
 M.prototype.MIXINS = M.MIXINS = [
   'gdbots:pbjx:mixin:command:v1',
   'gdbots:pbjx:mixin:command',
