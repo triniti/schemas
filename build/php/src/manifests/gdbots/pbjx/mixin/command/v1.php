@@ -41,7 +41,6 @@ return [
     'triniti:dam:command:unlink-assets:v1',
     'triniti:migrator:command:sync-cf-nodes:v1',
     'triniti:news:command:collect-article-stats:v1',
-    'triniti:news:command:inspect-article-seo:v1',
     'triniti:news:command:remove-article-slotting:v1',
     'triniti:news:command:sync-facebook-instant-article:v1',
     'triniti:notify:command:send-notification:v1',
@@ -51,5 +50,7 @@ return [
     'triniti:ovp.medialive:command:stop-channel:v1',
     'triniti:ovp:command:update-transcoding-status:v1',
     'triniti:ovp:command:update-transcription-status:v1',
+    'triniti:sys:command:inspect-seo:v1',
     'triniti:sys:command:purge-cache:v1',
+    'triniti:sys:event:seo-inspected:v1',
 ];
