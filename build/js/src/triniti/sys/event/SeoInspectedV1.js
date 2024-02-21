@@ -98,14 +98,14 @@ export default class SeoInspectedV1 extends Message {
           .required()
           .build(),
         /*
-         * The search engine to inspect, e.g. google, bing, baidu, etc.
+         * The search engine for which the node's SEO status was inspected.
          */
         Fb.create('search_engine', T.StringType.create())
+          .required()
           .build(),
         /*
-         * When inspect-seo command is sent the search engine often responds with a payload
-         * that describes the result. This field should contain a (de)serializable
-         * string, JSON is preferred.
+         * The SEO status of the node, as described in the response payload from the search engine.
+         * This field should contain a (de)serializable string, JSON is preferred.
          */
         Fb.create('inspection_response', T.TextType.create())
           .build(),

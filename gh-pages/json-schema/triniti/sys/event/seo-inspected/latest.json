@@ -166,19 +166,20 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
-      "description": "The search engine to inspect, e.g. google, bing, baidu, etc."
+      "description": "The search engine for which the node's SEO status was inspected."
     },
     "inspection_response": {
       "type": "string",
       "minLength": 0,
       "maxLength": 65535,
-      "description": "When inspect-seo command is sent the search engine often responds with a payload that describes the result. This field should contain a (de)serializable string, JSON is preferred."
+      "description": "The SEO status of the node, as described in the response payload from the search engine. This field should contain a (de)serializable string, JSON is preferred."
     }
   },
   "required": [
     "_schema",
     "command_id",
-    "node_ref"
+    "node_ref",
+    "search_engine"
   ],
   "definitions": {
     "app": {

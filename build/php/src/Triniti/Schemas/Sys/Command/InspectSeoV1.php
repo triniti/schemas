@@ -110,7 +110,8 @@ final class InspectSeoV1 extends AbstractMessage
                     ->required()
                     ->build(),
                 /*
-                 * The search engines to inspect, e.g. google, bing, baidu, etc. When not provided you should inspect all search engines.
+                 * The search engines for which to inspect the node's SEO status, e.g. google, bing, baidu, etc.
+                 * When not provided you should inspect for all search engines.
                  */
                 Fb::create('search_engines', T\StringType::create())
                     ->asASet()

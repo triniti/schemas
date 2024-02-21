@@ -174,7 +174,7 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "The search engines to inspect, e.g. google, bing, baidu, etc. When not provided you should inspect all search engines."
+      "description": "The search engines for which to inspect the node's SEO status, e.g. google, bing, baidu, etc. When not provided you should inspect for all search engines."
     }
   },
   "required": [

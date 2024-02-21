@@ -6,16 +6,15 @@
   <schema id="pbj:triniti:sys:event:seo-inspected:1-0-0">
     <fields>
       <field name="node_ref" type="node-ref" required="true"/>
-      <field name="search_engine" type="string">
+<field name="search_engine" type="string" required="true">
         <description>
-          The search engine to inspect, e.g. google, bing, baidu, etc.
+          The search engine for which the node's SEO status was inspected.
         </description>
       </field>
       <field name="inspection_response" type="text">
         <description>
-          When inspect-seo command is sent the search engine often responds with a payload
-          that describes the result. This field should contain a (de)serializable
-          string, JSON is preferred.
+          The SEO status of the node, as described in the response payload from the search engine.
+          This field should contain a (de)serializable string, JSON is preferred.
         </description>
       </field>
     </fields>
