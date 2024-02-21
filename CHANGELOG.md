@@ -3,7 +3,8 @@
 
 ## v3.0.4
 * __Add Schemas:__
-  * `triniti:news:command:inspect-article-seo`
+  * `triniti:sys:command:inspect-seo`
+  * `triniti:sys:event:seo-inspected`
 
 
 ## v3.0.3
