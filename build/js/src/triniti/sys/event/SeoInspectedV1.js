@@ -101,8 +101,6 @@ export default class SeoInspectedV1 extends Message {
          * The search engine to inspect, e.g. google, bing, baidu, etc.
          */
         Fb.create('search_engine', T.StringType.create())
-          .asASet()
-          .format(Format.SLUG)
           .build(),
         /*
          * When inspect-seo command is sent the search engine often responds with a payload

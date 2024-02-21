@@ -163,17 +163,9 @@
       "pattern": "^[\\w\\/\\.:-]+$"
     },
     "search_engine": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-          "minLength": 0,
-          "maxLength": 255
-        }
-      ],
-      "uniqueItems": true,
-      "additionalProperties": false,
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
       "description": "The search engine to inspect, e.g. google, bing, baidu, etc."
     },
     "inspection_response": {
