@@ -6,7 +6,7 @@ declare(strict_types=1);
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "gdbots:forms:mixin:send-submission:v1"
- * @link http://schemas.triniti.io/json-schema/gdbots/forms/mixin/send-submission/1-0-0.json#
+ * @link http://schemas.triniti.io/json-schema/gdbots/forms/mixin/send-submission/1-0-1.json#
  */
 
 return [

@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v3.0.4
+* __Add Schemas:__
+  * `triniti:sys:command:inspect-seo`
+  * `triniti:sys:event:seo-inspected`
+
+
 ## v3.0.3
 * __Add Schemas:__
   * `triniti:apollo:command:add-reactions`
