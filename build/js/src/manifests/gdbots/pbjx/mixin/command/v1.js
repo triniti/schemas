@@ -49,5 +49,4 @@ export default [
   'triniti:ovp:command:update-transcription-status:v1',
   'triniti:sys:command:inspect-seo:v1',
   'triniti:sys:command:purge-cache:v1',
-  'triniti:sys:event:seo-inspected:v1',
 ];

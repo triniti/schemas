@@ -68,4 +68,5 @@ return [
     'triniti:ovp:event:transcription-completed:v1',
     'triniti:ovp:event:transcription-failed:v1',
     'triniti:ovp:event:transcription-started:v1',
+    'triniti:sys:event:seo-inspected:v1',
 ];
