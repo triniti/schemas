@@ -6,7 +6,7 @@ declare(strict_types=1);
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "gdbots:iam:mixin:browser-app:v1"
- * @link http://schemas.triniti.io/json-schema/gdbots/iam/mixin/browser-app/1-0-4.json#
+ * @link http://schemas.triniti.io/json-schema/gdbots/iam/mixin/browser-app/1-0-3.json#
  */
 
 return [

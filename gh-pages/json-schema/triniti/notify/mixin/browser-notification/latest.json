@@ -204,7 +204,7 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
-      "description": "The Braze message variation identifier is used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Kindle/FireOS Push Message)"
+      "description": "The Braze message variation identifier is used when providing a campaign_id to specify which message variation this message should be tracked under."
     }
   },
   "required": [
