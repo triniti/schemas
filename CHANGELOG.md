@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v3.0.5
+* __Modify Schemas:__
+  * `triniti:notify:mixin:browser-notification` patch revision `1-0-3`
+    * Add `braze_campaign_id` uuid field.
+    * Add `braze_segment_id` uuid field.
+    * Add `braze_message_variation_id` string field.
+
+
 ## v3.0.4
 * __Add Schemas:__
   * `triniti:sys:command:inspect-seo`
