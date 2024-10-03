@@ -20,19 +20,20 @@
         </description>
         <default>true</default>
       </field>
-      <field name="braze_campaign_id" type="uuid">
+      <field name="braze_campaign_id" type="uuid" use-type-default="false">
         <description>
           The Braze campaign identifier is required if you wish to track campaign stats.
         </description>
       </field>
-      <field name="braze_segment_id" type="uuid">
+      <field name="braze_segment_id" type="uuid" use-type-default="false">
         <description>
           The Braze segment identifier that defines the target user segment for the message.
         </description>
       </field>
       <field name="braze_message_variation_id" type="string">
         <description>
-          The Braze message variation identifier is used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Kindle/FireOS Push Message)
+          The Braze message variation identifier is used when providing a campaign_id to specify which message variation
+          this message should be tracked under (must be an Kindle/FireOS Push Message)
         </description>
       </field>
     </fields>

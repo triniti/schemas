@@ -1,7 +1,6 @@
 # CHANGELOG
 
 
-
 ## v3.0.5
 * __Modify Schemas:__
   * `triniti:notify:mixin:browser-notification` patch revision `1-0-3`
