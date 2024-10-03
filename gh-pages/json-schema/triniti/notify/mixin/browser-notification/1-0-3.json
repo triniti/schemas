@@ -192,14 +192,12 @@
     },
     "braze_campaign_id": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
       "description": "The Braze campaign identifier is required if you wish to track campaign stats."
     },
     "braze_segment_id": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
       "description": "The Braze segment identifier that defines the target user segment for the message."
     },
     "braze_message_variation_id": {

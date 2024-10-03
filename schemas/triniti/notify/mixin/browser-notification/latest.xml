@@ -20,12 +20,12 @@
         </description>
         <default>true</default>
       </field>
-      <field name="braze_campaign_id" type="string">
+      <field name="braze_campaign_id" type="uuid">
         <description>
           The Braze campaign identifier is required if you wish to track campaign stats.
         </description>
       </field>
-      <field name="braze_segment_id" type="string">
+      <field name="braze_segment_id" type="uuid">
         <description>
           The Braze segment identifier that defines the target user segment for the message.
         </description>
