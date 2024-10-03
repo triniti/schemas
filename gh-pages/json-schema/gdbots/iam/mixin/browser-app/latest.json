@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/browser-app/1-0-3.json#",
+  "id": "http://schemas.triniti.io/json-schema/gdbots/iam/mixin/browser-app/1-0-4.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -171,6 +171,12 @@
       "type": "string",
       "pattern": "^[\\w\\.-]+$",
       "description": "An un-encrypted key that can be obtained from the cloud messaging tab of the Firebase console."
+    },
+    "braze_api_key": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "The Braze REST API Key (also known as an API Identifier) that is used to authenticate API requests to Braze. This key should be encrypted for storage and decrypted before use in API calls."
     }
   },
   "required": [
