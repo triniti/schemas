@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v3.0.6
+* __Modify Schemas:__
+  * `triniti:dam:mixin:video-asset` patch revision `1-0-2`
+    * Add `is_vertical` boolean field.
+  * `triniti:ovp:mixin:video` patch revision `1-0-6`
+    * Add `is_vertical` boolean field.
+
 
 ## v3.0.5
 * __Modify Schemas:__
