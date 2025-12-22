@@ -136,6 +136,10 @@
       "pattern": "^[\\w\\/\\.:-]+$",
       "description": "A reference to the image asset to use as the poster."
     },
+    "is_vertical": {
+      "type": "boolean",
+      "description": "Indicates whether this video is in vertical (portrait) orientation."
+    },
     "is_live": {
       "type": "boolean"
     },

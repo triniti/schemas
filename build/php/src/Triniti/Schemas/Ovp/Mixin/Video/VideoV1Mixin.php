@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-5.json#
+// @link http://schemas.triniti.io/json-schema/triniti/ovp/mixin/video/1-0-6.json#
 namespace Triniti\Schemas\Ovp\Mixin\Video;
 
 use Gdbots\Pbj\Schema;
