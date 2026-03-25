@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v3.0.7
+* __Add Schemas:__
+  * `triniti:common:mixin:mentionlink-advertising`
+
+
 ## v3.0.6
 * __Modify Schemas:__
   * `triniti:dam:mixin:video-asset` patch revision `1-0-2`
