@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v3.0.7
+* __Modify Schemas:__
+  * `triniti:common:mixin:seo` patch revision `1-0-2`
+    * Add `seo_alternate_urls` string set field for alternate SEO URLs.
+    * Require `seo_alternate_urls` entries to use HTTPS URLs.
+
+
 ## v3.0.6
 * __Modify Schemas:__
   * `triniti:dam:mixin:video-asset` patch revision `1-0-2`
