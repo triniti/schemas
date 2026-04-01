@@ -45,12 +45,12 @@
       "items": [
         {
           "type": "string",
-          "pattern": "^https:\\/\\/.+$"
+          "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
         }
       ],
       "uniqueItems": true,
       "additionalProperties": false,
-      "description": "Alternate URLs for SEO. Entries should be fully-qualified HTTPS URLs."
+      "description": "Alternate URLs for SEO. Entries should be fully-qualified URLs."
     },
     "is_unlisted": {
       "type": "boolean",

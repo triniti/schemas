@@ -26,9 +26,9 @@
       </field>
       <field name="meta_description" type="text" max="5000"/>
       <field name="meta_keywords" type="string" rule="set"/>
-      <field name="seo_alternate_urls" type="string" format="url" pattern="^https:\/\/.+$" rule="set">
+      <field name="seo_alternate_urls" type="string" format="url" rule="set">
         <description>
-          Alternate URLs for SEO. Entries should be fully-qualified HTTPS URLs.
+          Alternate URLs for SEO. Entries should be fully-qualified URLs.
         </description>
       </field>
       <field name="is_unlisted" type="boolean">

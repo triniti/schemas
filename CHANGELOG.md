@@ -4,7 +4,6 @@
 * __Modify Schemas:__
   * `triniti:common:mixin:seo` patch revision `1-0-2`
     * Add `seo_alternate_urls` string set field for alternate SEO URLs.
-    * Require `seo_alternate_urls` entries to use HTTPS URLs.
 
 
 ## v3.0.6
