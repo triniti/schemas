@@ -1,5 +1,12 @@
 # CHANGELOG
 
+
+## v3.0.8
+* __Add Schemas:__
+  * `triniti:curator:mixin:live-bloggable`
+  * `triniti:curator:mixin:live-blog-update-teaser`
+
+
 ## v3.0.7
 * __Modify Schemas:__
   * `triniti:common:mixin:seo` patch revision `1-0-2`
