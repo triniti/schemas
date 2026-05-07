@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <!-- Semantic marker for live blog update teasers. Extends base teaser only:
+       use triniti:curator:mixin:teaser:v1 for order_date, image_ref, timeline_ref, etc.
+       Do not combine with teaser-has-target or link-teaser. Add triniti:canvas:mixin:has-blocks
+       on concrete nodes for blocks body content. -->
+  <schema id="pbj:triniti:curator:mixin:live-blog-update-teaser:1-0-0" mixin="true"
+      extends="triniti:curator:mixin:teaser:v1"/>
+</pbj-schema>
