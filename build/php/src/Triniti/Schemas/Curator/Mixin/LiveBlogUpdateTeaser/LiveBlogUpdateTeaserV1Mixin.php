@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-2.json#
-namespace Triniti\Schemas\Curator\Mixin\Timeline;
+// @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/live-blog-update-teaser/1-0-0.json#
+namespace Triniti\Schemas\Curator\Mixin\LiveBlogUpdateTeaser;
 
 use Gdbots\Pbj\Schema;
 
@@ -10,13 +10,13 @@ use Gdbots\Pbj\Schema;
  * @method static Schema schema
  * @method mixed fget($fieldName, $default = null)
  */
-trait TimelineV1Mixin
+trait LiveBlogUpdateTeaserV1Mixin
 {
     public function getUriTemplateVars(): array
     {
         return [
             '_id' => $this->fget('_id'),
-            'slug' => $this->fget('slug'),
+            'timeline_ref' => $this->fget('timeline_ref'),
         ];
     }
 }

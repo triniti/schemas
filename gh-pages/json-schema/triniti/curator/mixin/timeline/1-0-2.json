@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/live-bloggable/1-0-0.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-2.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -126,9 +126,39 @@
       "minLength": 0,
       "maxLength": 255
     },
+    "display_title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "image_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the image asset to use for widgets, sharing, seo."
+    },
+    "allow_comments": {
+      "type": "boolean",
+      "default": true
+    },
     "is_live_blog": {
       "type": "boolean",
-      "description": "When true, this node represents a live blog parent; individual updates are typically authored as teasers referencing this node."
+      "description": "When true, this timeline represents a live blog parent; individual updates are authored as teasers referencing this timeline."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 5000,
+      "description": "A description of the timeline (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social."
+    },
+    "related_timeline_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      ],
+      "additionalProperties": false
     }
   },
   "required": [

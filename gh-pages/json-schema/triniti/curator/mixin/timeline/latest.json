@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-1.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-2.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -139,6 +139,10 @@
     "allow_comments": {
       "type": "boolean",
       "default": true
+    },
+    "is_live_blog": {
+      "type": "boolean",
+      "description": "When true, this timeline represents a live blog parent; individual updates are authored as teasers referencing this timeline."
     },
     "description": {
       "type": "string",
