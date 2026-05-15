@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-2.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/live-blog-update-teaser/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -126,39 +126,65 @@
       "minLength": 0,
       "maxLength": 255
     },
-    "display_title": {
+    "order_date": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255
+      "format": "date-time",
+      "description": "Determines the sequence that this teaser node will be rendered in lists, search results, etc. It DOES NOT control visibility or publishing. A date was used over an integer (e.g. seq_no) for blog-like, reverse chronological, clarity in sorting."
+    },
+    "slotting": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that determine where teasers will render in lists that use slotting. We call it slotting vs sticky or pinning as that is generally just one at a time."
     },
     "image_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
       "description": "A reference to the image asset to use for widgets, sharing, seo."
     },
-    "allow_comments": {
-      "type": "boolean",
-      "default": true
-    },
-    "is_live_blog": {
-      "type": "boolean",
-      "description": "When true, this timeline represents a live blog parent; individual updates are authored as teasers referencing this timeline."
-    },
     "description": {
       "type": "string",
       "minLength": 0,
       "maxLength": 5000,
-      "description": "A description of the timeline (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social."
+      "description": "A description of the teaser (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social."
     },
-    "related_timeline_refs": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[\\w\\/\\.:-]+$"
-        }
-      ],
-      "additionalProperties": false
+    "caption": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used to caption the teaser."
+    },
+    "cta_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used for the call to action."
+    },
+    "credit": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used to credit the teaser source."
+    },
+    "credit_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "URL to be used to link to the teaser source."
+    },
+    "gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$"
+    },
+    "timeline_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$"
     }
   },
   "required": [

@@ -3,7 +3,7 @@
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "triniti:curator:mixin:timeline:v1"
- * @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-1.json#
+ * @link http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-2.json#
  */
 
 export default [

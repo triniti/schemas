@@ -1,5 +1,14 @@
 # CHANGELOG
 
+
+## v3.0.8
+* __Add Schemas:__
+  * `triniti:curator:mixin:live-blog-update-teaser`
+* __Modify Schemas:__
+  * `triniti:curator:mixin:timeline` patch revision `1-0-2`
+    * Add `is_live_blog` boolean field.
+
+
 ## v3.0.7
 * __Modify Schemas:__
   * `triniti:common:mixin:seo` patch revision `1-0-2`
