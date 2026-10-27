@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v3.0.9
+* __Modify Schemas:__
+  * `triniti:curator:mixin:timeline` patch revision `1-0-3`
+    * Add `video_ref` schema field
+
+
 ## v3.0.8
 * __Add Schemas:__
   * `triniti:curator:mixin:live-blog-update-teaser`
