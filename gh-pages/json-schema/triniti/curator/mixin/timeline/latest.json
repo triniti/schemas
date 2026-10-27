@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-2.json#",
+  "id": "http://schemas.triniti.io/json-schema/triniti/curator/mixin/timeline/1-0-3.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -135,6 +135,11 @@
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
       "description": "A reference to the image asset to use for widgets, sharing, seo."
+    },
+    "video_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the video to use as the primary media for the timeline."
     },
     "allow_comments": {
       "type": "boolean",
