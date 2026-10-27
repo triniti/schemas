@@ -4,7 +4,7 @@
 ## v3.0.9
 * __Modify Schemas:__
   * `triniti:curator:mixin:timeline` patch revision `1-0-3`
-    * Add `video_ref` schema field
+    * Add `video_ref` node-ref field.
 
 
 ## v3.0.8
