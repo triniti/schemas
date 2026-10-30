@@ -5,6 +5,7 @@ namespace Triniti\Tests\Schemas\Dam;
 
 use Gdbots\Pbj\Exception\AssertionFailed;
 use Gdbots\Pbj\WellKnown\UuidIdentifier;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Triniti\Schemas\Dam\AssetId;
 
@@ -58,11 +59,7 @@ final class AssetIdTest extends TestCase
         $this->assertInstanceOf(UuidIdentifier::class, UuidIdentifier::fromString($id->getUuid(true)->toString()));
     }
 
-    /**
-     * @dataProvider getInvalidIds
-     *
-     * @param string $string
-     */
+    #[DataProvider('getInvalidIds')]
     public function testInvalid(string $string): void
     {
         $this->expectException(AssertionFailed::class);
