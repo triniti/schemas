@@ -146,7 +146,7 @@
     },
     "azure_notification_hub_name": {
       "type": "string",
-      "pattern": "^[\\w-]+$"
+      "pattern": "^[\\w\\.-]+$"
     }
   },
   "required": [
